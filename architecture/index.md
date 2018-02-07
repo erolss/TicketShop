@@ -11,6 +11,9 @@
 
 <img src="images/container.png" />
 
+# Functionality map
+<img src="images/functionality-mapping-v1.png" />
+
 # Database
 
 <img src="images/database_diagram.png" />
