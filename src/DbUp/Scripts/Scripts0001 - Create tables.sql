@@ -1,3 +1,4 @@
+
 CREATE TABLE TicketEvents (
     TicketEventID int NOT NULL IDENTITY(1,1) PRIMARY KEY,
     EventName varchar(255),
