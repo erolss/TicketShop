@@ -1,4 +1,16 @@
 ### YamlMime:TableOfContent
+- uid: TicketApi
+  name: TicketApi
+  items:
+  - uid: TicketApi.Program
+    name: Program
+  - uid: TicketApi.Startup
+    name: Startup
+- uid: TicketApi.Controllers
+  name: TicketApi.Controllers
+  items:
+  - uid: TicketApi.Controllers.ValuesController
+    name: ValuesController
 - uid: TicketSystem.DatabaseRepository
   name: TicketSystem.DatabaseRepository
   items:

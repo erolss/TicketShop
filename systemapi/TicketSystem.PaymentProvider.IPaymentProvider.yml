@@ -93,6 +93,8 @@ references:
   nameWithType: Decimal
   fullName: System.Decimal
 - uid: System.String
+  commentId: T:System.String
+  parent: System
   isExternal: true
   name: String
   nameWithType: String
@@ -104,3 +106,9 @@ references:
   name: Payment
   nameWithType: Payment
   fullName: TicketSystem.PaymentProvider.Payment
+- uid: System
+  commentId: N:System
+  isExternal: false
+  name: System
+  nameWithType: System
+  fullName: System

@@ -30,7 +30,9 @@ items:
     content: 'public class TicketDatabase : object, ITicketDatabase'
     content.vb: >-
       Public Class TicketDatabase
+
           Inherits Object
+
           Implements ITicketDatabase
   inheritance:
   - System.Object
@@ -168,6 +170,13 @@ references:
   name: TicketSystem.DatabaseRepository
   nameWithType: TicketSystem.DatabaseRepository
   fullName: TicketSystem.DatabaseRepository
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
 - uid: TicketSystem.DatabaseRepository.ITicketDatabase
   commentId: T:TicketSystem.DatabaseRepository.ITicketDatabase
   parent: TicketSystem.DatabaseRepository
@@ -175,6 +184,12 @@ references:
   name: ITicketDatabase
   nameWithType: ITicketDatabase
   fullName: TicketSystem.DatabaseRepository.ITicketDatabase
+- uid: System
+  commentId: N:System
+  isExternal: false
+  name: System
+  nameWithType: System
+  fullName: System
 - uid: TicketSystem.DatabaseRepository.TicketDatabase.EventAdd*
   commentId: Overload:TicketSystem.DatabaseRepository.TicketDatabase.EventAdd
   isExternal: false
@@ -237,6 +252,8 @@ references:
     nameWithType: )
     fullName: )
 - uid: System.String
+  commentId: T:System.String
+  parent: System
   isExternal: true
   name: String
   nameWithType: String

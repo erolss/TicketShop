@@ -28,6 +28,7 @@ items:
     content: 'public class Ticket : object'
     content.vb: >-
       Public Class Ticket
+
           Inherits Object
   inheritance:
   - System.Object
@@ -79,6 +80,19 @@ references:
   name: TicketSystem.RestApiClient.Model
   nameWithType: TicketSystem.RestApiClient.Model
   fullName: TicketSystem.RestApiClient.Model
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System
+  commentId: N:System
+  isExternal: false
+  name: System
+  nameWithType: System
+  fullName: System
 - uid: TicketSystem.RestApiClient.Model.Ticket.TicketId*
   commentId: Overload:TicketSystem.RestApiClient.Model.Ticket.TicketId
   isExternal: false
@@ -86,6 +100,8 @@ references:
   nameWithType: Ticket.TicketId
   fullName: TicketSystem.RestApiClient.Model.Ticket.TicketId
 - uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
   isExternal: true
   name: Int32
   nameWithType: Int32

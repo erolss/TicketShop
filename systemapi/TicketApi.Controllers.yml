@@ -1,0 +1,23 @@
+### YamlMime:ManagedReference
+items:
+- uid: TicketApi.Controllers
+  commentId: N:TicketApi.Controllers
+  id: TicketApi.Controllers
+  children:
+  - TicketApi.Controllers.ValuesController
+  langs:
+  - csharp
+  - vb
+  name: TicketApi.Controllers
+  nameWithType: TicketApi.Controllers
+  fullName: TicketApi.Controllers
+  type: Namespace
+  assemblies:
+  - TicketApi
+references:
+- uid: TicketApi.Controllers.ValuesController
+  commentId: T:TicketApi.Controllers.ValuesController
+  isExternal: false
+  name: ValuesController
+  nameWithType: ValuesController
+  fullName: TicketApi.Controllers.ValuesController

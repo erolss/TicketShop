@@ -31,6 +31,7 @@ items:
     content: 'public class TicketEventDate : object'
     content.vb: >-
       Public Class TicketEventDate
+
           Inherits Object
   inheritance:
   - System.Object
@@ -187,6 +188,19 @@ references:
   name: TicketSystem.DatabaseRepository.Model
   nameWithType: TicketSystem.DatabaseRepository.Model
   fullName: TicketSystem.DatabaseRepository.Model
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System
+  commentId: N:System
+  isExternal: false
+  name: System
+  nameWithType: System
+  fullName: System
 - uid: TicketSystem.DatabaseRepository.Model.TicketEventDate.TicketEventDateID*
   commentId: Overload:TicketSystem.DatabaseRepository.Model.TicketEventDate.TicketEventDateID
   isExternal: false
@@ -194,6 +208,8 @@ references:
   nameWithType: TicketEventDate.TicketEventDateID
   fullName: TicketSystem.DatabaseRepository.Model.TicketEventDate.TicketEventDateID
 - uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
   isExternal: true
   name: Int32
   nameWithType: Int32

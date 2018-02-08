@@ -32,6 +32,7 @@ items:
     content: 'public class Payment : object'
     content.vb: >-
       Public Class Payment
+
           Inherits Object
   inheritance:
   - System.Object
@@ -223,6 +224,19 @@ references:
   name: TicketSystem.PaymentProvider
   nameWithType: TicketSystem.PaymentProvider
   fullName: TicketSystem.PaymentProvider
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System
+  commentId: N:System
+  isExternal: false
+  name: System
+  nameWithType: System
+  fullName: System
 - uid: TicketSystem.PaymentProvider.Payment.PaymentStatus*
   commentId: Overload:TicketSystem.PaymentProvider.Payment.PaymentStatus
   isExternal: false
@@ -254,6 +268,8 @@ references:
   nameWithType: Payment.Valuta
   fullName: TicketSystem.PaymentProvider.Payment.Valuta
 - uid: System.String
+  commentId: T:System.String
+  parent: System
   isExternal: true
   name: String
   nameWithType: String

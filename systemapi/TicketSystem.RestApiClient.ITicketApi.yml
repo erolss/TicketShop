@@ -199,6 +199,8 @@ references:
   nameWithType: ITicketApi.TicketTicketIdGet
   fullName: TicketSystem.RestApiClient.ITicketApi.TicketTicketIdGet
 - uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
   isExternal: true
   name: Int32
   nameWithType: Int32
@@ -210,6 +212,12 @@ references:
   name: Ticket
   nameWithType: Ticket
   fullName: TicketSystem.RestApiClient.Model.Ticket
+- uid: System
+  commentId: N:System
+  isExternal: false
+  name: System
+  nameWithType: System
+  fullName: System
 - uid: TicketSystem.RestApiClient.Model
   commentId: N:TicketSystem.RestApiClient.Model
   isExternal: false

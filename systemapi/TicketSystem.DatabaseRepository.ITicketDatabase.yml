@@ -166,6 +166,8 @@ references:
   nameWithType: ITicketDatabase.EventAdd
   fullName: TicketSystem.DatabaseRepository.ITicketDatabase.EventAdd
 - uid: System.String
+  commentId: T:System.String
+  parent: System
   isExternal: true
   name: String
   nameWithType: String
@@ -177,6 +179,12 @@ references:
   name: TicketEvent
   nameWithType: TicketEvent
   fullName: TicketSystem.DatabaseRepository.Model.TicketEvent
+- uid: System
+  commentId: N:System
+  isExternal: false
+  name: System
+  nameWithType: System
+  fullName: System
 - uid: TicketSystem.DatabaseRepository.Model
   commentId: N:TicketSystem.DatabaseRepository.Model
   isExternal: false

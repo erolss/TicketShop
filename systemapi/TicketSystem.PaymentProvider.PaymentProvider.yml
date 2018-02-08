@@ -28,7 +28,9 @@ items:
     content: 'public class PaymentProvider : object, IPaymentProvider'
     content.vb: >-
       Public Class PaymentProvider
+
           Inherits Object
+
           Implements IPaymentProvider
   inheritance:
   - System.Object
@@ -94,6 +96,13 @@ references:
   name: TicketSystem.PaymentProvider
   nameWithType: TicketSystem.PaymentProvider
   fullName: TicketSystem.PaymentProvider
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
 - uid: TicketSystem.PaymentProvider.IPaymentProvider
   commentId: T:TicketSystem.PaymentProvider.IPaymentProvider
   parent: TicketSystem.PaymentProvider
@@ -101,6 +110,12 @@ references:
   name: IPaymentProvider
   nameWithType: IPaymentProvider
   fullName: TicketSystem.PaymentProvider.IPaymentProvider
+- uid: System
+  commentId: N:System
+  isExternal: false
+  name: System
+  nameWithType: System
+  fullName: System
 - uid: TicketSystem.PaymentProvider.PaymentProvider.Pay*
   commentId: Overload:TicketSystem.PaymentProvider.PaymentProvider.Pay
   isExternal: false
@@ -184,6 +199,8 @@ references:
   nameWithType: Decimal
   fullName: System.Decimal
 - uid: System.String
+  commentId: T:System.String
+  parent: System
   isExternal: true
   name: String
   nameWithType: String

@@ -32,6 +32,7 @@ items:
     content: 'public class Venue : object'
     content.vb: >-
       Public Class Venue
+
           Inherits Object
   inheritance:
   - System.Object
@@ -223,6 +224,19 @@ references:
   name: TicketSystem.DatabaseRepository.Model
   nameWithType: TicketSystem.DatabaseRepository.Model
   fullName: TicketSystem.DatabaseRepository.Model
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System
+  commentId: N:System
+  isExternal: false
+  name: System
+  nameWithType: System
+  fullName: System
 - uid: TicketSystem.DatabaseRepository.Model.Venue.VenueId*
   commentId: Overload:TicketSystem.DatabaseRepository.Model.Venue.VenueId
   isExternal: false
@@ -230,6 +244,8 @@ references:
   nameWithType: Venue.VenueId
   fullName: TicketSystem.DatabaseRepository.Model.Venue.VenueId
 - uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
   isExternal: true
   name: Int32
   nameWithType: Int32
@@ -241,6 +257,8 @@ references:
   nameWithType: Venue.VenueName
   fullName: TicketSystem.DatabaseRepository.Model.Venue.VenueName
 - uid: System.String
+  commentId: T:System.String
+  parent: System
   isExternal: true
   name: String
   nameWithType: String
