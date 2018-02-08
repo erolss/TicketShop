@@ -9,9 +9,11 @@
   <ItemGroup>
     <None Remove="Scripts\Scripts0001 - Create tables.sql" />
     <None Remove="Scripts\Scripts0002 - alter tbl - add col price.sql" />
+    <None Remove="Scripts\Scripts0003 - alter tbl - drop col maxseats.sql" />
   </ItemGroup>
 
   <ItemGroup>
+    <EmbeddedResource Include="Scripts\Scripts0003 - alter tbl - drop col maxseats.sql" />
     <EmbeddedResource Include="Scripts\Scripts0002 - alter tbl - add col price.sql" />
     <EmbeddedResource Include="Scripts\Scripts0001 - Create tables.sql" />
   </ItemGroup>
