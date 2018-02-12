@@ -7,7 +7,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DatabaseRepository", "Datab
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PaymentProvider", "PaymentProvider\PaymentProvider.csproj", "{57C5E6A3-A743-48A6-BE15-A581F201A15C}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TicketApi", "TicketApi\TicketApi.csproj", "{6DC81653-C6CC-4ADD-9882-61675AF1B85E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TicketApi", "TicketApi\TicketApi.csproj", "{160425BA-33BB-4E16-9769-E52B78E52665}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -23,10 +23,10 @@ Global
 		{57C5E6A3-A743-48A6-BE15-A581F201A15C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{57C5E6A3-A743-48A6-BE15-A581F201A15C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{57C5E6A3-A743-48A6-BE15-A581F201A15C}.Release|Any CPU.Build.0 = Release|Any CPU
-		{6DC81653-C6CC-4ADD-9882-61675AF1B85E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{6DC81653-C6CC-4ADD-9882-61675AF1B85E}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{6DC81653-C6CC-4ADD-9882-61675AF1B85E}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{6DC81653-C6CC-4ADD-9882-61675AF1B85E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{160425BA-33BB-4E16-9769-E52B78E52665}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{160425BA-33BB-4E16-9769-E52B78E52665}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{160425BA-33BB-4E16-9769-E52B78E52665}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{160425BA-33BB-4E16-9769-E52B78E52665}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
