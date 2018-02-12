@@ -1,0 +1,23 @@
+### YamlMime:ManagedReference
+items:
+- uid: IO.Swagger.Attributes
+  commentId: N:IO.Swagger.Attributes
+  id: IO.Swagger.Attributes
+  children:
+  - IO.Swagger.Attributes.ValidateModelStateAttribute
+  langs:
+  - csharp
+  - vb
+  name: IO.Swagger.Attributes
+  nameWithType: IO.Swagger.Attributes
+  fullName: IO.Swagger.Attributes
+  type: Namespace
+  assemblies:
+  - IO.Swagger
+references:
+- uid: IO.Swagger.Attributes.ValidateModelStateAttribute
+  commentId: T:IO.Swagger.Attributes.ValidateModelStateAttribute
+  isExternal: false
+  name: ValidateModelStateAttribute
+  nameWithType: ValidateModelStateAttribute
+  fullName: IO.Swagger.Attributes.ValidateModelStateAttribute

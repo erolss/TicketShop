@@ -1,0 +1,763 @@
+### YamlMime:ManagedReference
+items:
+- uid: IO.Swagger.Attributes.ValidateModelStateAttribute
+  commentId: T:IO.Swagger.Attributes.ValidateModelStateAttribute
+  id: ValidateModelStateAttribute
+  parent: IO.Swagger.Attributes
+  children:
+  - IO.Swagger.Attributes.ValidateModelStateAttribute.OnActionExecuting(Microsoft.AspNetCore.Mvc.Filters.ActionExecutingContext)
+  langs:
+  - csharp
+  - vb
+  name: ValidateModelStateAttribute
+  nameWithType: ValidateModelStateAttribute
+  fullName: IO.Swagger.Attributes.ValidateModelStateAttribute
+  type: Class
+  source:
+    remote:
+      path: src/IO.Swagger/Attributes/ValidateModelStateAttribute.cs
+      branch: RESTapi_Swagger
+      repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
+    id: ValidateModelStateAttribute
+    path: src/IO.Swagger/Attributes/ValidateModelStateAttribute.cs
+    startLine: 8
+  assemblies:
+  - IO.Swagger
+  namespace: IO.Swagger.Attributes
+  summary: "\nModel state validation attribute\n"
+  example: []
+  syntax:
+    content: 'public class ValidateModelStateAttribute : ActionFilterAttribute, IActionFilter, IAsyncActionFilter, IResultFilter, IAsyncResultFilter, IOrderedFilter, IFilterMetadata'
+    content.vb: >-
+      Public Class ValidateModelStateAttribute
+          Inherits ActionFilterAttribute
+          Implements IActionFilter, IAsyncActionFilter, IResultFilter, IAsyncResultFilter, IOrderedFilter, IFilterMetadata
+  inheritance:
+  - System.Object
+  - System.Attribute
+  - Microsoft.AspNetCore.Mvc.Filters.ActionFilterAttribute
+  implements:
+  - Microsoft.AspNetCore.Mvc.Filters.IActionFilter
+  - Microsoft.AspNetCore.Mvc.Filters.IAsyncActionFilter
+  - Microsoft.AspNetCore.Mvc.Filters.IResultFilter
+  - Microsoft.AspNetCore.Mvc.Filters.IAsyncResultFilter
+  - Microsoft.AspNetCore.Mvc.Filters.IOrderedFilter
+  - Microsoft.AspNetCore.Mvc.Filters.IFilterMetadata
+  inheritedMembers:
+  - Microsoft.AspNetCore.Mvc.Filters.ActionFilterAttribute.OnActionExecuted(Microsoft.AspNetCore.Mvc.Filters.ActionExecutedContext)
+  - Microsoft.AspNetCore.Mvc.Filters.ActionFilterAttribute.OnActionExecutionAsync(Microsoft.AspNetCore.Mvc.Filters.ActionExecutingContext,Microsoft.AspNetCore.Mvc.Filters.ActionExecutionDelegate)
+  - Microsoft.AspNetCore.Mvc.Filters.ActionFilterAttribute.OnResultExecuting(Microsoft.AspNetCore.Mvc.Filters.ResultExecutingContext)
+  - Microsoft.AspNetCore.Mvc.Filters.ActionFilterAttribute.OnResultExecuted(Microsoft.AspNetCore.Mvc.Filters.ResultExecutedContext)
+  - Microsoft.AspNetCore.Mvc.Filters.ActionFilterAttribute.OnResultExecutionAsync(Microsoft.AspNetCore.Mvc.Filters.ResultExecutingContext,Microsoft.AspNetCore.Mvc.Filters.ResultExecutionDelegate)
+  - Microsoft.AspNetCore.Mvc.Filters.ActionFilterAttribute.Order
+  - System.Attribute.Equals(System.Object)
+  - System.Attribute.GetHashCode
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: IO.Swagger.Attributes.ValidateModelStateAttribute.OnActionExecuting(Microsoft.AspNetCore.Mvc.Filters.ActionExecutingContext)
+  commentId: M:IO.Swagger.Attributes.ValidateModelStateAttribute.OnActionExecuting(Microsoft.AspNetCore.Mvc.Filters.ActionExecutingContext)
+  id: OnActionExecuting(Microsoft.AspNetCore.Mvc.Filters.ActionExecutingContext)
+  parent: IO.Swagger.Attributes.ValidateModelStateAttribute
+  langs:
+  - csharp
+  - vb
+  name: OnActionExecuting(ActionExecutingContext)
+  nameWithType: ValidateModelStateAttribute.OnActionExecuting(ActionExecutingContext)
+  fullName: IO.Swagger.Attributes.ValidateModelStateAttribute.OnActionExecuting(Microsoft.AspNetCore.Mvc.Filters.ActionExecutingContext)
+  type: Method
+  source:
+    remote:
+      path: src/IO.Swagger/Attributes/ValidateModelStateAttribute.cs
+      branch: RESTapi_Swagger
+      repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
+    id: OnActionExecuting
+    path: src/IO.Swagger/Attributes/ValidateModelStateAttribute.cs
+    startLine: 14
+  assemblies:
+  - IO.Swagger
+  namespace: IO.Swagger.Attributes
+  summary: "\nCalled before the action method is invoked\n"
+  example: []
+  syntax:
+    content: public override void OnActionExecuting(ActionExecutingContext context)
+    parameters:
+    - id: context
+      type: Microsoft.AspNetCore.Mvc.Filters.ActionExecutingContext
+      description: ''
+    content.vb: Public Overrides Sub OnActionExecuting(context As ActionExecutingContext)
+  overridden: Microsoft.AspNetCore.Mvc.Filters.ActionFilterAttribute.OnActionExecuting(Microsoft.AspNetCore.Mvc.Filters.ActionExecutingContext)
+  overload: IO.Swagger.Attributes.ValidateModelStateAttribute.OnActionExecuting*
+  modifiers.csharp:
+  - public
+  - override
+  modifiers.vb:
+  - Public
+  - Overrides
+references:
+- uid: IO.Swagger.Attributes
+  commentId: N:IO.Swagger.Attributes
+  isExternal: false
+  name: IO.Swagger.Attributes
+  nameWithType: IO.Swagger.Attributes
+  fullName: IO.Swagger.Attributes
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System.Attribute
+  commentId: T:System.Attribute
+  parent: System
+  isExternal: true
+  name: Attribute
+  nameWithType: Attribute
+  fullName: System.Attribute
+- uid: Microsoft.AspNetCore.Mvc.Filters.ActionFilterAttribute
+  commentId: T:Microsoft.AspNetCore.Mvc.Filters.ActionFilterAttribute
+  parent: Microsoft.AspNetCore.Mvc.Filters
+  isExternal: true
+  name: ActionFilterAttribute
+  nameWithType: ActionFilterAttribute
+  fullName: Microsoft.AspNetCore.Mvc.Filters.ActionFilterAttribute
+- uid: Microsoft.AspNetCore.Mvc.Filters.IActionFilter
+  commentId: T:Microsoft.AspNetCore.Mvc.Filters.IActionFilter
+  parent: Microsoft.AspNetCore.Mvc.Filters
+  isExternal: true
+  name: IActionFilter
+  nameWithType: IActionFilter
+  fullName: Microsoft.AspNetCore.Mvc.Filters.IActionFilter
+- uid: Microsoft.AspNetCore.Mvc.Filters.IAsyncActionFilter
+  commentId: T:Microsoft.AspNetCore.Mvc.Filters.IAsyncActionFilter
+  parent: Microsoft.AspNetCore.Mvc.Filters
+  isExternal: true
+  name: IAsyncActionFilter
+  nameWithType: IAsyncActionFilter
+  fullName: Microsoft.AspNetCore.Mvc.Filters.IAsyncActionFilter
+- uid: Microsoft.AspNetCore.Mvc.Filters.IResultFilter
+  commentId: T:Microsoft.AspNetCore.Mvc.Filters.IResultFilter
+  parent: Microsoft.AspNetCore.Mvc.Filters
+  isExternal: true
+  name: IResultFilter
+  nameWithType: IResultFilter
+  fullName: Microsoft.AspNetCore.Mvc.Filters.IResultFilter
+- uid: Microsoft.AspNetCore.Mvc.Filters.IAsyncResultFilter
+  commentId: T:Microsoft.AspNetCore.Mvc.Filters.IAsyncResultFilter
+  parent: Microsoft.AspNetCore.Mvc.Filters
+  isExternal: true
+  name: IAsyncResultFilter
+  nameWithType: IAsyncResultFilter
+  fullName: Microsoft.AspNetCore.Mvc.Filters.IAsyncResultFilter
+- uid: Microsoft.AspNetCore.Mvc.Filters.IOrderedFilter
+  commentId: T:Microsoft.AspNetCore.Mvc.Filters.IOrderedFilter
+  parent: Microsoft.AspNetCore.Mvc.Filters
+  isExternal: true
+  name: IOrderedFilter
+  nameWithType: IOrderedFilter
+  fullName: Microsoft.AspNetCore.Mvc.Filters.IOrderedFilter
+- uid: Microsoft.AspNetCore.Mvc.Filters.IFilterMetadata
+  commentId: T:Microsoft.AspNetCore.Mvc.Filters.IFilterMetadata
+  parent: Microsoft.AspNetCore.Mvc.Filters
+  isExternal: true
+  name: IFilterMetadata
+  nameWithType: IFilterMetadata
+  fullName: Microsoft.AspNetCore.Mvc.Filters.IFilterMetadata
+- uid: Microsoft.AspNetCore.Mvc.Filters.ActionFilterAttribute.OnActionExecuted(Microsoft.AspNetCore.Mvc.Filters.ActionExecutedContext)
+  commentId: M:Microsoft.AspNetCore.Mvc.Filters.ActionFilterAttribute.OnActionExecuted(Microsoft.AspNetCore.Mvc.Filters.ActionExecutedContext)
+  parent: Microsoft.AspNetCore.Mvc.Filters.ActionFilterAttribute
+  isExternal: true
+  name: OnActionExecuted(ActionExecutedContext)
+  nameWithType: ActionFilterAttribute.OnActionExecuted(ActionExecutedContext)
+  fullName: Microsoft.AspNetCore.Mvc.Filters.ActionFilterAttribute.OnActionExecuted(Microsoft.AspNetCore.Mvc.Filters.ActionExecutedContext)
+  spec.csharp:
+  - uid: Microsoft.AspNetCore.Mvc.Filters.ActionFilterAttribute.OnActionExecuted(Microsoft.AspNetCore.Mvc.Filters.ActionExecutedContext)
+    name: OnActionExecuted
+    nameWithType: ActionFilterAttribute.OnActionExecuted
+    fullName: Microsoft.AspNetCore.Mvc.Filters.ActionFilterAttribute.OnActionExecuted
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Microsoft.AspNetCore.Mvc.Filters.ActionExecutedContext
+    name: ActionExecutedContext
+    nameWithType: ActionExecutedContext
+    fullName: Microsoft.AspNetCore.Mvc.Filters.ActionExecutedContext
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Microsoft.AspNetCore.Mvc.Filters.ActionFilterAttribute.OnActionExecuted(Microsoft.AspNetCore.Mvc.Filters.ActionExecutedContext)
+    name: OnActionExecuted
+    nameWithType: ActionFilterAttribute.OnActionExecuted
+    fullName: Microsoft.AspNetCore.Mvc.Filters.ActionFilterAttribute.OnActionExecuted
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Microsoft.AspNetCore.Mvc.Filters.ActionExecutedContext
+    name: ActionExecutedContext
+    nameWithType: ActionExecutedContext
+    fullName: Microsoft.AspNetCore.Mvc.Filters.ActionExecutedContext
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Microsoft.AspNetCore.Mvc.Filters.ActionFilterAttribute.OnActionExecutionAsync(Microsoft.AspNetCore.Mvc.Filters.ActionExecutingContext,Microsoft.AspNetCore.Mvc.Filters.ActionExecutionDelegate)
+  commentId: M:Microsoft.AspNetCore.Mvc.Filters.ActionFilterAttribute.OnActionExecutionAsync(Microsoft.AspNetCore.Mvc.Filters.ActionExecutingContext,Microsoft.AspNetCore.Mvc.Filters.ActionExecutionDelegate)
+  parent: Microsoft.AspNetCore.Mvc.Filters.ActionFilterAttribute
+  isExternal: true
+  name: OnActionExecutionAsync(ActionExecutingContext, ActionExecutionDelegate)
+  nameWithType: ActionFilterAttribute.OnActionExecutionAsync(ActionExecutingContext, ActionExecutionDelegate)
+  fullName: Microsoft.AspNetCore.Mvc.Filters.ActionFilterAttribute.OnActionExecutionAsync(Microsoft.AspNetCore.Mvc.Filters.ActionExecutingContext, Microsoft.AspNetCore.Mvc.Filters.ActionExecutionDelegate)
+  spec.csharp:
+  - uid: Microsoft.AspNetCore.Mvc.Filters.ActionFilterAttribute.OnActionExecutionAsync(Microsoft.AspNetCore.Mvc.Filters.ActionExecutingContext,Microsoft.AspNetCore.Mvc.Filters.ActionExecutionDelegate)
+    name: OnActionExecutionAsync
+    nameWithType: ActionFilterAttribute.OnActionExecutionAsync
+    fullName: Microsoft.AspNetCore.Mvc.Filters.ActionFilterAttribute.OnActionExecutionAsync
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Microsoft.AspNetCore.Mvc.Filters.ActionExecutingContext
+    name: ActionExecutingContext
+    nameWithType: ActionExecutingContext
+    fullName: Microsoft.AspNetCore.Mvc.Filters.ActionExecutingContext
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: Microsoft.AspNetCore.Mvc.Filters.ActionExecutionDelegate
+    name: ActionExecutionDelegate
+    nameWithType: ActionExecutionDelegate
+    fullName: Microsoft.AspNetCore.Mvc.Filters.ActionExecutionDelegate
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Microsoft.AspNetCore.Mvc.Filters.ActionFilterAttribute.OnActionExecutionAsync(Microsoft.AspNetCore.Mvc.Filters.ActionExecutingContext,Microsoft.AspNetCore.Mvc.Filters.ActionExecutionDelegate)
+    name: OnActionExecutionAsync
+    nameWithType: ActionFilterAttribute.OnActionExecutionAsync
+    fullName: Microsoft.AspNetCore.Mvc.Filters.ActionFilterAttribute.OnActionExecutionAsync
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Microsoft.AspNetCore.Mvc.Filters.ActionExecutingContext
+    name: ActionExecutingContext
+    nameWithType: ActionExecutingContext
+    fullName: Microsoft.AspNetCore.Mvc.Filters.ActionExecutingContext
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: Microsoft.AspNetCore.Mvc.Filters.ActionExecutionDelegate
+    name: ActionExecutionDelegate
+    nameWithType: ActionExecutionDelegate
+    fullName: Microsoft.AspNetCore.Mvc.Filters.ActionExecutionDelegate
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Microsoft.AspNetCore.Mvc.Filters.ActionFilterAttribute.OnResultExecuting(Microsoft.AspNetCore.Mvc.Filters.ResultExecutingContext)
+  commentId: M:Microsoft.AspNetCore.Mvc.Filters.ActionFilterAttribute.OnResultExecuting(Microsoft.AspNetCore.Mvc.Filters.ResultExecutingContext)
+  parent: Microsoft.AspNetCore.Mvc.Filters.ActionFilterAttribute
+  isExternal: true
+  name: OnResultExecuting(ResultExecutingContext)
+  nameWithType: ActionFilterAttribute.OnResultExecuting(ResultExecutingContext)
+  fullName: Microsoft.AspNetCore.Mvc.Filters.ActionFilterAttribute.OnResultExecuting(Microsoft.AspNetCore.Mvc.Filters.ResultExecutingContext)
+  spec.csharp:
+  - uid: Microsoft.AspNetCore.Mvc.Filters.ActionFilterAttribute.OnResultExecuting(Microsoft.AspNetCore.Mvc.Filters.ResultExecutingContext)
+    name: OnResultExecuting
+    nameWithType: ActionFilterAttribute.OnResultExecuting
+    fullName: Microsoft.AspNetCore.Mvc.Filters.ActionFilterAttribute.OnResultExecuting
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Microsoft.AspNetCore.Mvc.Filters.ResultExecutingContext
+    name: ResultExecutingContext
+    nameWithType: ResultExecutingContext
+    fullName: Microsoft.AspNetCore.Mvc.Filters.ResultExecutingContext
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Microsoft.AspNetCore.Mvc.Filters.ActionFilterAttribute.OnResultExecuting(Microsoft.AspNetCore.Mvc.Filters.ResultExecutingContext)
+    name: OnResultExecuting
+    nameWithType: ActionFilterAttribute.OnResultExecuting
+    fullName: Microsoft.AspNetCore.Mvc.Filters.ActionFilterAttribute.OnResultExecuting
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Microsoft.AspNetCore.Mvc.Filters.ResultExecutingContext
+    name: ResultExecutingContext
+    nameWithType: ResultExecutingContext
+    fullName: Microsoft.AspNetCore.Mvc.Filters.ResultExecutingContext
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Microsoft.AspNetCore.Mvc.Filters.ActionFilterAttribute.OnResultExecuted(Microsoft.AspNetCore.Mvc.Filters.ResultExecutedContext)
+  commentId: M:Microsoft.AspNetCore.Mvc.Filters.ActionFilterAttribute.OnResultExecuted(Microsoft.AspNetCore.Mvc.Filters.ResultExecutedContext)
+  parent: Microsoft.AspNetCore.Mvc.Filters.ActionFilterAttribute
+  isExternal: true
+  name: OnResultExecuted(ResultExecutedContext)
+  nameWithType: ActionFilterAttribute.OnResultExecuted(ResultExecutedContext)
+  fullName: Microsoft.AspNetCore.Mvc.Filters.ActionFilterAttribute.OnResultExecuted(Microsoft.AspNetCore.Mvc.Filters.ResultExecutedContext)
+  spec.csharp:
+  - uid: Microsoft.AspNetCore.Mvc.Filters.ActionFilterAttribute.OnResultExecuted(Microsoft.AspNetCore.Mvc.Filters.ResultExecutedContext)
+    name: OnResultExecuted
+    nameWithType: ActionFilterAttribute.OnResultExecuted
+    fullName: Microsoft.AspNetCore.Mvc.Filters.ActionFilterAttribute.OnResultExecuted
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Microsoft.AspNetCore.Mvc.Filters.ResultExecutedContext
+    name: ResultExecutedContext
+    nameWithType: ResultExecutedContext
+    fullName: Microsoft.AspNetCore.Mvc.Filters.ResultExecutedContext
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Microsoft.AspNetCore.Mvc.Filters.ActionFilterAttribute.OnResultExecuted(Microsoft.AspNetCore.Mvc.Filters.ResultExecutedContext)
+    name: OnResultExecuted
+    nameWithType: ActionFilterAttribute.OnResultExecuted
+    fullName: Microsoft.AspNetCore.Mvc.Filters.ActionFilterAttribute.OnResultExecuted
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Microsoft.AspNetCore.Mvc.Filters.ResultExecutedContext
+    name: ResultExecutedContext
+    nameWithType: ResultExecutedContext
+    fullName: Microsoft.AspNetCore.Mvc.Filters.ResultExecutedContext
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Microsoft.AspNetCore.Mvc.Filters.ActionFilterAttribute.OnResultExecutionAsync(Microsoft.AspNetCore.Mvc.Filters.ResultExecutingContext,Microsoft.AspNetCore.Mvc.Filters.ResultExecutionDelegate)
+  commentId: M:Microsoft.AspNetCore.Mvc.Filters.ActionFilterAttribute.OnResultExecutionAsync(Microsoft.AspNetCore.Mvc.Filters.ResultExecutingContext,Microsoft.AspNetCore.Mvc.Filters.ResultExecutionDelegate)
+  parent: Microsoft.AspNetCore.Mvc.Filters.ActionFilterAttribute
+  isExternal: true
+  name: OnResultExecutionAsync(ResultExecutingContext, ResultExecutionDelegate)
+  nameWithType: ActionFilterAttribute.OnResultExecutionAsync(ResultExecutingContext, ResultExecutionDelegate)
+  fullName: Microsoft.AspNetCore.Mvc.Filters.ActionFilterAttribute.OnResultExecutionAsync(Microsoft.AspNetCore.Mvc.Filters.ResultExecutingContext, Microsoft.AspNetCore.Mvc.Filters.ResultExecutionDelegate)
+  spec.csharp:
+  - uid: Microsoft.AspNetCore.Mvc.Filters.ActionFilterAttribute.OnResultExecutionAsync(Microsoft.AspNetCore.Mvc.Filters.ResultExecutingContext,Microsoft.AspNetCore.Mvc.Filters.ResultExecutionDelegate)
+    name: OnResultExecutionAsync
+    nameWithType: ActionFilterAttribute.OnResultExecutionAsync
+    fullName: Microsoft.AspNetCore.Mvc.Filters.ActionFilterAttribute.OnResultExecutionAsync
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Microsoft.AspNetCore.Mvc.Filters.ResultExecutingContext
+    name: ResultExecutingContext
+    nameWithType: ResultExecutingContext
+    fullName: Microsoft.AspNetCore.Mvc.Filters.ResultExecutingContext
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: Microsoft.AspNetCore.Mvc.Filters.ResultExecutionDelegate
+    name: ResultExecutionDelegate
+    nameWithType: ResultExecutionDelegate
+    fullName: Microsoft.AspNetCore.Mvc.Filters.ResultExecutionDelegate
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Microsoft.AspNetCore.Mvc.Filters.ActionFilterAttribute.OnResultExecutionAsync(Microsoft.AspNetCore.Mvc.Filters.ResultExecutingContext,Microsoft.AspNetCore.Mvc.Filters.ResultExecutionDelegate)
+    name: OnResultExecutionAsync
+    nameWithType: ActionFilterAttribute.OnResultExecutionAsync
+    fullName: Microsoft.AspNetCore.Mvc.Filters.ActionFilterAttribute.OnResultExecutionAsync
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Microsoft.AspNetCore.Mvc.Filters.ResultExecutingContext
+    name: ResultExecutingContext
+    nameWithType: ResultExecutingContext
+    fullName: Microsoft.AspNetCore.Mvc.Filters.ResultExecutingContext
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: Microsoft.AspNetCore.Mvc.Filters.ResultExecutionDelegate
+    name: ResultExecutionDelegate
+    nameWithType: ResultExecutionDelegate
+    fullName: Microsoft.AspNetCore.Mvc.Filters.ResultExecutionDelegate
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Microsoft.AspNetCore.Mvc.Filters.ActionFilterAttribute.Order
+  commentId: P:Microsoft.AspNetCore.Mvc.Filters.ActionFilterAttribute.Order
+  parent: Microsoft.AspNetCore.Mvc.Filters.ActionFilterAttribute
+  isExternal: true
+  name: Order
+  nameWithType: ActionFilterAttribute.Order
+  fullName: Microsoft.AspNetCore.Mvc.Filters.ActionFilterAttribute.Order
+- uid: System.Attribute.Equals(System.Object)
+  commentId: M:System.Attribute.Equals(System.Object)
+  parent: System.Attribute
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Attribute.Equals(Object)
+  fullName: System.Attribute.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Attribute.Equals(System.Object)
+    name: Equals
+    nameWithType: Attribute.Equals
+    fullName: System.Attribute.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Attribute.Equals(System.Object)
+    name: Equals
+    nameWithType: Attribute.Equals
+    fullName: System.Attribute.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Attribute.GetHashCode
+  commentId: M:System.Attribute.GetHashCode
+  parent: System.Attribute
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Attribute.GetHashCode()
+  fullName: System.Attribute.GetHashCode()
+  spec.csharp:
+  - uid: System.Attribute.GetHashCode
+    name: GetHashCode
+    nameWithType: Attribute.GetHashCode
+    fullName: System.Attribute.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Attribute.GetHashCode
+    name: GetHashCode
+    nameWithType: Attribute.GetHashCode
+    fullName: System.Attribute.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: false
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Microsoft.AspNetCore.Mvc.Filters
+  commentId: N:Microsoft.AspNetCore.Mvc.Filters
+  isExternal: false
+  name: Microsoft.AspNetCore.Mvc.Filters
+  nameWithType: Microsoft.AspNetCore.Mvc.Filters
+  fullName: Microsoft.AspNetCore.Mvc.Filters
+- uid: Microsoft.AspNetCore.Mvc.Filters.ActionFilterAttribute.OnActionExecuting(Microsoft.AspNetCore.Mvc.Filters.ActionExecutingContext)
+  commentId: M:Microsoft.AspNetCore.Mvc.Filters.ActionFilterAttribute.OnActionExecuting(Microsoft.AspNetCore.Mvc.Filters.ActionExecutingContext)
+  parent: Microsoft.AspNetCore.Mvc.Filters.ActionFilterAttribute
+  isExternal: true
+  name: OnActionExecuting(ActionExecutingContext)
+  nameWithType: ActionFilterAttribute.OnActionExecuting(ActionExecutingContext)
+  fullName: Microsoft.AspNetCore.Mvc.Filters.ActionFilterAttribute.OnActionExecuting(Microsoft.AspNetCore.Mvc.Filters.ActionExecutingContext)
+  spec.csharp:
+  - uid: Microsoft.AspNetCore.Mvc.Filters.ActionFilterAttribute.OnActionExecuting(Microsoft.AspNetCore.Mvc.Filters.ActionExecutingContext)
+    name: OnActionExecuting
+    nameWithType: ActionFilterAttribute.OnActionExecuting
+    fullName: Microsoft.AspNetCore.Mvc.Filters.ActionFilterAttribute.OnActionExecuting
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Microsoft.AspNetCore.Mvc.Filters.ActionExecutingContext
+    name: ActionExecutingContext
+    nameWithType: ActionExecutingContext
+    fullName: Microsoft.AspNetCore.Mvc.Filters.ActionExecutingContext
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Microsoft.AspNetCore.Mvc.Filters.ActionFilterAttribute.OnActionExecuting(Microsoft.AspNetCore.Mvc.Filters.ActionExecutingContext)
+    name: OnActionExecuting
+    nameWithType: ActionFilterAttribute.OnActionExecuting
+    fullName: Microsoft.AspNetCore.Mvc.Filters.ActionFilterAttribute.OnActionExecuting
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Microsoft.AspNetCore.Mvc.Filters.ActionExecutingContext
+    name: ActionExecutingContext
+    nameWithType: ActionExecutingContext
+    fullName: Microsoft.AspNetCore.Mvc.Filters.ActionExecutingContext
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: IO.Swagger.Attributes.ValidateModelStateAttribute.OnActionExecuting*
+  commentId: Overload:IO.Swagger.Attributes.ValidateModelStateAttribute.OnActionExecuting
+  isExternal: false
+  name: OnActionExecuting
+  nameWithType: ValidateModelStateAttribute.OnActionExecuting
+  fullName: IO.Swagger.Attributes.ValidateModelStateAttribute.OnActionExecuting
+- uid: Microsoft.AspNetCore.Mvc.Filters.ActionExecutingContext
+  commentId: T:Microsoft.AspNetCore.Mvc.Filters.ActionExecutingContext
+  parent: Microsoft.AspNetCore.Mvc.Filters
+  isExternal: true
+  name: ActionExecutingContext
+  nameWithType: ActionExecutingContext
+  fullName: Microsoft.AspNetCore.Mvc.Filters.ActionExecutingContext

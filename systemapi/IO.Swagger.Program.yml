@@ -1,30 +1,31 @@
 ### YamlMime:ManagedReference
 items:
-- uid: TicketApi.Program
-  commentId: T:TicketApi.Program
+- uid: IO.Swagger.Program
+  commentId: T:IO.Swagger.Program
   id: Program
-  parent: TicketApi
+  parent: IO.Swagger
   children:
-  - TicketApi.Program.BuildWebHost(System.String[])
-  - TicketApi.Program.Main(System.String[])
+  - IO.Swagger.Program.Main(System.String[])
   langs:
   - csharp
   - vb
   name: Program
   nameWithType: Program
-  fullName: TicketApi.Program
+  fullName: IO.Swagger.Program
   type: Class
   source:
     remote:
-      path: src/TicketApi/Program.cs
+      path: src/IO.Swagger/Program.cs
       branch: RESTapi_Swagger
       repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
     id: Program
-    path: src/TicketApi/Program.cs
-    startLine: 12
+    path: src/IO.Swagger/Program.cs
+    startLine: 8
   assemblies:
-  - TicketApi
-  namespace: TicketApi
+  - IO.Swagger
+  namespace: IO.Swagger
+  summary: "\nProgram\n"
+  example: []
   syntax:
     content: public class Program
     content.vb: Public Class Program
@@ -44,35 +45,38 @@ items:
   modifiers.vb:
   - Public
   - Class
-- uid: TicketApi.Program.Main(System.String[])
-  commentId: M:TicketApi.Program.Main(System.String[])
+- uid: IO.Swagger.Program.Main(System.String[])
+  commentId: M:IO.Swagger.Program.Main(System.String[])
   id: Main(System.String[])
-  parent: TicketApi.Program
+  parent: IO.Swagger.Program
   langs:
   - csharp
   - vb
   name: Main(String[])
   nameWithType: Program.Main(String[])
-  fullName: TicketApi.Program.Main(System.String[])
+  fullName: IO.Swagger.Program.Main(System.String[])
   type: Method
   source:
     remote:
-      path: src/TicketApi/Program.cs
+      path: src/IO.Swagger/Program.cs
       branch: RESTapi_Swagger
       repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
     id: Main
-    path: src/TicketApi/Program.cs
+    path: src/IO.Swagger/Program.cs
     startLine: 14
   assemblies:
-  - TicketApi
-  namespace: TicketApi
+  - IO.Swagger
+  namespace: IO.Swagger
+  summary: "\nMain\n"
+  example: []
   syntax:
     content: public static void Main(string[] args)
     parameters:
     - id: args
       type: System.String[]
+      description: ''
     content.vb: Public Shared Sub Main(args As String())
-  overload: TicketApi.Program.Main*
+  overload: IO.Swagger.Program.Main*
   nameWithType.vb: Program.Main(String())
   modifiers.csharp:
   - public
@@ -80,55 +84,15 @@ items:
   modifiers.vb:
   - Public
   - Shared
-  fullName.vb: TicketApi.Program.Main(System.String())
+  fullName.vb: IO.Swagger.Program.Main(System.String())
   name.vb: Main(String())
-- uid: TicketApi.Program.BuildWebHost(System.String[])
-  commentId: M:TicketApi.Program.BuildWebHost(System.String[])
-  id: BuildWebHost(System.String[])
-  parent: TicketApi.Program
-  langs:
-  - csharp
-  - vb
-  name: BuildWebHost(String[])
-  nameWithType: Program.BuildWebHost(String[])
-  fullName: TicketApi.Program.BuildWebHost(System.String[])
-  type: Method
-  source:
-    remote:
-      path: src/TicketApi/Program.cs
-      branch: RESTapi_Swagger
-      repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
-    id: BuildWebHost
-    path: src/TicketApi/Program.cs
-    startLine: 19
-  assemblies:
-  - TicketApi
-  namespace: TicketApi
-  syntax:
-    content: public static IWebHost BuildWebHost(string[] args)
-    parameters:
-    - id: args
-      type: System.String[]
-    return:
-      type: Microsoft.AspNetCore.Hosting.IWebHost
-    content.vb: Public Shared Function BuildWebHost(args As String()) As IWebHost
-  overload: TicketApi.Program.BuildWebHost*
-  nameWithType.vb: Program.BuildWebHost(String())
-  modifiers.csharp:
-  - public
-  - static
-  modifiers.vb:
-  - Public
-  - Shared
-  fullName.vb: TicketApi.Program.BuildWebHost(System.String())
-  name.vb: BuildWebHost(String())
 references:
-- uid: TicketApi
-  commentId: N:TicketApi
+- uid: IO.Swagger
+  commentId: N:IO.Swagger
   isExternal: false
-  name: TicketApi
-  nameWithType: TicketApi
-  fullName: TicketApi
+  name: IO.Swagger
+  nameWithType: IO.Swagger
+  fullName: IO.Swagger
 - uid: System.Object
   commentId: T:System.Object
   parent: System
@@ -421,12 +385,12 @@ references:
   name: System
   nameWithType: System
   fullName: System
-- uid: TicketApi.Program.Main*
-  commentId: Overload:TicketApi.Program.Main
+- uid: IO.Swagger.Program.Main*
+  commentId: Overload:IO.Swagger.Program.Main
   isExternal: false
   name: Main
   nameWithType: Program.Main
-  fullName: TicketApi.Program.Main
+  fullName: IO.Swagger.Program.Main
 - uid: System.String[]
   name: String[]
   nameWithType: String[]
@@ -452,22 +416,3 @@ references:
   - name: ()
     nameWithType: ()
     fullName: ()
-- uid: TicketApi.Program.BuildWebHost*
-  commentId: Overload:TicketApi.Program.BuildWebHost
-  isExternal: false
-  name: BuildWebHost
-  nameWithType: Program.BuildWebHost
-  fullName: TicketApi.Program.BuildWebHost
-- uid: Microsoft.AspNetCore.Hosting.IWebHost
-  commentId: T:Microsoft.AspNetCore.Hosting.IWebHost
-  parent: Microsoft.AspNetCore.Hosting
-  isExternal: true
-  name: IWebHost
-  nameWithType: IWebHost
-  fullName: Microsoft.AspNetCore.Hosting.IWebHost
-- uid: Microsoft.AspNetCore.Hosting
-  commentId: N:Microsoft.AspNetCore.Hosting
-  isExternal: false
-  name: Microsoft.AspNetCore.Hosting
-  nameWithType: Microsoft.AspNetCore.Hosting
-  fullName: Microsoft.AspNetCore.Hosting
