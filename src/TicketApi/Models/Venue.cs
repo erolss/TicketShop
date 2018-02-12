@@ -37,7 +37,7 @@ namespace TicketApi.Models
     /// 
     /// </summary>
     [DataContract]
-    public partial class Ticket :  IEquatable<Ticket>
+    public partial class Venue :  IEquatable<Venue>
     { 
         /// <summary>
         /// Gets or Sets Id
@@ -46,22 +46,28 @@ namespace TicketApi.Models
         public int? Id { get; set; }
 
         /// <summary>
-        /// Gets or Sets EventId
+        /// Gets or Sets Name
         /// </summary>
-        [DataMember(Name="eventId")]
-        public int? EventId { get; set; }
+        [DataMember(Name="name")]
+        public string Name { get; set; }
 
         /// <summary>
-        /// Gets or Sets EventDate
+        /// Gets or Sets Address
         /// </summary>
-        [DataMember(Name="eventDate")]
-        public DateTime? EventDate { get; set; }
+        [DataMember(Name="address")]
+        public string Address { get; set; }
 
         /// <summary>
-        /// Gets or Sets UserId
+        /// Gets or Sets City
         /// </summary>
-        [DataMember(Name="userId")]
-        public int? UserId { get; set; }
+        [DataMember(Name="city")]
+        public string City { get; set; }
+
+        /// <summary>
+        /// Gets or Sets Country
+        /// </summary>
+        [DataMember(Name="country")]
+        public string Country { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -70,11 +76,12 @@ namespace TicketApi.Models
         public override string ToString()
         {
             var sb = new StringBuilder();
-            sb.Append("class Ticket {\n");
+            sb.Append("class Venue {\n");
             sb.Append("  Id: ").Append(Id).Append("\n");
-            sb.Append("  EventId: ").Append(EventId).Append("\n");
-            sb.Append("  EventDate: ").Append(EventDate).Append("\n");
-            sb.Append("  UserId: ").Append(UserId).Append("\n");
+            sb.Append("  Name: ").Append(Name).Append("\n");
+            sb.Append("  Address: ").Append(Address).Append("\n");
+            sb.Append("  City: ").Append(City).Append("\n");
+            sb.Append("  Country: ").Append(Country).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -97,15 +104,15 @@ namespace TicketApi.Models
         {
             if (ReferenceEquals(null, obj)) return false;
             if (ReferenceEquals(this, obj)) return true;
-            return obj.GetType() == GetType() && Equals((Ticket)obj);
+            return obj.GetType() == GetType() && Equals((Venue)obj);
         }
 
         /// <summary>
-        /// Returns true if Ticket instances are equal
+        /// Returns true if Venue instances are equal
         /// </summary>
-        /// <param name="other">Instance of Ticket to be compared</param>
+        /// <param name="other">Instance of Venue to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(Ticket other)
+        public bool Equals(Venue other)
         {
             if (ReferenceEquals(null, other)) return false;
             if (ReferenceEquals(this, other)) return true;
@@ -117,19 +124,24 @@ namespace TicketApi.Models
                     Id.Equals(other.Id)
                 ) && 
                 (
-                    EventId == other.EventId ||
-                    EventId != null &&
-                    EventId.Equals(other.EventId)
+                    Name == other.Name ||
+                    Name != null &&
+                    Name.Equals(other.Name)
                 ) && 
                 (
-                    EventDate == other.EventDate ||
-                    EventDate != null &&
-                    EventDate.Equals(other.EventDate)
+                    Address == other.Address ||
+                    Address != null &&
+                    Address.Equals(other.Address)
                 ) && 
                 (
-                    UserId == other.UserId ||
-                    UserId != null &&
-                    UserId.Equals(other.UserId)
+                    City == other.City ||
+                    City != null &&
+                    City.Equals(other.City)
+                ) && 
+                (
+                    Country == other.Country ||
+                    Country != null &&
+                    Country.Equals(other.Country)
                 );
         }
 
@@ -145,12 +157,14 @@ namespace TicketApi.Models
                 // Suitable nullity checks etc, of course :)
                     if (Id != null)
                     hashCode = hashCode * 59 + Id.GetHashCode();
-                    if (EventId != null)
-                    hashCode = hashCode * 59 + EventId.GetHashCode();
-                    if (EventDate != null)
-                    hashCode = hashCode * 59 + EventDate.GetHashCode();
-                    if (UserId != null)
-                    hashCode = hashCode * 59 + UserId.GetHashCode();
+                    if (Name != null)
+                    hashCode = hashCode * 59 + Name.GetHashCode();
+                    if (Address != null)
+                    hashCode = hashCode * 59 + Address.GetHashCode();
+                    if (City != null)
+                    hashCode = hashCode * 59 + City.GetHashCode();
+                    if (Country != null)
+                    hashCode = hashCode * 59 + Country.GetHashCode();
                 return hashCode;
             }
         }
@@ -158,12 +172,12 @@ namespace TicketApi.Models
         #region Operators
         #pragma warning disable 1591
 
-        public static bool operator ==(Ticket left, Ticket right)
+        public static bool operator ==(Venue left, Venue right)
         {
             return Equals(left, right);
         }
 
-        public static bool operator !=(Ticket left, Ticket right)
+        public static bool operator !=(Venue left, Venue right)
         {
             return !Equals(left, right);
         }
