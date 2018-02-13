@@ -1,33 +1,36 @@
 ### YamlMime:ManagedReference
 items:
-- uid: TicketApi.Program
-  commentId: T:TicketApi.Program
-  id: Program
-  parent: TicketApi
+- uid: IO.Swagger.Startup
+  commentId: T:IO.Swagger.Startup
+  id: Startup
+  parent: IO.Swagger
   children:
-  - TicketApi.Program.BuildWebHost(System.String[])
-  - TicketApi.Program.Main(System.String[])
+  - IO.Swagger.Startup.#ctor(Microsoft.AspNetCore.Hosting.IHostingEnvironment)
+  - IO.Swagger.Startup.Configure(Microsoft.AspNetCore.Builder.IApplicationBuilder,Microsoft.AspNetCore.Hosting.IHostingEnvironment,Microsoft.Extensions.Logging.ILoggerFactory)
+  - IO.Swagger.Startup.ConfigureServices(Microsoft.Extensions.DependencyInjection.IServiceCollection)
   langs:
   - csharp
   - vb
-  name: Program
-  nameWithType: Program
-  fullName: TicketApi.Program
+  name: Startup
+  nameWithType: Startup
+  fullName: IO.Swagger.Startup
   type: Class
   source:
     remote:
-      path: src/TicketApi/Program.cs
+      path: src/IO.Swagger/Startup.cs
       branch: RESTapi_Swagger
       repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
-    id: Program
-    path: src/TicketApi/Program.cs
-    startLine: 12
+    id: Startup
+    path: src/IO.Swagger/Startup.cs
+    startLine: 39
   assemblies:
-  - TicketApi
-  namespace: TicketApi
+  - IO.Swagger
+  namespace: IO.Swagger
+  summary: "\nStartup\n"
+  example: []
   syntax:
-    content: public class Program
-    content.vb: Public Class Program
+    content: public class Startup
+    content.vb: Public Class Startup
   inheritance:
   - System.Object
   inheritedMembers:
@@ -44,91 +47,127 @@ items:
   modifiers.vb:
   - Public
   - Class
-- uid: TicketApi.Program.Main(System.String[])
-  commentId: M:TicketApi.Program.Main(System.String[])
-  id: Main(System.String[])
-  parent: TicketApi.Program
+- uid: IO.Swagger.Startup.#ctor(Microsoft.AspNetCore.Hosting.IHostingEnvironment)
+  commentId: M:IO.Swagger.Startup.#ctor(Microsoft.AspNetCore.Hosting.IHostingEnvironment)
+  id: '#ctor(Microsoft.AspNetCore.Hosting.IHostingEnvironment)'
+  parent: IO.Swagger.Startup
   langs:
   - csharp
   - vb
-  name: Main(String[])
-  nameWithType: Program.Main(String[])
-  fullName: TicketApi.Program.Main(System.String[])
-  type: Method
+  name: Startup(IHostingEnvironment)
+  nameWithType: Startup.Startup(IHostingEnvironment)
+  fullName: IO.Swagger.Startup.Startup(Microsoft.AspNetCore.Hosting.IHostingEnvironment)
+  type: Constructor
   source:
     remote:
-      path: src/TicketApi/Program.cs
+      path: src/IO.Swagger/Startup.cs
       branch: RESTapi_Swagger
       repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
-    id: Main
-    path: src/TicketApi/Program.cs
-    startLine: 14
+    id: .ctor
+    path: src/IO.Swagger/Startup.cs
+    startLine: 49
   assemblies:
-  - TicketApi
-  namespace: TicketApi
+  - IO.Swagger
+  namespace: IO.Swagger
+  summary: "\nConstructor\n"
+  example: []
   syntax:
-    content: public static void Main(string[] args)
+    content: public Startup(IHostingEnvironment env)
     parameters:
-    - id: args
-      type: System.String[]
-    content.vb: Public Shared Sub Main(args As String())
-  overload: TicketApi.Program.Main*
-  nameWithType.vb: Program.Main(String())
+    - id: env
+      type: Microsoft.AspNetCore.Hosting.IHostingEnvironment
+      description: ''
+    content.vb: Public Sub New(env As IHostingEnvironment)
+  overload: IO.Swagger.Startup.#ctor*
   modifiers.csharp:
   - public
-  - static
   modifiers.vb:
   - Public
-  - Shared
-  fullName.vb: TicketApi.Program.Main(System.String())
-  name.vb: Main(String())
-- uid: TicketApi.Program.BuildWebHost(System.String[])
-  commentId: M:TicketApi.Program.BuildWebHost(System.String[])
-  id: BuildWebHost(System.String[])
-  parent: TicketApi.Program
+- uid: IO.Swagger.Startup.ConfigureServices(Microsoft.Extensions.DependencyInjection.IServiceCollection)
+  commentId: M:IO.Swagger.Startup.ConfigureServices(Microsoft.Extensions.DependencyInjection.IServiceCollection)
+  id: ConfigureServices(Microsoft.Extensions.DependencyInjection.IServiceCollection)
+  parent: IO.Swagger.Startup
   langs:
   - csharp
   - vb
-  name: BuildWebHost(String[])
-  nameWithType: Program.BuildWebHost(String[])
-  fullName: TicketApi.Program.BuildWebHost(System.String[])
+  name: ConfigureServices(IServiceCollection)
+  nameWithType: Startup.ConfigureServices(IServiceCollection)
+  fullName: IO.Swagger.Startup.ConfigureServices(Microsoft.Extensions.DependencyInjection.IServiceCollection)
   type: Method
   source:
     remote:
-      path: src/TicketApi/Program.cs
+      path: src/IO.Swagger/Startup.cs
       branch: RESTapi_Swagger
       repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
-    id: BuildWebHost
-    path: src/TicketApi/Program.cs
-    startLine: 19
+    id: ConfigureServices
+    path: src/IO.Swagger/Startup.cs
+    startLine: 65
   assemblies:
-  - TicketApi
-  namespace: TicketApi
+  - IO.Swagger
+  namespace: IO.Swagger
+  summary: "\nThis method gets called by the runtime. Use this method to add services to the container.\n"
+  example: []
   syntax:
-    content: public static IWebHost BuildWebHost(string[] args)
+    content: public void ConfigureServices(IServiceCollection services)
     parameters:
-    - id: args
-      type: System.String[]
-    return:
-      type: Microsoft.AspNetCore.Hosting.IWebHost
-    content.vb: Public Shared Function BuildWebHost(args As String()) As IWebHost
-  overload: TicketApi.Program.BuildWebHost*
-  nameWithType.vb: Program.BuildWebHost(String())
+    - id: services
+      type: Microsoft.Extensions.DependencyInjection.IServiceCollection
+      description: ''
+    content.vb: Public Sub ConfigureServices(services As IServiceCollection)
+  overload: IO.Swagger.Startup.ConfigureServices*
   modifiers.csharp:
   - public
-  - static
   modifiers.vb:
   - Public
-  - Shared
-  fullName.vb: TicketApi.Program.BuildWebHost(System.String())
-  name.vb: BuildWebHost(String())
+- uid: IO.Swagger.Startup.Configure(Microsoft.AspNetCore.Builder.IApplicationBuilder,Microsoft.AspNetCore.Hosting.IHostingEnvironment,Microsoft.Extensions.Logging.ILoggerFactory)
+  commentId: M:IO.Swagger.Startup.Configure(Microsoft.AspNetCore.Builder.IApplicationBuilder,Microsoft.AspNetCore.Hosting.IHostingEnvironment,Microsoft.Extensions.Logging.ILoggerFactory)
+  id: Configure(Microsoft.AspNetCore.Builder.IApplicationBuilder,Microsoft.AspNetCore.Hosting.IHostingEnvironment,Microsoft.Extensions.Logging.ILoggerFactory)
+  parent: IO.Swagger.Startup
+  langs:
+  - csharp
+  - vb
+  name: Configure(IApplicationBuilder, IHostingEnvironment, ILoggerFactory)
+  nameWithType: Startup.Configure(IApplicationBuilder, IHostingEnvironment, ILoggerFactory)
+  fullName: IO.Swagger.Startup.Configure(Microsoft.AspNetCore.Builder.IApplicationBuilder, Microsoft.AspNetCore.Hosting.IHostingEnvironment, Microsoft.Extensions.Logging.ILoggerFactory)
+  type: Method
+  source:
+    remote:
+      path: src/IO.Swagger/Startup.cs
+      branch: RESTapi_Swagger
+      repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
+    id: Configure
+    path: src/IO.Swagger/Startup.cs
+    startLine: 99
+  assemblies:
+  - IO.Swagger
+  namespace: IO.Swagger
+  summary: "\nThis method gets called by the runtime. Use this method to configure the HTTP request pipeline.\n"
+  example: []
+  syntax:
+    content: public void Configure(IApplicationBuilder app, IHostingEnvironment env, ILoggerFactory loggerFactory)
+    parameters:
+    - id: app
+      type: Microsoft.AspNetCore.Builder.IApplicationBuilder
+      description: ''
+    - id: env
+      type: Microsoft.AspNetCore.Hosting.IHostingEnvironment
+      description: ''
+    - id: loggerFactory
+      type: Microsoft.Extensions.Logging.ILoggerFactory
+      description: ''
+    content.vb: Public Sub Configure(app As IApplicationBuilder, env As IHostingEnvironment, loggerFactory As ILoggerFactory)
+  overload: IO.Swagger.Startup.Configure*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
 references:
-- uid: TicketApi
-  commentId: N:TicketApi
+- uid: IO.Swagger
+  commentId: N:IO.Swagger
   isExternal: false
-  name: TicketApi
-  nameWithType: TicketApi
-  fullName: TicketApi
+  name: IO.Swagger
+  nameWithType: IO.Swagger
+  fullName: IO.Swagger
 - uid: System.Object
   commentId: T:System.Object
   parent: System
@@ -421,53 +460,73 @@ references:
   name: System
   nameWithType: System
   fullName: System
-- uid: TicketApi.Program.Main*
-  commentId: Overload:TicketApi.Program.Main
+- uid: IO.Swagger.Startup.#ctor*
+  commentId: Overload:IO.Swagger.Startup.#ctor
   isExternal: false
-  name: Main
-  nameWithType: Program.Main
-  fullName: TicketApi.Program.Main
-- uid: System.String[]
-  name: String[]
-  nameWithType: String[]
-  fullName: System.String[]
-  nameWithType.vb: String()
-  fullName.vb: System.String()
-  name.vb: String()
-  spec.csharp:
-  - uid: System.String
-    name: String
-    nameWithType: String
-    fullName: System.String
-    isExternal: true
-  - name: '[]'
-    nameWithType: '[]'
-    fullName: '[]'
-  spec.vb:
-  - uid: System.String
-    name: String
-    nameWithType: String
-    fullName: System.String
-    isExternal: true
-  - name: ()
-    nameWithType: ()
-    fullName: ()
-- uid: TicketApi.Program.BuildWebHost*
-  commentId: Overload:TicketApi.Program.BuildWebHost
-  isExternal: false
-  name: BuildWebHost
-  nameWithType: Program.BuildWebHost
-  fullName: TicketApi.Program.BuildWebHost
-- uid: Microsoft.AspNetCore.Hosting.IWebHost
-  commentId: T:Microsoft.AspNetCore.Hosting.IWebHost
+  name: Startup
+  nameWithType: Startup.Startup
+  fullName: IO.Swagger.Startup.Startup
+- uid: Microsoft.AspNetCore.Hosting.IHostingEnvironment
+  commentId: T:Microsoft.AspNetCore.Hosting.IHostingEnvironment
   parent: Microsoft.AspNetCore.Hosting
   isExternal: true
-  name: IWebHost
-  nameWithType: IWebHost
-  fullName: Microsoft.AspNetCore.Hosting.IWebHost
+  name: IHostingEnvironment
+  nameWithType: IHostingEnvironment
+  fullName: Microsoft.AspNetCore.Hosting.IHostingEnvironment
 - uid: Microsoft.AspNetCore.Hosting
   commentId: N:Microsoft.AspNetCore.Hosting
   isExternal: false
   name: Microsoft.AspNetCore.Hosting
   nameWithType: Microsoft.AspNetCore.Hosting
   fullName: Microsoft.AspNetCore.Hosting
+- uid: IO.Swagger.Startup.ConfigureServices*
+  commentId: Overload:IO.Swagger.Startup.ConfigureServices
+  isExternal: false
+  name: ConfigureServices
+  nameWithType: Startup.ConfigureServices
+  fullName: IO.Swagger.Startup.ConfigureServices
+- uid: Microsoft.Extensions.DependencyInjection.IServiceCollection
+  commentId: T:Microsoft.Extensions.DependencyInjection.IServiceCollection
+  parent: Microsoft.Extensions.DependencyInjection
+  isExternal: true
+  name: IServiceCollection
+  nameWithType: IServiceCollection
+  fullName: Microsoft.Extensions.DependencyInjection.IServiceCollection
+- uid: Microsoft.Extensions.DependencyInjection
+  commentId: N:Microsoft.Extensions.DependencyInjection
+  isExternal: false
+  name: Microsoft.Extensions.DependencyInjection
+  nameWithType: Microsoft.Extensions.DependencyInjection
+  fullName: Microsoft.Extensions.DependencyInjection
+- uid: IO.Swagger.Startup.Configure*
+  commentId: Overload:IO.Swagger.Startup.Configure
+  isExternal: false
+  name: Configure
+  nameWithType: Startup.Configure
+  fullName: IO.Swagger.Startup.Configure
+- uid: Microsoft.AspNetCore.Builder.IApplicationBuilder
+  commentId: T:Microsoft.AspNetCore.Builder.IApplicationBuilder
+  parent: Microsoft.AspNetCore.Builder
+  isExternal: true
+  name: IApplicationBuilder
+  nameWithType: IApplicationBuilder
+  fullName: Microsoft.AspNetCore.Builder.IApplicationBuilder
+- uid: Microsoft.Extensions.Logging.ILoggerFactory
+  commentId: T:Microsoft.Extensions.Logging.ILoggerFactory
+  parent: Microsoft.Extensions.Logging
+  isExternal: true
+  name: ILoggerFactory
+  nameWithType: ILoggerFactory
+  fullName: Microsoft.Extensions.Logging.ILoggerFactory
+- uid: Microsoft.AspNetCore.Builder
+  commentId: N:Microsoft.AspNetCore.Builder
+  isExternal: false
+  name: Microsoft.AspNetCore.Builder
+  nameWithType: Microsoft.AspNetCore.Builder
+  fullName: Microsoft.AspNetCore.Builder
+- uid: Microsoft.Extensions.Logging
+  commentId: N:Microsoft.Extensions.Logging
+  isExternal: false
+  name: Microsoft.Extensions.Logging
+  nameWithType: Microsoft.Extensions.Logging
+  fullName: Microsoft.Extensions.Logging

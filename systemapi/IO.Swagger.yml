@@ -1,0 +1,30 @@
+### YamlMime:ManagedReference
+items:
+- uid: IO.Swagger
+  commentId: N:IO.Swagger
+  id: IO.Swagger
+  children:
+  - IO.Swagger.Program
+  - IO.Swagger.Startup
+  langs:
+  - csharp
+  - vb
+  name: IO.Swagger
+  nameWithType: IO.Swagger
+  fullName: IO.Swagger
+  type: Namespace
+  assemblies:
+  - IO.Swagger
+references:
+- uid: IO.Swagger.Program
+  commentId: T:IO.Swagger.Program
+  isExternal: false
+  name: Program
+  nameWithType: Program
+  fullName: IO.Swagger.Program
+- uid: IO.Swagger.Startup
+  commentId: T:IO.Swagger.Startup
+  isExternal: false
+  name: Startup
+  nameWithType: Startup
+  fullName: IO.Swagger.Startup

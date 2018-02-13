@@ -19,7 +19,7 @@ items:
   source:
     remote:
       path: src/TicketApi/Startup.cs
-      branch: features/RESTapi
+      branch: RESTapi_Swagger
       repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
     id: Startup
     path: src/TicketApi/Startup.cs
@@ -60,7 +60,7 @@ items:
   source:
     remote:
       path: src/TicketApi/Startup.cs
-      branch: features/RESTapi
+      branch: RESTapi_Swagger
       repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
     id: .ctor
     path: src/TicketApi/Startup.cs
@@ -93,7 +93,7 @@ items:
   source:
     remote:
       path: src/TicketApi/Startup.cs
-      branch: features/RESTapi
+      branch: RESTapi_Swagger
       repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
     id: Configuration
     path: src/TicketApi/Startup.cs
@@ -128,7 +128,7 @@ items:
   source:
     remote:
       path: src/TicketApi/Startup.cs
-      branch: features/RESTapi
+      branch: RESTapi_Swagger
       repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
     id: ConfigureServices
     path: src/TicketApi/Startup.cs
@@ -161,7 +161,7 @@ items:
   source:
     remote:
       path: src/TicketApi/Startup.cs
-      branch: features/RESTapi
+      branch: RESTapi_Swagger
       repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
     id: Configure
     path: src/TicketApi/Startup.cs

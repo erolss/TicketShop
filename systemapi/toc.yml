@@ -1,4 +1,36 @@
 ### YamlMime:TableOfContent
+- uid: IO.Swagger
+  name: IO.Swagger
+  items:
+  - uid: IO.Swagger.Program
+    name: Program
+  - uid: IO.Swagger.Startup
+    name: Startup
+- uid: IO.Swagger.Attributes
+  name: IO.Swagger.Attributes
+  items:
+  - uid: IO.Swagger.Attributes.ValidateModelStateAttribute
+    name: ValidateModelStateAttribute
+- uid: IO.Swagger.Controllers
+  name: IO.Swagger.Controllers
+  items:
+  - uid: IO.Swagger.Controllers.EventApiController
+    name: EventApiController
+  - uid: IO.Swagger.Controllers.TicketApiController
+    name: TicketApiController
+  - uid: IO.Swagger.Controllers.TransactionApiController
+    name: TransactionApiController
+  - uid: IO.Swagger.Controllers.UserApiController
+    name: UserApiController
+- uid: IO.Swagger.Models
+  name: IO.Swagger.Models
+  items:
+  - uid: IO.Swagger.Models.Customer
+    name: Customer
+  - uid: IO.Swagger.Models.Ticket
+    name: Ticket
+  - uid: IO.Swagger.Models.Transaction
+    name: Transaction
 - uid: TicketApi
   name: TicketApi
   items:

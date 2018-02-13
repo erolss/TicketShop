@@ -4,8 +4,7 @@
     <Description>TicketApi</Description>
     <Copyright>TicketApi</Copyright>
     <AssemblyTitle>Swagger UI</AssemblyTitle>
-    <VersionPrefix>1.0.1</VersionPrefix>
-    <TargetFramework>netcoreapp2.0</TargetFramework>
+    <TargetFramework>netcoreapp1.0</TargetFramework>
     <GenerateDocumentationFile>true</GenerateDocumentationFile>
     <PreserveCompilationContext>true</PreserveCompilationContext>
     <AssemblyName>TicketApi</AssemblyName>

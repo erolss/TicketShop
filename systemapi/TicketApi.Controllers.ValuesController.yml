@@ -20,7 +20,7 @@ items:
   source:
     remote:
       path: src/TicketApi/Controllers/ValuesController.cs
-      branch: features/RESTapi
+      branch: RESTapi_Swagger
       repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
     id: ValuesController
     path: src/TicketApi/Controllers/ValuesController.cs
@@ -37,9 +37,7 @@ items:
       <Route("api/[controller]")>
 
       Public Class ValuesController
-
           Inherits Controller
-
           Implements IActionFilter, IAsyncActionFilter, IFilterMetadata, IDisposable
   inheritance:
   - System.Object
@@ -243,7 +241,7 @@ items:
   source:
     remote:
       path: src/TicketApi/Controllers/ValuesController.cs
-      branch: features/RESTapi
+      branch: RESTapi_Swagger
       repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
     id: Get
     path: src/TicketApi/Controllers/ValuesController.cs
@@ -285,7 +283,7 @@ items:
   source:
     remote:
       path: src/TicketApi/Controllers/ValuesController.cs
-      branch: features/RESTapi
+      branch: RESTapi_Swagger
       repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
     id: Get
     path: src/TicketApi/Controllers/ValuesController.cs
@@ -332,7 +330,7 @@ items:
   source:
     remote:
       path: src/TicketApi/Controllers/ValuesController.cs
-      branch: features/RESTapi
+      branch: RESTapi_Swagger
       repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
     id: Post
     path: src/TicketApi/Controllers/ValuesController.cs
@@ -379,7 +377,7 @@ items:
   source:
     remote:
       path: src/TicketApi/Controllers/ValuesController.cs
-      branch: features/RESTapi
+      branch: RESTapi_Swagger
       repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
     id: Put
     path: src/TicketApi/Controllers/ValuesController.cs
@@ -430,7 +428,7 @@ items:
   source:
     remote:
       path: src/TicketApi/Controllers/ValuesController.cs
-      branch: features/RESTapi
+      branch: RESTapi_Swagger
       repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
     id: Delete
     path: src/TicketApi/Controllers/ValuesController.cs
