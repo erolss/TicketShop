@@ -36,12 +36,12 @@ using TicketApi.Attributes;
 using TicketApi.Models;
 
 namespace TicketApi.Controllers
-{ 
+{
     /// <summary>
     /// 
     /// </summary>
     public class VenueApiController : Controller
-    { 
+    {
         /// <summary>
         /// Add Venue
         /// </summary>
@@ -54,7 +54,7 @@ namespace TicketApi.Controllers
         [ValidateModelState]
         [SwaggerOperation("AddVenue")]
         public virtual void AddVenue([FromBody]Venue body)
-        { 
+        {
             throw new NotImplementedException();
         }
 
@@ -70,7 +70,7 @@ namespace TicketApi.Controllers
         [ValidateModelState]
         [SwaggerOperation("DeleteVenue")]
         public virtual void DeleteVenue([FromRoute]int? venueId)
-        { 
+        {
             throw new NotImplementedException();
         }
 
@@ -82,11 +82,11 @@ namespace TicketApi.Controllers
         /// <response code="200">Venues loaded</response>
         /// <response code="404">Venue not found</response>
         [HttpGet]
-        [Route("/api/venue/{venueId}")]
+        [Route("/api/venue/{venueId}", Name = "GetVenue")]
         [ValidateModelState]
         [SwaggerOperation("GetVenueById")]
         public virtual void GetVenueById([FromRoute]int? venueId)
-        { 
+        {
             throw new NotImplementedException();
         }
 
@@ -101,7 +101,7 @@ namespace TicketApi.Controllers
         [ValidateModelState]
         [SwaggerOperation("GetVenues")]
         public virtual void GetVenues()
-        { 
+        {
             throw new NotImplementedException();
         }
 
@@ -118,7 +118,7 @@ namespace TicketApi.Controllers
         [ValidateModelState]
         [SwaggerOperation("UpdateVenue")]
         public virtual void UpdateVenue([FromRoute]int? venueId, [FromBody]Venue body)
-        { 
+        {
             throw new NotImplementedException();
         }
     }

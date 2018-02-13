@@ -47,4 +47,9 @@
     <DotNetCliToolReference Include="Microsoft.Extensions.SecretManager.Tools" Version="1.0.0" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\DatabaseRepository\DatabaseRepository.csproj" />
+    <ProjectReference Include="..\PaymentProvider\PaymentProvider.csproj" />
+  </ItemGroup>
+
 </Project>
