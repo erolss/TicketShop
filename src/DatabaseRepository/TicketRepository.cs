@@ -12,13 +12,18 @@ namespace TicketSystem.DatabaseRepository
     public class TicketRepository : ITicketRepository
     {
 
-        public List<Ticket> GetTickets()
+        public List<Ticket> GetTickets(int offset = 0, int maxLimit = 20)
         {
 
-            var query = new SqlBuilder()
-            .UPDATE("TicketEvents")
-            .SET("EventName = @name, EventHtmlDescription = @description")
-            .WHERE("TicketEventID = @id");
+            var query = @"SELECT * FROM
+                        ";
+            //SELECT*
+            //FROM Tickets t
+            //JOIN SeatsAtEventDate s ON t.SeatID = s.SeatID
+            //JOIN TicketEventDates tad ON s.TicketEventDateID = tad.TicketEventDateID
+            //JOIN Venues v ON tad.VenueID = v.VenueID
+            //JOIN TicketEvents te ON tad.TicketEventID = te.TicketEventID
+            //WHERE TicketID = 1
 
             using (var connection = new SqlConnection(ConfigurationManager.ConnectionStrings["TicketSystem"].ConnectionString))
             {
@@ -29,13 +34,21 @@ namespace TicketSystem.DatabaseRepository
 
         }
 
+        public List<Ticket> GetTicketsByUserId(string userId, int offset = 0, int maxLimit = 20)
+        {
+
+        }
+
+        public List<Ticket> GetTicketsByTransactionId(int transactionId, int offset = 0, int maxLimit = 20)
+        {
+            
+        }
+
         public Ticket GetTicketById(int id)
         {
 
         }
 
-
-
-
+        
     }
 }

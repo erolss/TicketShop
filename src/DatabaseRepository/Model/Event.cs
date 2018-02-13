@@ -2,15 +2,17 @@
 
 namespace TicketSystem.DatabaseRepository.Model
 {
-    public class Ticket
+    public class Event
     {
-        public int TicketId { get; set; }
-        public string UserId { get; set; }
-        public int TicketEventId { get; set; }
+        public int EventId { get; set; }
         public string EventName { get; set; }
         public string EventHtmlDescription { get; set; }
-        public int TicketEventDateId { get; set; }
+        public int EventDateId { get; set; }
         public int VenueId { get; set; }
+        public string VenueName { get; set; }
+        public string VenueCity { get; set; }
+        public string VenueCountry { get; set; }
         public DateTime EventStartDateTime { get; set; }
+        
     }
 }

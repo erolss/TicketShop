@@ -6,5 +6,6 @@ namespace TicketSystem.DatabaseRepository.Interface
 {
     class IEventRepository
     {
+
     }
 }
