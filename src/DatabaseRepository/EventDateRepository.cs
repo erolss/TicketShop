@@ -2,10 +2,11 @@
 using System.Collections.Generic;
 using System.Text;
 using TicketSystem.DatabaseRepository.Interface;
+using TicketSystem.DatabaseRepository.Model;
 
 namespace TicketSystem.DatabaseRepository
 {
-    class EventRepository : IEventRepository
+    class EventDateRepository : IEventDateRepository
     {
 
 

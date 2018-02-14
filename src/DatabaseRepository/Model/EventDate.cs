@@ -2,7 +2,7 @@
 
 namespace TicketSystem.DatabaseRepository.Model
 {
-    public class TicketEventDate
+    public class EventDate
     {
         public int TicketEventDateID { get; set; }
         public int TicketEventID { get; set; }
