@@ -34,6 +34,7 @@ using Swashbuckle.AspNetCore.SwaggerGen;
 using Newtonsoft.Json;
 using TicketApi.Attributes;
 using TicketApi.Models;
+using TicketSystem.DatabaseRepository;
 
 namespace TicketApi.Controllers
 { 
@@ -41,7 +42,11 @@ namespace TicketApi.Controllers
     /// 
     /// </summary>
     public class EventApiController : Controller
-    { 
+    {
+
+        private EventRepository _eventRepository;
+        
+            
         /// <summary>
         /// Create new event
         /// </summary>
@@ -56,13 +61,8 @@ namespace TicketApi.Controllers
         [SwaggerResponse(200, typeof(Object), "Event created")]
         [SwaggerResponse(400, typeof(Object), "Bad request")]
         public virtual IActionResult AddEvent([FromBody]Event body)
-        { 
-            string exampleJson = null;
-            
-            var example = exampleJson != null
-            ? JsonConvert.DeserializeObject<Object>(exampleJson)
-            : default(Object);
-            return new ObjectResult(example);
+        {
+            _eventRepository.AddEvent(body);
         }
 
         /// <summary>
@@ -77,8 +77,8 @@ namespace TicketApi.Controllers
         [ValidateModelState]
         [SwaggerOperation("DeleteEvent")]
         public virtual void DeleteEvent([FromRoute]int? eventId)
-        { 
-            throw new NotImplementedException();
+        {
+            _eventRepository.DeleteEvent(eventId);
         }
 
         /// <summary>

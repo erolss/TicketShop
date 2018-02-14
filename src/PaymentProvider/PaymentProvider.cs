@@ -10,15 +10,15 @@ namespace TicketSystem.PaymentProvider
         /// Three out of 20 payments results in payment rejected
         /// </summary>
         /// <param name="amountToPay">The amount to pay</param>
-        /// <param name="valuta">A three letter code (following ISO 4217) represending the valuta of the amount</param>
+        /// <param name="currency">A three letter code (following ISO 4217) represending the valuta of the amount</param>
         /// <param name="orderReference">A Guid which is the internal reference of the payment system</param>
         /// <returns>A payment object, containging the status of the order</returns>
-        public Payment Pay(decimal amountToPay, string valuta, string orderReference)
+        public Payment Pay(decimal amountToPay, string currency, string orderReference)
         {
-            if (valuta.Length != 3)
+            if (currency.Length != 3)
             {
                 // ISO 4217: https://en.wikipedia.org/wiki/ISO_4217
-                throw new ArgumentException("The valua must be three charaters, the input '" + valuta + "' is not valid");
+                throw new ArgumentException("The valua must be three charaters, the input '" + currency + "' is not valid");
             }
 
             Random rnd = new Random();
@@ -35,7 +35,7 @@ namespace TicketSystem.PaymentProvider
             }
             return new Payment()
             {
-                Valuta = valuta,
+                Currency = currency,
                 PaymentStatus = status,
                 OrderReference = orderReference,
                 TotalAmount = amountToPay,
