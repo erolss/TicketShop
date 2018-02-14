@@ -1,0 +1,896 @@
+### YamlMime:ManagedReference
+items:
+- uid: TicketSystem.DatabaseRepository.TicketRepository
+  commentId: T:TicketSystem.DatabaseRepository.TicketRepository
+  id: TicketRepository
+  parent: TicketSystem.DatabaseRepository
+  children:
+  - TicketSystem.DatabaseRepository.TicketRepository.GetTicketById(System.Int32)
+  - TicketSystem.DatabaseRepository.TicketRepository.GetTickets(System.Int32,System.Int32)
+  - TicketSystem.DatabaseRepository.TicketRepository.GetTicketsByTransactionId(System.Int32,System.Int32,System.Int32)
+  - TicketSystem.DatabaseRepository.TicketRepository.GetTicketsByUserId(System.String,System.Int32,System.Int32)
+  langs:
+  - csharp
+  - vb
+  name: TicketRepository
+  nameWithType: TicketRepository
+  fullName: TicketSystem.DatabaseRepository.TicketRepository
+  type: Class
+  source:
+    remote:
+      path: src/DatabaseRepository/TicketRepository.cs
+      branch: features/db
+      repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
+    id: TicketRepository
+    path: src/DatabaseRepository/TicketRepository.cs
+    startLine: 11
+  assemblies:
+  - DatabaseRepository
+  namespace: TicketSystem.DatabaseRepository
+  syntax:
+    content: 'public class TicketRepository : ITicketRepository'
+    content.vb: >-
+      Public Class TicketRepository
+          Implements ITicketRepository
+  inheritance:
+  - System.Object
+  implements:
+  - TicketSystem.DatabaseRepository.Interface.ITicketRepository
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: TicketSystem.DatabaseRepository.TicketRepository.GetTickets(System.Int32,System.Int32)
+  commentId: M:TicketSystem.DatabaseRepository.TicketRepository.GetTickets(System.Int32,System.Int32)
+  id: GetTickets(System.Int32,System.Int32)
+  parent: TicketSystem.DatabaseRepository.TicketRepository
+  langs:
+  - csharp
+  - vb
+  name: GetTickets(Int32, Int32)
+  nameWithType: TicketRepository.GetTickets(Int32, Int32)
+  fullName: TicketSystem.DatabaseRepository.TicketRepository.GetTickets(System.Int32, System.Int32)
+  type: Method
+  source:
+    remote:
+      path: src/DatabaseRepository/TicketRepository.cs
+      branch: features/db
+      repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
+    id: GetTickets
+    path: src/DatabaseRepository/TicketRepository.cs
+    startLine: 14
+  assemblies:
+  - DatabaseRepository
+  namespace: TicketSystem.DatabaseRepository
+  syntax:
+    content: public List<Ticket> GetTickets(int offset = 0, int maxLimit = 20)
+    parameters:
+    - id: offset
+      type: System.Int32
+    - id: maxLimit
+      type: System.Int32
+    return:
+      type: System.Collections.Generic.List{TicketSystem.DatabaseRepository.Model.Ticket}
+    content.vb: Public Function GetTickets(offset As Integer = 0, maxLimit As Integer = 20) As List(Of Ticket)
+  overload: TicketSystem.DatabaseRepository.TicketRepository.GetTickets*
+  implements:
+  - TicketSystem.DatabaseRepository.Interface.ITicketRepository.GetTickets(System.Int32,System.Int32)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: TicketSystem.DatabaseRepository.TicketRepository.GetTicketsByUserId(System.String,System.Int32,System.Int32)
+  commentId: M:TicketSystem.DatabaseRepository.TicketRepository.GetTicketsByUserId(System.String,System.Int32,System.Int32)
+  id: GetTicketsByUserId(System.String,System.Int32,System.Int32)
+  parent: TicketSystem.DatabaseRepository.TicketRepository
+  langs:
+  - csharp
+  - vb
+  name: GetTicketsByUserId(String, Int32, Int32)
+  nameWithType: TicketRepository.GetTicketsByUserId(String, Int32, Int32)
+  fullName: TicketSystem.DatabaseRepository.TicketRepository.GetTicketsByUserId(System.String, System.Int32, System.Int32)
+  type: Method
+  source:
+    remote:
+      path: src/DatabaseRepository/TicketRepository.cs
+      branch: features/db
+      repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
+    id: GetTicketsByUserId
+    path: src/DatabaseRepository/TicketRepository.cs
+    startLine: 37
+  assemblies:
+  - DatabaseRepository
+  namespace: TicketSystem.DatabaseRepository
+  syntax:
+    content: public List<Ticket> GetTicketsByUserId(string userId, int offset = 0, int maxLimit = 20)
+    parameters:
+    - id: userId
+      type: System.String
+    - id: offset
+      type: System.Int32
+    - id: maxLimit
+      type: System.Int32
+    return:
+      type: System.Collections.Generic.List{TicketSystem.DatabaseRepository.Model.Ticket}
+    content.vb: Public Function GetTicketsByUserId(userId As String, offset As Integer = 0, maxLimit As Integer = 20) As List(Of Ticket)
+  overload: TicketSystem.DatabaseRepository.TicketRepository.GetTicketsByUserId*
+  implements:
+  - TicketSystem.DatabaseRepository.Interface.ITicketRepository.GetTicketsByUserId(System.String,System.Int32,System.Int32)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: TicketSystem.DatabaseRepository.TicketRepository.GetTicketsByTransactionId(System.Int32,System.Int32,System.Int32)
+  commentId: M:TicketSystem.DatabaseRepository.TicketRepository.GetTicketsByTransactionId(System.Int32,System.Int32,System.Int32)
+  id: GetTicketsByTransactionId(System.Int32,System.Int32,System.Int32)
+  parent: TicketSystem.DatabaseRepository.TicketRepository
+  langs:
+  - csharp
+  - vb
+  name: GetTicketsByTransactionId(Int32, Int32, Int32)
+  nameWithType: TicketRepository.GetTicketsByTransactionId(Int32, Int32, Int32)
+  fullName: TicketSystem.DatabaseRepository.TicketRepository.GetTicketsByTransactionId(System.Int32, System.Int32, System.Int32)
+  type: Method
+  source:
+    remote:
+      path: src/DatabaseRepository/TicketRepository.cs
+      branch: features/db
+      repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
+    id: GetTicketsByTransactionId
+    path: src/DatabaseRepository/TicketRepository.cs
+    startLine: 60
+  assemblies:
+  - DatabaseRepository
+  namespace: TicketSystem.DatabaseRepository
+  syntax:
+    content: public List<Ticket> GetTicketsByTransactionId(int transactionId, int offset = 0, int maxLimit = 20)
+    parameters:
+    - id: transactionId
+      type: System.Int32
+    - id: offset
+      type: System.Int32
+    - id: maxLimit
+      type: System.Int32
+    return:
+      type: System.Collections.Generic.List{TicketSystem.DatabaseRepository.Model.Ticket}
+    content.vb: Public Function GetTicketsByTransactionId(transactionId As Integer, offset As Integer = 0, maxLimit As Integer = 20) As List(Of Ticket)
+  overload: TicketSystem.DatabaseRepository.TicketRepository.GetTicketsByTransactionId*
+  implements:
+  - TicketSystem.DatabaseRepository.Interface.ITicketRepository.GetTicketsByTransactionId(System.Int32,System.Int32,System.Int32)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: TicketSystem.DatabaseRepository.TicketRepository.GetTicketById(System.Int32)
+  commentId: M:TicketSystem.DatabaseRepository.TicketRepository.GetTicketById(System.Int32)
+  id: GetTicketById(System.Int32)
+  parent: TicketSystem.DatabaseRepository.TicketRepository
+  langs:
+  - csharp
+  - vb
+  name: GetTicketById(Int32)
+  nameWithType: TicketRepository.GetTicketById(Int32)
+  fullName: TicketSystem.DatabaseRepository.TicketRepository.GetTicketById(System.Int32)
+  type: Method
+  source:
+    remote:
+      path: src/DatabaseRepository/TicketRepository.cs
+      branch: features/db
+      repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
+    id: GetTicketById
+    path: src/DatabaseRepository/TicketRepository.cs
+    startLine: 83
+  assemblies:
+  - DatabaseRepository
+  namespace: TicketSystem.DatabaseRepository
+  syntax:
+    content: public Ticket GetTicketById(int id)
+    parameters:
+    - id: id
+      type: System.Int32
+    return:
+      type: TicketSystem.DatabaseRepository.Model.Ticket
+    content.vb: Public Function GetTicketById(id As Integer) As Ticket
+  overload: TicketSystem.DatabaseRepository.TicketRepository.GetTicketById*
+  implements:
+  - TicketSystem.DatabaseRepository.Interface.ITicketRepository.GetTicketById(System.Int32)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+references:
+- uid: TicketSystem.DatabaseRepository
+  commentId: N:TicketSystem.DatabaseRepository
+  isExternal: false
+  name: TicketSystem.DatabaseRepository
+  nameWithType: TicketSystem.DatabaseRepository
+  fullName: TicketSystem.DatabaseRepository
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: TicketSystem.DatabaseRepository.Interface.ITicketRepository
+  commentId: T:TicketSystem.DatabaseRepository.Interface.ITicketRepository
+  parent: TicketSystem.DatabaseRepository.Interface
+  isExternal: false
+  name: ITicketRepository
+  nameWithType: ITicketRepository
+  fullName: TicketSystem.DatabaseRepository.Interface.ITicketRepository
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: false
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: TicketSystem.DatabaseRepository.Interface
+  commentId: N:TicketSystem.DatabaseRepository.Interface
+  isExternal: false
+  name: TicketSystem.DatabaseRepository.Interface
+  nameWithType: TicketSystem.DatabaseRepository.Interface
+  fullName: TicketSystem.DatabaseRepository.Interface
+- uid: TicketSystem.DatabaseRepository.TicketRepository.GetTickets*
+  commentId: Overload:TicketSystem.DatabaseRepository.TicketRepository.GetTickets
+  isExternal: false
+  name: GetTickets
+  nameWithType: TicketRepository.GetTickets
+  fullName: TicketSystem.DatabaseRepository.TicketRepository.GetTickets
+- uid: TicketSystem.DatabaseRepository.Interface.ITicketRepository.GetTickets(System.Int32,System.Int32)
+  commentId: M:TicketSystem.DatabaseRepository.Interface.ITicketRepository.GetTickets(System.Int32,System.Int32)
+  parent: TicketSystem.DatabaseRepository.Interface.ITicketRepository
+  isExternal: true
+  name: GetTickets(Int32, Int32)
+  nameWithType: ITicketRepository.GetTickets(Int32, Int32)
+  fullName: TicketSystem.DatabaseRepository.Interface.ITicketRepository.GetTickets(System.Int32, System.Int32)
+  spec.csharp:
+  - uid: TicketSystem.DatabaseRepository.Interface.ITicketRepository.GetTickets(System.Int32,System.Int32)
+    name: GetTickets
+    nameWithType: ITicketRepository.GetTickets
+    fullName: TicketSystem.DatabaseRepository.Interface.ITicketRepository.GetTickets
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Int32
+    name: Int32
+    nameWithType: Int32
+    fullName: System.Int32
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Int32
+    name: Int32
+    nameWithType: Int32
+    fullName: System.Int32
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: TicketSystem.DatabaseRepository.Interface.ITicketRepository.GetTickets(System.Int32,System.Int32)
+    name: GetTickets
+    nameWithType: ITicketRepository.GetTickets
+    fullName: TicketSystem.DatabaseRepository.Interface.ITicketRepository.GetTickets
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Int32
+    name: Int32
+    nameWithType: Int32
+    fullName: System.Int32
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Int32
+    name: Int32
+    nameWithType: Int32
+    fullName: System.Int32
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  name: Int32
+  nameWithType: Int32
+  fullName: System.Int32
+- uid: System.Collections.Generic.List{TicketSystem.DatabaseRepository.Model.Ticket}
+  commentId: T:System.Collections.Generic.List{TicketSystem.DatabaseRepository.Model.Ticket}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.List`1
+  name: List<Ticket>
+  nameWithType: List<Ticket>
+  fullName: System.Collections.Generic.List<TicketSystem.DatabaseRepository.Model.Ticket>
+  nameWithType.vb: List(Of Ticket)
+  fullName.vb: System.Collections.Generic.List(Of TicketSystem.DatabaseRepository.Model.Ticket)
+  name.vb: List(Of Ticket)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    nameWithType: List
+    fullName: System.Collections.Generic.List
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: TicketSystem.DatabaseRepository.Model.Ticket
+    name: Ticket
+    nameWithType: Ticket
+    fullName: TicketSystem.DatabaseRepository.Model.Ticket
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    nameWithType: List
+    fullName: System.Collections.Generic.List
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: TicketSystem.DatabaseRepository.Model.Ticket
+    name: Ticket
+    nameWithType: Ticket
+    fullName: TicketSystem.DatabaseRepository.Model.Ticket
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic.List`1
+  commentId: T:System.Collections.Generic.List`1
+  isExternal: true
+  name: List<T>
+  nameWithType: List<T>
+  fullName: System.Collections.Generic.List<T>
+  nameWithType.vb: List(Of T)
+  fullName.vb: System.Collections.Generic.List(Of T)
+  name.vb: List(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    nameWithType: List
+    fullName: System.Collections.Generic.List
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    nameWithType: List
+    fullName: System.Collections.Generic.List
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: false
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+- uid: TicketSystem.DatabaseRepository.TicketRepository.GetTicketsByUserId*
+  commentId: Overload:TicketSystem.DatabaseRepository.TicketRepository.GetTicketsByUserId
+  isExternal: false
+  name: GetTicketsByUserId
+  nameWithType: TicketRepository.GetTicketsByUserId
+  fullName: TicketSystem.DatabaseRepository.TicketRepository.GetTicketsByUserId
+- uid: TicketSystem.DatabaseRepository.Interface.ITicketRepository.GetTicketsByUserId(System.String,System.Int32,System.Int32)
+  commentId: M:TicketSystem.DatabaseRepository.Interface.ITicketRepository.GetTicketsByUserId(System.String,System.Int32,System.Int32)
+  parent: TicketSystem.DatabaseRepository.Interface.ITicketRepository
+  isExternal: true
+  name: GetTicketsByUserId(String, Int32, Int32)
+  nameWithType: ITicketRepository.GetTicketsByUserId(String, Int32, Int32)
+  fullName: TicketSystem.DatabaseRepository.Interface.ITicketRepository.GetTicketsByUserId(System.String, System.Int32, System.Int32)
+  spec.csharp:
+  - uid: TicketSystem.DatabaseRepository.Interface.ITicketRepository.GetTicketsByUserId(System.String,System.Int32,System.Int32)
+    name: GetTicketsByUserId
+    nameWithType: ITicketRepository.GetTicketsByUserId
+    fullName: TicketSystem.DatabaseRepository.Interface.ITicketRepository.GetTicketsByUserId
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Int32
+    name: Int32
+    nameWithType: Int32
+    fullName: System.Int32
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Int32
+    name: Int32
+    nameWithType: Int32
+    fullName: System.Int32
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: TicketSystem.DatabaseRepository.Interface.ITicketRepository.GetTicketsByUserId(System.String,System.Int32,System.Int32)
+    name: GetTicketsByUserId
+    nameWithType: ITicketRepository.GetTicketsByUserId
+    fullName: TicketSystem.DatabaseRepository.Interface.ITicketRepository.GetTicketsByUserId
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Int32
+    name: Int32
+    nameWithType: Int32
+    fullName: System.Int32
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Int32
+    name: Int32
+    nameWithType: Int32
+    fullName: System.Int32
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: TicketSystem.DatabaseRepository.TicketRepository.GetTicketsByTransactionId*
+  commentId: Overload:TicketSystem.DatabaseRepository.TicketRepository.GetTicketsByTransactionId
+  isExternal: false
+  name: GetTicketsByTransactionId
+  nameWithType: TicketRepository.GetTicketsByTransactionId
+  fullName: TicketSystem.DatabaseRepository.TicketRepository.GetTicketsByTransactionId
+- uid: TicketSystem.DatabaseRepository.Interface.ITicketRepository.GetTicketsByTransactionId(System.Int32,System.Int32,System.Int32)
+  commentId: M:TicketSystem.DatabaseRepository.Interface.ITicketRepository.GetTicketsByTransactionId(System.Int32,System.Int32,System.Int32)
+  parent: TicketSystem.DatabaseRepository.Interface.ITicketRepository
+  isExternal: true
+  name: GetTicketsByTransactionId(Int32, Int32, Int32)
+  nameWithType: ITicketRepository.GetTicketsByTransactionId(Int32, Int32, Int32)
+  fullName: TicketSystem.DatabaseRepository.Interface.ITicketRepository.GetTicketsByTransactionId(System.Int32, System.Int32, System.Int32)
+  spec.csharp:
+  - uid: TicketSystem.DatabaseRepository.Interface.ITicketRepository.GetTicketsByTransactionId(System.Int32,System.Int32,System.Int32)
+    name: GetTicketsByTransactionId
+    nameWithType: ITicketRepository.GetTicketsByTransactionId
+    fullName: TicketSystem.DatabaseRepository.Interface.ITicketRepository.GetTicketsByTransactionId
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Int32
+    name: Int32
+    nameWithType: Int32
+    fullName: System.Int32
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Int32
+    name: Int32
+    nameWithType: Int32
+    fullName: System.Int32
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Int32
+    name: Int32
+    nameWithType: Int32
+    fullName: System.Int32
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: TicketSystem.DatabaseRepository.Interface.ITicketRepository.GetTicketsByTransactionId(System.Int32,System.Int32,System.Int32)
+    name: GetTicketsByTransactionId
+    nameWithType: ITicketRepository.GetTicketsByTransactionId
+    fullName: TicketSystem.DatabaseRepository.Interface.ITicketRepository.GetTicketsByTransactionId
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Int32
+    name: Int32
+    nameWithType: Int32
+    fullName: System.Int32
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Int32
+    name: Int32
+    nameWithType: Int32
+    fullName: System.Int32
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Int32
+    name: Int32
+    nameWithType: Int32
+    fullName: System.Int32
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: TicketSystem.DatabaseRepository.TicketRepository.GetTicketById*
+  commentId: Overload:TicketSystem.DatabaseRepository.TicketRepository.GetTicketById
+  isExternal: false
+  name: GetTicketById
+  nameWithType: TicketRepository.GetTicketById
+  fullName: TicketSystem.DatabaseRepository.TicketRepository.GetTicketById
+- uid: TicketSystem.DatabaseRepository.Interface.ITicketRepository.GetTicketById(System.Int32)
+  commentId: M:TicketSystem.DatabaseRepository.Interface.ITicketRepository.GetTicketById(System.Int32)
+  parent: TicketSystem.DatabaseRepository.Interface.ITicketRepository
+  isExternal: true
+  name: GetTicketById(Int32)
+  nameWithType: ITicketRepository.GetTicketById(Int32)
+  fullName: TicketSystem.DatabaseRepository.Interface.ITicketRepository.GetTicketById(System.Int32)
+  spec.csharp:
+  - uid: TicketSystem.DatabaseRepository.Interface.ITicketRepository.GetTicketById(System.Int32)
+    name: GetTicketById
+    nameWithType: ITicketRepository.GetTicketById
+    fullName: TicketSystem.DatabaseRepository.Interface.ITicketRepository.GetTicketById
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Int32
+    name: Int32
+    nameWithType: Int32
+    fullName: System.Int32
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: TicketSystem.DatabaseRepository.Interface.ITicketRepository.GetTicketById(System.Int32)
+    name: GetTicketById
+    nameWithType: ITicketRepository.GetTicketById
+    fullName: TicketSystem.DatabaseRepository.Interface.ITicketRepository.GetTicketById
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Int32
+    name: Int32
+    nameWithType: Int32
+    fullName: System.Int32
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: TicketSystem.DatabaseRepository.Model.Ticket
+  commentId: T:TicketSystem.DatabaseRepository.Model.Ticket
+  parent: TicketSystem.DatabaseRepository.Model
+  isExternal: false
+  name: Ticket
+  nameWithType: Ticket
+  fullName: TicketSystem.DatabaseRepository.Model.Ticket
+- uid: TicketSystem.DatabaseRepository.Model
+  commentId: N:TicketSystem.DatabaseRepository.Model
+  isExternal: false
+  name: TicketSystem.DatabaseRepository.Model
+  nameWithType: TicketSystem.DatabaseRepository.Model
+  fullName: TicketSystem.DatabaseRepository.Model

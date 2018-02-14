@@ -16,7 +16,7 @@ items:
   source:
     remote:
       path: src/PaymentProvider/IPaymentProvider.cs
-      branch: master
+      branch: features/db
       repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
     id: IPaymentProvider
     path: src/PaymentProvider/IPaymentProvider.cs
@@ -47,7 +47,7 @@ items:
   source:
     remote:
       path: src/PaymentProvider/IPaymentProvider.cs
-      branch: master
+      branch: features/db
       repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
     id: Pay
     path: src/PaymentProvider/IPaymentProvider.cs
@@ -88,6 +88,8 @@ references:
   nameWithType: IPaymentProvider.Pay
   fullName: TicketSystem.PaymentProvider.IPaymentProvider.Pay
 - uid: System.Decimal
+  commentId: T:System.Decimal
+  parent: System
   isExternal: true
   name: Decimal
   nameWithType: Decimal

@@ -18,21 +18,17 @@ CREATE TABLE Venues (
 CREATE TABLE TicketEventDates (
     TicketEventDateID INT NOT NULL IDENTITY(1,1)  PRIMARY KEY,
 	TicketEventID INT FOREIGN KEY REFERENCES TicketEvents(TicketEventID),
-	VenueId INT FOREIGN KEY REFERENCES Venues(VenueID),
-    EventStartDateTime DATETIME
+	VenueID INT FOREIGN KEY REFERENCES Venues(VenueID),
+    EventStartDateTime DATETIME,
+	Price FLOAT NOT NULL,
+	MaxTickets INT NOT NULL
 );
 
 
-
-
-CREATE TABLE SeatsAtEventDate (
-    SeatID INT NOT NULL IDENTITY(1,1) PRIMARY KEY,
-	TicketEventDateID INT  FOREIGN KEY REFERENCES TicketEventDates(TicketEventDateID)
-);
 
 CREATE TABLE Tickets (
     TicketID INT NOT NULL IDENTITY(1,1) PRIMARY KEY,
-	SeatID INT FOREIGN KEY REFERENCES SeatsAtEventDate(SeatID)
+	TicketEventDateID INT FOREIGN KEY REFERENCES TicketEventDates(TicketEventDateID)
 );
 
 CREATE TABLE TicketTransactions (
@@ -42,12 +38,14 @@ CREATE TABLE TicketTransactions (
     BuyerAddress varchar(255),
     BuyerCity varchar(255),
 	PaymentStatus varchar(255),
-	PaymentReferenceId varchar(255)
+	PaymentReferenceId varchar(255),
+	BuyerEmail VARCHAR(255) NOT NULL,
+	BuyerUserId VARCHAR(255) NOT NULL
 );
 
 CREATE TABLE TicketsToTransactions (
     TicketID INT  NOT NULL   FOREIGN KEY REFERENCES Tickets(TicketID),
-	TransactionID INT  NOT NULL   FOREIGN KEY REFERENCES TicketTransactions(TransactionID),
+	TransactionID INT  NOT NULL FOREIGN KEY REFERENCES TicketTransactions(TransactionID),
 	primary key (TicketID, TransactionID)
 );
 

@@ -1,0 +1,23 @@
+### YamlMime:ManagedReference
+items:
+- uid: TicketApi.Attributes
+  commentId: N:TicketApi.Attributes
+  id: TicketApi.Attributes
+  children:
+  - TicketApi.Attributes.ValidateModelStateAttribute
+  langs:
+  - csharp
+  - vb
+  name: TicketApi.Attributes
+  nameWithType: TicketApi.Attributes
+  fullName: TicketApi.Attributes
+  type: Namespace
+  assemblies:
+  - TicketApi
+references:
+- uid: TicketApi.Attributes.ValidateModelStateAttribute
+  commentId: T:TicketApi.Attributes.ValidateModelStateAttribute
+  isExternal: false
+  name: ValidateModelStateAttribute
+  nameWithType: ValidateModelStateAttribute
+  fullName: TicketApi.Attributes.ValidateModelStateAttribute

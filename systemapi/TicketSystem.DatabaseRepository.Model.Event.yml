@@ -1,34 +1,34 @@
 ### YamlMime:ManagedReference
 items:
-- uid: IO.Swagger.Program
-  commentId: T:IO.Swagger.Program
-  id: Program
-  parent: IO.Swagger
+- uid: TicketSystem.DatabaseRepository.Model.Event
+  commentId: T:TicketSystem.DatabaseRepository.Model.Event
+  id: Event
+  parent: TicketSystem.DatabaseRepository.Model
   children:
-  - IO.Swagger.Program.Main(System.String[])
+  - TicketSystem.DatabaseRepository.Model.Event.EventHtmlDescription
+  - TicketSystem.DatabaseRepository.Model.Event.EventName
+  - TicketSystem.DatabaseRepository.Model.Event.TicketEventId
   langs:
   - csharp
   - vb
-  name: Program
-  nameWithType: Program
-  fullName: IO.Swagger.Program
+  name: Event
+  nameWithType: Event
+  fullName: TicketSystem.DatabaseRepository.Model.Event
   type: Class
   source:
     remote:
-      path: src/IO.Swagger/Program.cs
-      branch: RESTapi_Swagger
+      path: src/DatabaseRepository/Model/Event.cs
+      branch: features/db
       repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
-    id: Program
-    path: src/IO.Swagger/Program.cs
-    startLine: 8
+    id: Event
+    path: src/DatabaseRepository/Model/Event.cs
+    startLine: 2
   assemblies:
-  - IO.Swagger
-  namespace: IO.Swagger
-  summary: "\nProgram\n"
-  example: []
+  - DatabaseRepository
+  namespace: TicketSystem.DatabaseRepository.Model
   syntax:
-    content: public class Program
-    content.vb: Public Class Program
+    content: public class Event
+    content.vb: Public Class Event
   inheritance:
   - System.Object
   inheritedMembers:
@@ -45,54 +45,118 @@ items:
   modifiers.vb:
   - Public
   - Class
-- uid: IO.Swagger.Program.Main(System.String[])
-  commentId: M:IO.Swagger.Program.Main(System.String[])
-  id: Main(System.String[])
-  parent: IO.Swagger.Program
+- uid: TicketSystem.DatabaseRepository.Model.Event.TicketEventId
+  commentId: P:TicketSystem.DatabaseRepository.Model.Event.TicketEventId
+  id: TicketEventId
+  parent: TicketSystem.DatabaseRepository.Model.Event
   langs:
   - csharp
   - vb
-  name: Main(String[])
-  nameWithType: Program.Main(String[])
-  fullName: IO.Swagger.Program.Main(System.String[])
-  type: Method
+  name: TicketEventId
+  nameWithType: Event.TicketEventId
+  fullName: TicketSystem.DatabaseRepository.Model.Event.TicketEventId
+  type: Property
   source:
     remote:
-      path: src/IO.Swagger/Program.cs
-      branch: RESTapi_Swagger
+      path: src/DatabaseRepository/Model/Event.cs
+      branch: features/db
       repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
-    id: Main
-    path: src/IO.Swagger/Program.cs
-    startLine: 14
+    id: TicketEventId
+    path: src/DatabaseRepository/Model/Event.cs
+    startLine: 4
   assemblies:
-  - IO.Swagger
-  namespace: IO.Swagger
-  summary: "\nMain\n"
-  example: []
+  - DatabaseRepository
+  namespace: TicketSystem.DatabaseRepository.Model
   syntax:
-    content: public static void Main(string[] args)
-    parameters:
-    - id: args
-      type: System.String[]
-      description: ''
-    content.vb: Public Shared Sub Main(args As String())
-  overload: IO.Swagger.Program.Main*
-  nameWithType.vb: Program.Main(String())
+    content: public int TicketEventId { get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public Property TicketEventId As Integer
+  overload: TicketSystem.DatabaseRepository.Model.Event.TicketEventId*
   modifiers.csharp:
   - public
-  - static
+  - get
+  - set
   modifiers.vb:
   - Public
-  - Shared
-  fullName.vb: IO.Swagger.Program.Main(System.String())
-  name.vb: Main(String())
+- uid: TicketSystem.DatabaseRepository.Model.Event.EventName
+  commentId: P:TicketSystem.DatabaseRepository.Model.Event.EventName
+  id: EventName
+  parent: TicketSystem.DatabaseRepository.Model.Event
+  langs:
+  - csharp
+  - vb
+  name: EventName
+  nameWithType: Event.EventName
+  fullName: TicketSystem.DatabaseRepository.Model.Event.EventName
+  type: Property
+  source:
+    remote:
+      path: src/DatabaseRepository/Model/Event.cs
+      branch: features/db
+      repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
+    id: EventName
+    path: src/DatabaseRepository/Model/Event.cs
+    startLine: 5
+  assemblies:
+  - DatabaseRepository
+  namespace: TicketSystem.DatabaseRepository.Model
+  syntax:
+    content: public string EventName { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property EventName As String
+  overload: TicketSystem.DatabaseRepository.Model.Event.EventName*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: TicketSystem.DatabaseRepository.Model.Event.EventHtmlDescription
+  commentId: P:TicketSystem.DatabaseRepository.Model.Event.EventHtmlDescription
+  id: EventHtmlDescription
+  parent: TicketSystem.DatabaseRepository.Model.Event
+  langs:
+  - csharp
+  - vb
+  name: EventHtmlDescription
+  nameWithType: Event.EventHtmlDescription
+  fullName: TicketSystem.DatabaseRepository.Model.Event.EventHtmlDescription
+  type: Property
+  source:
+    remote:
+      path: src/DatabaseRepository/Model/Event.cs
+      branch: features/db
+      repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
+    id: EventHtmlDescription
+    path: src/DatabaseRepository/Model/Event.cs
+    startLine: 6
+  assemblies:
+  - DatabaseRepository
+  namespace: TicketSystem.DatabaseRepository.Model
+  syntax:
+    content: public string EventHtmlDescription { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property EventHtmlDescription As String
+  overload: TicketSystem.DatabaseRepository.Model.Event.EventHtmlDescription*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
 references:
-- uid: IO.Swagger
-  commentId: N:IO.Swagger
+- uid: TicketSystem.DatabaseRepository.Model
+  commentId: N:TicketSystem.DatabaseRepository.Model
   isExternal: false
-  name: IO.Swagger
-  nameWithType: IO.Swagger
-  fullName: IO.Swagger
+  name: TicketSystem.DatabaseRepository.Model
+  nameWithType: TicketSystem.DatabaseRepository.Model
+  fullName: TicketSystem.DatabaseRepository.Model
 - uid: System.Object
   commentId: T:System.Object
   parent: System
@@ -385,34 +449,35 @@ references:
   name: System
   nameWithType: System
   fullName: System
-- uid: IO.Swagger.Program.Main*
-  commentId: Overload:IO.Swagger.Program.Main
+- uid: TicketSystem.DatabaseRepository.Model.Event.TicketEventId*
+  commentId: Overload:TicketSystem.DatabaseRepository.Model.Event.TicketEventId
   isExternal: false
-  name: Main
-  nameWithType: Program.Main
-  fullName: IO.Swagger.Program.Main
-- uid: System.String[]
-  name: String[]
-  nameWithType: String[]
-  fullName: System.String[]
-  nameWithType.vb: String()
-  fullName.vb: System.String()
-  name.vb: String()
-  spec.csharp:
-  - uid: System.String
-    name: String
-    nameWithType: String
-    fullName: System.String
-    isExternal: true
-  - name: '[]'
-    nameWithType: '[]'
-    fullName: '[]'
-  spec.vb:
-  - uid: System.String
-    name: String
-    nameWithType: String
-    fullName: System.String
-    isExternal: true
-  - name: ()
-    nameWithType: ()
-    fullName: ()
+  name: TicketEventId
+  nameWithType: Event.TicketEventId
+  fullName: TicketSystem.DatabaseRepository.Model.Event.TicketEventId
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  name: Int32
+  nameWithType: Int32
+  fullName: System.Int32
+- uid: TicketSystem.DatabaseRepository.Model.Event.EventName*
+  commentId: Overload:TicketSystem.DatabaseRepository.Model.Event.EventName
+  isExternal: false
+  name: EventName
+  nameWithType: Event.EventName
+  fullName: TicketSystem.DatabaseRepository.Model.Event.EventName
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: TicketSystem.DatabaseRepository.Model.Event.EventHtmlDescription*
+  commentId: Overload:TicketSystem.DatabaseRepository.Model.Event.EventHtmlDescription
+  isExternal: false
+  name: EventHtmlDescription
+  nameWithType: Event.EventHtmlDescription
+  fullName: TicketSystem.DatabaseRepository.Model.Event.EventHtmlDescription

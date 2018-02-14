@@ -2,10 +2,10 @@
 
 namespace TicketSystem.DatabaseRepository.Model
 {
-    public class Ticket
+    public class FullTicket
     {
         public int TicketId { get; set; }
-        public FullEventDate EventDate { get; set; }
+        public int TicketEventId { get; set; }
         
     }
 }

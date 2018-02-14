@@ -1,36 +1,40 @@
 ### YamlMime:ManagedReference
 items:
-- uid: IO.Swagger.Controllers.UserApiController
-  commentId: T:IO.Swagger.Controllers.UserApiController
-  id: UserApiController
-  parent: IO.Swagger.Controllers
+- uid: TicketApi.Controllers.EventApiController
+  commentId: T:TicketApi.Controllers.EventApiController
+  id: EventApiController
+  parent: TicketApi.Controllers
   children:
-  - IO.Swagger.Controllers.UserApiController.UsersGet
-  - IO.Swagger.Controllers.UserApiController.UsersUserIdGet(System.Nullable{System.Int32})
+  - TicketApi.Controllers.EventApiController.AddEvent(TicketApi.Models.Event)
+  - TicketApi.Controllers.EventApiController.DeleteEvent(System.Nullable{System.Int32})
+  - TicketApi.Controllers.EventApiController.FindEvents(System.String)
+  - TicketApi.Controllers.EventApiController.GetEventById(System.Nullable{System.Int32})
+  - TicketApi.Controllers.EventApiController.GetEvents
+  - TicketApi.Controllers.EventApiController.UpdateEvent(System.Nullable{System.Int32},TicketApi.Models.Event)
   langs:
   - csharp
   - vb
-  name: UserApiController
-  nameWithType: UserApiController
-  fullName: IO.Swagger.Controllers.UserApiController
+  name: EventApiController
+  nameWithType: EventApiController
+  fullName: TicketApi.Controllers.EventApiController
   type: Class
   source:
     remote:
-      path: src/IO.Swagger/Controllers/UserApi.cs
-      branch: RESTapi_Swagger
+      path: src/TicketApi/Controllers/EventApi.cs
+      branch: features/db
       repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
-    id: UserApiController
-    path: src/IO.Swagger/Controllers/UserApi.cs
+    id: EventApiController
+    path: src/TicketApi/Controllers/EventApi.cs
     startLine: 42
   assemblies:
-  - IO.Swagger
-  namespace: IO.Swagger.Controllers
+  - TicketApi
+  namespace: TicketApi.Controllers
   summary: "\n\n"
   example: []
   syntax:
-    content: 'public class UserApiController : Controller, IActionFilter, IAsyncActionFilter, IFilterMetadata, IDisposable'
+    content: 'public class EventApiController : Controller, IActionFilter, IAsyncActionFilter, IFilterMetadata, IDisposable'
     content.vb: >-
-      Public Class UserApiController
+      Public Class EventApiController
           Inherits Controller
           Implements IActionFilter, IAsyncActionFilter, IFilterMetadata, IDisposable
   inheritance:
@@ -161,119 +165,240 @@ items:
   modifiers.vb:
   - Public
   - Class
-- uid: IO.Swagger.Controllers.UserApiController.UsersGet
-  commentId: M:IO.Swagger.Controllers.UserApiController.UsersGet
-  id: UsersGet
-  parent: IO.Swagger.Controllers.UserApiController
+- uid: TicketApi.Controllers.EventApiController.AddEvent(TicketApi.Models.Event)
+  commentId: M:TicketApi.Controllers.EventApiController.AddEvent(TicketApi.Models.Event)
+  id: AddEvent(TicketApi.Models.Event)
+  parent: TicketApi.Controllers.EventApiController
   langs:
   - csharp
   - vb
-  name: UsersGet()
-  nameWithType: UserApiController.UsersGet()
-  fullName: IO.Swagger.Controllers.UserApiController.UsersGet()
+  name: AddEvent(Event)
+  nameWithType: EventApiController.AddEvent(Event)
+  fullName: TicketApi.Controllers.EventApiController.AddEvent(TicketApi.Models.Event)
   type: Method
   source:
     remote:
-      path: src/IO.Swagger/Controllers/UserApi.cs
-      branch: RESTapi_Swagger
+      path: src/TicketApi/Controllers/EventApi.cs
+      branch: features/db
       repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
-    id: UsersGet
-    path: src/IO.Swagger/Controllers/UserApi.cs
-    startLine: 50
+    id: AddEvent
+    path: src/TicketApi/Controllers/EventApi.cs
+    startLine: 51
   assemblies:
-  - IO.Swagger
-  namespace: IO.Swagger.Controllers
-  summary: "\nGet all users in system\n"
+  - TicketApi
+  namespace: TicketApi.Controllers
+  summary: "\nCreate new event\n"
+  remarks: Adds a new event in system
   example: []
   syntax:
     content: >-
-      [HttpGet]
+      [HttpPost]
 
-      [Route("/api/users")]
+      [Route("/api/event")]
 
-      [SwaggerOperation("UsersGet")]
+      [SwaggerOperation("AddEvent")]
 
-      public virtual void UsersGet()
+      [SwaggerResponse(200, typeof (object), "Event created")]
+
+      [SwaggerResponse(400, typeof (object), "Bad request")]
+
+      public virtual IActionResult AddEvent([FromBody] Event body)
+    parameters:
+    - id: body
+      type: TicketApi.Models.Event
+      description: Event data
+      attributes:
+      - type: Microsoft.AspNetCore.Mvc.FromBodyAttribute
+        ctor: Microsoft.AspNetCore.Mvc.FromBodyAttribute.#ctor
+        arguments: []
+    return:
+      type: Microsoft.AspNetCore.Mvc.IActionResult
     content.vb: >-
-      <HttpGet>
+      <HttpPost>
 
-      <Route("/api/users")>
+      <Route("/api/event")>
 
-      <SwaggerOperation("UsersGet")>
+      <SwaggerOperation("AddEvent")>
 
-      Public Overridable Sub UsersGet
-  overload: IO.Swagger.Controllers.UserApiController.UsersGet*
+      <SwaggerResponse(200, GetType(Object), "Event created")>
+
+      <SwaggerResponse(400, GetType(Object), "Bad request")>
+
+      Public Overridable Function AddEvent(body As  Event) As IActionResult
+  overload: TicketApi.Controllers.EventApiController.AddEvent*
   attributes:
-  - type: Microsoft.AspNetCore.Mvc.HttpGetAttribute
-    ctor: Microsoft.AspNetCore.Mvc.HttpGetAttribute.#ctor
+  - type: Microsoft.AspNetCore.Mvc.HttpPostAttribute
+    ctor: Microsoft.AspNetCore.Mvc.HttpPostAttribute.#ctor
     arguments: []
   - type: Microsoft.AspNetCore.Mvc.RouteAttribute
     ctor: Microsoft.AspNetCore.Mvc.RouteAttribute.#ctor(System.String)
     arguments:
     - type: System.String
-      value: /api/users
+      value: /api/event
   - type: Swashbuckle.AspNetCore.SwaggerGen.SwaggerOperationAttribute
     ctor: Swashbuckle.AspNetCore.SwaggerGen.SwaggerOperationAttribute.#ctor(System.String)
     arguments:
     - type: System.String
-      value: UsersGet
+      value: AddEvent
+  - type: Swashbuckle.AspNetCore.SwaggerGen.SwaggerResponseAttribute
+    ctor: Swashbuckle.AspNetCore.SwaggerGen.SwaggerResponseAttribute.#ctor(System.Int32,System.Type,System.String)
+    arguments:
+    - type: System.Int32
+      value: 200
+    - type: System.Type
+      value: System.Object
+    - type: System.String
+      value: Event created
+  - type: Swashbuckle.AspNetCore.SwaggerGen.SwaggerResponseAttribute
+    ctor: Swashbuckle.AspNetCore.SwaggerGen.SwaggerResponseAttribute.#ctor(System.Int32,System.Type,System.String)
+    arguments:
+    - type: System.Int32
+      value: 400
+    - type: System.Type
+      value: System.Object
+    - type: System.String
+      value: Bad request
   modifiers.csharp:
   - public
   - virtual
   modifiers.vb:
   - Public
   - Overridable
-- uid: IO.Swagger.Controllers.UserApiController.UsersUserIdGet(System.Nullable{System.Int32})
-  commentId: M:IO.Swagger.Controllers.UserApiController.UsersUserIdGet(System.Nullable{System.Int32})
-  id: UsersUserIdGet(System.Nullable{System.Int32})
-  parent: IO.Swagger.Controllers.UserApiController
+- uid: TicketApi.Controllers.EventApiController.DeleteEvent(System.Nullable{System.Int32})
+  commentId: M:TicketApi.Controllers.EventApiController.DeleteEvent(System.Nullable{System.Int32})
+  id: DeleteEvent(System.Nullable{System.Int32})
+  parent: TicketApi.Controllers.EventApiController
   langs:
   - csharp
   - vb
-  name: UsersUserIdGet(Nullable<Int32>)
-  nameWithType: UserApiController.UsersUserIdGet(Nullable<Int32>)
-  fullName: IO.Swagger.Controllers.UserApiController.UsersUserIdGet(System.Nullable<System.Int32>)
+  name: DeleteEvent(Nullable<Int32>)
+  nameWithType: EventApiController.DeleteEvent(Nullable<Int32>)
+  fullName: TicketApi.Controllers.EventApiController.DeleteEvent(System.Nullable<System.Int32>)
   type: Method
   source:
     remote:
-      path: src/IO.Swagger/Controllers/UserApi.cs
-      branch: RESTapi_Swagger
+      path: src/TicketApi/Controllers/EventApi.cs
+      branch: features/db
       repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
-    id: UsersUserIdGet
-    path: src/IO.Swagger/Controllers/UserApi.cs
-    startLine: 66
+    id: DeleteEvent
+    path: src/TicketApi/Controllers/EventApi.cs
+    startLine: 74
   assemblies:
-  - IO.Swagger
-  namespace: IO.Swagger.Controllers
-  summary: "\nGet a user by ID from the system\n"
-  remarks: Returns a single user
+  - TicketApi
+  namespace: TicketApi.Controllers
+  summary: "\nDelete event\n"
+  remarks: Delete an event
   example: []
   syntax:
     content: >-
-      [HttpGet]
+      [HttpDelete]
 
-      [Route("/api/users/{userId}")]
+      [Route("/api/event/{eventId}")]
 
-      [SwaggerOperation("UsersUserIdGet")]
+      [SwaggerOperation("DeleteEvent")]
 
-      public virtual void UsersUserIdGet([FromRoute] int ? userId)
+      public virtual void DeleteEvent([FromRoute] int ? eventId)
     parameters:
-    - id: userId
+    - id: eventId
       type: System.Nullable{System.Int32}
-      description: ID of the user
+      description: Event ID
       attributes:
       - type: Microsoft.AspNetCore.Mvc.FromRouteAttribute
         ctor: Microsoft.AspNetCore.Mvc.FromRouteAttribute.#ctor
         arguments: []
     content.vb: >-
+      <HttpDelete>
+
+      <Route("/api/event/{eventId}")>
+
+      <SwaggerOperation("DeleteEvent")>
+
+      Public Overridable Sub DeleteEvent(eventId As Integer?)
+  overload: TicketApi.Controllers.EventApiController.DeleteEvent*
+  attributes:
+  - type: Microsoft.AspNetCore.Mvc.HttpDeleteAttribute
+    ctor: Microsoft.AspNetCore.Mvc.HttpDeleteAttribute.#ctor
+    arguments: []
+  - type: Microsoft.AspNetCore.Mvc.RouteAttribute
+    ctor: Microsoft.AspNetCore.Mvc.RouteAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: /api/event/{eventId}
+  - type: Swashbuckle.AspNetCore.SwaggerGen.SwaggerOperationAttribute
+    ctor: Swashbuckle.AspNetCore.SwaggerGen.SwaggerOperationAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: DeleteEvent
+  nameWithType.vb: EventApiController.DeleteEvent(Nullable(Of Int32))
+  modifiers.csharp:
+  - public
+  - virtual
+  modifiers.vb:
+  - Public
+  - Overridable
+  fullName.vb: TicketApi.Controllers.EventApiController.DeleteEvent(System.Nullable(Of System.Int32))
+  name.vb: DeleteEvent(Nullable(Of Int32))
+- uid: TicketApi.Controllers.EventApiController.FindEvents(System.String)
+  commentId: M:TicketApi.Controllers.EventApiController.FindEvents(System.String)
+  id: FindEvents(System.String)
+  parent: TicketApi.Controllers.EventApiController
+  langs:
+  - csharp
+  - vb
+  name: FindEvents(String)
+  nameWithType: EventApiController.FindEvents(String)
+  fullName: TicketApi.Controllers.EventApiController.FindEvents(System.String)
+  type: Method
+  source:
+    remote:
+      path: src/TicketApi/Controllers/EventApi.cs
+      branch: features/db
+      repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
+    id: FindEvents
+    path: src/TicketApi/Controllers/EventApi.cs
+    startLine: 90
+  assemblies:
+  - TicketApi
+  namespace: TicketApi.Controllers
+  summary: "\nGet all events matching query\n"
+  remarks: Returns all events matching query
+  example: []
+  syntax:
+    content: >-
+      [HttpGet]
+
+      [Route("/api/event/search/{query}")]
+
+      [SwaggerOperation("FindEvents")]
+
+      [SwaggerResponse(200, typeof (List<Event>), "Events search results loaded")]
+
+      [SwaggerResponse(404, typeof (List<Event>), "No events found")]
+
+      public virtual IActionResult FindEvents([FromRoute] string query)
+    parameters:
+    - id: query
+      type: System.String
+      description: 'query to find events '
+      attributes:
+      - type: Microsoft.AspNetCore.Mvc.FromRouteAttribute
+        ctor: Microsoft.AspNetCore.Mvc.FromRouteAttribute.#ctor
+        arguments: []
+    return:
+      type: Microsoft.AspNetCore.Mvc.IActionResult
+    content.vb: >-
       <HttpGet>
 
-      <Route("/api/users/{userId}")>
+      <Route("/api/event/search/{query}")>
 
-      <SwaggerOperation("UsersUserIdGet")>
+      <SwaggerOperation("FindEvents")>
 
-      Public Overridable Sub UsersUserIdGet(userId As Integer?)
-  overload: IO.Swagger.Controllers.UserApiController.UsersUserIdGet*
+      <SwaggerResponse(200, GetType(List(Of  Event)), "Events search results loaded")>
+
+      <SwaggerResponse(404, GetType(List(Of  Event)), "No events found")>
+
+      Public Overridable Function FindEvents(query As String) As IActionResult
+  overload: TicketApi.Controllers.EventApiController.FindEvents*
   attributes:
   - type: Microsoft.AspNetCore.Mvc.HttpGetAttribute
     ctor: Microsoft.AspNetCore.Mvc.HttpGetAttribute.#ctor
@@ -282,28 +407,345 @@ items:
     ctor: Microsoft.AspNetCore.Mvc.RouteAttribute.#ctor(System.String)
     arguments:
     - type: System.String
-      value: /api/users/{userId}
+      value: /api/event/search/{query}
   - type: Swashbuckle.AspNetCore.SwaggerGen.SwaggerOperationAttribute
     ctor: Swashbuckle.AspNetCore.SwaggerGen.SwaggerOperationAttribute.#ctor(System.String)
     arguments:
     - type: System.String
-      value: UsersUserIdGet
-  nameWithType.vb: UserApiController.UsersUserIdGet(Nullable(Of Int32))
+      value: FindEvents
+  - type: Swashbuckle.AspNetCore.SwaggerGen.SwaggerResponseAttribute
+    ctor: Swashbuckle.AspNetCore.SwaggerGen.SwaggerResponseAttribute.#ctor(System.Int32,System.Type,System.String)
+    arguments:
+    - type: System.Int32
+      value: 200
+    - type: System.Type
+      value: System.Collections.Generic.List{TicketApi.Models.Event}
+    - type: System.String
+      value: Events search results loaded
+  - type: Swashbuckle.AspNetCore.SwaggerGen.SwaggerResponseAttribute
+    ctor: Swashbuckle.AspNetCore.SwaggerGen.SwaggerResponseAttribute.#ctor(System.Int32,System.Type,System.String)
+    arguments:
+    - type: System.Int32
+      value: 404
+    - type: System.Type
+      value: System.Collections.Generic.List{TicketApi.Models.Event}
+    - type: System.String
+      value: No events found
   modifiers.csharp:
   - public
   - virtual
   modifiers.vb:
   - Public
   - Overridable
-  fullName.vb: IO.Swagger.Controllers.UserApiController.UsersUserIdGet(System.Nullable(Of System.Int32))
-  name.vb: UsersUserIdGet(Nullable(Of Int32))
+- uid: TicketApi.Controllers.EventApiController.GetEventById(System.Nullable{System.Int32})
+  commentId: M:TicketApi.Controllers.EventApiController.GetEventById(System.Nullable{System.Int32})
+  id: GetEventById(System.Nullable{System.Int32})
+  parent: TicketApi.Controllers.EventApiController
+  langs:
+  - csharp
+  - vb
+  name: GetEventById(Nullable<Int32>)
+  nameWithType: EventApiController.GetEventById(Nullable<Int32>)
+  fullName: TicketApi.Controllers.EventApiController.GetEventById(System.Nullable<System.Int32>)
+  type: Method
+  source:
+    remote:
+      path: src/TicketApi/Controllers/EventApi.cs
+      branch: features/db
+      repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
+    id: GetEventById
+    path: src/TicketApi/Controllers/EventApi.cs
+    startLine: 113
+  assemblies:
+  - TicketApi
+  namespace: TicketApi.Controllers
+  summary: "\nGet event by Id in system\n"
+  remarks: Returns an event by ID
+  example: []
+  syntax:
+    content: >-
+      [HttpGet]
+
+      [Route("/api/event/{eventId}")]
+
+      [SwaggerOperation("GetEventById")]
+
+      [SwaggerResponse(200, typeof (object), "Event loaded")]
+
+      [SwaggerResponse(404, typeof (object), "Event not found")]
+
+      public virtual IActionResult GetEventById([FromRoute] int ? eventId)
+    parameters:
+    - id: eventId
+      type: System.Nullable{System.Int32}
+      description: Event ID
+      attributes:
+      - type: Microsoft.AspNetCore.Mvc.FromRouteAttribute
+        ctor: Microsoft.AspNetCore.Mvc.FromRouteAttribute.#ctor
+        arguments: []
+    return:
+      type: Microsoft.AspNetCore.Mvc.IActionResult
+    content.vb: >-
+      <HttpGet>
+
+      <Route("/api/event/{eventId}")>
+
+      <SwaggerOperation("GetEventById")>
+
+      <SwaggerResponse(200, GetType(Object), "Event loaded")>
+
+      <SwaggerResponse(404, GetType(Object), "Event not found")>
+
+      Public Overridable Function GetEventById(eventId As Integer?) As IActionResult
+  overload: TicketApi.Controllers.EventApiController.GetEventById*
+  attributes:
+  - type: Microsoft.AspNetCore.Mvc.HttpGetAttribute
+    ctor: Microsoft.AspNetCore.Mvc.HttpGetAttribute.#ctor
+    arguments: []
+  - type: Microsoft.AspNetCore.Mvc.RouteAttribute
+    ctor: Microsoft.AspNetCore.Mvc.RouteAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: /api/event/{eventId}
+  - type: Swashbuckle.AspNetCore.SwaggerGen.SwaggerOperationAttribute
+    ctor: Swashbuckle.AspNetCore.SwaggerGen.SwaggerOperationAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: GetEventById
+  - type: Swashbuckle.AspNetCore.SwaggerGen.SwaggerResponseAttribute
+    ctor: Swashbuckle.AspNetCore.SwaggerGen.SwaggerResponseAttribute.#ctor(System.Int32,System.Type,System.String)
+    arguments:
+    - type: System.Int32
+      value: 200
+    - type: System.Type
+      value: System.Object
+    - type: System.String
+      value: Event loaded
+  - type: Swashbuckle.AspNetCore.SwaggerGen.SwaggerResponseAttribute
+    ctor: Swashbuckle.AspNetCore.SwaggerGen.SwaggerResponseAttribute.#ctor(System.Int32,System.Type,System.String)
+    arguments:
+    - type: System.Int32
+      value: 404
+    - type: System.Type
+      value: System.Object
+    - type: System.String
+      value: Event not found
+  nameWithType.vb: EventApiController.GetEventById(Nullable(Of Int32))
+  modifiers.csharp:
+  - public
+  - virtual
+  modifiers.vb:
+  - Public
+  - Overridable
+  fullName.vb: TicketApi.Controllers.EventApiController.GetEventById(System.Nullable(Of System.Int32))
+  name.vb: GetEventById(Nullable(Of Int32))
+- uid: TicketApi.Controllers.EventApiController.GetEvents
+  commentId: M:TicketApi.Controllers.EventApiController.GetEvents
+  id: GetEvents
+  parent: TicketApi.Controllers.EventApiController
+  langs:
+  - csharp
+  - vb
+  name: GetEvents()
+  nameWithType: EventApiController.GetEvents()
+  fullName: TicketApi.Controllers.EventApiController.GetEvents()
+  type: Method
+  source:
+    remote:
+      path: src/TicketApi/Controllers/EventApi.cs
+      branch: features/db
+      repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
+    id: GetEvents
+    path: src/TicketApi/Controllers/EventApi.cs
+    startLine: 135
+  assemblies:
+  - TicketApi
+  namespace: TicketApi.Controllers
+  summary: "\nGet all events in system\n"
+  remarks: Returns all events
+  example: []
+  syntax:
+    content: >-
+      [HttpGet]
+
+      [Route("/api/event")]
+
+      [SwaggerOperation("GetEvents")]
+
+      [SwaggerResponse(200, typeof (List<Event>), "Events loaded")]
+
+      [SwaggerResponse(400, typeof (List<Event>), "Bad request")]
+
+      public virtual IActionResult GetEvents()
+    return:
+      type: Microsoft.AspNetCore.Mvc.IActionResult
+    content.vb: >-
+      <HttpGet>
+
+      <Route("/api/event")>
+
+      <SwaggerOperation("GetEvents")>
+
+      <SwaggerResponse(200, GetType(List(Of  Event)), "Events loaded")>
+
+      <SwaggerResponse(400, GetType(List(Of  Event)), "Bad request")>
+
+      Public Overridable Function GetEvents As IActionResult
+  overload: TicketApi.Controllers.EventApiController.GetEvents*
+  attributes:
+  - type: Microsoft.AspNetCore.Mvc.HttpGetAttribute
+    ctor: Microsoft.AspNetCore.Mvc.HttpGetAttribute.#ctor
+    arguments: []
+  - type: Microsoft.AspNetCore.Mvc.RouteAttribute
+    ctor: Microsoft.AspNetCore.Mvc.RouteAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: /api/event
+  - type: Swashbuckle.AspNetCore.SwaggerGen.SwaggerOperationAttribute
+    ctor: Swashbuckle.AspNetCore.SwaggerGen.SwaggerOperationAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: GetEvents
+  - type: Swashbuckle.AspNetCore.SwaggerGen.SwaggerResponseAttribute
+    ctor: Swashbuckle.AspNetCore.SwaggerGen.SwaggerResponseAttribute.#ctor(System.Int32,System.Type,System.String)
+    arguments:
+    - type: System.Int32
+      value: 200
+    - type: System.Type
+      value: System.Collections.Generic.List{TicketApi.Models.Event}
+    - type: System.String
+      value: Events loaded
+  - type: Swashbuckle.AspNetCore.SwaggerGen.SwaggerResponseAttribute
+    ctor: Swashbuckle.AspNetCore.SwaggerGen.SwaggerResponseAttribute.#ctor(System.Int32,System.Type,System.String)
+    arguments:
+    - type: System.Int32
+      value: 400
+    - type: System.Type
+      value: System.Collections.Generic.List{TicketApi.Models.Event}
+    - type: System.String
+      value: Bad request
+  modifiers.csharp:
+  - public
+  - virtual
+  modifiers.vb:
+  - Public
+  - Overridable
+- uid: TicketApi.Controllers.EventApiController.UpdateEvent(System.Nullable{System.Int32},TicketApi.Models.Event)
+  commentId: M:TicketApi.Controllers.EventApiController.UpdateEvent(System.Nullable{System.Int32},TicketApi.Models.Event)
+  id: UpdateEvent(System.Nullable{System.Int32},TicketApi.Models.Event)
+  parent: TicketApi.Controllers.EventApiController
+  langs:
+  - csharp
+  - vb
+  name: UpdateEvent(Nullable<Int32>, Event)
+  nameWithType: EventApiController.UpdateEvent(Nullable<Int32>, Event)
+  fullName: TicketApi.Controllers.EventApiController.UpdateEvent(System.Nullable<System.Int32>, TicketApi.Models.Event)
+  type: Method
+  source:
+    remote:
+      path: src/TicketApi/Controllers/EventApi.cs
+      branch: features/db
+      repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
+    id: UpdateEvent
+    path: src/TicketApi/Controllers/EventApi.cs
+    startLine: 159
+  assemblies:
+  - TicketApi
+  namespace: TicketApi.Controllers
+  summary: "\nUpdate event\n"
+  remarks: Update an event
+  example: []
+  syntax:
+    content: >-
+      [HttpPut]
+
+      [Route("/api/event/{eventId}")]
+
+      [SwaggerOperation("UpdateEvent")]
+
+      [SwaggerResponse(200, typeof (object), "Event updated")]
+
+      [SwaggerResponse(404, typeof (object), "Event not found")]
+
+      public virtual IActionResult UpdateEvent([FromRoute] int ? eventId, [FromBody] Event body)
+    parameters:
+    - id: eventId
+      type: System.Nullable{System.Int32}
+      description: Event ID
+      attributes:
+      - type: Microsoft.AspNetCore.Mvc.FromRouteAttribute
+        ctor: Microsoft.AspNetCore.Mvc.FromRouteAttribute.#ctor
+        arguments: []
+    - id: body
+      type: TicketApi.Models.Event
+      description: Event data
+      attributes:
+      - type: Microsoft.AspNetCore.Mvc.FromBodyAttribute
+        ctor: Microsoft.AspNetCore.Mvc.FromBodyAttribute.#ctor
+        arguments: []
+    return:
+      type: Microsoft.AspNetCore.Mvc.IActionResult
+    content.vb: >-
+      <HttpPut>
+
+      <Route("/api/event/{eventId}")>
+
+      <SwaggerOperation("UpdateEvent")>
+
+      <SwaggerResponse(200, GetType(Object), "Event updated")>
+
+      <SwaggerResponse(404, GetType(Object), "Event not found")>
+
+      Public Overridable Function UpdateEvent(eventId As Integer?, body As  Event) As IActionResult
+  overload: TicketApi.Controllers.EventApiController.UpdateEvent*
+  attributes:
+  - type: Microsoft.AspNetCore.Mvc.HttpPutAttribute
+    ctor: Microsoft.AspNetCore.Mvc.HttpPutAttribute.#ctor
+    arguments: []
+  - type: Microsoft.AspNetCore.Mvc.RouteAttribute
+    ctor: Microsoft.AspNetCore.Mvc.RouteAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: /api/event/{eventId}
+  - type: Swashbuckle.AspNetCore.SwaggerGen.SwaggerOperationAttribute
+    ctor: Swashbuckle.AspNetCore.SwaggerGen.SwaggerOperationAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: UpdateEvent
+  - type: Swashbuckle.AspNetCore.SwaggerGen.SwaggerResponseAttribute
+    ctor: Swashbuckle.AspNetCore.SwaggerGen.SwaggerResponseAttribute.#ctor(System.Int32,System.Type,System.String)
+    arguments:
+    - type: System.Int32
+      value: 200
+    - type: System.Type
+      value: System.Object
+    - type: System.String
+      value: Event updated
+  - type: Swashbuckle.AspNetCore.SwaggerGen.SwaggerResponseAttribute
+    ctor: Swashbuckle.AspNetCore.SwaggerGen.SwaggerResponseAttribute.#ctor(System.Int32,System.Type,System.String)
+    arguments:
+    - type: System.Int32
+      value: 404
+    - type: System.Type
+      value: System.Object
+    - type: System.String
+      value: Event not found
+  nameWithType.vb: EventApiController.UpdateEvent(Nullable(Of Int32), Event)
+  modifiers.csharp:
+  - public
+  - virtual
+  modifiers.vb:
+  - Public
+  - Overridable
+  fullName.vb: TicketApi.Controllers.EventApiController.UpdateEvent(System.Nullable(Of System.Int32), TicketApi.Models.Event)
+  name.vb: UpdateEvent(Nullable(Of Int32), Event)
 references:
-- uid: IO.Swagger.Controllers
-  commentId: N:IO.Swagger.Controllers
+- uid: TicketApi.Controllers
+  commentId: N:TicketApi.Controllers
   isExternal: false
-  name: IO.Swagger.Controllers
-  nameWithType: IO.Swagger.Controllers
-  fullName: IO.Swagger.Controllers
+  name: TicketApi.Controllers
+  nameWithType: TicketApi.Controllers
+  fullName: TicketApi.Controllers
 - uid: System.Object
   commentId: T:System.Object
   parent: System
@@ -6502,18 +6944,38 @@ references:
   - name: )
     nameWithType: )
     fullName: )
-- uid: IO.Swagger.Controllers.UserApiController.UsersGet*
-  commentId: Overload:IO.Swagger.Controllers.UserApiController.UsersGet
+- uid: TicketApi.Controllers.EventApiController.AddEvent*
+  commentId: Overload:TicketApi.Controllers.EventApiController.AddEvent
   isExternal: false
-  name: UsersGet
-  nameWithType: UserApiController.UsersGet
-  fullName: IO.Swagger.Controllers.UserApiController.UsersGet
-- uid: IO.Swagger.Controllers.UserApiController.UsersUserIdGet*
-  commentId: Overload:IO.Swagger.Controllers.UserApiController.UsersUserIdGet
+  name: AddEvent
+  nameWithType: EventApiController.AddEvent
+  fullName: TicketApi.Controllers.EventApiController.AddEvent
+- uid: TicketApi.Models.Event
+  commentId: T:TicketApi.Models.Event
+  parent: TicketApi.Models
   isExternal: false
-  name: UsersUserIdGet
-  nameWithType: UserApiController.UsersUserIdGet
-  fullName: IO.Swagger.Controllers.UserApiController.UsersUserIdGet
+  name: Event
+  nameWithType: Event
+  fullName: TicketApi.Models.Event
+- uid: Microsoft.AspNetCore.Mvc.IActionResult
+  commentId: T:Microsoft.AspNetCore.Mvc.IActionResult
+  parent: Microsoft.AspNetCore.Mvc
+  isExternal: true
+  name: IActionResult
+  nameWithType: IActionResult
+  fullName: Microsoft.AspNetCore.Mvc.IActionResult
+- uid: TicketApi.Models
+  commentId: N:TicketApi.Models
+  isExternal: false
+  name: TicketApi.Models
+  nameWithType: TicketApi.Models
+  fullName: TicketApi.Models
+- uid: TicketApi.Controllers.EventApiController.DeleteEvent*
+  commentId: Overload:TicketApi.Controllers.EventApiController.DeleteEvent
+  isExternal: false
+  name: DeleteEvent
+  nameWithType: EventApiController.DeleteEvent
+  fullName: TicketApi.Controllers.EventApiController.DeleteEvent
 - uid: System.Nullable{System.Int32}
   commentId: T:System.Nullable{System.Int32}
   parent: System
@@ -6597,3 +7059,34 @@ references:
   - name: )
     nameWithType: )
     fullName: )
+- uid: TicketApi.Controllers.EventApiController.FindEvents*
+  commentId: Overload:TicketApi.Controllers.EventApiController.FindEvents
+  isExternal: false
+  name: FindEvents
+  nameWithType: EventApiController.FindEvents
+  fullName: TicketApi.Controllers.EventApiController.FindEvents
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: TicketApi.Controllers.EventApiController.GetEventById*
+  commentId: Overload:TicketApi.Controllers.EventApiController.GetEventById
+  isExternal: false
+  name: GetEventById
+  nameWithType: EventApiController.GetEventById
+  fullName: TicketApi.Controllers.EventApiController.GetEventById
+- uid: TicketApi.Controllers.EventApiController.GetEvents*
+  commentId: Overload:TicketApi.Controllers.EventApiController.GetEvents
+  isExternal: false
+  name: GetEvents
+  nameWithType: EventApiController.GetEvents
+  fullName: TicketApi.Controllers.EventApiController.GetEvents
+- uid: TicketApi.Controllers.EventApiController.UpdateEvent*
+  commentId: Overload:TicketApi.Controllers.EventApiController.UpdateEvent
+  isExternal: false
+  name: UpdateEvent
+  nameWithType: EventApiController.UpdateEvent
+  fullName: TicketApi.Controllers.EventApiController.UpdateEvent

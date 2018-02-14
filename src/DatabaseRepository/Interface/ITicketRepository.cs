@@ -37,6 +37,10 @@ namespace TicketSystem.DatabaseRepository.Interface
         /// <returns>An object representation of the ticket</returns>
         Ticket GetTicketById(int id);
 
+        FullTicket GetFullTicketById(int id);
+        List<FullTicket> GetFullTicketsByTransactionId(int transactionId);
+
+
 
     }
 }

@@ -4,8 +4,9 @@ items:
   commentId: N:TicketSystem.DatabaseRepository
   id: TicketSystem.DatabaseRepository
   children:
-  - TicketSystem.DatabaseRepository.ITicketDatabase
-  - TicketSystem.DatabaseRepository.TicketDatabase
+  - TicketSystem.DatabaseRepository.EventDateRepository
+  - TicketSystem.DatabaseRepository.EventRepository
+  - TicketSystem.DatabaseRepository.TicketRepository
   langs:
   - csharp
   - vb
@@ -16,22 +17,21 @@ items:
   assemblies:
   - DatabaseRepository
 references:
-- uid: TicketSystem.DatabaseRepository.ITicketDatabase
-  commentId: T:TicketSystem.DatabaseRepository.ITicketDatabase
-  parent: TicketSystem.DatabaseRepository
+- uid: TicketSystem.DatabaseRepository.EventDateRepository
+  commentId: T:TicketSystem.DatabaseRepository.EventDateRepository
   isExternal: false
-  name: ITicketDatabase
-  nameWithType: ITicketDatabase
-  fullName: TicketSystem.DatabaseRepository.ITicketDatabase
-- uid: TicketSystem.DatabaseRepository.TicketDatabase
-  commentId: T:TicketSystem.DatabaseRepository.TicketDatabase
+  name: EventDateRepository
+  nameWithType: EventDateRepository
+  fullName: TicketSystem.DatabaseRepository.EventDateRepository
+- uid: TicketSystem.DatabaseRepository.EventRepository
+  commentId: T:TicketSystem.DatabaseRepository.EventRepository
   isExternal: false
-  name: TicketDatabase
-  nameWithType: TicketDatabase
-  fullName: TicketSystem.DatabaseRepository.TicketDatabase
-- uid: TicketSystem.DatabaseRepository
-  commentId: N:TicketSystem.DatabaseRepository
+  name: EventRepository
+  nameWithType: EventRepository
+  fullName: TicketSystem.DatabaseRepository.EventRepository
+- uid: TicketSystem.DatabaseRepository.TicketRepository
+  commentId: T:TicketSystem.DatabaseRepository.TicketRepository
   isExternal: false
-  name: TicketSystem.DatabaseRepository
-  nameWithType: TicketSystem.DatabaseRepository
-  fullName: TicketSystem.DatabaseRepository
+  name: TicketRepository
+  nameWithType: TicketRepository
+  fullName: TicketSystem.DatabaseRepository.TicketRepository
