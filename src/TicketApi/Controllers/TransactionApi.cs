@@ -53,9 +53,16 @@ namespace TicketApi.Controllers
         [Route("/api/transaction")]
         [ValidateModelState]
         [SwaggerOperation("AddTransaction")]
-        public virtual void AddTransaction([FromBody]Transaction body)
+        [SwaggerResponse(200, typeof(Object), "Transaction created")]
+        [SwaggerResponse(400, typeof(Object), "Bad request")]
+        public virtual IActionResult AddTransaction([FromBody]Transaction body)
         { 
-            throw new NotImplementedException();
+            string exampleJson = null;
+            
+            var example = exampleJson != null
+            ? JsonConvert.DeserializeObject<Object>(exampleJson)
+            : default(Object);
+            return new ObjectResult(example);
         }
 
         /// <summary>
@@ -75,21 +82,6 @@ namespace TicketApi.Controllers
         }
 
         /// <summary>
-        /// Get all transactions in system
-        /// </summary>
-        /// <remarks>Returns all transactions</remarks>
-        /// <response code="200">Transactions loaded</response>
-        /// <response code="400">Bad request</response>
-        [HttpGet]
-        [Route("/api/transaction")]
-        [ValidateModelState]
-        [SwaggerOperation("GetTransaction")]
-        public virtual void GetTransaction()
-        { 
-            throw new NotImplementedException();
-        }
-
-        /// <summary>
         /// Get transaction by Id
         /// </summary>
         /// <remarks>Returns a single transaction</remarks>
@@ -100,9 +92,38 @@ namespace TicketApi.Controllers
         [Route("/api/transaction/{transactionId}")]
         [ValidateModelState]
         [SwaggerOperation("GetTransactionById")]
-        public virtual void GetTransactionById([FromRoute]int? transactionId)
+        [SwaggerResponse(200, typeof(Object), "Transaction loaded")]
+        [SwaggerResponse(404, typeof(Object), "Transaction not found")]
+        public virtual IActionResult GetTransactionById([FromRoute]int? transactionId)
         { 
-            throw new NotImplementedException();
+            string exampleJson = null;
+            
+            var example = exampleJson != null
+            ? JsonConvert.DeserializeObject<Object>(exampleJson)
+            : default(Object);
+            return new ObjectResult(example);
+        }
+
+        /// <summary>
+        /// Get all transactions in system
+        /// </summary>
+        /// <remarks>Returns all transactions</remarks>
+        /// <response code="200">Transactions loaded</response>
+        /// <response code="400">Bad request</response>
+        [HttpGet]
+        [Route("/api/transaction")]
+        [ValidateModelState]
+        [SwaggerOperation("GetTransactions")]
+        [SwaggerResponse(200, typeof(List<Transaction>), "Transactions loaded")]
+        [SwaggerResponse(400, typeof(List<Transaction>), "Bad request")]
+        public virtual IActionResult GetTransactions()
+        { 
+            string exampleJson = null;
+            
+            var example = exampleJson != null
+            ? JsonConvert.DeserializeObject<List<Transaction>>(exampleJson)
+            : default(List<Transaction>);
+            return new ObjectResult(example);
         }
 
         /// <summary>
@@ -117,9 +138,16 @@ namespace TicketApi.Controllers
         [Route("/api/transaction/{transactionId}")]
         [ValidateModelState]
         [SwaggerOperation("UpdateTransaction")]
-        public virtual void UpdateTransaction([FromRoute]int? transactionId, [FromBody]Transaction body)
+        [SwaggerResponse(200, typeof(Object), "Transaction updated")]
+        [SwaggerResponse(404, typeof(Object), "Transaction not found")]
+        public virtual IActionResult UpdateTransaction([FromRoute]int? transactionId, [FromBody]Transaction body)
         { 
-            throw new NotImplementedException();
+            string exampleJson = null;
+            
+            var example = exampleJson != null
+            ? JsonConvert.DeserializeObject<Object>(exampleJson)
+            : default(Object);
+            return new ObjectResult(example);
         }
     }
 }

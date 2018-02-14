@@ -53,9 +53,16 @@ namespace TicketApi.Controllers
         [Route("/api/event")]
         [ValidateModelState]
         [SwaggerOperation("AddEvent")]
-        public virtual void AddEvent([FromBody]Event body)
+        [SwaggerResponse(200, typeof(Object), "Event created")]
+        [SwaggerResponse(400, typeof(Object), "Bad request")]
+        public virtual IActionResult AddEvent([FromBody]Event body)
         { 
-            throw new NotImplementedException();
+            string exampleJson = null;
+            
+            var example = exampleJson != null
+            ? JsonConvert.DeserializeObject<Object>(exampleJson)
+            : default(Object);
+            return new ObjectResult(example);
         }
 
         /// <summary>
@@ -63,7 +70,7 @@ namespace TicketApi.Controllers
         /// </summary>
         /// <remarks>Delete an event</remarks>
         /// <param name="eventId">Event ID</param>
-        /// <response code="200">Event updated</response>
+        /// <response code="200">Event deleted</response>
         /// <response code="404">Event not found</response>
         [HttpDelete]
         [Route("/api/event/{eventId}")]
@@ -72,6 +79,29 @@ namespace TicketApi.Controllers
         public virtual void DeleteEvent([FromRoute]int? eventId)
         { 
             throw new NotImplementedException();
+        }
+
+        /// <summary>
+        /// Get all events matching query
+        /// </summary>
+        /// <remarks>Returns all events matching query</remarks>
+        /// <param name="query">query to find events </param>
+        /// <response code="200">Events search results loaded</response>
+        /// <response code="404">No events found</response>
+        [HttpGet]
+        [Route("/api/event/search/{query}")]
+        [ValidateModelState]
+        [SwaggerOperation("FindEvents")]
+        [SwaggerResponse(200, typeof(List<Event>), "Events search results loaded")]
+        [SwaggerResponse(404, typeof(List<Event>), "No events found")]
+        public virtual IActionResult FindEvents([FromRoute]string query)
+        { 
+            string exampleJson = null;
+            
+            var example = exampleJson != null
+            ? JsonConvert.DeserializeObject<List<Event>>(exampleJson)
+            : default(List<Event>);
+            return new ObjectResult(example);
         }
 
         /// <summary>
@@ -85,9 +115,16 @@ namespace TicketApi.Controllers
         [Route("/api/event/{eventId}")]
         [ValidateModelState]
         [SwaggerOperation("GetEventById")]
-        public virtual void GetEventById([FromRoute]int? eventId)
+        [SwaggerResponse(200, typeof(Object), "Event loaded")]
+        [SwaggerResponse(404, typeof(Object), "Event not found")]
+        public virtual IActionResult GetEventById([FromRoute]int? eventId)
         { 
-            throw new NotImplementedException();
+            string exampleJson = null;
+            
+            var example = exampleJson != null
+            ? JsonConvert.DeserializeObject<Object>(exampleJson)
+            : default(Object);
+            return new ObjectResult(example);
         }
 
         /// <summary>
@@ -100,25 +137,16 @@ namespace TicketApi.Controllers
         [Route("/api/event")]
         [ValidateModelState]
         [SwaggerOperation("GetEvents")]
-        public virtual void GetEvents()
+        [SwaggerResponse(200, typeof(List<Event>), "Events loaded")]
+        [SwaggerResponse(400, typeof(List<Event>), "Bad request")]
+        public virtual IActionResult GetEvents()
         { 
-            throw new NotImplementedException();
-        }
-
-        /// <summary>
-        /// Get all events in a city
-        /// </summary>
-        /// <remarks>Returns all events in a city</remarks>
-        /// <param name="city">city to find events in</param>
-        /// <response code="200">Events in city loaded</response>
-        /// <response code="404">No events found</response>
-        [HttpGet]
-        [Route("/api/events/{city}")]
-        [ValidateModelState]
-        [SwaggerOperation("GetEventsByCity")]
-        public virtual void GetEventsByCity([FromRoute]string city)
-        { 
-            throw new NotImplementedException();
+            string exampleJson = null;
+            
+            var example = exampleJson != null
+            ? JsonConvert.DeserializeObject<List<Event>>(exampleJson)
+            : default(List<Event>);
+            return new ObjectResult(example);
         }
 
         /// <summary>
@@ -126,15 +154,23 @@ namespace TicketApi.Controllers
         /// </summary>
         /// <remarks>Update an event</remarks>
         /// <param name="eventId">Event ID</param>
+        /// <param name="body">Event data</param>
         /// <response code="200">Event updated</response>
         /// <response code="404">Event not found</response>
         [HttpPut]
         [Route("/api/event/{eventId}")]
         [ValidateModelState]
         [SwaggerOperation("UpdateEvent")]
-        public virtual void UpdateEvent([FromRoute]int? eventId)
+        [SwaggerResponse(200, typeof(Object), "Event updated")]
+        [SwaggerResponse(404, typeof(Object), "Event not found")]
+        public virtual IActionResult UpdateEvent([FromRoute]int? eventId, [FromBody]Event body)
         { 
-            throw new NotImplementedException();
+            string exampleJson = null;
+            
+            var example = exampleJson != null
+            ? JsonConvert.DeserializeObject<Object>(exampleJson)
+            : default(Object);
+            return new ObjectResult(example);
         }
     }
 }

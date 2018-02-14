@@ -37,7 +37,7 @@ namespace TicketApi.Models
     /// 
     /// </summary>
     [DataContract]
-    public partial class Customer :  IEquatable<Customer>
+    public partial class EventDate :  IEquatable<EventDate>
     { 
         /// <summary>
         /// Gets or Sets Id
@@ -46,34 +46,28 @@ namespace TicketApi.Models
         public int? Id { get; set; }
 
         /// <summary>
-        /// Gets or Sets FirstName
+        /// Gets or Sets EventId
         /// </summary>
-        [DataMember(Name="firstName")]
-        public string FirstName { get; set; }
+        [DataMember(Name="eventId")]
+        public int? EventId { get; set; }
 
         /// <summary>
-        /// Gets or Sets LastName
+        /// Gets or Sets VenueId
         /// </summary>
-        [DataMember(Name="lastName")]
-        public string LastName { get; set; }
+        [DataMember(Name="venueId")]
+        public int? VenueId { get; set; }
 
         /// <summary>
-        /// Gets or Sets Address
+        /// Gets or Sets _EventDate
         /// </summary>
-        [DataMember(Name="address")]
-        public string Address { get; set; }
+        [DataMember(Name="eventDate")]
+        public DateTime? _EventDate { get; set; }
 
         /// <summary>
-        /// Gets or Sets City
+        /// Gets or Sets Seats
         /// </summary>
-        [DataMember(Name="city")]
-        public string City { get; set; }
-
-        /// <summary>
-        /// Gets or Sets Email
-        /// </summary>
-        [DataMember(Name="email")]
-        public string Email { get; set; }
+        [DataMember(Name="seats")]
+        public int? Seats { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -82,13 +76,12 @@ namespace TicketApi.Models
         public override string ToString()
         {
             var sb = new StringBuilder();
-            sb.Append("class Customer {\n");
+            sb.Append("class EventDate {\n");
             sb.Append("  Id: ").Append(Id).Append("\n");
-            sb.Append("  FirstName: ").Append(FirstName).Append("\n");
-            sb.Append("  LastName: ").Append(LastName).Append("\n");
-            sb.Append("  Address: ").Append(Address).Append("\n");
-            sb.Append("  City: ").Append(City).Append("\n");
-            sb.Append("  Email: ").Append(Email).Append("\n");
+            sb.Append("  EventId: ").Append(EventId).Append("\n");
+            sb.Append("  VenueId: ").Append(VenueId).Append("\n");
+            sb.Append("  _EventDate: ").Append(_EventDate).Append("\n");
+            sb.Append("  Seats: ").Append(Seats).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -111,15 +104,15 @@ namespace TicketApi.Models
         {
             if (ReferenceEquals(null, obj)) return false;
             if (ReferenceEquals(this, obj)) return true;
-            return obj.GetType() == GetType() && Equals((Customer)obj);
+            return obj.GetType() == GetType() && Equals((EventDate)obj);
         }
 
         /// <summary>
-        /// Returns true if Customer instances are equal
+        /// Returns true if EventDate instances are equal
         /// </summary>
-        /// <param name="other">Instance of Customer to be compared</param>
+        /// <param name="other">Instance of EventDate to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(Customer other)
+        public bool Equals(EventDate other)
         {
             if (ReferenceEquals(null, other)) return false;
             if (ReferenceEquals(this, other)) return true;
@@ -131,29 +124,24 @@ namespace TicketApi.Models
                     Id.Equals(other.Id)
                 ) && 
                 (
-                    FirstName == other.FirstName ||
-                    FirstName != null &&
-                    FirstName.Equals(other.FirstName)
+                    EventId == other.EventId ||
+                    EventId != null &&
+                    EventId.Equals(other.EventId)
                 ) && 
                 (
-                    LastName == other.LastName ||
-                    LastName != null &&
-                    LastName.Equals(other.LastName)
+                    VenueId == other.VenueId ||
+                    VenueId != null &&
+                    VenueId.Equals(other.VenueId)
                 ) && 
                 (
-                    Address == other.Address ||
-                    Address != null &&
-                    Address.Equals(other.Address)
+                    _EventDate == other._EventDate ||
+                    _EventDate != null &&
+                    _EventDate.Equals(other._EventDate)
                 ) && 
                 (
-                    City == other.City ||
-                    City != null &&
-                    City.Equals(other.City)
-                ) && 
-                (
-                    Email == other.Email ||
-                    Email != null &&
-                    Email.Equals(other.Email)
+                    Seats == other.Seats ||
+                    Seats != null &&
+                    Seats.Equals(other.Seats)
                 );
         }
 
@@ -169,16 +157,14 @@ namespace TicketApi.Models
                 // Suitable nullity checks etc, of course :)
                     if (Id != null)
                     hashCode = hashCode * 59 + Id.GetHashCode();
-                    if (FirstName != null)
-                    hashCode = hashCode * 59 + FirstName.GetHashCode();
-                    if (LastName != null)
-                    hashCode = hashCode * 59 + LastName.GetHashCode();
-                    if (Address != null)
-                    hashCode = hashCode * 59 + Address.GetHashCode();
-                    if (City != null)
-                    hashCode = hashCode * 59 + City.GetHashCode();
-                    if (Email != null)
-                    hashCode = hashCode * 59 + Email.GetHashCode();
+                    if (EventId != null)
+                    hashCode = hashCode * 59 + EventId.GetHashCode();
+                    if (VenueId != null)
+                    hashCode = hashCode * 59 + VenueId.GetHashCode();
+                    if (_EventDate != null)
+                    hashCode = hashCode * 59 + _EventDate.GetHashCode();
+                    if (Seats != null)
+                    hashCode = hashCode * 59 + Seats.GetHashCode();
                 return hashCode;
             }
         }
@@ -186,12 +172,12 @@ namespace TicketApi.Models
         #region Operators
         #pragma warning disable 1591
 
-        public static bool operator ==(Customer left, Customer right)
+        public static bool operator ==(EventDate left, EventDate right)
         {
             return Equals(left, right);
         }
 
-        public static bool operator !=(Customer left, Customer right)
+        public static bool operator !=(EventDate left, EventDate right)
         {
             return !Equals(left, right);
         }
