@@ -1,36 +1,39 @@
 ### YamlMime:ManagedReference
 items:
-- uid: IO.Swagger.Controllers.TicketApiController
-  commentId: T:IO.Swagger.Controllers.TicketApiController
-  id: TicketApiController
-  parent: IO.Swagger.Controllers
+- uid: TicketApi.Controllers.VenueApiController
+  commentId: T:TicketApi.Controllers.VenueApiController
+  id: VenueApiController
+  parent: TicketApi.Controllers
   children:
-  - IO.Swagger.Controllers.TicketApiController.TicketGet
-  - IO.Swagger.Controllers.TicketApiController.TicketTicketIdGet(System.Nullable{System.Int32})
+  - TicketApi.Controllers.VenueApiController.AddVenue(TicketApi.Models.Venue)
+  - TicketApi.Controllers.VenueApiController.DeleteVenue(System.Nullable{System.Int32})
+  - TicketApi.Controllers.VenueApiController.GetVenueById(System.Nullable{System.Int32})
+  - TicketApi.Controllers.VenueApiController.GetVenues
+  - TicketApi.Controllers.VenueApiController.UpdateVenue(System.Nullable{System.Int32},TicketApi.Models.Venue)
   langs:
   - csharp
   - vb
-  name: TicketApiController
-  nameWithType: TicketApiController
-  fullName: IO.Swagger.Controllers.TicketApiController
+  name: VenueApiController
+  nameWithType: VenueApiController
+  fullName: TicketApi.Controllers.VenueApiController
   type: Class
   source:
     remote:
-      path: src/IO.Swagger/Controllers/TicketApi.cs
-      branch: RESTapi_Swagger
+      path: src/TicketApi/Controllers/VenueApi.cs
+      branch: features/db
       repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
-    id: TicketApiController
-    path: src/IO.Swagger/Controllers/TicketApi.cs
+    id: VenueApiController
+    path: src/TicketApi/Controllers/VenueApi.cs
     startLine: 42
   assemblies:
-  - IO.Swagger
-  namespace: IO.Swagger.Controllers
+  - TicketApi
+  namespace: TicketApi.Controllers
   summary: "\n\n"
   example: []
   syntax:
-    content: 'public class TicketApiController : Controller, IActionFilter, IAsyncActionFilter, IFilterMetadata, IDisposable'
+    content: 'public class VenueApiController : Controller, IActionFilter, IAsyncActionFilter, IFilterMetadata, IDisposable'
     content.vb: >-
-      Public Class TicketApiController
+      Public Class VenueApiController
           Inherits Controller
           Implements IActionFilter, IAsyncActionFilter, IFilterMetadata, IDisposable
   inheritance:
@@ -161,89 +164,97 @@ items:
   modifiers.vb:
   - Public
   - Class
-- uid: IO.Swagger.Controllers.TicketApiController.TicketGet
-  commentId: M:IO.Swagger.Controllers.TicketApiController.TicketGet
-  id: TicketGet
-  parent: IO.Swagger.Controllers.TicketApiController
+- uid: TicketApi.Controllers.VenueApiController.AddVenue(TicketApi.Models.Venue)
+  commentId: M:TicketApi.Controllers.VenueApiController.AddVenue(TicketApi.Models.Venue)
+  id: AddVenue(TicketApi.Models.Venue)
+  parent: TicketApi.Controllers.VenueApiController
   langs:
   - csharp
   - vb
-  name: TicketGet()
-  nameWithType: TicketApiController.TicketGet()
-  fullName: IO.Swagger.Controllers.TicketApiController.TicketGet()
+  name: AddVenue(Venue)
+  nameWithType: VenueApiController.AddVenue(Venue)
+  fullName: TicketApi.Controllers.VenueApiController.AddVenue(TicketApi.Models.Venue)
   type: Method
   source:
     remote:
-      path: src/IO.Swagger/Controllers/TicketApi.cs
-      branch: RESTapi_Swagger
+      path: src/TicketApi/Controllers/VenueApi.cs
+      branch: features/db
       repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
-    id: TicketGet
-    path: src/IO.Swagger/Controllers/TicketApi.cs
-    startLine: 50
+    id: AddVenue
+    path: src/TicketApi/Controllers/VenueApi.cs
+    startLine: 51
   assemblies:
-  - IO.Swagger
-  namespace: IO.Swagger.Controllers
-  summary: "\nGet all tickets\n"
-  remarks: Returns all tickets
+  - TicketApi
+  namespace: TicketApi.Controllers
+  summary: "\nAdd Venue\n"
+  remarks: Add new venue to system
   example: []
   syntax:
     content: >-
-      [HttpGet]
+      [HttpPost]
 
-      [Route("/api/ticket")]
+      [Route("/api/venue")]
 
-      [SwaggerOperation("TicketGet")]
+      [SwaggerOperation("AddVenue")]
 
-      [SwaggerResponse(200, typeof (Ticket), "Ticket loaded")]
+      [SwaggerResponse(200, typeof (object), "Venue added")]
 
-      [SwaggerResponse(400, typeof (Ticket), "Bad request")]
+      [SwaggerResponse(400, typeof (object), "Bad request")]
 
-      public virtual IActionResult TicketGet()
+      public virtual IActionResult AddVenue([FromBody] Venue body)
+    parameters:
+    - id: body
+      type: TicketApi.Models.Venue
+      description: Venue data
+      attributes:
+      - type: Microsoft.AspNetCore.Mvc.FromBodyAttribute
+        ctor: Microsoft.AspNetCore.Mvc.FromBodyAttribute.#ctor
+        arguments: []
     return:
       type: Microsoft.AspNetCore.Mvc.IActionResult
     content.vb: >-
-      <HttpGet>
+      <HttpPost>
 
-      <Route("/api/ticket")>
+      <Route("/api/venue")>
 
-      <SwaggerOperation("TicketGet")>
+      <SwaggerOperation("AddVenue")>
 
-      <SwaggerResponse(200, GetType(Ticket), "Ticket loaded")>
+      <SwaggerResponse(200, GetType(Object), "Venue added")>
 
-      <SwaggerResponse(400, GetType(Ticket), "Bad request")>
+      <SwaggerResponse(400, GetType(Object), "Bad request")>
 
-      Public Overridable Function TicketGet As IActionResult
-  overload: IO.Swagger.Controllers.TicketApiController.TicketGet*
+      Public Overridable Function AddVenue(body As Venue) As IActionResult
+  overload: TicketApi.Controllers.VenueApiController.AddVenue*
   attributes:
-  - type: Microsoft.AspNetCore.Mvc.HttpGetAttribute
-    ctor: Microsoft.AspNetCore.Mvc.HttpGetAttribute.#ctor
+  - type: Microsoft.AspNetCore.Mvc.HttpPostAttribute
+    ctor: Microsoft.AspNetCore.Mvc.HttpPostAttribute.#ctor
     arguments: []
   - type: Microsoft.AspNetCore.Mvc.RouteAttribute
     ctor: Microsoft.AspNetCore.Mvc.RouteAttribute.#ctor(System.String)
     arguments:
     - type: System.String
-      value: /api/ticket
+      value: /api/venue
   - type: Swashbuckle.AspNetCore.SwaggerGen.SwaggerOperationAttribute
     ctor: Swashbuckle.AspNetCore.SwaggerGen.SwaggerOperationAttribute.#ctor(System.String)
     arguments:
     - type: System.String
-      value: TicketGet
+      value: AddVenue
   - type: Swashbuckle.AspNetCore.SwaggerGen.SwaggerResponseAttribute
     ctor: Swashbuckle.AspNetCore.SwaggerGen.SwaggerResponseAttribute.#ctor(System.Int32,System.Type,System.String)
     arguments:
     - type: System.Int32
       value: 200
     - type: System.Type
-      value: IO.Swagger.Models.Ticket
+      value: System.Object
     - type: System.String
-      value: Ticket loaded
+      value: Venue added
   - type: Swashbuckle.AspNetCore.SwaggerGen.SwaggerResponseAttribute
     ctor: Swashbuckle.AspNetCore.SwaggerGen.SwaggerResponseAttribute.#ctor(System.Int32,System.Type,System.String)
     arguments:
     - type: System.Int32
       value: 400
     - type: System.Type
-      value: IO.Swagger.Models.Ticket
+      value: System.Object
     - type: System.String
       value: Bad request
   modifiers.csharp:
@@ -252,57 +263,141 @@ items:
   modifiers.vb:
   - Public
   - Overridable
-- uid: IO.Swagger.Controllers.TicketApiController.TicketTicketIdGet(System.Nullable{System.Int32})
-  commentId: M:IO.Swagger.Controllers.TicketApiController.TicketTicketIdGet(System.Nullable{System.Int32})
-  id: TicketTicketIdGet(System.Nullable{System.Int32})
-  parent: IO.Swagger.Controllers.TicketApiController
+- uid: TicketApi.Controllers.VenueApiController.DeleteVenue(System.Nullable{System.Int32})
+  commentId: M:TicketApi.Controllers.VenueApiController.DeleteVenue(System.Nullable{System.Int32})
+  id: DeleteVenue(System.Nullable{System.Int32})
+  parent: TicketApi.Controllers.VenueApiController
   langs:
   - csharp
   - vb
-  name: TicketTicketIdGet(Nullable<Int32>)
-  nameWithType: TicketApiController.TicketTicketIdGet(Nullable<Int32>)
-  fullName: IO.Swagger.Controllers.TicketApiController.TicketTicketIdGet(System.Nullable<System.Int32>)
+  name: DeleteVenue(Nullable<Int32>)
+  nameWithType: VenueApiController.DeleteVenue(Nullable<Int32>)
+  fullName: TicketApi.Controllers.VenueApiController.DeleteVenue(System.Nullable<System.Int32>)
   type: Method
   source:
     remote:
-      path: src/IO.Swagger/Controllers/TicketApi.cs
-      branch: RESTapi_Swagger
+      path: src/TicketApi/Controllers/VenueApi.cs
+      branch: features/db
       repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
-    id: TicketTicketIdGet
-    path: src/IO.Swagger/Controllers/TicketApi.cs
-    startLine: 73
+    id: DeleteVenue
+    path: src/TicketApi/Controllers/VenueApi.cs
+    startLine: 74
   assemblies:
-  - IO.Swagger
-  namespace: IO.Swagger.Controllers
-  summary: "\nGet a ticket by ID from the system\n"
-  remarks: Returns a single ticket
+  - TicketApi
+  namespace: TicketApi.Controllers
+  summary: "\nDelete venue\n"
+  remarks: Delete a venue
   example: []
   syntax:
     content: >-
-      [HttpGet]
+      [HttpDelete]
 
-      [Route("/api/ticket/{ticketId}")]
+      [Route("/api/venue/{venueId}")]
 
-      [SwaggerOperation("TicketTicketIdGet")]
+      [SwaggerOperation("DeleteVenue")]
 
-      public virtual void TicketTicketIdGet([FromRoute] int ? ticketId)
+      public virtual void DeleteVenue([FromRoute] int ? venueId)
     parameters:
-    - id: ticketId
+    - id: venueId
       type: System.Nullable{System.Int32}
-      description: ID of the ticket
+      description: Venue ID
       attributes:
       - type: Microsoft.AspNetCore.Mvc.FromRouteAttribute
         ctor: Microsoft.AspNetCore.Mvc.FromRouteAttribute.#ctor
         arguments: []
     content.vb: >-
+      <HttpDelete>
+
+      <Route("/api/venue/{venueId}")>
+
+      <SwaggerOperation("DeleteVenue")>
+
+      Public Overridable Sub DeleteVenue(venueId As Integer?)
+  overload: TicketApi.Controllers.VenueApiController.DeleteVenue*
+  attributes:
+  - type: Microsoft.AspNetCore.Mvc.HttpDeleteAttribute
+    ctor: Microsoft.AspNetCore.Mvc.HttpDeleteAttribute.#ctor
+    arguments: []
+  - type: Microsoft.AspNetCore.Mvc.RouteAttribute
+    ctor: Microsoft.AspNetCore.Mvc.RouteAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: /api/venue/{venueId}
+  - type: Swashbuckle.AspNetCore.SwaggerGen.SwaggerOperationAttribute
+    ctor: Swashbuckle.AspNetCore.SwaggerGen.SwaggerOperationAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: DeleteVenue
+  nameWithType.vb: VenueApiController.DeleteVenue(Nullable(Of Int32))
+  modifiers.csharp:
+  - public
+  - virtual
+  modifiers.vb:
+  - Public
+  - Overridable
+  fullName.vb: TicketApi.Controllers.VenueApiController.DeleteVenue(System.Nullable(Of System.Int32))
+  name.vb: DeleteVenue(Nullable(Of Int32))
+- uid: TicketApi.Controllers.VenueApiController.GetVenueById(System.Nullable{System.Int32})
+  commentId: M:TicketApi.Controllers.VenueApiController.GetVenueById(System.Nullable{System.Int32})
+  id: GetVenueById(System.Nullable{System.Int32})
+  parent: TicketApi.Controllers.VenueApiController
+  langs:
+  - csharp
+  - vb
+  name: GetVenueById(Nullable<Int32>)
+  nameWithType: VenueApiController.GetVenueById(Nullable<Int32>)
+  fullName: TicketApi.Controllers.VenueApiController.GetVenueById(System.Nullable<System.Int32>)
+  type: Method
+  source:
+    remote:
+      path: src/TicketApi/Controllers/VenueApi.cs
+      branch: features/db
+      repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
+    id: GetVenueById
+    path: src/TicketApi/Controllers/VenueApi.cs
+    startLine: 90
+  assemblies:
+  - TicketApi
+  namespace: TicketApi.Controllers
+  summary: "\nGet venue by Id\n"
+  remarks: Returns venue by ID
+  example: []
+  syntax:
+    content: >-
+      [HttpGet]
+
+      [Route("/api/venue/{venueId}")]
+
+      [SwaggerOperation("GetVenueById")]
+
+      [SwaggerResponse(200, typeof (object), "Venues loaded")]
+
+      [SwaggerResponse(404, typeof (object), "Venue not found")]
+
+      public virtual IActionResult GetVenueById([FromRoute] int ? venueId)
+    parameters:
+    - id: venueId
+      type: System.Nullable{System.Int32}
+      description: Venue ID
+      attributes:
+      - type: Microsoft.AspNetCore.Mvc.FromRouteAttribute
+        ctor: Microsoft.AspNetCore.Mvc.FromRouteAttribute.#ctor
+        arguments: []
+    return:
+      type: Microsoft.AspNetCore.Mvc.IActionResult
+    content.vb: >-
       <HttpGet>
 
-      <Route("/api/ticket/{ticketId}")>
+      <Route("/api/venue/{venueId}")>
 
-      <SwaggerOperation("TicketTicketIdGet")>
+      <SwaggerOperation("GetVenueById")>
 
-      Public Overridable Sub TicketTicketIdGet(ticketId As Integer?)
-  overload: IO.Swagger.Controllers.TicketApiController.TicketTicketIdGet*
+      <SwaggerResponse(200, GetType(Object), "Venues loaded")>
+
+      <SwaggerResponse(404, GetType(Object), "Venue not found")>
+
+      Public Overridable Function GetVenueById(venueId As Integer?) As IActionResult
+  overload: TicketApi.Controllers.VenueApiController.GetVenueById*
   attributes:
   - type: Microsoft.AspNetCore.Mvc.HttpGetAttribute
     ctor: Microsoft.AspNetCore.Mvc.HttpGetAttribute.#ctor
@@ -311,28 +406,246 @@ items:
     ctor: Microsoft.AspNetCore.Mvc.RouteAttribute.#ctor(System.String)
     arguments:
     - type: System.String
-      value: /api/ticket/{ticketId}
+      value: /api/venue/{venueId}
   - type: Swashbuckle.AspNetCore.SwaggerGen.SwaggerOperationAttribute
     ctor: Swashbuckle.AspNetCore.SwaggerGen.SwaggerOperationAttribute.#ctor(System.String)
     arguments:
     - type: System.String
-      value: TicketTicketIdGet
-  nameWithType.vb: TicketApiController.TicketTicketIdGet(Nullable(Of Int32))
+      value: GetVenueById
+  - type: Swashbuckle.AspNetCore.SwaggerGen.SwaggerResponseAttribute
+    ctor: Swashbuckle.AspNetCore.SwaggerGen.SwaggerResponseAttribute.#ctor(System.Int32,System.Type,System.String)
+    arguments:
+    - type: System.Int32
+      value: 200
+    - type: System.Type
+      value: System.Object
+    - type: System.String
+      value: Venues loaded
+  - type: Swashbuckle.AspNetCore.SwaggerGen.SwaggerResponseAttribute
+    ctor: Swashbuckle.AspNetCore.SwaggerGen.SwaggerResponseAttribute.#ctor(System.Int32,System.Type,System.String)
+    arguments:
+    - type: System.Int32
+      value: 404
+    - type: System.Type
+      value: System.Object
+    - type: System.String
+      value: Venue not found
+  nameWithType.vb: VenueApiController.GetVenueById(Nullable(Of Int32))
   modifiers.csharp:
   - public
   - virtual
   modifiers.vb:
   - Public
   - Overridable
-  fullName.vb: IO.Swagger.Controllers.TicketApiController.TicketTicketIdGet(System.Nullable(Of System.Int32))
-  name.vb: TicketTicketIdGet(Nullable(Of Int32))
+  fullName.vb: TicketApi.Controllers.VenueApiController.GetVenueById(System.Nullable(Of System.Int32))
+  name.vb: GetVenueById(Nullable(Of Int32))
+- uid: TicketApi.Controllers.VenueApiController.GetVenues
+  commentId: M:TicketApi.Controllers.VenueApiController.GetVenues
+  id: GetVenues
+  parent: TicketApi.Controllers.VenueApiController
+  langs:
+  - csharp
+  - vb
+  name: GetVenues()
+  nameWithType: VenueApiController.GetVenues()
+  fullName: TicketApi.Controllers.VenueApiController.GetVenues()
+  type: Method
+  source:
+    remote:
+      path: src/TicketApi/Controllers/VenueApi.cs
+      branch: features/db
+      repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
+    id: GetVenues
+    path: src/TicketApi/Controllers/VenueApi.cs
+    startLine: 112
+  assemblies:
+  - TicketApi
+  namespace: TicketApi.Controllers
+  summary: "\nGet all venues\n"
+  remarks: Returns all venues
+  example: []
+  syntax:
+    content: >-
+      [HttpGet]
+
+      [Route("/api/venue")]
+
+      [SwaggerOperation("GetVenues")]
+
+      [SwaggerResponse(200, typeof (List<Venue>), "Venues loaded")]
+
+      [SwaggerResponse(400, typeof (List<Venue>), "Bad request")]
+
+      public virtual IActionResult GetVenues()
+    return:
+      type: Microsoft.AspNetCore.Mvc.IActionResult
+    content.vb: >-
+      <HttpGet>
+
+      <Route("/api/venue")>
+
+      <SwaggerOperation("GetVenues")>
+
+      <SwaggerResponse(200, GetType(List(Of Venue)), "Venues loaded")>
+
+      <SwaggerResponse(400, GetType(List(Of Venue)), "Bad request")>
+
+      Public Overridable Function GetVenues As IActionResult
+  overload: TicketApi.Controllers.VenueApiController.GetVenues*
+  attributes:
+  - type: Microsoft.AspNetCore.Mvc.HttpGetAttribute
+    ctor: Microsoft.AspNetCore.Mvc.HttpGetAttribute.#ctor
+    arguments: []
+  - type: Microsoft.AspNetCore.Mvc.RouteAttribute
+    ctor: Microsoft.AspNetCore.Mvc.RouteAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: /api/venue
+  - type: Swashbuckle.AspNetCore.SwaggerGen.SwaggerOperationAttribute
+    ctor: Swashbuckle.AspNetCore.SwaggerGen.SwaggerOperationAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: GetVenues
+  - type: Swashbuckle.AspNetCore.SwaggerGen.SwaggerResponseAttribute
+    ctor: Swashbuckle.AspNetCore.SwaggerGen.SwaggerResponseAttribute.#ctor(System.Int32,System.Type,System.String)
+    arguments:
+    - type: System.Int32
+      value: 200
+    - type: System.Type
+      value: System.Collections.Generic.List{TicketApi.Models.Venue}
+    - type: System.String
+      value: Venues loaded
+  - type: Swashbuckle.AspNetCore.SwaggerGen.SwaggerResponseAttribute
+    ctor: Swashbuckle.AspNetCore.SwaggerGen.SwaggerResponseAttribute.#ctor(System.Int32,System.Type,System.String)
+    arguments:
+    - type: System.Int32
+      value: 400
+    - type: System.Type
+      value: System.Collections.Generic.List{TicketApi.Models.Venue}
+    - type: System.String
+      value: Bad request
+  modifiers.csharp:
+  - public
+  - virtual
+  modifiers.vb:
+  - Public
+  - Overridable
+- uid: TicketApi.Controllers.VenueApiController.UpdateVenue(System.Nullable{System.Int32},TicketApi.Models.Venue)
+  commentId: M:TicketApi.Controllers.VenueApiController.UpdateVenue(System.Nullable{System.Int32},TicketApi.Models.Venue)
+  id: UpdateVenue(System.Nullable{System.Int32},TicketApi.Models.Venue)
+  parent: TicketApi.Controllers.VenueApiController
+  langs:
+  - csharp
+  - vb
+  name: UpdateVenue(Nullable<Int32>, Venue)
+  nameWithType: VenueApiController.UpdateVenue(Nullable<Int32>, Venue)
+  fullName: TicketApi.Controllers.VenueApiController.UpdateVenue(System.Nullable<System.Int32>, TicketApi.Models.Venue)
+  type: Method
+  source:
+    remote:
+      path: src/TicketApi/Controllers/VenueApi.cs
+      branch: features/db
+      repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
+    id: UpdateVenue
+    path: src/TicketApi/Controllers/VenueApi.cs
+    startLine: 136
+  assemblies:
+  - TicketApi
+  namespace: TicketApi.Controllers
+  summary: "\nUpdate venue\n"
+  remarks: Update a venue in the system
+  example: []
+  syntax:
+    content: >-
+      [HttpPut]
+
+      [Route("/api/venue/{venueId}")]
+
+      [SwaggerOperation("UpdateVenue")]
+
+      [SwaggerResponse(200, typeof (object), "Venue updated")]
+
+      [SwaggerResponse(400, typeof (object), "Bad request")]
+
+      public virtual IActionResult UpdateVenue([FromRoute] int ? venueId, [FromBody] Venue body)
+    parameters:
+    - id: venueId
+      type: System.Nullable{System.Int32}
+      description: Venue ID
+      attributes:
+      - type: Microsoft.AspNetCore.Mvc.FromRouteAttribute
+        ctor: Microsoft.AspNetCore.Mvc.FromRouteAttribute.#ctor
+        arguments: []
+    - id: body
+      type: TicketApi.Models.Venue
+      description: Venue data
+      attributes:
+      - type: Microsoft.AspNetCore.Mvc.FromBodyAttribute
+        ctor: Microsoft.AspNetCore.Mvc.FromBodyAttribute.#ctor
+        arguments: []
+    return:
+      type: Microsoft.AspNetCore.Mvc.IActionResult
+    content.vb: >-
+      <HttpPut>
+
+      <Route("/api/venue/{venueId}")>
+
+      <SwaggerOperation("UpdateVenue")>
+
+      <SwaggerResponse(200, GetType(Object), "Venue updated")>
+
+      <SwaggerResponse(400, GetType(Object), "Bad request")>
+
+      Public Overridable Function UpdateVenue(venueId As Integer?, body As Venue) As IActionResult
+  overload: TicketApi.Controllers.VenueApiController.UpdateVenue*
+  attributes:
+  - type: Microsoft.AspNetCore.Mvc.HttpPutAttribute
+    ctor: Microsoft.AspNetCore.Mvc.HttpPutAttribute.#ctor
+    arguments: []
+  - type: Microsoft.AspNetCore.Mvc.RouteAttribute
+    ctor: Microsoft.AspNetCore.Mvc.RouteAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: /api/venue/{venueId}
+  - type: Swashbuckle.AspNetCore.SwaggerGen.SwaggerOperationAttribute
+    ctor: Swashbuckle.AspNetCore.SwaggerGen.SwaggerOperationAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: UpdateVenue
+  - type: Swashbuckle.AspNetCore.SwaggerGen.SwaggerResponseAttribute
+    ctor: Swashbuckle.AspNetCore.SwaggerGen.SwaggerResponseAttribute.#ctor(System.Int32,System.Type,System.String)
+    arguments:
+    - type: System.Int32
+      value: 200
+    - type: System.Type
+      value: System.Object
+    - type: System.String
+      value: Venue updated
+  - type: Swashbuckle.AspNetCore.SwaggerGen.SwaggerResponseAttribute
+    ctor: Swashbuckle.AspNetCore.SwaggerGen.SwaggerResponseAttribute.#ctor(System.Int32,System.Type,System.String)
+    arguments:
+    - type: System.Int32
+      value: 400
+    - type: System.Type
+      value: System.Object
+    - type: System.String
+      value: Bad request
+  nameWithType.vb: VenueApiController.UpdateVenue(Nullable(Of Int32), Venue)
+  modifiers.csharp:
+  - public
+  - virtual
+  modifiers.vb:
+  - Public
+  - Overridable
+  fullName.vb: TicketApi.Controllers.VenueApiController.UpdateVenue(System.Nullable(Of System.Int32), TicketApi.Models.Venue)
+  name.vb: UpdateVenue(Nullable(Of Int32), Venue)
 references:
-- uid: IO.Swagger.Controllers
-  commentId: N:IO.Swagger.Controllers
+- uid: TicketApi.Controllers
+  commentId: N:TicketApi.Controllers
   isExternal: false
-  name: IO.Swagger.Controllers
-  nameWithType: IO.Swagger.Controllers
-  fullName: IO.Swagger.Controllers
+  name: TicketApi.Controllers
+  nameWithType: TicketApi.Controllers
+  fullName: TicketApi.Controllers
 - uid: System.Object
   commentId: T:System.Object
   parent: System
@@ -6531,12 +6844,19 @@ references:
   - name: )
     nameWithType: )
     fullName: )
-- uid: IO.Swagger.Controllers.TicketApiController.TicketGet*
-  commentId: Overload:IO.Swagger.Controllers.TicketApiController.TicketGet
+- uid: TicketApi.Controllers.VenueApiController.AddVenue*
+  commentId: Overload:TicketApi.Controllers.VenueApiController.AddVenue
   isExternal: false
-  name: TicketGet
-  nameWithType: TicketApiController.TicketGet
-  fullName: IO.Swagger.Controllers.TicketApiController.TicketGet
+  name: AddVenue
+  nameWithType: VenueApiController.AddVenue
+  fullName: TicketApi.Controllers.VenueApiController.AddVenue
+- uid: TicketApi.Models.Venue
+  commentId: T:TicketApi.Models.Venue
+  parent: TicketApi.Models
+  isExternal: false
+  name: Venue
+  nameWithType: Venue
+  fullName: TicketApi.Models.Venue
 - uid: Microsoft.AspNetCore.Mvc.IActionResult
   commentId: T:Microsoft.AspNetCore.Mvc.IActionResult
   parent: Microsoft.AspNetCore.Mvc
@@ -6544,12 +6864,18 @@ references:
   name: IActionResult
   nameWithType: IActionResult
   fullName: Microsoft.AspNetCore.Mvc.IActionResult
-- uid: IO.Swagger.Controllers.TicketApiController.TicketTicketIdGet*
-  commentId: Overload:IO.Swagger.Controllers.TicketApiController.TicketTicketIdGet
+- uid: TicketApi.Models
+  commentId: N:TicketApi.Models
   isExternal: false
-  name: TicketTicketIdGet
-  nameWithType: TicketApiController.TicketTicketIdGet
-  fullName: IO.Swagger.Controllers.TicketApiController.TicketTicketIdGet
+  name: TicketApi.Models
+  nameWithType: TicketApi.Models
+  fullName: TicketApi.Models
+- uid: TicketApi.Controllers.VenueApiController.DeleteVenue*
+  commentId: Overload:TicketApi.Controllers.VenueApiController.DeleteVenue
+  isExternal: false
+  name: DeleteVenue
+  nameWithType: VenueApiController.DeleteVenue
+  fullName: TicketApi.Controllers.VenueApiController.DeleteVenue
 - uid: System.Nullable{System.Int32}
   commentId: T:System.Nullable{System.Int32}
   parent: System
@@ -6633,3 +6959,21 @@ references:
   - name: )
     nameWithType: )
     fullName: )
+- uid: TicketApi.Controllers.VenueApiController.GetVenueById*
+  commentId: Overload:TicketApi.Controllers.VenueApiController.GetVenueById
+  isExternal: false
+  name: GetVenueById
+  nameWithType: VenueApiController.GetVenueById
+  fullName: TicketApi.Controllers.VenueApiController.GetVenueById
+- uid: TicketApi.Controllers.VenueApiController.GetVenues*
+  commentId: Overload:TicketApi.Controllers.VenueApiController.GetVenues
+  isExternal: false
+  name: GetVenues
+  nameWithType: VenueApiController.GetVenues
+  fullName: TicketApi.Controllers.VenueApiController.GetVenues
+- uid: TicketApi.Controllers.VenueApiController.UpdateVenue*
+  commentId: Overload:TicketApi.Controllers.VenueApiController.UpdateVenue
+  isExternal: false
+  name: UpdateVenue
+  nameWithType: VenueApiController.UpdateVenue
+  fullName: TicketApi.Controllers.VenueApiController.UpdateVenue

@@ -1,57 +1,55 @@
 ### YamlMime:ManagedReference
 items:
-- uid: IO.Swagger.Models.Customer
-  commentId: T:IO.Swagger.Models.Customer
-  id: Customer
-  parent: IO.Swagger.Models
+- uid: TicketApi.Models.Ticket
+  commentId: T:TicketApi.Models.Ticket
+  id: Ticket
+  parent: TicketApi.Models
   children:
-  - IO.Swagger.Models.Customer.Address
-  - IO.Swagger.Models.Customer.City
-  - IO.Swagger.Models.Customer.Email
-  - IO.Swagger.Models.Customer.Equals(IO.Swagger.Models.Customer)
-  - IO.Swagger.Models.Customer.Equals(System.Object)
-  - IO.Swagger.Models.Customer.FirstName
-  - IO.Swagger.Models.Customer.GetHashCode
-  - IO.Swagger.Models.Customer.Id
-  - IO.Swagger.Models.Customer.LastName
-  - IO.Swagger.Models.Customer.op_Equality(IO.Swagger.Models.Customer,IO.Swagger.Models.Customer)
-  - IO.Swagger.Models.Customer.op_Inequality(IO.Swagger.Models.Customer,IO.Swagger.Models.Customer)
-  - IO.Swagger.Models.Customer.ToJson
-  - IO.Swagger.Models.Customer.ToString
+  - TicketApi.Models.Ticket.Equals(System.Object)
+  - TicketApi.Models.Ticket.Equals(TicketApi.Models.Ticket)
+  - TicketApi.Models.Ticket.EventDate
+  - TicketApi.Models.Ticket.EventId
+  - TicketApi.Models.Ticket.GetHashCode
+  - TicketApi.Models.Ticket.Id
+  - TicketApi.Models.Ticket.op_Equality(TicketApi.Models.Ticket,TicketApi.Models.Ticket)
+  - TicketApi.Models.Ticket.op_Inequality(TicketApi.Models.Ticket,TicketApi.Models.Ticket)
+  - TicketApi.Models.Ticket.ToJson
+  - TicketApi.Models.Ticket.ToString
+  - TicketApi.Models.Ticket.UserId
   langs:
   - csharp
   - vb
-  name: Customer
-  nameWithType: Customer
-  fullName: IO.Swagger.Models.Customer
+  name: Ticket
+  nameWithType: Ticket
+  fullName: TicketApi.Models.Ticket
   type: Class
   source:
     remote:
-      path: src/IO.Swagger/Models/Customer.cs
-      branch: RESTapi_Swagger
+      path: src/TicketApi/Models/Ticket.cs
+      branch: features/db
       repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
-    id: Customer
-    path: src/IO.Swagger/Models/Customer.cs
+    id: Ticket
+    path: src/TicketApi/Models/Ticket.cs
     startLine: 38
   assemblies:
-  - IO.Swagger
-  namespace: IO.Swagger.Models
+  - TicketApi
+  namespace: TicketApi.Models
   summary: "\n\n"
   example: []
   syntax:
     content: >-
       [DataContract]
 
-      public class Customer : IEquatable<Customer>
+      public class Ticket : IEquatable<Ticket>
     content.vb: >-
       <DataContract>
 
-      Public Class Customer
-          Implements IEquatable(Of Customer)
+      Public Class Ticket
+          Implements IEquatable(Of Ticket)
   inheritance:
   - System.Object
   implements:
-  - System.IEquatable{IO.Swagger.Models.Customer}
+  - System.IEquatable{TicketApi.Models.Ticket}
   inheritedMembers:
   - System.Object.Equals(System.Object,System.Object)
   - System.Object.GetType
@@ -67,28 +65,28 @@ items:
   modifiers.vb:
   - Public
   - Class
-- uid: IO.Swagger.Models.Customer.Id
-  commentId: P:IO.Swagger.Models.Customer.Id
+- uid: TicketApi.Models.Ticket.Id
+  commentId: P:TicketApi.Models.Ticket.Id
   id: Id
-  parent: IO.Swagger.Models.Customer
+  parent: TicketApi.Models.Ticket
   langs:
   - csharp
   - vb
   name: Id
-  nameWithType: Customer.Id
-  fullName: IO.Swagger.Models.Customer.Id
+  nameWithType: Ticket.Id
+  fullName: TicketApi.Models.Ticket.Id
   type: Property
   source:
     remote:
-      path: src/IO.Swagger/Models/Customer.cs
-      branch: RESTapi_Swagger
+      path: src/TicketApi/Models/Ticket.cs
+      branch: features/db
       repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
     id: Id
-    path: src/IO.Swagger/Models/Customer.cs
+    path: src/TicketApi/Models/Ticket.cs
     startLine: 44
   assemblies:
-  - IO.Swagger
-  namespace: IO.Swagger.Models
+  - TicketApi
+  namespace: TicketApi.Models
   summary: "\nGets or Sets Id\n"
   example: []
   syntax:
@@ -103,7 +101,7 @@ items:
       <DataMember(Name:="id")>
 
       Public Property Id As Integer?
-  overload: IO.Swagger.Models.Customer.Id*
+  overload: TicketApi.Models.Ticket.Id*
   attributes:
   - type: System.Runtime.Serialization.DataMemberAttribute
     ctor: System.Runtime.Serialization.DataMemberAttribute.#ctor
@@ -118,43 +116,43 @@ items:
   - set
   modifiers.vb:
   - Public
-- uid: IO.Swagger.Models.Customer.FirstName
-  commentId: P:IO.Swagger.Models.Customer.FirstName
-  id: FirstName
-  parent: IO.Swagger.Models.Customer
+- uid: TicketApi.Models.Ticket.EventId
+  commentId: P:TicketApi.Models.Ticket.EventId
+  id: EventId
+  parent: TicketApi.Models.Ticket
   langs:
   - csharp
   - vb
-  name: FirstName
-  nameWithType: Customer.FirstName
-  fullName: IO.Swagger.Models.Customer.FirstName
+  name: EventId
+  nameWithType: Ticket.EventId
+  fullName: TicketApi.Models.Ticket.EventId
   type: Property
   source:
     remote:
-      path: src/IO.Swagger/Models/Customer.cs
-      branch: RESTapi_Swagger
+      path: src/TicketApi/Models/Ticket.cs
+      branch: features/db
       repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
-    id: FirstName
-    path: src/IO.Swagger/Models/Customer.cs
+    id: EventId
+    path: src/TicketApi/Models/Ticket.cs
     startLine: 50
   assemblies:
-  - IO.Swagger
-  namespace: IO.Swagger.Models
-  summary: "\nGets or Sets FirstName\n"
+  - TicketApi
+  namespace: TicketApi.Models
+  summary: "\nGets or Sets EventId\n"
   example: []
   syntax:
     content: >-
-      [DataMember(Name = "firstName")]
+      [DataMember(Name = "eventId")]
 
-      public string FirstName { get; set; }
+      public int ? EventId { get; set; }
     parameters: []
     return:
-      type: System.String
+      type: System.Nullable{System.Int32}
     content.vb: >-
-      <DataMember(Name:="firstName")>
+      <DataMember(Name:="eventId")>
 
-      Public Property FirstName As String
-  overload: IO.Swagger.Models.Customer.FirstName*
+      Public Property EventId As Integer?
+  overload: TicketApi.Models.Ticket.EventId*
   attributes:
   - type: System.Runtime.Serialization.DataMemberAttribute
     ctor: System.Runtime.Serialization.DataMemberAttribute.#ctor
@@ -162,50 +160,50 @@ items:
     namedArguments:
     - name: Name
       type: System.String
-      value: firstName
+      value: eventId
   modifiers.csharp:
   - public
   - get
   - set
   modifiers.vb:
   - Public
-- uid: IO.Swagger.Models.Customer.LastName
-  commentId: P:IO.Swagger.Models.Customer.LastName
-  id: LastName
-  parent: IO.Swagger.Models.Customer
+- uid: TicketApi.Models.Ticket.EventDate
+  commentId: P:TicketApi.Models.Ticket.EventDate
+  id: EventDate
+  parent: TicketApi.Models.Ticket
   langs:
   - csharp
   - vb
-  name: LastName
-  nameWithType: Customer.LastName
-  fullName: IO.Swagger.Models.Customer.LastName
+  name: EventDate
+  nameWithType: Ticket.EventDate
+  fullName: TicketApi.Models.Ticket.EventDate
   type: Property
   source:
     remote:
-      path: src/IO.Swagger/Models/Customer.cs
-      branch: RESTapi_Swagger
+      path: src/TicketApi/Models/Ticket.cs
+      branch: features/db
       repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
-    id: LastName
-    path: src/IO.Swagger/Models/Customer.cs
+    id: EventDate
+    path: src/TicketApi/Models/Ticket.cs
     startLine: 56
   assemblies:
-  - IO.Swagger
-  namespace: IO.Swagger.Models
-  summary: "\nGets or Sets LastName\n"
+  - TicketApi
+  namespace: TicketApi.Models
+  summary: "\nGets or Sets EventDate\n"
   example: []
   syntax:
     content: >-
-      [DataMember(Name = "lastName")]
+      [DataMember(Name = "eventDate")]
 
-      public string LastName { get; set; }
+      public DateTime? EventDate { get; set; }
     parameters: []
     return:
-      type: System.String
+      type: System.Nullable{System.DateTime}
     content.vb: >-
-      <DataMember(Name:="lastName")>
+      <DataMember(Name:="eventDate")>
 
-      Public Property LastName As String
-  overload: IO.Swagger.Models.Customer.LastName*
+      Public Property EventDate As Date?
+  overload: TicketApi.Models.Ticket.EventDate*
   attributes:
   - type: System.Runtime.Serialization.DataMemberAttribute
     ctor: System.Runtime.Serialization.DataMemberAttribute.#ctor
@@ -213,50 +211,50 @@ items:
     namedArguments:
     - name: Name
       type: System.String
-      value: lastName
+      value: eventDate
   modifiers.csharp:
   - public
   - get
   - set
   modifiers.vb:
   - Public
-- uid: IO.Swagger.Models.Customer.Address
-  commentId: P:IO.Swagger.Models.Customer.Address
-  id: Address
-  parent: IO.Swagger.Models.Customer
+- uid: TicketApi.Models.Ticket.UserId
+  commentId: P:TicketApi.Models.Ticket.UserId
+  id: UserId
+  parent: TicketApi.Models.Ticket
   langs:
   - csharp
   - vb
-  name: Address
-  nameWithType: Customer.Address
-  fullName: IO.Swagger.Models.Customer.Address
+  name: UserId
+  nameWithType: Ticket.UserId
+  fullName: TicketApi.Models.Ticket.UserId
   type: Property
   source:
     remote:
-      path: src/IO.Swagger/Models/Customer.cs
-      branch: RESTapi_Swagger
+      path: src/TicketApi/Models/Ticket.cs
+      branch: features/db
       repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
-    id: Address
-    path: src/IO.Swagger/Models/Customer.cs
+    id: UserId
+    path: src/TicketApi/Models/Ticket.cs
     startLine: 62
   assemblies:
-  - IO.Swagger
-  namespace: IO.Swagger.Models
-  summary: "\nGets or Sets Address\n"
+  - TicketApi
+  namespace: TicketApi.Models
+  summary: "\nGets or Sets UserId\n"
   example: []
   syntax:
     content: >-
-      [DataMember(Name = "address")]
+      [DataMember(Name = "userId")]
 
-      public string Address { get; set; }
+      public int ? UserId { get; set; }
     parameters: []
     return:
-      type: System.String
+      type: System.Nullable{System.Int32}
     content.vb: >-
-      <DataMember(Name:="address")>
+      <DataMember(Name:="userId")>
 
-      Public Property Address As String
-  overload: IO.Swagger.Models.Customer.Address*
+      Public Property UserId As Integer?
+  overload: TicketApi.Models.Ticket.UserId*
   attributes:
   - type: System.Runtime.Serialization.DataMemberAttribute
     ctor: System.Runtime.Serialization.DataMemberAttribute.#ctor
@@ -264,137 +262,35 @@ items:
     namedArguments:
     - name: Name
       type: System.String
-      value: address
+      value: userId
   modifiers.csharp:
   - public
   - get
   - set
   modifiers.vb:
   - Public
-- uid: IO.Swagger.Models.Customer.City
-  commentId: P:IO.Swagger.Models.Customer.City
-  id: City
-  parent: IO.Swagger.Models.Customer
-  langs:
-  - csharp
-  - vb
-  name: City
-  nameWithType: Customer.City
-  fullName: IO.Swagger.Models.Customer.City
-  type: Property
-  source:
-    remote:
-      path: src/IO.Swagger/Models/Customer.cs
-      branch: RESTapi_Swagger
-      repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
-    id: City
-    path: src/IO.Swagger/Models/Customer.cs
-    startLine: 68
-  assemblies:
-  - IO.Swagger
-  namespace: IO.Swagger.Models
-  summary: "\nGets or Sets City\n"
-  example: []
-  syntax:
-    content: >-
-      [DataMember(Name = "city")]
-
-      public string City { get; set; }
-    parameters: []
-    return:
-      type: System.String
-    content.vb: >-
-      <DataMember(Name:="city")>
-
-      Public Property City As String
-  overload: IO.Swagger.Models.Customer.City*
-  attributes:
-  - type: System.Runtime.Serialization.DataMemberAttribute
-    ctor: System.Runtime.Serialization.DataMemberAttribute.#ctor
-    arguments: []
-    namedArguments:
-    - name: Name
-      type: System.String
-      value: city
-  modifiers.csharp:
-  - public
-  - get
-  - set
-  modifiers.vb:
-  - Public
-- uid: IO.Swagger.Models.Customer.Email
-  commentId: P:IO.Swagger.Models.Customer.Email
-  id: Email
-  parent: IO.Swagger.Models.Customer
-  langs:
-  - csharp
-  - vb
-  name: Email
-  nameWithType: Customer.Email
-  fullName: IO.Swagger.Models.Customer.Email
-  type: Property
-  source:
-    remote:
-      path: src/IO.Swagger/Models/Customer.cs
-      branch: RESTapi_Swagger
-      repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
-    id: Email
-    path: src/IO.Swagger/Models/Customer.cs
-    startLine: 74
-  assemblies:
-  - IO.Swagger
-  namespace: IO.Swagger.Models
-  summary: "\nGets or Sets Email\n"
-  example: []
-  syntax:
-    content: >-
-      [DataMember(Name = "email")]
-
-      public string Email { get; set; }
-    parameters: []
-    return:
-      type: System.String
-    content.vb: >-
-      <DataMember(Name:="email")>
-
-      Public Property Email As String
-  overload: IO.Swagger.Models.Customer.Email*
-  attributes:
-  - type: System.Runtime.Serialization.DataMemberAttribute
-    ctor: System.Runtime.Serialization.DataMemberAttribute.#ctor
-    arguments: []
-    namedArguments:
-    - name: Name
-      type: System.String
-      value: email
-  modifiers.csharp:
-  - public
-  - get
-  - set
-  modifiers.vb:
-  - Public
-- uid: IO.Swagger.Models.Customer.ToString
-  commentId: M:IO.Swagger.Models.Customer.ToString
+- uid: TicketApi.Models.Ticket.ToString
+  commentId: M:TicketApi.Models.Ticket.ToString
   id: ToString
-  parent: IO.Swagger.Models.Customer
+  parent: TicketApi.Models.Ticket
   langs:
   - csharp
   - vb
   name: ToString()
-  nameWithType: Customer.ToString()
-  fullName: IO.Swagger.Models.Customer.ToString()
+  nameWithType: Ticket.ToString()
+  fullName: TicketApi.Models.Ticket.ToString()
   type: Method
   source:
     remote:
-      path: src/IO.Swagger/Models/Customer.cs
-      branch: RESTapi_Swagger
+      path: src/TicketApi/Models/Ticket.cs
+      branch: features/db
       repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
     id: ToString
-    path: src/IO.Swagger/Models/Customer.cs
-    startLine: 81
+    path: src/TicketApi/Models/Ticket.cs
+    startLine: 69
   assemblies:
-  - IO.Swagger
-  namespace: IO.Swagger.Models
+  - TicketApi
+  namespace: TicketApi.Models
   summary: "\nReturns the string presentation of the object\n"
   example: []
   syntax:
@@ -404,35 +300,35 @@ items:
       description: String presentation of the object
     content.vb: Public Overrides Function ToString As String
   overridden: System.Object.ToString
-  overload: IO.Swagger.Models.Customer.ToString*
+  overload: TicketApi.Models.Ticket.ToString*
   modifiers.csharp:
   - public
   - override
   modifiers.vb:
   - Public
   - Overrides
-- uid: IO.Swagger.Models.Customer.ToJson
-  commentId: M:IO.Swagger.Models.Customer.ToJson
+- uid: TicketApi.Models.Ticket.ToJson
+  commentId: M:TicketApi.Models.Ticket.ToJson
   id: ToJson
-  parent: IO.Swagger.Models.Customer
+  parent: TicketApi.Models.Ticket
   langs:
   - csharp
   - vb
   name: ToJson()
-  nameWithType: Customer.ToJson()
-  fullName: IO.Swagger.Models.Customer.ToJson()
+  nameWithType: Ticket.ToJson()
+  fullName: TicketApi.Models.Ticket.ToJson()
   type: Method
   source:
     remote:
-      path: src/IO.Swagger/Models/Customer.cs
-      branch: RESTapi_Swagger
+      path: src/TicketApi/Models/Ticket.cs
+      branch: features/db
       repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
     id: ToJson
-    path: src/IO.Swagger/Models/Customer.cs
-    startLine: 99
+    path: src/TicketApi/Models/Ticket.cs
+    startLine: 85
   assemblies:
-  - IO.Swagger
-  namespace: IO.Swagger.Models
+  - TicketApi
+  namespace: TicketApi.Models
   summary: "\nReturns the JSON string presentation of the object\n"
   example: []
   syntax:
@@ -441,33 +337,33 @@ items:
       type: System.String
       description: JSON string presentation of the object
     content.vb: Public Function ToJson As String
-  overload: IO.Swagger.Models.Customer.ToJson*
+  overload: TicketApi.Models.Ticket.ToJson*
   modifiers.csharp:
   - public
   modifiers.vb:
   - Public
-- uid: IO.Swagger.Models.Customer.Equals(System.Object)
-  commentId: M:IO.Swagger.Models.Customer.Equals(System.Object)
+- uid: TicketApi.Models.Ticket.Equals(System.Object)
+  commentId: M:TicketApi.Models.Ticket.Equals(System.Object)
   id: Equals(System.Object)
-  parent: IO.Swagger.Models.Customer
+  parent: TicketApi.Models.Ticket
   langs:
   - csharp
   - vb
   name: Equals(Object)
-  nameWithType: Customer.Equals(Object)
-  fullName: IO.Swagger.Models.Customer.Equals(System.Object)
+  nameWithType: Ticket.Equals(Object)
+  fullName: TicketApi.Models.Ticket.Equals(System.Object)
   type: Method
   source:
     remote:
-      path: src/IO.Swagger/Models/Customer.cs
-      branch: RESTapi_Swagger
+      path: src/TicketApi/Models/Ticket.cs
+      branch: features/db
       repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
     id: Equals
-    path: src/IO.Swagger/Models/Customer.cs
-    startLine: 109
+    path: src/TicketApi/Models/Ticket.cs
+    startLine: 95
   assemblies:
-  - IO.Swagger
-  namespace: IO.Swagger.Models
+  - TicketApi
+  namespace: TicketApi.Models
   summary: "\nReturns true if objects are equal\n"
   example: []
   syntax:
@@ -481,76 +377,76 @@ items:
       description: Boolean
     content.vb: Public Overrides Function Equals(obj As Object) As Boolean
   overridden: System.Object.Equals(System.Object)
-  overload: IO.Swagger.Models.Customer.Equals*
+  overload: TicketApi.Models.Ticket.Equals*
   modifiers.csharp:
   - public
   - override
   modifiers.vb:
   - Public
   - Overrides
-- uid: IO.Swagger.Models.Customer.Equals(IO.Swagger.Models.Customer)
-  commentId: M:IO.Swagger.Models.Customer.Equals(IO.Swagger.Models.Customer)
-  id: Equals(IO.Swagger.Models.Customer)
-  parent: IO.Swagger.Models.Customer
+- uid: TicketApi.Models.Ticket.Equals(TicketApi.Models.Ticket)
+  commentId: M:TicketApi.Models.Ticket.Equals(TicketApi.Models.Ticket)
+  id: Equals(TicketApi.Models.Ticket)
+  parent: TicketApi.Models.Ticket
   langs:
   - csharp
   - vb
-  name: Equals(Customer)
-  nameWithType: Customer.Equals(Customer)
-  fullName: IO.Swagger.Models.Customer.Equals(IO.Swagger.Models.Customer)
+  name: Equals(Ticket)
+  nameWithType: Ticket.Equals(Ticket)
+  fullName: TicketApi.Models.Ticket.Equals(TicketApi.Models.Ticket)
   type: Method
   source:
     remote:
-      path: src/IO.Swagger/Models/Customer.cs
-      branch: RESTapi_Swagger
+      path: src/TicketApi/Models/Ticket.cs
+      branch: features/db
       repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
     id: Equals
-    path: src/IO.Swagger/Models/Customer.cs
-    startLine: 121
+    path: src/TicketApi/Models/Ticket.cs
+    startLine: 107
   assemblies:
-  - IO.Swagger
-  namespace: IO.Swagger.Models
-  summary: "\nReturns true if Customer instances are equal\n"
+  - TicketApi
+  namespace: TicketApi.Models
+  summary: "\nReturns true if Ticket instances are equal\n"
   example: []
   syntax:
-    content: public bool Equals(Customer other)
+    content: public bool Equals(Ticket other)
     parameters:
     - id: other
-      type: IO.Swagger.Models.Customer
-      description: Instance of Customer to be compared
+      type: TicketApi.Models.Ticket
+      description: Instance of Ticket to be compared
     return:
       type: System.Boolean
       description: Boolean
-    content.vb: Public Function Equals(other As Customer) As Boolean
-  overload: IO.Swagger.Models.Customer.Equals*
+    content.vb: Public Function Equals(other As Ticket) As Boolean
+  overload: TicketApi.Models.Ticket.Equals*
   implements:
-  - System.IEquatable{IO.Swagger.Models.Customer}.Equals(IO.Swagger.Models.Customer)
+  - System.IEquatable{TicketApi.Models.Ticket}.Equals(TicketApi.Models.Ticket)
   modifiers.csharp:
   - public
   modifiers.vb:
   - Public
-- uid: IO.Swagger.Models.Customer.GetHashCode
-  commentId: M:IO.Swagger.Models.Customer.GetHashCode
+- uid: TicketApi.Models.Ticket.GetHashCode
+  commentId: M:TicketApi.Models.Ticket.GetHashCode
   id: GetHashCode
-  parent: IO.Swagger.Models.Customer
+  parent: TicketApi.Models.Ticket
   langs:
   - csharp
   - vb
   name: GetHashCode()
-  nameWithType: Customer.GetHashCode()
-  fullName: IO.Swagger.Models.Customer.GetHashCode()
+  nameWithType: Ticket.GetHashCode()
+  fullName: TicketApi.Models.Ticket.GetHashCode()
   type: Method
   source:
     remote:
-      path: src/IO.Swagger/Models/Customer.cs
-      branch: RESTapi_Swagger
+      path: src/TicketApi/Models/Ticket.cs
+      branch: features/db
       repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
     id: GetHashCode
-    path: src/IO.Swagger/Models/Customer.cs
-    startLine: 163
+    path: src/TicketApi/Models/Ticket.cs
+    startLine: 139
   assemblies:
-  - IO.Swagger
-  namespace: IO.Swagger.Models
+  - TicketApi
+  namespace: TicketApi.Models
   summary: "\nGets the hash code\n"
   example: []
   syntax:
@@ -560,85 +456,85 @@ items:
       description: Hash code
     content.vb: Public Overrides Function GetHashCode As Integer
   overridden: System.Object.GetHashCode
-  overload: IO.Swagger.Models.Customer.GetHashCode*
+  overload: TicketApi.Models.Ticket.GetHashCode*
   modifiers.csharp:
   - public
   - override
   modifiers.vb:
   - Public
   - Overrides
-- uid: IO.Swagger.Models.Customer.op_Equality(IO.Swagger.Models.Customer,IO.Swagger.Models.Customer)
-  commentId: M:IO.Swagger.Models.Customer.op_Equality(IO.Swagger.Models.Customer,IO.Swagger.Models.Customer)
-  id: op_Equality(IO.Swagger.Models.Customer,IO.Swagger.Models.Customer)
-  parent: IO.Swagger.Models.Customer
+- uid: TicketApi.Models.Ticket.op_Equality(TicketApi.Models.Ticket,TicketApi.Models.Ticket)
+  commentId: M:TicketApi.Models.Ticket.op_Equality(TicketApi.Models.Ticket,TicketApi.Models.Ticket)
+  id: op_Equality(TicketApi.Models.Ticket,TicketApi.Models.Ticket)
+  parent: TicketApi.Models.Ticket
   langs:
   - csharp
   - vb
-  name: Equality(Customer, Customer)
-  nameWithType: Customer.Equality(Customer, Customer)
-  fullName: IO.Swagger.Models.Customer.Equality(IO.Swagger.Models.Customer, IO.Swagger.Models.Customer)
+  name: Equality(Ticket, Ticket)
+  nameWithType: Ticket.Equality(Ticket, Ticket)
+  fullName: TicketApi.Models.Ticket.Equality(TicketApi.Models.Ticket, TicketApi.Models.Ticket)
   type: Operator
   source:
     remote:
-      path: src/IO.Swagger/Models/Customer.cs
-      branch: RESTapi_Swagger
+      path: src/TicketApi/Models/Ticket.cs
+      branch: features/db
       repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
     id: op_Equality
-    path: src/IO.Swagger/Models/Customer.cs
-    startLine: 188
+    path: src/TicketApi/Models/Ticket.cs
+    startLine: 160
   assemblies:
-  - IO.Swagger
-  namespace: IO.Swagger.Models
+  - TicketApi
+  namespace: TicketApi.Models
   syntax:
-    content: public static bool operator ==(Customer left, Customer right)
+    content: public static bool operator ==(Ticket left, Ticket right)
     parameters:
     - id: left
-      type: IO.Swagger.Models.Customer
+      type: TicketApi.Models.Ticket
     - id: right
-      type: IO.Swagger.Models.Customer
+      type: TicketApi.Models.Ticket
     return:
       type: System.Boolean
-    content.vb: Public Shared Operator =(left As Customer, right As Customer) As Boolean
-  overload: IO.Swagger.Models.Customer.op_Equality*
+    content.vb: Public Shared Operator =(left As Ticket, right As Ticket) As Boolean
+  overload: TicketApi.Models.Ticket.op_Equality*
   modifiers.csharp:
   - public
   - static
   modifiers.vb:
   - Public
   - Shared
-- uid: IO.Swagger.Models.Customer.op_Inequality(IO.Swagger.Models.Customer,IO.Swagger.Models.Customer)
-  commentId: M:IO.Swagger.Models.Customer.op_Inequality(IO.Swagger.Models.Customer,IO.Swagger.Models.Customer)
-  id: op_Inequality(IO.Swagger.Models.Customer,IO.Swagger.Models.Customer)
-  parent: IO.Swagger.Models.Customer
+- uid: TicketApi.Models.Ticket.op_Inequality(TicketApi.Models.Ticket,TicketApi.Models.Ticket)
+  commentId: M:TicketApi.Models.Ticket.op_Inequality(TicketApi.Models.Ticket,TicketApi.Models.Ticket)
+  id: op_Inequality(TicketApi.Models.Ticket,TicketApi.Models.Ticket)
+  parent: TicketApi.Models.Ticket
   langs:
   - csharp
   - vb
-  name: Inequality(Customer, Customer)
-  nameWithType: Customer.Inequality(Customer, Customer)
-  fullName: IO.Swagger.Models.Customer.Inequality(IO.Swagger.Models.Customer, IO.Swagger.Models.Customer)
+  name: Inequality(Ticket, Ticket)
+  nameWithType: Ticket.Inequality(Ticket, Ticket)
+  fullName: TicketApi.Models.Ticket.Inequality(TicketApi.Models.Ticket, TicketApi.Models.Ticket)
   type: Operator
   source:
     remote:
-      path: src/IO.Swagger/Models/Customer.cs
-      branch: RESTapi_Swagger
+      path: src/TicketApi/Models/Ticket.cs
+      branch: features/db
       repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
     id: op_Inequality
-    path: src/IO.Swagger/Models/Customer.cs
-    startLine: 193
+    path: src/TicketApi/Models/Ticket.cs
+    startLine: 165
   assemblies:
-  - IO.Swagger
-  namespace: IO.Swagger.Models
+  - TicketApi
+  namespace: TicketApi.Models
   syntax:
-    content: public static bool operator !=(Customer left, Customer right)
+    content: public static bool operator !=(Ticket left, Ticket right)
     parameters:
     - id: left
-      type: IO.Swagger.Models.Customer
+      type: TicketApi.Models.Ticket
     - id: right
-      type: IO.Swagger.Models.Customer
+      type: TicketApi.Models.Ticket
     return:
       type: System.Boolean
-    content.vb: Public Shared Operator <>(left As Customer, right As Customer) As Boolean
-  overload: IO.Swagger.Models.Customer.op_Inequality*
+    content.vb: Public Shared Operator <>(left As Ticket, right As Ticket) As Boolean
+  overload: TicketApi.Models.Ticket.op_Inequality*
   modifiers.csharp:
   - public
   - static
@@ -646,12 +542,12 @@ items:
   - Public
   - Shared
 references:
-- uid: IO.Swagger.Models
-  commentId: N:IO.Swagger.Models
+- uid: TicketApi.Models
+  commentId: N:TicketApi.Models
   isExternal: false
-  name: IO.Swagger.Models
-  nameWithType: IO.Swagger.Models
-  fullName: IO.Swagger.Models
+  name: TicketApi.Models
+  nameWithType: TicketApi.Models
+  fullName: TicketApi.Models
 - uid: System.Object
   commentId: T:System.Object
   parent: System
@@ -659,16 +555,16 @@ references:
   name: Object
   nameWithType: Object
   fullName: System.Object
-- uid: System.IEquatable{IO.Swagger.Models.Customer}
-  commentId: T:System.IEquatable{IO.Swagger.Models.Customer}
+- uid: System.IEquatable{TicketApi.Models.Ticket}
+  commentId: T:System.IEquatable{TicketApi.Models.Ticket}
   parent: System
   definition: System.IEquatable`1
-  name: IEquatable<Customer>
-  nameWithType: IEquatable<Customer>
-  fullName: System.IEquatable<IO.Swagger.Models.Customer>
-  nameWithType.vb: IEquatable(Of Customer)
-  fullName.vb: System.IEquatable(Of IO.Swagger.Models.Customer)
-  name.vb: IEquatable(Of Customer)
+  name: IEquatable<Ticket>
+  nameWithType: IEquatable<Ticket>
+  fullName: System.IEquatable<TicketApi.Models.Ticket>
+  nameWithType.vb: IEquatable(Of Ticket)
+  fullName.vb: System.IEquatable(Of TicketApi.Models.Ticket)
+  name.vb: IEquatable(Of Ticket)
   spec.csharp:
   - uid: System.IEquatable`1
     name: IEquatable
@@ -678,10 +574,10 @@ references:
   - name: <
     nameWithType: <
     fullName: <
-  - uid: IO.Swagger.Models.Customer
-    name: Customer
-    nameWithType: Customer
-    fullName: IO.Swagger.Models.Customer
+  - uid: TicketApi.Models.Ticket
+    name: Ticket
+    nameWithType: Ticket
+    fullName: TicketApi.Models.Ticket
   - name: '>'
     nameWithType: '>'
     fullName: '>'
@@ -694,10 +590,10 @@ references:
   - name: '(Of '
     nameWithType: '(Of '
     fullName: '(Of '
-  - uid: IO.Swagger.Models.Customer
-    name: Customer
-    nameWithType: Customer
-    fullName: IO.Swagger.Models.Customer
+  - uid: TicketApi.Models.Ticket
+    name: Ticket
+    nameWithType: Ticket
+    fullName: TicketApi.Models.Ticket
   - name: )
     nameWithType: )
     fullName: )
@@ -922,12 +818,12 @@ references:
   - name: )
     nameWithType: )
     fullName: )
-- uid: IO.Swagger.Models.Customer.Id*
-  commentId: Overload:IO.Swagger.Models.Customer.Id
+- uid: TicketApi.Models.Ticket.Id*
+  commentId: Overload:TicketApi.Models.Ticket.Id
   isExternal: false
   name: Id
-  nameWithType: Customer.Id
-  fullName: IO.Swagger.Models.Customer.Id
+  nameWithType: Ticket.Id
+  fullName: TicketApi.Models.Ticket.Id
 - uid: System.Nullable{System.Int32}
   commentId: T:System.Nullable{System.Int32}
   parent: System
@@ -1011,43 +907,68 @@ references:
   - name: )
     nameWithType: )
     fullName: )
-- uid: IO.Swagger.Models.Customer.FirstName*
-  commentId: Overload:IO.Swagger.Models.Customer.FirstName
+- uid: TicketApi.Models.Ticket.EventId*
+  commentId: Overload:TicketApi.Models.Ticket.EventId
   isExternal: false
-  name: FirstName
-  nameWithType: Customer.FirstName
-  fullName: IO.Swagger.Models.Customer.FirstName
-- uid: System.String
-  commentId: T:System.String
+  name: EventId
+  nameWithType: Ticket.EventId
+  fullName: TicketApi.Models.Ticket.EventId
+- uid: TicketApi.Models.Ticket.EventDate*
+  commentId: Overload:TicketApi.Models.Ticket.EventDate
+  isExternal: false
+  name: EventDate
+  nameWithType: Ticket.EventDate
+  fullName: TicketApi.Models.Ticket.EventDate
+- uid: System.Nullable{System.DateTime}
+  commentId: T:System.Nullable{System.DateTime}
   parent: System
-  isExternal: true
-  name: String
-  nameWithType: String
-  fullName: System.String
-- uid: IO.Swagger.Models.Customer.LastName*
-  commentId: Overload:IO.Swagger.Models.Customer.LastName
+  definition: System.Nullable`1
+  name: Nullable<DateTime>
+  nameWithType: Nullable<DateTime>
+  fullName: System.Nullable<System.DateTime>
+  nameWithType.vb: Nullable(Of DateTime)
+  fullName.vb: System.Nullable(Of System.DateTime)
+  name.vb: Nullable(Of DateTime)
+  spec.csharp:
+  - uid: System.Nullable`1
+    name: Nullable
+    nameWithType: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.DateTime
+    name: DateTime
+    nameWithType: DateTime
+    fullName: System.DateTime
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Nullable`1
+    name: Nullable
+    nameWithType: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.DateTime
+    name: DateTime
+    nameWithType: DateTime
+    fullName: System.DateTime
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: TicketApi.Models.Ticket.UserId*
+  commentId: Overload:TicketApi.Models.Ticket.UserId
   isExternal: false
-  name: LastName
-  nameWithType: Customer.LastName
-  fullName: IO.Swagger.Models.Customer.LastName
-- uid: IO.Swagger.Models.Customer.Address*
-  commentId: Overload:IO.Swagger.Models.Customer.Address
-  isExternal: false
-  name: Address
-  nameWithType: Customer.Address
-  fullName: IO.Swagger.Models.Customer.Address
-- uid: IO.Swagger.Models.Customer.City*
-  commentId: Overload:IO.Swagger.Models.Customer.City
-  isExternal: false
-  name: City
-  nameWithType: Customer.City
-  fullName: IO.Swagger.Models.Customer.City
-- uid: IO.Swagger.Models.Customer.Email*
-  commentId: Overload:IO.Swagger.Models.Customer.Email
-  isExternal: false
-  name: Email
-  nameWithType: Customer.Email
-  fullName: IO.Swagger.Models.Customer.Email
+  name: UserId
+  nameWithType: Ticket.UserId
+  fullName: TicketApi.Models.Ticket.UserId
 - uid: System.Object.ToString
   commentId: M:System.Object.ToString
   parent: System.Object
@@ -1079,18 +1000,25 @@ references:
   - name: )
     nameWithType: )
     fullName: )
-- uid: IO.Swagger.Models.Customer.ToString*
-  commentId: Overload:IO.Swagger.Models.Customer.ToString
+- uid: TicketApi.Models.Ticket.ToString*
+  commentId: Overload:TicketApi.Models.Ticket.ToString
   isExternal: false
   name: ToString
-  nameWithType: Customer.ToString
-  fullName: IO.Swagger.Models.Customer.ToString
-- uid: IO.Swagger.Models.Customer.ToJson*
-  commentId: Overload:IO.Swagger.Models.Customer.ToJson
+  nameWithType: Ticket.ToString
+  fullName: TicketApi.Models.Ticket.ToString
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: TicketApi.Models.Ticket.ToJson*
+  commentId: Overload:TicketApi.Models.Ticket.ToJson
   isExternal: false
   name: ToJson
-  nameWithType: Customer.ToJson
-  fullName: IO.Swagger.Models.Customer.ToJson
+  nameWithType: Ticket.ToJson
+  fullName: TicketApi.Models.Ticket.ToJson
 - uid: System.Object.Equals(System.Object)
   commentId: M:System.Object.Equals(System.Object)
   parent: System.Object
@@ -1132,12 +1060,12 @@ references:
   - name: )
     nameWithType: )
     fullName: )
-- uid: IO.Swagger.Models.Customer.Equals*
-  commentId: Overload:IO.Swagger.Models.Customer.Equals
+- uid: TicketApi.Models.Ticket.Equals*
+  commentId: Overload:TicketApi.Models.Ticket.Equals
   isExternal: false
   name: Equals
-  nameWithType: Customer.Equals
-  fullName: IO.Swagger.Models.Customer.Equals
+  nameWithType: Ticket.Equals
+  fullName: TicketApi.Models.Ticket.Equals
 - uid: System.Boolean
   commentId: T:System.Boolean
   parent: System
@@ -1145,54 +1073,54 @@ references:
   name: Boolean
   nameWithType: Boolean
   fullName: System.Boolean
-- uid: System.IEquatable{IO.Swagger.Models.Customer}.Equals(IO.Swagger.Models.Customer)
-  commentId: M:System.IEquatable{IO.Swagger.Models.Customer}.Equals(IO.Swagger.Models.Customer)
-  parent: System.IEquatable{IO.Swagger.Models.Customer}
+- uid: System.IEquatable{TicketApi.Models.Ticket}.Equals(TicketApi.Models.Ticket)
+  commentId: M:System.IEquatable{TicketApi.Models.Ticket}.Equals(TicketApi.Models.Ticket)
+  parent: System.IEquatable{TicketApi.Models.Ticket}
   definition: System.IEquatable`1.Equals(`0)
-  name: Equals(Customer)
-  nameWithType: IEquatable<Customer>.Equals(Customer)
-  fullName: System.IEquatable<IO.Swagger.Models.Customer>.Equals(IO.Swagger.Models.Customer)
-  nameWithType.vb: IEquatable(Of Customer).Equals(Customer)
-  fullName.vb: System.IEquatable(Of IO.Swagger.Models.Customer).Equals(IO.Swagger.Models.Customer)
+  name: Equals(Ticket)
+  nameWithType: IEquatable<Ticket>.Equals(Ticket)
+  fullName: System.IEquatable<TicketApi.Models.Ticket>.Equals(TicketApi.Models.Ticket)
+  nameWithType.vb: IEquatable(Of Ticket).Equals(Ticket)
+  fullName.vb: System.IEquatable(Of TicketApi.Models.Ticket).Equals(TicketApi.Models.Ticket)
   spec.csharp:
   - uid: System.IEquatable`1.Equals(`0)
     name: Equals
-    nameWithType: IEquatable<Customer>.Equals
-    fullName: System.IEquatable<IO.Swagger.Models.Customer>.Equals
+    nameWithType: IEquatable<Ticket>.Equals
+    fullName: System.IEquatable<TicketApi.Models.Ticket>.Equals
     isExternal: true
   - name: (
     nameWithType: (
     fullName: (
-  - uid: IO.Swagger.Models.Customer
-    name: Customer
-    nameWithType: Customer
-    fullName: IO.Swagger.Models.Customer
+  - uid: TicketApi.Models.Ticket
+    name: Ticket
+    nameWithType: Ticket
+    fullName: TicketApi.Models.Ticket
   - name: )
     nameWithType: )
     fullName: )
   spec.vb:
   - uid: System.IEquatable`1.Equals(`0)
     name: Equals
-    nameWithType: IEquatable(Of Customer).Equals
-    fullName: System.IEquatable(Of IO.Swagger.Models.Customer).Equals
+    nameWithType: IEquatable(Of Ticket).Equals
+    fullName: System.IEquatable(Of TicketApi.Models.Ticket).Equals
     isExternal: true
   - name: (
     nameWithType: (
     fullName: (
-  - uid: IO.Swagger.Models.Customer
-    name: Customer
-    nameWithType: Customer
-    fullName: IO.Swagger.Models.Customer
+  - uid: TicketApi.Models.Ticket
+    name: Ticket
+    nameWithType: Ticket
+    fullName: TicketApi.Models.Ticket
   - name: )
     nameWithType: )
     fullName: )
-- uid: IO.Swagger.Models.Customer
-  commentId: T:IO.Swagger.Models.Customer
-  parent: IO.Swagger.Models
+- uid: TicketApi.Models.Ticket
+  commentId: T:TicketApi.Models.Ticket
+  parent: TicketApi.Models
   isExternal: false
-  name: Customer
-  nameWithType: Customer
-  fullName: IO.Swagger.Models.Customer
+  name: Ticket
+  nameWithType: Ticket
+  fullName: TicketApi.Models.Ticket
 - uid: System.IEquatable`1.Equals(`0)
   commentId: M:System.IEquatable`1.Equals(`0)
   isExternal: true
@@ -1262,12 +1190,12 @@ references:
   - name: )
     nameWithType: )
     fullName: )
-- uid: IO.Swagger.Models.Customer.GetHashCode*
-  commentId: Overload:IO.Swagger.Models.Customer.GetHashCode
+- uid: TicketApi.Models.Ticket.GetHashCode*
+  commentId: Overload:TicketApi.Models.Ticket.GetHashCode
   isExternal: false
   name: GetHashCode
-  nameWithType: Customer.GetHashCode
-  fullName: IO.Swagger.Models.Customer.GetHashCode
+  nameWithType: Ticket.GetHashCode
+  fullName: TicketApi.Models.Ticket.GetHashCode
 - uid: System.Int32
   commentId: T:System.Int32
   parent: System
@@ -1275,15 +1203,15 @@ references:
   name: Int32
   nameWithType: Int32
   fullName: System.Int32
-- uid: IO.Swagger.Models.Customer.op_Equality*
-  commentId: Overload:IO.Swagger.Models.Customer.op_Equality
+- uid: TicketApi.Models.Ticket.op_Equality*
+  commentId: Overload:TicketApi.Models.Ticket.op_Equality
   isExternal: false
   name: Equality
-  nameWithType: Customer.Equality
-  fullName: IO.Swagger.Models.Customer.Equality
-- uid: IO.Swagger.Models.Customer.op_Inequality*
-  commentId: Overload:IO.Swagger.Models.Customer.op_Inequality
+  nameWithType: Ticket.Equality
+  fullName: TicketApi.Models.Ticket.Equality
+- uid: TicketApi.Models.Ticket.op_Inequality*
+  commentId: Overload:TicketApi.Models.Ticket.op_Inequality
   isExternal: false
   name: Inequality
-  nameWithType: Customer.Inequality
-  fullName: IO.Swagger.Models.Customer.Inequality
+  nameWithType: Ticket.Inequality
+  fullName: TicketApi.Models.Ticket.Inequality

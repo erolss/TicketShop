@@ -1,0 +1,70 @@
+### YamlMime:ManagedReference
+items:
+- uid: TicketApi.Models
+  commentId: N:TicketApi.Models
+  id: TicketApi.Models
+  children:
+  - TicketApi.Models.Event
+  - TicketApi.Models.EventDate
+  - TicketApi.Models.FullEventDate
+  - TicketApi.Models.Ticket
+  - TicketApi.Models.Transaction
+  - TicketApi.Models.Venue
+  langs:
+  - csharp
+  - vb
+  name: TicketApi.Models
+  nameWithType: TicketApi.Models
+  fullName: TicketApi.Models
+  type: Namespace
+  assemblies:
+  - TicketApi
+references:
+- uid: TicketApi.Models.Event
+  commentId: T:TicketApi.Models.Event
+  parent: TicketApi.Models
+  isExternal: false
+  name: Event
+  nameWithType: Event
+  fullName: TicketApi.Models.Event
+- uid: TicketApi.Models.EventDate
+  commentId: T:TicketApi.Models.EventDate
+  parent: TicketApi.Models
+  isExternal: false
+  name: EventDate
+  nameWithType: EventDate
+  fullName: TicketApi.Models.EventDate
+- uid: TicketApi.Models.FullEventDate
+  commentId: T:TicketApi.Models.FullEventDate
+  parent: TicketApi.Models
+  isExternal: false
+  name: FullEventDate
+  nameWithType: FullEventDate
+  fullName: TicketApi.Models.FullEventDate
+- uid: TicketApi.Models.Ticket
+  commentId: T:TicketApi.Models.Ticket
+  parent: TicketApi.Models
+  isExternal: false
+  name: Ticket
+  nameWithType: Ticket
+  fullName: TicketApi.Models.Ticket
+- uid: TicketApi.Models.Transaction
+  commentId: T:TicketApi.Models.Transaction
+  parent: TicketApi.Models
+  isExternal: false
+  name: Transaction
+  nameWithType: Transaction
+  fullName: TicketApi.Models.Transaction
+- uid: TicketApi.Models.Venue
+  commentId: T:TicketApi.Models.Venue
+  parent: TicketApi.Models
+  isExternal: false
+  name: Venue
+  nameWithType: Venue
+  fullName: TicketApi.Models.Venue
+- uid: TicketApi.Models
+  commentId: N:TicketApi.Models
+  isExternal: false
+  name: TicketApi.Models
+  nameWithType: TicketApi.Models
+  fullName: TicketApi.Models

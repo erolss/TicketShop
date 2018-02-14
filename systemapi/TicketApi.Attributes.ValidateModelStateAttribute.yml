@@ -1,29 +1,29 @@
 ### YamlMime:ManagedReference
 items:
-- uid: IO.Swagger.Attributes.ValidateModelStateAttribute
-  commentId: T:IO.Swagger.Attributes.ValidateModelStateAttribute
+- uid: TicketApi.Attributes.ValidateModelStateAttribute
+  commentId: T:TicketApi.Attributes.ValidateModelStateAttribute
   id: ValidateModelStateAttribute
-  parent: IO.Swagger.Attributes
+  parent: TicketApi.Attributes
   children:
-  - IO.Swagger.Attributes.ValidateModelStateAttribute.OnActionExecuting(Microsoft.AspNetCore.Mvc.Filters.ActionExecutingContext)
+  - TicketApi.Attributes.ValidateModelStateAttribute.OnActionExecuting(Microsoft.AspNetCore.Mvc.Filters.ActionExecutingContext)
   langs:
   - csharp
   - vb
   name: ValidateModelStateAttribute
   nameWithType: ValidateModelStateAttribute
-  fullName: IO.Swagger.Attributes.ValidateModelStateAttribute
+  fullName: TicketApi.Attributes.ValidateModelStateAttribute
   type: Class
   source:
     remote:
-      path: src/IO.Swagger/Attributes/ValidateModelStateAttribute.cs
-      branch: RESTapi_Swagger
+      path: src/TicketApi/Attributes/ValidateModelStateAttribute.cs
+      branch: features/db
       repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
     id: ValidateModelStateAttribute
-    path: src/IO.Swagger/Attributes/ValidateModelStateAttribute.cs
+    path: src/TicketApi/Attributes/ValidateModelStateAttribute.cs
     startLine: 8
   assemblies:
-  - IO.Swagger
-  namespace: IO.Swagger.Attributes
+  - TicketApi
+  namespace: TicketApi.Attributes
   summary: "\nModel state validation attribute\n"
   example: []
   syntax:
@@ -63,28 +63,28 @@ items:
   modifiers.vb:
   - Public
   - Class
-- uid: IO.Swagger.Attributes.ValidateModelStateAttribute.OnActionExecuting(Microsoft.AspNetCore.Mvc.Filters.ActionExecutingContext)
-  commentId: M:IO.Swagger.Attributes.ValidateModelStateAttribute.OnActionExecuting(Microsoft.AspNetCore.Mvc.Filters.ActionExecutingContext)
+- uid: TicketApi.Attributes.ValidateModelStateAttribute.OnActionExecuting(Microsoft.AspNetCore.Mvc.Filters.ActionExecutingContext)
+  commentId: M:TicketApi.Attributes.ValidateModelStateAttribute.OnActionExecuting(Microsoft.AspNetCore.Mvc.Filters.ActionExecutingContext)
   id: OnActionExecuting(Microsoft.AspNetCore.Mvc.Filters.ActionExecutingContext)
-  parent: IO.Swagger.Attributes.ValidateModelStateAttribute
+  parent: TicketApi.Attributes.ValidateModelStateAttribute
   langs:
   - csharp
   - vb
   name: OnActionExecuting(ActionExecutingContext)
   nameWithType: ValidateModelStateAttribute.OnActionExecuting(ActionExecutingContext)
-  fullName: IO.Swagger.Attributes.ValidateModelStateAttribute.OnActionExecuting(Microsoft.AspNetCore.Mvc.Filters.ActionExecutingContext)
+  fullName: TicketApi.Attributes.ValidateModelStateAttribute.OnActionExecuting(Microsoft.AspNetCore.Mvc.Filters.ActionExecutingContext)
   type: Method
   source:
     remote:
-      path: src/IO.Swagger/Attributes/ValidateModelStateAttribute.cs
-      branch: RESTapi_Swagger
+      path: src/TicketApi/Attributes/ValidateModelStateAttribute.cs
+      branch: features/db
       repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
     id: OnActionExecuting
-    path: src/IO.Swagger/Attributes/ValidateModelStateAttribute.cs
+    path: src/TicketApi/Attributes/ValidateModelStateAttribute.cs
     startLine: 14
   assemblies:
-  - IO.Swagger
-  namespace: IO.Swagger.Attributes
+  - TicketApi
+  namespace: TicketApi.Attributes
   summary: "\nCalled before the action method is invoked\n"
   example: []
   syntax:
@@ -95,7 +95,7 @@ items:
       description: ''
     content.vb: Public Overrides Sub OnActionExecuting(context As ActionExecutingContext)
   overridden: Microsoft.AspNetCore.Mvc.Filters.ActionFilterAttribute.OnActionExecuting(Microsoft.AspNetCore.Mvc.Filters.ActionExecutingContext)
-  overload: IO.Swagger.Attributes.ValidateModelStateAttribute.OnActionExecuting*
+  overload: TicketApi.Attributes.ValidateModelStateAttribute.OnActionExecuting*
   modifiers.csharp:
   - public
   - override
@@ -103,12 +103,12 @@ items:
   - Public
   - Overrides
 references:
-- uid: IO.Swagger.Attributes
-  commentId: N:IO.Swagger.Attributes
+- uid: TicketApi.Attributes
+  commentId: N:TicketApi.Attributes
   isExternal: false
-  name: IO.Swagger.Attributes
-  nameWithType: IO.Swagger.Attributes
-  fullName: IO.Swagger.Attributes
+  name: TicketApi.Attributes
+  nameWithType: TicketApi.Attributes
+  fullName: TicketApi.Attributes
 - uid: System.Object
   commentId: T:System.Object
   parent: System
@@ -748,12 +748,12 @@ references:
   - name: )
     nameWithType: )
     fullName: )
-- uid: IO.Swagger.Attributes.ValidateModelStateAttribute.OnActionExecuting*
-  commentId: Overload:IO.Swagger.Attributes.ValidateModelStateAttribute.OnActionExecuting
+- uid: TicketApi.Attributes.ValidateModelStateAttribute.OnActionExecuting*
+  commentId: Overload:TicketApi.Attributes.ValidateModelStateAttribute.OnActionExecuting
   isExternal: false
   name: OnActionExecuting
   nameWithType: ValidateModelStateAttribute.OnActionExecuting
-  fullName: IO.Swagger.Attributes.ValidateModelStateAttribute.OnActionExecuting
+  fullName: TicketApi.Attributes.ValidateModelStateAttribute.OnActionExecuting
 - uid: Microsoft.AspNetCore.Mvc.Filters.ActionExecutingContext
   commentId: T:Microsoft.AspNetCore.Mvc.Filters.ActionExecutingContext
   parent: Microsoft.AspNetCore.Mvc.Filters

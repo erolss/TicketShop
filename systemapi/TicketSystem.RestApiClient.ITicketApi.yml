@@ -17,7 +17,7 @@ items:
   source:
     remote:
       path: src/RestApiClient/ITicketApi.cs
-      branch: master
+      branch: features/db
       repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
     id: ITicketApi
     path: src/RestApiClient/ITicketApi.cs
@@ -48,7 +48,7 @@ items:
   source:
     remote:
       path: src/RestApiClient/ITicketApi.cs
-      branch: master
+      branch: features/db
       repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
     id: TicketGet
     path: src/RestApiClient/ITicketApi.cs
@@ -61,7 +61,7 @@ items:
   syntax:
     content: List<Ticket> TicketGet()
     return:
-      type: List{TicketSystem.RestApiClient.Model.Ticket}
+      type: System.Collections.Generic.List{TicketSystem.RestApiClient.Model.Ticket}
       description: ''
     content.vb: Function TicketGet As List(Of Ticket)
   overload: TicketSystem.RestApiClient.ITicketApi.TicketGet*
@@ -79,7 +79,7 @@ items:
   source:
     remote:
       path: src/RestApiClient/ITicketApi.cs
-      branch: master
+      branch: features/db
       repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
     id: TicketTicketIdGet
     path: src/RestApiClient/ITicketApi.cs
@@ -113,20 +113,21 @@ references:
   name: TicketGet
   nameWithType: ITicketApi.TicketGet
   fullName: TicketSystem.RestApiClient.ITicketApi.TicketGet
-- uid: List{TicketSystem.RestApiClient.Model.Ticket}
-  commentId: '!:List{TicketSystem.RestApiClient.Model.Ticket}'
-  definition: List`1
+- uid: System.Collections.Generic.List{TicketSystem.RestApiClient.Model.Ticket}
+  commentId: T:System.Collections.Generic.List{TicketSystem.RestApiClient.Model.Ticket}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.List`1
   name: List<Ticket>
   nameWithType: List<Ticket>
-  fullName: List<TicketSystem.RestApiClient.Model.Ticket>
+  fullName: System.Collections.Generic.List<TicketSystem.RestApiClient.Model.Ticket>
   nameWithType.vb: List(Of Ticket)
-  fullName.vb: List(Of TicketSystem.RestApiClient.Model.Ticket)
+  fullName.vb: System.Collections.Generic.List(Of TicketSystem.RestApiClient.Model.Ticket)
   name.vb: List(Of Ticket)
   spec.csharp:
-  - uid: List`1
+  - uid: System.Collections.Generic.List`1
     name: List
     nameWithType: List
-    fullName: List
+    fullName: System.Collections.Generic.List
     isExternal: true
   - name: <
     nameWithType: <
@@ -139,10 +140,10 @@ references:
     nameWithType: '>'
     fullName: '>'
   spec.vb:
-  - uid: List`1
+  - uid: System.Collections.Generic.List`1
     name: List
     nameWithType: List
-    fullName: List
+    fullName: System.Collections.Generic.List
     isExternal: true
   - name: '(Of '
     nameWithType: '(Of '
@@ -154,44 +155,51 @@ references:
   - name: )
     nameWithType: )
     fullName: )
-- uid: List`1
+- uid: System.Collections.Generic.List`1
+  commentId: T:System.Collections.Generic.List`1
   isExternal: true
-  name: List<>
-  nameWithType: List<>
-  fullName: List<>
-  nameWithType.vb: List(Of )
-  fullName.vb: List(Of )
-  name.vb: List(Of )
+  name: List<T>
+  nameWithType: List<T>
+  fullName: System.Collections.Generic.List<T>
+  nameWithType.vb: List(Of T)
+  fullName.vb: System.Collections.Generic.List(Of T)
+  name.vb: List(Of T)
   spec.csharp:
-  - uid: List`1
+  - uid: System.Collections.Generic.List`1
     name: List
     nameWithType: List
-    fullName: List
+    fullName: System.Collections.Generic.List
     isExternal: true
   - name: <
     nameWithType: <
     fullName: <
-  - name: ''
-    nameWithType: ''
-    fullName: ''
+  - name: T
+    nameWithType: T
+    fullName: T
   - name: '>'
     nameWithType: '>'
     fullName: '>'
   spec.vb:
-  - uid: List`1
+  - uid: System.Collections.Generic.List`1
     name: List
     nameWithType: List
-    fullName: List
+    fullName: System.Collections.Generic.List
     isExternal: true
   - name: '(Of '
     nameWithType: '(Of '
     fullName: '(Of '
-  - name: ''
-    nameWithType: ''
-    fullName: ''
+  - name: T
+    nameWithType: T
+    fullName: T
   - name: )
     nameWithType: )
     fullName: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: false
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
 - uid: TicketSystem.RestApiClient.ITicketApi.TicketTicketIdGet*
   commentId: Overload:TicketSystem.RestApiClient.ITicketApi.TicketTicketIdGet
   isExternal: false

@@ -1,36 +1,4 @@
 ### YamlMime:TableOfContent
-- uid: IO.Swagger
-  name: IO.Swagger
-  items:
-  - uid: IO.Swagger.Program
-    name: Program
-  - uid: IO.Swagger.Startup
-    name: Startup
-- uid: IO.Swagger.Attributes
-  name: IO.Swagger.Attributes
-  items:
-  - uid: IO.Swagger.Attributes.ValidateModelStateAttribute
-    name: ValidateModelStateAttribute
-- uid: IO.Swagger.Controllers
-  name: IO.Swagger.Controllers
-  items:
-  - uid: IO.Swagger.Controllers.EventApiController
-    name: EventApiController
-  - uid: IO.Swagger.Controllers.TicketApiController
-    name: TicketApiController
-  - uid: IO.Swagger.Controllers.TransactionApiController
-    name: TransactionApiController
-  - uid: IO.Swagger.Controllers.UserApiController
-    name: UserApiController
-- uid: IO.Swagger.Models
-  name: IO.Swagger.Models
-  items:
-  - uid: IO.Swagger.Models.Customer
-    name: Customer
-  - uid: IO.Swagger.Models.Ticket
-    name: Ticket
-  - uid: IO.Swagger.Models.Transaction
-    name: Transaction
 - uid: TicketApi
   name: TicketApi
   items:
@@ -38,25 +6,70 @@
     name: Program
   - uid: TicketApi.Startup
     name: Startup
+- uid: TicketApi.Attributes
+  name: TicketApi.Attributes
+  items:
+  - uid: TicketApi.Attributes.ValidateModelStateAttribute
+    name: ValidateModelStateAttribute
 - uid: TicketApi.Controllers
   name: TicketApi.Controllers
   items:
-  - uid: TicketApi.Controllers.ValuesController
-    name: ValuesController
+  - uid: TicketApi.Controllers.EventApiController
+    name: EventApiController
+  - uid: TicketApi.Controllers.EventdateApiController
+    name: EventdateApiController
+  - uid: TicketApi.Controllers.TicketApiController
+    name: TicketApiController
+  - uid: TicketApi.Controllers.TransactionApiController
+    name: TransactionApiController
+  - uid: TicketApi.Controllers.VenueApiController
+    name: VenueApiController
+- uid: TicketApi.Models
+  name: TicketApi.Models
+  items:
+  - uid: TicketApi.Models.Event
+    name: Event
+  - uid: TicketApi.Models.EventDate
+    name: EventDate
+  - uid: TicketApi.Models.FullEventDate
+    name: FullEventDate
+  - uid: TicketApi.Models.Ticket
+    name: Ticket
+  - uid: TicketApi.Models.Transaction
+    name: Transaction
+  - uid: TicketApi.Models.Venue
+    name: Venue
 - uid: TicketSystem.DatabaseRepository
   name: TicketSystem.DatabaseRepository
   items:
-  - uid: TicketSystem.DatabaseRepository.ITicketDatabase
-    name: ITicketDatabase
-  - uid: TicketSystem.DatabaseRepository.TicketDatabase
-    name: TicketDatabase
+  - uid: TicketSystem.DatabaseRepository.EventDateRepository
+    name: EventDateRepository
+  - uid: TicketSystem.DatabaseRepository.EventRepository
+    name: EventRepository
+  - uid: TicketSystem.DatabaseRepository.TicketRepository
+    name: TicketRepository
+- uid: TicketSystem.DatabaseRepository.Interface
+  name: TicketSystem.DatabaseRepository.Interface
+  items:
+  - uid: TicketSystem.DatabaseRepository.Interface.IEventDateRepository
+    name: IEventDateRepository
+  - uid: TicketSystem.DatabaseRepository.Interface.IEventRepository
+    name: IEventRepository
+  - uid: TicketSystem.DatabaseRepository.Interface.ITicketRepository
+    name: ITicketRepository
+  - uid: TicketSystem.DatabaseRepository.Interface.IVenueRepository
+    name: IVenueRepository
 - uid: TicketSystem.DatabaseRepository.Model
   name: TicketSystem.DatabaseRepository.Model
   items:
-  - uid: TicketSystem.DatabaseRepository.Model.TicketEvent
-    name: TicketEvent
-  - uid: TicketSystem.DatabaseRepository.Model.TicketEventDate
-    name: TicketEventDate
+  - uid: TicketSystem.DatabaseRepository.Model.Event
+    name: Event
+  - uid: TicketSystem.DatabaseRepository.Model.EventDate
+    name: EventDate
+  - uid: TicketSystem.DatabaseRepository.Model.FullEventDate
+    name: FullEventDate
+  - uid: TicketSystem.DatabaseRepository.Model.Ticket
+    name: Ticket
   - uid: TicketSystem.DatabaseRepository.Model.Venue
     name: Venue
 - uid: TicketSystem.PaymentProvider

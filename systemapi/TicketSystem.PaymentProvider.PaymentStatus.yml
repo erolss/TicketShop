@@ -18,7 +18,7 @@ items:
   source:
     remote:
       path: src/PaymentProvider/PaymentStatus.cs
-      branch: master
+      branch: features/db
       repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
     id: PaymentStatus
     path: src/PaymentProvider/PaymentStatus.cs
@@ -27,8 +27,8 @@ items:
   - PaymentProvider
   namespace: TicketSystem.PaymentProvider
   syntax:
-    content: 'public enum PaymentStatus : int'
-    content.vb: Public Enum PaymentStatus As Integer
+    content: public enum PaymentStatus
+    content.vb: Public Enum PaymentStatus
   modifiers.csharp:
   - public
   - enum
@@ -49,7 +49,7 @@ items:
   source:
     remote:
       path: src/PaymentProvider/PaymentStatus.cs
-      branch: master
+      branch: features/db
       repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
     id: PaymentApproved
     path: src/PaymentProvider/PaymentStatus.cs
@@ -81,7 +81,7 @@ items:
   source:
     remote:
       path: src/PaymentProvider/PaymentStatus.cs
-      branch: master
+      branch: features/db
       repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
     id: PaymentRejected
     path: src/PaymentProvider/PaymentStatus.cs
@@ -113,7 +113,7 @@ items:
   source:
     remote:
       path: src/PaymentProvider/PaymentStatus.cs
-      branch: master
+      branch: features/db
       repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
     id: UnknownError
     path: src/PaymentProvider/PaymentStatus.cs

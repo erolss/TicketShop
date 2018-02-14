@@ -1,36 +1,35 @@
 ### YamlMime:ManagedReference
 items:
-- uid: IO.Swagger.Startup
-  commentId: T:IO.Swagger.Startup
-  id: Startup
-  parent: IO.Swagger
+- uid: TicketSystem.DatabaseRepository.Model.EventDate
+  commentId: T:TicketSystem.DatabaseRepository.Model.EventDate
+  id: EventDate
+  parent: TicketSystem.DatabaseRepository.Model
   children:
-  - IO.Swagger.Startup.#ctor(Microsoft.AspNetCore.Hosting.IHostingEnvironment)
-  - IO.Swagger.Startup.Configure(Microsoft.AspNetCore.Builder.IApplicationBuilder,Microsoft.AspNetCore.Hosting.IHostingEnvironment,Microsoft.Extensions.Logging.ILoggerFactory)
-  - IO.Swagger.Startup.ConfigureServices(Microsoft.Extensions.DependencyInjection.IServiceCollection)
+  - TicketSystem.DatabaseRepository.Model.EventDate.EventStartDateTime
+  - TicketSystem.DatabaseRepository.Model.EventDate.TicketEventDateID
+  - TicketSystem.DatabaseRepository.Model.EventDate.TicketEventID
+  - TicketSystem.DatabaseRepository.Model.EventDate.VenueId
   langs:
   - csharp
   - vb
-  name: Startup
-  nameWithType: Startup
-  fullName: IO.Swagger.Startup
+  name: EventDate
+  nameWithType: EventDate
+  fullName: TicketSystem.DatabaseRepository.Model.EventDate
   type: Class
   source:
     remote:
-      path: src/IO.Swagger/Startup.cs
-      branch: RESTapi_Swagger
+      path: src/DatabaseRepository/Model/EventDate.cs
+      branch: features/db
       repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
-    id: Startup
-    path: src/IO.Swagger/Startup.cs
-    startLine: 39
+    id: EventDate
+    path: src/DatabaseRepository/Model/EventDate.cs
+    startLine: 4
   assemblies:
-  - IO.Swagger
-  namespace: IO.Swagger
-  summary: "\nStartup\n"
-  example: []
+  - DatabaseRepository
+  namespace: TicketSystem.DatabaseRepository.Model
   syntax:
-    content: public class Startup
-    content.vb: Public Class Startup
+    content: public class EventDate
+    content.vb: Public Class EventDate
   inheritance:
   - System.Object
   inheritedMembers:
@@ -47,127 +46,153 @@ items:
   modifiers.vb:
   - Public
   - Class
-- uid: IO.Swagger.Startup.#ctor(Microsoft.AspNetCore.Hosting.IHostingEnvironment)
-  commentId: M:IO.Swagger.Startup.#ctor(Microsoft.AspNetCore.Hosting.IHostingEnvironment)
-  id: '#ctor(Microsoft.AspNetCore.Hosting.IHostingEnvironment)'
-  parent: IO.Swagger.Startup
+- uid: TicketSystem.DatabaseRepository.Model.EventDate.TicketEventDateID
+  commentId: P:TicketSystem.DatabaseRepository.Model.EventDate.TicketEventDateID
+  id: TicketEventDateID
+  parent: TicketSystem.DatabaseRepository.Model.EventDate
   langs:
   - csharp
   - vb
-  name: Startup(IHostingEnvironment)
-  nameWithType: Startup.Startup(IHostingEnvironment)
-  fullName: IO.Swagger.Startup.Startup(Microsoft.AspNetCore.Hosting.IHostingEnvironment)
-  type: Constructor
+  name: TicketEventDateID
+  nameWithType: EventDate.TicketEventDateID
+  fullName: TicketSystem.DatabaseRepository.Model.EventDate.TicketEventDateID
+  type: Property
   source:
     remote:
-      path: src/IO.Swagger/Startup.cs
-      branch: RESTapi_Swagger
+      path: src/DatabaseRepository/Model/EventDate.cs
+      branch: features/db
       repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
-    id: .ctor
-    path: src/IO.Swagger/Startup.cs
-    startLine: 49
+    id: TicketEventDateID
+    path: src/DatabaseRepository/Model/EventDate.cs
+    startLine: 6
   assemblies:
-  - IO.Swagger
-  namespace: IO.Swagger
-  summary: "\nConstructor\n"
-  example: []
+  - DatabaseRepository
+  namespace: TicketSystem.DatabaseRepository.Model
   syntax:
-    content: public Startup(IHostingEnvironment env)
-    parameters:
-    - id: env
-      type: Microsoft.AspNetCore.Hosting.IHostingEnvironment
-      description: ''
-    content.vb: Public Sub New(env As IHostingEnvironment)
-  overload: IO.Swagger.Startup.#ctor*
+    content: public int TicketEventDateID { get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public Property TicketEventDateID As Integer
+  overload: TicketSystem.DatabaseRepository.Model.EventDate.TicketEventDateID*
   modifiers.csharp:
   - public
+  - get
+  - set
   modifiers.vb:
   - Public
-- uid: IO.Swagger.Startup.ConfigureServices(Microsoft.Extensions.DependencyInjection.IServiceCollection)
-  commentId: M:IO.Swagger.Startup.ConfigureServices(Microsoft.Extensions.DependencyInjection.IServiceCollection)
-  id: ConfigureServices(Microsoft.Extensions.DependencyInjection.IServiceCollection)
-  parent: IO.Swagger.Startup
+- uid: TicketSystem.DatabaseRepository.Model.EventDate.TicketEventID
+  commentId: P:TicketSystem.DatabaseRepository.Model.EventDate.TicketEventID
+  id: TicketEventID
+  parent: TicketSystem.DatabaseRepository.Model.EventDate
   langs:
   - csharp
   - vb
-  name: ConfigureServices(IServiceCollection)
-  nameWithType: Startup.ConfigureServices(IServiceCollection)
-  fullName: IO.Swagger.Startup.ConfigureServices(Microsoft.Extensions.DependencyInjection.IServiceCollection)
-  type: Method
+  name: TicketEventID
+  nameWithType: EventDate.TicketEventID
+  fullName: TicketSystem.DatabaseRepository.Model.EventDate.TicketEventID
+  type: Property
   source:
     remote:
-      path: src/IO.Swagger/Startup.cs
-      branch: RESTapi_Swagger
+      path: src/DatabaseRepository/Model/EventDate.cs
+      branch: features/db
       repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
-    id: ConfigureServices
-    path: src/IO.Swagger/Startup.cs
-    startLine: 65
+    id: TicketEventID
+    path: src/DatabaseRepository/Model/EventDate.cs
+    startLine: 7
   assemblies:
-  - IO.Swagger
-  namespace: IO.Swagger
-  summary: "\nThis method gets called by the runtime. Use this method to add services to the container.\n"
-  example: []
+  - DatabaseRepository
+  namespace: TicketSystem.DatabaseRepository.Model
   syntax:
-    content: public void ConfigureServices(IServiceCollection services)
-    parameters:
-    - id: services
-      type: Microsoft.Extensions.DependencyInjection.IServiceCollection
-      description: ''
-    content.vb: Public Sub ConfigureServices(services As IServiceCollection)
-  overload: IO.Swagger.Startup.ConfigureServices*
+    content: public int TicketEventID { get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public Property TicketEventID As Integer
+  overload: TicketSystem.DatabaseRepository.Model.EventDate.TicketEventID*
   modifiers.csharp:
   - public
+  - get
+  - set
   modifiers.vb:
   - Public
-- uid: IO.Swagger.Startup.Configure(Microsoft.AspNetCore.Builder.IApplicationBuilder,Microsoft.AspNetCore.Hosting.IHostingEnvironment,Microsoft.Extensions.Logging.ILoggerFactory)
-  commentId: M:IO.Swagger.Startup.Configure(Microsoft.AspNetCore.Builder.IApplicationBuilder,Microsoft.AspNetCore.Hosting.IHostingEnvironment,Microsoft.Extensions.Logging.ILoggerFactory)
-  id: Configure(Microsoft.AspNetCore.Builder.IApplicationBuilder,Microsoft.AspNetCore.Hosting.IHostingEnvironment,Microsoft.Extensions.Logging.ILoggerFactory)
-  parent: IO.Swagger.Startup
+- uid: TicketSystem.DatabaseRepository.Model.EventDate.VenueId
+  commentId: P:TicketSystem.DatabaseRepository.Model.EventDate.VenueId
+  id: VenueId
+  parent: TicketSystem.DatabaseRepository.Model.EventDate
   langs:
   - csharp
   - vb
-  name: Configure(IApplicationBuilder, IHostingEnvironment, ILoggerFactory)
-  nameWithType: Startup.Configure(IApplicationBuilder, IHostingEnvironment, ILoggerFactory)
-  fullName: IO.Swagger.Startup.Configure(Microsoft.AspNetCore.Builder.IApplicationBuilder, Microsoft.AspNetCore.Hosting.IHostingEnvironment, Microsoft.Extensions.Logging.ILoggerFactory)
-  type: Method
+  name: VenueId
+  nameWithType: EventDate.VenueId
+  fullName: TicketSystem.DatabaseRepository.Model.EventDate.VenueId
+  type: Property
   source:
     remote:
-      path: src/IO.Swagger/Startup.cs
-      branch: RESTapi_Swagger
+      path: src/DatabaseRepository/Model/EventDate.cs
+      branch: features/db
       repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
-    id: Configure
-    path: src/IO.Swagger/Startup.cs
-    startLine: 99
+    id: VenueId
+    path: src/DatabaseRepository/Model/EventDate.cs
+    startLine: 8
   assemblies:
-  - IO.Swagger
-  namespace: IO.Swagger
-  summary: "\nThis method gets called by the runtime. Use this method to configure the HTTP request pipeline.\n"
-  example: []
+  - DatabaseRepository
+  namespace: TicketSystem.DatabaseRepository.Model
   syntax:
-    content: public void Configure(IApplicationBuilder app, IHostingEnvironment env, ILoggerFactory loggerFactory)
-    parameters:
-    - id: app
-      type: Microsoft.AspNetCore.Builder.IApplicationBuilder
-      description: ''
-    - id: env
-      type: Microsoft.AspNetCore.Hosting.IHostingEnvironment
-      description: ''
-    - id: loggerFactory
-      type: Microsoft.Extensions.Logging.ILoggerFactory
-      description: ''
-    content.vb: Public Sub Configure(app As IApplicationBuilder, env As IHostingEnvironment, loggerFactory As ILoggerFactory)
-  overload: IO.Swagger.Startup.Configure*
+    content: public int VenueId { get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public Property VenueId As Integer
+  overload: TicketSystem.DatabaseRepository.Model.EventDate.VenueId*
   modifiers.csharp:
   - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: TicketSystem.DatabaseRepository.Model.EventDate.EventStartDateTime
+  commentId: P:TicketSystem.DatabaseRepository.Model.EventDate.EventStartDateTime
+  id: EventStartDateTime
+  parent: TicketSystem.DatabaseRepository.Model.EventDate
+  langs:
+  - csharp
+  - vb
+  name: EventStartDateTime
+  nameWithType: EventDate.EventStartDateTime
+  fullName: TicketSystem.DatabaseRepository.Model.EventDate.EventStartDateTime
+  type: Property
+  source:
+    remote:
+      path: src/DatabaseRepository/Model/EventDate.cs
+      branch: features/db
+      repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
+    id: EventStartDateTime
+    path: src/DatabaseRepository/Model/EventDate.cs
+    startLine: 9
+  assemblies:
+  - DatabaseRepository
+  namespace: TicketSystem.DatabaseRepository.Model
+  syntax:
+    content: public DateTime EventStartDateTime { get; set; }
+    parameters: []
+    return:
+      type: System.DateTime
+    content.vb: Public Property EventStartDateTime As Date
+  overload: TicketSystem.DatabaseRepository.Model.EventDate.EventStartDateTime*
+  modifiers.csharp:
+  - public
+  - get
+  - set
   modifiers.vb:
   - Public
 references:
-- uid: IO.Swagger
-  commentId: N:IO.Swagger
+- uid: TicketSystem.DatabaseRepository.Model
+  commentId: N:TicketSystem.DatabaseRepository.Model
   isExternal: false
-  name: IO.Swagger
-  nameWithType: IO.Swagger
-  fullName: IO.Swagger
+  name: TicketSystem.DatabaseRepository.Model
+  nameWithType: TicketSystem.DatabaseRepository.Model
+  fullName: TicketSystem.DatabaseRepository.Model
 - uid: System.Object
   commentId: T:System.Object
   parent: System
@@ -460,73 +485,41 @@ references:
   name: System
   nameWithType: System
   fullName: System
-- uid: IO.Swagger.Startup.#ctor*
-  commentId: Overload:IO.Swagger.Startup.#ctor
+- uid: TicketSystem.DatabaseRepository.Model.EventDate.TicketEventDateID*
+  commentId: Overload:TicketSystem.DatabaseRepository.Model.EventDate.TicketEventDateID
   isExternal: false
-  name: Startup
-  nameWithType: Startup.Startup
-  fullName: IO.Swagger.Startup.Startup
-- uid: Microsoft.AspNetCore.Hosting.IHostingEnvironment
-  commentId: T:Microsoft.AspNetCore.Hosting.IHostingEnvironment
-  parent: Microsoft.AspNetCore.Hosting
+  name: TicketEventDateID
+  nameWithType: EventDate.TicketEventDateID
+  fullName: TicketSystem.DatabaseRepository.Model.EventDate.TicketEventDateID
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
   isExternal: true
-  name: IHostingEnvironment
-  nameWithType: IHostingEnvironment
-  fullName: Microsoft.AspNetCore.Hosting.IHostingEnvironment
-- uid: Microsoft.AspNetCore.Hosting
-  commentId: N:Microsoft.AspNetCore.Hosting
+  name: Int32
+  nameWithType: Int32
+  fullName: System.Int32
+- uid: TicketSystem.DatabaseRepository.Model.EventDate.TicketEventID*
+  commentId: Overload:TicketSystem.DatabaseRepository.Model.EventDate.TicketEventID
   isExternal: false
-  name: Microsoft.AspNetCore.Hosting
-  nameWithType: Microsoft.AspNetCore.Hosting
-  fullName: Microsoft.AspNetCore.Hosting
-- uid: IO.Swagger.Startup.ConfigureServices*
-  commentId: Overload:IO.Swagger.Startup.ConfigureServices
+  name: TicketEventID
+  nameWithType: EventDate.TicketEventID
+  fullName: TicketSystem.DatabaseRepository.Model.EventDate.TicketEventID
+- uid: TicketSystem.DatabaseRepository.Model.EventDate.VenueId*
+  commentId: Overload:TicketSystem.DatabaseRepository.Model.EventDate.VenueId
   isExternal: false
-  name: ConfigureServices
-  nameWithType: Startup.ConfigureServices
-  fullName: IO.Swagger.Startup.ConfigureServices
-- uid: Microsoft.Extensions.DependencyInjection.IServiceCollection
-  commentId: T:Microsoft.Extensions.DependencyInjection.IServiceCollection
-  parent: Microsoft.Extensions.DependencyInjection
+  name: VenueId
+  nameWithType: EventDate.VenueId
+  fullName: TicketSystem.DatabaseRepository.Model.EventDate.VenueId
+- uid: TicketSystem.DatabaseRepository.Model.EventDate.EventStartDateTime*
+  commentId: Overload:TicketSystem.DatabaseRepository.Model.EventDate.EventStartDateTime
+  isExternal: false
+  name: EventStartDateTime
+  nameWithType: EventDate.EventStartDateTime
+  fullName: TicketSystem.DatabaseRepository.Model.EventDate.EventStartDateTime
+- uid: System.DateTime
+  commentId: T:System.DateTime
+  parent: System
   isExternal: true
-  name: IServiceCollection
-  nameWithType: IServiceCollection
-  fullName: Microsoft.Extensions.DependencyInjection.IServiceCollection
-- uid: Microsoft.Extensions.DependencyInjection
-  commentId: N:Microsoft.Extensions.DependencyInjection
-  isExternal: false
-  name: Microsoft.Extensions.DependencyInjection
-  nameWithType: Microsoft.Extensions.DependencyInjection
-  fullName: Microsoft.Extensions.DependencyInjection
-- uid: IO.Swagger.Startup.Configure*
-  commentId: Overload:IO.Swagger.Startup.Configure
-  isExternal: false
-  name: Configure
-  nameWithType: Startup.Configure
-  fullName: IO.Swagger.Startup.Configure
-- uid: Microsoft.AspNetCore.Builder.IApplicationBuilder
-  commentId: T:Microsoft.AspNetCore.Builder.IApplicationBuilder
-  parent: Microsoft.AspNetCore.Builder
-  isExternal: true
-  name: IApplicationBuilder
-  nameWithType: IApplicationBuilder
-  fullName: Microsoft.AspNetCore.Builder.IApplicationBuilder
-- uid: Microsoft.Extensions.Logging.ILoggerFactory
-  commentId: T:Microsoft.Extensions.Logging.ILoggerFactory
-  parent: Microsoft.Extensions.Logging
-  isExternal: true
-  name: ILoggerFactory
-  nameWithType: ILoggerFactory
-  fullName: Microsoft.Extensions.Logging.ILoggerFactory
-- uid: Microsoft.AspNetCore.Builder
-  commentId: N:Microsoft.AspNetCore.Builder
-  isExternal: false
-  name: Microsoft.AspNetCore.Builder
-  nameWithType: Microsoft.AspNetCore.Builder
-  fullName: Microsoft.AspNetCore.Builder
-- uid: Microsoft.Extensions.Logging
-  commentId: N:Microsoft.Extensions.Logging
-  isExternal: false
-  name: Microsoft.Extensions.Logging
-  nameWithType: Microsoft.Extensions.Logging
-  fullName: Microsoft.Extensions.Logging
+  name: DateTime
+  nameWithType: DateTime
+  fullName: System.DateTime

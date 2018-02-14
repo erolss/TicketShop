@@ -14,6 +14,7 @@ namespace TicketSystem.DatabaseRepository.Model
         public string City { get; set; }
         public string Country { get; set; }
         public DateTime EventStartDateTime { get; set; }
-        
+        public double Price { get; set; }
+        public int MaxTickets { get; set; }
     }
 }

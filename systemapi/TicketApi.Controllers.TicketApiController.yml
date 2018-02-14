@@ -1,37 +1,36 @@
 ### YamlMime:ManagedReference
 items:
-- uid: IO.Swagger.Controllers.TransactionApiController
-  commentId: T:IO.Swagger.Controllers.TransactionApiController
-  id: TransactionApiController
-  parent: IO.Swagger.Controllers
+- uid: TicketApi.Controllers.TicketApiController
+  commentId: T:TicketApi.Controllers.TicketApiController
+  id: TicketApiController
+  parent: TicketApi.Controllers
   children:
-  - IO.Swagger.Controllers.TransactionApiController.TransactionGet
-  - IO.Swagger.Controllers.TransactionApiController.TransactionPost(IO.Swagger.Models.Transaction)
-  - IO.Swagger.Controllers.TransactionApiController.TransactionTransactionIdGet(System.Nullable{System.Int32})
+  - TicketApi.Controllers.TicketApiController.GetTicketById(System.Nullable{System.Int32})
+  - TicketApi.Controllers.TicketApiController.GetTickets
   langs:
   - csharp
   - vb
-  name: TransactionApiController
-  nameWithType: TransactionApiController
-  fullName: IO.Swagger.Controllers.TransactionApiController
+  name: TicketApiController
+  nameWithType: TicketApiController
+  fullName: TicketApi.Controllers.TicketApiController
   type: Class
   source:
     remote:
-      path: src/IO.Swagger/Controllers/TransactionApi.cs
-      branch: RESTapi_Swagger
+      path: src/TicketApi/Controllers/TicketApi.cs
+      branch: features/db
       repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
-    id: TransactionApiController
-    path: src/IO.Swagger/Controllers/TransactionApi.cs
+    id: TicketApiController
+    path: src/TicketApi/Controllers/TicketApi.cs
     startLine: 42
   assemblies:
-  - IO.Swagger
-  namespace: IO.Swagger.Controllers
+  - TicketApi
+  namespace: TicketApi.Controllers
   summary: "\n\n"
   example: []
   syntax:
-    content: 'public class TransactionApiController : Controller, IActionFilter, IAsyncActionFilter, IFilterMetadata, IDisposable'
+    content: 'public class TicketApiController : Controller, IActionFilter, IAsyncActionFilter, IFilterMetadata, IDisposable'
     content.vb: >-
-      Public Class TransactionApiController
+      Public Class TicketApiController
           Inherits Controller
           Implements IActionFilter, IAsyncActionFilter, IFilterMetadata, IDisposable
   inheritance:
@@ -162,177 +161,44 @@ items:
   modifiers.vb:
   - Public
   - Class
-- uid: IO.Swagger.Controllers.TransactionApiController.TransactionGet
-  commentId: M:IO.Swagger.Controllers.TransactionApiController.TransactionGet
-  id: TransactionGet
-  parent: IO.Swagger.Controllers.TransactionApiController
+- uid: TicketApi.Controllers.TicketApiController.GetTicketById(System.Nullable{System.Int32})
+  commentId: M:TicketApi.Controllers.TicketApiController.GetTicketById(System.Nullable{System.Int32})
+  id: GetTicketById(System.Nullable{System.Int32})
+  parent: TicketApi.Controllers.TicketApiController
   langs:
   - csharp
   - vb
-  name: TransactionGet()
-  nameWithType: TransactionApiController.TransactionGet()
-  fullName: IO.Swagger.Controllers.TransactionApiController.TransactionGet()
+  name: GetTicketById(Nullable<Int32>)
+  nameWithType: TicketApiController.GetTicketById(Nullable<Int32>)
+  fullName: TicketApi.Controllers.TicketApiController.GetTicketById(System.Nullable<System.Int32>)
   type: Method
   source:
     remote:
-      path: src/IO.Swagger/Controllers/TransactionApi.cs
-      branch: RESTapi_Swagger
+      path: src/TicketApi/Controllers/TicketApi.cs
+      branch: features/db
       repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
-    id: TransactionGet
-    path: src/IO.Swagger/Controllers/TransactionApi.cs
-    startLine: 50
+    id: GetTicketById
+    path: src/TicketApi/Controllers/TicketApi.cs
+    startLine: 51
   assemblies:
-  - IO.Swagger
-  namespace: IO.Swagger.Controllers
-  summary: "\nGet all transactions in system\n"
+  - TicketApi
+  namespace: TicketApi.Controllers
+  summary: "\nGet a ticket by ID from the system\n"
+  remarks: Returns a single ticket
   example: []
   syntax:
     content: >-
       [HttpGet]
 
-      [Route("/api/transaction")]
+      [Route("/api/ticket/{ticketId}")]
 
-      [SwaggerOperation("TransactionGet")]
+      [SwaggerOperation("GetTicketById")]
 
-      public virtual void TransactionGet()
-    content.vb: >-
-      <HttpGet>
-
-      <Route("/api/transaction")>
-
-      <SwaggerOperation("TransactionGet")>
-
-      Public Overridable Sub TransactionGet
-  overload: IO.Swagger.Controllers.TransactionApiController.TransactionGet*
-  attributes:
-  - type: Microsoft.AspNetCore.Mvc.HttpGetAttribute
-    ctor: Microsoft.AspNetCore.Mvc.HttpGetAttribute.#ctor
-    arguments: []
-  - type: Microsoft.AspNetCore.Mvc.RouteAttribute
-    ctor: Microsoft.AspNetCore.Mvc.RouteAttribute.#ctor(System.String)
-    arguments:
-    - type: System.String
-      value: /api/transaction
-  - type: Swashbuckle.AspNetCore.SwaggerGen.SwaggerOperationAttribute
-    ctor: Swashbuckle.AspNetCore.SwaggerGen.SwaggerOperationAttribute.#ctor(System.String)
-    arguments:
-    - type: System.String
-      value: TransactionGet
-  modifiers.csharp:
-  - public
-  - virtual
-  modifiers.vb:
-  - Public
-  - Overridable
-- uid: IO.Swagger.Controllers.TransactionApiController.TransactionPost(IO.Swagger.Models.Transaction)
-  commentId: M:IO.Swagger.Controllers.TransactionApiController.TransactionPost(IO.Swagger.Models.Transaction)
-  id: TransactionPost(IO.Swagger.Models.Transaction)
-  parent: IO.Swagger.Controllers.TransactionApiController
-  langs:
-  - csharp
-  - vb
-  name: TransactionPost(Transaction)
-  nameWithType: TransactionApiController.TransactionPost(Transaction)
-  fullName: IO.Swagger.Controllers.TransactionApiController.TransactionPost(IO.Swagger.Models.Transaction)
-  type: Method
-  source:
-    remote:
-      path: src/IO.Swagger/Controllers/TransactionApi.cs
-      branch: RESTapi_Swagger
-      repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
-    id: TransactionPost
-    path: src/IO.Swagger/Controllers/TransactionApi.cs
-    startLine: 66
-  assemblies:
-  - IO.Swagger
-  namespace: IO.Swagger.Controllers
-  summary: "\nCreate a transaction in the system\n"
-  remarks: Creates a new transaction
-  example: []
-  syntax:
-    content: >-
-      [HttpPost]
-
-      [Route("/api/transaction")]
-
-      [SwaggerOperation("TransactionPost")]
-
-      public virtual void TransactionPost([FromBody] Transaction body)
+      public virtual void GetTicketById([FromRoute] int ? ticketId)
     parameters:
-    - id: body
-      type: IO.Swagger.Models.Transaction
-      description: transaction data for ticket purchase
-      attributes:
-      - type: Microsoft.AspNetCore.Mvc.FromBodyAttribute
-        ctor: Microsoft.AspNetCore.Mvc.FromBodyAttribute.#ctor
-        arguments: []
-    content.vb: >-
-      <HttpPost>
-
-      <Route("/api/transaction")>
-
-      <SwaggerOperation("TransactionPost")>
-
-      Public Overridable Sub TransactionPost(body As Transaction)
-  overload: IO.Swagger.Controllers.TransactionApiController.TransactionPost*
-  attributes:
-  - type: Microsoft.AspNetCore.Mvc.HttpPostAttribute
-    ctor: Microsoft.AspNetCore.Mvc.HttpPostAttribute.#ctor
-    arguments: []
-  - type: Microsoft.AspNetCore.Mvc.RouteAttribute
-    ctor: Microsoft.AspNetCore.Mvc.RouteAttribute.#ctor(System.String)
-    arguments:
-    - type: System.String
-      value: /api/transaction
-  - type: Swashbuckle.AspNetCore.SwaggerGen.SwaggerOperationAttribute
-    ctor: Swashbuckle.AspNetCore.SwaggerGen.SwaggerOperationAttribute.#ctor(System.String)
-    arguments:
-    - type: System.String
-      value: TransactionPost
-  modifiers.csharp:
-  - public
-  - virtual
-  modifiers.vb:
-  - Public
-  - Overridable
-- uid: IO.Swagger.Controllers.TransactionApiController.TransactionTransactionIdGet(System.Nullable{System.Int32})
-  commentId: M:IO.Swagger.Controllers.TransactionApiController.TransactionTransactionIdGet(System.Nullable{System.Int32})
-  id: TransactionTransactionIdGet(System.Nullable{System.Int32})
-  parent: IO.Swagger.Controllers.TransactionApiController
-  langs:
-  - csharp
-  - vb
-  name: TransactionTransactionIdGet(Nullable<Int32>)
-  nameWithType: TransactionApiController.TransactionTransactionIdGet(Nullable<Int32>)
-  fullName: IO.Swagger.Controllers.TransactionApiController.TransactionTransactionIdGet(System.Nullable<System.Int32>)
-  type: Method
-  source:
-    remote:
-      path: src/IO.Swagger/Controllers/TransactionApi.cs
-      branch: RESTapi_Swagger
-      repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
-    id: TransactionTransactionIdGet
-    path: src/IO.Swagger/Controllers/TransactionApi.cs
-    startLine: 82
-  assemblies:
-  - IO.Swagger
-  namespace: IO.Swagger.Controllers
-  summary: "\nGet transaction by Id\n"
-  remarks: Returns a single transaction
-  example: []
-  syntax:
-    content: >-
-      [HttpGet]
-
-      [Route("/api/transaction/{transactionId}")]
-
-      [SwaggerOperation("TransactionTransactionIdGet")]
-
-      public virtual void TransactionTransactionIdGet([FromRoute] int ? transactionId)
-    parameters:
-    - id: transactionId
+    - id: ticketId
       type: System.Nullable{System.Int32}
-      description: ID of the transaction
+      description: ID of the ticket
       attributes:
       - type: Microsoft.AspNetCore.Mvc.FromRouteAttribute
         ctor: Microsoft.AspNetCore.Mvc.FromRouteAttribute.#ctor
@@ -340,12 +206,12 @@ items:
     content.vb: >-
       <HttpGet>
 
-      <Route("/api/transaction/{transactionId}")>
+      <Route("/api/ticket/{ticketId}")>
 
-      <SwaggerOperation("TransactionTransactionIdGet")>
+      <SwaggerOperation("GetTicketById")>
 
-      Public Overridable Sub TransactionTransactionIdGet(transactionId As Integer?)
-  overload: IO.Swagger.Controllers.TransactionApiController.TransactionTransactionIdGet*
+      Public Overridable Sub GetTicketById(ticketId As Integer?)
+  overload: TicketApi.Controllers.TicketApiController.GetTicketById*
   attributes:
   - type: Microsoft.AspNetCore.Mvc.HttpGetAttribute
     ctor: Microsoft.AspNetCore.Mvc.HttpGetAttribute.#ctor
@@ -354,28 +220,119 @@ items:
     ctor: Microsoft.AspNetCore.Mvc.RouteAttribute.#ctor(System.String)
     arguments:
     - type: System.String
-      value: /api/transaction/{transactionId}
+      value: /api/ticket/{ticketId}
   - type: Swashbuckle.AspNetCore.SwaggerGen.SwaggerOperationAttribute
     ctor: Swashbuckle.AspNetCore.SwaggerGen.SwaggerOperationAttribute.#ctor(System.String)
     arguments:
     - type: System.String
-      value: TransactionTransactionIdGet
-  nameWithType.vb: TransactionApiController.TransactionTransactionIdGet(Nullable(Of Int32))
+      value: GetTicketById
+  nameWithType.vb: TicketApiController.GetTicketById(Nullable(Of Int32))
   modifiers.csharp:
   - public
   - virtual
   modifiers.vb:
   - Public
   - Overridable
-  fullName.vb: IO.Swagger.Controllers.TransactionApiController.TransactionTransactionIdGet(System.Nullable(Of System.Int32))
-  name.vb: TransactionTransactionIdGet(Nullable(Of Int32))
+  fullName.vb: TicketApi.Controllers.TicketApiController.GetTicketById(System.Nullable(Of System.Int32))
+  name.vb: GetTicketById(Nullable(Of Int32))
+- uid: TicketApi.Controllers.TicketApiController.GetTickets
+  commentId: M:TicketApi.Controllers.TicketApiController.GetTickets
+  id: GetTickets
+  parent: TicketApi.Controllers.TicketApiController
+  langs:
+  - csharp
+  - vb
+  name: GetTickets()
+  nameWithType: TicketApiController.GetTickets()
+  fullName: TicketApi.Controllers.TicketApiController.GetTickets()
+  type: Method
+  source:
+    remote:
+      path: src/TicketApi/Controllers/TicketApi.cs
+      branch: features/db
+      repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
+    id: GetTickets
+    path: src/TicketApi/Controllers/TicketApi.cs
+    startLine: 66
+  assemblies:
+  - TicketApi
+  namespace: TicketApi.Controllers
+  summary: "\nGet all tickets\n"
+  remarks: Returns all tickets
+  example: []
+  syntax:
+    content: >-
+      [HttpGet]
+
+      [Route("/api/ticket")]
+
+      [SwaggerOperation("GetTickets")]
+
+      [SwaggerResponse(200, typeof (Ticket), "Ticket loaded")]
+
+      [SwaggerResponse(400, typeof (Ticket), "Bad request")]
+
+      public virtual IActionResult GetTickets()
+    return:
+      type: Microsoft.AspNetCore.Mvc.IActionResult
+    content.vb: >-
+      <HttpGet>
+
+      <Route("/api/ticket")>
+
+      <SwaggerOperation("GetTickets")>
+
+      <SwaggerResponse(200, GetType(Ticket), "Ticket loaded")>
+
+      <SwaggerResponse(400, GetType(Ticket), "Bad request")>
+
+      Public Overridable Function GetTickets As IActionResult
+  overload: TicketApi.Controllers.TicketApiController.GetTickets*
+  attributes:
+  - type: Microsoft.AspNetCore.Mvc.HttpGetAttribute
+    ctor: Microsoft.AspNetCore.Mvc.HttpGetAttribute.#ctor
+    arguments: []
+  - type: Microsoft.AspNetCore.Mvc.RouteAttribute
+    ctor: Microsoft.AspNetCore.Mvc.RouteAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: /api/ticket
+  - type: Swashbuckle.AspNetCore.SwaggerGen.SwaggerOperationAttribute
+    ctor: Swashbuckle.AspNetCore.SwaggerGen.SwaggerOperationAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: GetTickets
+  - type: Swashbuckle.AspNetCore.SwaggerGen.SwaggerResponseAttribute
+    ctor: Swashbuckle.AspNetCore.SwaggerGen.SwaggerResponseAttribute.#ctor(System.Int32,System.Type,System.String)
+    arguments:
+    - type: System.Int32
+      value: 200
+    - type: System.Type
+      value: TicketApi.Models.Ticket
+    - type: System.String
+      value: Ticket loaded
+  - type: Swashbuckle.AspNetCore.SwaggerGen.SwaggerResponseAttribute
+    ctor: Swashbuckle.AspNetCore.SwaggerGen.SwaggerResponseAttribute.#ctor(System.Int32,System.Type,System.String)
+    arguments:
+    - type: System.Int32
+      value: 400
+    - type: System.Type
+      value: TicketApi.Models.Ticket
+    - type: System.String
+      value: Bad request
+  modifiers.csharp:
+  - public
+  - virtual
+  modifiers.vb:
+  - Public
+  - Overridable
 references:
-- uid: IO.Swagger.Controllers
-  commentId: N:IO.Swagger.Controllers
+- uid: TicketApi.Controllers
+  commentId: N:TicketApi.Controllers
   isExternal: false
-  name: IO.Swagger.Controllers
-  nameWithType: IO.Swagger.Controllers
-  fullName: IO.Swagger.Controllers
+  name: TicketApi.Controllers
+  nameWithType: TicketApi.Controllers
+  fullName: TicketApi.Controllers
 - uid: System.Object
   commentId: T:System.Object
   parent: System
@@ -6574,37 +6531,12 @@ references:
   - name: )
     nameWithType: )
     fullName: )
-- uid: IO.Swagger.Controllers.TransactionApiController.TransactionGet*
-  commentId: Overload:IO.Swagger.Controllers.TransactionApiController.TransactionGet
+- uid: TicketApi.Controllers.TicketApiController.GetTicketById*
+  commentId: Overload:TicketApi.Controllers.TicketApiController.GetTicketById
   isExternal: false
-  name: TransactionGet
-  nameWithType: TransactionApiController.TransactionGet
-  fullName: IO.Swagger.Controllers.TransactionApiController.TransactionGet
-- uid: IO.Swagger.Controllers.TransactionApiController.TransactionPost*
-  commentId: Overload:IO.Swagger.Controllers.TransactionApiController.TransactionPost
-  isExternal: false
-  name: TransactionPost
-  nameWithType: TransactionApiController.TransactionPost
-  fullName: IO.Swagger.Controllers.TransactionApiController.TransactionPost
-- uid: IO.Swagger.Models.Transaction
-  commentId: T:IO.Swagger.Models.Transaction
-  parent: IO.Swagger.Models
-  isExternal: false
-  name: Transaction
-  nameWithType: Transaction
-  fullName: IO.Swagger.Models.Transaction
-- uid: IO.Swagger.Models
-  commentId: N:IO.Swagger.Models
-  isExternal: false
-  name: IO.Swagger.Models
-  nameWithType: IO.Swagger.Models
-  fullName: IO.Swagger.Models
-- uid: IO.Swagger.Controllers.TransactionApiController.TransactionTransactionIdGet*
-  commentId: Overload:IO.Swagger.Controllers.TransactionApiController.TransactionTransactionIdGet
-  isExternal: false
-  name: TransactionTransactionIdGet
-  nameWithType: TransactionApiController.TransactionTransactionIdGet
-  fullName: IO.Swagger.Controllers.TransactionApiController.TransactionTransactionIdGet
+  name: GetTicketById
+  nameWithType: TicketApiController.GetTicketById
+  fullName: TicketApi.Controllers.TicketApiController.GetTicketById
 - uid: System.Nullable{System.Int32}
   commentId: T:System.Nullable{System.Int32}
   parent: System
@@ -6688,3 +6620,16 @@ references:
   - name: )
     nameWithType: )
     fullName: )
+- uid: TicketApi.Controllers.TicketApiController.GetTickets*
+  commentId: Overload:TicketApi.Controllers.TicketApiController.GetTickets
+  isExternal: false
+  name: GetTickets
+  nameWithType: TicketApiController.GetTickets
+  fullName: TicketApi.Controllers.TicketApiController.GetTickets
+- uid: Microsoft.AspNetCore.Mvc.IActionResult
+  commentId: T:Microsoft.AspNetCore.Mvc.IActionResult
+  parent: Microsoft.AspNetCore.Mvc
+  isExternal: true
+  name: IActionResult
+  nameWithType: IActionResult
+  fullName: Microsoft.AspNetCore.Mvc.IActionResult

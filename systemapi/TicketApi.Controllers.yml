@@ -4,7 +4,11 @@ items:
   commentId: N:TicketApi.Controllers
   id: TicketApi.Controllers
   children:
-  - TicketApi.Controllers.ValuesController
+  - TicketApi.Controllers.EventApiController
+  - TicketApi.Controllers.EventdateApiController
+  - TicketApi.Controllers.TicketApiController
+  - TicketApi.Controllers.TransactionApiController
+  - TicketApi.Controllers.VenueApiController
   langs:
   - csharp
   - vb
@@ -15,9 +19,33 @@ items:
   assemblies:
   - TicketApi
 references:
-- uid: TicketApi.Controllers.ValuesController
-  commentId: T:TicketApi.Controllers.ValuesController
+- uid: TicketApi.Controllers.EventApiController
+  commentId: T:TicketApi.Controllers.EventApiController
   isExternal: false
-  name: ValuesController
-  nameWithType: ValuesController
-  fullName: TicketApi.Controllers.ValuesController
+  name: EventApiController
+  nameWithType: EventApiController
+  fullName: TicketApi.Controllers.EventApiController
+- uid: TicketApi.Controllers.EventdateApiController
+  commentId: T:TicketApi.Controllers.EventdateApiController
+  isExternal: false
+  name: EventdateApiController
+  nameWithType: EventdateApiController
+  fullName: TicketApi.Controllers.EventdateApiController
+- uid: TicketApi.Controllers.TicketApiController
+  commentId: T:TicketApi.Controllers.TicketApiController
+  isExternal: false
+  name: TicketApiController
+  nameWithType: TicketApiController
+  fullName: TicketApi.Controllers.TicketApiController
+- uid: TicketApi.Controllers.TransactionApiController
+  commentId: T:TicketApi.Controllers.TransactionApiController
+  isExternal: false
+  name: TransactionApiController
+  nameWithType: TransactionApiController
+  fullName: TicketApi.Controllers.TransactionApiController
+- uid: TicketApi.Controllers.VenueApiController
+  commentId: T:TicketApi.Controllers.VenueApiController
+  isExternal: false
+  name: VenueApiController
+  nameWithType: VenueApiController
+  fullName: TicketApi.Controllers.VenueApiController

@@ -13,36 +13,18 @@ namespace TicketSystem.DatabaseRepository
 {
     public class EventDateRepository : IEventDateRepository
     {
-        public EventDate AddEventDate(int eventId, int venueId, DateTime eventDate)
+        public EventDate AddEventDate(int eventId, int venueId, DateTime eventDate, double price, int maxTickets)
         {
-            var query = @"INSERT INTO TicketEventDates(TicketEventID, VenueId, EventStartDateTime)
-                        VALUES(@eventId, @venueId, @eventStartDateTime)";
+            var query = @"INSERT INTO TicketEventDates(TicketEventID, VenueID, EventStartDateTime, Price, MaxTickets)
+                        VALUES(@eventId, @venueId, @eventStartDateTime, @price, @maxTickets)";
 
             string connectionString = ConfigurationManager.ConnectionStrings["TicketSystem"].ConnectionString;
             using (var connection = new SqlConnection(connectionString))
             {
                 connection.Open();
-                connection.Query(query, new { eventId, venueId, eventStartDateTime = eventDate });
+                connection.Query(query, new { eventId, venueId, eventStartDateTime = eventDate, price, maxTickets });
                 var addedItemQuery = connection.Query<int>("SELECT IDENT_CURRENT ('TicketEventDates') AS Current_Identity").First();
                 var result = connection.Query<EventDate>("SELECT * FROM TicketEventDates WHERE TicketEventDateId=@id", new { id = addedItemQuery }).First();
-
-                return result;
-
-            }
-        }
-
-        public void AddSeats(int id, int numberSeats)
-        {
-            var query = @"INSERT INTO SeatsAtTicketEvent(EventName, EventHtmlDescription)
-                        VALUES(@name, @htmlDescription)";
-
-            string connectionString = ConfigurationManager.ConnectionStrings["TicketSystem"].ConnectionString;
-            using (var connection = new SqlConnection(connectionString))
-            {
-                connection.Open();
-                connection.Query(query, new { name, htmlDescription });
-                var addedTicketEventQuery = connection.Query<int>("SELECT IDENT_CURRENT ('TicketEvents') AS Current_Identity").First();
-                var result = connection.Query<Event>("SELECT * FROM TicketEvents WHERE EventID=@id", new { id = addedTicketEventQuery }).First();
 
                 return result;
 
@@ -66,8 +48,8 @@ namespace TicketSystem.DatabaseRepository
         public List<EventDate> FindEventDates(string searchStr)
         {
             var query = @"SELECT * FROM TicketEventDates ted
-                        JOIN TicketEvents te ON ted.TicketEventID = te.EventId
-                        JOIN Venue v ON ted.VenueId = v.VenueID
+                        JOIN TicketEvents te ON ted.TicketEventID = te.TicketEventID
+                        JOIN Venue v ON ted.VenueID = v.VenueID
                         WHERE te.EventName LIKE '%@searchQuery%'
                             OR te.EventHtmlDescription LIKE '%@searchQuery%'
                             OR v.VenueName LIKE '%@searchQuery%'
@@ -85,12 +67,13 @@ namespace TicketSystem.DatabaseRepository
             }
         }
 
-        public int GetAvailableSeats(int id)
+        public int GetSoldTicketCount(int id)
         {
-            var query = SQL
-                .SELECT("*")
-                .FROM("TicketEvents")
-                .WHERE("EventID = @id");
+           
+            var query = @"SELECT COUNT(TicketEventDateID)
+                        FROM Tickets
+                        GROUP BY TicketEventDateID
+                        HAVING TicketEventDateID = @id";
 
             string connectionString = ConfigurationManager.ConnectionStrings["TicketSystem"].ConnectionString;
             using (var connection = new SqlConnection(connectionString))
@@ -157,8 +140,8 @@ namespace TicketSystem.DatabaseRepository
         public FullEventDate GetFullEventDateById(int id)
         {
             var query = @"SELECT * FROM TicketEventDates ted
-                        JOIN TicketEvents te ON ted.TicketEventID = te.EventId
-                        JOIN Venue v ON ted.VenueId = v.VenueID
+                        JOIN TicketEvents te ON ted.TicketEventID = te.TicketEventID
+                        JOIN Venue v ON ted.VenueID = v.VenueID
                         WHERE ted.TicketEventDateID = @id";
 
             string connectionString = ConfigurationManager.ConnectionStrings["TicketSystem"].ConnectionString;
@@ -171,22 +154,18 @@ namespace TicketSystem.DatabaseRepository
             }
         }
 
-        public int GetSeats(int id)
-        {
-            return 0;
-        }
-
-        public EventDate UpdateEventDate(int id, int eventId, int venueId, DateTime dateTime)
+      
+        public EventDate UpdateEventDate(int id, int eventId, int venueId, DateTime dateTime, double price, int maxTickets)
         {
             var query = SQL
                 .UPDATE("TicketEventDates")
-                .SET("TicketEventID = @eventId, VenueId = @venueId, EventStartDateTime = @dateTime")
+                .SET("TicketEventID = @eventId, VenueID = @venueId, EventStartDateTime = @dateTime, Price = @price, MaxTickets = @maxTickets")
                 .WHERE("TicketEventDateID = @id");
 
             using (var connection = new SqlConnection(ConfigurationManager.ConnectionStrings["TicketSystem"].ConnectionString))
             {
                 connection.Open();
-                connection.Execute(query, new { eventId, venueId, dateTime, id });
+                connection.Execute(query.ToString(), new { eventId, venueId, dateTime, price, maxTickets, id });
                 var result = connection.Query<EventDate>("SELECT * FROM TicketEvents WHERE TicketEventId = @id", new { id }).First();
 
                 return result;

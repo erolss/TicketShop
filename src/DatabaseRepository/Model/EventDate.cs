@@ -8,5 +8,7 @@ namespace TicketSystem.DatabaseRepository.Model
         public int TicketEventID { get; set; }
         public int VenueId{get;set; }
         public DateTime EventStartDateTime { get; set; }
+        public double Price { get; set; }
+        public int MaxTickets { get; set; }
     }
 }

@@ -5,16 +5,18 @@ using TicketSystem.DatabaseRepository.Model;
 namespace TicketSystem.DatabaseRepository.Interface
 {
     public interface IEventDateRepository
-    {   
+    {
+        
         /// <summary>
         /// Add event date to database
         /// </summary>
         /// <param name="eventId">ID of Event</param>
         /// <param name="venueId">ID of Venue where event date will take place</param>
         /// <param name="eventDate">Datetime of the event date</param>
-        /// <param name="seats">Number of seats at the event date</param>
+        /// <param name="price">Price of a ticket to the EventDate</param>
+        /// <param name="maxTickets">Max number of Tickets</param>
         /// <returns>An object representation of the created EventDate</returns>
-        EventDate AddEventDate(int eventId, int venueId, DateTime eventDate, int seats );
+        EventDate AddEventDate(int eventId, int venueId, DateTime eventDate, double price, int maxTickets );
 
         /// <summary>
         /// Get Event Dates
@@ -54,7 +56,7 @@ namespace TicketSystem.DatabaseRepository.Interface
         /// <param name="datetime">datetime of the EventDate</param>
         /// <param name="seats">Number of seats at EventDate</param>
         /// <returns>An object representation of the updated EventDate</returns>
-        EventDate UpdateEventDate(int id, int eventId, int venueId, DateTime dateTime, int seats);
+        EventDate UpdateEventDate(int id, int eventId, int venueId, DateTime dateTime, double price, int maxTickets);
 
         /// <summary>
         /// Delete EventDate by ID
@@ -69,27 +71,13 @@ namespace TicketSystem.DatabaseRepository.Interface
         /// <returns>A list of object representations of EventDates matching the query</returns>
         List<EventDate> FindEventDates(string searchStr);
 
-        /// <summary>
-        /// Get number of seats at EventDate
-        /// </summary>
-        /// <param name="id">ID of EventDate</param>
-        /// <returns>The number of seats at the EventDate</returns>
-        int GetSeats(int id);
-
-        /// <summary>
-        /// Add number of seats at EventDate
-        /// </summary>
-        /// <param name="id">ID of EventDate</param>
-        /// <param name="numberSeats">Number of seats to add</param>
-        /// <returns></returns>
-        void AddSeats(int id, int numberSeats);
-
+              
         /// <summary>
         /// Get number of available seats at EventDate
         /// </summary>
         /// <param name="id">ID of EventDate</param>
         /// <returns>Number of available seats at EventDate</returns>
-        int GetAvailableSeats(int id);
+        int GetSoldTicketCount(int id);
 
 
     }

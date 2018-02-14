@@ -1,0 +1,1115 @@
+### YamlMime:ManagedReference
+items:
+- uid: TicketApi.Models.Event
+  commentId: T:TicketApi.Models.Event
+  id: Event
+  parent: TicketApi.Models
+  children:
+  - TicketApi.Models.Event.Equals(System.Object)
+  - TicketApi.Models.Event.Equals(TicketApi.Models.Event)
+  - TicketApi.Models.Event.EventHtmlDescription
+  - TicketApi.Models.Event.EventName
+  - TicketApi.Models.Event.GetHashCode
+  - TicketApi.Models.Event.Id
+  - TicketApi.Models.Event.op_Equality(TicketApi.Models.Event,TicketApi.Models.Event)
+  - TicketApi.Models.Event.op_Inequality(TicketApi.Models.Event,TicketApi.Models.Event)
+  - TicketApi.Models.Event.ToJson
+  - TicketApi.Models.Event.ToString
+  langs:
+  - csharp
+  - vb
+  name: Event
+  nameWithType: Event
+  fullName: TicketApi.Models.Event
+  type: Class
+  source:
+    remote:
+      path: src/TicketApi/Models/Event.cs
+      branch: features/db
+      repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
+    id: Event
+    path: src/TicketApi/Models/Event.cs
+    startLine: 38
+  assemblies:
+  - TicketApi
+  namespace: TicketApi.Models
+  summary: "\n\n"
+  example: []
+  syntax:
+    content: >-
+      [DataContract]
+
+      public class Event : IEquatable<Event>
+    content.vb: >-
+      <DataContract>
+
+      Public Class Event
+          Implements IEquatable(Of  Event)
+  inheritance:
+  - System.Object
+  implements:
+  - System.IEquatable{TicketApi.Models.Event}
+  inheritedMembers:
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  attributes:
+  - type: System.Runtime.Serialization.DataContractAttribute
+    ctor: System.Runtime.Serialization.DataContractAttribute.#ctor
+    arguments: []
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: TicketApi.Models.Event.Id
+  commentId: P:TicketApi.Models.Event.Id
+  id: Id
+  parent: TicketApi.Models.Event
+  langs:
+  - csharp
+  - vb
+  name: Id
+  nameWithType: Event.Id
+  fullName: TicketApi.Models.Event.Id
+  type: Property
+  source:
+    remote:
+      path: src/TicketApi/Models/Event.cs
+      branch: features/db
+      repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
+    id: Id
+    path: src/TicketApi/Models/Event.cs
+    startLine: 44
+  assemblies:
+  - TicketApi
+  namespace: TicketApi.Models
+  summary: "\nGets or Sets Id\n"
+  example: []
+  syntax:
+    content: >-
+      [DataMember(Name = "id")]
+
+      public int ? Id { get; set; }
+    parameters: []
+    return:
+      type: System.Nullable{System.Int32}
+    content.vb: >-
+      <DataMember(Name:="id")>
+
+      Public Property Id As Integer?
+  overload: TicketApi.Models.Event.Id*
+  attributes:
+  - type: System.Runtime.Serialization.DataMemberAttribute
+    ctor: System.Runtime.Serialization.DataMemberAttribute.#ctor
+    arguments: []
+    namedArguments:
+    - name: Name
+      type: System.String
+      value: id
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: TicketApi.Models.Event.EventName
+  commentId: P:TicketApi.Models.Event.EventName
+  id: EventName
+  parent: TicketApi.Models.Event
+  langs:
+  - csharp
+  - vb
+  name: EventName
+  nameWithType: Event.EventName
+  fullName: TicketApi.Models.Event.EventName
+  type: Property
+  source:
+    remote:
+      path: src/TicketApi/Models/Event.cs
+      branch: features/db
+      repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
+    id: EventName
+    path: src/TicketApi/Models/Event.cs
+    startLine: 50
+  assemblies:
+  - TicketApi
+  namespace: TicketApi.Models
+  summary: "\nGets or Sets EventName\n"
+  example: []
+  syntax:
+    content: >-
+      [DataMember(Name = "eventName")]
+
+      public string EventName { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: >-
+      <DataMember(Name:="eventName")>
+
+      Public Property EventName As String
+  overload: TicketApi.Models.Event.EventName*
+  attributes:
+  - type: System.Runtime.Serialization.DataMemberAttribute
+    ctor: System.Runtime.Serialization.DataMemberAttribute.#ctor
+    arguments: []
+    namedArguments:
+    - name: Name
+      type: System.String
+      value: eventName
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: TicketApi.Models.Event.EventHtmlDescription
+  commentId: P:TicketApi.Models.Event.EventHtmlDescription
+  id: EventHtmlDescription
+  parent: TicketApi.Models.Event
+  langs:
+  - csharp
+  - vb
+  name: EventHtmlDescription
+  nameWithType: Event.EventHtmlDescription
+  fullName: TicketApi.Models.Event.EventHtmlDescription
+  type: Property
+  source:
+    remote:
+      path: src/TicketApi/Models/Event.cs
+      branch: features/db
+      repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
+    id: EventHtmlDescription
+    path: src/TicketApi/Models/Event.cs
+    startLine: 56
+  assemblies:
+  - TicketApi
+  namespace: TicketApi.Models
+  summary: "\nGets or Sets EventHtmlDescription\n"
+  example: []
+  syntax:
+    content: >-
+      [DataMember(Name = "eventHtmlDescription")]
+
+      public string EventHtmlDescription { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: >-
+      <DataMember(Name:="eventHtmlDescription")>
+
+      Public Property EventHtmlDescription As String
+  overload: TicketApi.Models.Event.EventHtmlDescription*
+  attributes:
+  - type: System.Runtime.Serialization.DataMemberAttribute
+    ctor: System.Runtime.Serialization.DataMemberAttribute.#ctor
+    arguments: []
+    namedArguments:
+    - name: Name
+      type: System.String
+      value: eventHtmlDescription
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: TicketApi.Models.Event.ToString
+  commentId: M:TicketApi.Models.Event.ToString
+  id: ToString
+  parent: TicketApi.Models.Event
+  langs:
+  - csharp
+  - vb
+  name: ToString()
+  nameWithType: Event.ToString()
+  fullName: TicketApi.Models.Event.ToString()
+  type: Method
+  source:
+    remote:
+      path: src/TicketApi/Models/Event.cs
+      branch: features/db
+      repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
+    id: ToString
+    path: src/TicketApi/Models/Event.cs
+    startLine: 63
+  assemblies:
+  - TicketApi
+  namespace: TicketApi.Models
+  summary: "\nReturns the string presentation of the object\n"
+  example: []
+  syntax:
+    content: public override string ToString()
+    return:
+      type: System.String
+      description: String presentation of the object
+    content.vb: Public Overrides Function ToString As String
+  overridden: System.Object.ToString
+  overload: TicketApi.Models.Event.ToString*
+  modifiers.csharp:
+  - public
+  - override
+  modifiers.vb:
+  - Public
+  - Overrides
+- uid: TicketApi.Models.Event.ToJson
+  commentId: M:TicketApi.Models.Event.ToJson
+  id: ToJson
+  parent: TicketApi.Models.Event
+  langs:
+  - csharp
+  - vb
+  name: ToJson()
+  nameWithType: Event.ToJson()
+  fullName: TicketApi.Models.Event.ToJson()
+  type: Method
+  source:
+    remote:
+      path: src/TicketApi/Models/Event.cs
+      branch: features/db
+      repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
+    id: ToJson
+    path: src/TicketApi/Models/Event.cs
+    startLine: 78
+  assemblies:
+  - TicketApi
+  namespace: TicketApi.Models
+  summary: "\nReturns the JSON string presentation of the object\n"
+  example: []
+  syntax:
+    content: public string ToJson()
+    return:
+      type: System.String
+      description: JSON string presentation of the object
+    content.vb: Public Function ToJson As String
+  overload: TicketApi.Models.Event.ToJson*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: TicketApi.Models.Event.Equals(System.Object)
+  commentId: M:TicketApi.Models.Event.Equals(System.Object)
+  id: Equals(System.Object)
+  parent: TicketApi.Models.Event
+  langs:
+  - csharp
+  - vb
+  name: Equals(Object)
+  nameWithType: Event.Equals(Object)
+  fullName: TicketApi.Models.Event.Equals(System.Object)
+  type: Method
+  source:
+    remote:
+      path: src/TicketApi/Models/Event.cs
+      branch: features/db
+      repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
+    id: Equals
+    path: src/TicketApi/Models/Event.cs
+    startLine: 88
+  assemblies:
+  - TicketApi
+  namespace: TicketApi.Models
+  summary: "\nReturns true if objects are equal\n"
+  example: []
+  syntax:
+    content: public override bool Equals(object obj)
+    parameters:
+    - id: obj
+      type: System.Object
+      description: Object to be compared
+    return:
+      type: System.Boolean
+      description: Boolean
+    content.vb: Public Overrides Function Equals(obj As Object) As Boolean
+  overridden: System.Object.Equals(System.Object)
+  overload: TicketApi.Models.Event.Equals*
+  modifiers.csharp:
+  - public
+  - override
+  modifiers.vb:
+  - Public
+  - Overrides
+- uid: TicketApi.Models.Event.Equals(TicketApi.Models.Event)
+  commentId: M:TicketApi.Models.Event.Equals(TicketApi.Models.Event)
+  id: Equals(TicketApi.Models.Event)
+  parent: TicketApi.Models.Event
+  langs:
+  - csharp
+  - vb
+  name: Equals(Event)
+  nameWithType: Event.Equals(Event)
+  fullName: TicketApi.Models.Event.Equals(TicketApi.Models.Event)
+  type: Method
+  source:
+    remote:
+      path: src/TicketApi/Models/Event.cs
+      branch: features/db
+      repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
+    id: Equals
+    path: src/TicketApi/Models/Event.cs
+    startLine: 100
+  assemblies:
+  - TicketApi
+  namespace: TicketApi.Models
+  summary: "\nReturns true if Event instances are equal\n"
+  example: []
+  syntax:
+    content: public bool Equals(Event other)
+    parameters:
+    - id: other
+      type: TicketApi.Models.Event
+      description: Instance of Event to be compared
+    return:
+      type: System.Boolean
+      description: Boolean
+    content.vb: Public Function Equals(other As  Event) As Boolean
+  overload: TicketApi.Models.Event.Equals*
+  implements:
+  - System.IEquatable{TicketApi.Models.Event}.Equals(TicketApi.Models.Event)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: TicketApi.Models.Event.GetHashCode
+  commentId: M:TicketApi.Models.Event.GetHashCode
+  id: GetHashCode
+  parent: TicketApi.Models.Event
+  langs:
+  - csharp
+  - vb
+  name: GetHashCode()
+  nameWithType: Event.GetHashCode()
+  fullName: TicketApi.Models.Event.GetHashCode()
+  type: Method
+  source:
+    remote:
+      path: src/TicketApi/Models/Event.cs
+      branch: features/db
+      repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
+    id: GetHashCode
+    path: src/TicketApi/Models/Event.cs
+    startLine: 127
+  assemblies:
+  - TicketApi
+  namespace: TicketApi.Models
+  summary: "\nGets the hash code\n"
+  example: []
+  syntax:
+    content: public override int GetHashCode()
+    return:
+      type: System.Int32
+      description: Hash code
+    content.vb: Public Overrides Function GetHashCode As Integer
+  overridden: System.Object.GetHashCode
+  overload: TicketApi.Models.Event.GetHashCode*
+  modifiers.csharp:
+  - public
+  - override
+  modifiers.vb:
+  - Public
+  - Overrides
+- uid: TicketApi.Models.Event.op_Equality(TicketApi.Models.Event,TicketApi.Models.Event)
+  commentId: M:TicketApi.Models.Event.op_Equality(TicketApi.Models.Event,TicketApi.Models.Event)
+  id: op_Equality(TicketApi.Models.Event,TicketApi.Models.Event)
+  parent: TicketApi.Models.Event
+  langs:
+  - csharp
+  - vb
+  name: Equality(Event, Event)
+  nameWithType: Event.Equality(Event, Event)
+  fullName: TicketApi.Models.Event.Equality(TicketApi.Models.Event, TicketApi.Models.Event)
+  type: Operator
+  source:
+    remote:
+      path: src/TicketApi/Models/Event.cs
+      branch: features/db
+      repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
+    id: op_Equality
+    path: src/TicketApi/Models/Event.cs
+    startLine: 146
+  assemblies:
+  - TicketApi
+  namespace: TicketApi.Models
+  syntax:
+    content: public static bool operator ==(Event left, Event right)
+    parameters:
+    - id: left
+      type: TicketApi.Models.Event
+    - id: right
+      type: TicketApi.Models.Event
+    return:
+      type: System.Boolean
+    content.vb: Public Shared Operator =(left As  Event, right As  Event) As Boolean
+  overload: TicketApi.Models.Event.op_Equality*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: TicketApi.Models.Event.op_Inequality(TicketApi.Models.Event,TicketApi.Models.Event)
+  commentId: M:TicketApi.Models.Event.op_Inequality(TicketApi.Models.Event,TicketApi.Models.Event)
+  id: op_Inequality(TicketApi.Models.Event,TicketApi.Models.Event)
+  parent: TicketApi.Models.Event
+  langs:
+  - csharp
+  - vb
+  name: Inequality(Event, Event)
+  nameWithType: Event.Inequality(Event, Event)
+  fullName: TicketApi.Models.Event.Inequality(TicketApi.Models.Event, TicketApi.Models.Event)
+  type: Operator
+  source:
+    remote:
+      path: src/TicketApi/Models/Event.cs
+      branch: features/db
+      repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
+    id: op_Inequality
+    path: src/TicketApi/Models/Event.cs
+    startLine: 151
+  assemblies:
+  - TicketApi
+  namespace: TicketApi.Models
+  syntax:
+    content: public static bool operator !=(Event left, Event right)
+    parameters:
+    - id: left
+      type: TicketApi.Models.Event
+    - id: right
+      type: TicketApi.Models.Event
+    return:
+      type: System.Boolean
+    content.vb: Public Shared Operator <>(left As  Event, right As  Event) As Boolean
+  overload: TicketApi.Models.Event.op_Inequality*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+references:
+- uid: TicketApi.Models
+  commentId: N:TicketApi.Models
+  isExternal: false
+  name: TicketApi.Models
+  nameWithType: TicketApi.Models
+  fullName: TicketApi.Models
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System.IEquatable{TicketApi.Models.Event}
+  commentId: T:System.IEquatable{TicketApi.Models.Event}
+  parent: System
+  definition: System.IEquatable`1
+  name: IEquatable<Event>
+  nameWithType: IEquatable<Event>
+  fullName: System.IEquatable<TicketApi.Models.Event>
+  nameWithType.vb: IEquatable(Of Event)
+  fullName.vb: System.IEquatable(Of TicketApi.Models.Event)
+  name.vb: IEquatable(Of Event)
+  spec.csharp:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    nameWithType: IEquatable
+    fullName: System.IEquatable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: TicketApi.Models.Event
+    name: Event
+    nameWithType: Event
+    fullName: TicketApi.Models.Event
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    nameWithType: IEquatable
+    fullName: System.IEquatable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: TicketApi.Models.Event
+    name: Event
+    nameWithType: Event
+    fullName: TicketApi.Models.Event
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: false
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: System.IEquatable`1
+  commentId: T:System.IEquatable`1
+  isExternal: true
+  name: IEquatable<T>
+  nameWithType: IEquatable<T>
+  fullName: System.IEquatable<T>
+  nameWithType.vb: IEquatable(Of T)
+  fullName.vb: System.IEquatable(Of T)
+  name.vb: IEquatable(Of T)
+  spec.csharp:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    nameWithType: IEquatable
+    fullName: System.IEquatable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    nameWithType: IEquatable
+    fullName: System.IEquatable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: TicketApi.Models.Event.Id*
+  commentId: Overload:TicketApi.Models.Event.Id
+  isExternal: false
+  name: Id
+  nameWithType: Event.Id
+  fullName: TicketApi.Models.Event.Id
+- uid: System.Nullable{System.Int32}
+  commentId: T:System.Nullable{System.Int32}
+  parent: System
+  definition: System.Nullable`1
+  name: Nullable<Int32>
+  nameWithType: Nullable<Int32>
+  fullName: System.Nullable<System.Int32>
+  nameWithType.vb: Nullable(Of Int32)
+  fullName.vb: System.Nullable(Of System.Int32)
+  name.vb: Nullable(Of Int32)
+  spec.csharp:
+  - uid: System.Nullable`1
+    name: Nullable
+    nameWithType: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.Int32
+    name: Int32
+    nameWithType: Int32
+    fullName: System.Int32
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Nullable`1
+    name: Nullable
+    nameWithType: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.Int32
+    name: Int32
+    nameWithType: Int32
+    fullName: System.Int32
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Nullable`1
+  commentId: T:System.Nullable`1
+  isExternal: true
+  name: Nullable<T>
+  nameWithType: Nullable<T>
+  fullName: System.Nullable<T>
+  nameWithType.vb: Nullable(Of T)
+  fullName.vb: System.Nullable(Of T)
+  name.vb: Nullable(Of T)
+  spec.csharp:
+  - uid: System.Nullable`1
+    name: Nullable
+    nameWithType: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Nullable`1
+    name: Nullable
+    nameWithType: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: TicketApi.Models.Event.EventName*
+  commentId: Overload:TicketApi.Models.Event.EventName
+  isExternal: false
+  name: EventName
+  nameWithType: Event.EventName
+  fullName: TicketApi.Models.Event.EventName
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: TicketApi.Models.Event.EventHtmlDescription*
+  commentId: Overload:TicketApi.Models.Event.EventHtmlDescription
+  isExternal: false
+  name: EventHtmlDescription
+  nameWithType: Event.EventHtmlDescription
+  fullName: TicketApi.Models.Event.EventHtmlDescription
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: TicketApi.Models.Event.ToString*
+  commentId: Overload:TicketApi.Models.Event.ToString
+  isExternal: false
+  name: ToString
+  nameWithType: Event.ToString
+  fullName: TicketApi.Models.Event.ToString
+- uid: TicketApi.Models.Event.ToJson*
+  commentId: Overload:TicketApi.Models.Event.ToJson
+  isExternal: false
+  name: ToJson
+  nameWithType: Event.ToJson
+  fullName: TicketApi.Models.Event.ToJson
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: TicketApi.Models.Event.Equals*
+  commentId: Overload:TicketApi.Models.Event.Equals
+  isExternal: false
+  name: Equals
+  nameWithType: Event.Equals
+  fullName: TicketApi.Models.Event.Equals
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: System.IEquatable{TicketApi.Models.Event}.Equals(TicketApi.Models.Event)
+  commentId: M:System.IEquatable{TicketApi.Models.Event}.Equals(TicketApi.Models.Event)
+  parent: System.IEquatable{TicketApi.Models.Event}
+  definition: System.IEquatable`1.Equals(`0)
+  name: Equals(Event)
+  nameWithType: IEquatable<Event>.Equals(Event)
+  fullName: System.IEquatable<TicketApi.Models.Event>.Equals(TicketApi.Models.Event)
+  nameWithType.vb: IEquatable(Of Event).Equals(Event)
+  fullName.vb: System.IEquatable(Of TicketApi.Models.Event).Equals(TicketApi.Models.Event)
+  spec.csharp:
+  - uid: System.IEquatable`1.Equals(`0)
+    name: Equals
+    nameWithType: IEquatable<Event>.Equals
+    fullName: System.IEquatable<TicketApi.Models.Event>.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: TicketApi.Models.Event
+    name: Event
+    nameWithType: Event
+    fullName: TicketApi.Models.Event
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.IEquatable`1.Equals(`0)
+    name: Equals
+    nameWithType: IEquatable(Of Event).Equals
+    fullName: System.IEquatable(Of TicketApi.Models.Event).Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: TicketApi.Models.Event
+    name: Event
+    nameWithType: Event
+    fullName: TicketApi.Models.Event
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: TicketApi.Models.Event
+  commentId: T:TicketApi.Models.Event
+  parent: TicketApi.Models
+  isExternal: false
+  name: Event
+  nameWithType: Event
+  fullName: TicketApi.Models.Event
+- uid: System.IEquatable`1.Equals(`0)
+  commentId: M:System.IEquatable`1.Equals(`0)
+  isExternal: true
+  name: Equals(T)
+  nameWithType: IEquatable<T>.Equals(T)
+  fullName: System.IEquatable<T>.Equals(T)
+  nameWithType.vb: IEquatable(Of T).Equals(T)
+  fullName.vb: System.IEquatable(Of T).Equals(T)
+  spec.csharp:
+  - uid: System.IEquatable`1.Equals(`0)
+    name: Equals
+    nameWithType: IEquatable<T>.Equals
+    fullName: System.IEquatable<T>.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.IEquatable`1.Equals(`0)
+    name: Equals
+    nameWithType: IEquatable(Of T).Equals
+    fullName: System.IEquatable(Of T).Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: TicketApi.Models.Event.GetHashCode*
+  commentId: Overload:TicketApi.Models.Event.GetHashCode
+  isExternal: false
+  name: GetHashCode
+  nameWithType: Event.GetHashCode
+  fullName: TicketApi.Models.Event.GetHashCode
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  name: Int32
+  nameWithType: Int32
+  fullName: System.Int32
+- uid: TicketApi.Models.Event.op_Equality*
+  commentId: Overload:TicketApi.Models.Event.op_Equality
+  isExternal: false
+  name: Equality
+  nameWithType: Event.Equality
+  fullName: TicketApi.Models.Event.Equality
+- uid: TicketApi.Models.Event.op_Inequality*
+  commentId: Overload:TicketApi.Models.Event.op_Inequality
+  isExternal: false
+  name: Inequality
+  nameWithType: Event.Inequality
+  fullName: TicketApi.Models.Event.Inequality
