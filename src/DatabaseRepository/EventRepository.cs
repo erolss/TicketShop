@@ -23,7 +23,7 @@ namespace TicketSystem.DatabaseRepository
                 connection.Open();
                 connection.Query(query, new { name, htmlDescription });
                 var addedTicketEventQuery = connection.Query<int>("SELECT IDENT_CURRENT ('TicketEvents') AS Current_Identity").First();
-                var result = connection.Query<Event>("SELECT * FROM TicketEvents WHERE EventID=@id", new { id = addedTicketEventQuery }).First();
+                var result = connection.Query<Event>("SELECT * FROM TicketEvents WHERE TicketEventID=@id", new { id = addedTicketEventQuery }).First();
 
                 return result;
 
@@ -34,7 +34,7 @@ namespace TicketSystem.DatabaseRepository
         {
             var query = SQL
                 .DELETE_FROM("TicketEvents")
-                .WHERE("EventID = @id");
+                .WHERE("TicketEventID = @id");
 
             string connectionString = ConfigurationManager.ConnectionStrings["TicketSystem"].ConnectionString;
             using (var connection = new SqlConnection(connectionString))
@@ -51,7 +51,7 @@ namespace TicketSystem.DatabaseRepository
             var query = SQL
                 .SELECT("*")
                 .FROM("TicketEvents")
-                .WHERE("EventID = @id");
+                .WHERE("TicketEventID = @id");
 
             string connectionString = ConfigurationManager.ConnectionStrings["TicketSystem"].ConnectionString;
             using (var connection = new SqlConnection(connectionString))
@@ -66,7 +66,7 @@ namespace TicketSystem.DatabaseRepository
         public List<Event> GetEvents(int offset = 0, int maxLimit = 20)
         {
             var query = @"SELECT * FROM TicketEvents
-                        ORDER BY EventID
+                        ORDER BY TicketEventID
                         OFFSET @offset ROWS
                         FETCH NEXT @maxLimit ROWS ONLY";
 
@@ -86,7 +86,7 @@ namespace TicketSystem.DatabaseRepository
             var query = SQL
                 .UPDATE("TicketEvents")
                 .SET("EventName = @name, EventHtmlDescription = @htmlDescription")
-                .WHERE("EventID = @id");
+                .WHERE("TicketEventID = @id");
 
             using (var connection = new SqlConnection(ConfigurationManager.ConnectionStrings["TicketSystem"].ConnectionString))
             {

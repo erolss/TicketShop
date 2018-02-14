@@ -2,7 +2,7 @@
 {
     public class Event
     {
-        public int TicketEventId { get; set; }
+        public int TicketEventID { get; set; }
         public string EventName { get; set; }
         public string EventHtmlDescription { get; set; }
 

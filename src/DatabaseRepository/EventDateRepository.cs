@@ -1,13 +1,12 @@
-﻿using System;
+﻿using Dapper;
+using DbExtensions;
+using System;
 using System.Collections.Generic;
-using System.Text;
+using System.Configuration;
+using System.Data.SqlClient;
+using System.Linq;
 using TicketSystem.DatabaseRepository.Interface;
 using TicketSystem.DatabaseRepository.Model;
-using Dapper;
-using DbExtensions;
-using System.Data.SqlClient;
-using System.Configuration;
-using System.Linq;
 
 namespace TicketSystem.DatabaseRepository
 {

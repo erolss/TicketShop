@@ -44,7 +44,7 @@ namespace TicketSystem.DatabaseRepository
                         JOIN TicketEventDates ted ON SeatsAtEventDate.TicketEventDateID = ted.TicketEventDateID
                         JOIN Venues v ON ted.VenueID = v.VenueID
                         JOIN TicketEvent te ON ted.TicketEventID = te.TicketEventID
-                        WHERE t.UserID = @userId
+                        WHERE t.BuyerUserId = @userId
                         ORDER BY TransactionID
                         OFFSET @offset ROWS
                         FETCH @maxLimit ROWS ONLY";
@@ -60,13 +60,9 @@ namespace TicketSystem.DatabaseRepository
 
         public List<Ticket> GetTicketsByTransactionId(int transactionId, int offset = 0, int maxLimit = 20)
         {
-            var query = @"SELECT * FROM TicketTransactions t
+            var query = @"SELECT Tickets.TicketID, Tickets.TicketEventDateID FROM TicketTransactions t
                         JOIN TicketToTransactions ttt ON t.TransactionID = ttt.TransactionID
                         JOIN Tickets ON ttt.TicketID = Tickets.TicketID
-                        JOIN SeatsAtEventDate ON Tickets.SeatID = SeatsAtEventDate.SeatID
-                        JOIN TicketEventDates ted ON SeatsAtEventDate.TicketEventDateID = ted.TicketEventDateID
-                        JOIN Venues v ON ted.VenueID = v.VenueID
-                        JOIN TicketEvent te ON ted.TicketEventID = te.TicketEventID
                         WHERE t.TransActionID = @transactionId
                         ORDER BY Tickets.TicketID
                         OFFSET @offset ROWS
@@ -75,13 +71,27 @@ namespace TicketSystem.DatabaseRepository
             using (var connection = new SqlConnection(ConfigurationManager.ConnectionStrings["TicketSystem"].ConnectionString))
             {
                 connection.Open();
-                var result = connection.Query<Ticket>(query, new { transactionId }).ToList();
+                var result = connection.Query<Ticket>(query, new { transactionId, offset, maxLimit }).ToList();
 
                 return result;
             }
         }
 
         public Ticket GetTicketById(int id)
+        {
+            var query = @"SELECT * FROM Tickets WHERE TicketID = @ticketId";
+
+
+            using (var connection = new SqlConnection(ConfigurationManager.ConnectionStrings["TicketSystem"].ConnectionString))
+            {
+                connection.Open();
+                var result = connection.Query<Ticket>(query, new { ticketId = id }).First();
+
+                return result;
+            }
+        }
+
+        public FullTicket GetFullTicketById(int id)
         {
             var query = @"SELECT * FROM Tickets t
                         JOIN TicketToTransactions ttt ON t.TicketID = ttt.TicketID
@@ -96,12 +106,31 @@ namespace TicketSystem.DatabaseRepository
             using (var connection = new SqlConnection(ConfigurationManager.ConnectionStrings["TicketSystem"].ConnectionString))
             {
                 connection.Open();
-                var result = connection.Query(query, new { ticketId = id }).First();
+                var result = connection.Query<FullTicket>(query, new { ticketId = id }).First();
 
                 return result;
             }
         }
 
+        public List<FullTicket> GetFullTicketsByTransactionId(int transactionId)
+        {
+            var query = @"SELECT * FROM TicketTransactions t
+                        JOIN TicketToTransactions ttt ON t.TransactionID = ttt.TransactionID
+                        JOIN Tickets ON ttt.TicketID = Tickets.TicketID
+                        JOIN SeatsAtEventDate ON Tickets.SeatID = SeatsAtEventDate.SeatID
+                        JOIN TicketEventDates ted ON SeatsAtEventDate.TicketEventDateID = ted.TicketEventDateID
+                        JOIN Venues v ON ted.VenueID = v.VenueID
+                        JOIN TicketEvent te ON ted.TicketEventID = te.TicketEventID
+                        WHERE t.TransActionID = @transactionId
+                        ORDER BY Tickets.TicketID";
 
+            using (var connection = new SqlConnection(ConfigurationManager.ConnectionStrings["TicketSystem"].ConnectionString))
+            {
+                connection.Open();
+                var result = connection.Query<FullTicket>(query, new { transactionId }).ToList();
+
+                return result;
+            }
+        }
     }
 }

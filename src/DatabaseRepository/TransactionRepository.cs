@@ -1,10 +1,96 @@
-﻿using System;
+﻿using Dapper;
+using DbExtensions;
 using System.Collections.Generic;
-using System.Text;
+using System.Configuration;
+using System.Data.SqlClient;
+using System.Linq;
+using TicketSystem.DatabaseRepository.Interface;
+using TicketSystem.DatabaseRepository.Model;
 
 namespace TicketSystem.DatabaseRepository
 {
-    class TransactionRepository
+    public class TransactionRepository : ITransactionRepository
     {
+        public Transaction AddTransaction(Transaction transaction)
+        {
+            var query = @"INSERT INTO TicketTransactions
+                        VALUES(@transaction)";
+
+            string connectionString = ConfigurationManager.ConnectionStrings["TicketSystem"].ConnectionString;
+            using (var connection = new SqlConnection(connectionString))
+            {
+                connection.Open();
+                connection.Query(query, transaction);
+                var addedItemQuery = connection.Query<int>("SELECT IDENT_CURRENT ('TicketTransactions') AS Current_Identity").First();
+                var result = connection.Query<Transaction>("SELECT * FROM TicketTransactions WHERE TransactionID=@id", new { id = addedItemQuery }).First();
+
+                return result;
+            }
+        }
+
+        public void DeleteTransactionById(int transactionId)
+        {
+            var query = SQL
+                .DELETE_FROM("TicketTransactions")
+                .WHERE("TransactionID = @id");
+
+            string connectionString = ConfigurationManager.ConnectionStrings["TicketSystem"].ConnectionString;
+            using (var connection = new SqlConnection(connectionString))
+            {
+                connection.Open();
+                connection.Execute(query.ToString(), new { id = transactionId });
+            }
+        }
+
+        public Transaction GetTransactionById(int transactionId)
+        {
+            var query = SQL
+                 .SELECT("*")
+                 .FROM("TicketTransactions")
+                 .WHERE("TransactionID = @id");
+
+            string connectionString = ConfigurationManager.ConnectionStrings["TicketSystem"].ConnectionString;
+            using (var connection = new SqlConnection(connectionString))
+            {
+                connection.Open();
+                var result = connection.Query<Transaction>(query.ToString(), new { id = transactionId }).First();
+
+                return result;
+            }
+        }
+
+        public List<Transaction> GetTransactionByUserId(string userId)
+        {
+            var query = SQL
+                .SELECT("*")
+                .FROM("TicketTransactions")
+                .WHERE("BuyerUserId = @userId");
+
+            string connectionString = ConfigurationManager.ConnectionStrings["TicketSystem"].ConnectionString;
+            using (var connection = new SqlConnection(connectionString))
+            {
+                connection.Open();
+                var result = connection.Query<Transaction>(query.ToString(), new { userId }).ToList();
+
+                return result;
+            }
+        }
+
+        public Transaction UpdateTransactionById(Transaction transaction)
+        {
+            var query = @"UPDATE TicketTransactions
+                        SET @transaction";
+
+            using (var connection = new SqlConnection(ConfigurationManager.ConnectionStrings["TicketSystem"].ConnectionString))
+            {
+                connection.Open();
+                connection.Query(query, transaction);
+                
+                var result = connection.Query<Transaction>("SELECT * FROM TicketTransactions WHERE TransactionID=@id", new { id = transaction.TransactionID }).First();
+
+                return result;
+               
+            }
+        }
     }
 }
