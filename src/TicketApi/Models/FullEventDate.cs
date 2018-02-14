@@ -37,13 +37,19 @@ namespace TicketApi.Models
     /// 
     /// </summary>
     [DataContract]
-    public partial class Event :  IEquatable<Event>
+    public partial class FullEventDate :  IEquatable<FullEventDate>
     { 
         /// <summary>
         /// Gets or Sets Id
         /// </summary>
         [DataMember(Name="id")]
         public int? Id { get; set; }
+
+        /// <summary>
+        /// Gets or Sets EventId
+        /// </summary>
+        [DataMember(Name="eventId")]
+        public int? EventId { get; set; }
 
         /// <summary>
         /// Gets or Sets EventName
@@ -58,16 +64,59 @@ namespace TicketApi.Models
         public string EventHtmlDescription { get; set; }
 
         /// <summary>
+        /// Gets or Sets EventDate
+        /// </summary>
+        [DataMember(Name="eventDate")]
+        public DateTime? EventDate { get; set; }
+
+        /// <summary>
+        /// Gets or Sets VenueId
+        /// </summary>
+        [DataMember(Name="venueId")]
+        public int? VenueId { get; set; }
+
+        /// <summary>
+        /// Gets or Sets VenueName
+        /// </summary>
+        [DataMember(Name="venueName")]
+        public string VenueName { get; set; }
+
+        /// <summary>
+        /// Gets or Sets VenueCity
+        /// </summary>
+        [DataMember(Name="venueCity")]
+        public string VenueCity { get; set; }
+
+        /// <summary>
+        /// Gets or Sets VenueCountry
+        /// </summary>
+        [DataMember(Name="venueCountry")]
+        public string VenueCountry { get; set; }
+
+        /// <summary>
+        /// Gets or Sets NoAvailableSeats
+        /// </summary>
+        [DataMember(Name="noAvailableSeats")]
+        public int? NoAvailableSeats { get; set; }
+
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
         public override string ToString()
         {
             var sb = new StringBuilder();
-            sb.Append("class Event {\n");
+            sb.Append("class FullEventDate {\n");
             sb.Append("  Id: ").Append(Id).Append("\n");
+            sb.Append("  EventId: ").Append(EventId).Append("\n");
             sb.Append("  EventName: ").Append(EventName).Append("\n");
             sb.Append("  EventHtmlDescription: ").Append(EventHtmlDescription).Append("\n");
+            sb.Append("  EventDate: ").Append(EventDate).Append("\n");
+            sb.Append("  VenueId: ").Append(VenueId).Append("\n");
+            sb.Append("  VenueName: ").Append(VenueName).Append("\n");
+            sb.Append("  VenueCity: ").Append(VenueCity).Append("\n");
+            sb.Append("  VenueCountry: ").Append(VenueCountry).Append("\n");
+            sb.Append("  NoAvailableSeats: ").Append(NoAvailableSeats).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -90,15 +139,15 @@ namespace TicketApi.Models
         {
             if (ReferenceEquals(null, obj)) return false;
             if (ReferenceEquals(this, obj)) return true;
-            return obj.GetType() == GetType() && Equals((Event)obj);
+            return obj.GetType() == GetType() && Equals((FullEventDate)obj);
         }
 
         /// <summary>
-        /// Returns true if Event instances are equal
+        /// Returns true if FullEventDate instances are equal
         /// </summary>
-        /// <param name="other">Instance of Event to be compared</param>
+        /// <param name="other">Instance of FullEventDate to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(Event other)
+        public bool Equals(FullEventDate other)
         {
             if (ReferenceEquals(null, other)) return false;
             if (ReferenceEquals(this, other)) return true;
@@ -110,6 +159,11 @@ namespace TicketApi.Models
                     Id.Equals(other.Id)
                 ) && 
                 (
+                    EventId == other.EventId ||
+                    EventId != null &&
+                    EventId.Equals(other.EventId)
+                ) && 
+                (
                     EventName == other.EventName ||
                     EventName != null &&
                     EventName.Equals(other.EventName)
@@ -118,6 +172,36 @@ namespace TicketApi.Models
                     EventHtmlDescription == other.EventHtmlDescription ||
                     EventHtmlDescription != null &&
                     EventHtmlDescription.Equals(other.EventHtmlDescription)
+                ) && 
+                (
+                    EventDate == other.EventDate ||
+                    EventDate != null &&
+                    EventDate.Equals(other.EventDate)
+                ) && 
+                (
+                    VenueId == other.VenueId ||
+                    VenueId != null &&
+                    VenueId.Equals(other.VenueId)
+                ) && 
+                (
+                    VenueName == other.VenueName ||
+                    VenueName != null &&
+                    VenueName.Equals(other.VenueName)
+                ) && 
+                (
+                    VenueCity == other.VenueCity ||
+                    VenueCity != null &&
+                    VenueCity.Equals(other.VenueCity)
+                ) && 
+                (
+                    VenueCountry == other.VenueCountry ||
+                    VenueCountry != null &&
+                    VenueCountry.Equals(other.VenueCountry)
+                ) && 
+                (
+                    NoAvailableSeats == other.NoAvailableSeats ||
+                    NoAvailableSeats != null &&
+                    NoAvailableSeats.Equals(other.NoAvailableSeats)
                 );
         }
 
@@ -133,10 +217,24 @@ namespace TicketApi.Models
                 // Suitable nullity checks etc, of course :)
                     if (Id != null)
                     hashCode = hashCode * 59 + Id.GetHashCode();
+                    if (EventId != null)
+                    hashCode = hashCode * 59 + EventId.GetHashCode();
                     if (EventName != null)
                     hashCode = hashCode * 59 + EventName.GetHashCode();
                     if (EventHtmlDescription != null)
                     hashCode = hashCode * 59 + EventHtmlDescription.GetHashCode();
+                    if (EventDate != null)
+                    hashCode = hashCode * 59 + EventDate.GetHashCode();
+                    if (VenueId != null)
+                    hashCode = hashCode * 59 + VenueId.GetHashCode();
+                    if (VenueName != null)
+                    hashCode = hashCode * 59 + VenueName.GetHashCode();
+                    if (VenueCity != null)
+                    hashCode = hashCode * 59 + VenueCity.GetHashCode();
+                    if (VenueCountry != null)
+                    hashCode = hashCode * 59 + VenueCountry.GetHashCode();
+                    if (NoAvailableSeats != null)
+                    hashCode = hashCode * 59 + NoAvailableSeats.GetHashCode();
                 return hashCode;
             }
         }
@@ -144,12 +242,12 @@ namespace TicketApi.Models
         #region Operators
         #pragma warning disable 1591
 
-        public static bool operator ==(Event left, Event right)
+        public static bool operator ==(FullEventDate left, FullEventDate right)
         {
             return Equals(left, right);
         }
 
-        public static bool operator !=(Event left, Event right)
+        public static bool operator !=(FullEventDate left, FullEventDate right)
         {
             return !Equals(left, right);
         }

@@ -46,10 +46,40 @@ namespace TicketApi.Models
         public int? Id { get; set; }
 
         /// <summary>
-        /// Gets or Sets Customer
+        /// Gets or Sets FirstName
         /// </summary>
-        [DataMember(Name="customer")]
-        public Customer Customer { get; set; }
+        [DataMember(Name="firstName")]
+        public string FirstName { get; set; }
+
+        /// <summary>
+        /// Gets or Sets LastName
+        /// </summary>
+        [DataMember(Name="lastName")]
+        public string LastName { get; set; }
+
+        /// <summary>
+        /// Gets or Sets Address
+        /// </summary>
+        [DataMember(Name="address")]
+        public string Address { get; set; }
+
+        /// <summary>
+        /// Gets or Sets City
+        /// </summary>
+        [DataMember(Name="city")]
+        public string City { get; set; }
+
+        /// <summary>
+        /// Gets or Sets Email
+        /// </summary>
+        [DataMember(Name="email")]
+        public string Email { get; set; }
+
+        /// <summary>
+        /// Gets or Sets UserId
+        /// </summary>
+        [DataMember(Name="userId")]
+        public string UserId { get; set; }
 
         /// <summary>
         /// Gets or Sets PaymentStatus
@@ -72,7 +102,12 @@ namespace TicketApi.Models
             var sb = new StringBuilder();
             sb.Append("class Transaction {\n");
             sb.Append("  Id: ").Append(Id).Append("\n");
-            sb.Append("  Customer: ").Append(Customer).Append("\n");
+            sb.Append("  FirstName: ").Append(FirstName).Append("\n");
+            sb.Append("  LastName: ").Append(LastName).Append("\n");
+            sb.Append("  Address: ").Append(Address).Append("\n");
+            sb.Append("  City: ").Append(City).Append("\n");
+            sb.Append("  Email: ").Append(Email).Append("\n");
+            sb.Append("  UserId: ").Append(UserId).Append("\n");
             sb.Append("  PaymentStatus: ").Append(PaymentStatus).Append("\n");
             sb.Append("  PaymentReferenceId: ").Append(PaymentReferenceId).Append("\n");
             sb.Append("}\n");
@@ -117,9 +152,34 @@ namespace TicketApi.Models
                     Id.Equals(other.Id)
                 ) && 
                 (
-                    Customer == other.Customer ||
-                    Customer != null &&
-                    Customer.Equals(other.Customer)
+                    FirstName == other.FirstName ||
+                    FirstName != null &&
+                    FirstName.Equals(other.FirstName)
+                ) && 
+                (
+                    LastName == other.LastName ||
+                    LastName != null &&
+                    LastName.Equals(other.LastName)
+                ) && 
+                (
+                    Address == other.Address ||
+                    Address != null &&
+                    Address.Equals(other.Address)
+                ) && 
+                (
+                    City == other.City ||
+                    City != null &&
+                    City.Equals(other.City)
+                ) && 
+                (
+                    Email == other.Email ||
+                    Email != null &&
+                    Email.Equals(other.Email)
+                ) && 
+                (
+                    UserId == other.UserId ||
+                    UserId != null &&
+                    UserId.Equals(other.UserId)
                 ) && 
                 (
                     PaymentStatus == other.PaymentStatus ||
@@ -145,8 +205,18 @@ namespace TicketApi.Models
                 // Suitable nullity checks etc, of course :)
                     if (Id != null)
                     hashCode = hashCode * 59 + Id.GetHashCode();
-                    if (Customer != null)
-                    hashCode = hashCode * 59 + Customer.GetHashCode();
+                    if (FirstName != null)
+                    hashCode = hashCode * 59 + FirstName.GetHashCode();
+                    if (LastName != null)
+                    hashCode = hashCode * 59 + LastName.GetHashCode();
+                    if (Address != null)
+                    hashCode = hashCode * 59 + Address.GetHashCode();
+                    if (City != null)
+                    hashCode = hashCode * 59 + City.GetHashCode();
+                    if (Email != null)
+                    hashCode = hashCode * 59 + Email.GetHashCode();
+                    if (UserId != null)
+                    hashCode = hashCode * 59 + UserId.GetHashCode();
                     if (PaymentStatus != null)
                     hashCode = hashCode * 59 + PaymentStatus.GetHashCode();
                     if (PaymentReferenceId != null)

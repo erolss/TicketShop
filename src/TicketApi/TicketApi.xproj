@@ -6,7 +6,7 @@
     </PropertyGroup>
     <Import Project="$(VSToolsPath)\DotNet\Microsoft.DotNet.Props" Condition="'$(VSToolsPath)' != ''" />
     <PropertyGroup Label="Globals">
-        <ProjectGuid>{BB72B0DF-4BA1-45AF-833A-2D6DA2FA1EC6}</ProjectGuid>
+        <ProjectGuid>{1F3CC340-2439-4C0C-89CE-5985A4E7F53B}</ProjectGuid>
         <RootNamespace>TicketApi</RootNamespace>
         <BaseIntermediateOutputPath Condition="'$(BaseIntermediateOutputPath)'=='' ">.\obj</BaseIntermediateOutputPath>
         <OutputPath Condition="'$(OutputPath)'=='' ">.\bin\</OutputPath>

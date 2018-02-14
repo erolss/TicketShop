@@ -36,12 +36,12 @@ using TicketApi.Attributes;
 using TicketApi.Models;
 
 namespace TicketApi.Controllers
-{
+{ 
     /// <summary>
     /// 
     /// </summary>
     public class VenueApiController : Controller
-    {
+    { 
         /// <summary>
         /// Add Venue
         /// </summary>
@@ -53,9 +53,16 @@ namespace TicketApi.Controllers
         [Route("/api/venue")]
         [ValidateModelState]
         [SwaggerOperation("AddVenue")]
-        public virtual void AddVenue([FromBody]Venue body)
-        {
-            throw new NotImplementedException();
+        [SwaggerResponse(200, typeof(Object), "Venue added")]
+        [SwaggerResponse(400, typeof(Object), "Bad request")]
+        public virtual IActionResult AddVenue([FromBody]Venue body)
+        { 
+            string exampleJson = null;
+            
+            var example = exampleJson != null
+            ? JsonConvert.DeserializeObject<Object>(exampleJson)
+            : default(Object);
+            return new ObjectResult(example);
         }
 
         /// <summary>
@@ -70,7 +77,7 @@ namespace TicketApi.Controllers
         [ValidateModelState]
         [SwaggerOperation("DeleteVenue")]
         public virtual void DeleteVenue([FromRoute]int? venueId)
-        {
+        { 
             throw new NotImplementedException();
         }
 
@@ -82,12 +89,19 @@ namespace TicketApi.Controllers
         /// <response code="200">Venues loaded</response>
         /// <response code="404">Venue not found</response>
         [HttpGet]
-        [Route("/api/venue/{venueId}", Name = "GetVenue")]
+        [Route("/api/venue/{venueId}")]
         [ValidateModelState]
         [SwaggerOperation("GetVenueById")]
-        public virtual void GetVenueById([FromRoute]int? venueId)
-        {
-            throw new NotImplementedException();
+        [SwaggerResponse(200, typeof(Object), "Venues loaded")]
+        [SwaggerResponse(404, typeof(Object), "Venue not found")]
+        public virtual IActionResult GetVenueById([FromRoute]int? venueId)
+        { 
+            string exampleJson = null;
+            
+            var example = exampleJson != null
+            ? JsonConvert.DeserializeObject<Object>(exampleJson)
+            : default(Object);
+            return new ObjectResult(example);
         }
 
         /// <summary>
@@ -100,9 +114,16 @@ namespace TicketApi.Controllers
         [Route("/api/venue")]
         [ValidateModelState]
         [SwaggerOperation("GetVenues")]
-        public virtual void GetVenues()
-        {
-            throw new NotImplementedException();
+        [SwaggerResponse(200, typeof(List<Venue>), "Venues loaded")]
+        [SwaggerResponse(400, typeof(List<Venue>), "Bad request")]
+        public virtual IActionResult GetVenues()
+        { 
+            string exampleJson = null;
+            
+            var example = exampleJson != null
+            ? JsonConvert.DeserializeObject<List<Venue>>(exampleJson)
+            : default(List<Venue>);
+            return new ObjectResult(example);
         }
 
         /// <summary>
@@ -117,9 +138,16 @@ namespace TicketApi.Controllers
         [Route("/api/venue/{venueId}")]
         [ValidateModelState]
         [SwaggerOperation("UpdateVenue")]
-        public virtual void UpdateVenue([FromRoute]int? venueId, [FromBody]Venue body)
-        {
-            throw new NotImplementedException();
+        [SwaggerResponse(200, typeof(Object), "Venue updated")]
+        [SwaggerResponse(400, typeof(Object), "Bad request")]
+        public virtual IActionResult UpdateVenue([FromRoute]int? venueId, [FromBody]Venue body)
+        { 
+            string exampleJson = null;
+            
+            var example = exampleJson != null
+            ? JsonConvert.DeserializeObject<Object>(exampleJson)
+            : default(Object);
+            return new ObjectResult(example);
         }
     }
 }
