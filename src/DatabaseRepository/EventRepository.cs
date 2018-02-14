@@ -2,7 +2,8 @@
 using System.Collections.Generic;
 using System.Text;
 using TicketSystem.DatabaseRepository.Interface;
-
+using TicketSystem.DatabaseRepository.Model;
+using DbExtensions;
 namespace TicketSystem.DatabaseRepository
 {
     class EventRepository : IEventRepository
