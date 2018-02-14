@@ -13,6 +13,7 @@
     <PackageId>TicketApi</PackageId>
     <RuntimeFrameworkVersion>1.0.4</RuntimeFrameworkVersion>
     <PackageTargetFallback>$(PackageTargetFallback);dotnet5.6;dnxcore50;netstandard1.6;portable-net452+win81</PackageTargetFallback>
+    <UserSecretsId>368ed395-1d56-4249-8029-8a9b67c018d1</UserSecretsId>
   </PropertyGroup>
 
   <ItemGroup>
@@ -45,11 +46,6 @@
 
   <ItemGroup>
     <DotNetCliToolReference Include="Microsoft.Extensions.SecretManager.Tools" Version="1.0.0" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <ProjectReference Include="..\DatabaseRepository\DatabaseRepository.csproj" />
-    <ProjectReference Include="..\PaymentProvider\PaymentProvider.csproj" />
   </ItemGroup>
 
 </Project>
