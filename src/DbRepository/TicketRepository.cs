@@ -6,6 +6,7 @@ using Dapper;
 using TicketSystem.DbRepository.Model;
 using TicketSystem.DbRepository.Interface;
 using Microsoft.Extensions.Configuration;
+using DbExtensions;
 
 namespace TicketSystem.DbRepository
 {
@@ -18,27 +19,69 @@ namespace TicketSystem.DbRepository
             _connectionString = connectionString;
         }
 
+        public Ticket AddTicket(int ticketEventDateId)
+        {
+            var query = @"INSERT INTO Tickets(TicketEventDateID)
+                        VALUES(@ticketEventDateId)";
+
+            using (var connection = new SqlConnection(_connectionString))
+            {
+                connection.Open();
+                connection.Query(query, new { ticketEventDateId });
+                var addedItemQuery = connection.Query<int>("SELECT IDENT_CURRENT ('Tickets') AS Current_Identity").First();
+                var result = connection.Query<Ticket>("SELECT * FROM Tickets WHERE TicketID=@id", new { id = addedItemQuery }).FirstOrDefault();
+
+                return result;
+            }
+        }
+
+        public Ticket UpdateTicket(int ticketId, int ticketEventDateId)
+        {
+            var query = SQL
+               .UPDATE("Tickets")
+               .SET("TicketEventDateID = @ticketEventDateId")
+               .WHERE("TicketID = @id");
+
+            using (var connection = new SqlConnection(_connectionString))
+            {
+                connection.Open();
+                connection.Execute(query.ToString(), new { id = ticketId, ticketEventDateId});
+                var result = connection.Query<Ticket>("SELECT * FROM TicketEvents WHERE EventID = @id", new { id = ticketId }).FirstOrDefault();
+
+                return result;
+            }
+        }
+
+        public bool DeleteTicket(int ticketId)
+        {
+            var query = SQL
+                .DELETE_FROM("Tickets")
+                .WHERE("TicketID = @id");
+
+            using (var connection = new SqlConnection(_connectionString))
+            {
+                connection.Open();
+                if (connection.Execute(query.ToString(), new { id = ticketId }) > 0)
+                {
+                    return true;
+                }
+            }
+            return false;
+        }
+
         public List<Ticket> GetTickets(int offset = 0, int maxLimit = 20)
         {
+            var query = @"SELECT * FROM Tickets
+                        ORDER BY TicketID
+                        OFFSET @offset ROWS
+                        FETCH @maxLimit ROWS ONLY";
 
-            //var query = @"SELECT * FROM
-            //            ";
-            ////SELECT*
-            ////FROM Tickets t
-            ////JOIN SeatsAtEventDate s ON t.SeatID = s.SeatID
-            ////JOIN TicketEventDates tad ON s.TicketEventDateID = tad.TicketEventDateID
-            ////JOIN Venues v ON tad.VenueID = v.VenueID
-            ////JOIN TicketEvents te ON tad.TicketEventID = te.TicketEventID
-            ////WHERE TicketID = 1
-
-            //using (var connection = new SqlConnection(ConfigurationManager.ConnectionStrings["TicketSystem"].ConnectionString))
-            //{
-            //    connection.Open();
-            //    connection.Execute(query.ToString(), new { name, description });
-            //    return connection.Query<TicketEvent>("SELECT * FROM TicketEvents WHERE TicketEventID = @id", new { id }).First();
-            //}
-            throw new System.NotImplementedException();
-
+            using (var connection = new SqlConnection(_connectionString))
+            {
+                connection.Open();
+                var result = connection.Query<Ticket>(query, new { offset, maxLimit }).ToList();
+                return result;
+            }
         }
 
         public List<Ticket> GetTicketsByUserId(string userId, int offset = 0, int maxLimit = 20)
@@ -112,7 +155,7 @@ namespace TicketSystem.DbRepository
             using (var connection = new SqlConnection(_connectionString))
             {
                 connection.Open();
-                var result = connection.Query<FullTicket>(query, new { ticketId = id }).First();
+                var result = connection.Query<FullTicket>(query, new { ticketId = id }).FirstOrDefault();
 
                 return result;
             }
@@ -138,5 +181,7 @@ namespace TicketSystem.DbRepository
                 return result;
             }
         }
+
+
     }
 }

@@ -1,4 +1,4 @@
-/*
+﻿/*
  * Ticket system api
  *
  * An API which gives access to all parts of the ticket system
@@ -37,19 +37,13 @@ namespace TicketApi.Models
     /// 
     /// </summary>
     [DataContract]
-    public partial class Ticket : IEquatable<Ticket>
+    public partial class Search : IEquatable<Search>
     {
         /// <summary>
-        /// Gets or Sets TicketId
+        /// Gets or Sets Searchstring
         /// </summary>
-        [DataMember(Name = "ticketId")]
-        public int? TicketId { get; set; }
-
-        /// <summary>
-        /// Gets or Sets TicketEventDateId
-        /// </summary>
-        [DataMember(Name = "ticketEventDateId")]
-        public int? TicketEventDateId { get; set; }
+        [DataMember(Name = "searchstring")]
+        public string Searchstring { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -58,9 +52,8 @@ namespace TicketApi.Models
         public override string ToString()
         {
             var sb = new StringBuilder();
-            sb.Append("class Ticket {\n");
-            sb.Append("  TicketId: ").Append(TicketId).Append("\n");
-            sb.Append("  TicketEventDateId: ").Append(TicketEventDateId).Append("\n");
+            sb.Append("class Search {\n");
+            sb.Append("  Searchstring: ").Append(Searchstring).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -85,15 +78,15 @@ namespace TicketApi.Models
                 return false;
             if (ReferenceEquals(this, obj))
                 return true;
-            return obj.GetType() == GetType() && Equals((Ticket)obj);
+            return obj.GetType() == GetType() && Equals((Search)obj);
         }
 
         /// <summary>
-        /// Returns true if Ticket instances are equal
+        /// Returns true if Search instances are equal
         /// </summary>
-        /// <param name="other">Instance of Ticket to be compared</param>
+        /// <param name="other">Instance of Search to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(Ticket other)
+        public bool Equals(Search other)
         {
             if (ReferenceEquals(null, other))
                 return false;
@@ -102,14 +95,9 @@ namespace TicketApi.Models
 
             return
                 (
-                    TicketId == other.TicketId ||
-                    TicketId != null &&
-                    TicketId.Equals(other.TicketId)
-                ) &&
-                (
-                    TicketEventDateId == other.TicketEventDateId ||
-                    TicketEventDateId != null &&
-                    TicketEventDateId.Equals(other.TicketEventDateId)
+                    Searchstring == other.Searchstring ||
+                    Searchstring != null &&
+                    Searchstring.Equals(other.Searchstring)
                 );
         }
 
@@ -123,10 +111,8 @@ namespace TicketApi.Models
             {
                 var hashCode = 41;
                 // Suitable nullity checks etc, of course :)
-                if (TicketId != null)
-                    hashCode = hashCode * 59 + TicketId.GetHashCode();
-                if (TicketEventDateId != null)
-                    hashCode = hashCode * 59 + TicketEventDateId.GetHashCode();
+                if (Searchstring != null)
+                    hashCode = hashCode * 59 + Searchstring.GetHashCode();
                 return hashCode;
             }
         }
@@ -134,12 +120,12 @@ namespace TicketApi.Models
         #region Operators
 #pragma warning disable 1591
 
-        public static bool operator ==(Ticket left, Ticket right)
+        public static bool operator ==(Search left, Search right)
         {
             return Equals(left, right);
         }
 
-        public static bool operator !=(Ticket left, Ticket right)
+        public static bool operator !=(Search left, Search right)
         {
             return !Equals(left, right);
         }

@@ -6,6 +6,27 @@ namespace TicketSystem.DbRepository.Interface
     public interface ITicketRepository
     {
         /// <summary>
+        /// Add new ticket
+        /// </summary>
+        /// <param name="ticket">Ticket object</param>
+        /// <return>An object representation of the created ticket</returns>
+        Ticket AddTicket(int ticketEventDateId);
+
+        /// <summary>
+        /// Update a ticket
+        /// </summary>
+        /// <param name="ticket">Ticket object</param>
+        /// <returns>An object representation of the updated ticket</returns>
+        Ticket UpdateTicket(int ticketId, int ticketEventDateId);
+
+        /// <summary>
+        /// Delete a ticket
+        /// </summary>
+        /// <param name="ticket">Ticket object</param>
+        /// <returns>bool, true if deleted, false if not </returns>
+        bool DeleteTicket(int ticketId);
+
+        /// <summary>
         /// Get tickets
         /// </summary>
         /// <param name="offset">Result set offset</param>

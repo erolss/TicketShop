@@ -88,27 +88,27 @@ namespace TicketApi.Controllers
         [Route("/api/event/{eventId}")]
         [ValidateModelState]
         [SwaggerOperation("DeleteEvent")]
-        public virtual void DeleteEvent([FromRoute]int eventId)
+        public virtual void DeleteEvent([FromRoute]int? eventId)
         {
-            _eventRepository.DeleteEvent(eventId);
+            _eventRepository.DeleteEvent((int)eventId);
         }
 
         /// <summary>
         /// Get all events matching query
         /// </summary>
         /// <remarks>Returns all events matching query</remarks>
-        /// <param name="query">query to find events </param>
-        /// <response code="200">Events search results loaded</response>
+        /// <param name="query">event search string</param>
+        /// <response code="200">Event search results loaded</response>
         /// <response code="404">No events found</response>
         [HttpGet]
-        [Route("/api/event/search/{query}")]
+        [Route("/api/event/search")]
         [ValidateModelState]
         [SwaggerOperation("FindEvents")]
-        [SwaggerResponse(200, typeof(List<Event>), "Events search results loaded")]
+        [SwaggerResponse(200, typeof(List<Event>), "Event search results loaded")]
         [SwaggerResponse(404, typeof(List<Event>), "No events found")]
-        public virtual IActionResult FindEvents([FromRoute]string query)
+        public virtual IActionResult FindEvents([FromBody]Search query)
         {
-            var result = _eventRepository.FindEvents(query);
+            var result = _eventRepository.FindEvents(query.Searchstring);
             return new ObjectResult(result);
         }
 
@@ -125,9 +125,9 @@ namespace TicketApi.Controllers
         [SwaggerOperation("GetEventById")]
         [SwaggerResponse(200, typeof(Object), "Event loaded")]
         [SwaggerResponse(404, typeof(Object), "Event not found")]
-        public virtual IActionResult GetEventById([FromRoute]int eventId)
+        public virtual IActionResult GetEventById([FromRoute]int? eventId)
         {
-            var result = _eventRepository.GetEventById(eventId);
+            var result = _eventRepository.GetEventById((int)eventId);
             if (result == null)
             {
                 return NotFound();
@@ -172,7 +172,6 @@ namespace TicketApi.Controllers
         [SwaggerResponse(404, typeof(Object), "Event not found")]
         public virtual IActionResult UpdateEvent([FromBody]Event body)
         {
-
             var result = _eventRepository.UpdateEvent((int)body.Id, body.EventName, body.EventHtmlDescription);
             if (result == null)
             {
@@ -181,4 +180,6 @@ namespace TicketApi.Controllers
             return new ObjectResult(result);
         }
     }
+    
+    
 }

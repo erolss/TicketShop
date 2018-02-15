@@ -37,9 +37,10 @@ using TicketApi.Models;
 using TicketApi.Settings;
 using TicketSystem.DbRepository;
 using Microsoft.Extensions.Options;
+using DbModel = TicketSystem.DbRepository.Model;
 
 namespace TicketApi.Controllers
-{ 
+{
     /// <summary>
     /// 
     /// </summary>
@@ -53,6 +54,7 @@ namespace TicketApi.Controllers
             this._dbSettings = db.Value;
             this._transactionRepository = new TransactionRepository(_dbSettings.ConnectionString);
         }
+
         /// <summary>
         /// Create a transaction in the system
         /// </summary>
@@ -66,30 +68,66 @@ namespace TicketApi.Controllers
         [SwaggerOperation("AddTransaction")]
         [SwaggerResponse(200, typeof(Object), "Transaction created")]
         [SwaggerResponse(400, typeof(Object), "Bad request")]
-        public virtual IActionResult AddTransaction([FromBody]Transaction body)
-        { 
-            string exampleJson = null;
-            
-            var example = exampleJson != null
-            ? JsonConvert.DeserializeObject<Object>(exampleJson)
-            : default(Object);
-            return new ObjectResult(example);
+        public virtual IActionResult AddTransaction([FromBody]Transaction transaction)
+        {
+            var dbModel = new DbModel.Transaction
+            {
+                BuyerLastName = transaction.LastName,
+                BuyerFirstName = transaction.FirstName,
+                BuyerAddress = transaction.Address,
+                BuyerCity = transaction.City,
+                BuyerEmail = transaction.Email,
+                BuyerUserId = transaction.UserId,
+                TotalAmount = transaction.TotalAmount,
+                PaymentReference = transaction.PaymentReference,
+                PaymentStatus = transaction.PaymentStatus
+
+            };
+            var result = _transactionRepository.AddTransaction(dbModel);
+            if (result == null)
+            {
+                return BadRequest();
+            }
+            return new ObjectResult(result);
         }
 
         /// <summary>
         /// Delete transaction
         /// </summary>
         /// <remarks>Deletes a single transaction</remarks>
-        /// <param name="transactionId">ID of the transaction</param>
+        /// <param name="transaction">transaction data for ticket purchase</param>
         /// <response code="200">Transaction deleted</response>
         /// <response code="404">Transaction not found</response>
         [HttpDelete]
-        [Route("/api/transaction/{transactionId}")]
+        [Route("/api/transaction")]
         [ValidateModelState]
         [SwaggerOperation("DeleteTransaction")]
-        public virtual void DeleteTransaction([FromRoute]int? transactionId)
-        { 
+        public virtual void DeleteTransaction([FromBody]Transaction transaction)
+        {
             throw new NotImplementedException();
+        }
+
+        /// <summary>
+        /// Get all transactions  matching query
+        /// </summary>
+        /// <remarks>Returns a list of transactions matching the query</remarks>
+        /// <param name="query">transaction data for ticket purchase</param>
+        /// <response code="200">Transaction search results loaded</response>
+        /// <response code="404">No transactions found</response>
+        [HttpGet]
+        [Route("/api/transaction/search")]
+        [ValidateModelState]
+        [SwaggerOperation("FindTransactions")]
+        [SwaggerResponse(200, typeof(List<Transaction>), "Transaction search results loaded")]
+        [SwaggerResponse(404, typeof(List<Transaction>), "No transactions found")]
+        public virtual IActionResult FindTransactions([FromBody]Search query)
+        {
+            string exampleJson = null;
+
+            var example = exampleJson != null
+            ? JsonConvert.DeserializeObject<List<Transaction>>(exampleJson)
+            : default(List<Transaction>);
+            return new ObjectResult(example);
         }
 
         /// <summary>
@@ -106,9 +144,9 @@ namespace TicketApi.Controllers
         [SwaggerResponse(200, typeof(Object), "Transaction loaded")]
         [SwaggerResponse(404, typeof(Object), "Transaction not found")]
         public virtual IActionResult GetTransactionById([FromRoute]int? transactionId)
-        { 
+        {
             string exampleJson = null;
-            
+
             var example = exampleJson != null
             ? JsonConvert.DeserializeObject<Object>(exampleJson)
             : default(Object);
@@ -128,9 +166,9 @@ namespace TicketApi.Controllers
         [SwaggerResponse(200, typeof(List<Transaction>), "Transactions loaded")]
         [SwaggerResponse(400, typeof(List<Transaction>), "Bad request")]
         public virtual IActionResult GetTransactions()
-        { 
+        {
             string exampleJson = null;
-            
+
             var example = exampleJson != null
             ? JsonConvert.DeserializeObject<List<Transaction>>(exampleJson)
             : default(List<Transaction>);
@@ -138,23 +176,22 @@ namespace TicketApi.Controllers
         }
 
         /// <summary>
-        /// Get transaction by Id
+        /// Update transaction by Id
         /// </summary>
-        /// <remarks>Returns a single transaction</remarks>
-        /// <param name="transactionId">ID of the transaction</param>
-        /// <param name="body">transaction data for ticket purchase</param>
+        /// <remarks>Returns a single updated transaction</remarks>
+        /// <param name="transaction">transaction data for ticket purchase</param>
         /// <response code="200">Transaction updated</response>
         /// <response code="404">Transaction not found</response>
         [HttpPut]
-        [Route("/api/transaction/{transactionId}")]
+        [Route("/api/transaction")]
         [ValidateModelState]
         [SwaggerOperation("UpdateTransaction")]
         [SwaggerResponse(200, typeof(Object), "Transaction updated")]
         [SwaggerResponse(404, typeof(Object), "Transaction not found")]
-        public virtual IActionResult UpdateTransaction([FromRoute]int? transactionId, [FromBody]Transaction body)
-        { 
+        public virtual IActionResult UpdateTransaction([FromBody]Transaction transaction)
+        {
             string exampleJson = null;
-            
+
             var example = exampleJson != null
             ? JsonConvert.DeserializeObject<Object>(exampleJson)
             : default(Object);

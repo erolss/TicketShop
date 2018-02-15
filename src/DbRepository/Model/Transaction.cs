@@ -14,6 +14,10 @@ namespace TicketSystem.DbRepository.Model
         public string BuyerEmail { get; set; }
         public string BuyerUserId { get; set; }
         public double TotalAmount { get; set; }
-        
+
+        public static explicit operator Transaction(global::TicketApi.Models.Transaction v)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

@@ -54,6 +54,51 @@ namespace TicketApi.Controllers
             this._dbSettings = db.Value;
             this._ticketRepository = new TicketRepository(_dbSettings.ConnectionString);
         }
+
+        /// <summary>
+        /// Add new ticket
+        /// </summary>
+        /// <remarks>Adds a new ticket in system</remarks>
+        /// <param name="ticket">Ticket data</param>
+        /// <response code="200">Ticket created</response>
+        /// <response code="400">Bad request</response>
+        [HttpPost]
+        [Route("/api/ticket")]
+        [ValidateModelState]
+        [SwaggerOperation("AddTicket")]
+        [SwaggerResponse(200, typeof(Object), "Ticket created")]
+        [SwaggerResponse(400, typeof(Object), "Bad request")]
+        public virtual IActionResult AddTicket([FromBody]Ticket ticket)
+        {
+            var result = _ticketRepository.AddTicket((int)ticket.TicketEventDateId);
+            if (result == null)
+            {
+                return BadRequest();
+            }
+            return new ObjectResult(result);
+        }
+
+        /// <summary>
+        /// Delete ticket
+        /// </summary>
+        /// <remarks>Delete a ticket in system</remarks>
+        /// <param name="ticket">Ticket data</param>
+        /// <response code="200">Ticket deleted</response>
+        /// <response code="400">Bad request</response>
+        [HttpDelete]
+        [Route("/api/ticket")]
+        [ValidateModelState]
+        [SwaggerOperation("DeleteTicket")]
+        public bool DeleteTicket([FromBody]Ticket ticket)
+        {
+            var result = _ticketRepository.DeleteTicket((int)ticket.TicketId);
+            if (!result)
+            {
+                return false;
+            }
+            return true;
+        }
+
         /// <summary>
         /// Get a ticket by ID from the system
         /// </summary>
@@ -65,9 +110,16 @@ namespace TicketApi.Controllers
         [Route("/api/ticket/{ticketId}")]
         [ValidateModelState]
         [SwaggerOperation("GetTicketById")]
-        public virtual void GetTicketById([FromRoute]int? ticketId)
-        { 
-            throw new NotImplementedException();
+        [SwaggerResponse(200, typeof(Object), "Ticket loaded")]
+        [SwaggerResponse(404, typeof(Object), "Ticket not found")]
+        public virtual IActionResult GetTicketById([FromRoute]int? ticketId)
+        {
+            var result = _ticketRepository.GetTicketById((int)ticketId);
+            if (result == null)
+            {
+                return BadRequest();
+            }
+            return new ObjectResult(result);
         }
 
         /// <summary>
@@ -80,16 +132,63 @@ namespace TicketApi.Controllers
         [Route("/api/ticket")]
         [ValidateModelState]
         [SwaggerOperation("GetTickets")]
-        [SwaggerResponse(200, typeof(Ticket), "Ticket loaded")]
-        [SwaggerResponse(400, typeof(Ticket), "Bad request")]
+        [SwaggerResponse(200, typeof(List<Ticket>), "Ticket loaded")]
+        [SwaggerResponse(400, typeof(List<Ticket>), "Bad request")]
         public virtual IActionResult GetTickets()
-        { 
-            string exampleJson = null;
-            
-            var example = exampleJson != null
-            ? JsonConvert.DeserializeObject<Ticket>(exampleJson)
-            : default(Ticket);
-            return new ObjectResult(example);
+        {
+            var result = _ticketRepository.GetTickets();
+            if (result == null)
+            {
+                return BadRequest();
+            }
+            return new ObjectResult(result);
         }
+
+        /// <summary>
+        /// Get tickets by User Id
+        /// </summary>
+        /// <remarks>Returns a list of tickets</remarks>
+        /// <param name="userId">userId of the ticket</param>
+        /// <response code="200">Ticket loaded</response>
+        /// <response code="404">Ticket not found</response>
+        [HttpGet]
+        [Route("/api/ticket/userid/{userId}")]
+        [ValidateModelState]
+        [SwaggerOperation("GetTicketsByUserId")]
+        [SwaggerResponse(200, typeof(List<Ticket>), "Ticket loaded")]
+        [SwaggerResponse(404, typeof(List<Ticket>), "Ticket not found")]
+        public virtual IActionResult GetTicketsByUserId([FromRoute]string userId)
+        {
+            var result = _ticketRepository.GetTicketsByUserId(userId);
+            if (result == null)
+            {
+                return BadRequest();
+            }
+            return new ObjectResult(result);
+        }
+
+        /// <summary>
+        /// Update ticket
+        /// </summary>
+        /// <remarks>Update a ticket in system</remarks>
+        /// <param name="ticket">Ticket data</param>
+        /// <response code="200">Ticket updated</response>
+        /// <response code="400">Bad request</response>
+        [HttpPut]
+        [Route("/api/ticket")]
+        [ValidateModelState]
+        [SwaggerOperation("UpdateTicket")]
+        [SwaggerResponse(200, typeof(Object), "Ticket updated")]
+        [SwaggerResponse(400, typeof(Object), "Bad request")]
+        public virtual IActionResult UpdateTicket([FromBody]Ticket ticket)
+        {
+            var result = _ticketRepository.UpdateTicket((int)ticket.TicketId, (int)ticket.TicketEventDateId);
+            if (result == null)
+            {
+                return BadRequest();
+            }
+            return new ObjectResult(result);
+        }
+        
     }
 }
