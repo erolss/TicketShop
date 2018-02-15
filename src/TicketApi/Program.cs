@@ -13,42 +13,46 @@ namespace TicketApi
 {
     public class Program
     {
-        //public static void Main(string[] args)
-        //{
-        //    BuildWebHost(args).Run();
-        //}
+        public static void Main(string[] args)
+        {
+            BuildWebHost(args).Run();
+        }
 
-        //public static IWebHost BuildWebHost(string[] args) =>
-        //    WebHost.CreateDefaultBuilder(args)
-        //        .UseStartup<Startup>()
-        //        .Build();
+        public static IWebHost BuildWebHost(string[] args) =>
+            WebHost.CreateDefaultBuilder(args)
+                //.UseUrls("http://+:5000" /*, "https://+:5001" */)
+                //.UseContentRoot(Directory.GetCurrentDirectory())
+                //.UseIISIntegration()
+                .UseStartup<Startup>()
+                .Build();
+
         /// <summary>
         /// Main
         /// </summary>
         /// <param name="args"></param>
-        public static void Main(string[] args)
-        {
-            var host = new WebHostBuilder()
-                .UseKestrel(options =>
-                {
-                    // options.ThreadCount = 4;
-                    // options.UseHttps("cert.pfx", "certpassword");
-                    options.Listen(IPAddress.Any, 80, listenOptions =>
-                    {
-                        listenOptions.NoDelay = false;
-                        listenOptions.UseConnectionLogging();
-                    });
-                    //options.NoDelay = true;
-                    //options.UseConnectionLogging();
-                })
-                .UseUrls("http://+:5000" /*, "https://+:5001" */)
-                .UseContentRoot(Directory.GetCurrentDirectory())
-                .UseIISIntegration()
-                .UseStartup<Startup>()
-                .Build();
+        //public static void Main(string[] args)
+        //{
+        //    var host = new WebHostBuilder()
+        //        .UseKestrel(options =>
+        //        {
+        //            // options.ThreadCount = 4;
+        //            // options.UseHttps("cert.pfx", "certpassword");
+        //            //options.Listen(IPAddress.Any, 80, listenOptions =>
+        //            //{
+        //            //    listenOptions.NoDelay = false;
+        //            //    listenOptions.UseConnectionLogging();
+        //            //});
+        //            //options.NoDelay = true;
+        //            //options.UseConnectionLogging();
+        //        })
+        //        .UseUrls("http://+:5000" /*, "https://+:5001" */)
+        //        .UseContentRoot(Directory.GetCurrentDirectory())
+        //        .UseIISIntegration()
+        //        .UseStartup<Startup>()
+        //        .Build();
 
-            host.Run();
+        //    host.Run();
 
-        }
+        //}
     }
 }

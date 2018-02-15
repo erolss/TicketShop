@@ -6,7 +6,9 @@ using TicketSystem.DatabaseRepository.Model;
 namespace TicketSystem.DatabaseRepository.Interface
 {
     public interface IEventRepository
-    {   /// <summary>
+    {   
+        
+        /// <summary>
         /// Add Event to database
         /// </summary>
         /// <param name="name">Event name</param>

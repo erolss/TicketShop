@@ -12,6 +12,7 @@ namespace TicketSystem.DatabaseRepository
 {
     public class EventRepository : IEventRepository
     {
+       
         public Event AddEvent(string name, string htmlDescription)
         {
             var query = @"INSERT INTO TicketEvents(EventName, EventHtmlDescription)

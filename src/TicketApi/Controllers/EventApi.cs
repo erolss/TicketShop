@@ -37,16 +37,15 @@ using TicketApi.Models;
 using TicketSystem.DatabaseRepository;
 
 namespace TicketApi.Controllers
-{ 
+{
     /// <summary>
     /// 
     /// </summary>
     public class EventApiController : Controller
     {
-
-        private EventRepository _eventRepository;
         
-            
+        private EventRepository _eventRepository = new EventRepository();
+        
         /// <summary>
         /// Create new event
         /// </summary>
@@ -62,7 +61,12 @@ namespace TicketApi.Controllers
         [SwaggerResponse(400, typeof(Object), "Bad request")]
         public virtual IActionResult AddEvent([FromBody]Event body)
         {
-            _eventRepository.AddEvent(body);
+            var result = _eventRepository.AddEvent(body.EventName, body.EventHtmlDescription);
+            if (result == null)
+            {
+                return BadRequest();
+            }
+            return new ObjectResult(result);
         }
 
         /// <summary>
@@ -76,7 +80,7 @@ namespace TicketApi.Controllers
         [Route("/api/event/{eventId}")]
         [ValidateModelState]
         [SwaggerOperation("DeleteEvent")]
-        public virtual void DeleteEvent([FromRoute]int? eventId)
+        public virtual void DeleteEvent([FromRoute]int eventId)
         {
             _eventRepository.DeleteEvent(eventId);
         }
@@ -95,13 +99,9 @@ namespace TicketApi.Controllers
         [SwaggerResponse(200, typeof(List<Event>), "Events search results loaded")]
         [SwaggerResponse(404, typeof(List<Event>), "No events found")]
         public virtual IActionResult FindEvents([FromRoute]string query)
-        { 
-            string exampleJson = null;
-            
-            var example = exampleJson != null
-            ? JsonConvert.DeserializeObject<List<Event>>(exampleJson)
-            : default(List<Event>);
-            return new ObjectResult(example);
+        {
+            var result = _eventRepository.FindEvents(query);
+            return new ObjectResult(result);
         }
 
         /// <summary>
@@ -117,14 +117,14 @@ namespace TicketApi.Controllers
         [SwaggerOperation("GetEventById")]
         [SwaggerResponse(200, typeof(Object), "Event loaded")]
         [SwaggerResponse(404, typeof(Object), "Event not found")]
-        public virtual IActionResult GetEventById([FromRoute]int? eventId)
-        { 
-            string exampleJson = null;
-            
-            var example = exampleJson != null
-            ? JsonConvert.DeserializeObject<Object>(exampleJson)
-            : default(Object);
-            return new ObjectResult(example);
+        public virtual IActionResult GetEventById([FromRoute]int eventId)
+        {
+            var result = _eventRepository.GetEventById(eventId);
+            if (result == null)
+            {
+                return NotFound();
+            }
+            return new ObjectResult(result);
         }
 
         /// <summary>
@@ -140,37 +140,37 @@ namespace TicketApi.Controllers
         [SwaggerResponse(200, typeof(List<Event>), "Events loaded")]
         [SwaggerResponse(400, typeof(List<Event>), "Bad request")]
         public virtual IActionResult GetEvents()
-        { 
-            string exampleJson = null;
-            
-            var example = exampleJson != null
-            ? JsonConvert.DeserializeObject<List<Event>>(exampleJson)
-            : default(List<Event>);
-            return new ObjectResult(example);
+        {
+            var result = _eventRepository.GetEvents();
+            if (result == null)
+            {
+                return BadRequest();
+            }
+            return new ObjectResult(result);
         }
 
         /// <summary>
         /// Update event
         /// </summary>
         /// <remarks>Update an event</remarks>
-        /// <param name="eventId">Event ID</param>
         /// <param name="body">Event data</param>
         /// <response code="200">Event updated</response>
         /// <response code="404">Event not found</response>
         [HttpPut]
-        [Route("/api/event/{eventId}")]
+        [Route("/api/event")]
         [ValidateModelState]
         [SwaggerOperation("UpdateEvent")]
         [SwaggerResponse(200, typeof(Object), "Event updated")]
         [SwaggerResponse(404, typeof(Object), "Event not found")]
-        public virtual IActionResult UpdateEvent([FromRoute]int? eventId, [FromBody]Event body)
-        { 
-            string exampleJson = null;
-            
-            var example = exampleJson != null
-            ? JsonConvert.DeserializeObject<Object>(exampleJson)
-            : default(Object);
-            return new ObjectResult(example);
+        public virtual IActionResult UpdateEvent([FromBody]Event body)
+        {
+
+            var result = _eventRepository.UpdateEvent((int)body.Id, body.EventName, body.EventHtmlDescription);
+            if (result == null)
+            {
+                return NotFound();
+            }
+            return new ObjectResult(result);
         }
     }
 }
