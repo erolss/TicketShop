@@ -1,9 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
-using TicketSystem.DbRepository.Model;
+using TicketApi.Db.Model;
 
-namespace TicketSystem.DbRepository.Interface
+namespace TicketApi.Db.Interface
 {
     public interface IVenueRepository
     {

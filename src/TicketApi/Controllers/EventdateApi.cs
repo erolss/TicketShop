@@ -34,7 +34,7 @@ using Swashbuckle.AspNetCore.SwaggerGen;
 using Newtonsoft.Json;
 using TicketApi.Attributes;
 using TicketApi.Models;
-using TicketSystem.DbRepository;
+using TicketApi.Db;
 using TicketApi.Settings;
 using Microsoft.Extensions.Options;
 

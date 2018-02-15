@@ -35,7 +35,7 @@ using Newtonsoft.Json;
 using TicketApi.Attributes;
 using TicketApi.Models;
 using Microsoft.Extensions.Options;
-using TicketSystem.DbRepository;
+using TicketApi.Db;
 using TicketApi.Settings;
 
 namespace TicketApi.Controllers

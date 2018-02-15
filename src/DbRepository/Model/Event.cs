@@ -1,4 +1,4 @@
-﻿namespace TicketSystem.DbRepository.Model
+﻿namespace TicketApi.Db.Model
 {
     public class Event
     {

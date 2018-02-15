@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace TicketSystem.DbRepository.Interface
+namespace TicketApi.Db.Interface
 {
     class ITicketEventRepository
     {

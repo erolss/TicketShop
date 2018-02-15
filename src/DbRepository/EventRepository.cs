@@ -2,15 +2,15 @@
 using System.Collections.Generic;
 using System.Configuration;
 using System.Data.SqlClient;
-using TicketSystem.DbRepository.Interface;
-using TicketSystem.DbRepository.Model;
+using TicketApi.Db.Interface;
+using TicketApi.Db.Model;
 using Dapper;
 using DbExtensions;
 using System.Linq;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Options;
 
-namespace TicketSystem.DbRepository
+namespace TicketApi.Db
 {
     public class EventRepository : IEventRepository
     {

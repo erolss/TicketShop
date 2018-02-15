@@ -1,7 +1,7 @@
-﻿using TicketSystem.DbRepository.Model;
+﻿using TicketApi.Db.Model;
 using System.Collections.Generic;
 
-namespace TicketSystem.DbRepository.Interface
+namespace TicketApi.Db.Interface
 {
     public interface ITicketRepository
     {

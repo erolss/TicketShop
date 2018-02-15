@@ -5,11 +5,11 @@ using System.Collections.Generic;
 using System.Configuration;
 using System.Data.SqlClient;
 using System.Linq;
-using TicketSystem.DbRepository.Interface;
-using TicketSystem.DbRepository.Model;
+using TicketApi.Db.Interface;
+using TicketApi.Db.Model;
 
 
-namespace TicketSystem.DbRepository
+namespace TicketApi.Db
 {
     public class VenueRepository : IVenueRepository
     {

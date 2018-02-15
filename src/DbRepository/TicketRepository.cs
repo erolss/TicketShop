@@ -3,12 +3,12 @@ using System.Configuration;
 using System.Data.SqlClient;
 using System.Linq;
 using Dapper;
-using TicketSystem.DbRepository.Model;
-using TicketSystem.DbRepository.Interface;
+using TicketApi.Db.Model;
+using TicketApi.Db.Interface;
 using Microsoft.Extensions.Configuration;
 using DbExtensions;
 
-namespace TicketSystem.DbRepository
+namespace TicketApi.Db
 {
     public class TicketRepository : ITicketRepository
     {
