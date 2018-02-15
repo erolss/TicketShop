@@ -34,6 +34,9 @@ using Swashbuckle.AspNetCore.SwaggerGen;
 using Newtonsoft.Json;
 using TicketApi.Attributes;
 using TicketApi.Models;
+using TicketApi.Settings;
+using TicketSystem.DbRepository;
+using Microsoft.Extensions.Options;
 
 namespace TicketApi.Controllers
 { 
@@ -41,7 +44,15 @@ namespace TicketApi.Controllers
     /// 
     /// </summary>
     public class TransactionApiController : Controller
-    { 
+    {
+        private DbSettings _dbSettings;
+        private TransactionRepository _transactionRepository;
+
+        public TransactionApiController(IOptions<DbSettings> db)
+        {
+            this._dbSettings = db.Value;
+            this._transactionRepository = new TransactionRepository(_dbSettings.ConnectionString);
+        }
         /// <summary>
         /// Create a transaction in the system
         /// </summary>

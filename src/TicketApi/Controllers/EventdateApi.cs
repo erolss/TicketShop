@@ -34,14 +34,25 @@ using Swashbuckle.AspNetCore.SwaggerGen;
 using Newtonsoft.Json;
 using TicketApi.Attributes;
 using TicketApi.Models;
+using TicketSystem.DbRepository;
+using TicketApi.Settings;
+using Microsoft.Extensions.Options;
 
 namespace TicketApi.Controllers
 { 
     /// <summary>
     /// 
     /// </summary>
-    public class EventdateApiController : Controller
-    { 
+    public class EventDateApiController : Controller
+    {
+        private DbSettings _dbSettings;
+        private EventDateRepository _eventDateRepository;
+
+        public EventDateApiController(IOptions<DbSettings> db)
+        {
+            this._dbSettings = db.Value;
+            this._eventDateRepository = new EventDateRepository(_dbSettings.ConnectionString);
+        }
         /// <summary>
         /// Create new event date
         /// </summary>

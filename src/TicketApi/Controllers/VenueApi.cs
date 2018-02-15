@@ -34,6 +34,9 @@ using Swashbuckle.AspNetCore.SwaggerGen;
 using Newtonsoft.Json;
 using TicketApi.Attributes;
 using TicketApi.Models;
+using Microsoft.Extensions.Options;
+using TicketSystem.DbRepository;
+using TicketApi.Settings;
 
 namespace TicketApi.Controllers
 { 
@@ -41,7 +44,17 @@ namespace TicketApi.Controllers
     /// 
     /// </summary>
     public class VenueApiController : Controller
-    { 
+    {
+
+        private DbSettings _dbSettings;
+        private VenueRepository _venueRepository;
+
+        public VenueApiController(IOptions<DbSettings> db)
+        {
+            this._dbSettings = db.Value;
+            this._venueRepository = new VenueRepository(_dbSettings.ConnectionString);
+        }
+
         /// <summary>
         /// Add Venue
         /// </summary>

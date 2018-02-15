@@ -19,7 +19,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\DatabaseRepository\DatabaseRepository.csproj" />
+    <ProjectReference Include="..\DbRepository\DbRepository.csproj" />
     <ProjectReference Include="..\PaymentProvider\PaymentProvider.csproj" />
   </ItemGroup>
 

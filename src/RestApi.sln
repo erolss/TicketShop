@@ -9,6 +9,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PaymentProvider", "PaymentP
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TicketApi", "TicketApi\TicketApi.csproj", "{BF92A61E-18FD-423A-AA9C-36CA5C1BBC58}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DbRepository", "DbRepository\DbRepository.csproj", "{B8D0921E-D69B-4C7F-87D6-46779F8448DB}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{BF92A61E-18FD-423A-AA9C-36CA5C1BBC58}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BF92A61E-18FD-423A-AA9C-36CA5C1BBC58}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BF92A61E-18FD-423A-AA9C-36CA5C1BBC58}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B8D0921E-D69B-4C7F-87D6-46779F8448DB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B8D0921E-D69B-4C7F-87D6-46779F8448DB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B8D0921E-D69B-4C7F-87D6-46779F8448DB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B8D0921E-D69B-4C7F-87D6-46779F8448DB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
