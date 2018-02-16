@@ -33,7 +33,7 @@ using Microsoft.Extensions.Primitives;
 using Swashbuckle.AspNetCore.SwaggerGen;
 using Newtonsoft.Json;
 using TicketApi.Attributes;
-using TicketApi.Models;
+using TicketApi.Db.Models;
 using TicketApi.Db;
 using TicketApi.Settings;
 using Microsoft.Extensions.Options;
@@ -67,13 +67,13 @@ namespace TicketApi.Controllers
         [SwaggerResponse(200, typeof(Object), "Event date created")]
         [SwaggerResponse(400, typeof(Object), "Bad request")]
         public virtual IActionResult AddEventDate([FromBody]EventDate body)
-        { 
-            string exampleJson = null;
-            
-            var example = exampleJson != null
-            ? JsonConvert.DeserializeObject<Object>(exampleJson)
-            : default(Object);
-            return new ObjectResult(example);
+        {
+            var result = _eventDateRepository.AddEventDate(body);
+            if (result == null)
+            {
+                return BadRequest();
+            }
+            return new ObjectResult(result);
         }
 
         /// <summary>
@@ -87,16 +87,23 @@ namespace TicketApi.Controllers
         [Route("/api/eventdate/{eventDateId}")]
         [ValidateModelState]
         [SwaggerOperation("DeleteEventDate")]
-        public virtual void DeleteEventDate([FromRoute]int? eventDateId)
-        { 
-            throw new NotImplementedException();
+        [SwaggerResponse(200, typeof(Object), "EventDate deleted")]
+        [SwaggerResponse(404, typeof(Object), "EventDate not found")]
+        public virtual IActionResult DeleteEventDate([FromRoute]int? eventDateId)
+        {
+            var result = _eventDateRepository.DeleteEventDate((int)eventDateId);
+            if (result)
+            {
+                return Ok();
+            }
+            return NotFound();
         }
 
         /// <summary>
         /// Get all event dates matching query
         /// </summary>
         /// <remarks>Returns all event date matching query</remarks>
-        /// <param name="query">query to find events</param>
+        /// <param name="query">query to find events, type Search</param>
         /// <response code="200">Event date search result loaded</response>
         /// <response code="404">No events found</response>
         [HttpGet]
@@ -105,14 +112,14 @@ namespace TicketApi.Controllers
         [SwaggerOperation("FindEventDates")]
         [SwaggerResponse(200, typeof(List<EventDate>), "Event date search result loaded")]
         [SwaggerResponse(404, typeof(List<EventDate>), "No events found")]
-        public virtual IActionResult FindEventDates([FromRoute]string query)
-        { 
-            string exampleJson = null;
-            
-            var example = exampleJson != null
-            ? JsonConvert.DeserializeObject<List<EventDate>>(exampleJson)
-            : default(List<EventDate>);
-            return new ObjectResult(example);
+        public virtual IActionResult FindEventDates([FromRoute]Search query)
+        {
+            var result = _eventDateRepository.FindEventDates(query.Searchstring);
+            if (result == null)
+            {
+                return BadRequest();
+            }
+            return new ObjectResult(result);
         }
 
         /// <summary>
@@ -129,13 +136,13 @@ namespace TicketApi.Controllers
         [SwaggerResponse(200, typeof(Object), "Event loaded")]
         [SwaggerResponse(404, typeof(Object), "Event not found")]
         public virtual IActionResult GetEventDateByEventId([FromRoute]int? eventId)
-        { 
-            string exampleJson = null;
-            
-            var example = exampleJson != null
-            ? JsonConvert.DeserializeObject<Object>(exampleJson)
-            : default(Object);
-            return new ObjectResult(example);
+        {
+            var result = _eventDateRepository.GetEventDateByEventId((int)eventId);
+            if (result == null)
+            {
+                return BadRequest();
+            }
+            return new ObjectResult(result);
         }
 
         /// <summary>
@@ -152,13 +159,13 @@ namespace TicketApi.Controllers
         [SwaggerResponse(200, typeof(Object), "Event date loaded")]
         [SwaggerResponse(404, typeof(Object), "Event date not found")]
         public virtual IActionResult GetEventDateById([FromRoute]int? eventDateId)
-        { 
-            string exampleJson = null;
-            
-            var example = exampleJson != null
-            ? JsonConvert.DeserializeObject<Object>(exampleJson)
-            : default(Object);
-            return new ObjectResult(example);
+        {
+            var result = _eventDateRepository.GetEventDateById((int)eventDateId);
+            if (result == null)
+            {
+                return BadRequest();
+            }
+            return new ObjectResult(result);
         }
 
         /// <summary>
@@ -174,13 +181,13 @@ namespace TicketApi.Controllers
         [SwaggerResponse(200, typeof(List<EventDate>), "Events loaded")]
         [SwaggerResponse(400, typeof(List<EventDate>), "Bad request")]
         public virtual IActionResult GetEventDates()
-        { 
-            string exampleJson = null;
-            
-            var example = exampleJson != null
-            ? JsonConvert.DeserializeObject<List<EventDate>>(exampleJson)
-            : default(List<EventDate>);
-            return new ObjectResult(example);
+        {
+            var result = _eventDateRepository.GetEventDates();
+            if (result == null)
+            {
+                return BadRequest();
+            }
+            return new ObjectResult(result);
         }
 
         /// <summary>
@@ -197,37 +204,59 @@ namespace TicketApi.Controllers
         [SwaggerResponse(200, typeof(Object), "Event date loaded")]
         [SwaggerResponse(404, typeof(Object), "Event date not found")]
         public virtual IActionResult GetFullEventDateById([FromRoute]int? eventDateId)
-        { 
-            string exampleJson = null;
-            
-            var example = exampleJson != null
-            ? JsonConvert.DeserializeObject<Object>(exampleJson)
-            : default(Object);
-            return new ObjectResult(example);
+        {
+            var result = _eventDateRepository.GetFullEventDateById((int)eventDateId);
+            if (result == null)
+            {
+                return BadRequest();
+            }
+            return new ObjectResult(result);
         }
 
         /// <summary>
         /// Update event date
         /// </summary>
         /// <remarks>Update an event date</remarks>
-        /// <param name="eventDateId">Event date ID</param>
-        /// <param name="body">Event date data</param>
+        /// <param name="eventDate">Event date data</param>
         /// <response code="200">Event date updated</response>
         /// <response code="404">Event date not found</response>
         [HttpPut]
-        [Route("/api/eventdate/{eventDateId}")]
+        [Route("/api/eventdate")]
         [ValidateModelState]
         [SwaggerOperation("UpdateEventDate")]
         [SwaggerResponse(200, typeof(Object), "Event date updated")]
         [SwaggerResponse(404, typeof(Object), "Event date not found")]
-        public virtual IActionResult UpdateEventDate([FromRoute]int? eventDateId, [FromBody]EventDate body)
-        { 
-            string exampleJson = null;
-            
-            var example = exampleJson != null
-            ? JsonConvert.DeserializeObject<Object>(exampleJson)
-            : default(Object);
-            return new ObjectResult(example);
+        public virtual IActionResult UpdateEventDate([FromBody]EventDate eventDate)
+        {
+            var result = _eventDateRepository.UpdateEventDate(eventDate);
+            if (result == null)
+            {
+                return BadRequest();
+            }
+            return new ObjectResult(result);
+        }
+
+        /// <summary>
+        /// Get number of sold tickets to EventDate
+        /// </summary>
+        /// <remarks>Returns a number of sold tickets</remarks>
+        /// <param name="eventDateId">EventDate ID</param>
+        /// <response code="200">Event loaded</response>
+        /// <response code="404">Event not found</response>
+        [HttpGet]
+        [Route("/api/eventdate/soldtickets/{eventDateId}")]
+        [ValidateModelState]
+        [SwaggerOperation("GetSoldTicketCount")]
+        [SwaggerResponse(200, typeof(int?), "Event loaded")]
+        [SwaggerResponse(404, typeof(int?), "Event not found")]
+        public virtual IActionResult GetSoldTicketCount([FromRoute]int? eventDateId)
+        {
+            var result = _eventDateRepository.GetSoldTicketCount((int)eventDateId);
+            if (result == 0)
+            {
+                return NotFound();
+            }
+            return new ObjectResult(result);
         }
     }
 }

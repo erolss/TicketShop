@@ -33,7 +33,7 @@ using Microsoft.Extensions.Primitives;
 using Swashbuckle.AspNetCore.SwaggerGen;
 using Newtonsoft.Json;
 using TicketApi.Attributes;
-using TicketApi.Models;
+using TicketApi.Db.Models;
 using TicketApi.Settings;
 using TicketApi.Db;
 using Microsoft.Extensions.Options;
@@ -70,7 +70,7 @@ namespace TicketApi.Controllers
         [SwaggerResponse(400, typeof(Object), "Bad request")]
         public virtual IActionResult AddTicket([FromBody]Ticket ticket)
         {
-            var result = _ticketRepository.AddTicket((int)ticket.TicketEventDateId);
+            var result = _ticketRepository.AddTicket(ticket);
             if (result == null)
             {
                 return BadRequest();
@@ -89,14 +89,16 @@ namespace TicketApi.Controllers
         [Route("/api/ticket")]
         [ValidateModelState]
         [SwaggerOperation("DeleteTicket")]
-        public bool DeleteTicket([FromBody]Ticket ticket)
+        [SwaggerResponse(200, typeof(Object), "Ticket deleted")]
+        [SwaggerResponse(404, typeof(Object), "Ticket not found")]
+        public virtual IActionResult DeleteTicket([FromBody]Ticket ticket)
         {
             var result = _ticketRepository.DeleteTicket((int)ticket.TicketId);
-            if (!result)
+            if (result)
             {
-                return false;
+                return Ok();
             }
-            return true;
+            return NotFound();
         }
 
         /// <summary>
@@ -182,13 +184,36 @@ namespace TicketApi.Controllers
         [SwaggerResponse(400, typeof(Object), "Bad request")]
         public virtual IActionResult UpdateTicket([FromBody]Ticket ticket)
         {
-            var result = _ticketRepository.UpdateTicket((int)ticket.TicketId, (int)ticket.TicketEventDateId);
+            var result = _ticketRepository.UpdateTicket(ticket);
             if (result == null)
             {
                 return BadRequest();
             }
             return new ObjectResult(result);
         }
-        
+
+        /// <summary>
+        /// Get FullTicket by Id in system
+        /// </summary>
+        /// <remarks>Returns an FullTicket by ID</remarks>
+        /// <param name="ticketId">TicketID</param>
+        /// <response code="200">Ticket loaded</response>
+        /// <response code="404">Ticket not found</response>
+        [HttpGet]
+        [Route("/api/ticket/full/{ticketId}")]
+        [ValidateModelState]
+        [SwaggerOperation("GetFullTicketById")]
+        [SwaggerResponse(200, typeof(Object), "Ticket loaded")]
+        [SwaggerResponse(404, typeof(Object), "Ticket not found")]
+        public virtual IActionResult GetFullTicketById([FromRoute]int? ticketId)
+        {
+            var result = _ticketRepository.GetFullTicketById((int)ticketId);
+            if (result == null)
+            {
+                return NotFound();
+            }
+            return new ObjectResult(result);
+        }
+                
     }
 }

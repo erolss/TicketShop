@@ -19,18 +19,29 @@ namespace TicketApi.Db
         {
             _connectionString = connectionString;
         }
-        public Venue AddVenue(string name, string address, string city, string country)
+        public Venue AddVenue(Venue venue)
         {
             using (var connection = new SqlConnection(_connectionString))
             {
+
+                var query = @"INSERT INTO Venues([VenueName], [Address], [City], [Country])
+                            VALUES(@name, @address, @city, @country)";
+
+                var values = new {
+                    name = venue.VenueName,
+                    address = venue.Address,
+                    city = venue.City,
+                    country = venue.Country
+                };
+
                 connection.Open();
-                connection.Query("insert into Venues([VenueName],[Address],[City],[Country]) values(@Name,@Address, @City, @Country)", new { Name = name, Address = address, City = city, Country = country });
-                var addedVenueQuery = connection.Query<int>("SELECT IDENT_CURRENT ('Venues') AS Current_Identity").First();
-                return connection.Query<Venue>("SELECT * FROM Venues WHERE VenueID=@Id", new { Id = addedVenueQuery }).First();
+                connection.Query(query, values);
+                var addedItemQuery = connection.Query<int>("SELECT IDENT_CURRENT ('Venues') AS Current_Identity").First();
+                return connection.Query<Venue>("SELECT * FROM Venues WHERE VenueID=@Id", new { Id = addedItemQuery }).FirstOrDefault();
             }
         }
 
-        public void DeleteVenue(int id)
+        public bool DeleteVenue(int id)
         {
             var query = SQL
                 .DELETE_FROM("Venues")
@@ -39,8 +50,12 @@ namespace TicketApi.Db
             using (var connection = new SqlConnection(_connectionString))
             {
                 connection.Open();
-                connection.Execute(query.ToString(), new { id });
+                if (connection.Execute(query.ToString(), new { id }) > 0)
+                {
+                    return true;
+                }
             }
+            return false;
         }
 
         public Venue GetVenueById(int id)
@@ -53,7 +68,7 @@ namespace TicketApi.Db
             using (var connection = new SqlConnection(_connectionString))
             {
                 connection.Open();
-                var result = connection.Query<Venue>(query.ToString(), new { id }).First();
+                var result = connection.Query<Venue>(query.ToString(), new { id }).FirstOrDefault();
 
                 return result;
             }
@@ -82,27 +97,41 @@ namespace TicketApi.Db
             }
         }
 
-        public Venue UpdateVenue(int id, string name, string address, string city, string country)
+        public Venue UpdateVenue(Venue venue)
         {
             var query = SQL
                 .UPDATE("Venues")
                 .SET("VenueName = @name, Address = @address, City = @city, Country = @country")
                 .WHERE("VenueID = @id");
+            var values = new
+            {
+                id = venue.VenueId,
+                name = venue.VenueName,
+                address = venue.Address,
+                city = venue.City,
+                country = venue.Country
+            };
 
             using (var connection = new SqlConnection(_connectionString))
             {
                 connection.Open();
-                connection.Execute(query.ToString(), new { id, name, address, city, country });
-                return connection.Query<Venue>("SELECT * FROM Venues WHERE VenueID = @id", new { id }).First();
+                connection.Execute(query.ToString(), values);
+                return connection.Query<Venue>("SELECT * FROM Venues WHERE VenueID = @id", new { values.id }).FirstOrDefault();
             }
         }
 
-        public List<Venue> FindVenue(string searchStr)
+        public List<Venue> FindVenues(string searchStr)
         {
+            var query = @"SELECT * FROM Venues
+                        WHERE VenueName like '%@s%' OR
+                        Address like '%@s%' OR 
+                        City like '%@s%' OR
+                        Country like '%@s%'";
+
             using (var connection = new SqlConnection(_connectionString))
             {
                 connection.Open();
-                var result = connection.Query<Venue>("SELECT * FROM Venues WHERE VenueName like '%" + searchStr + "%' OR Address like '%" + searchStr + "%' OR City like '%" + searchStr + "%' OR Country like '%" + searchStr + "%'").ToList();
+                var result = connection.Query<Venue>(query, new { s = searchStr }).ToList();
 
                 return result;
             }

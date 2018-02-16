@@ -39,7 +39,7 @@ namespace TicketApi.Db
             }
         }
 
-        public void DeleteEvent(int id)
+        public bool DeleteEvent(int id)
         {
             var query = SQL
                 .DELETE_FROM("TicketEvents")
@@ -48,8 +48,12 @@ namespace TicketApi.Db
             using (var connection = new SqlConnection(_connectionString))
             {
                 connection.Open();
-                connection.Execute(query.ToString(), new { id });
+                if (connection.Execute(query.ToString(), new { id }) > 0)
+                {
+                    return true;
+                }
             }
+            return false;
         }
 
 

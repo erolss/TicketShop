@@ -19,7 +19,7 @@ namespace TicketApi.Db
             _connectionString = connectionString;
         }
 
-        public Ticket AddTicket(int ticketEventDateId)
+        public Ticket AddTicket(Ticket ticket)
         {
             var query = @"INSERT INTO Tickets(TicketEventDateID)
                         VALUES(@ticketEventDateId)";
@@ -27,7 +27,7 @@ namespace TicketApi.Db
             using (var connection = new SqlConnection(_connectionString))
             {
                 connection.Open();
-                connection.Query(query, new { ticketEventDateId });
+                connection.Query(query, new { ticketEventDateId = ticket.TicketEventDateId });
                 var addedItemQuery = connection.Query<int>("SELECT IDENT_CURRENT ('Tickets') AS Current_Identity").First();
                 var result = connection.Query<Ticket>("SELECT * FROM Tickets WHERE TicketID=@id", new { id = addedItemQuery }).FirstOrDefault();
 
@@ -35,7 +35,7 @@ namespace TicketApi.Db
             }
         }
 
-        public Ticket UpdateTicket(int ticketId, int ticketEventDateId)
+        public Ticket UpdateTicket(Ticket ticket)
         {
             var query = SQL
                .UPDATE("Tickets")
@@ -45,8 +45,8 @@ namespace TicketApi.Db
             using (var connection = new SqlConnection(_connectionString))
             {
                 connection.Open();
-                connection.Execute(query.ToString(), new { id = ticketId, ticketEventDateId});
-                var result = connection.Query<Ticket>("SELECT * FROM TicketEvents WHERE EventID = @id", new { id = ticketId }).FirstOrDefault();
+                connection.Execute(query.ToString(), new { ticketEventDateID = ticket.TicketEventDateId });
+                var result = connection.Query<Ticket>("SELECT * FROM Ticket WHERE TicketID = @id", new { id = ticket.TicketId }).FirstOrDefault();
 
                 return result;
             }
@@ -134,7 +134,7 @@ namespace TicketApi.Db
             using (var connection = new SqlConnection(_connectionString))
             {
                 connection.Open();
-                var result = connection.Query<Ticket>(query, new { ticketId = id }).First();
+                var result = connection.Query<Ticket>(query, new { ticketId = id }).FirstOrDefault();
 
                 return result;
             }

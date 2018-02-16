@@ -33,7 +33,7 @@ using Microsoft.Extensions.Primitives;
 using Swashbuckle.AspNetCore.SwaggerGen;
 using Newtonsoft.Json;
 using TicketApi.Attributes;
-//using TicketApi.Models;
+//using TicketApi.Db.Models;
 using TicketApi.Db;
 using TicketApi.Db.Models;
 using TicketApi.Settings;
@@ -89,9 +89,16 @@ namespace TicketApi.Controllers
         [Route("/api/event/{eventId}")]
         [ValidateModelState]
         [SwaggerOperation("DeleteEvent")]
-        public virtual void DeleteEvent([FromRoute]int? eventId)
+        [SwaggerResponse(200, typeof(Object), "Event deleted")]
+        [SwaggerResponse(404, typeof(Object), "Event not found")]
+        public virtual IActionResult DeleteEvent([FromRoute]int? eventId)
         {
-            _eventRepository.DeleteEvent((int)eventId);
+            var result = _eventRepository.DeleteEvent((int)eventId);
+            if (result)
+            {
+                return Ok();
+            }
+            return NotFound();
         }
 
         /// <summary>

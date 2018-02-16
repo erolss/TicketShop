@@ -33,7 +33,7 @@ using Microsoft.Extensions.Primitives;
 using Swashbuckle.AspNetCore.SwaggerGen;
 using Newtonsoft.Json;
 using TicketApi.Attributes;
-using TicketApi.Models;
+using TicketApi.Db.Models;
 using Microsoft.Extensions.Options;
 using TicketApi.Db;
 using TicketApi.Settings;
@@ -59,7 +59,7 @@ namespace TicketApi.Controllers
         /// Add Venue
         /// </summary>
         /// <remarks>Add new venue to system</remarks>
-        /// <param name="body">Venue data</param>
+        /// <param name="venue">Venue object</param>
         /// <response code="200">Venue added</response>
         /// <response code="400">Bad request</response>
         [HttpPost]
@@ -68,30 +68,60 @@ namespace TicketApi.Controllers
         [SwaggerOperation("AddVenue")]
         [SwaggerResponse(200, typeof(Object), "Venue added")]
         [SwaggerResponse(400, typeof(Object), "Bad request")]
-        public virtual IActionResult AddVenue([FromBody]Venue body)
-        { 
-            string exampleJson = null;
-            
-            var example = exampleJson != null
-            ? JsonConvert.DeserializeObject<Object>(exampleJson)
-            : default(Object);
-            return new ObjectResult(example);
+        public virtual IActionResult AddVenue([FromBody]Venue venue)
+        {
+            var result = _venueRepository.AddVenue(venue);
+            if (result == null)
+            {
+                return BadRequest();
+            }
+            return new ObjectResult(result);
         }
 
         /// <summary>
         /// Delete venue
         /// </summary>
         /// <remarks>Delete a venue</remarks>
-        /// <param name="venueId">Venue ID</param>
+        /// <param name="venue">Venue object</param>
         /// <response code="200">Venue deleted</response>
         /// <response code="404">Bad request</response>
         [HttpDelete]
-        [Route("/api/venue/{venueId}")]
+        [Route("/api/venue")]
         [ValidateModelState]
         [SwaggerOperation("DeleteVenue")]
-        public virtual void DeleteVenue([FromRoute]int? venueId)
-        { 
-            throw new NotImplementedException();
+        [SwaggerResponse(200, typeof(Object), "Venue deleted")]
+        [SwaggerResponse(404, typeof(Object), "Venue not found")]
+        public virtual IActionResult DeleteVenue([FromBody]Venue venue)
+        {
+            var result = _venueRepository.DeleteVenue((int)venue.VenueId);
+            if (result)
+            {
+                return Ok();
+            }
+            return NotFound();
+        }
+
+        /// <summary>
+        /// Get all venues matching query
+        /// </summary>
+        /// <remarks>Returns a list of venues matching the query</remarks>
+        /// <param name="query">venue search string object type Search</param>
+        /// <response code="200">Venue search results loaded</response>
+        /// <response code="404">No venues found</response>
+        [HttpGet]
+        [Route("/api/venue/search")]
+        [ValidateModelState]
+        [SwaggerOperation("FindVenues")]
+        [SwaggerResponse(200, typeof(List<Venue>), "Venue search results loaded")]
+        [SwaggerResponse(404, typeof(List<Venue>), "No venues found")]
+        public virtual IActionResult FindVenues([FromBody]Search query)
+        {
+            var result = _venueRepository.FindVenues(query.Searchstring);
+            if (result == null)
+            {
+                return BadRequest();
+            }
+            return new ObjectResult(result);
         }
 
         /// <summary>
@@ -108,13 +138,13 @@ namespace TicketApi.Controllers
         [SwaggerResponse(200, typeof(Object), "Venues loaded")]
         [SwaggerResponse(404, typeof(Object), "Venue not found")]
         public virtual IActionResult GetVenueById([FromRoute]int? venueId)
-        { 
-            string exampleJson = null;
-            
-            var example = exampleJson != null
-            ? JsonConvert.DeserializeObject<Object>(exampleJson)
-            : default(Object);
-            return new ObjectResult(example);
+        {
+            var result = _venueRepository.GetVenueById((int)venueId);
+            if (result == null)
+            {
+                return BadRequest();
+            }
+            return new ObjectResult(result);
         }
 
         /// <summary>
@@ -130,37 +160,36 @@ namespace TicketApi.Controllers
         [SwaggerResponse(200, typeof(List<Venue>), "Venues loaded")]
         [SwaggerResponse(400, typeof(List<Venue>), "Bad request")]
         public virtual IActionResult GetVenues()
-        { 
-            string exampleJson = null;
-            
-            var example = exampleJson != null
-            ? JsonConvert.DeserializeObject<List<Venue>>(exampleJson)
-            : default(List<Venue>);
-            return new ObjectResult(example);
+        {
+            var result = _venueRepository.GetVenues();
+            if (result == null)
+            {
+                return BadRequest();
+            }
+            return new ObjectResult(result);
         }
 
         /// <summary>
         /// Update venue
         /// </summary>
         /// <remarks>Update a venue in the system</remarks>
-        /// <param name="venueId">Venue ID</param>
-        /// <param name="body">Venue data</param>
+        /// <param name="venue">Venue object</param>
         /// <response code="200">Venue updated</response>
         /// <response code="400">Bad request</response>
         [HttpPut]
-        [Route("/api/venue/{venueId}")]
+        [Route("/api/venue")]
         [ValidateModelState]
         [SwaggerOperation("UpdateVenue")]
         [SwaggerResponse(200, typeof(Object), "Venue updated")]
         [SwaggerResponse(400, typeof(Object), "Bad request")]
-        public virtual IActionResult UpdateVenue([FromRoute]int? venueId, [FromBody]Venue body)
-        { 
-            string exampleJson = null;
-            
-            var example = exampleJson != null
-            ? JsonConvert.DeserializeObject<Object>(exampleJson)
-            : default(Object);
-            return new ObjectResult(example);
+        public virtual IActionResult UpdateVenue([FromBody]Venue venue)
+        {
+            var result = _venueRepository.UpdateVenue(venue);
+            if (result == null)
+            {
+                return BadRequest();
+            }
+            return new ObjectResult(result);
         }
     }
 }

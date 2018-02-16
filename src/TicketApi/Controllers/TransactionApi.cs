@@ -33,11 +33,10 @@ using Microsoft.Extensions.Primitives;
 using Swashbuckle.AspNetCore.SwaggerGen;
 using Newtonsoft.Json;
 using TicketApi.Attributes;
-using TicketApi.Models;
+using TicketApi.Db.Models;
 using TicketApi.Settings;
 using TicketApi.Db;
 using Microsoft.Extensions.Options;
-using DbModel = TicketApi.Db.Model;
 
 namespace TicketApi.Controllers
 {
@@ -70,20 +69,8 @@ namespace TicketApi.Controllers
         [SwaggerResponse(400, typeof(Object), "Bad request")]
         public virtual IActionResult AddTransaction([FromBody]Transaction transaction)
         {
-            var dbModel = new DbModel.Transaction
-            {
-                BuyerLastName = transaction.LastName,
-                BuyerFirstName = transaction.FirstName,
-                BuyerAddress = transaction.Address,
-                BuyerCity = transaction.City,
-                BuyerEmail = transaction.Email,
-                BuyerUserId = transaction.UserId,
-                TotalAmount = transaction.TotalAmount,
-                PaymentReference = transaction.PaymentReference,
-                PaymentStatus = transaction.PaymentStatus
-
-            };
-            var result = _transactionRepository.AddTransaction(dbModel);
+           
+            var result = _transactionRepository.AddTransaction(transaction);
             if (result == null)
             {
                 return BadRequest();
@@ -102,9 +89,16 @@ namespace TicketApi.Controllers
         [Route("/api/transaction")]
         [ValidateModelState]
         [SwaggerOperation("DeleteTransaction")]
-        public virtual void DeleteTransaction([FromBody]Transaction transaction)
+        [SwaggerResponse(200, typeof(Object), "Transaction deleted")]
+        [SwaggerResponse(404, typeof(Object), "Not Found")]
+        public virtual IActionResult DeleteTransaction([FromBody]Transaction transaction)
         {
-            throw new NotImplementedException();
+            var result = _transactionRepository.DeleteTransactionById((int)transaction.TransactionID);
+            if (result)
+            {
+                return Ok();
+            }
+            return NotFound();
         }
 
         /// <summary>
@@ -122,12 +116,12 @@ namespace TicketApi.Controllers
         [SwaggerResponse(404, typeof(List<Transaction>), "No transactions found")]
         public virtual IActionResult FindTransactions([FromBody]Search query)
         {
-            string exampleJson = null;
-
-            var example = exampleJson != null
-            ? JsonConvert.DeserializeObject<List<Transaction>>(exampleJson)
-            : default(List<Transaction>);
-            return new ObjectResult(example);
+            var result = _transactionRepository.FindTransactions(query.Searchstring);
+            if (result == null)
+            {
+                return BadRequest();
+            }
+            return new ObjectResult(result);
         }
 
         /// <summary>

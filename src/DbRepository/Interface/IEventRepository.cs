@@ -6,13 +6,12 @@ using TicketApi.Db.Models;
 namespace TicketApi.Db.Interface
 {
     public interface IEventRepository
-    {   
-        
+    {
+
         /// <summary>
         /// Add Event to database
         /// </summary>
-        /// <param name="name">Event name</param>
-        /// <param name="htmlDescription">Event html description</param>
+        /// <param name="item">Event object</param>
         /// <returns>An Object representation of newly created event</returns>
         Event AddEvent(Event item);
 
@@ -34,9 +33,7 @@ namespace TicketApi.Db.Interface
         /// <summary>
         /// Update event by Id
         /// </summary>
-        /// <param name="id">Event Id</param>
-        /// <param name="name">Event name</param>
-        /// <param name="htmlDescription">Event html description</param>
+        /// <param name="item">Event object</param>
         /// <returns>>An Object representation of the updated event</returns>
         Event UpdateEvent(Event item);
 
@@ -44,7 +41,8 @@ namespace TicketApi.Db.Interface
         /// Delete Event by Id
         /// </summary>
         /// <param name="id">Event ID</param>
-        void DeleteEvent(int id);
+        /// <returns>bool, true if delete succeeded</returns>
+        bool DeleteEvent(int id);
 
         /// <summary>
         /// Find Events by search query

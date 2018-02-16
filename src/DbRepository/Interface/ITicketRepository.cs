@@ -10,14 +10,14 @@ namespace TicketApi.Db.Interface
         /// </summary>
         /// <param name="ticket">Ticket object</param>
         /// <return>An object representation of the created ticket</returns>
-        Ticket AddTicket(int ticketEventDateId);
+        Ticket AddTicket(Ticket ticket);
 
         /// <summary>
         /// Update a ticket
         /// </summary>
         /// <param name="ticket">Ticket object</param>
         /// <returns>An object representation of the updated ticket</returns>
-        Ticket UpdateTicket(int ticketId, int ticketEventDateId);
+        Ticket UpdateTicket(Ticket ticket);
 
         /// <summary>
         /// Delete a ticket

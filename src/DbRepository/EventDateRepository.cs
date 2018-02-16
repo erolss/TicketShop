@@ -23,7 +23,8 @@ namespace TicketApi.Db
         public EventDate AddEventDate(EventDate eventDate)
         {
             var query = @"INSERT INTO TicketEventDates(TicketEventID, VenueID, EventStartDateTime, Price, MaxTickets)
-                        VALUES(@eventId, @venueId, @eventStartDateTime, @price, @maxTickets)";
+                        VALUES(@eventDate)";
+                        //VALUES(@eventId, @venueId, @eventStartDateTime, @price, @maxTickets)";
 
 
             using (var connection = new SqlConnection(_connectionString))
@@ -31,14 +32,14 @@ namespace TicketApi.Db
                 connection.Open();
                 connection.Query(query, eventDate);
                 var addedItemQuery = connection.Query<int>("SELECT IDENT_CURRENT ('TicketEventDates') AS Current_Identity").First();
-                var result = connection.Query<EventDate>("SELECT * FROM TicketEventDates WHERE TicketEventDateId=@id", new { id = addedItemQuery }).FirstOrDefault();
+                var result = connection.Query<EventDate>("SELECT * FROM TicketEventDates WHERE TicketEventDateID=@id", new { id = addedItemQuery }).FirstOrDefault();
 
                 return result;
 
             }
         }
 
-        public void DeleteEventDate(int id)
+        public bool DeleteEventDate(int id)
         {
             var query = SQL
                 .DELETE_FROM("TicketEventDates")
@@ -47,8 +48,12 @@ namespace TicketApi.Db
             using (var connection = new SqlConnection(_connectionString))
             {
                 connection.Open();
-                connection.Execute(query.ToString(), new { id });
+                if (connection.Execute(query.ToString(), new { id }) > 0)
+                {
+                    return true;
+                }
             }
+            return false;
         }
 
         public List<EventDate> FindEventDates(string searchStr)

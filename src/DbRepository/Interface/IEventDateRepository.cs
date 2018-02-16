@@ -51,11 +51,7 @@ namespace TicketApi.Db.Interface
         /// <summary>
         /// Update the EventDate
         /// </summary>
-        /// <param name="id">ID of the EventDate</param>
-        /// <param name="eventId">ID of parent Event</param>
-        /// <param name="venueId">ID of venue</param>
-        /// <param name="datetime">datetime of the EventDate</param>
-        /// <param name="seats">Number of seats at EventDate</param>
+        /// <param name="eventDate">EventDate object</param>
         /// <returns>An object representation of the updated EventDate</returns>
         EventDate UpdateEventDate(EventDate eventDate);
 
@@ -63,7 +59,8 @@ namespace TicketApi.Db.Interface
         /// Delete EventDate by ID
         /// </summary>
         /// <param name="id">ID of the EventDate</param>
-        void DeleteEventDate(int id);
+        /// <returns>bool, true if delete succeeded</returns>
+        bool DeleteEventDate(int id);
 
         /// <summary>
         /// Find EventDates matching the search query

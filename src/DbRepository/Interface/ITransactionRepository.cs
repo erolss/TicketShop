@@ -24,14 +24,14 @@ namespace TicketApi.Db.Interface
         /// <summary>
         /// Update a transaction by Id
         /// </summary>
-        /// <param name="transactionId">Transaction Id</param>
+        /// <param name="transaction">Transaction Object</param>
         /// <returns>An object representation of the updated Transaction</returns>
-        Transaction UpdateTransactionById(Transaction transaction);
+        Transaction UpdateTransaction(Transaction transaction);
         /// <summary>
         /// Delete a transaction
         /// </summary>
         /// <param name="transactionId">Transaction Id</param>
-        void DeleteTransactionById(int transactionId);
+        bool DeleteTransactionById(int transactionId);
 
         /// <summary>
         /// Get Transactions by User Id
@@ -39,6 +39,13 @@ namespace TicketApi.Db.Interface
         /// <param name="userId">User Id</param>
         /// <returns>A list of object representations of the Transactions</returns>
         List<Transaction> GetTransactionByUserId(string userId);
+
+        /// <summary>
+        /// Find transactions matching the query
+        /// </summary>
+        /// <param name="searchStr">Search query</param>
+        /// <returns>A list of object representations of Transactions</returns>
+        List<Transaction> FindTransactions(string searchStr);
 
     }
 }
