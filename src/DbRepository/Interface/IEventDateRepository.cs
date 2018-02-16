@@ -1,6 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-using TicketApi.Db.Model;
+using TicketApi.Db.Models;
 
 namespace TicketApi.Db.Interface
 {
@@ -17,7 +17,7 @@ namespace TicketApi.Db.Interface
         /// <param name="price">Price of a ticket to the EventDate</param>
         /// <param name="maxTickets">Max number of Tickets</param>
         /// <returns>An object representation of the created EventDate</returns>
-        EventDate AddEventDate(int eventId, int venueId, DateTime eventDate, double price, int maxTickets );
+        EventDate AddEventDate(EventDate eventDate);
 
         /// <summary>
         /// Get Event Dates
@@ -57,7 +57,7 @@ namespace TicketApi.Db.Interface
         /// <param name="datetime">datetime of the EventDate</param>
         /// <param name="seats">Number of seats at EventDate</param>
         /// <returns>An object representation of the updated EventDate</returns>
-        EventDate UpdateEventDate(int id, int eventId, int venueId, DateTime dateTime, double price, int maxTickets);
+        EventDate UpdateEventDate(EventDate eventDate);
 
         /// <summary>
         /// Delete EventDate by ID

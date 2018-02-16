@@ -6,7 +6,7 @@ using System.Configuration;
 using System.Data.SqlClient;
 using System.Linq;
 using TicketApi.Db.Interface;
-using TicketApi.Db.Model;
+using TicketApi.Db.Models;
 
 
 namespace TicketApi.Db

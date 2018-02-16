@@ -1,4 +1,4 @@
-﻿using TicketApi.Db.Model;
+﻿using TicketApi.Db.Models;
 using System.Collections.Generic;
 
 namespace TicketApi.Db.Interface

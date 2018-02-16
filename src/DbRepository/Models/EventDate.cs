@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace TicketApi.Db.Model
+namespace TicketApi.Db.Models
 {
     public class EventDate
     {

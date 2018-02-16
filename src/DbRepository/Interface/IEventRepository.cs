@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
-using TicketApi.Db.Model;
+using TicketApi.Db.Models;
 
 namespace TicketApi.Db.Interface
 {
@@ -14,7 +14,7 @@ namespace TicketApi.Db.Interface
         /// <param name="name">Event name</param>
         /// <param name="htmlDescription">Event html description</param>
         /// <returns>An Object representation of newly created event</returns>
-        Event AddEvent(string name, string htmlDescription);
+        Event AddEvent(Event item);
 
         /// <summary>
         /// Get all events, w offset & limit
@@ -38,7 +38,7 @@ namespace TicketApi.Db.Interface
         /// <param name="name">Event name</param>
         /// <param name="htmlDescription">Event html description</param>
         /// <returns>>An Object representation of the updated event</returns>
-        Event UpdateEvent(int id, string name, string htmlDescription);
+        Event UpdateEvent(Event item);
 
         /// <summary>
         /// Delete Event by Id

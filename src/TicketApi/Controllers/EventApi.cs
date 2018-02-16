@@ -33,8 +33,9 @@ using Microsoft.Extensions.Primitives;
 using Swashbuckle.AspNetCore.SwaggerGen;
 using Newtonsoft.Json;
 using TicketApi.Attributes;
-using TicketApi.Models;
+//using TicketApi.Models;
 using TicketApi.Db;
+using TicketApi.Db.Models;
 using TicketApi.Settings;
 using Microsoft.Extensions.Options;
 
@@ -69,7 +70,7 @@ namespace TicketApi.Controllers
         [SwaggerResponse(400, typeof(Object), "Bad request")]
         public virtual IActionResult AddEvent([FromBody]Event body)
         {
-            var result = _eventRepository.AddEvent(body.EventName, body.EventHtmlDescription);
+            var result = _eventRepository.AddEvent(body);
             if (result == null)
             {
                 return BadRequest();
@@ -172,7 +173,7 @@ namespace TicketApi.Controllers
         [SwaggerResponse(404, typeof(Object), "Event not found")]
         public virtual IActionResult UpdateEvent([FromBody]Event body)
         {
-            var result = _eventRepository.UpdateEvent((int)body.Id, body.EventName, body.EventHtmlDescription);
+            var result = _eventRepository.UpdateEvent(body);
             if (result == null)
             {
                 return NotFound();

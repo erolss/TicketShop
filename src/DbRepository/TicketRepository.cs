@@ -3,7 +3,7 @@ using System.Configuration;
 using System.Data.SqlClient;
 using System.Linq;
 using Dapper;
-using TicketApi.Db.Model;
+using TicketApi.Db.Models;
 using TicketApi.Db.Interface;
 using Microsoft.Extensions.Configuration;
 using DbExtensions;

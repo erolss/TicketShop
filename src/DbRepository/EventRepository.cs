@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Configuration;
 using System.Data.SqlClient;
 using TicketApi.Db.Interface;
-using TicketApi.Db.Model;
+using TicketApi.Db.Models;
 using Dapper;
 using DbExtensions;
 using System.Linq;
@@ -21,7 +21,7 @@ namespace TicketApi.Db
             _connectionString = connectionString;
         }
 
-        public Event AddEvent(string name, string htmlDescription)
+        public Event AddEvent(Event item)
         {
 
             var query = @"INSERT INTO TicketEvents(EventName, EventHtmlDescription)
@@ -30,7 +30,7 @@ namespace TicketApi.Db
             using (var connection = new SqlConnection(_connectionString))
             {
                 connection.Open();
-                connection.Query(query, new { name, htmlDescription });
+                connection.Query(query, item);
                 var addedTicketEventQuery = connection.Query<int>("SELECT IDENT_CURRENT ('TicketEvents') AS Current_Identity").First();
                 var result = connection.Query<Event>("SELECT * FROM TicketEvents WHERE TicketEventID=@id", new { id = addedTicketEventQuery }).First();
 
@@ -87,7 +87,7 @@ namespace TicketApi.Db
             }
         }
 
-        public Event UpdateEvent(int id, string name, string htmlDescription)
+        public Event UpdateEvent(Event item)
         {
             var query = SQL
                 .UPDATE("TicketEvents")
@@ -97,8 +97,8 @@ namespace TicketApi.Db
             using (var connection = new SqlConnection(_connectionString))
             {
                 connection.Open();
-                connection.Execute(query.ToString(), new { name, htmlDescription });
-                var result = connection.Query<Event>("SELECT * FROM TicketEvents WHERE EventID= @id", new { id }).First();
+                connection.Execute(query.ToString(), new { name = item.EventName, htmlDescription = item.EventHtmlDescription });
+                var result = connection.Query<Event>("SELECT * FROM TicketEvents WHERE TicketEventID = @id", new { item.TicketEventID }).FirstOrDefault();
 
                 return result;
 

@@ -7,7 +7,7 @@ using System.Configuration;
 using System.Data.SqlClient;
 using System.Linq;
 using TicketApi.Db.Interface;
-using TicketApi.Db.Model;
+using TicketApi.Db.Models;
 
 namespace TicketApi.Db
 {
@@ -20,18 +20,18 @@ namespace TicketApi.Db
         {
             _connectionString = connectionString;
         }
-        public EventDate AddEventDate(int eventId, int venueId, DateTime eventDate, double price, int maxTickets)
+        public EventDate AddEventDate(EventDate eventDate)
         {
             var query = @"INSERT INTO TicketEventDates(TicketEventID, VenueID, EventStartDateTime, Price, MaxTickets)
                         VALUES(@eventId, @venueId, @eventStartDateTime, @price, @maxTickets)";
 
-            
+
             using (var connection = new SqlConnection(_connectionString))
             {
                 connection.Open();
-                connection.Query(query, new { eventId, venueId, eventStartDateTime = eventDate, price, maxTickets });
+                connection.Query(query, eventDate);
                 var addedItemQuery = connection.Query<int>("SELECT IDENT_CURRENT ('TicketEventDates') AS Current_Identity").First();
-                var result = connection.Query<EventDate>("SELECT * FROM TicketEventDates WHERE TicketEventDateId=@id", new { id = addedItemQuery }).First();
+                var result = connection.Query<EventDate>("SELECT * FROM TicketEventDates WHERE TicketEventDateId=@id", new { id = addedItemQuery }).FirstOrDefault();
 
                 return result;
 
@@ -74,7 +74,7 @@ namespace TicketApi.Db
 
         public int GetSoldTicketCount(int id)
         {
-           
+
             var query = @"SELECT COUNT(TicketEventDateID)
                         FROM Tickets
                         GROUP BY TicketEventDateID
@@ -99,7 +99,7 @@ namespace TicketApi.Db
             using (var connection = new SqlConnection(_connectionString))
             {
                 connection.Open();
-                var result = connection.Query<EventDate>(query.ToString(), new { id = eventId }).First();
+                var result = connection.Query<EventDate>(query.ToString(), new { id = eventId }).FirstOrDefault();
 
                 return result;
             }
@@ -115,7 +115,7 @@ namespace TicketApi.Db
             using (var connection = new SqlConnection(_connectionString))
             {
                 connection.Open();
-                var result = connection.Query<EventDate>(query.ToString(), new { id }).First();
+                var result = connection.Query<EventDate>(query.ToString(), new { id }).FirstOrDefault();
 
                 return result;
             }
@@ -148,25 +148,35 @@ namespace TicketApi.Db
             using (var connection = new SqlConnection(_connectionString))
             {
                 connection.Open();
-                var result = connection.Query<FullEventDate>(query, new { id }).First();
+                var result = connection.Query<FullEventDate>(query, new { id }).FirstOrDefault();
 
                 return result;
             }
         }
 
-      
-        public EventDate UpdateEventDate(int id, int eventId, int venueId, DateTime dateTime, double price, int maxTickets)
+
+        public EventDate UpdateEventDate(EventDate eventDate)
         {
             var query = SQL
                 .UPDATE("TicketEventDates")
                 .SET("TicketEventID = @eventId, VenueID = @venueId, EventStartDateTime = @dateTime, Price = @price, MaxTickets = @maxTickets")
                 .WHERE("TicketEventDateID = @id");
 
+            var values = new
+            {
+                eventId = eventDate.TicketEventID,
+                venueId = eventDate.VenueId,
+                dateTime = eventDate.EventStartDateTime,
+                price = eventDate.Price,
+                maxTickets = eventDate.MaxTickets,
+                id = eventDate.TicketEventDateID
+            };
+
             using (var connection = new SqlConnection(_connectionString))
             {
                 connection.Open();
-                connection.Execute(query.ToString(), new { eventId, venueId, dateTime, price, maxTickets, id });
-                var result = connection.Query<EventDate>("SELECT * FROM TicketEvents WHERE TicketEventId = @id", new { id }).First();
+                connection.Execute(query.ToString(), values);
+                var result = connection.Query<EventDate>("SELECT * FROM TicketEvents WHERE TicketEventId = @id", new { values.id }).First();
 
                 return result;
             }
