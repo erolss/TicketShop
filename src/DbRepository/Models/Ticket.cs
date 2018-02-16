@@ -4,19 +4,22 @@ using System.Runtime.Serialization;
 
 namespace TicketApi.Db.Models
 {
+    /// <summary>
+    /// 
+    /// </summary>
     public partial class Ticket : IEquatable<Ticket>
     {
         /// <summary>
-        /// Gets or Sets TicketId
+        /// Gets or Sets TicketID
         /// </summary>
-        [DataMember(Name = "ticketId")]
-        public int? TicketId { get; set; }
+        [DataMember(Name = "ticketID")]
+        public int? TicketID { get; set; }
 
         /// <summary>
-        /// Gets or Sets TicketEventDateId
+        /// Gets or Sets TicketEventDateID
         /// </summary>
-        [DataMember(Name = "ticketEventDateId")]
-        public int? TicketEventDateId { get; set; }
+        [DataMember(Name = "ticketEventDateID")]
+        public int? TicketEventDateID { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -26,8 +29,8 @@ namespace TicketApi.Db.Models
         {
             var sb = new StringBuilder();
             sb.Append("class Ticket {\n");
-            sb.Append("  TicketId: ").Append(TicketId).Append("\n");
-            sb.Append("  TicketEventDateId: ").Append(TicketEventDateId).Append("\n");
+            sb.Append("  TicketID: ").Append(TicketID).Append("\n");
+            sb.Append("  TicketEventDateID: ").Append(TicketEventDateID).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -69,14 +72,14 @@ namespace TicketApi.Db.Models
 
             return
                 (
-                    TicketId == other.TicketId ||
-                    TicketId != null &&
-                    TicketId.Equals(other.TicketId)
+                    TicketID == other.TicketID ||
+                    TicketID != null &&
+                    TicketID.Equals(other.TicketID)
                 ) &&
                 (
-                    TicketEventDateId == other.TicketEventDateId ||
-                    TicketEventDateId != null &&
-                    TicketEventDateId.Equals(other.TicketEventDateId)
+                    TicketEventDateID == other.TicketEventDateID ||
+                    TicketEventDateID != null &&
+                    TicketEventDateID.Equals(other.TicketEventDateID)
                 );
         }
 
@@ -90,10 +93,10 @@ namespace TicketApi.Db.Models
             {
                 var hashCode = 41;
                 // Suitable nullity checks etc, of course :)
-                if (TicketId != null)
-                    hashCode = hashCode * 59 + TicketId.GetHashCode();
-                if (TicketEventDateId != null)
-                    hashCode = hashCode * 59 + TicketEventDateId.GetHashCode();
+                if (TicketID != null)
+                    hashCode = hashCode * 59 + TicketID.GetHashCode();
+                if (TicketEventDateID != null)
+                    hashCode = hashCode * 59 + TicketEventDateID.GetHashCode();
                 return hashCode;
             }
         }

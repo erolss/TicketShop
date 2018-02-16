@@ -1,10 +1,15 @@
 ﻿using System;
+using System.Runtime.Serialization;
 
 namespace TicketApi.Db.Models
 {
+    [DataContract]
     public class FullTicket
     {
-        public int TicketId { get; set; }
+        [DataMember]
+        public int TicketID { get; set; }
+
+        [DataMember]
         public FullEventDate EventDate { get; set; }
 
     }

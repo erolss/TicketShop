@@ -75,16 +75,16 @@ namespace TicketApi.Db.Models
         {
             var sb = new StringBuilder();
             sb.Append("class Transaction {\n");
-            sb.Append("  Id: ").Append(TransactionID).Append("\n");
-            sb.Append("  FirstName: ").Append(BuyerFirstName).Append("\n");
-            sb.Append("  LastName: ").Append(BuyerLastName).Append("\n");
-            sb.Append("  Address: ").Append(BuyerAddress).Append("\n");
-            sb.Append("  City: ").Append(BuyerCity).Append("\n");
-            sb.Append("  Email: ").Append(BuyerEmail).Append("\n");
-            sb.Append("  UserId: ").Append(BuyerUserId).Append("\n");
+            sb.Append("  TransactionID: ").Append(TransactionID).Append("\n");
+            sb.Append("  BuyerFirstName: ").Append(BuyerFirstName).Append("\n");
+            sb.Append("  BuyerLastName: ").Append(BuyerLastName).Append("\n");
+            sb.Append("  BuyerAddress: ").Append(BuyerAddress).Append("\n");
+            sb.Append("  BuyerCity: ").Append(BuyerCity).Append("\n");
+            sb.Append("  BuyerEmail: ").Append(BuyerEmail).Append("\n");
+            sb.Append("  BuyerUserId: ").Append(BuyerUserId).Append("\n");
             sb.Append("  PaymentStatus: ").Append(PaymentStatus).Append("\n");
-            sb.Append("  PaymentReferenceId: ").Append(PaymentReference).Append("\n");
-            sb.Append("  PaymentReferenceId: ").Append(TotalAmount).Append("\n");
+            sb.Append("  PaymentReference: ").Append(PaymentReference).Append("\n");
+            sb.Append("  TotalAmount: ").Append(TotalAmount).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }

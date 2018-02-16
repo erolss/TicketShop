@@ -93,7 +93,7 @@ namespace TicketApi.Controllers
         [SwaggerResponse(404, typeof(Object), "Venue not found")]
         public virtual IActionResult DeleteVenue([FromBody]Venue venue)
         {
-            var result = _venueRepository.DeleteVenue((int)venue.VenueId);
+            var result = _venueRepository.DeleteVenue((int)venue.VenueID);
             if (result)
             {
                 return Ok();

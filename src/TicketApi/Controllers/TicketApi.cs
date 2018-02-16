@@ -93,7 +93,7 @@ namespace TicketApi.Controllers
         [SwaggerResponse(404, typeof(Object), "Ticket not found")]
         public virtual IActionResult DeleteTicket([FromBody]Ticket ticket)
         {
-            var result = _ticketRepository.DeleteTicket((int)ticket.TicketId);
+            var result = _ticketRepository.DeleteTicket((int)ticket.TicketID);
             if (result)
             {
                 return Ok();
