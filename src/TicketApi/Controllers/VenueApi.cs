@@ -108,7 +108,7 @@ namespace TicketApi.Controllers
         /// <param name="query">venue search string object type Search</param>
         /// <response code="200">Venue search results loaded</response>
         /// <response code="404">No venues found</response>
-        [HttpGet]
+        [HttpPost]
         [Route("/api/venue/search")]
         [ValidateModelState]
         [SwaggerOperation("FindVenues")]
@@ -135,7 +135,7 @@ namespace TicketApi.Controllers
         [Route("/api/venue/{venueId}")]
         [ValidateModelState]
         [SwaggerOperation("GetVenueById")]
-        [SwaggerResponse(200, typeof(Object), "Venues loaded")]
+        [SwaggerResponse(200, typeof(Object), "Venue loaded")]
         [SwaggerResponse(404, typeof(Object), "Venue not found")]
         public virtual IActionResult GetVenueById([FromRoute]int? venueId)
         {
@@ -155,13 +155,14 @@ namespace TicketApi.Controllers
         /// <response code="400">Bad request</response>
         [HttpGet]
         [Route("/api/venue")]
+        [Route("/api/venue/{offset}/{maxLimit}")]        
         [ValidateModelState]
         [SwaggerOperation("GetVenues")]
         [SwaggerResponse(200, typeof(List<Venue>), "Venues loaded")]
         [SwaggerResponse(400, typeof(List<Venue>), "Bad request")]
-        public virtual IActionResult GetVenues()
+        public virtual IActionResult GetVenues([FromRoute]int offset=0, [FromRoute]int maxLimit=20)
         {
-            var result = _venueRepository.GetVenues();
+            var result = _venueRepository.GetVenues(offset, maxLimit);
             if (result == null)
             {
                 return BadRequest();

@@ -39,7 +39,7 @@ using TicketApi.Settings;
 using Microsoft.Extensions.Options;
 
 namespace TicketApi.Controllers
-{ 
+{
     /// <summary>
     /// 
     /// </summary>
@@ -106,7 +106,7 @@ namespace TicketApi.Controllers
         /// <param name="query">query to find events, type Search</param>
         /// <response code="200">Event date search result loaded</response>
         /// <response code="404">No events found</response>
-        [HttpGet]
+        [HttpPost]
         [Route("/api/eventdate/search/{query}")]
         [ValidateModelState]
         [SwaggerOperation("FindEventDates")]
@@ -115,9 +115,9 @@ namespace TicketApi.Controllers
         public virtual IActionResult FindEventDates([FromRoute]Search query)
         {
             var result = _eventDateRepository.FindEventDates(query.Searchstring);
-            if (result == null)
+            if (result == null || result.Count() == 0)
             {
-                return BadRequest();
+                return NotFound();
             }
             return new ObjectResult(result);
         }
@@ -140,7 +140,7 @@ namespace TicketApi.Controllers
             var result = _eventDateRepository.GetEventDateByEventId((int)eventId);
             if (result == null)
             {
-                return BadRequest();
+                return NotFound();
             }
             return new ObjectResult(result);
         }
@@ -163,7 +163,7 @@ namespace TicketApi.Controllers
             var result = _eventDateRepository.GetEventDateById((int)eventDateId);
             if (result == null)
             {
-                return BadRequest();
+                return NotFound();
             }
             return new ObjectResult(result);
         }
@@ -176,14 +176,15 @@ namespace TicketApi.Controllers
         /// <response code="400">Bad request</response>
         [HttpGet]
         [Route("/api/eventdate")]
+        [Route("/api/eventdate/{offset}/{maxLimit}")]
         [ValidateModelState]
         [SwaggerOperation("GetEventDates")]
         [SwaggerResponse(200, typeof(List<EventDate>), "Events loaded")]
         [SwaggerResponse(400, typeof(List<EventDate>), "Bad request")]
-        public virtual IActionResult GetEventDates()
+        public virtual IActionResult GetEventDates([FromRoute]int offset = 0, [FromRoute]int maxLimit = 20)
         {
-            var result = _eventDateRepository.GetEventDates();
-            if (result == null)
+            var result = _eventDateRepository.GetEventDates(offset, maxLimit);
+            if (result == null || result.Count() == 0)
             {
                 return BadRequest();
             }

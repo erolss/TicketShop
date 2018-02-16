@@ -30,7 +30,7 @@ namespace TicketApi.Db
             using (var connection = new SqlConnection(_connectionString))
             {
                 connection.Open();
-                connection.Query(query, item);
+                connection.Query(query, new { name = item.EventName, htmlDescription = item.EventHtmlDescription});
                 var addedTicketEventQuery = connection.Query<int>("SELECT IDENT_CURRENT ('TicketEvents') AS Current_Identity").First();
                 var result = connection.Query<Event>("SELECT * FROM TicketEvents WHERE TicketEventID=@id", new { id = addedTicketEventQuery }).First();
 
@@ -101,8 +101,8 @@ namespace TicketApi.Db
             using (var connection = new SqlConnection(_connectionString))
             {
                 connection.Open();
-                connection.Execute(query.ToString(), new { name = item.EventName, htmlDescription = item.EventHtmlDescription });
-                var result = connection.Query<Event>("SELECT * FROM TicketEvents WHERE TicketEventID = @id", new { item.TicketEventID }).FirstOrDefault();
+                connection.Execute(query.ToString(), new { name = item.EventName, htmlDescription = item.EventHtmlDescription, id = item.TicketEventID});
+                var result = connection.Query<Event>("SELECT * FROM TicketEvents WHERE TicketEventID = @id", new { id = item.TicketEventID }).FirstOrDefault();
 
                 return result;
 
@@ -111,13 +111,14 @@ namespace TicketApi.Db
 
         public List<Event> FindEvents(string searchStr)
         {
-            var query = @"SELECT * FROM TicketEvents
-                        WHERE EventName like '%@searchQuery%' OR EventHtmlDescription like '%@searchQuery%'";
+            var query = String.Format(@"SELECT * FROM TicketEvents
+                        WHERE EventName like '%{0}%' OR
+                        EventHtmlDescription like '%{0}%'", searchStr);
 
             using (var connection = new SqlConnection(_connectionString))
             {
                 connection.Open();
-                var result = connection.Query<Event>(query, new { searchQuery = searchStr }).ToList();
+                var result = connection.Query<Event>(query).ToList();
 
                 return result;
             }

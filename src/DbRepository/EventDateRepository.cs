@@ -30,7 +30,7 @@ namespace TicketApi.Db
             using (var connection = new SqlConnection(_connectionString))
             {
                 connection.Open();
-                connection.Query(query, eventDate);
+                connection.ExecuteScalar(query, eventDate);
                 var addedItemQuery = connection.Query<int>("SELECT IDENT_CURRENT ('TicketEventDates') AS Current_Identity").First();
                 var result = connection.Query<EventDate>("SELECT * FROM TicketEventDates WHERE TicketEventDateID=@id", new { id = addedItemQuery }).FirstOrDefault();
 
@@ -58,20 +58,20 @@ namespace TicketApi.Db
 
         public List<EventDate> FindEventDates(string searchStr)
         {
-            var query = @"SELECT * FROM TicketEventDates ted
+            var query = String.Format(@"SELECT * FROM TicketEventDates ted
                         JOIN TicketEvents te ON ted.TicketEventID = te.TicketEventID
                         JOIN Venue v ON ted.VenueID = v.VenueID
-                        WHERE te.EventName LIKE '%@searchQuery%'
-                            OR te.EventHtmlDescription LIKE '%@searchQuery%'
-                            OR v.VenueName LIKE '%@searchQuery%'
-                            OR v.City LIKE '%@searchQuery%'
-                            OR v.Country LIKE '%@searchQuery%'
-                            OR ted.EventStartDateTime LIKE '%@searchQuery%'";
+                        WHERE te.EventName LIKE '%{0}%'
+                            OR te.EventHtmlDescription LIKE '%{0}%'
+                            OR v.VenueName LIKE '%{0}%'
+                            OR v.City LIKE '%{0}%'
+                            OR v.Country LIKE '%{0}%'
+                            OR ted.EventStartDateTime LIKE '%{0}%'", searchStr);
 
             using (var connection = new SqlConnection(_connectionString))
             {
                 connection.Open();
-                var result = connection.Query<EventDate>(query, new { searchQuery = searchStr }).ToList();
+                var result = connection.Query<EventDate>(query).ToList();
 
                 return result;
             }

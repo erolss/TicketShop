@@ -103,17 +103,17 @@ namespace TicketApi.Db
         public List<Transaction> FindTransactions(string searchStr)
         {
             
-            var query = @"SELECT * FROM Transactions
+            var query = string.Format(@"SELECT * FROM TicketTransactions
                         WHERE
-                            BuyerLastName like '%@s%' OR
-                            BuyerFirstName like '%@s%' OR
-                            BuyerAddress like '%@s%' OR
-                            BuyerCity like '%@s%' OR
-                            BuyerEmail like '%@s%' OR
-                            BuyerUserId like '%@s%' OR
-                            PaymentReference like '%@s%' OR
-                            PaymentStatus like '%@s%' OR
-                            TotalAmount like '%@s%'";
+                            BuyerLastName like '%{0}%' OR
+                            BuyerFirstName like '%{0}%' OR
+                            BuyerAddress like '%{0}%' OR
+                            BuyerCity like '%{0}%' OR
+                            BuyerEmail like '%{0}%' OR
+                            BuyerUserId like '%{0}%' OR
+                            PaymentReference like '%{0}%' OR
+                            PaymentStatus like '%{0}%' OR
+                            TotalAmount like '%{0}%'", searchStr);
 
             using (var connection = new SqlConnection(_connectionString))
             {
@@ -124,6 +124,19 @@ namespace TicketApi.Db
             }
         }
 
+        public List<Transaction> GetTransactions(int offset = 0, int maxLimit = 20)
+        {
+            var query = @"SELECT * FROM TicketTransactions
+                        ORDER BY TransactionID
+                        OFFSET @offset ROWS
+                        FETCH NEXT @maxLimit ROWS ONLY";
 
+            using (var connection = new SqlConnection(_connectionString))
+            {
+                connection.Open();
+                var result = connection.Query<Transaction>(query, new { offset, maxLimit }).ToList();
+                return result;
+            }
+        }
     }
 }

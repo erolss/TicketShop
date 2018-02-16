@@ -8,6 +8,13 @@ namespace TicketApi.Db.Interface
     public interface ITransactionRepository
     {
         /// <summary>
+        /// Get transactions from db
+        /// </summary>
+        /// <param name="offset">result set offset</param>
+        /// <param name="maxLimit">Max rows to fetch</param>
+        /// <returns>A list of object representations of Transactions</returns>
+        List<Transaction> GetTransactions(int offset = 0, int maxLimit = 20);
+        /// <summary>
         /// Get Transaction by Id
         /// </summary>
         /// <param name="transactionId">ID of Transaction</param>

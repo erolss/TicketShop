@@ -1,6 +1,7 @@
 ﻿using Dapper;
 using DbExtensions;
 using Microsoft.Extensions.Configuration;
+using System;
 using System.Collections.Generic;
 using System.Configuration;
 using System.Data.SqlClient;
@@ -122,16 +123,20 @@ namespace TicketApi.Db
 
         public List<Venue> FindVenues(string searchStr)
         {
-            var query = @"SELECT * FROM Venues
-                        WHERE VenueName like '%@s%' OR
-                        Address like '%@s%' OR 
-                        City like '%@s%' OR
-                        Country like '%@s%'";
+           var query = String.Format(@"SELECT * FROM Venues 
+                        WHERE
+                        VenueName LIKE '%{0}%' OR 
+                        Address LIKE '%{0}%' OR 
+                        City LIKE '%{0}%' OR 
+                        Country LIKE '%{0}%'",searchStr);
+
+
 
             using (var connection = new SqlConnection(_connectionString))
             {
                 connection.Open();
-                var result = connection.Query<Venue>(query, new { s = searchStr }).ToList();
+                
+                var result = connection.Query<Venue>(query).ToList();
 
                 return result;
             }

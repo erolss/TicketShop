@@ -108,7 +108,7 @@ namespace TicketApi.Controllers
         /// <param name="query">transaction data for ticket purchase</param>
         /// <response code="200">Transaction search results loaded</response>
         /// <response code="404">No transactions found</response>
-        [HttpGet]
+        [HttpPost]
         [Route("/api/transaction/search")]
         [ValidateModelState]
         [SwaggerOperation("FindTransactions")]
@@ -117,9 +117,9 @@ namespace TicketApi.Controllers
         public virtual IActionResult FindTransactions([FromBody]Search query)
         {
             var result = _transactionRepository.FindTransactions(query.Searchstring);
-            if (result == null)
+            if (result == null || result.Count() == 0)
             {
-                return BadRequest();
+                return NotFound();
             }
             return new ObjectResult(result);
         }
@@ -139,34 +139,37 @@ namespace TicketApi.Controllers
         [SwaggerResponse(404, typeof(Object), "Transaction not found")]
         public virtual IActionResult GetTransactionById([FromRoute]int? transactionId)
         {
-            string exampleJson = null;
-
-            var example = exampleJson != null
-            ? JsonConvert.DeserializeObject<Object>(exampleJson)
-            : default(Object);
-            return new ObjectResult(example);
+            var result = _transactionRepository.GetTransactionById((int)transactionId);
+            if (result == null)
+            {
+                return NotFound();
+            }
+            return new ObjectResult(result);
         }
 
         /// <summary>
-        /// Get all transactions in system
+        /// Get transactions
         /// </summary>
-        /// <remarks>Returns all transactions</remarks>
-        /// <response code="200">Transactions loaded</response>
-        /// <response code="400">Bad request</response>
+        /// <param name="offset">Result set offset</param>
+        /// <param name="maxLimit">Result max rows to fetch</param>
+        /// <response code="200">Transaction updated</response>
+        /// <response code="404">Transaction not found</response>
+
         [HttpGet]
         [Route("/api/transaction")]
+        [Route("/api/transaction/{offset}/{maxLimit}")]
         [ValidateModelState]
         [SwaggerOperation("GetTransactions")]
         [SwaggerResponse(200, typeof(List<Transaction>), "Transactions loaded")]
         [SwaggerResponse(400, typeof(List<Transaction>), "Bad request")]
-        public virtual IActionResult GetTransactions()
+        public virtual IActionResult GetTransactions([FromRoute]int offset=0, [FromRoute]int maxLimit=20)
         {
-            string exampleJson = null;
-
-            var example = exampleJson != null
-            ? JsonConvert.DeserializeObject<List<Transaction>>(exampleJson)
-            : default(List<Transaction>);
-            return new ObjectResult(example);
+            var result = _transactionRepository.GetTransactions(offset, maxLimit);
+            if (result == null || result.Count() == 0)
+            {
+                return NotFound();
+            }
+            return new ObjectResult(result);
         }
 
         /// <summary>

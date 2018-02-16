@@ -74,7 +74,7 @@ namespace TicketApi.Db
             var query = @"SELECT * FROM Tickets
                         ORDER BY TicketID
                         OFFSET @offset ROWS
-                        FETCH @maxLimit ROWS ONLY";
+                        FETCH NEXT @maxLimit ROWS ONLY";
 
             using (var connection = new SqlConnection(_connectionString))
             {
@@ -96,7 +96,7 @@ namespace TicketApi.Db
                         WHERE t.BuyerUserId = @userId
                         ORDER BY TransactionID
                         OFFSET @offset ROWS
-                        FETCH @maxLimit ROWS ONLY";
+                        FETCH NEXT @maxLimit ROWS ONLY";
 
             using (var connection = new SqlConnection(_connectionString))
             {
@@ -115,7 +115,7 @@ namespace TicketApi.Db
                         WHERE t.TransActionID = @transactionId
                         ORDER BY Tickets.TicketID
                         OFFSET @offset ROWS
-                        FETCH @maxLimit ROWS ONLY";
+                        FETCH NEXT @maxLimit ROWS ONLY";
 
             using (var connection = new SqlConnection(_connectionString))
             {

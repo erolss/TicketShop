@@ -132,13 +132,14 @@ namespace TicketApi.Controllers
         /// <response code="400">Bad request</response>
         [HttpGet]
         [Route("/api/ticket")]
+        [Route("/api/ticket/{offset}/{maxLimit}")]
         [ValidateModelState]
         [SwaggerOperation("GetTickets")]
         [SwaggerResponse(200, typeof(List<Ticket>), "Ticket loaded")]
         [SwaggerResponse(400, typeof(List<Ticket>), "Bad request")]
-        public virtual IActionResult GetTickets()
+        public virtual IActionResult GetTickets([FromRoute]int offset = 0, [FromRoute]int maxLimit = 20)
         {
-            var result = _ticketRepository.GetTickets();
+            var result = _ticketRepository.GetTickets(offset, maxLimit);
             if (result == null)
             {
                 return BadRequest();

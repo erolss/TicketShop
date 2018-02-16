@@ -108,7 +108,7 @@ namespace TicketApi.Controllers
         /// <param name="query">event search string</param>
         /// <response code="200">Event search results loaded</response>
         /// <response code="404">No events found</response>
-        [HttpGet]
+        [HttpPost]
         [Route("/api/event/search")]
         [ValidateModelState]
         [SwaggerOperation("FindEvents")]
@@ -117,6 +117,10 @@ namespace TicketApi.Controllers
         public virtual IActionResult FindEvents([FromBody]Search query)
         {
             var result = _eventRepository.FindEvents(query.Searchstring);
+            if(result == null || result.Count() == 0)
+            {
+                return NotFound();
+            }
             return new ObjectResult(result);
         }
 
@@ -151,16 +155,17 @@ namespace TicketApi.Controllers
         /// <response code="400">Bad request</response>
         [HttpGet]
         [Route("/api/event")]
+        [Route("/api/event/{offset}/{maxLimit}")]
         [ValidateModelState]
         [SwaggerOperation("GetEvents")]
         [SwaggerResponse(200, typeof(List<Event>), "Events loaded")]
-        [SwaggerResponse(400, typeof(List<Event>), "Bad request")]
-        public virtual IActionResult GetEvents()
+        [SwaggerResponse(404, typeof(List<Event>), "Not Found")]
+        public virtual IActionResult GetEvents([FromRoute]int offset = 0, [FromRoute]int maxLimit = 20)
         {
-            var result = _eventRepository.GetEvents();
-            if (result == null)
+            var result = _eventRepository.GetEvents(offset, maxLimit);
+            if (result == null || result.Count() == 0)
             {
-                return BadRequest();
+                return NotFound();
             }
             return new ObjectResult(result);
         }
