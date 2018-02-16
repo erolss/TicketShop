@@ -16,62 +16,64 @@
   items:
   - uid: TicketApi.Controllers.EventApiController
     name: EventApiController
-  - uid: TicketApi.Controllers.EventdateApiController
-    name: EventdateApiController
+  - uid: TicketApi.Controllers.EventDateApiController
+    name: EventDateApiController
   - uid: TicketApi.Controllers.TicketApiController
     name: TicketApiController
   - uid: TicketApi.Controllers.TransactionApiController
     name: TransactionApiController
   - uid: TicketApi.Controllers.VenueApiController
     name: VenueApiController
-- uid: TicketApi.Models
-  name: TicketApi.Models
+- uid: TicketApi.Db
+  name: TicketApi.Db
   items:
-  - uid: TicketApi.Models.Event
-    name: Event
-  - uid: TicketApi.Models.EventDate
-    name: EventDate
-  - uid: TicketApi.Models.FullEventDate
-    name: FullEventDate
-  - uid: TicketApi.Models.Ticket
-    name: Ticket
-  - uid: TicketApi.Models.Transaction
-    name: Transaction
-  - uid: TicketApi.Models.Venue
-    name: Venue
-- uid: TicketSystem.DatabaseRepository
-  name: TicketSystem.DatabaseRepository
-  items:
-  - uid: TicketSystem.DatabaseRepository.EventDateRepository
+  - uid: TicketApi.Db.EventDateRepository
     name: EventDateRepository
-  - uid: TicketSystem.DatabaseRepository.EventRepository
+  - uid: TicketApi.Db.EventRepository
     name: EventRepository
-  - uid: TicketSystem.DatabaseRepository.TicketRepository
+  - uid: TicketApi.Db.TicketRepository
     name: TicketRepository
-- uid: TicketSystem.DatabaseRepository.Interface
-  name: TicketSystem.DatabaseRepository.Interface
+  - uid: TicketApi.Db.TransactionRepository
+    name: TransactionRepository
+  - uid: TicketApi.Db.VenueRepository
+    name: VenueRepository
+- uid: TicketApi.Db.Interface
+  name: TicketApi.Db.Interface
   items:
-  - uid: TicketSystem.DatabaseRepository.Interface.IEventDateRepository
+  - uid: TicketApi.Db.Interface.IEventDateRepository
     name: IEventDateRepository
-  - uid: TicketSystem.DatabaseRepository.Interface.IEventRepository
+  - uid: TicketApi.Db.Interface.IEventRepository
     name: IEventRepository
-  - uid: TicketSystem.DatabaseRepository.Interface.ITicketRepository
+  - uid: TicketApi.Db.Interface.ITicketRepository
     name: ITicketRepository
-  - uid: TicketSystem.DatabaseRepository.Interface.IVenueRepository
+  - uid: TicketApi.Db.Interface.ITransactionRepository
+    name: ITransactionRepository
+  - uid: TicketApi.Db.Interface.IVenueRepository
     name: IVenueRepository
-- uid: TicketSystem.DatabaseRepository.Model
-  name: TicketSystem.DatabaseRepository.Model
+- uid: TicketApi.Db.Models
+  name: TicketApi.Db.Models
   items:
-  - uid: TicketSystem.DatabaseRepository.Model.Event
+  - uid: TicketApi.Db.Models.Event
     name: Event
-  - uid: TicketSystem.DatabaseRepository.Model.EventDate
+  - uid: TicketApi.Db.Models.EventDate
     name: EventDate
-  - uid: TicketSystem.DatabaseRepository.Model.FullEventDate
+  - uid: TicketApi.Db.Models.FullEventDate
     name: FullEventDate
-  - uid: TicketSystem.DatabaseRepository.Model.Ticket
+  - uid: TicketApi.Db.Models.FullTicket
+    name: FullTicket
+  - uid: TicketApi.Db.Models.Search
+    name: Search
+  - uid: TicketApi.Db.Models.Ticket
     name: Ticket
-  - uid: TicketSystem.DatabaseRepository.Model.Venue
+  - uid: TicketApi.Db.Models.Transaction
+    name: Transaction
+  - uid: TicketApi.Db.Models.Venue
     name: Venue
+- uid: TicketApi.Settings
+  name: TicketApi.Settings
+  items:
+  - uid: TicketApi.Settings.DbSettings
+    name: DbSettings
 - uid: TicketSystem.PaymentProvider
   name: TicketSystem.PaymentProvider
   items:

@@ -5,8 +5,14 @@ items:
   id: TicketApiController
   parent: TicketApi.Controllers
   children:
+  - TicketApi.Controllers.TicketApiController.#ctor(Microsoft.Extensions.Options.IOptions{TicketApi.Settings.DbSettings})
+  - TicketApi.Controllers.TicketApiController.AddTicket(TicketApi.Db.Models.Ticket)
+  - TicketApi.Controllers.TicketApiController.DeleteTicket(TicketApi.Db.Models.Ticket)
+  - TicketApi.Controllers.TicketApiController.GetFullTicketById(System.Nullable{System.Int32})
   - TicketApi.Controllers.TicketApiController.GetTicketById(System.Nullable{System.Int32})
   - TicketApi.Controllers.TicketApiController.GetTickets
+  - TicketApi.Controllers.TicketApiController.GetTicketsByUserId(System.String)
+  - TicketApi.Controllers.TicketApiController.UpdateTicket(TicketApi.Db.Models.Ticket)
   langs:
   - csharp
   - vb
@@ -17,11 +23,11 @@ items:
   source:
     remote:
       path: src/TicketApi/Controllers/TicketApi.cs
-      branch: features/db
+      branch: restapi
       repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
     id: TicketApiController
     path: src/TicketApi/Controllers/TicketApi.cs
-    startLine: 42
+    startLine: 45
   assemblies:
   - TicketApi
   namespace: TicketApi.Controllers
@@ -76,30 +82,67 @@ items:
   - Microsoft.AspNetCore.Mvc.ControllerBase.Ok(System.Object)
   - Microsoft.AspNetCore.Mvc.ControllerBase.Redirect(System.String)
   - Microsoft.AspNetCore.Mvc.ControllerBase.RedirectPermanent(System.String)
+  - Microsoft.AspNetCore.Mvc.ControllerBase.RedirectPreserveMethod(System.String)
+  - Microsoft.AspNetCore.Mvc.ControllerBase.RedirectPermanentPreserveMethod(System.String)
   - Microsoft.AspNetCore.Mvc.ControllerBase.LocalRedirect(System.String)
   - Microsoft.AspNetCore.Mvc.ControllerBase.LocalRedirectPermanent(System.String)
+  - Microsoft.AspNetCore.Mvc.ControllerBase.LocalRedirectPreserveMethod(System.String)
+  - Microsoft.AspNetCore.Mvc.ControllerBase.LocalRedirectPermanentPreserveMethod(System.String)
   - Microsoft.AspNetCore.Mvc.ControllerBase.RedirectToAction(System.String)
   - Microsoft.AspNetCore.Mvc.ControllerBase.RedirectToAction(System.String,System.Object)
   - Microsoft.AspNetCore.Mvc.ControllerBase.RedirectToAction(System.String,System.String)
   - Microsoft.AspNetCore.Mvc.ControllerBase.RedirectToAction(System.String,System.String,System.Object)
+  - Microsoft.AspNetCore.Mvc.ControllerBase.RedirectToAction(System.String,System.String,System.String)
+  - Microsoft.AspNetCore.Mvc.ControllerBase.RedirectToAction(System.String,System.String,System.Object,System.String)
+  - Microsoft.AspNetCore.Mvc.ControllerBase.RedirectToActionPreserveMethod(System.String,System.String,System.Object,System.String)
   - Microsoft.AspNetCore.Mvc.ControllerBase.RedirectToActionPermanent(System.String)
   - Microsoft.AspNetCore.Mvc.ControllerBase.RedirectToActionPermanent(System.String,System.Object)
   - Microsoft.AspNetCore.Mvc.ControllerBase.RedirectToActionPermanent(System.String,System.String)
+  - Microsoft.AspNetCore.Mvc.ControllerBase.RedirectToActionPermanent(System.String,System.String,System.String)
   - Microsoft.AspNetCore.Mvc.ControllerBase.RedirectToActionPermanent(System.String,System.String,System.Object)
+  - Microsoft.AspNetCore.Mvc.ControllerBase.RedirectToActionPermanent(System.String,System.String,System.Object,System.String)
+  - Microsoft.AspNetCore.Mvc.ControllerBase.RedirectToActionPermanentPreserveMethod(System.String,System.String,System.Object,System.String)
   - Microsoft.AspNetCore.Mvc.ControllerBase.RedirectToRoute(System.String)
   - Microsoft.AspNetCore.Mvc.ControllerBase.RedirectToRoute(System.Object)
   - Microsoft.AspNetCore.Mvc.ControllerBase.RedirectToRoute(System.String,System.Object)
+  - Microsoft.AspNetCore.Mvc.ControllerBase.RedirectToRoute(System.String,System.String)
+  - Microsoft.AspNetCore.Mvc.ControllerBase.RedirectToRoute(System.String,System.Object,System.String)
+  - Microsoft.AspNetCore.Mvc.ControllerBase.RedirectToRoutePreserveMethod(System.String,System.Object,System.String)
   - Microsoft.AspNetCore.Mvc.ControllerBase.RedirectToRoutePermanent(System.String)
   - Microsoft.AspNetCore.Mvc.ControllerBase.RedirectToRoutePermanent(System.Object)
   - Microsoft.AspNetCore.Mvc.ControllerBase.RedirectToRoutePermanent(System.String,System.Object)
+  - Microsoft.AspNetCore.Mvc.ControllerBase.RedirectToRoutePermanent(System.String,System.String)
+  - Microsoft.AspNetCore.Mvc.ControllerBase.RedirectToRoutePermanent(System.String,System.Object,System.String)
+  - Microsoft.AspNetCore.Mvc.ControllerBase.RedirectToRoutePermanentPreserveMethod(System.String,System.Object,System.String)
+  - Microsoft.AspNetCore.Mvc.ControllerBase.RedirectToPage(System.String)
+  - Microsoft.AspNetCore.Mvc.ControllerBase.RedirectToPage(System.String,System.Object)
+  - Microsoft.AspNetCore.Mvc.ControllerBase.RedirectToPage(System.String,System.String)
+  - Microsoft.AspNetCore.Mvc.ControllerBase.RedirectToPage(System.String,System.String,System.Object)
+  - Microsoft.AspNetCore.Mvc.ControllerBase.RedirectToPage(System.String,System.String,System.String)
+  - Microsoft.AspNetCore.Mvc.ControllerBase.RedirectToPage(System.String,System.String,System.Object,System.String)
+  - Microsoft.AspNetCore.Mvc.ControllerBase.RedirectToPagePermanent(System.String)
+  - Microsoft.AspNetCore.Mvc.ControllerBase.RedirectToPagePermanent(System.String,System.Object)
+  - Microsoft.AspNetCore.Mvc.ControllerBase.RedirectToPagePermanent(System.String,System.String)
+  - Microsoft.AspNetCore.Mvc.ControllerBase.RedirectToPagePermanent(System.String,System.String,System.String)
+  - Microsoft.AspNetCore.Mvc.ControllerBase.RedirectToPagePermanent(System.String,System.String,System.Object,System.String)
+  - Microsoft.AspNetCore.Mvc.ControllerBase.RedirectToPagePreserveMethod(System.String,System.String,System.Object,System.String)
+  - Microsoft.AspNetCore.Mvc.ControllerBase.RedirectToPagePermanentPreserveMethod(System.String,System.String,System.Object,System.String)
   - Microsoft.AspNetCore.Mvc.ControllerBase.File(System.Byte[],System.String)
   - Microsoft.AspNetCore.Mvc.ControllerBase.File(System.Byte[],System.String,System.String)
+  - Microsoft.AspNetCore.Mvc.ControllerBase.File(System.Byte[],System.String,System.Nullable{System.DateTimeOffset},Microsoft.Net.Http.Headers.EntityTagHeaderValue)
+  - Microsoft.AspNetCore.Mvc.ControllerBase.File(System.Byte[],System.String,System.String,System.Nullable{System.DateTimeOffset},Microsoft.Net.Http.Headers.EntityTagHeaderValue)
   - Microsoft.AspNetCore.Mvc.ControllerBase.File(System.IO.Stream,System.String)
   - Microsoft.AspNetCore.Mvc.ControllerBase.File(System.IO.Stream,System.String,System.String)
+  - Microsoft.AspNetCore.Mvc.ControllerBase.File(System.IO.Stream,System.String,System.Nullable{System.DateTimeOffset},Microsoft.Net.Http.Headers.EntityTagHeaderValue)
+  - Microsoft.AspNetCore.Mvc.ControllerBase.File(System.IO.Stream,System.String,System.String,System.Nullable{System.DateTimeOffset},Microsoft.Net.Http.Headers.EntityTagHeaderValue)
   - Microsoft.AspNetCore.Mvc.ControllerBase.File(System.String,System.String)
   - Microsoft.AspNetCore.Mvc.ControllerBase.File(System.String,System.String,System.String)
+  - Microsoft.AspNetCore.Mvc.ControllerBase.File(System.String,System.String,System.Nullable{System.DateTimeOffset},Microsoft.Net.Http.Headers.EntityTagHeaderValue)
+  - Microsoft.AspNetCore.Mvc.ControllerBase.File(System.String,System.String,System.String,System.Nullable{System.DateTimeOffset},Microsoft.Net.Http.Headers.EntityTagHeaderValue)
   - Microsoft.AspNetCore.Mvc.ControllerBase.PhysicalFile(System.String,System.String)
   - Microsoft.AspNetCore.Mvc.ControllerBase.PhysicalFile(System.String,System.String,System.String)
+  - Microsoft.AspNetCore.Mvc.ControllerBase.PhysicalFile(System.String,System.String,System.Nullable{System.DateTimeOffset},Microsoft.Net.Http.Headers.EntityTagHeaderValue)
+  - Microsoft.AspNetCore.Mvc.ControllerBase.PhysicalFile(System.String,System.String,System.String,System.Nullable{System.DateTimeOffset},Microsoft.Net.Http.Headers.EntityTagHeaderValue)
   - Microsoft.AspNetCore.Mvc.ControllerBase.Unauthorized
   - Microsoft.AspNetCore.Mvc.ControllerBase.NotFound
   - Microsoft.AspNetCore.Mvc.ControllerBase.NotFound(System.Object)
@@ -114,18 +157,35 @@ items:
   - Microsoft.AspNetCore.Mvc.ControllerBase.CreatedAtRoute(System.String,System.Object)
   - Microsoft.AspNetCore.Mvc.ControllerBase.CreatedAtRoute(System.Object,System.Object)
   - Microsoft.AspNetCore.Mvc.ControllerBase.CreatedAtRoute(System.String,System.Object,System.Object)
+  - Microsoft.AspNetCore.Mvc.ControllerBase.Accepted
+  - Microsoft.AspNetCore.Mvc.ControllerBase.Accepted(System.Object)
+  - Microsoft.AspNetCore.Mvc.ControllerBase.Accepted(System.Uri)
+  - Microsoft.AspNetCore.Mvc.ControllerBase.Accepted(System.String)
+  - Microsoft.AspNetCore.Mvc.ControllerBase.Accepted(System.String,System.Object)
+  - Microsoft.AspNetCore.Mvc.ControllerBase.Accepted(System.Uri,System.Object)
+  - Microsoft.AspNetCore.Mvc.ControllerBase.AcceptedAtAction(System.String)
+  - Microsoft.AspNetCore.Mvc.ControllerBase.AcceptedAtAction(System.String,System.String)
+  - Microsoft.AspNetCore.Mvc.ControllerBase.AcceptedAtAction(System.String,System.Object)
+  - Microsoft.AspNetCore.Mvc.ControllerBase.AcceptedAtAction(System.String,System.String,System.Object)
+  - Microsoft.AspNetCore.Mvc.ControllerBase.AcceptedAtAction(System.String,System.Object,System.Object)
+  - Microsoft.AspNetCore.Mvc.ControllerBase.AcceptedAtAction(System.String,System.String,System.Object,System.Object)
+  - Microsoft.AspNetCore.Mvc.ControllerBase.AcceptedAtRoute(System.Object)
+  - Microsoft.AspNetCore.Mvc.ControllerBase.AcceptedAtRoute(System.String)
+  - Microsoft.AspNetCore.Mvc.ControllerBase.AcceptedAtRoute(System.String,System.Object)
+  - Microsoft.AspNetCore.Mvc.ControllerBase.AcceptedAtRoute(System.Object,System.Object)
+  - Microsoft.AspNetCore.Mvc.ControllerBase.AcceptedAtRoute(System.String,System.Object,System.Object)
   - Microsoft.AspNetCore.Mvc.ControllerBase.Challenge
   - Microsoft.AspNetCore.Mvc.ControllerBase.Challenge(System.String[])
-  - Microsoft.AspNetCore.Mvc.ControllerBase.Challenge(Microsoft.AspNetCore.Http.Authentication.AuthenticationProperties)
-  - Microsoft.AspNetCore.Mvc.ControllerBase.Challenge(Microsoft.AspNetCore.Http.Authentication.AuthenticationProperties,System.String[])
+  - Microsoft.AspNetCore.Mvc.ControllerBase.Challenge(Microsoft.AspNetCore.Authentication.AuthenticationProperties)
+  - Microsoft.AspNetCore.Mvc.ControllerBase.Challenge(Microsoft.AspNetCore.Authentication.AuthenticationProperties,System.String[])
   - Microsoft.AspNetCore.Mvc.ControllerBase.Forbid
   - Microsoft.AspNetCore.Mvc.ControllerBase.Forbid(System.String[])
-  - Microsoft.AspNetCore.Mvc.ControllerBase.Forbid(Microsoft.AspNetCore.Http.Authentication.AuthenticationProperties)
-  - Microsoft.AspNetCore.Mvc.ControllerBase.Forbid(Microsoft.AspNetCore.Http.Authentication.AuthenticationProperties,System.String[])
+  - Microsoft.AspNetCore.Mvc.ControllerBase.Forbid(Microsoft.AspNetCore.Authentication.AuthenticationProperties)
+  - Microsoft.AspNetCore.Mvc.ControllerBase.Forbid(Microsoft.AspNetCore.Authentication.AuthenticationProperties,System.String[])
   - Microsoft.AspNetCore.Mvc.ControllerBase.SignIn(System.Security.Claims.ClaimsPrincipal,System.String)
-  - Microsoft.AspNetCore.Mvc.ControllerBase.SignIn(System.Security.Claims.ClaimsPrincipal,Microsoft.AspNetCore.Http.Authentication.AuthenticationProperties,System.String)
+  - Microsoft.AspNetCore.Mvc.ControllerBase.SignIn(System.Security.Claims.ClaimsPrincipal,Microsoft.AspNetCore.Authentication.AuthenticationProperties,System.String)
   - Microsoft.AspNetCore.Mvc.ControllerBase.SignOut(System.String[])
-  - Microsoft.AspNetCore.Mvc.ControllerBase.SignOut(Microsoft.AspNetCore.Http.Authentication.AuthenticationProperties,System.String[])
+  - Microsoft.AspNetCore.Mvc.ControllerBase.SignOut(Microsoft.AspNetCore.Authentication.AuthenticationProperties,System.String[])
   - Microsoft.AspNetCore.Mvc.ControllerBase.TryUpdateModelAsync``1({TModel})
   - Microsoft.AspNetCore.Mvc.ControllerBase.TryUpdateModelAsync``1({TModel},System.String)
   - Microsoft.AspNetCore.Mvc.ControllerBase.TryUpdateModelAsync``1({TModel},System.String,Microsoft.AspNetCore.Mvc.ModelBinding.IValueProvider)
@@ -161,6 +221,240 @@ items:
   modifiers.vb:
   - Public
   - Class
+- uid: TicketApi.Controllers.TicketApiController.#ctor(Microsoft.Extensions.Options.IOptions{TicketApi.Settings.DbSettings})
+  commentId: M:TicketApi.Controllers.TicketApiController.#ctor(Microsoft.Extensions.Options.IOptions{TicketApi.Settings.DbSettings})
+  id: '#ctor(Microsoft.Extensions.Options.IOptions{TicketApi.Settings.DbSettings})'
+  parent: TicketApi.Controllers.TicketApiController
+  langs:
+  - csharp
+  - vb
+  name: TicketApiController(IOptions<DbSettings>)
+  nameWithType: TicketApiController.TicketApiController(IOptions<DbSettings>)
+  fullName: TicketApi.Controllers.TicketApiController.TicketApiController(Microsoft.Extensions.Options.IOptions<TicketApi.Settings.DbSettings>)
+  type: Constructor
+  source:
+    remote:
+      path: src/TicketApi/Controllers/TicketApi.cs
+      branch: restapi
+      repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
+    id: .ctor
+    path: src/TicketApi/Controllers/TicketApi.cs
+    startLine: 51
+  assemblies:
+  - TicketApi
+  namespace: TicketApi.Controllers
+  syntax:
+    content: public TicketApiController(IOptions<DbSettings> db)
+    parameters:
+    - id: db
+      type: Microsoft.Extensions.Options.IOptions{TicketApi.Settings.DbSettings}
+    content.vb: Public Sub New(db As IOptions(Of DbSettings))
+  overload: TicketApi.Controllers.TicketApiController.#ctor*
+  nameWithType.vb: TicketApiController.TicketApiController(IOptions(Of DbSettings))
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: TicketApi.Controllers.TicketApiController.TicketApiController(Microsoft.Extensions.Options.IOptions(Of TicketApi.Settings.DbSettings))
+  name.vb: TicketApiController(IOptions(Of DbSettings))
+- uid: TicketApi.Controllers.TicketApiController.AddTicket(TicketApi.Db.Models.Ticket)
+  commentId: M:TicketApi.Controllers.TicketApiController.AddTicket(TicketApi.Db.Models.Ticket)
+  id: AddTicket(TicketApi.Db.Models.Ticket)
+  parent: TicketApi.Controllers.TicketApiController
+  langs:
+  - csharp
+  - vb
+  name: AddTicket(Ticket)
+  nameWithType: TicketApiController.AddTicket(Ticket)
+  fullName: TicketApi.Controllers.TicketApiController.AddTicket(TicketApi.Db.Models.Ticket)
+  type: Method
+  source:
+    remote:
+      path: src/TicketApi/Controllers/TicketApi.cs
+      branch: restapi
+      repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
+    id: AddTicket
+    path: src/TicketApi/Controllers/TicketApi.cs
+    startLine: 64
+  assemblies:
+  - TicketApi
+  namespace: TicketApi.Controllers
+  summary: "\nAdd new ticket\n"
+  remarks: Adds a new ticket in system
+  example: []
+  syntax:
+    content: >-
+      [HttpPost]
+
+      [Route("/api/ticket")]
+
+      [SwaggerOperation("AddTicket")]
+
+      [SwaggerResponse(200, typeof (object), "Ticket created")]
+
+      [SwaggerResponse(400, typeof (object), "Bad request")]
+
+      public virtual IActionResult AddTicket([FromBody] Ticket ticket)
+    parameters:
+    - id: ticket
+      type: TicketApi.Db.Models.Ticket
+      description: Ticket data
+      attributes:
+      - type: Microsoft.AspNetCore.Mvc.FromBodyAttribute
+        ctor: Microsoft.AspNetCore.Mvc.FromBodyAttribute.#ctor
+        arguments: []
+    return:
+      type: Microsoft.AspNetCore.Mvc.IActionResult
+    content.vb: >-
+      <HttpPost>
+
+      <Route("/api/ticket")>
+
+      <SwaggerOperation("AddTicket")>
+
+      <SwaggerResponse(200, GetType(Object), "Ticket created")>
+
+      <SwaggerResponse(400, GetType(Object), "Bad request")>
+
+      Public Overridable Function AddTicket(ticket As Ticket) As IActionResult
+  overload: TicketApi.Controllers.TicketApiController.AddTicket*
+  attributes:
+  - type: Microsoft.AspNetCore.Mvc.HttpPostAttribute
+    ctor: Microsoft.AspNetCore.Mvc.HttpPostAttribute.#ctor
+    arguments: []
+  - type: Microsoft.AspNetCore.Mvc.RouteAttribute
+    ctor: Microsoft.AspNetCore.Mvc.RouteAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: /api/ticket
+  - type: Swashbuckle.AspNetCore.SwaggerGen.SwaggerOperationAttribute
+    ctor: Swashbuckle.AspNetCore.SwaggerGen.SwaggerOperationAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: AddTicket
+  - type: Swashbuckle.AspNetCore.SwaggerGen.SwaggerResponseAttribute
+    ctor: Swashbuckle.AspNetCore.SwaggerGen.SwaggerResponseAttribute.#ctor(System.Int32,System.Type,System.String)
+    arguments:
+    - type: System.Int32
+      value: 200
+    - type: System.Type
+      value: System.Object
+    - type: System.String
+      value: Ticket created
+  - type: Swashbuckle.AspNetCore.SwaggerGen.SwaggerResponseAttribute
+    ctor: Swashbuckle.AspNetCore.SwaggerGen.SwaggerResponseAttribute.#ctor(System.Int32,System.Type,System.String)
+    arguments:
+    - type: System.Int32
+      value: 400
+    - type: System.Type
+      value: System.Object
+    - type: System.String
+      value: Bad request
+  modifiers.csharp:
+  - public
+  - virtual
+  modifiers.vb:
+  - Public
+  - Overridable
+- uid: TicketApi.Controllers.TicketApiController.DeleteTicket(TicketApi.Db.Models.Ticket)
+  commentId: M:TicketApi.Controllers.TicketApiController.DeleteTicket(TicketApi.Db.Models.Ticket)
+  id: DeleteTicket(TicketApi.Db.Models.Ticket)
+  parent: TicketApi.Controllers.TicketApiController
+  langs:
+  - csharp
+  - vb
+  name: DeleteTicket(Ticket)
+  nameWithType: TicketApiController.DeleteTicket(Ticket)
+  fullName: TicketApi.Controllers.TicketApiController.DeleteTicket(TicketApi.Db.Models.Ticket)
+  type: Method
+  source:
+    remote:
+      path: src/TicketApi/Controllers/TicketApi.cs
+      branch: restapi
+      repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
+    id: DeleteTicket
+    path: src/TicketApi/Controllers/TicketApi.cs
+    startLine: 87
+  assemblies:
+  - TicketApi
+  namespace: TicketApi.Controllers
+  summary: "\nDelete ticket\n"
+  remarks: Delete a ticket in system
+  example: []
+  syntax:
+    content: >-
+      [HttpDelete]
+
+      [Route("/api/ticket")]
+
+      [SwaggerOperation("DeleteTicket")]
+
+      [SwaggerResponse(200, typeof (object), "Ticket deleted")]
+
+      [SwaggerResponse(404, typeof (object), "Ticket not found")]
+
+      public virtual IActionResult DeleteTicket([FromBody] Ticket ticket)
+    parameters:
+    - id: ticket
+      type: TicketApi.Db.Models.Ticket
+      description: Ticket data
+      attributes:
+      - type: Microsoft.AspNetCore.Mvc.FromBodyAttribute
+        ctor: Microsoft.AspNetCore.Mvc.FromBodyAttribute.#ctor
+        arguments: []
+    return:
+      type: Microsoft.AspNetCore.Mvc.IActionResult
+    content.vb: >-
+      <HttpDelete>
+
+      <Route("/api/ticket")>
+
+      <SwaggerOperation("DeleteTicket")>
+
+      <SwaggerResponse(200, GetType(Object), "Ticket deleted")>
+
+      <SwaggerResponse(404, GetType(Object), "Ticket not found")>
+
+      Public Overridable Function DeleteTicket(ticket As Ticket) As IActionResult
+  overload: TicketApi.Controllers.TicketApiController.DeleteTicket*
+  attributes:
+  - type: Microsoft.AspNetCore.Mvc.HttpDeleteAttribute
+    ctor: Microsoft.AspNetCore.Mvc.HttpDeleteAttribute.#ctor
+    arguments: []
+  - type: Microsoft.AspNetCore.Mvc.RouteAttribute
+    ctor: Microsoft.AspNetCore.Mvc.RouteAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: /api/ticket
+  - type: Swashbuckle.AspNetCore.SwaggerGen.SwaggerOperationAttribute
+    ctor: Swashbuckle.AspNetCore.SwaggerGen.SwaggerOperationAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: DeleteTicket
+  - type: Swashbuckle.AspNetCore.SwaggerGen.SwaggerResponseAttribute
+    ctor: Swashbuckle.AspNetCore.SwaggerGen.SwaggerResponseAttribute.#ctor(System.Int32,System.Type,System.String)
+    arguments:
+    - type: System.Int32
+      value: 200
+    - type: System.Type
+      value: System.Object
+    - type: System.String
+      value: Ticket deleted
+  - type: Swashbuckle.AspNetCore.SwaggerGen.SwaggerResponseAttribute
+    ctor: Swashbuckle.AspNetCore.SwaggerGen.SwaggerResponseAttribute.#ctor(System.Int32,System.Type,System.String)
+    arguments:
+    - type: System.Int32
+      value: 404
+    - type: System.Type
+      value: System.Object
+    - type: System.String
+      value: Ticket not found
+  modifiers.csharp:
+  - public
+  - virtual
+  modifiers.vb:
+  - Public
+  - Overridable
 - uid: TicketApi.Controllers.TicketApiController.GetTicketById(System.Nullable{System.Int32})
   commentId: M:TicketApi.Controllers.TicketApiController.GetTicketById(System.Nullable{System.Int32})
   id: GetTicketById(System.Nullable{System.Int32})
@@ -175,11 +469,11 @@ items:
   source:
     remote:
       path: src/TicketApi/Controllers/TicketApi.cs
-      branch: features/db
+      branch: restapi
       repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
     id: GetTicketById
     path: src/TicketApi/Controllers/TicketApi.cs
-    startLine: 51
+    startLine: 110
   assemblies:
   - TicketApi
   namespace: TicketApi.Controllers
@@ -194,7 +488,11 @@ items:
 
       [SwaggerOperation("GetTicketById")]
 
-      public virtual void GetTicketById([FromRoute] int ? ticketId)
+      [SwaggerResponse(200, typeof (object), "Ticket loaded")]
+
+      [SwaggerResponse(404, typeof (object), "Ticket not found")]
+
+      public virtual IActionResult GetTicketById([FromRoute] int ? ticketId)
     parameters:
     - id: ticketId
       type: System.Nullable{System.Int32}
@@ -203,6 +501,8 @@ items:
       - type: Microsoft.AspNetCore.Mvc.FromRouteAttribute
         ctor: Microsoft.AspNetCore.Mvc.FromRouteAttribute.#ctor
         arguments: []
+    return:
+      type: Microsoft.AspNetCore.Mvc.IActionResult
     content.vb: >-
       <HttpGet>
 
@@ -210,7 +510,11 @@ items:
 
       <SwaggerOperation("GetTicketById")>
 
-      Public Overridable Sub GetTicketById(ticketId As Integer?)
+      <SwaggerResponse(200, GetType(Object), "Ticket loaded")>
+
+      <SwaggerResponse(404, GetType(Object), "Ticket not found")>
+
+      Public Overridable Function GetTicketById(ticketId As Integer?) As IActionResult
   overload: TicketApi.Controllers.TicketApiController.GetTicketById*
   attributes:
   - type: Microsoft.AspNetCore.Mvc.HttpGetAttribute
@@ -226,6 +530,24 @@ items:
     arguments:
     - type: System.String
       value: GetTicketById
+  - type: Swashbuckle.AspNetCore.SwaggerGen.SwaggerResponseAttribute
+    ctor: Swashbuckle.AspNetCore.SwaggerGen.SwaggerResponseAttribute.#ctor(System.Int32,System.Type,System.String)
+    arguments:
+    - type: System.Int32
+      value: 200
+    - type: System.Type
+      value: System.Object
+    - type: System.String
+      value: Ticket loaded
+  - type: Swashbuckle.AspNetCore.SwaggerGen.SwaggerResponseAttribute
+    ctor: Swashbuckle.AspNetCore.SwaggerGen.SwaggerResponseAttribute.#ctor(System.Int32,System.Type,System.String)
+    arguments:
+    - type: System.Int32
+      value: 404
+    - type: System.Type
+      value: System.Object
+    - type: System.String
+      value: Ticket not found
   nameWithType.vb: TicketApiController.GetTicketById(Nullable(Of Int32))
   modifiers.csharp:
   - public
@@ -249,11 +571,11 @@ items:
   source:
     remote:
       path: src/TicketApi/Controllers/TicketApi.cs
-      branch: features/db
+      branch: restapi
       repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
     id: GetTickets
     path: src/TicketApi/Controllers/TicketApi.cs
-    startLine: 66
+    startLine: 132
   assemblies:
   - TicketApi
   namespace: TicketApi.Controllers
@@ -268,9 +590,9 @@ items:
 
       [SwaggerOperation("GetTickets")]
 
-      [SwaggerResponse(200, typeof (Ticket), "Ticket loaded")]
+      [SwaggerResponse(200, typeof (List<Ticket>), "Ticket loaded")]
 
-      [SwaggerResponse(400, typeof (Ticket), "Bad request")]
+      [SwaggerResponse(400, typeof (List<Ticket>), "Bad request")]
 
       public virtual IActionResult GetTickets()
     return:
@@ -282,9 +604,9 @@ items:
 
       <SwaggerOperation("GetTickets")>
 
-      <SwaggerResponse(200, GetType(Ticket), "Ticket loaded")>
+      <SwaggerResponse(200, GetType(List(Of Ticket)), "Ticket loaded")>
 
-      <SwaggerResponse(400, GetType(Ticket), "Bad request")>
+      <SwaggerResponse(400, GetType(List(Of Ticket)), "Bad request")>
 
       Public Overridable Function GetTickets As IActionResult
   overload: TicketApi.Controllers.TicketApiController.GetTickets*
@@ -308,7 +630,7 @@ items:
     - type: System.Int32
       value: 200
     - type: System.Type
-      value: TicketApi.Models.Ticket
+      value: System.Collections.Generic.List{TicketApi.Db.Models.Ticket}
     - type: System.String
       value: Ticket loaded
   - type: Swashbuckle.AspNetCore.SwaggerGen.SwaggerResponseAttribute
@@ -317,7 +639,7 @@ items:
     - type: System.Int32
       value: 400
     - type: System.Type
-      value: TicketApi.Models.Ticket
+      value: System.Collections.Generic.List{TicketApi.Db.Models.Ticket}
     - type: System.String
       value: Bad request
   modifiers.csharp:
@@ -326,6 +648,306 @@ items:
   modifiers.vb:
   - Public
   - Overridable
+- uid: TicketApi.Controllers.TicketApiController.GetTicketsByUserId(System.String)
+  commentId: M:TicketApi.Controllers.TicketApiController.GetTicketsByUserId(System.String)
+  id: GetTicketsByUserId(System.String)
+  parent: TicketApi.Controllers.TicketApiController
+  langs:
+  - csharp
+  - vb
+  name: GetTicketsByUserId(String)
+  nameWithType: TicketApiController.GetTicketsByUserId(String)
+  fullName: TicketApi.Controllers.TicketApiController.GetTicketsByUserId(System.String)
+  type: Method
+  source:
+    remote:
+      path: src/TicketApi/Controllers/TicketApi.cs
+      branch: restapi
+      repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
+    id: GetTicketsByUserId
+    path: src/TicketApi/Controllers/TicketApi.cs
+    startLine: 155
+  assemblies:
+  - TicketApi
+  namespace: TicketApi.Controllers
+  summary: "\nGet tickets by User Id\n"
+  remarks: Returns a list of tickets
+  example: []
+  syntax:
+    content: >-
+      [HttpGet]
+
+      [Route("/api/ticket/userid/{userId}")]
+
+      [SwaggerOperation("GetTicketsByUserId")]
+
+      [SwaggerResponse(200, typeof (List<Ticket>), "Ticket loaded")]
+
+      [SwaggerResponse(404, typeof (List<Ticket>), "Ticket not found")]
+
+      public virtual IActionResult GetTicketsByUserId([FromRoute] string userId)
+    parameters:
+    - id: userId
+      type: System.String
+      description: userId of the ticket
+      attributes:
+      - type: Microsoft.AspNetCore.Mvc.FromRouteAttribute
+        ctor: Microsoft.AspNetCore.Mvc.FromRouteAttribute.#ctor
+        arguments: []
+    return:
+      type: Microsoft.AspNetCore.Mvc.IActionResult
+    content.vb: >-
+      <HttpGet>
+
+      <Route("/api/ticket/userid/{userId}")>
+
+      <SwaggerOperation("GetTicketsByUserId")>
+
+      <SwaggerResponse(200, GetType(List(Of Ticket)), "Ticket loaded")>
+
+      <SwaggerResponse(404, GetType(List(Of Ticket)), "Ticket not found")>
+
+      Public Overridable Function GetTicketsByUserId(userId As String) As IActionResult
+  overload: TicketApi.Controllers.TicketApiController.GetTicketsByUserId*
+  attributes:
+  - type: Microsoft.AspNetCore.Mvc.HttpGetAttribute
+    ctor: Microsoft.AspNetCore.Mvc.HttpGetAttribute.#ctor
+    arguments: []
+  - type: Microsoft.AspNetCore.Mvc.RouteAttribute
+    ctor: Microsoft.AspNetCore.Mvc.RouteAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: /api/ticket/userid/{userId}
+  - type: Swashbuckle.AspNetCore.SwaggerGen.SwaggerOperationAttribute
+    ctor: Swashbuckle.AspNetCore.SwaggerGen.SwaggerOperationAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: GetTicketsByUserId
+  - type: Swashbuckle.AspNetCore.SwaggerGen.SwaggerResponseAttribute
+    ctor: Swashbuckle.AspNetCore.SwaggerGen.SwaggerResponseAttribute.#ctor(System.Int32,System.Type,System.String)
+    arguments:
+    - type: System.Int32
+      value: 200
+    - type: System.Type
+      value: System.Collections.Generic.List{TicketApi.Db.Models.Ticket}
+    - type: System.String
+      value: Ticket loaded
+  - type: Swashbuckle.AspNetCore.SwaggerGen.SwaggerResponseAttribute
+    ctor: Swashbuckle.AspNetCore.SwaggerGen.SwaggerResponseAttribute.#ctor(System.Int32,System.Type,System.String)
+    arguments:
+    - type: System.Int32
+      value: 404
+    - type: System.Type
+      value: System.Collections.Generic.List{TicketApi.Db.Models.Ticket}
+    - type: System.String
+      value: Ticket not found
+  modifiers.csharp:
+  - public
+  - virtual
+  modifiers.vb:
+  - Public
+  - Overridable
+- uid: TicketApi.Controllers.TicketApiController.UpdateTicket(TicketApi.Db.Models.Ticket)
+  commentId: M:TicketApi.Controllers.TicketApiController.UpdateTicket(TicketApi.Db.Models.Ticket)
+  id: UpdateTicket(TicketApi.Db.Models.Ticket)
+  parent: TicketApi.Controllers.TicketApiController
+  langs:
+  - csharp
+  - vb
+  name: UpdateTicket(Ticket)
+  nameWithType: TicketApiController.UpdateTicket(Ticket)
+  fullName: TicketApi.Controllers.TicketApiController.UpdateTicket(TicketApi.Db.Models.Ticket)
+  type: Method
+  source:
+    remote:
+      path: src/TicketApi/Controllers/TicketApi.cs
+      branch: restapi
+      repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
+    id: UpdateTicket
+    path: src/TicketApi/Controllers/TicketApi.cs
+    startLine: 178
+  assemblies:
+  - TicketApi
+  namespace: TicketApi.Controllers
+  summary: "\nUpdate ticket\n"
+  remarks: Update a ticket in system
+  example: []
+  syntax:
+    content: >-
+      [HttpPut]
+
+      [Route("/api/ticket")]
+
+      [SwaggerOperation("UpdateTicket")]
+
+      [SwaggerResponse(200, typeof (object), "Ticket updated")]
+
+      [SwaggerResponse(400, typeof (object), "Bad request")]
+
+      public virtual IActionResult UpdateTicket([FromBody] Ticket ticket)
+    parameters:
+    - id: ticket
+      type: TicketApi.Db.Models.Ticket
+      description: Ticket data
+      attributes:
+      - type: Microsoft.AspNetCore.Mvc.FromBodyAttribute
+        ctor: Microsoft.AspNetCore.Mvc.FromBodyAttribute.#ctor
+        arguments: []
+    return:
+      type: Microsoft.AspNetCore.Mvc.IActionResult
+    content.vb: >-
+      <HttpPut>
+
+      <Route("/api/ticket")>
+
+      <SwaggerOperation("UpdateTicket")>
+
+      <SwaggerResponse(200, GetType(Object), "Ticket updated")>
+
+      <SwaggerResponse(400, GetType(Object), "Bad request")>
+
+      Public Overridable Function UpdateTicket(ticket As Ticket) As IActionResult
+  overload: TicketApi.Controllers.TicketApiController.UpdateTicket*
+  attributes:
+  - type: Microsoft.AspNetCore.Mvc.HttpPutAttribute
+    ctor: Microsoft.AspNetCore.Mvc.HttpPutAttribute.#ctor
+    arguments: []
+  - type: Microsoft.AspNetCore.Mvc.RouteAttribute
+    ctor: Microsoft.AspNetCore.Mvc.RouteAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: /api/ticket
+  - type: Swashbuckle.AspNetCore.SwaggerGen.SwaggerOperationAttribute
+    ctor: Swashbuckle.AspNetCore.SwaggerGen.SwaggerOperationAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: UpdateTicket
+  - type: Swashbuckle.AspNetCore.SwaggerGen.SwaggerResponseAttribute
+    ctor: Swashbuckle.AspNetCore.SwaggerGen.SwaggerResponseAttribute.#ctor(System.Int32,System.Type,System.String)
+    arguments:
+    - type: System.Int32
+      value: 200
+    - type: System.Type
+      value: System.Object
+    - type: System.String
+      value: Ticket updated
+  - type: Swashbuckle.AspNetCore.SwaggerGen.SwaggerResponseAttribute
+    ctor: Swashbuckle.AspNetCore.SwaggerGen.SwaggerResponseAttribute.#ctor(System.Int32,System.Type,System.String)
+    arguments:
+    - type: System.Int32
+      value: 400
+    - type: System.Type
+      value: System.Object
+    - type: System.String
+      value: Bad request
+  modifiers.csharp:
+  - public
+  - virtual
+  modifiers.vb:
+  - Public
+  - Overridable
+- uid: TicketApi.Controllers.TicketApiController.GetFullTicketById(System.Nullable{System.Int32})
+  commentId: M:TicketApi.Controllers.TicketApiController.GetFullTicketById(System.Nullable{System.Int32})
+  id: GetFullTicketById(System.Nullable{System.Int32})
+  parent: TicketApi.Controllers.TicketApiController
+  langs:
+  - csharp
+  - vb
+  name: GetFullTicketById(Nullable<Int32>)
+  nameWithType: TicketApiController.GetFullTicketById(Nullable<Int32>)
+  fullName: TicketApi.Controllers.TicketApiController.GetFullTicketById(System.Nullable<System.Int32>)
+  type: Method
+  source:
+    remote:
+      path: src/TicketApi/Controllers/TicketApi.cs
+      branch: restapi
+      repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
+    id: GetFullTicketById
+    path: src/TicketApi/Controllers/TicketApi.cs
+    startLine: 201
+  assemblies:
+  - TicketApi
+  namespace: TicketApi.Controllers
+  summary: "\nGet FullTicket by Id in system\n"
+  remarks: Returns an FullTicket by ID
+  example: []
+  syntax:
+    content: >-
+      [HttpGet]
+
+      [Route("/api/ticket/full/{ticketId}")]
+
+      [SwaggerOperation("GetFullTicketById")]
+
+      [SwaggerResponse(200, typeof (object), "Ticket loaded")]
+
+      [SwaggerResponse(404, typeof (object), "Ticket not found")]
+
+      public virtual IActionResult GetFullTicketById([FromRoute] int ? ticketId)
+    parameters:
+    - id: ticketId
+      type: System.Nullable{System.Int32}
+      description: TicketID
+      attributes:
+      - type: Microsoft.AspNetCore.Mvc.FromRouteAttribute
+        ctor: Microsoft.AspNetCore.Mvc.FromRouteAttribute.#ctor
+        arguments: []
+    return:
+      type: Microsoft.AspNetCore.Mvc.IActionResult
+    content.vb: >-
+      <HttpGet>
+
+      <Route("/api/ticket/full/{ticketId}")>
+
+      <SwaggerOperation("GetFullTicketById")>
+
+      <SwaggerResponse(200, GetType(Object), "Ticket loaded")>
+
+      <SwaggerResponse(404, GetType(Object), "Ticket not found")>
+
+      Public Overridable Function GetFullTicketById(ticketId As Integer?) As IActionResult
+  overload: TicketApi.Controllers.TicketApiController.GetFullTicketById*
+  attributes:
+  - type: Microsoft.AspNetCore.Mvc.HttpGetAttribute
+    ctor: Microsoft.AspNetCore.Mvc.HttpGetAttribute.#ctor
+    arguments: []
+  - type: Microsoft.AspNetCore.Mvc.RouteAttribute
+    ctor: Microsoft.AspNetCore.Mvc.RouteAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: /api/ticket/full/{ticketId}
+  - type: Swashbuckle.AspNetCore.SwaggerGen.SwaggerOperationAttribute
+    ctor: Swashbuckle.AspNetCore.SwaggerGen.SwaggerOperationAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: GetFullTicketById
+  - type: Swashbuckle.AspNetCore.SwaggerGen.SwaggerResponseAttribute
+    ctor: Swashbuckle.AspNetCore.SwaggerGen.SwaggerResponseAttribute.#ctor(System.Int32,System.Type,System.String)
+    arguments:
+    - type: System.Int32
+      value: 200
+    - type: System.Type
+      value: System.Object
+    - type: System.String
+      value: Ticket loaded
+  - type: Swashbuckle.AspNetCore.SwaggerGen.SwaggerResponseAttribute
+    ctor: Swashbuckle.AspNetCore.SwaggerGen.SwaggerResponseAttribute.#ctor(System.Int32,System.Type,System.String)
+    arguments:
+    - type: System.Int32
+      value: 404
+    - type: System.Type
+      value: System.Object
+    - type: System.String
+      value: Ticket not found
+  nameWithType.vb: TicketApiController.GetFullTicketById(Nullable(Of Int32))
+  modifiers.csharp:
+  - public
+  - virtual
+  modifiers.vb:
+  - Public
+  - Overridable
+  fullName.vb: TicketApi.Controllers.TicketApiController.GetFullTicketById(System.Nullable(Of System.Int32))
+  name.vb: GetFullTicketById(Nullable(Of Int32))
 references:
 - uid: TicketApi.Controllers
   commentId: N:TicketApi.Controllers
@@ -1759,6 +2381,88 @@ references:
   - name: )
     nameWithType: )
     fullName: )
+- uid: Microsoft.AspNetCore.Mvc.ControllerBase.RedirectPreserveMethod(System.String)
+  commentId: M:Microsoft.AspNetCore.Mvc.ControllerBase.RedirectPreserveMethod(System.String)
+  parent: Microsoft.AspNetCore.Mvc.ControllerBase
+  isExternal: true
+  name: RedirectPreserveMethod(String)
+  nameWithType: ControllerBase.RedirectPreserveMethod(String)
+  fullName: Microsoft.AspNetCore.Mvc.ControllerBase.RedirectPreserveMethod(System.String)
+  spec.csharp:
+  - uid: Microsoft.AspNetCore.Mvc.ControllerBase.RedirectPreserveMethod(System.String)
+    name: RedirectPreserveMethod
+    nameWithType: ControllerBase.RedirectPreserveMethod
+    fullName: Microsoft.AspNetCore.Mvc.ControllerBase.RedirectPreserveMethod
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Microsoft.AspNetCore.Mvc.ControllerBase.RedirectPreserveMethod(System.String)
+    name: RedirectPreserveMethod
+    nameWithType: ControllerBase.RedirectPreserveMethod
+    fullName: Microsoft.AspNetCore.Mvc.ControllerBase.RedirectPreserveMethod
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Microsoft.AspNetCore.Mvc.ControllerBase.RedirectPermanentPreserveMethod(System.String)
+  commentId: M:Microsoft.AspNetCore.Mvc.ControllerBase.RedirectPermanentPreserveMethod(System.String)
+  parent: Microsoft.AspNetCore.Mvc.ControllerBase
+  isExternal: true
+  name: RedirectPermanentPreserveMethod(String)
+  nameWithType: ControllerBase.RedirectPermanentPreserveMethod(String)
+  fullName: Microsoft.AspNetCore.Mvc.ControllerBase.RedirectPermanentPreserveMethod(System.String)
+  spec.csharp:
+  - uid: Microsoft.AspNetCore.Mvc.ControllerBase.RedirectPermanentPreserveMethod(System.String)
+    name: RedirectPermanentPreserveMethod
+    nameWithType: ControllerBase.RedirectPermanentPreserveMethod
+    fullName: Microsoft.AspNetCore.Mvc.ControllerBase.RedirectPermanentPreserveMethod
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Microsoft.AspNetCore.Mvc.ControllerBase.RedirectPermanentPreserveMethod(System.String)
+    name: RedirectPermanentPreserveMethod
+    nameWithType: ControllerBase.RedirectPermanentPreserveMethod
+    fullName: Microsoft.AspNetCore.Mvc.ControllerBase.RedirectPermanentPreserveMethod
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
 - uid: Microsoft.AspNetCore.Mvc.ControllerBase.LocalRedirect(System.String)
   commentId: M:Microsoft.AspNetCore.Mvc.ControllerBase.LocalRedirect(System.String)
   parent: Microsoft.AspNetCore.Mvc.ControllerBase
@@ -1829,6 +2533,88 @@ references:
     name: LocalRedirectPermanent
     nameWithType: ControllerBase.LocalRedirectPermanent
     fullName: Microsoft.AspNetCore.Mvc.ControllerBase.LocalRedirectPermanent
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Microsoft.AspNetCore.Mvc.ControllerBase.LocalRedirectPreserveMethod(System.String)
+  commentId: M:Microsoft.AspNetCore.Mvc.ControllerBase.LocalRedirectPreserveMethod(System.String)
+  parent: Microsoft.AspNetCore.Mvc.ControllerBase
+  isExternal: true
+  name: LocalRedirectPreserveMethod(String)
+  nameWithType: ControllerBase.LocalRedirectPreserveMethod(String)
+  fullName: Microsoft.AspNetCore.Mvc.ControllerBase.LocalRedirectPreserveMethod(System.String)
+  spec.csharp:
+  - uid: Microsoft.AspNetCore.Mvc.ControllerBase.LocalRedirectPreserveMethod(System.String)
+    name: LocalRedirectPreserveMethod
+    nameWithType: ControllerBase.LocalRedirectPreserveMethod
+    fullName: Microsoft.AspNetCore.Mvc.ControllerBase.LocalRedirectPreserveMethod
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Microsoft.AspNetCore.Mvc.ControllerBase.LocalRedirectPreserveMethod(System.String)
+    name: LocalRedirectPreserveMethod
+    nameWithType: ControllerBase.LocalRedirectPreserveMethod
+    fullName: Microsoft.AspNetCore.Mvc.ControllerBase.LocalRedirectPreserveMethod
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Microsoft.AspNetCore.Mvc.ControllerBase.LocalRedirectPermanentPreserveMethod(System.String)
+  commentId: M:Microsoft.AspNetCore.Mvc.ControllerBase.LocalRedirectPermanentPreserveMethod(System.String)
+  parent: Microsoft.AspNetCore.Mvc.ControllerBase
+  isExternal: true
+  name: LocalRedirectPermanentPreserveMethod(String)
+  nameWithType: ControllerBase.LocalRedirectPermanentPreserveMethod(String)
+  fullName: Microsoft.AspNetCore.Mvc.ControllerBase.LocalRedirectPermanentPreserveMethod(System.String)
+  spec.csharp:
+  - uid: Microsoft.AspNetCore.Mvc.ControllerBase.LocalRedirectPermanentPreserveMethod(System.String)
+    name: LocalRedirectPermanentPreserveMethod
+    nameWithType: ControllerBase.LocalRedirectPermanentPreserveMethod
+    fullName: Microsoft.AspNetCore.Mvc.ControllerBase.LocalRedirectPermanentPreserveMethod
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Microsoft.AspNetCore.Mvc.ControllerBase.LocalRedirectPermanentPreserveMethod(System.String)
+    name: LocalRedirectPermanentPreserveMethod
+    nameWithType: ControllerBase.LocalRedirectPermanentPreserveMethod
+    fullName: Microsoft.AspNetCore.Mvc.ControllerBase.LocalRedirectPermanentPreserveMethod
     isExternal: true
   - name: (
     nameWithType: (
@@ -2069,6 +2855,257 @@ references:
   - name: )
     nameWithType: )
     fullName: )
+- uid: Microsoft.AspNetCore.Mvc.ControllerBase.RedirectToAction(System.String,System.String,System.String)
+  commentId: M:Microsoft.AspNetCore.Mvc.ControllerBase.RedirectToAction(System.String,System.String,System.String)
+  parent: Microsoft.AspNetCore.Mvc.ControllerBase
+  isExternal: true
+  name: RedirectToAction(String, String, String)
+  nameWithType: ControllerBase.RedirectToAction(String, String, String)
+  fullName: Microsoft.AspNetCore.Mvc.ControllerBase.RedirectToAction(System.String, System.String, System.String)
+  spec.csharp:
+  - uid: Microsoft.AspNetCore.Mvc.ControllerBase.RedirectToAction(System.String,System.String,System.String)
+    name: RedirectToAction
+    nameWithType: ControllerBase.RedirectToAction
+    fullName: Microsoft.AspNetCore.Mvc.ControllerBase.RedirectToAction
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Microsoft.AspNetCore.Mvc.ControllerBase.RedirectToAction(System.String,System.String,System.String)
+    name: RedirectToAction
+    nameWithType: ControllerBase.RedirectToAction
+    fullName: Microsoft.AspNetCore.Mvc.ControllerBase.RedirectToAction
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Microsoft.AspNetCore.Mvc.ControllerBase.RedirectToAction(System.String,System.String,System.Object,System.String)
+  commentId: M:Microsoft.AspNetCore.Mvc.ControllerBase.RedirectToAction(System.String,System.String,System.Object,System.String)
+  parent: Microsoft.AspNetCore.Mvc.ControllerBase
+  isExternal: true
+  name: RedirectToAction(String, String, Object, String)
+  nameWithType: ControllerBase.RedirectToAction(String, String, Object, String)
+  fullName: Microsoft.AspNetCore.Mvc.ControllerBase.RedirectToAction(System.String, System.String, System.Object, System.String)
+  spec.csharp:
+  - uid: Microsoft.AspNetCore.Mvc.ControllerBase.RedirectToAction(System.String,System.String,System.Object,System.String)
+    name: RedirectToAction
+    nameWithType: ControllerBase.RedirectToAction
+    fullName: Microsoft.AspNetCore.Mvc.ControllerBase.RedirectToAction
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Microsoft.AspNetCore.Mvc.ControllerBase.RedirectToAction(System.String,System.String,System.Object,System.String)
+    name: RedirectToAction
+    nameWithType: ControllerBase.RedirectToAction
+    fullName: Microsoft.AspNetCore.Mvc.ControllerBase.RedirectToAction
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Microsoft.AspNetCore.Mvc.ControllerBase.RedirectToActionPreserveMethod(System.String,System.String,System.Object,System.String)
+  commentId: M:Microsoft.AspNetCore.Mvc.ControllerBase.RedirectToActionPreserveMethod(System.String,System.String,System.Object,System.String)
+  parent: Microsoft.AspNetCore.Mvc.ControllerBase
+  isExternal: true
+  name: RedirectToActionPreserveMethod(String, String, Object, String)
+  nameWithType: ControllerBase.RedirectToActionPreserveMethod(String, String, Object, String)
+  fullName: Microsoft.AspNetCore.Mvc.ControllerBase.RedirectToActionPreserveMethod(System.String, System.String, System.Object, System.String)
+  spec.csharp:
+  - uid: Microsoft.AspNetCore.Mvc.ControllerBase.RedirectToActionPreserveMethod(System.String,System.String,System.Object,System.String)
+    name: RedirectToActionPreserveMethod
+    nameWithType: ControllerBase.RedirectToActionPreserveMethod
+    fullName: Microsoft.AspNetCore.Mvc.ControllerBase.RedirectToActionPreserveMethod
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Microsoft.AspNetCore.Mvc.ControllerBase.RedirectToActionPreserveMethod(System.String,System.String,System.Object,System.String)
+    name: RedirectToActionPreserveMethod
+    nameWithType: ControllerBase.RedirectToActionPreserveMethod
+    fullName: Microsoft.AspNetCore.Mvc.ControllerBase.RedirectToActionPreserveMethod
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
 - uid: Microsoft.AspNetCore.Mvc.ControllerBase.RedirectToActionPermanent(System.String)
   commentId: M:Microsoft.AspNetCore.Mvc.ControllerBase.RedirectToActionPermanent(System.String)
   parent: Microsoft.AspNetCore.Mvc.ControllerBase
@@ -2224,6 +3261,79 @@ references:
   - name: )
     nameWithType: )
     fullName: )
+- uid: Microsoft.AspNetCore.Mvc.ControllerBase.RedirectToActionPermanent(System.String,System.String,System.String)
+  commentId: M:Microsoft.AspNetCore.Mvc.ControllerBase.RedirectToActionPermanent(System.String,System.String,System.String)
+  parent: Microsoft.AspNetCore.Mvc.ControllerBase
+  isExternal: true
+  name: RedirectToActionPermanent(String, String, String)
+  nameWithType: ControllerBase.RedirectToActionPermanent(String, String, String)
+  fullName: Microsoft.AspNetCore.Mvc.ControllerBase.RedirectToActionPermanent(System.String, System.String, System.String)
+  spec.csharp:
+  - uid: Microsoft.AspNetCore.Mvc.ControllerBase.RedirectToActionPermanent(System.String,System.String,System.String)
+    name: RedirectToActionPermanent
+    nameWithType: ControllerBase.RedirectToActionPermanent
+    fullName: Microsoft.AspNetCore.Mvc.ControllerBase.RedirectToActionPermanent
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Microsoft.AspNetCore.Mvc.ControllerBase.RedirectToActionPermanent(System.String,System.String,System.String)
+    name: RedirectToActionPermanent
+    nameWithType: ControllerBase.RedirectToActionPermanent
+    fullName: Microsoft.AspNetCore.Mvc.ControllerBase.RedirectToActionPermanent
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
 - uid: Microsoft.AspNetCore.Mvc.ControllerBase.RedirectToActionPermanent(System.String,System.String,System.Object)
   commentId: M:Microsoft.AspNetCore.Mvc.ControllerBase.RedirectToActionPermanent(System.String,System.String,System.Object)
   parent: Microsoft.AspNetCore.Mvc.ControllerBase
@@ -2293,6 +3403,184 @@ references:
     name: Object
     nameWithType: Object
     fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Microsoft.AspNetCore.Mvc.ControllerBase.RedirectToActionPermanent(System.String,System.String,System.Object,System.String)
+  commentId: M:Microsoft.AspNetCore.Mvc.ControllerBase.RedirectToActionPermanent(System.String,System.String,System.Object,System.String)
+  parent: Microsoft.AspNetCore.Mvc.ControllerBase
+  isExternal: true
+  name: RedirectToActionPermanent(String, String, Object, String)
+  nameWithType: ControllerBase.RedirectToActionPermanent(String, String, Object, String)
+  fullName: Microsoft.AspNetCore.Mvc.ControllerBase.RedirectToActionPermanent(System.String, System.String, System.Object, System.String)
+  spec.csharp:
+  - uid: Microsoft.AspNetCore.Mvc.ControllerBase.RedirectToActionPermanent(System.String,System.String,System.Object,System.String)
+    name: RedirectToActionPermanent
+    nameWithType: ControllerBase.RedirectToActionPermanent
+    fullName: Microsoft.AspNetCore.Mvc.ControllerBase.RedirectToActionPermanent
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Microsoft.AspNetCore.Mvc.ControllerBase.RedirectToActionPermanent(System.String,System.String,System.Object,System.String)
+    name: RedirectToActionPermanent
+    nameWithType: ControllerBase.RedirectToActionPermanent
+    fullName: Microsoft.AspNetCore.Mvc.ControllerBase.RedirectToActionPermanent
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Microsoft.AspNetCore.Mvc.ControllerBase.RedirectToActionPermanentPreserveMethod(System.String,System.String,System.Object,System.String)
+  commentId: M:Microsoft.AspNetCore.Mvc.ControllerBase.RedirectToActionPermanentPreserveMethod(System.String,System.String,System.Object,System.String)
+  parent: Microsoft.AspNetCore.Mvc.ControllerBase
+  isExternal: true
+  name: RedirectToActionPermanentPreserveMethod(String, String, Object, String)
+  nameWithType: ControllerBase.RedirectToActionPermanentPreserveMethod(String, String, Object, String)
+  fullName: Microsoft.AspNetCore.Mvc.ControllerBase.RedirectToActionPermanentPreserveMethod(System.String, System.String, System.Object, System.String)
+  spec.csharp:
+  - uid: Microsoft.AspNetCore.Mvc.ControllerBase.RedirectToActionPermanentPreserveMethod(System.String,System.String,System.Object,System.String)
+    name: RedirectToActionPermanentPreserveMethod
+    nameWithType: ControllerBase.RedirectToActionPermanentPreserveMethod
+    fullName: Microsoft.AspNetCore.Mvc.ControllerBase.RedirectToActionPermanentPreserveMethod
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Microsoft.AspNetCore.Mvc.ControllerBase.RedirectToActionPermanentPreserveMethod(System.String,System.String,System.Object,System.String)
+    name: RedirectToActionPermanentPreserveMethod
+    nameWithType: ControllerBase.RedirectToActionPermanentPreserveMethod
+    fullName: Microsoft.AspNetCore.Mvc.ControllerBase.RedirectToActionPermanentPreserveMethod
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
     isExternal: true
   - name: )
     nameWithType: )
@@ -2436,6 +3724,209 @@ references:
   - name: )
     nameWithType: )
     fullName: )
+- uid: Microsoft.AspNetCore.Mvc.ControllerBase.RedirectToRoute(System.String,System.String)
+  commentId: M:Microsoft.AspNetCore.Mvc.ControllerBase.RedirectToRoute(System.String,System.String)
+  parent: Microsoft.AspNetCore.Mvc.ControllerBase
+  isExternal: true
+  name: RedirectToRoute(String, String)
+  nameWithType: ControllerBase.RedirectToRoute(String, String)
+  fullName: Microsoft.AspNetCore.Mvc.ControllerBase.RedirectToRoute(System.String, System.String)
+  spec.csharp:
+  - uid: Microsoft.AspNetCore.Mvc.ControllerBase.RedirectToRoute(System.String,System.String)
+    name: RedirectToRoute
+    nameWithType: ControllerBase.RedirectToRoute
+    fullName: Microsoft.AspNetCore.Mvc.ControllerBase.RedirectToRoute
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Microsoft.AspNetCore.Mvc.ControllerBase.RedirectToRoute(System.String,System.String)
+    name: RedirectToRoute
+    nameWithType: ControllerBase.RedirectToRoute
+    fullName: Microsoft.AspNetCore.Mvc.ControllerBase.RedirectToRoute
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Microsoft.AspNetCore.Mvc.ControllerBase.RedirectToRoute(System.String,System.Object,System.String)
+  commentId: M:Microsoft.AspNetCore.Mvc.ControllerBase.RedirectToRoute(System.String,System.Object,System.String)
+  parent: Microsoft.AspNetCore.Mvc.ControllerBase
+  isExternal: true
+  name: RedirectToRoute(String, Object, String)
+  nameWithType: ControllerBase.RedirectToRoute(String, Object, String)
+  fullName: Microsoft.AspNetCore.Mvc.ControllerBase.RedirectToRoute(System.String, System.Object, System.String)
+  spec.csharp:
+  - uid: Microsoft.AspNetCore.Mvc.ControllerBase.RedirectToRoute(System.String,System.Object,System.String)
+    name: RedirectToRoute
+    nameWithType: ControllerBase.RedirectToRoute
+    fullName: Microsoft.AspNetCore.Mvc.ControllerBase.RedirectToRoute
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Microsoft.AspNetCore.Mvc.ControllerBase.RedirectToRoute(System.String,System.Object,System.String)
+    name: RedirectToRoute
+    nameWithType: ControllerBase.RedirectToRoute
+    fullName: Microsoft.AspNetCore.Mvc.ControllerBase.RedirectToRoute
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Microsoft.AspNetCore.Mvc.ControllerBase.RedirectToRoutePreserveMethod(System.String,System.Object,System.String)
+  commentId: M:Microsoft.AspNetCore.Mvc.ControllerBase.RedirectToRoutePreserveMethod(System.String,System.Object,System.String)
+  parent: Microsoft.AspNetCore.Mvc.ControllerBase
+  isExternal: true
+  name: RedirectToRoutePreserveMethod(String, Object, String)
+  nameWithType: ControllerBase.RedirectToRoutePreserveMethod(String, Object, String)
+  fullName: Microsoft.AspNetCore.Mvc.ControllerBase.RedirectToRoutePreserveMethod(System.String, System.Object, System.String)
+  spec.csharp:
+  - uid: Microsoft.AspNetCore.Mvc.ControllerBase.RedirectToRoutePreserveMethod(System.String,System.Object,System.String)
+    name: RedirectToRoutePreserveMethod
+    nameWithType: ControllerBase.RedirectToRoutePreserveMethod
+    fullName: Microsoft.AspNetCore.Mvc.ControllerBase.RedirectToRoutePreserveMethod
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Microsoft.AspNetCore.Mvc.ControllerBase.RedirectToRoutePreserveMethod(System.String,System.Object,System.String)
+    name: RedirectToRoutePreserveMethod
+    nameWithType: ControllerBase.RedirectToRoutePreserveMethod
+    fullName: Microsoft.AspNetCore.Mvc.ControllerBase.RedirectToRoutePreserveMethod
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
 - uid: Microsoft.AspNetCore.Mvc.ControllerBase.RedirectToRoutePermanent(System.String)
   commentId: M:Microsoft.AspNetCore.Mvc.ControllerBase.RedirectToRoutePermanent(System.String)
   parent: Microsoft.AspNetCore.Mvc.ControllerBase
@@ -2571,6 +4062,1094 @@ references:
     name: Object
     nameWithType: Object
     fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Microsoft.AspNetCore.Mvc.ControllerBase.RedirectToRoutePermanent(System.String,System.String)
+  commentId: M:Microsoft.AspNetCore.Mvc.ControllerBase.RedirectToRoutePermanent(System.String,System.String)
+  parent: Microsoft.AspNetCore.Mvc.ControllerBase
+  isExternal: true
+  name: RedirectToRoutePermanent(String, String)
+  nameWithType: ControllerBase.RedirectToRoutePermanent(String, String)
+  fullName: Microsoft.AspNetCore.Mvc.ControllerBase.RedirectToRoutePermanent(System.String, System.String)
+  spec.csharp:
+  - uid: Microsoft.AspNetCore.Mvc.ControllerBase.RedirectToRoutePermanent(System.String,System.String)
+    name: RedirectToRoutePermanent
+    nameWithType: ControllerBase.RedirectToRoutePermanent
+    fullName: Microsoft.AspNetCore.Mvc.ControllerBase.RedirectToRoutePermanent
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Microsoft.AspNetCore.Mvc.ControllerBase.RedirectToRoutePermanent(System.String,System.String)
+    name: RedirectToRoutePermanent
+    nameWithType: ControllerBase.RedirectToRoutePermanent
+    fullName: Microsoft.AspNetCore.Mvc.ControllerBase.RedirectToRoutePermanent
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Microsoft.AspNetCore.Mvc.ControllerBase.RedirectToRoutePermanent(System.String,System.Object,System.String)
+  commentId: M:Microsoft.AspNetCore.Mvc.ControllerBase.RedirectToRoutePermanent(System.String,System.Object,System.String)
+  parent: Microsoft.AspNetCore.Mvc.ControllerBase
+  isExternal: true
+  name: RedirectToRoutePermanent(String, Object, String)
+  nameWithType: ControllerBase.RedirectToRoutePermanent(String, Object, String)
+  fullName: Microsoft.AspNetCore.Mvc.ControllerBase.RedirectToRoutePermanent(System.String, System.Object, System.String)
+  spec.csharp:
+  - uid: Microsoft.AspNetCore.Mvc.ControllerBase.RedirectToRoutePermanent(System.String,System.Object,System.String)
+    name: RedirectToRoutePermanent
+    nameWithType: ControllerBase.RedirectToRoutePermanent
+    fullName: Microsoft.AspNetCore.Mvc.ControllerBase.RedirectToRoutePermanent
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Microsoft.AspNetCore.Mvc.ControllerBase.RedirectToRoutePermanent(System.String,System.Object,System.String)
+    name: RedirectToRoutePermanent
+    nameWithType: ControllerBase.RedirectToRoutePermanent
+    fullName: Microsoft.AspNetCore.Mvc.ControllerBase.RedirectToRoutePermanent
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Microsoft.AspNetCore.Mvc.ControllerBase.RedirectToRoutePermanentPreserveMethod(System.String,System.Object,System.String)
+  commentId: M:Microsoft.AspNetCore.Mvc.ControllerBase.RedirectToRoutePermanentPreserveMethod(System.String,System.Object,System.String)
+  parent: Microsoft.AspNetCore.Mvc.ControllerBase
+  isExternal: true
+  name: RedirectToRoutePermanentPreserveMethod(String, Object, String)
+  nameWithType: ControllerBase.RedirectToRoutePermanentPreserveMethod(String, Object, String)
+  fullName: Microsoft.AspNetCore.Mvc.ControllerBase.RedirectToRoutePermanentPreserveMethod(System.String, System.Object, System.String)
+  spec.csharp:
+  - uid: Microsoft.AspNetCore.Mvc.ControllerBase.RedirectToRoutePermanentPreserveMethod(System.String,System.Object,System.String)
+    name: RedirectToRoutePermanentPreserveMethod
+    nameWithType: ControllerBase.RedirectToRoutePermanentPreserveMethod
+    fullName: Microsoft.AspNetCore.Mvc.ControllerBase.RedirectToRoutePermanentPreserveMethod
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Microsoft.AspNetCore.Mvc.ControllerBase.RedirectToRoutePermanentPreserveMethod(System.String,System.Object,System.String)
+    name: RedirectToRoutePermanentPreserveMethod
+    nameWithType: ControllerBase.RedirectToRoutePermanentPreserveMethod
+    fullName: Microsoft.AspNetCore.Mvc.ControllerBase.RedirectToRoutePermanentPreserveMethod
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Microsoft.AspNetCore.Mvc.ControllerBase.RedirectToPage(System.String)
+  commentId: M:Microsoft.AspNetCore.Mvc.ControllerBase.RedirectToPage(System.String)
+  parent: Microsoft.AspNetCore.Mvc.ControllerBase
+  isExternal: true
+  name: RedirectToPage(String)
+  nameWithType: ControllerBase.RedirectToPage(String)
+  fullName: Microsoft.AspNetCore.Mvc.ControllerBase.RedirectToPage(System.String)
+  spec.csharp:
+  - uid: Microsoft.AspNetCore.Mvc.ControllerBase.RedirectToPage(System.String)
+    name: RedirectToPage
+    nameWithType: ControllerBase.RedirectToPage
+    fullName: Microsoft.AspNetCore.Mvc.ControllerBase.RedirectToPage
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Microsoft.AspNetCore.Mvc.ControllerBase.RedirectToPage(System.String)
+    name: RedirectToPage
+    nameWithType: ControllerBase.RedirectToPage
+    fullName: Microsoft.AspNetCore.Mvc.ControllerBase.RedirectToPage
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Microsoft.AspNetCore.Mvc.ControllerBase.RedirectToPage(System.String,System.Object)
+  commentId: M:Microsoft.AspNetCore.Mvc.ControllerBase.RedirectToPage(System.String,System.Object)
+  parent: Microsoft.AspNetCore.Mvc.ControllerBase
+  isExternal: true
+  name: RedirectToPage(String, Object)
+  nameWithType: ControllerBase.RedirectToPage(String, Object)
+  fullName: Microsoft.AspNetCore.Mvc.ControllerBase.RedirectToPage(System.String, System.Object)
+  spec.csharp:
+  - uid: Microsoft.AspNetCore.Mvc.ControllerBase.RedirectToPage(System.String,System.Object)
+    name: RedirectToPage
+    nameWithType: ControllerBase.RedirectToPage
+    fullName: Microsoft.AspNetCore.Mvc.ControllerBase.RedirectToPage
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Microsoft.AspNetCore.Mvc.ControllerBase.RedirectToPage(System.String,System.Object)
+    name: RedirectToPage
+    nameWithType: ControllerBase.RedirectToPage
+    fullName: Microsoft.AspNetCore.Mvc.ControllerBase.RedirectToPage
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Microsoft.AspNetCore.Mvc.ControllerBase.RedirectToPage(System.String,System.String)
+  commentId: M:Microsoft.AspNetCore.Mvc.ControllerBase.RedirectToPage(System.String,System.String)
+  parent: Microsoft.AspNetCore.Mvc.ControllerBase
+  isExternal: true
+  name: RedirectToPage(String, String)
+  nameWithType: ControllerBase.RedirectToPage(String, String)
+  fullName: Microsoft.AspNetCore.Mvc.ControllerBase.RedirectToPage(System.String, System.String)
+  spec.csharp:
+  - uid: Microsoft.AspNetCore.Mvc.ControllerBase.RedirectToPage(System.String,System.String)
+    name: RedirectToPage
+    nameWithType: ControllerBase.RedirectToPage
+    fullName: Microsoft.AspNetCore.Mvc.ControllerBase.RedirectToPage
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Microsoft.AspNetCore.Mvc.ControllerBase.RedirectToPage(System.String,System.String)
+    name: RedirectToPage
+    nameWithType: ControllerBase.RedirectToPage
+    fullName: Microsoft.AspNetCore.Mvc.ControllerBase.RedirectToPage
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Microsoft.AspNetCore.Mvc.ControllerBase.RedirectToPage(System.String,System.String,System.Object)
+  commentId: M:Microsoft.AspNetCore.Mvc.ControllerBase.RedirectToPage(System.String,System.String,System.Object)
+  parent: Microsoft.AspNetCore.Mvc.ControllerBase
+  isExternal: true
+  name: RedirectToPage(String, String, Object)
+  nameWithType: ControllerBase.RedirectToPage(String, String, Object)
+  fullName: Microsoft.AspNetCore.Mvc.ControllerBase.RedirectToPage(System.String, System.String, System.Object)
+  spec.csharp:
+  - uid: Microsoft.AspNetCore.Mvc.ControllerBase.RedirectToPage(System.String,System.String,System.Object)
+    name: RedirectToPage
+    nameWithType: ControllerBase.RedirectToPage
+    fullName: Microsoft.AspNetCore.Mvc.ControllerBase.RedirectToPage
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Microsoft.AspNetCore.Mvc.ControllerBase.RedirectToPage(System.String,System.String,System.Object)
+    name: RedirectToPage
+    nameWithType: ControllerBase.RedirectToPage
+    fullName: Microsoft.AspNetCore.Mvc.ControllerBase.RedirectToPage
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Microsoft.AspNetCore.Mvc.ControllerBase.RedirectToPage(System.String,System.String,System.String)
+  commentId: M:Microsoft.AspNetCore.Mvc.ControllerBase.RedirectToPage(System.String,System.String,System.String)
+  parent: Microsoft.AspNetCore.Mvc.ControllerBase
+  isExternal: true
+  name: RedirectToPage(String, String, String)
+  nameWithType: ControllerBase.RedirectToPage(String, String, String)
+  fullName: Microsoft.AspNetCore.Mvc.ControllerBase.RedirectToPage(System.String, System.String, System.String)
+  spec.csharp:
+  - uid: Microsoft.AspNetCore.Mvc.ControllerBase.RedirectToPage(System.String,System.String,System.String)
+    name: RedirectToPage
+    nameWithType: ControllerBase.RedirectToPage
+    fullName: Microsoft.AspNetCore.Mvc.ControllerBase.RedirectToPage
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Microsoft.AspNetCore.Mvc.ControllerBase.RedirectToPage(System.String,System.String,System.String)
+    name: RedirectToPage
+    nameWithType: ControllerBase.RedirectToPage
+    fullName: Microsoft.AspNetCore.Mvc.ControllerBase.RedirectToPage
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Microsoft.AspNetCore.Mvc.ControllerBase.RedirectToPage(System.String,System.String,System.Object,System.String)
+  commentId: M:Microsoft.AspNetCore.Mvc.ControllerBase.RedirectToPage(System.String,System.String,System.Object,System.String)
+  parent: Microsoft.AspNetCore.Mvc.ControllerBase
+  isExternal: true
+  name: RedirectToPage(String, String, Object, String)
+  nameWithType: ControllerBase.RedirectToPage(String, String, Object, String)
+  fullName: Microsoft.AspNetCore.Mvc.ControllerBase.RedirectToPage(System.String, System.String, System.Object, System.String)
+  spec.csharp:
+  - uid: Microsoft.AspNetCore.Mvc.ControllerBase.RedirectToPage(System.String,System.String,System.Object,System.String)
+    name: RedirectToPage
+    nameWithType: ControllerBase.RedirectToPage
+    fullName: Microsoft.AspNetCore.Mvc.ControllerBase.RedirectToPage
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Microsoft.AspNetCore.Mvc.ControllerBase.RedirectToPage(System.String,System.String,System.Object,System.String)
+    name: RedirectToPage
+    nameWithType: ControllerBase.RedirectToPage
+    fullName: Microsoft.AspNetCore.Mvc.ControllerBase.RedirectToPage
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Microsoft.AspNetCore.Mvc.ControllerBase.RedirectToPagePermanent(System.String)
+  commentId: M:Microsoft.AspNetCore.Mvc.ControllerBase.RedirectToPagePermanent(System.String)
+  parent: Microsoft.AspNetCore.Mvc.ControllerBase
+  isExternal: true
+  name: RedirectToPagePermanent(String)
+  nameWithType: ControllerBase.RedirectToPagePermanent(String)
+  fullName: Microsoft.AspNetCore.Mvc.ControllerBase.RedirectToPagePermanent(System.String)
+  spec.csharp:
+  - uid: Microsoft.AspNetCore.Mvc.ControllerBase.RedirectToPagePermanent(System.String)
+    name: RedirectToPagePermanent
+    nameWithType: ControllerBase.RedirectToPagePermanent
+    fullName: Microsoft.AspNetCore.Mvc.ControllerBase.RedirectToPagePermanent
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Microsoft.AspNetCore.Mvc.ControllerBase.RedirectToPagePermanent(System.String)
+    name: RedirectToPagePermanent
+    nameWithType: ControllerBase.RedirectToPagePermanent
+    fullName: Microsoft.AspNetCore.Mvc.ControllerBase.RedirectToPagePermanent
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Microsoft.AspNetCore.Mvc.ControllerBase.RedirectToPagePermanent(System.String,System.Object)
+  commentId: M:Microsoft.AspNetCore.Mvc.ControllerBase.RedirectToPagePermanent(System.String,System.Object)
+  parent: Microsoft.AspNetCore.Mvc.ControllerBase
+  isExternal: true
+  name: RedirectToPagePermanent(String, Object)
+  nameWithType: ControllerBase.RedirectToPagePermanent(String, Object)
+  fullName: Microsoft.AspNetCore.Mvc.ControllerBase.RedirectToPagePermanent(System.String, System.Object)
+  spec.csharp:
+  - uid: Microsoft.AspNetCore.Mvc.ControllerBase.RedirectToPagePermanent(System.String,System.Object)
+    name: RedirectToPagePermanent
+    nameWithType: ControllerBase.RedirectToPagePermanent
+    fullName: Microsoft.AspNetCore.Mvc.ControllerBase.RedirectToPagePermanent
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Microsoft.AspNetCore.Mvc.ControllerBase.RedirectToPagePermanent(System.String,System.Object)
+    name: RedirectToPagePermanent
+    nameWithType: ControllerBase.RedirectToPagePermanent
+    fullName: Microsoft.AspNetCore.Mvc.ControllerBase.RedirectToPagePermanent
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Microsoft.AspNetCore.Mvc.ControllerBase.RedirectToPagePermanent(System.String,System.String)
+  commentId: M:Microsoft.AspNetCore.Mvc.ControllerBase.RedirectToPagePermanent(System.String,System.String)
+  parent: Microsoft.AspNetCore.Mvc.ControllerBase
+  isExternal: true
+  name: RedirectToPagePermanent(String, String)
+  nameWithType: ControllerBase.RedirectToPagePermanent(String, String)
+  fullName: Microsoft.AspNetCore.Mvc.ControllerBase.RedirectToPagePermanent(System.String, System.String)
+  spec.csharp:
+  - uid: Microsoft.AspNetCore.Mvc.ControllerBase.RedirectToPagePermanent(System.String,System.String)
+    name: RedirectToPagePermanent
+    nameWithType: ControllerBase.RedirectToPagePermanent
+    fullName: Microsoft.AspNetCore.Mvc.ControllerBase.RedirectToPagePermanent
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Microsoft.AspNetCore.Mvc.ControllerBase.RedirectToPagePermanent(System.String,System.String)
+    name: RedirectToPagePermanent
+    nameWithType: ControllerBase.RedirectToPagePermanent
+    fullName: Microsoft.AspNetCore.Mvc.ControllerBase.RedirectToPagePermanent
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Microsoft.AspNetCore.Mvc.ControllerBase.RedirectToPagePermanent(System.String,System.String,System.String)
+  commentId: M:Microsoft.AspNetCore.Mvc.ControllerBase.RedirectToPagePermanent(System.String,System.String,System.String)
+  parent: Microsoft.AspNetCore.Mvc.ControllerBase
+  isExternal: true
+  name: RedirectToPagePermanent(String, String, String)
+  nameWithType: ControllerBase.RedirectToPagePermanent(String, String, String)
+  fullName: Microsoft.AspNetCore.Mvc.ControllerBase.RedirectToPagePermanent(System.String, System.String, System.String)
+  spec.csharp:
+  - uid: Microsoft.AspNetCore.Mvc.ControllerBase.RedirectToPagePermanent(System.String,System.String,System.String)
+    name: RedirectToPagePermanent
+    nameWithType: ControllerBase.RedirectToPagePermanent
+    fullName: Microsoft.AspNetCore.Mvc.ControllerBase.RedirectToPagePermanent
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Microsoft.AspNetCore.Mvc.ControllerBase.RedirectToPagePermanent(System.String,System.String,System.String)
+    name: RedirectToPagePermanent
+    nameWithType: ControllerBase.RedirectToPagePermanent
+    fullName: Microsoft.AspNetCore.Mvc.ControllerBase.RedirectToPagePermanent
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Microsoft.AspNetCore.Mvc.ControllerBase.RedirectToPagePermanent(System.String,System.String,System.Object,System.String)
+  commentId: M:Microsoft.AspNetCore.Mvc.ControllerBase.RedirectToPagePermanent(System.String,System.String,System.Object,System.String)
+  parent: Microsoft.AspNetCore.Mvc.ControllerBase
+  isExternal: true
+  name: RedirectToPagePermanent(String, String, Object, String)
+  nameWithType: ControllerBase.RedirectToPagePermanent(String, String, Object, String)
+  fullName: Microsoft.AspNetCore.Mvc.ControllerBase.RedirectToPagePermanent(System.String, System.String, System.Object, System.String)
+  spec.csharp:
+  - uid: Microsoft.AspNetCore.Mvc.ControllerBase.RedirectToPagePermanent(System.String,System.String,System.Object,System.String)
+    name: RedirectToPagePermanent
+    nameWithType: ControllerBase.RedirectToPagePermanent
+    fullName: Microsoft.AspNetCore.Mvc.ControllerBase.RedirectToPagePermanent
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Microsoft.AspNetCore.Mvc.ControllerBase.RedirectToPagePermanent(System.String,System.String,System.Object,System.String)
+    name: RedirectToPagePermanent
+    nameWithType: ControllerBase.RedirectToPagePermanent
+    fullName: Microsoft.AspNetCore.Mvc.ControllerBase.RedirectToPagePermanent
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Microsoft.AspNetCore.Mvc.ControllerBase.RedirectToPagePreserveMethod(System.String,System.String,System.Object,System.String)
+  commentId: M:Microsoft.AspNetCore.Mvc.ControllerBase.RedirectToPagePreserveMethod(System.String,System.String,System.Object,System.String)
+  parent: Microsoft.AspNetCore.Mvc.ControllerBase
+  isExternal: true
+  name: RedirectToPagePreserveMethod(String, String, Object, String)
+  nameWithType: ControllerBase.RedirectToPagePreserveMethod(String, String, Object, String)
+  fullName: Microsoft.AspNetCore.Mvc.ControllerBase.RedirectToPagePreserveMethod(System.String, System.String, System.Object, System.String)
+  spec.csharp:
+  - uid: Microsoft.AspNetCore.Mvc.ControllerBase.RedirectToPagePreserveMethod(System.String,System.String,System.Object,System.String)
+    name: RedirectToPagePreserveMethod
+    nameWithType: ControllerBase.RedirectToPagePreserveMethod
+    fullName: Microsoft.AspNetCore.Mvc.ControllerBase.RedirectToPagePreserveMethod
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Microsoft.AspNetCore.Mvc.ControllerBase.RedirectToPagePreserveMethod(System.String,System.String,System.Object,System.String)
+    name: RedirectToPagePreserveMethod
+    nameWithType: ControllerBase.RedirectToPagePreserveMethod
+    fullName: Microsoft.AspNetCore.Mvc.ControllerBase.RedirectToPagePreserveMethod
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Microsoft.AspNetCore.Mvc.ControllerBase.RedirectToPagePermanentPreserveMethod(System.String,System.String,System.Object,System.String)
+  commentId: M:Microsoft.AspNetCore.Mvc.ControllerBase.RedirectToPagePermanentPreserveMethod(System.String,System.String,System.Object,System.String)
+  parent: Microsoft.AspNetCore.Mvc.ControllerBase
+  isExternal: true
+  name: RedirectToPagePermanentPreserveMethod(String, String, Object, String)
+  nameWithType: ControllerBase.RedirectToPagePermanentPreserveMethod(String, String, Object, String)
+  fullName: Microsoft.AspNetCore.Mvc.ControllerBase.RedirectToPagePermanentPreserveMethod(System.String, System.String, System.Object, System.String)
+  spec.csharp:
+  - uid: Microsoft.AspNetCore.Mvc.ControllerBase.RedirectToPagePermanentPreserveMethod(System.String,System.String,System.Object,System.String)
+    name: RedirectToPagePermanentPreserveMethod
+    nameWithType: ControllerBase.RedirectToPagePermanentPreserveMethod
+    fullName: Microsoft.AspNetCore.Mvc.ControllerBase.RedirectToPagePermanentPreserveMethod
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Microsoft.AspNetCore.Mvc.ControllerBase.RedirectToPagePermanentPreserveMethod(System.String,System.String,System.Object,System.String)
+    name: RedirectToPagePermanentPreserveMethod
+    nameWithType: ControllerBase.RedirectToPagePermanentPreserveMethod
+    fullName: Microsoft.AspNetCore.Mvc.ControllerBase.RedirectToPagePermanentPreserveMethod
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
     isExternal: true
   - name: )
     nameWithType: )
@@ -2723,6 +5302,262 @@ references:
   - name: )
     nameWithType: )
     fullName: )
+- uid: Microsoft.AspNetCore.Mvc.ControllerBase.File(System.Byte[],System.String,System.Nullable{System.DateTimeOffset},Microsoft.Net.Http.Headers.EntityTagHeaderValue)
+  commentId: M:Microsoft.AspNetCore.Mvc.ControllerBase.File(System.Byte[],System.String,System.Nullable{System.DateTimeOffset},Microsoft.Net.Http.Headers.EntityTagHeaderValue)
+  parent: Microsoft.AspNetCore.Mvc.ControllerBase
+  isExternal: true
+  name: File(Byte[], String, Nullable<DateTimeOffset>, EntityTagHeaderValue)
+  nameWithType: ControllerBase.File(Byte[], String, Nullable<DateTimeOffset>, EntityTagHeaderValue)
+  fullName: Microsoft.AspNetCore.Mvc.ControllerBase.File(System.Byte[], System.String, System.Nullable<System.DateTimeOffset>, Microsoft.Net.Http.Headers.EntityTagHeaderValue)
+  nameWithType.vb: ControllerBase.File(Byte(), String, Nullable(Of DateTimeOffset), EntityTagHeaderValue)
+  fullName.vb: Microsoft.AspNetCore.Mvc.ControllerBase.File(System.Byte(), System.String, System.Nullable(Of System.DateTimeOffset), Microsoft.Net.Http.Headers.EntityTagHeaderValue)
+  name.vb: File(Byte(), String, Nullable(Of DateTimeOffset), EntityTagHeaderValue)
+  spec.csharp:
+  - uid: Microsoft.AspNetCore.Mvc.ControllerBase.File(System.Byte[],System.String,System.Nullable{System.DateTimeOffset},Microsoft.Net.Http.Headers.EntityTagHeaderValue)
+    name: File
+    nameWithType: ControllerBase.File
+    fullName: Microsoft.AspNetCore.Mvc.ControllerBase.File
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Byte
+    name: Byte
+    nameWithType: Byte
+    fullName: System.Byte
+    isExternal: true
+  - name: '[]'
+    nameWithType: '[]'
+    fullName: '[]'
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Nullable`1
+    name: Nullable
+    nameWithType: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.DateTimeOffset
+    name: DateTimeOffset
+    nameWithType: DateTimeOffset
+    fullName: System.DateTimeOffset
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: Microsoft.Net.Http.Headers.EntityTagHeaderValue
+    name: EntityTagHeaderValue
+    nameWithType: EntityTagHeaderValue
+    fullName: Microsoft.Net.Http.Headers.EntityTagHeaderValue
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Microsoft.AspNetCore.Mvc.ControllerBase.File(System.Byte[],System.String,System.Nullable{System.DateTimeOffset},Microsoft.Net.Http.Headers.EntityTagHeaderValue)
+    name: File
+    nameWithType: ControllerBase.File
+    fullName: Microsoft.AspNetCore.Mvc.ControllerBase.File
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Byte
+    name: Byte
+    nameWithType: Byte
+    fullName: System.Byte
+    isExternal: true
+  - name: ()
+    nameWithType: ()
+    fullName: ()
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Nullable`1
+    name: Nullable
+    nameWithType: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.DateTimeOffset
+    name: DateTimeOffset
+    nameWithType: DateTimeOffset
+    fullName: System.DateTimeOffset
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: Microsoft.Net.Http.Headers.EntityTagHeaderValue
+    name: EntityTagHeaderValue
+    nameWithType: EntityTagHeaderValue
+    fullName: Microsoft.Net.Http.Headers.EntityTagHeaderValue
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Microsoft.AspNetCore.Mvc.ControllerBase.File(System.Byte[],System.String,System.String,System.Nullable{System.DateTimeOffset},Microsoft.Net.Http.Headers.EntityTagHeaderValue)
+  commentId: M:Microsoft.AspNetCore.Mvc.ControllerBase.File(System.Byte[],System.String,System.String,System.Nullable{System.DateTimeOffset},Microsoft.Net.Http.Headers.EntityTagHeaderValue)
+  parent: Microsoft.AspNetCore.Mvc.ControllerBase
+  isExternal: true
+  name: File(Byte[], String, String, Nullable<DateTimeOffset>, EntityTagHeaderValue)
+  nameWithType: ControllerBase.File(Byte[], String, String, Nullable<DateTimeOffset>, EntityTagHeaderValue)
+  fullName: Microsoft.AspNetCore.Mvc.ControllerBase.File(System.Byte[], System.String, System.String, System.Nullable<System.DateTimeOffset>, Microsoft.Net.Http.Headers.EntityTagHeaderValue)
+  nameWithType.vb: ControllerBase.File(Byte(), String, String, Nullable(Of DateTimeOffset), EntityTagHeaderValue)
+  fullName.vb: Microsoft.AspNetCore.Mvc.ControllerBase.File(System.Byte(), System.String, System.String, System.Nullable(Of System.DateTimeOffset), Microsoft.Net.Http.Headers.EntityTagHeaderValue)
+  name.vb: File(Byte(), String, String, Nullable(Of DateTimeOffset), EntityTagHeaderValue)
+  spec.csharp:
+  - uid: Microsoft.AspNetCore.Mvc.ControllerBase.File(System.Byte[],System.String,System.String,System.Nullable{System.DateTimeOffset},Microsoft.Net.Http.Headers.EntityTagHeaderValue)
+    name: File
+    nameWithType: ControllerBase.File
+    fullName: Microsoft.AspNetCore.Mvc.ControllerBase.File
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Byte
+    name: Byte
+    nameWithType: Byte
+    fullName: System.Byte
+    isExternal: true
+  - name: '[]'
+    nameWithType: '[]'
+    fullName: '[]'
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Nullable`1
+    name: Nullable
+    nameWithType: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.DateTimeOffset
+    name: DateTimeOffset
+    nameWithType: DateTimeOffset
+    fullName: System.DateTimeOffset
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: Microsoft.Net.Http.Headers.EntityTagHeaderValue
+    name: EntityTagHeaderValue
+    nameWithType: EntityTagHeaderValue
+    fullName: Microsoft.Net.Http.Headers.EntityTagHeaderValue
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Microsoft.AspNetCore.Mvc.ControllerBase.File(System.Byte[],System.String,System.String,System.Nullable{System.DateTimeOffset},Microsoft.Net.Http.Headers.EntityTagHeaderValue)
+    name: File
+    nameWithType: ControllerBase.File
+    fullName: Microsoft.AspNetCore.Mvc.ControllerBase.File
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Byte
+    name: Byte
+    nameWithType: Byte
+    fullName: System.Byte
+    isExternal: true
+  - name: ()
+    nameWithType: ()
+    fullName: ()
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Nullable`1
+    name: Nullable
+    nameWithType: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.DateTimeOffset
+    name: DateTimeOffset
+    nameWithType: DateTimeOffset
+    fullName: System.DateTimeOffset
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: Microsoft.Net.Http.Headers.EntityTagHeaderValue
+    name: EntityTagHeaderValue
+    nameWithType: EntityTagHeaderValue
+    fullName: Microsoft.Net.Http.Headers.EntityTagHeaderValue
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
 - uid: Microsoft.AspNetCore.Mvc.ControllerBase.File(System.IO.Stream,System.String)
   commentId: M:Microsoft.AspNetCore.Mvc.ControllerBase.File(System.IO.Stream,System.String)
   parent: Microsoft.AspNetCore.Mvc.ControllerBase
@@ -2849,6 +5684,250 @@ references:
     name: String
     nameWithType: String
     fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Microsoft.AspNetCore.Mvc.ControllerBase.File(System.IO.Stream,System.String,System.Nullable{System.DateTimeOffset},Microsoft.Net.Http.Headers.EntityTagHeaderValue)
+  commentId: M:Microsoft.AspNetCore.Mvc.ControllerBase.File(System.IO.Stream,System.String,System.Nullable{System.DateTimeOffset},Microsoft.Net.Http.Headers.EntityTagHeaderValue)
+  parent: Microsoft.AspNetCore.Mvc.ControllerBase
+  isExternal: true
+  name: File(Stream, String, Nullable<DateTimeOffset>, EntityTagHeaderValue)
+  nameWithType: ControllerBase.File(Stream, String, Nullable<DateTimeOffset>, EntityTagHeaderValue)
+  fullName: Microsoft.AspNetCore.Mvc.ControllerBase.File(System.IO.Stream, System.String, System.Nullable<System.DateTimeOffset>, Microsoft.Net.Http.Headers.EntityTagHeaderValue)
+  nameWithType.vb: ControllerBase.File(Stream, String, Nullable(Of DateTimeOffset), EntityTagHeaderValue)
+  fullName.vb: Microsoft.AspNetCore.Mvc.ControllerBase.File(System.IO.Stream, System.String, System.Nullable(Of System.DateTimeOffset), Microsoft.Net.Http.Headers.EntityTagHeaderValue)
+  name.vb: File(Stream, String, Nullable(Of DateTimeOffset), EntityTagHeaderValue)
+  spec.csharp:
+  - uid: Microsoft.AspNetCore.Mvc.ControllerBase.File(System.IO.Stream,System.String,System.Nullable{System.DateTimeOffset},Microsoft.Net.Http.Headers.EntityTagHeaderValue)
+    name: File
+    nameWithType: ControllerBase.File
+    fullName: Microsoft.AspNetCore.Mvc.ControllerBase.File
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.IO.Stream
+    name: Stream
+    nameWithType: Stream
+    fullName: System.IO.Stream
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Nullable`1
+    name: Nullable
+    nameWithType: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.DateTimeOffset
+    name: DateTimeOffset
+    nameWithType: DateTimeOffset
+    fullName: System.DateTimeOffset
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: Microsoft.Net.Http.Headers.EntityTagHeaderValue
+    name: EntityTagHeaderValue
+    nameWithType: EntityTagHeaderValue
+    fullName: Microsoft.Net.Http.Headers.EntityTagHeaderValue
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Microsoft.AspNetCore.Mvc.ControllerBase.File(System.IO.Stream,System.String,System.Nullable{System.DateTimeOffset},Microsoft.Net.Http.Headers.EntityTagHeaderValue)
+    name: File
+    nameWithType: ControllerBase.File
+    fullName: Microsoft.AspNetCore.Mvc.ControllerBase.File
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.IO.Stream
+    name: Stream
+    nameWithType: Stream
+    fullName: System.IO.Stream
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Nullable`1
+    name: Nullable
+    nameWithType: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.DateTimeOffset
+    name: DateTimeOffset
+    nameWithType: DateTimeOffset
+    fullName: System.DateTimeOffset
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: Microsoft.Net.Http.Headers.EntityTagHeaderValue
+    name: EntityTagHeaderValue
+    nameWithType: EntityTagHeaderValue
+    fullName: Microsoft.Net.Http.Headers.EntityTagHeaderValue
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Microsoft.AspNetCore.Mvc.ControllerBase.File(System.IO.Stream,System.String,System.String,System.Nullable{System.DateTimeOffset},Microsoft.Net.Http.Headers.EntityTagHeaderValue)
+  commentId: M:Microsoft.AspNetCore.Mvc.ControllerBase.File(System.IO.Stream,System.String,System.String,System.Nullable{System.DateTimeOffset},Microsoft.Net.Http.Headers.EntityTagHeaderValue)
+  parent: Microsoft.AspNetCore.Mvc.ControllerBase
+  isExternal: true
+  name: File(Stream, String, String, Nullable<DateTimeOffset>, EntityTagHeaderValue)
+  nameWithType: ControllerBase.File(Stream, String, String, Nullable<DateTimeOffset>, EntityTagHeaderValue)
+  fullName: Microsoft.AspNetCore.Mvc.ControllerBase.File(System.IO.Stream, System.String, System.String, System.Nullable<System.DateTimeOffset>, Microsoft.Net.Http.Headers.EntityTagHeaderValue)
+  nameWithType.vb: ControllerBase.File(Stream, String, String, Nullable(Of DateTimeOffset), EntityTagHeaderValue)
+  fullName.vb: Microsoft.AspNetCore.Mvc.ControllerBase.File(System.IO.Stream, System.String, System.String, System.Nullable(Of System.DateTimeOffset), Microsoft.Net.Http.Headers.EntityTagHeaderValue)
+  name.vb: File(Stream, String, String, Nullable(Of DateTimeOffset), EntityTagHeaderValue)
+  spec.csharp:
+  - uid: Microsoft.AspNetCore.Mvc.ControllerBase.File(System.IO.Stream,System.String,System.String,System.Nullable{System.DateTimeOffset},Microsoft.Net.Http.Headers.EntityTagHeaderValue)
+    name: File
+    nameWithType: ControllerBase.File
+    fullName: Microsoft.AspNetCore.Mvc.ControllerBase.File
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.IO.Stream
+    name: Stream
+    nameWithType: Stream
+    fullName: System.IO.Stream
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Nullable`1
+    name: Nullable
+    nameWithType: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.DateTimeOffset
+    name: DateTimeOffset
+    nameWithType: DateTimeOffset
+    fullName: System.DateTimeOffset
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: Microsoft.Net.Http.Headers.EntityTagHeaderValue
+    name: EntityTagHeaderValue
+    nameWithType: EntityTagHeaderValue
+    fullName: Microsoft.Net.Http.Headers.EntityTagHeaderValue
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Microsoft.AspNetCore.Mvc.ControllerBase.File(System.IO.Stream,System.String,System.String,System.Nullable{System.DateTimeOffset},Microsoft.Net.Http.Headers.EntityTagHeaderValue)
+    name: File
+    nameWithType: ControllerBase.File
+    fullName: Microsoft.AspNetCore.Mvc.ControllerBase.File
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.IO.Stream
+    name: Stream
+    nameWithType: Stream
+    fullName: System.IO.Stream
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Nullable`1
+    name: Nullable
+    nameWithType: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.DateTimeOffset
+    name: DateTimeOffset
+    nameWithType: DateTimeOffset
+    fullName: System.DateTimeOffset
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: Microsoft.Net.Http.Headers.EntityTagHeaderValue
+    name: EntityTagHeaderValue
+    nameWithType: EntityTagHeaderValue
+    fullName: Microsoft.Net.Http.Headers.EntityTagHeaderValue
     isExternal: true
   - name: )
     nameWithType: )
@@ -2983,6 +6062,250 @@ references:
   - name: )
     nameWithType: )
     fullName: )
+- uid: Microsoft.AspNetCore.Mvc.ControllerBase.File(System.String,System.String,System.Nullable{System.DateTimeOffset},Microsoft.Net.Http.Headers.EntityTagHeaderValue)
+  commentId: M:Microsoft.AspNetCore.Mvc.ControllerBase.File(System.String,System.String,System.Nullable{System.DateTimeOffset},Microsoft.Net.Http.Headers.EntityTagHeaderValue)
+  parent: Microsoft.AspNetCore.Mvc.ControllerBase
+  isExternal: true
+  name: File(String, String, Nullable<DateTimeOffset>, EntityTagHeaderValue)
+  nameWithType: ControllerBase.File(String, String, Nullable<DateTimeOffset>, EntityTagHeaderValue)
+  fullName: Microsoft.AspNetCore.Mvc.ControllerBase.File(System.String, System.String, System.Nullable<System.DateTimeOffset>, Microsoft.Net.Http.Headers.EntityTagHeaderValue)
+  nameWithType.vb: ControllerBase.File(String, String, Nullable(Of DateTimeOffset), EntityTagHeaderValue)
+  fullName.vb: Microsoft.AspNetCore.Mvc.ControllerBase.File(System.String, System.String, System.Nullable(Of System.DateTimeOffset), Microsoft.Net.Http.Headers.EntityTagHeaderValue)
+  name.vb: File(String, String, Nullable(Of DateTimeOffset), EntityTagHeaderValue)
+  spec.csharp:
+  - uid: Microsoft.AspNetCore.Mvc.ControllerBase.File(System.String,System.String,System.Nullable{System.DateTimeOffset},Microsoft.Net.Http.Headers.EntityTagHeaderValue)
+    name: File
+    nameWithType: ControllerBase.File
+    fullName: Microsoft.AspNetCore.Mvc.ControllerBase.File
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Nullable`1
+    name: Nullable
+    nameWithType: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.DateTimeOffset
+    name: DateTimeOffset
+    nameWithType: DateTimeOffset
+    fullName: System.DateTimeOffset
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: Microsoft.Net.Http.Headers.EntityTagHeaderValue
+    name: EntityTagHeaderValue
+    nameWithType: EntityTagHeaderValue
+    fullName: Microsoft.Net.Http.Headers.EntityTagHeaderValue
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Microsoft.AspNetCore.Mvc.ControllerBase.File(System.String,System.String,System.Nullable{System.DateTimeOffset},Microsoft.Net.Http.Headers.EntityTagHeaderValue)
+    name: File
+    nameWithType: ControllerBase.File
+    fullName: Microsoft.AspNetCore.Mvc.ControllerBase.File
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Nullable`1
+    name: Nullable
+    nameWithType: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.DateTimeOffset
+    name: DateTimeOffset
+    nameWithType: DateTimeOffset
+    fullName: System.DateTimeOffset
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: Microsoft.Net.Http.Headers.EntityTagHeaderValue
+    name: EntityTagHeaderValue
+    nameWithType: EntityTagHeaderValue
+    fullName: Microsoft.Net.Http.Headers.EntityTagHeaderValue
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Microsoft.AspNetCore.Mvc.ControllerBase.File(System.String,System.String,System.String,System.Nullable{System.DateTimeOffset},Microsoft.Net.Http.Headers.EntityTagHeaderValue)
+  commentId: M:Microsoft.AspNetCore.Mvc.ControllerBase.File(System.String,System.String,System.String,System.Nullable{System.DateTimeOffset},Microsoft.Net.Http.Headers.EntityTagHeaderValue)
+  parent: Microsoft.AspNetCore.Mvc.ControllerBase
+  isExternal: true
+  name: File(String, String, String, Nullable<DateTimeOffset>, EntityTagHeaderValue)
+  nameWithType: ControllerBase.File(String, String, String, Nullable<DateTimeOffset>, EntityTagHeaderValue)
+  fullName: Microsoft.AspNetCore.Mvc.ControllerBase.File(System.String, System.String, System.String, System.Nullable<System.DateTimeOffset>, Microsoft.Net.Http.Headers.EntityTagHeaderValue)
+  nameWithType.vb: ControllerBase.File(String, String, String, Nullable(Of DateTimeOffset), EntityTagHeaderValue)
+  fullName.vb: Microsoft.AspNetCore.Mvc.ControllerBase.File(System.String, System.String, System.String, System.Nullable(Of System.DateTimeOffset), Microsoft.Net.Http.Headers.EntityTagHeaderValue)
+  name.vb: File(String, String, String, Nullable(Of DateTimeOffset), EntityTagHeaderValue)
+  spec.csharp:
+  - uid: Microsoft.AspNetCore.Mvc.ControllerBase.File(System.String,System.String,System.String,System.Nullable{System.DateTimeOffset},Microsoft.Net.Http.Headers.EntityTagHeaderValue)
+    name: File
+    nameWithType: ControllerBase.File
+    fullName: Microsoft.AspNetCore.Mvc.ControllerBase.File
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Nullable`1
+    name: Nullable
+    nameWithType: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.DateTimeOffset
+    name: DateTimeOffset
+    nameWithType: DateTimeOffset
+    fullName: System.DateTimeOffset
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: Microsoft.Net.Http.Headers.EntityTagHeaderValue
+    name: EntityTagHeaderValue
+    nameWithType: EntityTagHeaderValue
+    fullName: Microsoft.Net.Http.Headers.EntityTagHeaderValue
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Microsoft.AspNetCore.Mvc.ControllerBase.File(System.String,System.String,System.String,System.Nullable{System.DateTimeOffset},Microsoft.Net.Http.Headers.EntityTagHeaderValue)
+    name: File
+    nameWithType: ControllerBase.File
+    fullName: Microsoft.AspNetCore.Mvc.ControllerBase.File
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Nullable`1
+    name: Nullable
+    nameWithType: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.DateTimeOffset
+    name: DateTimeOffset
+    nameWithType: DateTimeOffset
+    fullName: System.DateTimeOffset
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: Microsoft.Net.Http.Headers.EntityTagHeaderValue
+    name: EntityTagHeaderValue
+    nameWithType: EntityTagHeaderValue
+    fullName: Microsoft.Net.Http.Headers.EntityTagHeaderValue
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
 - uid: Microsoft.AspNetCore.Mvc.ControllerBase.PhysicalFile(System.String,System.String)
   commentId: M:Microsoft.AspNetCore.Mvc.ControllerBase.PhysicalFile(System.String,System.String)
   parent: Microsoft.AspNetCore.Mvc.ControllerBase
@@ -3109,6 +6432,250 @@ references:
     name: String
     nameWithType: String
     fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Microsoft.AspNetCore.Mvc.ControllerBase.PhysicalFile(System.String,System.String,System.Nullable{System.DateTimeOffset},Microsoft.Net.Http.Headers.EntityTagHeaderValue)
+  commentId: M:Microsoft.AspNetCore.Mvc.ControllerBase.PhysicalFile(System.String,System.String,System.Nullable{System.DateTimeOffset},Microsoft.Net.Http.Headers.EntityTagHeaderValue)
+  parent: Microsoft.AspNetCore.Mvc.ControllerBase
+  isExternal: true
+  name: PhysicalFile(String, String, Nullable<DateTimeOffset>, EntityTagHeaderValue)
+  nameWithType: ControllerBase.PhysicalFile(String, String, Nullable<DateTimeOffset>, EntityTagHeaderValue)
+  fullName: Microsoft.AspNetCore.Mvc.ControllerBase.PhysicalFile(System.String, System.String, System.Nullable<System.DateTimeOffset>, Microsoft.Net.Http.Headers.EntityTagHeaderValue)
+  nameWithType.vb: ControllerBase.PhysicalFile(String, String, Nullable(Of DateTimeOffset), EntityTagHeaderValue)
+  fullName.vb: Microsoft.AspNetCore.Mvc.ControllerBase.PhysicalFile(System.String, System.String, System.Nullable(Of System.DateTimeOffset), Microsoft.Net.Http.Headers.EntityTagHeaderValue)
+  name.vb: PhysicalFile(String, String, Nullable(Of DateTimeOffset), EntityTagHeaderValue)
+  spec.csharp:
+  - uid: Microsoft.AspNetCore.Mvc.ControllerBase.PhysicalFile(System.String,System.String,System.Nullable{System.DateTimeOffset},Microsoft.Net.Http.Headers.EntityTagHeaderValue)
+    name: PhysicalFile
+    nameWithType: ControllerBase.PhysicalFile
+    fullName: Microsoft.AspNetCore.Mvc.ControllerBase.PhysicalFile
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Nullable`1
+    name: Nullable
+    nameWithType: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.DateTimeOffset
+    name: DateTimeOffset
+    nameWithType: DateTimeOffset
+    fullName: System.DateTimeOffset
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: Microsoft.Net.Http.Headers.EntityTagHeaderValue
+    name: EntityTagHeaderValue
+    nameWithType: EntityTagHeaderValue
+    fullName: Microsoft.Net.Http.Headers.EntityTagHeaderValue
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Microsoft.AspNetCore.Mvc.ControllerBase.PhysicalFile(System.String,System.String,System.Nullable{System.DateTimeOffset},Microsoft.Net.Http.Headers.EntityTagHeaderValue)
+    name: PhysicalFile
+    nameWithType: ControllerBase.PhysicalFile
+    fullName: Microsoft.AspNetCore.Mvc.ControllerBase.PhysicalFile
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Nullable`1
+    name: Nullable
+    nameWithType: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.DateTimeOffset
+    name: DateTimeOffset
+    nameWithType: DateTimeOffset
+    fullName: System.DateTimeOffset
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: Microsoft.Net.Http.Headers.EntityTagHeaderValue
+    name: EntityTagHeaderValue
+    nameWithType: EntityTagHeaderValue
+    fullName: Microsoft.Net.Http.Headers.EntityTagHeaderValue
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Microsoft.AspNetCore.Mvc.ControllerBase.PhysicalFile(System.String,System.String,System.String,System.Nullable{System.DateTimeOffset},Microsoft.Net.Http.Headers.EntityTagHeaderValue)
+  commentId: M:Microsoft.AspNetCore.Mvc.ControllerBase.PhysicalFile(System.String,System.String,System.String,System.Nullable{System.DateTimeOffset},Microsoft.Net.Http.Headers.EntityTagHeaderValue)
+  parent: Microsoft.AspNetCore.Mvc.ControllerBase
+  isExternal: true
+  name: PhysicalFile(String, String, String, Nullable<DateTimeOffset>, EntityTagHeaderValue)
+  nameWithType: ControllerBase.PhysicalFile(String, String, String, Nullable<DateTimeOffset>, EntityTagHeaderValue)
+  fullName: Microsoft.AspNetCore.Mvc.ControllerBase.PhysicalFile(System.String, System.String, System.String, System.Nullable<System.DateTimeOffset>, Microsoft.Net.Http.Headers.EntityTagHeaderValue)
+  nameWithType.vb: ControllerBase.PhysicalFile(String, String, String, Nullable(Of DateTimeOffset), EntityTagHeaderValue)
+  fullName.vb: Microsoft.AspNetCore.Mvc.ControllerBase.PhysicalFile(System.String, System.String, System.String, System.Nullable(Of System.DateTimeOffset), Microsoft.Net.Http.Headers.EntityTagHeaderValue)
+  name.vb: PhysicalFile(String, String, String, Nullable(Of DateTimeOffset), EntityTagHeaderValue)
+  spec.csharp:
+  - uid: Microsoft.AspNetCore.Mvc.ControllerBase.PhysicalFile(System.String,System.String,System.String,System.Nullable{System.DateTimeOffset},Microsoft.Net.Http.Headers.EntityTagHeaderValue)
+    name: PhysicalFile
+    nameWithType: ControllerBase.PhysicalFile
+    fullName: Microsoft.AspNetCore.Mvc.ControllerBase.PhysicalFile
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Nullable`1
+    name: Nullable
+    nameWithType: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.DateTimeOffset
+    name: DateTimeOffset
+    nameWithType: DateTimeOffset
+    fullName: System.DateTimeOffset
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: Microsoft.Net.Http.Headers.EntityTagHeaderValue
+    name: EntityTagHeaderValue
+    nameWithType: EntityTagHeaderValue
+    fullName: Microsoft.Net.Http.Headers.EntityTagHeaderValue
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Microsoft.AspNetCore.Mvc.ControllerBase.PhysicalFile(System.String,System.String,System.String,System.Nullable{System.DateTimeOffset},Microsoft.Net.Http.Headers.EntityTagHeaderValue)
+    name: PhysicalFile
+    nameWithType: ControllerBase.PhysicalFile
+    fullName: Microsoft.AspNetCore.Mvc.ControllerBase.PhysicalFile
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Nullable`1
+    name: Nullable
+    nameWithType: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.DateTimeOffset
+    name: DateTimeOffset
+    nameWithType: DateTimeOffset
+    fullName: System.DateTimeOffset
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: Microsoft.Net.Http.Headers.EntityTagHeaderValue
+    name: EntityTagHeaderValue
+    nameWithType: EntityTagHeaderValue
+    fullName: Microsoft.Net.Http.Headers.EntityTagHeaderValue
     isExternal: true
   - name: )
     nameWithType: )
@@ -3849,6 +7416,933 @@ references:
   - name: )
     nameWithType: )
     fullName: )
+- uid: Microsoft.AspNetCore.Mvc.ControllerBase.Accepted
+  commentId: M:Microsoft.AspNetCore.Mvc.ControllerBase.Accepted
+  parent: Microsoft.AspNetCore.Mvc.ControllerBase
+  isExternal: true
+  name: Accepted()
+  nameWithType: ControllerBase.Accepted()
+  fullName: Microsoft.AspNetCore.Mvc.ControllerBase.Accepted()
+  spec.csharp:
+  - uid: Microsoft.AspNetCore.Mvc.ControllerBase.Accepted
+    name: Accepted
+    nameWithType: ControllerBase.Accepted
+    fullName: Microsoft.AspNetCore.Mvc.ControllerBase.Accepted
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Microsoft.AspNetCore.Mvc.ControllerBase.Accepted
+    name: Accepted
+    nameWithType: ControllerBase.Accepted
+    fullName: Microsoft.AspNetCore.Mvc.ControllerBase.Accepted
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Microsoft.AspNetCore.Mvc.ControllerBase.Accepted(System.Object)
+  commentId: M:Microsoft.AspNetCore.Mvc.ControllerBase.Accepted(System.Object)
+  parent: Microsoft.AspNetCore.Mvc.ControllerBase
+  isExternal: true
+  name: Accepted(Object)
+  nameWithType: ControllerBase.Accepted(Object)
+  fullName: Microsoft.AspNetCore.Mvc.ControllerBase.Accepted(System.Object)
+  spec.csharp:
+  - uid: Microsoft.AspNetCore.Mvc.ControllerBase.Accepted(System.Object)
+    name: Accepted
+    nameWithType: ControllerBase.Accepted
+    fullName: Microsoft.AspNetCore.Mvc.ControllerBase.Accepted
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Microsoft.AspNetCore.Mvc.ControllerBase.Accepted(System.Object)
+    name: Accepted
+    nameWithType: ControllerBase.Accepted
+    fullName: Microsoft.AspNetCore.Mvc.ControllerBase.Accepted
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Microsoft.AspNetCore.Mvc.ControllerBase.Accepted(System.Uri)
+  commentId: M:Microsoft.AspNetCore.Mvc.ControllerBase.Accepted(System.Uri)
+  parent: Microsoft.AspNetCore.Mvc.ControllerBase
+  isExternal: true
+  name: Accepted(Uri)
+  nameWithType: ControllerBase.Accepted(Uri)
+  fullName: Microsoft.AspNetCore.Mvc.ControllerBase.Accepted(System.Uri)
+  spec.csharp:
+  - uid: Microsoft.AspNetCore.Mvc.ControllerBase.Accepted(System.Uri)
+    name: Accepted
+    nameWithType: ControllerBase.Accepted
+    fullName: Microsoft.AspNetCore.Mvc.ControllerBase.Accepted
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Uri
+    name: Uri
+    nameWithType: Uri
+    fullName: System.Uri
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Microsoft.AspNetCore.Mvc.ControllerBase.Accepted(System.Uri)
+    name: Accepted
+    nameWithType: ControllerBase.Accepted
+    fullName: Microsoft.AspNetCore.Mvc.ControllerBase.Accepted
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Uri
+    name: Uri
+    nameWithType: Uri
+    fullName: System.Uri
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Microsoft.AspNetCore.Mvc.ControllerBase.Accepted(System.String)
+  commentId: M:Microsoft.AspNetCore.Mvc.ControllerBase.Accepted(System.String)
+  parent: Microsoft.AspNetCore.Mvc.ControllerBase
+  isExternal: true
+  name: Accepted(String)
+  nameWithType: ControllerBase.Accepted(String)
+  fullName: Microsoft.AspNetCore.Mvc.ControllerBase.Accepted(System.String)
+  spec.csharp:
+  - uid: Microsoft.AspNetCore.Mvc.ControllerBase.Accepted(System.String)
+    name: Accepted
+    nameWithType: ControllerBase.Accepted
+    fullName: Microsoft.AspNetCore.Mvc.ControllerBase.Accepted
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Microsoft.AspNetCore.Mvc.ControllerBase.Accepted(System.String)
+    name: Accepted
+    nameWithType: ControllerBase.Accepted
+    fullName: Microsoft.AspNetCore.Mvc.ControllerBase.Accepted
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Microsoft.AspNetCore.Mvc.ControllerBase.Accepted(System.String,System.Object)
+  commentId: M:Microsoft.AspNetCore.Mvc.ControllerBase.Accepted(System.String,System.Object)
+  parent: Microsoft.AspNetCore.Mvc.ControllerBase
+  isExternal: true
+  name: Accepted(String, Object)
+  nameWithType: ControllerBase.Accepted(String, Object)
+  fullName: Microsoft.AspNetCore.Mvc.ControllerBase.Accepted(System.String, System.Object)
+  spec.csharp:
+  - uid: Microsoft.AspNetCore.Mvc.ControllerBase.Accepted(System.String,System.Object)
+    name: Accepted
+    nameWithType: ControllerBase.Accepted
+    fullName: Microsoft.AspNetCore.Mvc.ControllerBase.Accepted
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Microsoft.AspNetCore.Mvc.ControllerBase.Accepted(System.String,System.Object)
+    name: Accepted
+    nameWithType: ControllerBase.Accepted
+    fullName: Microsoft.AspNetCore.Mvc.ControllerBase.Accepted
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Microsoft.AspNetCore.Mvc.ControllerBase.Accepted(System.Uri,System.Object)
+  commentId: M:Microsoft.AspNetCore.Mvc.ControllerBase.Accepted(System.Uri,System.Object)
+  parent: Microsoft.AspNetCore.Mvc.ControllerBase
+  isExternal: true
+  name: Accepted(Uri, Object)
+  nameWithType: ControllerBase.Accepted(Uri, Object)
+  fullName: Microsoft.AspNetCore.Mvc.ControllerBase.Accepted(System.Uri, System.Object)
+  spec.csharp:
+  - uid: Microsoft.AspNetCore.Mvc.ControllerBase.Accepted(System.Uri,System.Object)
+    name: Accepted
+    nameWithType: ControllerBase.Accepted
+    fullName: Microsoft.AspNetCore.Mvc.ControllerBase.Accepted
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Uri
+    name: Uri
+    nameWithType: Uri
+    fullName: System.Uri
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Microsoft.AspNetCore.Mvc.ControllerBase.Accepted(System.Uri,System.Object)
+    name: Accepted
+    nameWithType: ControllerBase.Accepted
+    fullName: Microsoft.AspNetCore.Mvc.ControllerBase.Accepted
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Uri
+    name: Uri
+    nameWithType: Uri
+    fullName: System.Uri
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Microsoft.AspNetCore.Mvc.ControllerBase.AcceptedAtAction(System.String)
+  commentId: M:Microsoft.AspNetCore.Mvc.ControllerBase.AcceptedAtAction(System.String)
+  parent: Microsoft.AspNetCore.Mvc.ControllerBase
+  isExternal: true
+  name: AcceptedAtAction(String)
+  nameWithType: ControllerBase.AcceptedAtAction(String)
+  fullName: Microsoft.AspNetCore.Mvc.ControllerBase.AcceptedAtAction(System.String)
+  spec.csharp:
+  - uid: Microsoft.AspNetCore.Mvc.ControllerBase.AcceptedAtAction(System.String)
+    name: AcceptedAtAction
+    nameWithType: ControllerBase.AcceptedAtAction
+    fullName: Microsoft.AspNetCore.Mvc.ControllerBase.AcceptedAtAction
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Microsoft.AspNetCore.Mvc.ControllerBase.AcceptedAtAction(System.String)
+    name: AcceptedAtAction
+    nameWithType: ControllerBase.AcceptedAtAction
+    fullName: Microsoft.AspNetCore.Mvc.ControllerBase.AcceptedAtAction
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Microsoft.AspNetCore.Mvc.ControllerBase.AcceptedAtAction(System.String,System.String)
+  commentId: M:Microsoft.AspNetCore.Mvc.ControllerBase.AcceptedAtAction(System.String,System.String)
+  parent: Microsoft.AspNetCore.Mvc.ControllerBase
+  isExternal: true
+  name: AcceptedAtAction(String, String)
+  nameWithType: ControllerBase.AcceptedAtAction(String, String)
+  fullName: Microsoft.AspNetCore.Mvc.ControllerBase.AcceptedAtAction(System.String, System.String)
+  spec.csharp:
+  - uid: Microsoft.AspNetCore.Mvc.ControllerBase.AcceptedAtAction(System.String,System.String)
+    name: AcceptedAtAction
+    nameWithType: ControllerBase.AcceptedAtAction
+    fullName: Microsoft.AspNetCore.Mvc.ControllerBase.AcceptedAtAction
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Microsoft.AspNetCore.Mvc.ControllerBase.AcceptedAtAction(System.String,System.String)
+    name: AcceptedAtAction
+    nameWithType: ControllerBase.AcceptedAtAction
+    fullName: Microsoft.AspNetCore.Mvc.ControllerBase.AcceptedAtAction
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Microsoft.AspNetCore.Mvc.ControllerBase.AcceptedAtAction(System.String,System.Object)
+  commentId: M:Microsoft.AspNetCore.Mvc.ControllerBase.AcceptedAtAction(System.String,System.Object)
+  parent: Microsoft.AspNetCore.Mvc.ControllerBase
+  isExternal: true
+  name: AcceptedAtAction(String, Object)
+  nameWithType: ControllerBase.AcceptedAtAction(String, Object)
+  fullName: Microsoft.AspNetCore.Mvc.ControllerBase.AcceptedAtAction(System.String, System.Object)
+  spec.csharp:
+  - uid: Microsoft.AspNetCore.Mvc.ControllerBase.AcceptedAtAction(System.String,System.Object)
+    name: AcceptedAtAction
+    nameWithType: ControllerBase.AcceptedAtAction
+    fullName: Microsoft.AspNetCore.Mvc.ControllerBase.AcceptedAtAction
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Microsoft.AspNetCore.Mvc.ControllerBase.AcceptedAtAction(System.String,System.Object)
+    name: AcceptedAtAction
+    nameWithType: ControllerBase.AcceptedAtAction
+    fullName: Microsoft.AspNetCore.Mvc.ControllerBase.AcceptedAtAction
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Microsoft.AspNetCore.Mvc.ControllerBase.AcceptedAtAction(System.String,System.String,System.Object)
+  commentId: M:Microsoft.AspNetCore.Mvc.ControllerBase.AcceptedAtAction(System.String,System.String,System.Object)
+  parent: Microsoft.AspNetCore.Mvc.ControllerBase
+  isExternal: true
+  name: AcceptedAtAction(String, String, Object)
+  nameWithType: ControllerBase.AcceptedAtAction(String, String, Object)
+  fullName: Microsoft.AspNetCore.Mvc.ControllerBase.AcceptedAtAction(System.String, System.String, System.Object)
+  spec.csharp:
+  - uid: Microsoft.AspNetCore.Mvc.ControllerBase.AcceptedAtAction(System.String,System.String,System.Object)
+    name: AcceptedAtAction
+    nameWithType: ControllerBase.AcceptedAtAction
+    fullName: Microsoft.AspNetCore.Mvc.ControllerBase.AcceptedAtAction
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Microsoft.AspNetCore.Mvc.ControllerBase.AcceptedAtAction(System.String,System.String,System.Object)
+    name: AcceptedAtAction
+    nameWithType: ControllerBase.AcceptedAtAction
+    fullName: Microsoft.AspNetCore.Mvc.ControllerBase.AcceptedAtAction
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Microsoft.AspNetCore.Mvc.ControllerBase.AcceptedAtAction(System.String,System.Object,System.Object)
+  commentId: M:Microsoft.AspNetCore.Mvc.ControllerBase.AcceptedAtAction(System.String,System.Object,System.Object)
+  parent: Microsoft.AspNetCore.Mvc.ControllerBase
+  isExternal: true
+  name: AcceptedAtAction(String, Object, Object)
+  nameWithType: ControllerBase.AcceptedAtAction(String, Object, Object)
+  fullName: Microsoft.AspNetCore.Mvc.ControllerBase.AcceptedAtAction(System.String, System.Object, System.Object)
+  spec.csharp:
+  - uid: Microsoft.AspNetCore.Mvc.ControllerBase.AcceptedAtAction(System.String,System.Object,System.Object)
+    name: AcceptedAtAction
+    nameWithType: ControllerBase.AcceptedAtAction
+    fullName: Microsoft.AspNetCore.Mvc.ControllerBase.AcceptedAtAction
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Microsoft.AspNetCore.Mvc.ControllerBase.AcceptedAtAction(System.String,System.Object,System.Object)
+    name: AcceptedAtAction
+    nameWithType: ControllerBase.AcceptedAtAction
+    fullName: Microsoft.AspNetCore.Mvc.ControllerBase.AcceptedAtAction
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Microsoft.AspNetCore.Mvc.ControllerBase.AcceptedAtAction(System.String,System.String,System.Object,System.Object)
+  commentId: M:Microsoft.AspNetCore.Mvc.ControllerBase.AcceptedAtAction(System.String,System.String,System.Object,System.Object)
+  parent: Microsoft.AspNetCore.Mvc.ControllerBase
+  isExternal: true
+  name: AcceptedAtAction(String, String, Object, Object)
+  nameWithType: ControllerBase.AcceptedAtAction(String, String, Object, Object)
+  fullName: Microsoft.AspNetCore.Mvc.ControllerBase.AcceptedAtAction(System.String, System.String, System.Object, System.Object)
+  spec.csharp:
+  - uid: Microsoft.AspNetCore.Mvc.ControllerBase.AcceptedAtAction(System.String,System.String,System.Object,System.Object)
+    name: AcceptedAtAction
+    nameWithType: ControllerBase.AcceptedAtAction
+    fullName: Microsoft.AspNetCore.Mvc.ControllerBase.AcceptedAtAction
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Microsoft.AspNetCore.Mvc.ControllerBase.AcceptedAtAction(System.String,System.String,System.Object,System.Object)
+    name: AcceptedAtAction
+    nameWithType: ControllerBase.AcceptedAtAction
+    fullName: Microsoft.AspNetCore.Mvc.ControllerBase.AcceptedAtAction
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Microsoft.AspNetCore.Mvc.ControllerBase.AcceptedAtRoute(System.Object)
+  commentId: M:Microsoft.AspNetCore.Mvc.ControllerBase.AcceptedAtRoute(System.Object)
+  parent: Microsoft.AspNetCore.Mvc.ControllerBase
+  isExternal: true
+  name: AcceptedAtRoute(Object)
+  nameWithType: ControllerBase.AcceptedAtRoute(Object)
+  fullName: Microsoft.AspNetCore.Mvc.ControllerBase.AcceptedAtRoute(System.Object)
+  spec.csharp:
+  - uid: Microsoft.AspNetCore.Mvc.ControllerBase.AcceptedAtRoute(System.Object)
+    name: AcceptedAtRoute
+    nameWithType: ControllerBase.AcceptedAtRoute
+    fullName: Microsoft.AspNetCore.Mvc.ControllerBase.AcceptedAtRoute
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Microsoft.AspNetCore.Mvc.ControllerBase.AcceptedAtRoute(System.Object)
+    name: AcceptedAtRoute
+    nameWithType: ControllerBase.AcceptedAtRoute
+    fullName: Microsoft.AspNetCore.Mvc.ControllerBase.AcceptedAtRoute
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Microsoft.AspNetCore.Mvc.ControllerBase.AcceptedAtRoute(System.String)
+  commentId: M:Microsoft.AspNetCore.Mvc.ControllerBase.AcceptedAtRoute(System.String)
+  parent: Microsoft.AspNetCore.Mvc.ControllerBase
+  isExternal: true
+  name: AcceptedAtRoute(String)
+  nameWithType: ControllerBase.AcceptedAtRoute(String)
+  fullName: Microsoft.AspNetCore.Mvc.ControllerBase.AcceptedAtRoute(System.String)
+  spec.csharp:
+  - uid: Microsoft.AspNetCore.Mvc.ControllerBase.AcceptedAtRoute(System.String)
+    name: AcceptedAtRoute
+    nameWithType: ControllerBase.AcceptedAtRoute
+    fullName: Microsoft.AspNetCore.Mvc.ControllerBase.AcceptedAtRoute
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Microsoft.AspNetCore.Mvc.ControllerBase.AcceptedAtRoute(System.String)
+    name: AcceptedAtRoute
+    nameWithType: ControllerBase.AcceptedAtRoute
+    fullName: Microsoft.AspNetCore.Mvc.ControllerBase.AcceptedAtRoute
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Microsoft.AspNetCore.Mvc.ControllerBase.AcceptedAtRoute(System.String,System.Object)
+  commentId: M:Microsoft.AspNetCore.Mvc.ControllerBase.AcceptedAtRoute(System.String,System.Object)
+  parent: Microsoft.AspNetCore.Mvc.ControllerBase
+  isExternal: true
+  name: AcceptedAtRoute(String, Object)
+  nameWithType: ControllerBase.AcceptedAtRoute(String, Object)
+  fullName: Microsoft.AspNetCore.Mvc.ControllerBase.AcceptedAtRoute(System.String, System.Object)
+  spec.csharp:
+  - uid: Microsoft.AspNetCore.Mvc.ControllerBase.AcceptedAtRoute(System.String,System.Object)
+    name: AcceptedAtRoute
+    nameWithType: ControllerBase.AcceptedAtRoute
+    fullName: Microsoft.AspNetCore.Mvc.ControllerBase.AcceptedAtRoute
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Microsoft.AspNetCore.Mvc.ControllerBase.AcceptedAtRoute(System.String,System.Object)
+    name: AcceptedAtRoute
+    nameWithType: ControllerBase.AcceptedAtRoute
+    fullName: Microsoft.AspNetCore.Mvc.ControllerBase.AcceptedAtRoute
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Microsoft.AspNetCore.Mvc.ControllerBase.AcceptedAtRoute(System.Object,System.Object)
+  commentId: M:Microsoft.AspNetCore.Mvc.ControllerBase.AcceptedAtRoute(System.Object,System.Object)
+  parent: Microsoft.AspNetCore.Mvc.ControllerBase
+  isExternal: true
+  name: AcceptedAtRoute(Object, Object)
+  nameWithType: ControllerBase.AcceptedAtRoute(Object, Object)
+  fullName: Microsoft.AspNetCore.Mvc.ControllerBase.AcceptedAtRoute(System.Object, System.Object)
+  spec.csharp:
+  - uid: Microsoft.AspNetCore.Mvc.ControllerBase.AcceptedAtRoute(System.Object,System.Object)
+    name: AcceptedAtRoute
+    nameWithType: ControllerBase.AcceptedAtRoute
+    fullName: Microsoft.AspNetCore.Mvc.ControllerBase.AcceptedAtRoute
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Microsoft.AspNetCore.Mvc.ControllerBase.AcceptedAtRoute(System.Object,System.Object)
+    name: AcceptedAtRoute
+    nameWithType: ControllerBase.AcceptedAtRoute
+    fullName: Microsoft.AspNetCore.Mvc.ControllerBase.AcceptedAtRoute
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Microsoft.AspNetCore.Mvc.ControllerBase.AcceptedAtRoute(System.String,System.Object,System.Object)
+  commentId: M:Microsoft.AspNetCore.Mvc.ControllerBase.AcceptedAtRoute(System.String,System.Object,System.Object)
+  parent: Microsoft.AspNetCore.Mvc.ControllerBase
+  isExternal: true
+  name: AcceptedAtRoute(String, Object, Object)
+  nameWithType: ControllerBase.AcceptedAtRoute(String, Object, Object)
+  fullName: Microsoft.AspNetCore.Mvc.ControllerBase.AcceptedAtRoute(System.String, System.Object, System.Object)
+  spec.csharp:
+  - uid: Microsoft.AspNetCore.Mvc.ControllerBase.AcceptedAtRoute(System.String,System.Object,System.Object)
+    name: AcceptedAtRoute
+    nameWithType: ControllerBase.AcceptedAtRoute
+    fullName: Microsoft.AspNetCore.Mvc.ControllerBase.AcceptedAtRoute
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Microsoft.AspNetCore.Mvc.ControllerBase.AcceptedAtRoute(System.String,System.Object,System.Object)
+    name: AcceptedAtRoute
+    nameWithType: ControllerBase.AcceptedAtRoute
+    fullName: Microsoft.AspNetCore.Mvc.ControllerBase.AcceptedAtRoute
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
 - uid: Microsoft.AspNetCore.Mvc.ControllerBase.Challenge
   commentId: M:Microsoft.AspNetCore.Mvc.ControllerBase.Challenge
   parent: Microsoft.AspNetCore.Mvc.ControllerBase
@@ -3930,15 +8424,15 @@ references:
   - name: )
     nameWithType: )
     fullName: )
-- uid: Microsoft.AspNetCore.Mvc.ControllerBase.Challenge(Microsoft.AspNetCore.Http.Authentication.AuthenticationProperties)
-  commentId: M:Microsoft.AspNetCore.Mvc.ControllerBase.Challenge(Microsoft.AspNetCore.Http.Authentication.AuthenticationProperties)
+- uid: Microsoft.AspNetCore.Mvc.ControllerBase.Challenge(Microsoft.AspNetCore.Authentication.AuthenticationProperties)
+  commentId: M:Microsoft.AspNetCore.Mvc.ControllerBase.Challenge(Microsoft.AspNetCore.Authentication.AuthenticationProperties)
   parent: Microsoft.AspNetCore.Mvc.ControllerBase
   isExternal: true
   name: Challenge(AuthenticationProperties)
   nameWithType: ControllerBase.Challenge(AuthenticationProperties)
-  fullName: Microsoft.AspNetCore.Mvc.ControllerBase.Challenge(Microsoft.AspNetCore.Http.Authentication.AuthenticationProperties)
+  fullName: Microsoft.AspNetCore.Mvc.ControllerBase.Challenge(Microsoft.AspNetCore.Authentication.AuthenticationProperties)
   spec.csharp:
-  - uid: Microsoft.AspNetCore.Mvc.ControllerBase.Challenge(Microsoft.AspNetCore.Http.Authentication.AuthenticationProperties)
+  - uid: Microsoft.AspNetCore.Mvc.ControllerBase.Challenge(Microsoft.AspNetCore.Authentication.AuthenticationProperties)
     name: Challenge
     nameWithType: ControllerBase.Challenge
     fullName: Microsoft.AspNetCore.Mvc.ControllerBase.Challenge
@@ -3946,16 +8440,16 @@ references:
   - name: (
     nameWithType: (
     fullName: (
-  - uid: Microsoft.AspNetCore.Http.Authentication.AuthenticationProperties
+  - uid: Microsoft.AspNetCore.Authentication.AuthenticationProperties
     name: AuthenticationProperties
     nameWithType: AuthenticationProperties
-    fullName: Microsoft.AspNetCore.Http.Authentication.AuthenticationProperties
+    fullName: Microsoft.AspNetCore.Authentication.AuthenticationProperties
     isExternal: true
   - name: )
     nameWithType: )
     fullName: )
   spec.vb:
-  - uid: Microsoft.AspNetCore.Mvc.ControllerBase.Challenge(Microsoft.AspNetCore.Http.Authentication.AuthenticationProperties)
+  - uid: Microsoft.AspNetCore.Mvc.ControllerBase.Challenge(Microsoft.AspNetCore.Authentication.AuthenticationProperties)
     name: Challenge
     nameWithType: ControllerBase.Challenge
     fullName: Microsoft.AspNetCore.Mvc.ControllerBase.Challenge
@@ -3963,26 +8457,26 @@ references:
   - name: (
     nameWithType: (
     fullName: (
-  - uid: Microsoft.AspNetCore.Http.Authentication.AuthenticationProperties
+  - uid: Microsoft.AspNetCore.Authentication.AuthenticationProperties
     name: AuthenticationProperties
     nameWithType: AuthenticationProperties
-    fullName: Microsoft.AspNetCore.Http.Authentication.AuthenticationProperties
+    fullName: Microsoft.AspNetCore.Authentication.AuthenticationProperties
     isExternal: true
   - name: )
     nameWithType: )
     fullName: )
-- uid: Microsoft.AspNetCore.Mvc.ControllerBase.Challenge(Microsoft.AspNetCore.Http.Authentication.AuthenticationProperties,System.String[])
-  commentId: M:Microsoft.AspNetCore.Mvc.ControllerBase.Challenge(Microsoft.AspNetCore.Http.Authentication.AuthenticationProperties,System.String[])
+- uid: Microsoft.AspNetCore.Mvc.ControllerBase.Challenge(Microsoft.AspNetCore.Authentication.AuthenticationProperties,System.String[])
+  commentId: M:Microsoft.AspNetCore.Mvc.ControllerBase.Challenge(Microsoft.AspNetCore.Authentication.AuthenticationProperties,System.String[])
   parent: Microsoft.AspNetCore.Mvc.ControllerBase
   isExternal: true
   name: Challenge(AuthenticationProperties, String[])
   nameWithType: ControllerBase.Challenge(AuthenticationProperties, String[])
-  fullName: Microsoft.AspNetCore.Mvc.ControllerBase.Challenge(Microsoft.AspNetCore.Http.Authentication.AuthenticationProperties, System.String[])
+  fullName: Microsoft.AspNetCore.Mvc.ControllerBase.Challenge(Microsoft.AspNetCore.Authentication.AuthenticationProperties, System.String[])
   nameWithType.vb: ControllerBase.Challenge(AuthenticationProperties, String())
-  fullName.vb: Microsoft.AspNetCore.Mvc.ControllerBase.Challenge(Microsoft.AspNetCore.Http.Authentication.AuthenticationProperties, System.String())
+  fullName.vb: Microsoft.AspNetCore.Mvc.ControllerBase.Challenge(Microsoft.AspNetCore.Authentication.AuthenticationProperties, System.String())
   name.vb: Challenge(AuthenticationProperties, String())
   spec.csharp:
-  - uid: Microsoft.AspNetCore.Mvc.ControllerBase.Challenge(Microsoft.AspNetCore.Http.Authentication.AuthenticationProperties,System.String[])
+  - uid: Microsoft.AspNetCore.Mvc.ControllerBase.Challenge(Microsoft.AspNetCore.Authentication.AuthenticationProperties,System.String[])
     name: Challenge
     nameWithType: ControllerBase.Challenge
     fullName: Microsoft.AspNetCore.Mvc.ControllerBase.Challenge
@@ -3990,10 +8484,10 @@ references:
   - name: (
     nameWithType: (
     fullName: (
-  - uid: Microsoft.AspNetCore.Http.Authentication.AuthenticationProperties
+  - uid: Microsoft.AspNetCore.Authentication.AuthenticationProperties
     name: AuthenticationProperties
     nameWithType: AuthenticationProperties
-    fullName: Microsoft.AspNetCore.Http.Authentication.AuthenticationProperties
+    fullName: Microsoft.AspNetCore.Authentication.AuthenticationProperties
     isExternal: true
   - name: ', '
     nameWithType: ', '
@@ -4010,7 +8504,7 @@ references:
     nameWithType: )
     fullName: )
   spec.vb:
-  - uid: Microsoft.AspNetCore.Mvc.ControllerBase.Challenge(Microsoft.AspNetCore.Http.Authentication.AuthenticationProperties,System.String[])
+  - uid: Microsoft.AspNetCore.Mvc.ControllerBase.Challenge(Microsoft.AspNetCore.Authentication.AuthenticationProperties,System.String[])
     name: Challenge
     nameWithType: ControllerBase.Challenge
     fullName: Microsoft.AspNetCore.Mvc.ControllerBase.Challenge
@@ -4018,10 +8512,10 @@ references:
   - name: (
     nameWithType: (
     fullName: (
-  - uid: Microsoft.AspNetCore.Http.Authentication.AuthenticationProperties
+  - uid: Microsoft.AspNetCore.Authentication.AuthenticationProperties
     name: AuthenticationProperties
     nameWithType: AuthenticationProperties
-    fullName: Microsoft.AspNetCore.Http.Authentication.AuthenticationProperties
+    fullName: Microsoft.AspNetCore.Authentication.AuthenticationProperties
     isExternal: true
   - name: ', '
     nameWithType: ', '
@@ -4118,15 +8612,15 @@ references:
   - name: )
     nameWithType: )
     fullName: )
-- uid: Microsoft.AspNetCore.Mvc.ControllerBase.Forbid(Microsoft.AspNetCore.Http.Authentication.AuthenticationProperties)
-  commentId: M:Microsoft.AspNetCore.Mvc.ControllerBase.Forbid(Microsoft.AspNetCore.Http.Authentication.AuthenticationProperties)
+- uid: Microsoft.AspNetCore.Mvc.ControllerBase.Forbid(Microsoft.AspNetCore.Authentication.AuthenticationProperties)
+  commentId: M:Microsoft.AspNetCore.Mvc.ControllerBase.Forbid(Microsoft.AspNetCore.Authentication.AuthenticationProperties)
   parent: Microsoft.AspNetCore.Mvc.ControllerBase
   isExternal: true
   name: Forbid(AuthenticationProperties)
   nameWithType: ControllerBase.Forbid(AuthenticationProperties)
-  fullName: Microsoft.AspNetCore.Mvc.ControllerBase.Forbid(Microsoft.AspNetCore.Http.Authentication.AuthenticationProperties)
+  fullName: Microsoft.AspNetCore.Mvc.ControllerBase.Forbid(Microsoft.AspNetCore.Authentication.AuthenticationProperties)
   spec.csharp:
-  - uid: Microsoft.AspNetCore.Mvc.ControllerBase.Forbid(Microsoft.AspNetCore.Http.Authentication.AuthenticationProperties)
+  - uid: Microsoft.AspNetCore.Mvc.ControllerBase.Forbid(Microsoft.AspNetCore.Authentication.AuthenticationProperties)
     name: Forbid
     nameWithType: ControllerBase.Forbid
     fullName: Microsoft.AspNetCore.Mvc.ControllerBase.Forbid
@@ -4134,16 +8628,16 @@ references:
   - name: (
     nameWithType: (
     fullName: (
-  - uid: Microsoft.AspNetCore.Http.Authentication.AuthenticationProperties
+  - uid: Microsoft.AspNetCore.Authentication.AuthenticationProperties
     name: AuthenticationProperties
     nameWithType: AuthenticationProperties
-    fullName: Microsoft.AspNetCore.Http.Authentication.AuthenticationProperties
+    fullName: Microsoft.AspNetCore.Authentication.AuthenticationProperties
     isExternal: true
   - name: )
     nameWithType: )
     fullName: )
   spec.vb:
-  - uid: Microsoft.AspNetCore.Mvc.ControllerBase.Forbid(Microsoft.AspNetCore.Http.Authentication.AuthenticationProperties)
+  - uid: Microsoft.AspNetCore.Mvc.ControllerBase.Forbid(Microsoft.AspNetCore.Authentication.AuthenticationProperties)
     name: Forbid
     nameWithType: ControllerBase.Forbid
     fullName: Microsoft.AspNetCore.Mvc.ControllerBase.Forbid
@@ -4151,26 +8645,26 @@ references:
   - name: (
     nameWithType: (
     fullName: (
-  - uid: Microsoft.AspNetCore.Http.Authentication.AuthenticationProperties
+  - uid: Microsoft.AspNetCore.Authentication.AuthenticationProperties
     name: AuthenticationProperties
     nameWithType: AuthenticationProperties
-    fullName: Microsoft.AspNetCore.Http.Authentication.AuthenticationProperties
+    fullName: Microsoft.AspNetCore.Authentication.AuthenticationProperties
     isExternal: true
   - name: )
     nameWithType: )
     fullName: )
-- uid: Microsoft.AspNetCore.Mvc.ControllerBase.Forbid(Microsoft.AspNetCore.Http.Authentication.AuthenticationProperties,System.String[])
-  commentId: M:Microsoft.AspNetCore.Mvc.ControllerBase.Forbid(Microsoft.AspNetCore.Http.Authentication.AuthenticationProperties,System.String[])
+- uid: Microsoft.AspNetCore.Mvc.ControllerBase.Forbid(Microsoft.AspNetCore.Authentication.AuthenticationProperties,System.String[])
+  commentId: M:Microsoft.AspNetCore.Mvc.ControllerBase.Forbid(Microsoft.AspNetCore.Authentication.AuthenticationProperties,System.String[])
   parent: Microsoft.AspNetCore.Mvc.ControllerBase
   isExternal: true
   name: Forbid(AuthenticationProperties, String[])
   nameWithType: ControllerBase.Forbid(AuthenticationProperties, String[])
-  fullName: Microsoft.AspNetCore.Mvc.ControllerBase.Forbid(Microsoft.AspNetCore.Http.Authentication.AuthenticationProperties, System.String[])
+  fullName: Microsoft.AspNetCore.Mvc.ControllerBase.Forbid(Microsoft.AspNetCore.Authentication.AuthenticationProperties, System.String[])
   nameWithType.vb: ControllerBase.Forbid(AuthenticationProperties, String())
-  fullName.vb: Microsoft.AspNetCore.Mvc.ControllerBase.Forbid(Microsoft.AspNetCore.Http.Authentication.AuthenticationProperties, System.String())
+  fullName.vb: Microsoft.AspNetCore.Mvc.ControllerBase.Forbid(Microsoft.AspNetCore.Authentication.AuthenticationProperties, System.String())
   name.vb: Forbid(AuthenticationProperties, String())
   spec.csharp:
-  - uid: Microsoft.AspNetCore.Mvc.ControllerBase.Forbid(Microsoft.AspNetCore.Http.Authentication.AuthenticationProperties,System.String[])
+  - uid: Microsoft.AspNetCore.Mvc.ControllerBase.Forbid(Microsoft.AspNetCore.Authentication.AuthenticationProperties,System.String[])
     name: Forbid
     nameWithType: ControllerBase.Forbid
     fullName: Microsoft.AspNetCore.Mvc.ControllerBase.Forbid
@@ -4178,10 +8672,10 @@ references:
   - name: (
     nameWithType: (
     fullName: (
-  - uid: Microsoft.AspNetCore.Http.Authentication.AuthenticationProperties
+  - uid: Microsoft.AspNetCore.Authentication.AuthenticationProperties
     name: AuthenticationProperties
     nameWithType: AuthenticationProperties
-    fullName: Microsoft.AspNetCore.Http.Authentication.AuthenticationProperties
+    fullName: Microsoft.AspNetCore.Authentication.AuthenticationProperties
     isExternal: true
   - name: ', '
     nameWithType: ', '
@@ -4198,7 +8692,7 @@ references:
     nameWithType: )
     fullName: )
   spec.vb:
-  - uid: Microsoft.AspNetCore.Mvc.ControllerBase.Forbid(Microsoft.AspNetCore.Http.Authentication.AuthenticationProperties,System.String[])
+  - uid: Microsoft.AspNetCore.Mvc.ControllerBase.Forbid(Microsoft.AspNetCore.Authentication.AuthenticationProperties,System.String[])
     name: Forbid
     nameWithType: ControllerBase.Forbid
     fullName: Microsoft.AspNetCore.Mvc.ControllerBase.Forbid
@@ -4206,10 +8700,10 @@ references:
   - name: (
     nameWithType: (
     fullName: (
-  - uid: Microsoft.AspNetCore.Http.Authentication.AuthenticationProperties
+  - uid: Microsoft.AspNetCore.Authentication.AuthenticationProperties
     name: AuthenticationProperties
     nameWithType: AuthenticationProperties
-    fullName: Microsoft.AspNetCore.Http.Authentication.AuthenticationProperties
+    fullName: Microsoft.AspNetCore.Authentication.AuthenticationProperties
     isExternal: true
   - name: ', '
     nameWithType: ', '
@@ -4282,15 +8776,15 @@ references:
   - name: )
     nameWithType: )
     fullName: )
-- uid: Microsoft.AspNetCore.Mvc.ControllerBase.SignIn(System.Security.Claims.ClaimsPrincipal,Microsoft.AspNetCore.Http.Authentication.AuthenticationProperties,System.String)
-  commentId: M:Microsoft.AspNetCore.Mvc.ControllerBase.SignIn(System.Security.Claims.ClaimsPrincipal,Microsoft.AspNetCore.Http.Authentication.AuthenticationProperties,System.String)
+- uid: Microsoft.AspNetCore.Mvc.ControllerBase.SignIn(System.Security.Claims.ClaimsPrincipal,Microsoft.AspNetCore.Authentication.AuthenticationProperties,System.String)
+  commentId: M:Microsoft.AspNetCore.Mvc.ControllerBase.SignIn(System.Security.Claims.ClaimsPrincipal,Microsoft.AspNetCore.Authentication.AuthenticationProperties,System.String)
   parent: Microsoft.AspNetCore.Mvc.ControllerBase
   isExternal: true
   name: SignIn(ClaimsPrincipal, AuthenticationProperties, String)
   nameWithType: ControllerBase.SignIn(ClaimsPrincipal, AuthenticationProperties, String)
-  fullName: Microsoft.AspNetCore.Mvc.ControllerBase.SignIn(System.Security.Claims.ClaimsPrincipal, Microsoft.AspNetCore.Http.Authentication.AuthenticationProperties, System.String)
+  fullName: Microsoft.AspNetCore.Mvc.ControllerBase.SignIn(System.Security.Claims.ClaimsPrincipal, Microsoft.AspNetCore.Authentication.AuthenticationProperties, System.String)
   spec.csharp:
-  - uid: Microsoft.AspNetCore.Mvc.ControllerBase.SignIn(System.Security.Claims.ClaimsPrincipal,Microsoft.AspNetCore.Http.Authentication.AuthenticationProperties,System.String)
+  - uid: Microsoft.AspNetCore.Mvc.ControllerBase.SignIn(System.Security.Claims.ClaimsPrincipal,Microsoft.AspNetCore.Authentication.AuthenticationProperties,System.String)
     name: SignIn
     nameWithType: ControllerBase.SignIn
     fullName: Microsoft.AspNetCore.Mvc.ControllerBase.SignIn
@@ -4306,10 +8800,10 @@ references:
   - name: ', '
     nameWithType: ', '
     fullName: ', '
-  - uid: Microsoft.AspNetCore.Http.Authentication.AuthenticationProperties
+  - uid: Microsoft.AspNetCore.Authentication.AuthenticationProperties
     name: AuthenticationProperties
     nameWithType: AuthenticationProperties
-    fullName: Microsoft.AspNetCore.Http.Authentication.AuthenticationProperties
+    fullName: Microsoft.AspNetCore.Authentication.AuthenticationProperties
     isExternal: true
   - name: ', '
     nameWithType: ', '
@@ -4323,7 +8817,7 @@ references:
     nameWithType: )
     fullName: )
   spec.vb:
-  - uid: Microsoft.AspNetCore.Mvc.ControllerBase.SignIn(System.Security.Claims.ClaimsPrincipal,Microsoft.AspNetCore.Http.Authentication.AuthenticationProperties,System.String)
+  - uid: Microsoft.AspNetCore.Mvc.ControllerBase.SignIn(System.Security.Claims.ClaimsPrincipal,Microsoft.AspNetCore.Authentication.AuthenticationProperties,System.String)
     name: SignIn
     nameWithType: ControllerBase.SignIn
     fullName: Microsoft.AspNetCore.Mvc.ControllerBase.SignIn
@@ -4339,10 +8833,10 @@ references:
   - name: ', '
     nameWithType: ', '
     fullName: ', '
-  - uid: Microsoft.AspNetCore.Http.Authentication.AuthenticationProperties
+  - uid: Microsoft.AspNetCore.Authentication.AuthenticationProperties
     name: AuthenticationProperties
     nameWithType: AuthenticationProperties
-    fullName: Microsoft.AspNetCore.Http.Authentication.AuthenticationProperties
+    fullName: Microsoft.AspNetCore.Authentication.AuthenticationProperties
     isExternal: true
   - name: ', '
     nameWithType: ', '
@@ -4405,18 +8899,18 @@ references:
   - name: )
     nameWithType: )
     fullName: )
-- uid: Microsoft.AspNetCore.Mvc.ControllerBase.SignOut(Microsoft.AspNetCore.Http.Authentication.AuthenticationProperties,System.String[])
-  commentId: M:Microsoft.AspNetCore.Mvc.ControllerBase.SignOut(Microsoft.AspNetCore.Http.Authentication.AuthenticationProperties,System.String[])
+- uid: Microsoft.AspNetCore.Mvc.ControllerBase.SignOut(Microsoft.AspNetCore.Authentication.AuthenticationProperties,System.String[])
+  commentId: M:Microsoft.AspNetCore.Mvc.ControllerBase.SignOut(Microsoft.AspNetCore.Authentication.AuthenticationProperties,System.String[])
   parent: Microsoft.AspNetCore.Mvc.ControllerBase
   isExternal: true
   name: SignOut(AuthenticationProperties, String[])
   nameWithType: ControllerBase.SignOut(AuthenticationProperties, String[])
-  fullName: Microsoft.AspNetCore.Mvc.ControllerBase.SignOut(Microsoft.AspNetCore.Http.Authentication.AuthenticationProperties, System.String[])
+  fullName: Microsoft.AspNetCore.Mvc.ControllerBase.SignOut(Microsoft.AspNetCore.Authentication.AuthenticationProperties, System.String[])
   nameWithType.vb: ControllerBase.SignOut(AuthenticationProperties, String())
-  fullName.vb: Microsoft.AspNetCore.Mvc.ControllerBase.SignOut(Microsoft.AspNetCore.Http.Authentication.AuthenticationProperties, System.String())
+  fullName.vb: Microsoft.AspNetCore.Mvc.ControllerBase.SignOut(Microsoft.AspNetCore.Authentication.AuthenticationProperties, System.String())
   name.vb: SignOut(AuthenticationProperties, String())
   spec.csharp:
-  - uid: Microsoft.AspNetCore.Mvc.ControllerBase.SignOut(Microsoft.AspNetCore.Http.Authentication.AuthenticationProperties,System.String[])
+  - uid: Microsoft.AspNetCore.Mvc.ControllerBase.SignOut(Microsoft.AspNetCore.Authentication.AuthenticationProperties,System.String[])
     name: SignOut
     nameWithType: ControllerBase.SignOut
     fullName: Microsoft.AspNetCore.Mvc.ControllerBase.SignOut
@@ -4424,10 +8918,10 @@ references:
   - name: (
     nameWithType: (
     fullName: (
-  - uid: Microsoft.AspNetCore.Http.Authentication.AuthenticationProperties
+  - uid: Microsoft.AspNetCore.Authentication.AuthenticationProperties
     name: AuthenticationProperties
     nameWithType: AuthenticationProperties
-    fullName: Microsoft.AspNetCore.Http.Authentication.AuthenticationProperties
+    fullName: Microsoft.AspNetCore.Authentication.AuthenticationProperties
     isExternal: true
   - name: ', '
     nameWithType: ', '
@@ -4444,7 +8938,7 @@ references:
     nameWithType: )
     fullName: )
   spec.vb:
-  - uid: Microsoft.AspNetCore.Mvc.ControllerBase.SignOut(Microsoft.AspNetCore.Http.Authentication.AuthenticationProperties,System.String[])
+  - uid: Microsoft.AspNetCore.Mvc.ControllerBase.SignOut(Microsoft.AspNetCore.Authentication.AuthenticationProperties,System.String[])
     name: SignOut
     nameWithType: ControllerBase.SignOut
     fullName: Microsoft.AspNetCore.Mvc.ControllerBase.SignOut
@@ -4452,10 +8946,10 @@ references:
   - name: (
     nameWithType: (
     fullName: (
-  - uid: Microsoft.AspNetCore.Http.Authentication.AuthenticationProperties
+  - uid: Microsoft.AspNetCore.Authentication.AuthenticationProperties
     name: AuthenticationProperties
     nameWithType: AuthenticationProperties
-    fullName: Microsoft.AspNetCore.Http.Authentication.AuthenticationProperties
+    fullName: Microsoft.AspNetCore.Authentication.AuthenticationProperties
     isExternal: true
   - name: ', '
     nameWithType: ', '
@@ -6531,6 +11025,131 @@ references:
   - name: )
     nameWithType: )
     fullName: )
+- uid: TicketApi.Controllers.TicketApiController.#ctor*
+  commentId: Overload:TicketApi.Controllers.TicketApiController.#ctor
+  isExternal: false
+  name: TicketApiController
+  nameWithType: TicketApiController.TicketApiController
+  fullName: TicketApi.Controllers.TicketApiController.TicketApiController
+- uid: Microsoft.Extensions.Options.IOptions{TicketApi.Settings.DbSettings}
+  commentId: T:Microsoft.Extensions.Options.IOptions{TicketApi.Settings.DbSettings}
+  parent: Microsoft.Extensions.Options
+  definition: Microsoft.Extensions.Options.IOptions`1
+  name: IOptions<DbSettings>
+  nameWithType: IOptions<DbSettings>
+  fullName: Microsoft.Extensions.Options.IOptions<TicketApi.Settings.DbSettings>
+  nameWithType.vb: IOptions(Of DbSettings)
+  fullName.vb: Microsoft.Extensions.Options.IOptions(Of TicketApi.Settings.DbSettings)
+  name.vb: IOptions(Of DbSettings)
+  spec.csharp:
+  - uid: Microsoft.Extensions.Options.IOptions`1
+    name: IOptions
+    nameWithType: IOptions
+    fullName: Microsoft.Extensions.Options.IOptions
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: TicketApi.Settings.DbSettings
+    name: DbSettings
+    nameWithType: DbSettings
+    fullName: TicketApi.Settings.DbSettings
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: Microsoft.Extensions.Options.IOptions`1
+    name: IOptions
+    nameWithType: IOptions
+    fullName: Microsoft.Extensions.Options.IOptions
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: TicketApi.Settings.DbSettings
+    name: DbSettings
+    nameWithType: DbSettings
+    fullName: TicketApi.Settings.DbSettings
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Microsoft.Extensions.Options.IOptions`1
+  commentId: T:Microsoft.Extensions.Options.IOptions`1
+  isExternal: true
+  name: IOptions<TOptions>
+  nameWithType: IOptions<TOptions>
+  fullName: Microsoft.Extensions.Options.IOptions<TOptions>
+  nameWithType.vb: IOptions(Of TOptions)
+  fullName.vb: Microsoft.Extensions.Options.IOptions(Of TOptions)
+  name.vb: IOptions(Of TOptions)
+  spec.csharp:
+  - uid: Microsoft.Extensions.Options.IOptions`1
+    name: IOptions
+    nameWithType: IOptions
+    fullName: Microsoft.Extensions.Options.IOptions
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: TOptions
+    nameWithType: TOptions
+    fullName: TOptions
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: Microsoft.Extensions.Options.IOptions`1
+    name: IOptions
+    nameWithType: IOptions
+    fullName: Microsoft.Extensions.Options.IOptions
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: TOptions
+    nameWithType: TOptions
+    fullName: TOptions
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Microsoft.Extensions.Options
+  commentId: N:Microsoft.Extensions.Options
+  isExternal: false
+  name: Microsoft.Extensions.Options
+  nameWithType: Microsoft.Extensions.Options
+  fullName: Microsoft.Extensions.Options
+- uid: TicketApi.Controllers.TicketApiController.AddTicket*
+  commentId: Overload:TicketApi.Controllers.TicketApiController.AddTicket
+  isExternal: false
+  name: AddTicket
+  nameWithType: TicketApiController.AddTicket
+  fullName: TicketApi.Controllers.TicketApiController.AddTicket
+- uid: TicketApi.Db.Models.Ticket
+  commentId: T:TicketApi.Db.Models.Ticket
+  parent: TicketApi.Db.Models
+  isExternal: false
+  name: Ticket
+  nameWithType: Ticket
+  fullName: TicketApi.Db.Models.Ticket
+- uid: Microsoft.AspNetCore.Mvc.IActionResult
+  commentId: T:Microsoft.AspNetCore.Mvc.IActionResult
+  parent: Microsoft.AspNetCore.Mvc
+  isExternal: true
+  name: IActionResult
+  nameWithType: IActionResult
+  fullName: Microsoft.AspNetCore.Mvc.IActionResult
+- uid: TicketApi.Db.Models
+  commentId: N:TicketApi.Db.Models
+  isExternal: false
+  name: TicketApi.Db.Models
+  nameWithType: TicketApi.Db.Models
+  fullName: TicketApi.Db.Models
+- uid: TicketApi.Controllers.TicketApiController.DeleteTicket*
+  commentId: Overload:TicketApi.Controllers.TicketApiController.DeleteTicket
+  isExternal: false
+  name: DeleteTicket
+  nameWithType: TicketApiController.DeleteTicket
+  fullName: TicketApi.Controllers.TicketApiController.DeleteTicket
 - uid: TicketApi.Controllers.TicketApiController.GetTicketById*
   commentId: Overload:TicketApi.Controllers.TicketApiController.GetTicketById
   isExternal: false
@@ -6626,10 +11245,28 @@ references:
   name: GetTickets
   nameWithType: TicketApiController.GetTickets
   fullName: TicketApi.Controllers.TicketApiController.GetTickets
-- uid: Microsoft.AspNetCore.Mvc.IActionResult
-  commentId: T:Microsoft.AspNetCore.Mvc.IActionResult
-  parent: Microsoft.AspNetCore.Mvc
+- uid: TicketApi.Controllers.TicketApiController.GetTicketsByUserId*
+  commentId: Overload:TicketApi.Controllers.TicketApiController.GetTicketsByUserId
+  isExternal: false
+  name: GetTicketsByUserId
+  nameWithType: TicketApiController.GetTicketsByUserId
+  fullName: TicketApi.Controllers.TicketApiController.GetTicketsByUserId
+- uid: System.String
+  commentId: T:System.String
+  parent: System
   isExternal: true
-  name: IActionResult
-  nameWithType: IActionResult
-  fullName: Microsoft.AspNetCore.Mvc.IActionResult
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: TicketApi.Controllers.TicketApiController.UpdateTicket*
+  commentId: Overload:TicketApi.Controllers.TicketApiController.UpdateTicket
+  isExternal: false
+  name: UpdateTicket
+  nameWithType: TicketApiController.UpdateTicket
+  fullName: TicketApi.Controllers.TicketApiController.UpdateTicket
+- uid: TicketApi.Controllers.TicketApiController.GetFullTicketById*
+  commentId: Overload:TicketApi.Controllers.TicketApiController.GetFullTicketById
+  isExternal: false
+  name: GetFullTicketById
+  nameWithType: TicketApiController.GetFullTicketById
+  fullName: TicketApi.Controllers.TicketApiController.GetFullTicketById

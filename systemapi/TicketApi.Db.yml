@@ -1,0 +1,51 @@
+### YamlMime:ManagedReference
+items:
+- uid: TicketApi.Db
+  commentId: N:TicketApi.Db
+  id: TicketApi.Db
+  children:
+  - TicketApi.Db.EventDateRepository
+  - TicketApi.Db.EventRepository
+  - TicketApi.Db.TicketRepository
+  - TicketApi.Db.TransactionRepository
+  - TicketApi.Db.VenueRepository
+  langs:
+  - csharp
+  - vb
+  name: TicketApi.Db
+  nameWithType: TicketApi.Db
+  fullName: TicketApi.Db
+  type: Namespace
+  assemblies:
+  - DbRepository
+references:
+- uid: TicketApi.Db.EventDateRepository
+  commentId: T:TicketApi.Db.EventDateRepository
+  isExternal: false
+  name: EventDateRepository
+  nameWithType: EventDateRepository
+  fullName: TicketApi.Db.EventDateRepository
+- uid: TicketApi.Db.EventRepository
+  commentId: T:TicketApi.Db.EventRepository
+  isExternal: false
+  name: EventRepository
+  nameWithType: EventRepository
+  fullName: TicketApi.Db.EventRepository
+- uid: TicketApi.Db.TicketRepository
+  commentId: T:TicketApi.Db.TicketRepository
+  isExternal: false
+  name: TicketRepository
+  nameWithType: TicketRepository
+  fullName: TicketApi.Db.TicketRepository
+- uid: TicketApi.Db.TransactionRepository
+  commentId: T:TicketApi.Db.TransactionRepository
+  isExternal: false
+  name: TransactionRepository
+  nameWithType: TransactionRepository
+  fullName: TicketApi.Db.TransactionRepository
+- uid: TicketApi.Db.VenueRepository
+  commentId: T:TicketApi.Db.VenueRepository
+  isExternal: false
+  name: VenueRepository
+  nameWithType: VenueRepository
+  fullName: TicketApi.Db.VenueRepository

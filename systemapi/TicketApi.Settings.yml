@@ -1,0 +1,23 @@
+### YamlMime:ManagedReference
+items:
+- uid: TicketApi.Settings
+  commentId: N:TicketApi.Settings
+  id: TicketApi.Settings
+  children:
+  - TicketApi.Settings.DbSettings
+  langs:
+  - csharp
+  - vb
+  name: TicketApi.Settings
+  nameWithType: TicketApi.Settings
+  fullName: TicketApi.Settings
+  type: Namespace
+  assemblies:
+  - TicketApi
+references:
+- uid: TicketApi.Settings.DbSettings
+  commentId: T:TicketApi.Settings.DbSettings
+  isExternal: false
+  name: DbSettings
+  nameWithType: DbSettings
+  fullName: TicketApi.Settings.DbSettings

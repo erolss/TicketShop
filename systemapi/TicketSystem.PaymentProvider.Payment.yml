@@ -5,11 +5,11 @@ items:
   id: Payment
   parent: TicketSystem.PaymentProvider
   children:
+  - TicketSystem.PaymentProvider.Payment.Currency
   - TicketSystem.PaymentProvider.Payment.OrderReference
   - TicketSystem.PaymentProvider.Payment.PaymentReference
   - TicketSystem.PaymentProvider.Payment.PaymentStatus
   - TicketSystem.PaymentProvider.Payment.TotalAmount
-  - TicketSystem.PaymentProvider.Payment.Valuta
   langs:
   - csharp
   - vb
@@ -20,7 +20,7 @@ items:
   source:
     remote:
       path: src/PaymentProvider/Payment.cs
-      branch: features/db
+      branch: restapi
       repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
     id: Payment
     path: src/PaymentProvider/Payment.cs
@@ -61,7 +61,7 @@ items:
   source:
     remote:
       path: src/PaymentProvider/Payment.cs
-      branch: features/db
+      branch: restapi
       repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
     id: PaymentStatus
     path: src/PaymentProvider/Payment.cs
@@ -96,7 +96,7 @@ items:
   source:
     remote:
       path: src/PaymentProvider/Payment.cs
-      branch: features/db
+      branch: restapi
       repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
     id: TotalAmount
     path: src/PaymentProvider/Payment.cs
@@ -117,35 +117,35 @@ items:
   - set
   modifiers.vb:
   - Public
-- uid: TicketSystem.PaymentProvider.Payment.Valuta
-  commentId: P:TicketSystem.PaymentProvider.Payment.Valuta
-  id: Valuta
+- uid: TicketSystem.PaymentProvider.Payment.Currency
+  commentId: P:TicketSystem.PaymentProvider.Payment.Currency
+  id: Currency
   parent: TicketSystem.PaymentProvider.Payment
   langs:
   - csharp
   - vb
-  name: Valuta
-  nameWithType: Payment.Valuta
-  fullName: TicketSystem.PaymentProvider.Payment.Valuta
+  name: Currency
+  nameWithType: Payment.Currency
+  fullName: TicketSystem.PaymentProvider.Payment.Currency
   type: Property
   source:
     remote:
       path: src/PaymentProvider/Payment.cs
-      branch: features/db
+      branch: restapi
       repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
-    id: Valuta
+    id: Currency
     path: src/PaymentProvider/Payment.cs
     startLine: 6
   assemblies:
   - PaymentProvider
   namespace: TicketSystem.PaymentProvider
   syntax:
-    content: public string Valuta { get; set; }
+    content: public string Currency { get; set; }
     parameters: []
     return:
       type: System.String
-    content.vb: Public Property Valuta As String
-  overload: TicketSystem.PaymentProvider.Payment.Valuta*
+    content.vb: Public Property Currency As String
+  overload: TicketSystem.PaymentProvider.Payment.Currency*
   modifiers.csharp:
   - public
   - get
@@ -166,7 +166,7 @@ items:
   source:
     remote:
       path: src/PaymentProvider/Payment.cs
-      branch: features/db
+      branch: restapi
       repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
     id: PaymentReference
     path: src/PaymentProvider/Payment.cs
@@ -201,7 +201,7 @@ items:
   source:
     remote:
       path: src/PaymentProvider/Payment.cs
-      branch: features/db
+      branch: restapi
       repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
     id: OrderReference
     path: src/PaymentProvider/Payment.cs
@@ -547,12 +547,12 @@ references:
   name: Decimal
   nameWithType: Decimal
   fullName: System.Decimal
-- uid: TicketSystem.PaymentProvider.Payment.Valuta*
-  commentId: Overload:TicketSystem.PaymentProvider.Payment.Valuta
+- uid: TicketSystem.PaymentProvider.Payment.Currency*
+  commentId: Overload:TicketSystem.PaymentProvider.Payment.Currency
   isExternal: false
-  name: Valuta
-  nameWithType: Payment.Valuta
-  fullName: TicketSystem.PaymentProvider.Payment.Valuta
+  name: Currency
+  nameWithType: Payment.Currency
+  fullName: TicketSystem.PaymentProvider.Payment.Currency
 - uid: System.String
   commentId: T:System.String
   parent: System

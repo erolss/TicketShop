@@ -1,35 +1,32 @@
 ### YamlMime:ManagedReference
 items:
-- uid: TicketSystem.DatabaseRepository.Model.EventDate
-  commentId: T:TicketSystem.DatabaseRepository.Model.EventDate
-  id: EventDate
-  parent: TicketSystem.DatabaseRepository.Model
+- uid: TicketApi.Settings.DbSettings
+  commentId: T:TicketApi.Settings.DbSettings
+  id: DbSettings
+  parent: TicketApi.Settings
   children:
-  - TicketSystem.DatabaseRepository.Model.EventDate.EventStartDateTime
-  - TicketSystem.DatabaseRepository.Model.EventDate.TicketEventDateID
-  - TicketSystem.DatabaseRepository.Model.EventDate.TicketEventID
-  - TicketSystem.DatabaseRepository.Model.EventDate.VenueId
+  - TicketApi.Settings.DbSettings.ConnectionString
   langs:
   - csharp
   - vb
-  name: EventDate
-  nameWithType: EventDate
-  fullName: TicketSystem.DatabaseRepository.Model.EventDate
+  name: DbSettings
+  nameWithType: DbSettings
+  fullName: TicketApi.Settings.DbSettings
   type: Class
   source:
     remote:
-      path: src/DatabaseRepository/Model/EventDate.cs
-      branch: features/db
+      path: src/TicketApi/DbSettings.cs
+      branch: restapi
       repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
-    id: EventDate
-    path: src/DatabaseRepository/Model/EventDate.cs
-    startLine: 4
+    id: DbSettings
+    path: src/TicketApi/DbSettings.cs
+    startLine: 7
   assemblies:
-  - DatabaseRepository
-  namespace: TicketSystem.DatabaseRepository.Model
+  - TicketApi
+  namespace: TicketApi.Settings
   syntax:
-    content: public class EventDate
-    content.vb: Public Class EventDate
+    content: public class DbSettings
+    content.vb: Public Class DbSettings
   inheritance:
   - System.Object
   inheritedMembers:
@@ -46,140 +43,35 @@ items:
   modifiers.vb:
   - Public
   - Class
-- uid: TicketSystem.DatabaseRepository.Model.EventDate.TicketEventDateID
-  commentId: P:TicketSystem.DatabaseRepository.Model.EventDate.TicketEventDateID
-  id: TicketEventDateID
-  parent: TicketSystem.DatabaseRepository.Model.EventDate
+- uid: TicketApi.Settings.DbSettings.ConnectionString
+  commentId: P:TicketApi.Settings.DbSettings.ConnectionString
+  id: ConnectionString
+  parent: TicketApi.Settings.DbSettings
   langs:
   - csharp
   - vb
-  name: TicketEventDateID
-  nameWithType: EventDate.TicketEventDateID
-  fullName: TicketSystem.DatabaseRepository.Model.EventDate.TicketEventDateID
+  name: ConnectionString
+  nameWithType: DbSettings.ConnectionString
+  fullName: TicketApi.Settings.DbSettings.ConnectionString
   type: Property
   source:
     remote:
-      path: src/DatabaseRepository/Model/EventDate.cs
-      branch: features/db
+      path: src/TicketApi/DbSettings.cs
+      branch: restapi
       repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
-    id: TicketEventDateID
-    path: src/DatabaseRepository/Model/EventDate.cs
-    startLine: 6
-  assemblies:
-  - DatabaseRepository
-  namespace: TicketSystem.DatabaseRepository.Model
-  syntax:
-    content: public int TicketEventDateID { get; set; }
-    parameters: []
-    return:
-      type: System.Int32
-    content.vb: Public Property TicketEventDateID As Integer
-  overload: TicketSystem.DatabaseRepository.Model.EventDate.TicketEventDateID*
-  modifiers.csharp:
-  - public
-  - get
-  - set
-  modifiers.vb:
-  - Public
-- uid: TicketSystem.DatabaseRepository.Model.EventDate.TicketEventID
-  commentId: P:TicketSystem.DatabaseRepository.Model.EventDate.TicketEventID
-  id: TicketEventID
-  parent: TicketSystem.DatabaseRepository.Model.EventDate
-  langs:
-  - csharp
-  - vb
-  name: TicketEventID
-  nameWithType: EventDate.TicketEventID
-  fullName: TicketSystem.DatabaseRepository.Model.EventDate.TicketEventID
-  type: Property
-  source:
-    remote:
-      path: src/DatabaseRepository/Model/EventDate.cs
-      branch: features/db
-      repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
-    id: TicketEventID
-    path: src/DatabaseRepository/Model/EventDate.cs
-    startLine: 7
-  assemblies:
-  - DatabaseRepository
-  namespace: TicketSystem.DatabaseRepository.Model
-  syntax:
-    content: public int TicketEventID { get; set; }
-    parameters: []
-    return:
-      type: System.Int32
-    content.vb: Public Property TicketEventID As Integer
-  overload: TicketSystem.DatabaseRepository.Model.EventDate.TicketEventID*
-  modifiers.csharp:
-  - public
-  - get
-  - set
-  modifiers.vb:
-  - Public
-- uid: TicketSystem.DatabaseRepository.Model.EventDate.VenueId
-  commentId: P:TicketSystem.DatabaseRepository.Model.EventDate.VenueId
-  id: VenueId
-  parent: TicketSystem.DatabaseRepository.Model.EventDate
-  langs:
-  - csharp
-  - vb
-  name: VenueId
-  nameWithType: EventDate.VenueId
-  fullName: TicketSystem.DatabaseRepository.Model.EventDate.VenueId
-  type: Property
-  source:
-    remote:
-      path: src/DatabaseRepository/Model/EventDate.cs
-      branch: features/db
-      repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
-    id: VenueId
-    path: src/DatabaseRepository/Model/EventDate.cs
-    startLine: 8
-  assemblies:
-  - DatabaseRepository
-  namespace: TicketSystem.DatabaseRepository.Model
-  syntax:
-    content: public int VenueId { get; set; }
-    parameters: []
-    return:
-      type: System.Int32
-    content.vb: Public Property VenueId As Integer
-  overload: TicketSystem.DatabaseRepository.Model.EventDate.VenueId*
-  modifiers.csharp:
-  - public
-  - get
-  - set
-  modifiers.vb:
-  - Public
-- uid: TicketSystem.DatabaseRepository.Model.EventDate.EventStartDateTime
-  commentId: P:TicketSystem.DatabaseRepository.Model.EventDate.EventStartDateTime
-  id: EventStartDateTime
-  parent: TicketSystem.DatabaseRepository.Model.EventDate
-  langs:
-  - csharp
-  - vb
-  name: EventStartDateTime
-  nameWithType: EventDate.EventStartDateTime
-  fullName: TicketSystem.DatabaseRepository.Model.EventDate.EventStartDateTime
-  type: Property
-  source:
-    remote:
-      path: src/DatabaseRepository/Model/EventDate.cs
-      branch: features/db
-      repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
-    id: EventStartDateTime
-    path: src/DatabaseRepository/Model/EventDate.cs
+    id: ConnectionString
+    path: src/TicketApi/DbSettings.cs
     startLine: 9
   assemblies:
-  - DatabaseRepository
-  namespace: TicketSystem.DatabaseRepository.Model
+  - TicketApi
+  namespace: TicketApi.Settings
   syntax:
-    content: public DateTime EventStartDateTime { get; set; }
+    content: public string ConnectionString { get; set; }
     parameters: []
     return:
-      type: System.DateTime
-    content.vb: Public Property EventStartDateTime As Date
-  overload: TicketSystem.DatabaseRepository.Model.EventDate.EventStartDateTime*
+      type: System.String
+    content.vb: Public Property ConnectionString As String
+  overload: TicketApi.Settings.DbSettings.ConnectionString*
   modifiers.csharp:
   - public
   - get
@@ -187,12 +79,12 @@ items:
   modifiers.vb:
   - Public
 references:
-- uid: TicketSystem.DatabaseRepository.Model
-  commentId: N:TicketSystem.DatabaseRepository.Model
+- uid: TicketApi.Settings
+  commentId: N:TicketApi.Settings
   isExternal: false
-  name: TicketSystem.DatabaseRepository.Model
-  nameWithType: TicketSystem.DatabaseRepository.Model
-  fullName: TicketSystem.DatabaseRepository.Model
+  name: TicketApi.Settings
+  nameWithType: TicketApi.Settings
+  fullName: TicketApi.Settings
 - uid: System.Object
   commentId: T:System.Object
   parent: System
@@ -485,41 +377,16 @@ references:
   name: System
   nameWithType: System
   fullName: System
-- uid: TicketSystem.DatabaseRepository.Model.EventDate.TicketEventDateID*
-  commentId: Overload:TicketSystem.DatabaseRepository.Model.EventDate.TicketEventDateID
+- uid: TicketApi.Settings.DbSettings.ConnectionString*
+  commentId: Overload:TicketApi.Settings.DbSettings.ConnectionString
   isExternal: false
-  name: TicketEventDateID
-  nameWithType: EventDate.TicketEventDateID
-  fullName: TicketSystem.DatabaseRepository.Model.EventDate.TicketEventDateID
-- uid: System.Int32
-  commentId: T:System.Int32
+  name: ConnectionString
+  nameWithType: DbSettings.ConnectionString
+  fullName: TicketApi.Settings.DbSettings.ConnectionString
+- uid: System.String
+  commentId: T:System.String
   parent: System
   isExternal: true
-  name: Int32
-  nameWithType: Int32
-  fullName: System.Int32
-- uid: TicketSystem.DatabaseRepository.Model.EventDate.TicketEventID*
-  commentId: Overload:TicketSystem.DatabaseRepository.Model.EventDate.TicketEventID
-  isExternal: false
-  name: TicketEventID
-  nameWithType: EventDate.TicketEventID
-  fullName: TicketSystem.DatabaseRepository.Model.EventDate.TicketEventID
-- uid: TicketSystem.DatabaseRepository.Model.EventDate.VenueId*
-  commentId: Overload:TicketSystem.DatabaseRepository.Model.EventDate.VenueId
-  isExternal: false
-  name: VenueId
-  nameWithType: EventDate.VenueId
-  fullName: TicketSystem.DatabaseRepository.Model.EventDate.VenueId
-- uid: TicketSystem.DatabaseRepository.Model.EventDate.EventStartDateTime*
-  commentId: Overload:TicketSystem.DatabaseRepository.Model.EventDate.EventStartDateTime
-  isExternal: false
-  name: EventStartDateTime
-  nameWithType: EventDate.EventStartDateTime
-  fullName: TicketSystem.DatabaseRepository.Model.EventDate.EventStartDateTime
-- uid: System.DateTime
-  commentId: T:System.DateTime
-  parent: System
-  isExternal: true
-  name: DateTime
-  nameWithType: DateTime
-  fullName: System.DateTime
+  name: String
+  nameWithType: String
+  fullName: System.String

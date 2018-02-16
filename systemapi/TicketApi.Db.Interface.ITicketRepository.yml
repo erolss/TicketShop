@@ -1,0 +1,597 @@
+### YamlMime:ManagedReference
+items:
+- uid: TicketApi.Db.Interface.ITicketRepository
+  commentId: T:TicketApi.Db.Interface.ITicketRepository
+  id: ITicketRepository
+  parent: TicketApi.Db.Interface
+  children:
+  - TicketApi.Db.Interface.ITicketRepository.AddTicket(TicketApi.Db.Models.Ticket)
+  - TicketApi.Db.Interface.ITicketRepository.DeleteTicket(System.Int32)
+  - TicketApi.Db.Interface.ITicketRepository.GetFullTicketById(System.Int32)
+  - TicketApi.Db.Interface.ITicketRepository.GetFullTicketsByTransactionId(System.Int32)
+  - TicketApi.Db.Interface.ITicketRepository.GetTicketById(System.Int32)
+  - TicketApi.Db.Interface.ITicketRepository.GetTickets(System.Int32,System.Int32)
+  - TicketApi.Db.Interface.ITicketRepository.GetTicketsByTransactionId(System.Int32,System.Int32,System.Int32)
+  - TicketApi.Db.Interface.ITicketRepository.GetTicketsByUserId(System.String,System.Int32,System.Int32)
+  - TicketApi.Db.Interface.ITicketRepository.UpdateTicket(TicketApi.Db.Models.Ticket)
+  langs:
+  - csharp
+  - vb
+  name: ITicketRepository
+  nameWithType: ITicketRepository
+  fullName: TicketApi.Db.Interface.ITicketRepository
+  type: Interface
+  source:
+    remote:
+      path: src/DbRepository/Interface/ITicketRepository.cs
+      branch: restapi
+      repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
+    id: ITicketRepository
+    path: src/DbRepository/Interface/ITicketRepository.cs
+    startLine: 5
+  assemblies:
+  - DbRepository
+  namespace: TicketApi.Db.Interface
+  syntax:
+    content: public interface ITicketRepository
+    content.vb: Public Interface ITicketRepository
+  modifiers.csharp:
+  - public
+  - interface
+  modifiers.vb:
+  - Public
+  - Interface
+- uid: TicketApi.Db.Interface.ITicketRepository.AddTicket(TicketApi.Db.Models.Ticket)
+  commentId: M:TicketApi.Db.Interface.ITicketRepository.AddTicket(TicketApi.Db.Models.Ticket)
+  id: AddTicket(TicketApi.Db.Models.Ticket)
+  parent: TicketApi.Db.Interface.ITicketRepository
+  langs:
+  - csharp
+  - vb
+  name: AddTicket(Ticket)
+  nameWithType: ITicketRepository.AddTicket(Ticket)
+  fullName: TicketApi.Db.Interface.ITicketRepository.AddTicket(TicketApi.Db.Models.Ticket)
+  type: Method
+  source:
+    remote:
+      path: src/DbRepository/Interface/ITicketRepository.cs
+      branch: restapi
+      repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
+    id: AddTicket
+    path: src/DbRepository/Interface/ITicketRepository.cs
+    startLine: 12
+  assemblies:
+  - DbRepository
+  namespace: TicketApi.Db.Interface
+  syntax:
+    content: Ticket AddTicket(Ticket ticket)
+    parameters:
+    - id: ticket
+      type: TicketApi.Db.Models.Ticket
+    return:
+      type: TicketApi.Db.Models.Ticket
+    content.vb: Function AddTicket(ticket As Ticket) As Ticket
+  overload: TicketApi.Db.Interface.ITicketRepository.AddTicket*
+- uid: TicketApi.Db.Interface.ITicketRepository.UpdateTicket(TicketApi.Db.Models.Ticket)
+  commentId: M:TicketApi.Db.Interface.ITicketRepository.UpdateTicket(TicketApi.Db.Models.Ticket)
+  id: UpdateTicket(TicketApi.Db.Models.Ticket)
+  parent: TicketApi.Db.Interface.ITicketRepository
+  langs:
+  - csharp
+  - vb
+  name: UpdateTicket(Ticket)
+  nameWithType: ITicketRepository.UpdateTicket(Ticket)
+  fullName: TicketApi.Db.Interface.ITicketRepository.UpdateTicket(TicketApi.Db.Models.Ticket)
+  type: Method
+  source:
+    remote:
+      path: src/DbRepository/Interface/ITicketRepository.cs
+      branch: restapi
+      repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
+    id: UpdateTicket
+    path: src/DbRepository/Interface/ITicketRepository.cs
+    startLine: 19
+  assemblies:
+  - DbRepository
+  namespace: TicketApi.Db.Interface
+  summary: "\nUpdate a ticket\n"
+  example: []
+  syntax:
+    content: Ticket UpdateTicket(Ticket ticket)
+    parameters:
+    - id: ticket
+      type: TicketApi.Db.Models.Ticket
+      description: Ticket object
+    return:
+      type: TicketApi.Db.Models.Ticket
+      description: An object representation of the updated ticket
+    content.vb: Function UpdateTicket(ticket As Ticket) As Ticket
+  overload: TicketApi.Db.Interface.ITicketRepository.UpdateTicket*
+- uid: TicketApi.Db.Interface.ITicketRepository.DeleteTicket(System.Int32)
+  commentId: M:TicketApi.Db.Interface.ITicketRepository.DeleteTicket(System.Int32)
+  id: DeleteTicket(System.Int32)
+  parent: TicketApi.Db.Interface.ITicketRepository
+  langs:
+  - csharp
+  - vb
+  name: DeleteTicket(Int32)
+  nameWithType: ITicketRepository.DeleteTicket(Int32)
+  fullName: TicketApi.Db.Interface.ITicketRepository.DeleteTicket(System.Int32)
+  type: Method
+  source:
+    remote:
+      path: src/DbRepository/Interface/ITicketRepository.cs
+      branch: restapi
+      repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
+    id: DeleteTicket
+    path: src/DbRepository/Interface/ITicketRepository.cs
+    startLine: 26
+  assemblies:
+  - DbRepository
+  namespace: TicketApi.Db.Interface
+  summary: "\nDelete a ticket\n"
+  example: []
+  syntax:
+    content: bool DeleteTicket(int ticketId)
+    parameters:
+    - id: ticketId
+      type: System.Int32
+    return:
+      type: System.Boolean
+      description: 'bool, true if deleted, false if not '
+    content.vb: Function DeleteTicket(ticketId As Integer) As Boolean
+  overload: TicketApi.Db.Interface.ITicketRepository.DeleteTicket*
+- uid: TicketApi.Db.Interface.ITicketRepository.GetTickets(System.Int32,System.Int32)
+  commentId: M:TicketApi.Db.Interface.ITicketRepository.GetTickets(System.Int32,System.Int32)
+  id: GetTickets(System.Int32,System.Int32)
+  parent: TicketApi.Db.Interface.ITicketRepository
+  langs:
+  - csharp
+  - vb
+  name: GetTickets(Int32, Int32)
+  nameWithType: ITicketRepository.GetTickets(Int32, Int32)
+  fullName: TicketApi.Db.Interface.ITicketRepository.GetTickets(System.Int32, System.Int32)
+  type: Method
+  source:
+    remote:
+      path: src/DbRepository/Interface/ITicketRepository.cs
+      branch: restapi
+      repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
+    id: GetTickets
+    path: src/DbRepository/Interface/ITicketRepository.cs
+    startLine: 34
+  assemblies:
+  - DbRepository
+  namespace: TicketApi.Db.Interface
+  summary: "\nGet tickets\n"
+  example: []
+  syntax:
+    content: List<Ticket> GetTickets(int offset = 0, int maxLimit = 20)
+    parameters:
+    - id: offset
+      type: System.Int32
+      description: Result set offset
+    - id: maxLimit
+      type: System.Int32
+      description: Max number of result to fetch
+    return:
+      type: System.Collections.Generic.List{TicketApi.Db.Models.Ticket}
+      description: A list of ticket object representations
+    content.vb: Function GetTickets(offset As Integer = 0, maxLimit As Integer = 20) As List(Of Ticket)
+  overload: TicketApi.Db.Interface.ITicketRepository.GetTickets*
+- uid: TicketApi.Db.Interface.ITicketRepository.GetTicketsByUserId(System.String,System.Int32,System.Int32)
+  commentId: M:TicketApi.Db.Interface.ITicketRepository.GetTicketsByUserId(System.String,System.Int32,System.Int32)
+  id: GetTicketsByUserId(System.String,System.Int32,System.Int32)
+  parent: TicketApi.Db.Interface.ITicketRepository
+  langs:
+  - csharp
+  - vb
+  name: GetTicketsByUserId(String, Int32, Int32)
+  nameWithType: ITicketRepository.GetTicketsByUserId(String, Int32, Int32)
+  fullName: TicketApi.Db.Interface.ITicketRepository.GetTicketsByUserId(System.String, System.Int32, System.Int32)
+  type: Method
+  source:
+    remote:
+      path: src/DbRepository/Interface/ITicketRepository.cs
+      branch: restapi
+      repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
+    id: GetTicketsByUserId
+    path: src/DbRepository/Interface/ITicketRepository.cs
+    startLine: 43
+  assemblies:
+  - DbRepository
+  namespace: TicketApi.Db.Interface
+  summary: "\nGet tickets from user\n"
+  example: []
+  syntax:
+    content: List<Ticket> GetTicketsByUserId(string userId, int offset = 0, int maxLimit = 20)
+    parameters:
+    - id: userId
+      type: System.String
+      description: User Id
+    - id: offset
+      type: System.Int32
+      description: Result set offset
+    - id: maxLimit
+      type: System.Int32
+      description: Max number of result to fetch
+    return:
+      type: System.Collections.Generic.List{TicketApi.Db.Models.Ticket}
+      description: A list of ticket object representations for user
+    content.vb: Function GetTicketsByUserId(userId As String, offset As Integer = 0, maxLimit As Integer = 20) As List(Of Ticket)
+  overload: TicketApi.Db.Interface.ITicketRepository.GetTicketsByUserId*
+- uid: TicketApi.Db.Interface.ITicketRepository.GetTicketsByTransactionId(System.Int32,System.Int32,System.Int32)
+  commentId: M:TicketApi.Db.Interface.ITicketRepository.GetTicketsByTransactionId(System.Int32,System.Int32,System.Int32)
+  id: GetTicketsByTransactionId(System.Int32,System.Int32,System.Int32)
+  parent: TicketApi.Db.Interface.ITicketRepository
+  langs:
+  - csharp
+  - vb
+  name: GetTicketsByTransactionId(Int32, Int32, Int32)
+  nameWithType: ITicketRepository.GetTicketsByTransactionId(Int32, Int32, Int32)
+  fullName: TicketApi.Db.Interface.ITicketRepository.GetTicketsByTransactionId(System.Int32, System.Int32, System.Int32)
+  type: Method
+  source:
+    remote:
+      path: src/DbRepository/Interface/ITicketRepository.cs
+      branch: restapi
+      repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
+    id: GetTicketsByTransactionId
+    path: src/DbRepository/Interface/ITicketRepository.cs
+    startLine: 52
+  assemblies:
+  - DbRepository
+  namespace: TicketApi.Db.Interface
+  summary: "\nGet tickets by transactionID\n"
+  example: []
+  syntax:
+    content: List<Ticket> GetTicketsByTransactionId(int transactionId, int offset = 0, int maxLimit = 20)
+    parameters:
+    - id: transactionId
+      type: System.Int32
+      description: Transaction ID to look for
+    - id: offset
+      type: System.Int32
+      description: Result set offset
+    - id: maxLimit
+      type: System.Int32
+      description: Max number of result to fetch
+    return:
+      type: System.Collections.Generic.List{TicketApi.Db.Models.Ticket}
+      description: A list of ticket object representations for a Transaction
+    content.vb: Function GetTicketsByTransactionId(transactionId As Integer, offset As Integer = 0, maxLimit As Integer = 20) As List(Of Ticket)
+  overload: TicketApi.Db.Interface.ITicketRepository.GetTicketsByTransactionId*
+- uid: TicketApi.Db.Interface.ITicketRepository.GetTicketById(System.Int32)
+  commentId: M:TicketApi.Db.Interface.ITicketRepository.GetTicketById(System.Int32)
+  id: GetTicketById(System.Int32)
+  parent: TicketApi.Db.Interface.ITicketRepository
+  langs:
+  - csharp
+  - vb
+  name: GetTicketById(Int32)
+  nameWithType: ITicketRepository.GetTicketById(Int32)
+  fullName: TicketApi.Db.Interface.ITicketRepository.GetTicketById(System.Int32)
+  type: Method
+  source:
+    remote:
+      path: src/DbRepository/Interface/ITicketRepository.cs
+      branch: restapi
+      repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
+    id: GetTicketById
+    path: src/DbRepository/Interface/ITicketRepository.cs
+    startLine: 58
+  assemblies:
+  - DbRepository
+  namespace: TicketApi.Db.Interface
+  summary: "\nGet ticket by Id\n"
+  example: []
+  syntax:
+    content: Ticket GetTicketById(int id)
+    parameters:
+    - id: id
+      type: System.Int32
+      description: Id of the ticket
+    return:
+      type: TicketApi.Db.Models.Ticket
+      description: An object representation of the ticket
+    content.vb: Function GetTicketById(id As Integer) As Ticket
+  overload: TicketApi.Db.Interface.ITicketRepository.GetTicketById*
+- uid: TicketApi.Db.Interface.ITicketRepository.GetFullTicketById(System.Int32)
+  commentId: M:TicketApi.Db.Interface.ITicketRepository.GetFullTicketById(System.Int32)
+  id: GetFullTicketById(System.Int32)
+  parent: TicketApi.Db.Interface.ITicketRepository
+  langs:
+  - csharp
+  - vb
+  name: GetFullTicketById(Int32)
+  nameWithType: ITicketRepository.GetFullTicketById(Int32)
+  fullName: TicketApi.Db.Interface.ITicketRepository.GetFullTicketById(System.Int32)
+  type: Method
+  source:
+    remote:
+      path: src/DbRepository/Interface/ITicketRepository.cs
+      branch: restapi
+      repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
+    id: GetFullTicketById
+    path: src/DbRepository/Interface/ITicketRepository.cs
+    startLine: 60
+  assemblies:
+  - DbRepository
+  namespace: TicketApi.Db.Interface
+  syntax:
+    content: FullTicket GetFullTicketById(int id)
+    parameters:
+    - id: id
+      type: System.Int32
+    return:
+      type: TicketApi.Db.Models.FullTicket
+    content.vb: Function GetFullTicketById(id As Integer) As FullTicket
+  overload: TicketApi.Db.Interface.ITicketRepository.GetFullTicketById*
+- uid: TicketApi.Db.Interface.ITicketRepository.GetFullTicketsByTransactionId(System.Int32)
+  commentId: M:TicketApi.Db.Interface.ITicketRepository.GetFullTicketsByTransactionId(System.Int32)
+  id: GetFullTicketsByTransactionId(System.Int32)
+  parent: TicketApi.Db.Interface.ITicketRepository
+  langs:
+  - csharp
+  - vb
+  name: GetFullTicketsByTransactionId(Int32)
+  nameWithType: ITicketRepository.GetFullTicketsByTransactionId(Int32)
+  fullName: TicketApi.Db.Interface.ITicketRepository.GetFullTicketsByTransactionId(System.Int32)
+  type: Method
+  source:
+    remote:
+      path: src/DbRepository/Interface/ITicketRepository.cs
+      branch: restapi
+      repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
+    id: GetFullTicketsByTransactionId
+    path: src/DbRepository/Interface/ITicketRepository.cs
+    startLine: 61
+  assemblies:
+  - DbRepository
+  namespace: TicketApi.Db.Interface
+  syntax:
+    content: List<FullTicket> GetFullTicketsByTransactionId(int transactionId)
+    parameters:
+    - id: transactionId
+      type: System.Int32
+    return:
+      type: System.Collections.Generic.List{TicketApi.Db.Models.FullTicket}
+    content.vb: Function GetFullTicketsByTransactionId(transactionId As Integer) As List(Of FullTicket)
+  overload: TicketApi.Db.Interface.ITicketRepository.GetFullTicketsByTransactionId*
+references:
+- uid: TicketApi.Db.Interface
+  commentId: N:TicketApi.Db.Interface
+  isExternal: false
+  name: TicketApi.Db.Interface
+  nameWithType: TicketApi.Db.Interface
+  fullName: TicketApi.Db.Interface
+- uid: TicketApi.Db.Interface.ITicketRepository.AddTicket*
+  commentId: Overload:TicketApi.Db.Interface.ITicketRepository.AddTicket
+  isExternal: false
+  name: AddTicket
+  nameWithType: ITicketRepository.AddTicket
+  fullName: TicketApi.Db.Interface.ITicketRepository.AddTicket
+- uid: TicketApi.Db.Models.Ticket
+  commentId: T:TicketApi.Db.Models.Ticket
+  parent: TicketApi.Db.Models
+  isExternal: false
+  name: Ticket
+  nameWithType: Ticket
+  fullName: TicketApi.Db.Models.Ticket
+- uid: TicketApi.Db.Models
+  commentId: N:TicketApi.Db.Models
+  isExternal: false
+  name: TicketApi.Db.Models
+  nameWithType: TicketApi.Db.Models
+  fullName: TicketApi.Db.Models
+- uid: TicketApi.Db.Interface.ITicketRepository.UpdateTicket*
+  commentId: Overload:TicketApi.Db.Interface.ITicketRepository.UpdateTicket
+  isExternal: false
+  name: UpdateTicket
+  nameWithType: ITicketRepository.UpdateTicket
+  fullName: TicketApi.Db.Interface.ITicketRepository.UpdateTicket
+- uid: TicketApi.Db.Interface.ITicketRepository.DeleteTicket*
+  commentId: Overload:TicketApi.Db.Interface.ITicketRepository.DeleteTicket
+  isExternal: false
+  name: DeleteTicket
+  nameWithType: ITicketRepository.DeleteTicket
+  fullName: TicketApi.Db.Interface.ITicketRepository.DeleteTicket
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  name: Int32
+  nameWithType: Int32
+  fullName: System.Int32
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: System
+  commentId: N:System
+  isExternal: false
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: TicketApi.Db.Interface.ITicketRepository.GetTickets*
+  commentId: Overload:TicketApi.Db.Interface.ITicketRepository.GetTickets
+  isExternal: false
+  name: GetTickets
+  nameWithType: ITicketRepository.GetTickets
+  fullName: TicketApi.Db.Interface.ITicketRepository.GetTickets
+- uid: System.Collections.Generic.List{TicketApi.Db.Models.Ticket}
+  commentId: T:System.Collections.Generic.List{TicketApi.Db.Models.Ticket}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.List`1
+  name: List<Ticket>
+  nameWithType: List<Ticket>
+  fullName: System.Collections.Generic.List<TicketApi.Db.Models.Ticket>
+  nameWithType.vb: List(Of Ticket)
+  fullName.vb: System.Collections.Generic.List(Of TicketApi.Db.Models.Ticket)
+  name.vb: List(Of Ticket)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    nameWithType: List
+    fullName: System.Collections.Generic.List
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: TicketApi.Db.Models.Ticket
+    name: Ticket
+    nameWithType: Ticket
+    fullName: TicketApi.Db.Models.Ticket
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    nameWithType: List
+    fullName: System.Collections.Generic.List
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: TicketApi.Db.Models.Ticket
+    name: Ticket
+    nameWithType: Ticket
+    fullName: TicketApi.Db.Models.Ticket
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic.List`1
+  commentId: T:System.Collections.Generic.List`1
+  isExternal: true
+  name: List<T>
+  nameWithType: List<T>
+  fullName: System.Collections.Generic.List<T>
+  nameWithType.vb: List(Of T)
+  fullName.vb: System.Collections.Generic.List(Of T)
+  name.vb: List(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    nameWithType: List
+    fullName: System.Collections.Generic.List
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    nameWithType: List
+    fullName: System.Collections.Generic.List
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: false
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+- uid: TicketApi.Db.Interface.ITicketRepository.GetTicketsByUserId*
+  commentId: Overload:TicketApi.Db.Interface.ITicketRepository.GetTicketsByUserId
+  isExternal: false
+  name: GetTicketsByUserId
+  nameWithType: ITicketRepository.GetTicketsByUserId
+  fullName: TicketApi.Db.Interface.ITicketRepository.GetTicketsByUserId
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: TicketApi.Db.Interface.ITicketRepository.GetTicketsByTransactionId*
+  commentId: Overload:TicketApi.Db.Interface.ITicketRepository.GetTicketsByTransactionId
+  isExternal: false
+  name: GetTicketsByTransactionId
+  nameWithType: ITicketRepository.GetTicketsByTransactionId
+  fullName: TicketApi.Db.Interface.ITicketRepository.GetTicketsByTransactionId
+- uid: TicketApi.Db.Interface.ITicketRepository.GetTicketById*
+  commentId: Overload:TicketApi.Db.Interface.ITicketRepository.GetTicketById
+  isExternal: false
+  name: GetTicketById
+  nameWithType: ITicketRepository.GetTicketById
+  fullName: TicketApi.Db.Interface.ITicketRepository.GetTicketById
+- uid: TicketApi.Db.Interface.ITicketRepository.GetFullTicketById*
+  commentId: Overload:TicketApi.Db.Interface.ITicketRepository.GetFullTicketById
+  isExternal: false
+  name: GetFullTicketById
+  nameWithType: ITicketRepository.GetFullTicketById
+  fullName: TicketApi.Db.Interface.ITicketRepository.GetFullTicketById
+- uid: TicketApi.Db.Models.FullTicket
+  commentId: T:TicketApi.Db.Models.FullTicket
+  parent: TicketApi.Db.Models
+  isExternal: false
+  name: FullTicket
+  nameWithType: FullTicket
+  fullName: TicketApi.Db.Models.FullTicket
+- uid: TicketApi.Db.Interface.ITicketRepository.GetFullTicketsByTransactionId*
+  commentId: Overload:TicketApi.Db.Interface.ITicketRepository.GetFullTicketsByTransactionId
+  isExternal: false
+  name: GetFullTicketsByTransactionId
+  nameWithType: ITicketRepository.GetFullTicketsByTransactionId
+  fullName: TicketApi.Db.Interface.ITicketRepository.GetFullTicketsByTransactionId
+- uid: System.Collections.Generic.List{TicketApi.Db.Models.FullTicket}
+  commentId: T:System.Collections.Generic.List{TicketApi.Db.Models.FullTicket}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.List`1
+  name: List<FullTicket>
+  nameWithType: List<FullTicket>
+  fullName: System.Collections.Generic.List<TicketApi.Db.Models.FullTicket>
+  nameWithType.vb: List(Of FullTicket)
+  fullName.vb: System.Collections.Generic.List(Of TicketApi.Db.Models.FullTicket)
+  name.vb: List(Of FullTicket)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    nameWithType: List
+    fullName: System.Collections.Generic.List
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: TicketApi.Db.Models.FullTicket
+    name: FullTicket
+    nameWithType: FullTicket
+    fullName: TicketApi.Db.Models.FullTicket
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    nameWithType: List
+    fullName: System.Collections.Generic.List
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: TicketApi.Db.Models.FullTicket
+    name: FullTicket
+    nameWithType: FullTicket
+    fullName: TicketApi.Db.Models.FullTicket
+  - name: )
+    nameWithType: )
+    fullName: )

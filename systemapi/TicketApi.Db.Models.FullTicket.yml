@@ -1,34 +1,39 @@
 ### YamlMime:ManagedReference
 items:
-- uid: TicketSystem.DatabaseRepository.Model.Event
-  commentId: T:TicketSystem.DatabaseRepository.Model.Event
-  id: Event
-  parent: TicketSystem.DatabaseRepository.Model
+- uid: TicketApi.Db.Models.FullTicket
+  commentId: T:TicketApi.Db.Models.FullTicket
+  id: FullTicket
+  parent: TicketApi.Db.Models
   children:
-  - TicketSystem.DatabaseRepository.Model.Event.EventHtmlDescription
-  - TicketSystem.DatabaseRepository.Model.Event.EventName
-  - TicketSystem.DatabaseRepository.Model.Event.TicketEventId
+  - TicketApi.Db.Models.FullTicket.EventDate
+  - TicketApi.Db.Models.FullTicket.TicketID
   langs:
   - csharp
   - vb
-  name: Event
-  nameWithType: Event
-  fullName: TicketSystem.DatabaseRepository.Model.Event
+  name: FullTicket
+  nameWithType: FullTicket
+  fullName: TicketApi.Db.Models.FullTicket
   type: Class
   source:
     remote:
-      path: src/DatabaseRepository/Model/Event.cs
-      branch: features/db
+      path: src/DbRepository/Models/FullTicket.cs
+      branch: restapi
       repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
-    id: Event
-    path: src/DatabaseRepository/Model/Event.cs
-    startLine: 2
+    id: FullTicket
+    path: src/DbRepository/Models/FullTicket.cs
+    startLine: 5
   assemblies:
-  - DatabaseRepository
-  namespace: TicketSystem.DatabaseRepository.Model
+  - DbRepository
+  namespace: TicketApi.Db.Models
   syntax:
-    content: public class Event
-    content.vb: Public Class Event
+    content: >-
+      [DataContract]
+
+      public class FullTicket
+    content.vb: >-
+      <DataContract>
+
+      Public Class FullTicket
   inheritance:
   - System.Object
   inheritedMembers:
@@ -39,111 +44,100 @@ items:
   - System.Object.MemberwiseClone
   - System.Object.ReferenceEquals(System.Object,System.Object)
   - System.Object.ToString
+  attributes:
+  - type: System.Runtime.Serialization.DataContractAttribute
+    ctor: System.Runtime.Serialization.DataContractAttribute.#ctor
+    arguments: []
   modifiers.csharp:
   - public
   - class
   modifiers.vb:
   - Public
   - Class
-- uid: TicketSystem.DatabaseRepository.Model.Event.TicketEventId
-  commentId: P:TicketSystem.DatabaseRepository.Model.Event.TicketEventId
-  id: TicketEventId
-  parent: TicketSystem.DatabaseRepository.Model.Event
+- uid: TicketApi.Db.Models.FullTicket.TicketID
+  commentId: P:TicketApi.Db.Models.FullTicket.TicketID
+  id: TicketID
+  parent: TicketApi.Db.Models.FullTicket
   langs:
   - csharp
   - vb
-  name: TicketEventId
-  nameWithType: Event.TicketEventId
-  fullName: TicketSystem.DatabaseRepository.Model.Event.TicketEventId
+  name: TicketID
+  nameWithType: FullTicket.TicketID
+  fullName: TicketApi.Db.Models.FullTicket.TicketID
   type: Property
   source:
     remote:
-      path: src/DatabaseRepository/Model/Event.cs
-      branch: features/db
+      path: src/DbRepository/Models/FullTicket.cs
+      branch: restapi
       repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
-    id: TicketEventId
-    path: src/DatabaseRepository/Model/Event.cs
-    startLine: 4
+    id: TicketID
+    path: src/DbRepository/Models/FullTicket.cs
+    startLine: 8
   assemblies:
-  - DatabaseRepository
-  namespace: TicketSystem.DatabaseRepository.Model
+  - DbRepository
+  namespace: TicketApi.Db.Models
   syntax:
-    content: public int TicketEventId { get; set; }
+    content: >-
+      [DataMember]
+
+      public int TicketID { get; set; }
     parameters: []
     return:
       type: System.Int32
-    content.vb: Public Property TicketEventId As Integer
-  overload: TicketSystem.DatabaseRepository.Model.Event.TicketEventId*
+    content.vb: >-
+      <DataMember>
+
+      Public Property TicketID As Integer
+  overload: TicketApi.Db.Models.FullTicket.TicketID*
+  attributes:
+  - type: System.Runtime.Serialization.DataMemberAttribute
+    ctor: System.Runtime.Serialization.DataMemberAttribute.#ctor
+    arguments: []
   modifiers.csharp:
   - public
   - get
   - set
   modifiers.vb:
   - Public
-- uid: TicketSystem.DatabaseRepository.Model.Event.EventName
-  commentId: P:TicketSystem.DatabaseRepository.Model.Event.EventName
-  id: EventName
-  parent: TicketSystem.DatabaseRepository.Model.Event
+- uid: TicketApi.Db.Models.FullTicket.EventDate
+  commentId: P:TicketApi.Db.Models.FullTicket.EventDate
+  id: EventDate
+  parent: TicketApi.Db.Models.FullTicket
   langs:
   - csharp
   - vb
-  name: EventName
-  nameWithType: Event.EventName
-  fullName: TicketSystem.DatabaseRepository.Model.Event.EventName
+  name: EventDate
+  nameWithType: FullTicket.EventDate
+  fullName: TicketApi.Db.Models.FullTicket.EventDate
   type: Property
   source:
     remote:
-      path: src/DatabaseRepository/Model/Event.cs
-      branch: features/db
+      path: src/DbRepository/Models/FullTicket.cs
+      branch: restapi
       repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
-    id: EventName
-    path: src/DatabaseRepository/Model/Event.cs
-    startLine: 5
+    id: EventDate
+    path: src/DbRepository/Models/FullTicket.cs
+    startLine: 11
   assemblies:
-  - DatabaseRepository
-  namespace: TicketSystem.DatabaseRepository.Model
+  - DbRepository
+  namespace: TicketApi.Db.Models
   syntax:
-    content: public string EventName { get; set; }
+    content: >-
+      [DataMember]
+
+      public FullEventDate EventDate { get; set; }
     parameters: []
     return:
-      type: System.String
-    content.vb: Public Property EventName As String
-  overload: TicketSystem.DatabaseRepository.Model.Event.EventName*
-  modifiers.csharp:
-  - public
-  - get
-  - set
-  modifiers.vb:
-  - Public
-- uid: TicketSystem.DatabaseRepository.Model.Event.EventHtmlDescription
-  commentId: P:TicketSystem.DatabaseRepository.Model.Event.EventHtmlDescription
-  id: EventHtmlDescription
-  parent: TicketSystem.DatabaseRepository.Model.Event
-  langs:
-  - csharp
-  - vb
-  name: EventHtmlDescription
-  nameWithType: Event.EventHtmlDescription
-  fullName: TicketSystem.DatabaseRepository.Model.Event.EventHtmlDescription
-  type: Property
-  source:
-    remote:
-      path: src/DatabaseRepository/Model/Event.cs
-      branch: features/db
-      repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
-    id: EventHtmlDescription
-    path: src/DatabaseRepository/Model/Event.cs
-    startLine: 6
-  assemblies:
-  - DatabaseRepository
-  namespace: TicketSystem.DatabaseRepository.Model
-  syntax:
-    content: public string EventHtmlDescription { get; set; }
-    parameters: []
-    return:
-      type: System.String
-    content.vb: Public Property EventHtmlDescription As String
-  overload: TicketSystem.DatabaseRepository.Model.Event.EventHtmlDescription*
+      type: TicketApi.Db.Models.FullEventDate
+    content.vb: >-
+      <DataMember>
+
+      Public Property EventDate As FullEventDate
+  overload: TicketApi.Db.Models.FullTicket.EventDate*
+  attributes:
+  - type: System.Runtime.Serialization.DataMemberAttribute
+    ctor: System.Runtime.Serialization.DataMemberAttribute.#ctor
+    arguments: []
   modifiers.csharp:
   - public
   - get
@@ -151,12 +145,12 @@ items:
   modifiers.vb:
   - Public
 references:
-- uid: TicketSystem.DatabaseRepository.Model
-  commentId: N:TicketSystem.DatabaseRepository.Model
+- uid: TicketApi.Db.Models
+  commentId: N:TicketApi.Db.Models
   isExternal: false
-  name: TicketSystem.DatabaseRepository.Model
-  nameWithType: TicketSystem.DatabaseRepository.Model
-  fullName: TicketSystem.DatabaseRepository.Model
+  name: TicketApi.Db.Models
+  nameWithType: TicketApi.Db.Models
+  fullName: TicketApi.Db.Models
 - uid: System.Object
   commentId: T:System.Object
   parent: System
@@ -449,12 +443,12 @@ references:
   name: System
   nameWithType: System
   fullName: System
-- uid: TicketSystem.DatabaseRepository.Model.Event.TicketEventId*
-  commentId: Overload:TicketSystem.DatabaseRepository.Model.Event.TicketEventId
+- uid: TicketApi.Db.Models.FullTicket.TicketID*
+  commentId: Overload:TicketApi.Db.Models.FullTicket.TicketID
   isExternal: false
-  name: TicketEventId
-  nameWithType: Event.TicketEventId
-  fullName: TicketSystem.DatabaseRepository.Model.Event.TicketEventId
+  name: TicketID
+  nameWithType: FullTicket.TicketID
+  fullName: TicketApi.Db.Models.FullTicket.TicketID
 - uid: System.Int32
   commentId: T:System.Int32
   parent: System
@@ -462,22 +456,16 @@ references:
   name: Int32
   nameWithType: Int32
   fullName: System.Int32
-- uid: TicketSystem.DatabaseRepository.Model.Event.EventName*
-  commentId: Overload:TicketSystem.DatabaseRepository.Model.Event.EventName
+- uid: TicketApi.Db.Models.FullTicket.EventDate*
+  commentId: Overload:TicketApi.Db.Models.FullTicket.EventDate
   isExternal: false
-  name: EventName
-  nameWithType: Event.EventName
-  fullName: TicketSystem.DatabaseRepository.Model.Event.EventName
-- uid: System.String
-  commentId: T:System.String
-  parent: System
-  isExternal: true
-  name: String
-  nameWithType: String
-  fullName: System.String
-- uid: TicketSystem.DatabaseRepository.Model.Event.EventHtmlDescription*
-  commentId: Overload:TicketSystem.DatabaseRepository.Model.Event.EventHtmlDescription
+  name: EventDate
+  nameWithType: FullTicket.EventDate
+  fullName: TicketApi.Db.Models.FullTicket.EventDate
+- uid: TicketApi.Db.Models.FullEventDate
+  commentId: T:TicketApi.Db.Models.FullEventDate
+  parent: TicketApi.Db.Models
   isExternal: false
-  name: EventHtmlDescription
-  nameWithType: Event.EventHtmlDescription
-  fullName: TicketSystem.DatabaseRepository.Model.Event.EventHtmlDescription
+  name: FullEventDate
+  nameWithType: FullEventDate
+  fullName: TicketApi.Db.Models.FullEventDate

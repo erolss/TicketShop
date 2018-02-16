@@ -18,16 +18,14 @@ items:
   source:
     remote:
       path: src/TicketApi/Startup.cs
-      branch: features/db
+      branch: restapi
       repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
     id: Startup
     path: src/TicketApi/Startup.cs
-    startLine: 39
+    startLine: 19
   assemblies:
   - TicketApi
   namespace: TicketApi
-  summary: "\nStartup\n"
-  example: []
   syntax:
     content: public class Startup
     content.vb: Public Class Startup
@@ -61,11 +59,11 @@ items:
   source:
     remote:
       path: src/TicketApi/Startup.cs
-      branch: features/db
+      branch: restapi
       repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
     id: .ctor
     path: src/TicketApi/Startup.cs
-    startLine: 49
+    startLine: 44
   assemblies:
   - TicketApi
   namespace: TicketApi
@@ -97,22 +95,19 @@ items:
   source:
     remote:
       path: src/TicketApi/Startup.cs
-      branch: features/db
+      branch: restapi
       repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
     id: ConfigureServices
     path: src/TicketApi/Startup.cs
-    startLine: 65
+    startLine: 56
   assemblies:
   - TicketApi
   namespace: TicketApi
-  summary: "\nThis method gets called by the runtime. Use this method to add services to the container.\n"
-  example: []
   syntax:
     content: public void ConfigureServices(IServiceCollection services)
     parameters:
     - id: services
       type: Microsoft.Extensions.DependencyInjection.IServiceCollection
-      description: ''
     content.vb: Public Sub ConfigureServices(services As IServiceCollection)
   overload: TicketApi.Startup.ConfigureServices*
   modifiers.csharp:
@@ -133,28 +128,23 @@ items:
   source:
     remote:
       path: src/TicketApi/Startup.cs
-      branch: features/db
+      branch: restapi
       repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
     id: Configure
     path: src/TicketApi/Startup.cs
-    startLine: 99
+    startLine: 80
   assemblies:
   - TicketApi
   namespace: TicketApi
-  summary: "\nThis method gets called by the runtime. Use this method to configure the HTTP request pipeline.\n"
-  example: []
   syntax:
     content: public void Configure(IApplicationBuilder app, IHostingEnvironment env, ILoggerFactory loggerFactory)
     parameters:
     - id: app
       type: Microsoft.AspNetCore.Builder.IApplicationBuilder
-      description: ''
     - id: env
       type: Microsoft.AspNetCore.Hosting.IHostingEnvironment
-      description: ''
     - id: loggerFactory
       type: Microsoft.Extensions.Logging.ILoggerFactory
-      description: ''
     content.vb: Public Sub Configure(app As IApplicationBuilder, env As IHostingEnvironment, loggerFactory As ILoggerFactory)
   overload: TicketApi.Startup.Configure*
   modifiers.csharp:

@@ -1,0 +1,62 @@
+### YamlMime:ManagedReference
+items:
+- uid: TicketApi.Db.Interface
+  commentId: N:TicketApi.Db.Interface
+  id: TicketApi.Db.Interface
+  children:
+  - TicketApi.Db.Interface.IEventDateRepository
+  - TicketApi.Db.Interface.IEventRepository
+  - TicketApi.Db.Interface.ITicketRepository
+  - TicketApi.Db.Interface.ITransactionRepository
+  - TicketApi.Db.Interface.IVenueRepository
+  langs:
+  - csharp
+  - vb
+  name: TicketApi.Db.Interface
+  nameWithType: TicketApi.Db.Interface
+  fullName: TicketApi.Db.Interface
+  type: Namespace
+  assemblies:
+  - DbRepository
+references:
+- uid: TicketApi.Db.Interface.IEventDateRepository
+  commentId: T:TicketApi.Db.Interface.IEventDateRepository
+  parent: TicketApi.Db.Interface
+  isExternal: false
+  name: IEventDateRepository
+  nameWithType: IEventDateRepository
+  fullName: TicketApi.Db.Interface.IEventDateRepository
+- uid: TicketApi.Db.Interface.IEventRepository
+  commentId: T:TicketApi.Db.Interface.IEventRepository
+  parent: TicketApi.Db.Interface
+  isExternal: false
+  name: IEventRepository
+  nameWithType: IEventRepository
+  fullName: TicketApi.Db.Interface.IEventRepository
+- uid: TicketApi.Db.Interface.ITicketRepository
+  commentId: T:TicketApi.Db.Interface.ITicketRepository
+  parent: TicketApi.Db.Interface
+  isExternal: false
+  name: ITicketRepository
+  nameWithType: ITicketRepository
+  fullName: TicketApi.Db.Interface.ITicketRepository
+- uid: TicketApi.Db.Interface.ITransactionRepository
+  commentId: T:TicketApi.Db.Interface.ITransactionRepository
+  parent: TicketApi.Db.Interface
+  isExternal: false
+  name: ITransactionRepository
+  nameWithType: ITransactionRepository
+  fullName: TicketApi.Db.Interface.ITransactionRepository
+- uid: TicketApi.Db.Interface.IVenueRepository
+  commentId: T:TicketApi.Db.Interface.IVenueRepository
+  parent: TicketApi.Db.Interface
+  isExternal: false
+  name: IVenueRepository
+  nameWithType: IVenueRepository
+  fullName: TicketApi.Db.Interface.IVenueRepository
+- uid: TicketApi.Db.Interface
+  commentId: N:TicketApi.Db.Interface
+  isExternal: false
+  name: TicketApi.Db.Interface
+  nameWithType: TicketApi.Db.Interface
+  fullName: TicketApi.Db.Interface

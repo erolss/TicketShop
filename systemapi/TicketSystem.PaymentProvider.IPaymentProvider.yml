@@ -16,7 +16,7 @@ items:
   source:
     remote:
       path: src/PaymentProvider/IPaymentProvider.cs
-      branch: features/db
+      branch: restapi
       repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
     id: IPaymentProvider
     path: src/PaymentProvider/IPaymentProvider.cs
@@ -47,7 +47,7 @@ items:
   source:
     remote:
       path: src/PaymentProvider/IPaymentProvider.cs
-      branch: features/db
+      branch: restapi
       repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
     id: Pay
     path: src/PaymentProvider/IPaymentProvider.cs
@@ -58,12 +58,12 @@ items:
   summary: "\nPay an amount\n"
   example: []
   syntax:
-    content: Payment Pay(decimal amountToPay, string valuta, string orderReference)
+    content: Payment Pay(decimal amountToPay, string currency, string orderReference)
     parameters:
     - id: amountToPay
       type: System.Decimal
       description: The amount to pay
-    - id: valuta
+    - id: currency
       type: System.String
       description: A three letter code (following ISO 4217) represending the valuta of the amount
     - id: orderReference
@@ -72,7 +72,7 @@ items:
     return:
       type: TicketSystem.PaymentProvider.Payment
       description: A payment object, containging the status of the order
-    content.vb: Function Pay(amountToPay As Decimal, valuta As String, orderReference As String) As Payment
+    content.vb: Function Pay(amountToPay As Decimal, currency As String, orderReference As String) As Payment
   overload: TicketSystem.PaymentProvider.IPaymentProvider.Pay*
 references:
 - uid: TicketSystem.PaymentProvider

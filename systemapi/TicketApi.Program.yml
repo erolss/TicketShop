@@ -5,6 +5,7 @@ items:
   id: Program
   parent: TicketApi
   children:
+  - TicketApi.Program.BuildWebHost(System.String[])
   - TicketApi.Program.Main(System.String[])
   langs:
   - csharp
@@ -16,16 +17,14 @@ items:
   source:
     remote:
       path: src/TicketApi/Program.cs
-      branch: features/db
+      branch: restapi
       repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
     id: Program
     path: src/TicketApi/Program.cs
-    startLine: 8
+    startLine: 13
   assemblies:
   - TicketApi
   namespace: TicketApi
-  summary: "\nProgram\n"
-  example: []
   syntax:
     content: public class Program
     content.vb: Public Class Program
@@ -59,22 +58,19 @@ items:
   source:
     remote:
       path: src/TicketApi/Program.cs
-      branch: features/db
+      branch: restapi
       repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
     id: Main
     path: src/TicketApi/Program.cs
-    startLine: 14
+    startLine: 15
   assemblies:
   - TicketApi
   namespace: TicketApi
-  summary: "\nMain\n"
-  example: []
   syntax:
     content: public static void Main(string[] args)
     parameters:
     - id: args
       type: System.String[]
-      description: ''
     content.vb: Public Shared Sub Main(args As String())
   overload: TicketApi.Program.Main*
   nameWithType.vb: Program.Main(String())
@@ -86,6 +82,46 @@ items:
   - Shared
   fullName.vb: TicketApi.Program.Main(System.String())
   name.vb: Main(String())
+- uid: TicketApi.Program.BuildWebHost(System.String[])
+  commentId: M:TicketApi.Program.BuildWebHost(System.String[])
+  id: BuildWebHost(System.String[])
+  parent: TicketApi.Program
+  langs:
+  - csharp
+  - vb
+  name: BuildWebHost(String[])
+  nameWithType: Program.BuildWebHost(String[])
+  fullName: TicketApi.Program.BuildWebHost(System.String[])
+  type: Method
+  source:
+    remote:
+      path: src/TicketApi/Program.cs
+      branch: restapi
+      repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
+    id: BuildWebHost
+    path: src/TicketApi/Program.cs
+    startLine: 20
+  assemblies:
+  - TicketApi
+  namespace: TicketApi
+  syntax:
+    content: public static IWebHost BuildWebHost(string[] args)
+    parameters:
+    - id: args
+      type: System.String[]
+    return:
+      type: Microsoft.AspNetCore.Hosting.IWebHost
+    content.vb: Public Shared Function BuildWebHost(args As String()) As IWebHost
+  overload: TicketApi.Program.BuildWebHost*
+  nameWithType.vb: Program.BuildWebHost(String())
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+  fullName.vb: TicketApi.Program.BuildWebHost(System.String())
+  name.vb: BuildWebHost(String())
 references:
 - uid: TicketApi
   commentId: N:TicketApi
@@ -416,3 +452,22 @@ references:
   - name: ()
     nameWithType: ()
     fullName: ()
+- uid: TicketApi.Program.BuildWebHost*
+  commentId: Overload:TicketApi.Program.BuildWebHost
+  isExternal: false
+  name: BuildWebHost
+  nameWithType: Program.BuildWebHost
+  fullName: TicketApi.Program.BuildWebHost
+- uid: Microsoft.AspNetCore.Hosting.IWebHost
+  commentId: T:Microsoft.AspNetCore.Hosting.IWebHost
+  parent: Microsoft.AspNetCore.Hosting
+  isExternal: true
+  name: IWebHost
+  nameWithType: IWebHost
+  fullName: Microsoft.AspNetCore.Hosting.IWebHost
+- uid: Microsoft.AspNetCore.Hosting
+  commentId: N:Microsoft.AspNetCore.Hosting
+  isExternal: false
+  name: Microsoft.AspNetCore.Hosting
+  nameWithType: Microsoft.AspNetCore.Hosting
+  fullName: Microsoft.AspNetCore.Hosting

@@ -5,7 +5,7 @@ items:
   id: TicketApi.Controllers
   children:
   - TicketApi.Controllers.EventApiController
-  - TicketApi.Controllers.EventdateApiController
+  - TicketApi.Controllers.EventDateApiController
   - TicketApi.Controllers.TicketApiController
   - TicketApi.Controllers.TransactionApiController
   - TicketApi.Controllers.VenueApiController
@@ -25,12 +25,12 @@ references:
   name: EventApiController
   nameWithType: EventApiController
   fullName: TicketApi.Controllers.EventApiController
-- uid: TicketApi.Controllers.EventdateApiController
-  commentId: T:TicketApi.Controllers.EventdateApiController
+- uid: TicketApi.Controllers.EventDateApiController
+  commentId: T:TicketApi.Controllers.EventDateApiController
   isExternal: false
-  name: EventdateApiController
-  nameWithType: EventdateApiController
-  fullName: TicketApi.Controllers.EventdateApiController
+  name: EventDateApiController
+  nameWithType: EventDateApiController
+  fullName: TicketApi.Controllers.EventDateApiController
 - uid: TicketApi.Controllers.TicketApiController
   commentId: T:TicketApi.Controllers.TicketApiController
   isExternal: false

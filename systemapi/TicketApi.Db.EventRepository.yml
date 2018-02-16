@@ -1,34 +1,35 @@
 ### YamlMime:ManagedReference
 items:
-- uid: TicketSystem.DatabaseRepository.EventRepository
-  commentId: T:TicketSystem.DatabaseRepository.EventRepository
+- uid: TicketApi.Db.EventRepository
+  commentId: T:TicketApi.Db.EventRepository
   id: EventRepository
-  parent: TicketSystem.DatabaseRepository
+  parent: TicketApi.Db
   children:
-  - TicketSystem.DatabaseRepository.EventRepository.AddEvent(System.String,System.String)
-  - TicketSystem.DatabaseRepository.EventRepository.DeleteEvent(System.Int32)
-  - TicketSystem.DatabaseRepository.EventRepository.FindEvents(System.String)
-  - TicketSystem.DatabaseRepository.EventRepository.GetEventById(System.Int32)
-  - TicketSystem.DatabaseRepository.EventRepository.GetEvents(System.Int32,System.Int32)
-  - TicketSystem.DatabaseRepository.EventRepository.UpdateEvent(System.Int32,System.String,System.String)
+  - TicketApi.Db.EventRepository.#ctor(System.String)
+  - TicketApi.Db.EventRepository.AddEvent(TicketApi.Db.Models.Event)
+  - TicketApi.Db.EventRepository.DeleteEvent(System.Int32)
+  - TicketApi.Db.EventRepository.FindEvents(System.String)
+  - TicketApi.Db.EventRepository.GetEventById(System.Int32)
+  - TicketApi.Db.EventRepository.GetEvents(System.Int32,System.Int32)
+  - TicketApi.Db.EventRepository.UpdateEvent(TicketApi.Db.Models.Event)
   langs:
   - csharp
   - vb
   name: EventRepository
   nameWithType: EventRepository
-  fullName: TicketSystem.DatabaseRepository.EventRepository
+  fullName: TicketApi.Db.EventRepository
   type: Class
   source:
     remote:
-      path: src/DatabaseRepository/EventRepository.cs
-      branch: features/db
+      path: src/DbRepository/EventRepository.cs
+      branch: restapi
       repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
     id: EventRepository
-    path: src/DatabaseRepository/EventRepository.cs
-    startLine: 12
+    path: src/DbRepository/EventRepository.cs
+    startLine: 14
   assemblies:
-  - DatabaseRepository
-  namespace: TicketSystem.DatabaseRepository
+  - DbRepository
+  namespace: TicketApi.Db
   syntax:
     content: 'public class EventRepository : IEventRepository'
     content.vb: >-
@@ -37,7 +38,7 @@ items:
   inheritance:
   - System.Object
   implements:
-  - TicketSystem.DatabaseRepository.Interface.IEventRepository
+  - TicketApi.Db.Interface.IEventRepository
   inheritedMembers:
   - System.Object.Equals(System.Object)
   - System.Object.Equals(System.Object,System.Object)
@@ -52,139 +53,172 @@ items:
   modifiers.vb:
   - Public
   - Class
-- uid: TicketSystem.DatabaseRepository.EventRepository.AddEvent(System.String,System.String)
-  commentId: M:TicketSystem.DatabaseRepository.EventRepository.AddEvent(System.String,System.String)
-  id: AddEvent(System.String,System.String)
-  parent: TicketSystem.DatabaseRepository.EventRepository
+- uid: TicketApi.Db.EventRepository.#ctor(System.String)
+  commentId: M:TicketApi.Db.EventRepository.#ctor(System.String)
+  id: '#ctor(System.String)'
+  parent: TicketApi.Db.EventRepository
   langs:
   - csharp
   - vb
-  name: AddEvent(String, String)
-  nameWithType: EventRepository.AddEvent(String, String)
-  fullName: TicketSystem.DatabaseRepository.EventRepository.AddEvent(System.String, System.String)
-  type: Method
+  name: EventRepository(String)
+  nameWithType: EventRepository.EventRepository(String)
+  fullName: TicketApi.Db.EventRepository.EventRepository(System.String)
+  type: Constructor
   source:
     remote:
-      path: src/DatabaseRepository/EventRepository.cs
-      branch: features/db
+      path: src/DbRepository/EventRepository.cs
+      branch: restapi
       repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
-    id: AddEvent
-    path: src/DatabaseRepository/EventRepository.cs
-    startLine: 14
+    id: .ctor
+    path: src/DbRepository/EventRepository.cs
+    startLine: 18
   assemblies:
-  - DatabaseRepository
-  namespace: TicketSystem.DatabaseRepository
+  - DbRepository
+  namespace: TicketApi.Db
   syntax:
-    content: public Event AddEvent(string name, string htmlDescription)
+    content: public EventRepository(string connectionString)
     parameters:
-    - id: name
+    - id: connectionString
       type: System.String
-    - id: htmlDescription
-      type: System.String
-    return:
-      type: TicketSystem.DatabaseRepository.Model.Event
-    content.vb: 'Public Function AddEvent(name As String, htmlDescription As String) As '
-  overload: TicketSystem.DatabaseRepository.EventRepository.AddEvent*
-  implements:
-  - TicketSystem.DatabaseRepository.Interface.IEventRepository.AddEvent(System.String,System.String)
+    content.vb: Public Sub New(connectionString As String)
+  overload: TicketApi.Db.EventRepository.#ctor*
   modifiers.csharp:
   - public
   modifiers.vb:
   - Public
-- uid: TicketSystem.DatabaseRepository.EventRepository.DeleteEvent(System.Int32)
-  commentId: M:TicketSystem.DatabaseRepository.EventRepository.DeleteEvent(System.Int32)
+- uid: TicketApi.Db.EventRepository.AddEvent(TicketApi.Db.Models.Event)
+  commentId: M:TicketApi.Db.EventRepository.AddEvent(TicketApi.Db.Models.Event)
+  id: AddEvent(TicketApi.Db.Models.Event)
+  parent: TicketApi.Db.EventRepository
+  langs:
+  - csharp
+  - vb
+  name: AddEvent(Event)
+  nameWithType: EventRepository.AddEvent(Event)
+  fullName: TicketApi.Db.EventRepository.AddEvent(TicketApi.Db.Models.Event)
+  type: Method
+  source:
+    remote:
+      path: src/DbRepository/EventRepository.cs
+      branch: restapi
+      repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
+    id: AddEvent
+    path: src/DbRepository/EventRepository.cs
+    startLine: 23
+  assemblies:
+  - DbRepository
+  namespace: TicketApi.Db
+  syntax:
+    content: public Event AddEvent(Event item)
+    parameters:
+    - id: item
+      type: TicketApi.Db.Models.Event
+    return:
+      type: TicketApi.Db.Models.Event
+    content.vb: 'Public Function AddEvent(item As  Event) As '
+  overload: TicketApi.Db.EventRepository.AddEvent*
+  implements:
+  - TicketApi.Db.Interface.IEventRepository.AddEvent(TicketApi.Db.Models.Event)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: TicketApi.Db.EventRepository.DeleteEvent(System.Int32)
+  commentId: M:TicketApi.Db.EventRepository.DeleteEvent(System.Int32)
   id: DeleteEvent(System.Int32)
-  parent: TicketSystem.DatabaseRepository.EventRepository
+  parent: TicketApi.Db.EventRepository
   langs:
   - csharp
   - vb
   name: DeleteEvent(Int32)
   nameWithType: EventRepository.DeleteEvent(Int32)
-  fullName: TicketSystem.DatabaseRepository.EventRepository.DeleteEvent(System.Int32)
+  fullName: TicketApi.Db.EventRepository.DeleteEvent(System.Int32)
   type: Method
   source:
     remote:
-      path: src/DatabaseRepository/EventRepository.cs
-      branch: features/db
+      path: src/DbRepository/EventRepository.cs
+      branch: restapi
       repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
     id: DeleteEvent
-    path: src/DatabaseRepository/EventRepository.cs
-    startLine: 32
+    path: src/DbRepository/EventRepository.cs
+    startLine: 41
   assemblies:
-  - DatabaseRepository
-  namespace: TicketSystem.DatabaseRepository
+  - DbRepository
+  namespace: TicketApi.Db
   syntax:
-    content: public void DeleteEvent(int id)
+    content: public bool DeleteEvent(int id)
     parameters:
     - id: id
       type: System.Int32
-    content.vb: Public Sub DeleteEvent(id As Integer)
-  overload: TicketSystem.DatabaseRepository.EventRepository.DeleteEvent*
+    return:
+      type: System.Boolean
+    content.vb: Public Function DeleteEvent(id As Integer) As Boolean
+  overload: TicketApi.Db.EventRepository.DeleteEvent*
   implements:
-  - TicketSystem.DatabaseRepository.Interface.IEventRepository.DeleteEvent(System.Int32)
+  - TicketApi.Db.Interface.IEventRepository.DeleteEvent(System.Int32)
   modifiers.csharp:
   - public
   modifiers.vb:
   - Public
-- uid: TicketSystem.DatabaseRepository.EventRepository.GetEventById(System.Int32)
-  commentId: M:TicketSystem.DatabaseRepository.EventRepository.GetEventById(System.Int32)
+- uid: TicketApi.Db.EventRepository.GetEventById(System.Int32)
+  commentId: M:TicketApi.Db.EventRepository.GetEventById(System.Int32)
   id: GetEventById(System.Int32)
-  parent: TicketSystem.DatabaseRepository.EventRepository
+  parent: TicketApi.Db.EventRepository
   langs:
   - csharp
   - vb
   name: GetEventById(Int32)
   nameWithType: EventRepository.GetEventById(Int32)
-  fullName: TicketSystem.DatabaseRepository.EventRepository.GetEventById(System.Int32)
+  fullName: TicketApi.Db.EventRepository.GetEventById(System.Int32)
   type: Method
   source:
     remote:
-      path: src/DatabaseRepository/EventRepository.cs
-      branch: features/db
+      path: src/DbRepository/EventRepository.cs
+      branch: restapi
       repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
     id: GetEventById
-    path: src/DatabaseRepository/EventRepository.cs
-    startLine: 48
+    path: src/DbRepository/EventRepository.cs
+    startLine: 60
   assemblies:
-  - DatabaseRepository
-  namespace: TicketSystem.DatabaseRepository
+  - DbRepository
+  namespace: TicketApi.Db
   syntax:
     content: public Event GetEventById(int id)
     parameters:
     - id: id
       type: System.Int32
     return:
-      type: TicketSystem.DatabaseRepository.Model.Event
+      type: TicketApi.Db.Models.Event
     content.vb: 'Public Function GetEventById(id As Integer) As '
-  overload: TicketSystem.DatabaseRepository.EventRepository.GetEventById*
+  overload: TicketApi.Db.EventRepository.GetEventById*
   implements:
-  - TicketSystem.DatabaseRepository.Interface.IEventRepository.GetEventById(System.Int32)
+  - TicketApi.Db.Interface.IEventRepository.GetEventById(System.Int32)
   modifiers.csharp:
   - public
   modifiers.vb:
   - Public
-- uid: TicketSystem.DatabaseRepository.EventRepository.GetEvents(System.Int32,System.Int32)
-  commentId: M:TicketSystem.DatabaseRepository.EventRepository.GetEvents(System.Int32,System.Int32)
+- uid: TicketApi.Db.EventRepository.GetEvents(System.Int32,System.Int32)
+  commentId: M:TicketApi.Db.EventRepository.GetEvents(System.Int32,System.Int32)
   id: GetEvents(System.Int32,System.Int32)
-  parent: TicketSystem.DatabaseRepository.EventRepository
+  parent: TicketApi.Db.EventRepository
   langs:
   - csharp
   - vb
   name: GetEvents(Int32, Int32)
   nameWithType: EventRepository.GetEvents(Int32, Int32)
-  fullName: TicketSystem.DatabaseRepository.EventRepository.GetEvents(System.Int32, System.Int32)
+  fullName: TicketApi.Db.EventRepository.GetEvents(System.Int32, System.Int32)
   type: Method
   source:
     remote:
-      path: src/DatabaseRepository/EventRepository.cs
-      branch: features/db
+      path: src/DbRepository/EventRepository.cs
+      branch: restapi
       repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
     id: GetEvents
-    path: src/DatabaseRepository/EventRepository.cs
-    startLine: 65
+    path: src/DbRepository/EventRepository.cs
+    startLine: 76
   assemblies:
-  - DatabaseRepository
-  namespace: TicketSystem.DatabaseRepository
+  - DbRepository
+  namespace: TicketApi.Db
   syntax:
     content: public List<Event> GetEvents(int offset = 0, int maxLimit = 20)
     parameters:
@@ -193,100 +227,96 @@ items:
     - id: maxLimit
       type: System.Int32
     return:
-      type: System.Collections.Generic.List{TicketSystem.DatabaseRepository.Model.Event}
+      type: System.Collections.Generic.List{TicketApi.Db.Models.Event}
     content.vb: Public Function GetEvents(offset As Integer = 0, maxLimit As Integer = 20) As List(Of  Event)
-  overload: TicketSystem.DatabaseRepository.EventRepository.GetEvents*
+  overload: TicketApi.Db.EventRepository.GetEvents*
   implements:
-  - TicketSystem.DatabaseRepository.Interface.IEventRepository.GetEvents(System.Int32,System.Int32)
+  - TicketApi.Db.Interface.IEventRepository.GetEvents(System.Int32,System.Int32)
   modifiers.csharp:
   - public
   modifiers.vb:
   - Public
-- uid: TicketSystem.DatabaseRepository.EventRepository.UpdateEvent(System.Int32,System.String,System.String)
-  commentId: M:TicketSystem.DatabaseRepository.EventRepository.UpdateEvent(System.Int32,System.String,System.String)
-  id: UpdateEvent(System.Int32,System.String,System.String)
-  parent: TicketSystem.DatabaseRepository.EventRepository
+- uid: TicketApi.Db.EventRepository.UpdateEvent(TicketApi.Db.Models.Event)
+  commentId: M:TicketApi.Db.EventRepository.UpdateEvent(TicketApi.Db.Models.Event)
+  id: UpdateEvent(TicketApi.Db.Models.Event)
+  parent: TicketApi.Db.EventRepository
   langs:
   - csharp
   - vb
-  name: UpdateEvent(Int32, String, String)
-  nameWithType: EventRepository.UpdateEvent(Int32, String, String)
-  fullName: TicketSystem.DatabaseRepository.EventRepository.UpdateEvent(System.Int32, System.String, System.String)
+  name: UpdateEvent(Event)
+  nameWithType: EventRepository.UpdateEvent(Event)
+  fullName: TicketApi.Db.EventRepository.UpdateEvent(TicketApi.Db.Models.Event)
   type: Method
   source:
     remote:
-      path: src/DatabaseRepository/EventRepository.cs
-      branch: features/db
+      path: src/DbRepository/EventRepository.cs
+      branch: restapi
       repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
     id: UpdateEvent
-    path: src/DatabaseRepository/EventRepository.cs
-    startLine: 83
+    path: src/DbRepository/EventRepository.cs
+    startLine: 93
   assemblies:
-  - DatabaseRepository
-  namespace: TicketSystem.DatabaseRepository
+  - DbRepository
+  namespace: TicketApi.Db
   syntax:
-    content: public Event UpdateEvent(int id, string name, string htmlDescription)
+    content: public Event UpdateEvent(Event item)
     parameters:
-    - id: id
-      type: System.Int32
-    - id: name
-      type: System.String
-    - id: htmlDescription
-      type: System.String
+    - id: item
+      type: TicketApi.Db.Models.Event
     return:
-      type: TicketSystem.DatabaseRepository.Model.Event
-    content.vb: 'Public Function UpdateEvent(id As Integer, name As String, htmlDescription As String) As '
-  overload: TicketSystem.DatabaseRepository.EventRepository.UpdateEvent*
+      type: TicketApi.Db.Models.Event
+    content.vb: 'Public Function UpdateEvent(item As  Event) As '
+  overload: TicketApi.Db.EventRepository.UpdateEvent*
   implements:
-  - TicketSystem.DatabaseRepository.Interface.IEventRepository.UpdateEvent(System.Int32,System.String,System.String)
+  - TicketApi.Db.Interface.IEventRepository.UpdateEvent(TicketApi.Db.Models.Event)
   modifiers.csharp:
   - public
   modifiers.vb:
   - Public
-- uid: TicketSystem.DatabaseRepository.EventRepository.FindEvents(System.String)
-  commentId: M:TicketSystem.DatabaseRepository.EventRepository.FindEvents(System.String)
+- uid: TicketApi.Db.EventRepository.FindEvents(System.String)
+  commentId: M:TicketApi.Db.EventRepository.FindEvents(System.String)
   id: FindEvents(System.String)
-  parent: TicketSystem.DatabaseRepository.EventRepository
+  parent: TicketApi.Db.EventRepository
   langs:
   - csharp
   - vb
   name: FindEvents(String)
   nameWithType: EventRepository.FindEvents(String)
-  fullName: TicketSystem.DatabaseRepository.EventRepository.FindEvents(System.String)
+  fullName: TicketApi.Db.EventRepository.FindEvents(System.String)
   type: Method
   source:
     remote:
-      path: src/DatabaseRepository/EventRepository.cs
-      branch: features/db
+      path: src/DbRepository/EventRepository.cs
+      branch: restapi
       repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
     id: FindEvents
-    path: src/DatabaseRepository/EventRepository.cs
-    startLine: 101
+    path: src/DbRepository/EventRepository.cs
+    startLine: 111
   assemblies:
-  - DatabaseRepository
-  namespace: TicketSystem.DatabaseRepository
+  - DbRepository
+  namespace: TicketApi.Db
   syntax:
     content: public List<Event> FindEvents(string searchStr)
     parameters:
     - id: searchStr
       type: System.String
     return:
-      type: System.Collections.Generic.List{TicketSystem.DatabaseRepository.Model.Event}
+      type: System.Collections.Generic.List{TicketApi.Db.Models.Event}
     content.vb: Public Function FindEvents(searchStr As String) As List(Of  Event)
-  overload: TicketSystem.DatabaseRepository.EventRepository.FindEvents*
+  overload: TicketApi.Db.EventRepository.FindEvents*
   implements:
-  - TicketSystem.DatabaseRepository.Interface.IEventRepository.FindEvents(System.String)
+  - TicketApi.Db.Interface.IEventRepository.FindEvents(System.String)
   modifiers.csharp:
   - public
   modifiers.vb:
   - Public
 references:
-- uid: TicketSystem.DatabaseRepository
-  commentId: N:TicketSystem.DatabaseRepository
+- uid: TicketApi.Db
+  commentId: N:TicketApi.Db
   isExternal: false
-  name: TicketSystem.DatabaseRepository
-  nameWithType: TicketSystem.DatabaseRepository
-  fullName: TicketSystem.DatabaseRepository
+  name: TicketApi.Db
+  nameWithType: TicketApi.Db
+  fullName: TicketApi.Db
 - uid: System.Object
   commentId: T:System.Object
   parent: System
@@ -294,13 +324,13 @@ references:
   name: Object
   nameWithType: Object
   fullName: System.Object
-- uid: TicketSystem.DatabaseRepository.Interface.IEventRepository
-  commentId: T:TicketSystem.DatabaseRepository.Interface.IEventRepository
-  parent: TicketSystem.DatabaseRepository.Interface
+- uid: TicketApi.Db.Interface.IEventRepository
+  commentId: T:TicketApi.Db.Interface.IEventRepository
+  parent: TicketApi.Db.Interface
   isExternal: false
   name: IEventRepository
   nameWithType: IEventRepository
-  fullName: TicketSystem.DatabaseRepository.Interface.IEventRepository
+  fullName: TicketApi.Db.Interface.IEventRepository
 - uid: System.Object.Equals(System.Object)
   commentId: M:System.Object.Equals(System.Object)
   parent: System.Object
@@ -586,73 +616,18 @@ references:
   name: System
   nameWithType: System
   fullName: System
-- uid: TicketSystem.DatabaseRepository.Interface
-  commentId: N:TicketSystem.DatabaseRepository.Interface
+- uid: TicketApi.Db.Interface
+  commentId: N:TicketApi.Db.Interface
   isExternal: false
-  name: TicketSystem.DatabaseRepository.Interface
-  nameWithType: TicketSystem.DatabaseRepository.Interface
-  fullName: TicketSystem.DatabaseRepository.Interface
-- uid: TicketSystem.DatabaseRepository.EventRepository.AddEvent*
-  commentId: Overload:TicketSystem.DatabaseRepository.EventRepository.AddEvent
+  name: TicketApi.Db.Interface
+  nameWithType: TicketApi.Db.Interface
+  fullName: TicketApi.Db.Interface
+- uid: TicketApi.Db.EventRepository.#ctor*
+  commentId: Overload:TicketApi.Db.EventRepository.#ctor
   isExternal: false
-  name: AddEvent
-  nameWithType: EventRepository.AddEvent
-  fullName: TicketSystem.DatabaseRepository.EventRepository.AddEvent
-- uid: TicketSystem.DatabaseRepository.Interface.IEventRepository.AddEvent(System.String,System.String)
-  commentId: M:TicketSystem.DatabaseRepository.Interface.IEventRepository.AddEvent(System.String,System.String)
-  parent: TicketSystem.DatabaseRepository.Interface.IEventRepository
-  isExternal: true
-  name: AddEvent(String, String)
-  nameWithType: IEventRepository.AddEvent(String, String)
-  fullName: TicketSystem.DatabaseRepository.Interface.IEventRepository.AddEvent(System.String, System.String)
-  spec.csharp:
-  - uid: TicketSystem.DatabaseRepository.Interface.IEventRepository.AddEvent(System.String,System.String)
-    name: AddEvent
-    nameWithType: IEventRepository.AddEvent
-    fullName: TicketSystem.DatabaseRepository.Interface.IEventRepository.AddEvent
-  - name: (
-    nameWithType: (
-    fullName: (
-  - uid: System.String
-    name: String
-    nameWithType: String
-    fullName: System.String
-    isExternal: true
-  - name: ', '
-    nameWithType: ', '
-    fullName: ', '
-  - uid: System.String
-    name: String
-    nameWithType: String
-    fullName: System.String
-    isExternal: true
-  - name: )
-    nameWithType: )
-    fullName: )
-  spec.vb:
-  - uid: TicketSystem.DatabaseRepository.Interface.IEventRepository.AddEvent(System.String,System.String)
-    name: AddEvent
-    nameWithType: IEventRepository.AddEvent
-    fullName: TicketSystem.DatabaseRepository.Interface.IEventRepository.AddEvent
-  - name: (
-    nameWithType: (
-    fullName: (
-  - uid: System.String
-    name: String
-    nameWithType: String
-    fullName: System.String
-    isExternal: true
-  - name: ', '
-    nameWithType: ', '
-    fullName: ', '
-  - uid: System.String
-    name: String
-    nameWithType: String
-    fullName: System.String
-    isExternal: true
-  - name: )
-    nameWithType: )
-    fullName: )
+  name: EventRepository
+  nameWithType: EventRepository.EventRepository
+  fullName: TicketApi.Db.EventRepository.EventRepository
 - uid: System.String
   commentId: T:System.String
   parent: System
@@ -660,37 +635,80 @@ references:
   name: String
   nameWithType: String
   fullName: System.String
-- uid: TicketSystem.DatabaseRepository.Model.Event
-  commentId: T:TicketSystem.DatabaseRepository.Model.Event
-  parent: TicketSystem.DatabaseRepository.Model
+- uid: TicketApi.Db.EventRepository.AddEvent*
+  commentId: Overload:TicketApi.Db.EventRepository.AddEvent
+  isExternal: false
+  name: AddEvent
+  nameWithType: EventRepository.AddEvent
+  fullName: TicketApi.Db.EventRepository.AddEvent
+- uid: TicketApi.Db.Interface.IEventRepository.AddEvent(TicketApi.Db.Models.Event)
+  commentId: M:TicketApi.Db.Interface.IEventRepository.AddEvent(TicketApi.Db.Models.Event)
+  parent: TicketApi.Db.Interface.IEventRepository
+  isExternal: false
+  name: AddEvent(Event)
+  nameWithType: IEventRepository.AddEvent(Event)
+  fullName: TicketApi.Db.Interface.IEventRepository.AddEvent(TicketApi.Db.Models.Event)
+  spec.csharp:
+  - uid: TicketApi.Db.Interface.IEventRepository.AddEvent(TicketApi.Db.Models.Event)
+    name: AddEvent
+    nameWithType: IEventRepository.AddEvent
+    fullName: TicketApi.Db.Interface.IEventRepository.AddEvent
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: TicketApi.Db.Models.Event
+    name: Event
+    nameWithType: Event
+    fullName: TicketApi.Db.Models.Event
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: TicketApi.Db.Interface.IEventRepository.AddEvent(TicketApi.Db.Models.Event)
+    name: AddEvent
+    nameWithType: IEventRepository.AddEvent
+    fullName: TicketApi.Db.Interface.IEventRepository.AddEvent
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: TicketApi.Db.Models.Event
+    name: Event
+    nameWithType: Event
+    fullName: TicketApi.Db.Models.Event
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: TicketApi.Db.Models.Event
+  commentId: T:TicketApi.Db.Models.Event
+  parent: TicketApi.Db.Models
   isExternal: false
   name: Event
   nameWithType: Event
-  fullName: TicketSystem.DatabaseRepository.Model.Event
-- uid: TicketSystem.DatabaseRepository.Model
-  commentId: N:TicketSystem.DatabaseRepository.Model
+  fullName: TicketApi.Db.Models.Event
+- uid: TicketApi.Db.Models
+  commentId: N:TicketApi.Db.Models
   isExternal: false
-  name: TicketSystem.DatabaseRepository.Model
-  nameWithType: TicketSystem.DatabaseRepository.Model
-  fullName: TicketSystem.DatabaseRepository.Model
-- uid: TicketSystem.DatabaseRepository.EventRepository.DeleteEvent*
-  commentId: Overload:TicketSystem.DatabaseRepository.EventRepository.DeleteEvent
+  name: TicketApi.Db.Models
+  nameWithType: TicketApi.Db.Models
+  fullName: TicketApi.Db.Models
+- uid: TicketApi.Db.EventRepository.DeleteEvent*
+  commentId: Overload:TicketApi.Db.EventRepository.DeleteEvent
   isExternal: false
   name: DeleteEvent
   nameWithType: EventRepository.DeleteEvent
-  fullName: TicketSystem.DatabaseRepository.EventRepository.DeleteEvent
-- uid: TicketSystem.DatabaseRepository.Interface.IEventRepository.DeleteEvent(System.Int32)
-  commentId: M:TicketSystem.DatabaseRepository.Interface.IEventRepository.DeleteEvent(System.Int32)
-  parent: TicketSystem.DatabaseRepository.Interface.IEventRepository
+  fullName: TicketApi.Db.EventRepository.DeleteEvent
+- uid: TicketApi.Db.Interface.IEventRepository.DeleteEvent(System.Int32)
+  commentId: M:TicketApi.Db.Interface.IEventRepository.DeleteEvent(System.Int32)
+  parent: TicketApi.Db.Interface.IEventRepository
   isExternal: true
   name: DeleteEvent(Int32)
   nameWithType: IEventRepository.DeleteEvent(Int32)
-  fullName: TicketSystem.DatabaseRepository.Interface.IEventRepository.DeleteEvent(System.Int32)
+  fullName: TicketApi.Db.Interface.IEventRepository.DeleteEvent(System.Int32)
   spec.csharp:
-  - uid: TicketSystem.DatabaseRepository.Interface.IEventRepository.DeleteEvent(System.Int32)
+  - uid: TicketApi.Db.Interface.IEventRepository.DeleteEvent(System.Int32)
     name: DeleteEvent
     nameWithType: IEventRepository.DeleteEvent
-    fullName: TicketSystem.DatabaseRepository.Interface.IEventRepository.DeleteEvent
+    fullName: TicketApi.Db.Interface.IEventRepository.DeleteEvent
   - name: (
     nameWithType: (
     fullName: (
@@ -703,10 +721,10 @@ references:
     nameWithType: )
     fullName: )
   spec.vb:
-  - uid: TicketSystem.DatabaseRepository.Interface.IEventRepository.DeleteEvent(System.Int32)
+  - uid: TicketApi.Db.Interface.IEventRepository.DeleteEvent(System.Int32)
     name: DeleteEvent
     nameWithType: IEventRepository.DeleteEvent
-    fullName: TicketSystem.DatabaseRepository.Interface.IEventRepository.DeleteEvent
+    fullName: TicketApi.Db.Interface.IEventRepository.DeleteEvent
   - name: (
     nameWithType: (
     fullName: (
@@ -725,24 +743,31 @@ references:
   name: Int32
   nameWithType: Int32
   fullName: System.Int32
-- uid: TicketSystem.DatabaseRepository.EventRepository.GetEventById*
-  commentId: Overload:TicketSystem.DatabaseRepository.EventRepository.GetEventById
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: TicketApi.Db.EventRepository.GetEventById*
+  commentId: Overload:TicketApi.Db.EventRepository.GetEventById
   isExternal: false
   name: GetEventById
   nameWithType: EventRepository.GetEventById
-  fullName: TicketSystem.DatabaseRepository.EventRepository.GetEventById
-- uid: TicketSystem.DatabaseRepository.Interface.IEventRepository.GetEventById(System.Int32)
-  commentId: M:TicketSystem.DatabaseRepository.Interface.IEventRepository.GetEventById(System.Int32)
-  parent: TicketSystem.DatabaseRepository.Interface.IEventRepository
+  fullName: TicketApi.Db.EventRepository.GetEventById
+- uid: TicketApi.Db.Interface.IEventRepository.GetEventById(System.Int32)
+  commentId: M:TicketApi.Db.Interface.IEventRepository.GetEventById(System.Int32)
+  parent: TicketApi.Db.Interface.IEventRepository
   isExternal: true
   name: GetEventById(Int32)
   nameWithType: IEventRepository.GetEventById(Int32)
-  fullName: TicketSystem.DatabaseRepository.Interface.IEventRepository.GetEventById(System.Int32)
+  fullName: TicketApi.Db.Interface.IEventRepository.GetEventById(System.Int32)
   spec.csharp:
-  - uid: TicketSystem.DatabaseRepository.Interface.IEventRepository.GetEventById(System.Int32)
+  - uid: TicketApi.Db.Interface.IEventRepository.GetEventById(System.Int32)
     name: GetEventById
     nameWithType: IEventRepository.GetEventById
-    fullName: TicketSystem.DatabaseRepository.Interface.IEventRepository.GetEventById
+    fullName: TicketApi.Db.Interface.IEventRepository.GetEventById
   - name: (
     nameWithType: (
     fullName: (
@@ -755,10 +780,10 @@ references:
     nameWithType: )
     fullName: )
   spec.vb:
-  - uid: TicketSystem.DatabaseRepository.Interface.IEventRepository.GetEventById(System.Int32)
+  - uid: TicketApi.Db.Interface.IEventRepository.GetEventById(System.Int32)
     name: GetEventById
     nameWithType: IEventRepository.GetEventById
-    fullName: TicketSystem.DatabaseRepository.Interface.IEventRepository.GetEventById
+    fullName: TicketApi.Db.Interface.IEventRepository.GetEventById
   - name: (
     nameWithType: (
     fullName: (
@@ -770,24 +795,24 @@ references:
   - name: )
     nameWithType: )
     fullName: )
-- uid: TicketSystem.DatabaseRepository.EventRepository.GetEvents*
-  commentId: Overload:TicketSystem.DatabaseRepository.EventRepository.GetEvents
+- uid: TicketApi.Db.EventRepository.GetEvents*
+  commentId: Overload:TicketApi.Db.EventRepository.GetEvents
   isExternal: false
   name: GetEvents
   nameWithType: EventRepository.GetEvents
-  fullName: TicketSystem.DatabaseRepository.EventRepository.GetEvents
-- uid: TicketSystem.DatabaseRepository.Interface.IEventRepository.GetEvents(System.Int32,System.Int32)
-  commentId: M:TicketSystem.DatabaseRepository.Interface.IEventRepository.GetEvents(System.Int32,System.Int32)
-  parent: TicketSystem.DatabaseRepository.Interface.IEventRepository
+  fullName: TicketApi.Db.EventRepository.GetEvents
+- uid: TicketApi.Db.Interface.IEventRepository.GetEvents(System.Int32,System.Int32)
+  commentId: M:TicketApi.Db.Interface.IEventRepository.GetEvents(System.Int32,System.Int32)
+  parent: TicketApi.Db.Interface.IEventRepository
   isExternal: true
   name: GetEvents(Int32, Int32)
   nameWithType: IEventRepository.GetEvents(Int32, Int32)
-  fullName: TicketSystem.DatabaseRepository.Interface.IEventRepository.GetEvents(System.Int32, System.Int32)
+  fullName: TicketApi.Db.Interface.IEventRepository.GetEvents(System.Int32, System.Int32)
   spec.csharp:
-  - uid: TicketSystem.DatabaseRepository.Interface.IEventRepository.GetEvents(System.Int32,System.Int32)
+  - uid: TicketApi.Db.Interface.IEventRepository.GetEvents(System.Int32,System.Int32)
     name: GetEvents
     nameWithType: IEventRepository.GetEvents
-    fullName: TicketSystem.DatabaseRepository.Interface.IEventRepository.GetEvents
+    fullName: TicketApi.Db.Interface.IEventRepository.GetEvents
   - name: (
     nameWithType: (
     fullName: (
@@ -808,10 +833,10 @@ references:
     nameWithType: )
     fullName: )
   spec.vb:
-  - uid: TicketSystem.DatabaseRepository.Interface.IEventRepository.GetEvents(System.Int32,System.Int32)
+  - uid: TicketApi.Db.Interface.IEventRepository.GetEvents(System.Int32,System.Int32)
     name: GetEvents
     nameWithType: IEventRepository.GetEvents
-    fullName: TicketSystem.DatabaseRepository.Interface.IEventRepository.GetEvents
+    fullName: TicketApi.Db.Interface.IEventRepository.GetEvents
   - name: (
     nameWithType: (
     fullName: (
@@ -831,15 +856,15 @@ references:
   - name: )
     nameWithType: )
     fullName: )
-- uid: System.Collections.Generic.List{TicketSystem.DatabaseRepository.Model.Event}
-  commentId: T:System.Collections.Generic.List{TicketSystem.DatabaseRepository.Model.Event}
+- uid: System.Collections.Generic.List{TicketApi.Db.Models.Event}
+  commentId: T:System.Collections.Generic.List{TicketApi.Db.Models.Event}
   parent: System.Collections.Generic
   definition: System.Collections.Generic.List`1
   name: List<Event>
   nameWithType: List<Event>
-  fullName: System.Collections.Generic.List<TicketSystem.DatabaseRepository.Model.Event>
+  fullName: System.Collections.Generic.List<TicketApi.Db.Models.Event>
   nameWithType.vb: List(Of Event)
-  fullName.vb: System.Collections.Generic.List(Of TicketSystem.DatabaseRepository.Model.Event)
+  fullName.vb: System.Collections.Generic.List(Of TicketApi.Db.Models.Event)
   name.vb: List(Of Event)
   spec.csharp:
   - uid: System.Collections.Generic.List`1
@@ -850,10 +875,10 @@ references:
   - name: <
     nameWithType: <
     fullName: <
-  - uid: TicketSystem.DatabaseRepository.Model.Event
+  - uid: TicketApi.Db.Models.Event
     name: Event
     nameWithType: Event
-    fullName: TicketSystem.DatabaseRepository.Model.Event
+    fullName: TicketApi.Db.Models.Event
   - name: '>'
     nameWithType: '>'
     fullName: '>'
@@ -866,10 +891,10 @@ references:
   - name: '(Of '
     nameWithType: '(Of '
     fullName: '(Of '
-  - uid: TicketSystem.DatabaseRepository.Model.Event
+  - uid: TicketApi.Db.Models.Event
     name: Event
     nameWithType: Event
-    fullName: TicketSystem.DatabaseRepository.Model.Event
+    fullName: TicketApi.Db.Models.Event
   - name: )
     nameWithType: )
     fullName: )
@@ -918,101 +943,67 @@ references:
   name: System.Collections.Generic
   nameWithType: System.Collections.Generic
   fullName: System.Collections.Generic
-- uid: TicketSystem.DatabaseRepository.EventRepository.UpdateEvent*
-  commentId: Overload:TicketSystem.DatabaseRepository.EventRepository.UpdateEvent
+- uid: TicketApi.Db.EventRepository.UpdateEvent*
+  commentId: Overload:TicketApi.Db.EventRepository.UpdateEvent
   isExternal: false
   name: UpdateEvent
   nameWithType: EventRepository.UpdateEvent
-  fullName: TicketSystem.DatabaseRepository.EventRepository.UpdateEvent
-- uid: TicketSystem.DatabaseRepository.Interface.IEventRepository.UpdateEvent(System.Int32,System.String,System.String)
-  commentId: M:TicketSystem.DatabaseRepository.Interface.IEventRepository.UpdateEvent(System.Int32,System.String,System.String)
-  parent: TicketSystem.DatabaseRepository.Interface.IEventRepository
-  isExternal: true
-  name: UpdateEvent(Int32, String, String)
-  nameWithType: IEventRepository.UpdateEvent(Int32, String, String)
-  fullName: TicketSystem.DatabaseRepository.Interface.IEventRepository.UpdateEvent(System.Int32, System.String, System.String)
+  fullName: TicketApi.Db.EventRepository.UpdateEvent
+- uid: TicketApi.Db.Interface.IEventRepository.UpdateEvent(TicketApi.Db.Models.Event)
+  commentId: M:TicketApi.Db.Interface.IEventRepository.UpdateEvent(TicketApi.Db.Models.Event)
+  parent: TicketApi.Db.Interface.IEventRepository
+  isExternal: false
+  name: UpdateEvent(Event)
+  nameWithType: IEventRepository.UpdateEvent(Event)
+  fullName: TicketApi.Db.Interface.IEventRepository.UpdateEvent(TicketApi.Db.Models.Event)
   spec.csharp:
-  - uid: TicketSystem.DatabaseRepository.Interface.IEventRepository.UpdateEvent(System.Int32,System.String,System.String)
+  - uid: TicketApi.Db.Interface.IEventRepository.UpdateEvent(TicketApi.Db.Models.Event)
     name: UpdateEvent
     nameWithType: IEventRepository.UpdateEvent
-    fullName: TicketSystem.DatabaseRepository.Interface.IEventRepository.UpdateEvent
+    fullName: TicketApi.Db.Interface.IEventRepository.UpdateEvent
   - name: (
     nameWithType: (
     fullName: (
-  - uid: System.Int32
-    name: Int32
-    nameWithType: Int32
-    fullName: System.Int32
-    isExternal: true
-  - name: ', '
-    nameWithType: ', '
-    fullName: ', '
-  - uid: System.String
-    name: String
-    nameWithType: String
-    fullName: System.String
-    isExternal: true
-  - name: ', '
-    nameWithType: ', '
-    fullName: ', '
-  - uid: System.String
-    name: String
-    nameWithType: String
-    fullName: System.String
-    isExternal: true
+  - uid: TicketApi.Db.Models.Event
+    name: Event
+    nameWithType: Event
+    fullName: TicketApi.Db.Models.Event
   - name: )
     nameWithType: )
     fullName: )
   spec.vb:
-  - uid: TicketSystem.DatabaseRepository.Interface.IEventRepository.UpdateEvent(System.Int32,System.String,System.String)
+  - uid: TicketApi.Db.Interface.IEventRepository.UpdateEvent(TicketApi.Db.Models.Event)
     name: UpdateEvent
     nameWithType: IEventRepository.UpdateEvent
-    fullName: TicketSystem.DatabaseRepository.Interface.IEventRepository.UpdateEvent
+    fullName: TicketApi.Db.Interface.IEventRepository.UpdateEvent
   - name: (
     nameWithType: (
     fullName: (
-  - uid: System.Int32
-    name: Int32
-    nameWithType: Int32
-    fullName: System.Int32
-    isExternal: true
-  - name: ', '
-    nameWithType: ', '
-    fullName: ', '
-  - uid: System.String
-    name: String
-    nameWithType: String
-    fullName: System.String
-    isExternal: true
-  - name: ', '
-    nameWithType: ', '
-    fullName: ', '
-  - uid: System.String
-    name: String
-    nameWithType: String
-    fullName: System.String
-    isExternal: true
+  - uid: TicketApi.Db.Models.Event
+    name: Event
+    nameWithType: Event
+    fullName: TicketApi.Db.Models.Event
   - name: )
     nameWithType: )
     fullName: )
-- uid: TicketSystem.DatabaseRepository.EventRepository.FindEvents*
-  commentId: Overload:TicketSystem.DatabaseRepository.EventRepository.FindEvents
+- uid: TicketApi.Db.EventRepository.FindEvents*
+  commentId: Overload:TicketApi.Db.EventRepository.FindEvents
   isExternal: false
   name: FindEvents
   nameWithType: EventRepository.FindEvents
-  fullName: TicketSystem.DatabaseRepository.EventRepository.FindEvents
-- uid: TicketSystem.DatabaseRepository.Interface.IEventRepository.FindEvents(System.String)
-  commentId: M:TicketSystem.DatabaseRepository.Interface.IEventRepository.FindEvents(System.String)
-  parent: TicketSystem.DatabaseRepository.Interface.IEventRepository
+  fullName: TicketApi.Db.EventRepository.FindEvents
+- uid: TicketApi.Db.Interface.IEventRepository.FindEvents(System.String)
+  commentId: M:TicketApi.Db.Interface.IEventRepository.FindEvents(System.String)
+  parent: TicketApi.Db.Interface.IEventRepository
   isExternal: true
   name: FindEvents(String)
   nameWithType: IEventRepository.FindEvents(String)
-  fullName: TicketSystem.DatabaseRepository.Interface.IEventRepository.FindEvents(System.String)
+  fullName: TicketApi.Db.Interface.IEventRepository.FindEvents(System.String)
   spec.csharp:
-  - uid: TicketSystem.DatabaseRepository.Interface.IEventRepository.FindEvents(System.String)
+  - uid: TicketApi.Db.Interface.IEventRepository.FindEvents(System.String)
     name: FindEvents
     nameWithType: IEventRepository.FindEvents
-    fullName: TicketSystem.DatabaseRepository.Interface.IEventRepository.FindEvents
+    fullName: TicketApi.Db.Interface.IEventRepository.FindEvents
   - name: (
     nameWithType: (
     fullName: (
@@ -1025,10 +1016,10 @@ references:
     nameWithType: )
     fullName: )
   spec.vb:
-  - uid: TicketSystem.DatabaseRepository.Interface.IEventRepository.FindEvents(System.String)
+  - uid: TicketApi.Db.Interface.IEventRepository.FindEvents(System.String)
     name: FindEvents
     nameWithType: IEventRepository.FindEvents
-    fullName: TicketSystem.DatabaseRepository.Interface.IEventRepository.FindEvents
+    fullName: TicketApi.Db.Interface.IEventRepository.FindEvents
   - name: (
     nameWithType: (
     fullName: (

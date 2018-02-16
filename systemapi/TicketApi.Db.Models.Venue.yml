@@ -1,40 +1,39 @@
 ### YamlMime:ManagedReference
 items:
-- uid: TicketApi.Models.Venue
-  commentId: T:TicketApi.Models.Venue
+- uid: TicketApi.Db.Models.Venue
+  commentId: T:TicketApi.Db.Models.Venue
   id: Venue
-  parent: TicketApi.Models
+  parent: TicketApi.Db.Models
   children:
-  - TicketApi.Models.Venue.Address
-  - TicketApi.Models.Venue.City
-  - TicketApi.Models.Venue.Country
-  - TicketApi.Models.Venue.Equals(System.Object)
-  - TicketApi.Models.Venue.Equals(TicketApi.Models.Venue)
-  - TicketApi.Models.Venue.GetHashCode
-  - TicketApi.Models.Venue.Id
-  - TicketApi.Models.Venue.Name
-  - TicketApi.Models.Venue.op_Equality(TicketApi.Models.Venue,TicketApi.Models.Venue)
-  - TicketApi.Models.Venue.op_Inequality(TicketApi.Models.Venue,TicketApi.Models.Venue)
-  - TicketApi.Models.Venue.ToJson
-  - TicketApi.Models.Venue.ToString
+  - TicketApi.Db.Models.Venue.Address
+  - TicketApi.Db.Models.Venue.City
+  - TicketApi.Db.Models.Venue.Country
+  - TicketApi.Db.Models.Venue.Equals(System.Object)
+  - TicketApi.Db.Models.Venue.Equals(TicketApi.Db.Models.Venue)
+  - TicketApi.Db.Models.Venue.GetHashCode
+  - TicketApi.Db.Models.Venue.op_Equality(TicketApi.Db.Models.Venue,TicketApi.Db.Models.Venue)
+  - TicketApi.Db.Models.Venue.op_Inequality(TicketApi.Db.Models.Venue,TicketApi.Db.Models.Venue)
+  - TicketApi.Db.Models.Venue.ToString
+  - TicketApi.Db.Models.Venue.VenueID
+  - TicketApi.Db.Models.Venue.VenueName
   langs:
   - csharp
   - vb
   name: Venue
   nameWithType: Venue
-  fullName: TicketApi.Models.Venue
+  fullName: TicketApi.Db.Models.Venue
   type: Class
   source:
     remote:
-      path: src/TicketApi/Models/Venue.cs
-      branch: features/db
+      path: src/DbRepository/Models/Venue.cs
+      branch: restapi
       repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
     id: Venue
-    path: src/TicketApi/Models/Venue.cs
-    startLine: 38
+    path: src/DbRepository/Models/Venue.cs
+    startLine: 9
   assemblies:
-  - TicketApi
-  namespace: TicketApi.Models
+  - DbRepository
+  namespace: TicketApi.Db.Models
   summary: "\n\n"
   example: []
   syntax:
@@ -50,7 +49,7 @@ items:
   inheritance:
   - System.Object
   implements:
-  - System.IEquatable{TicketApi.Models.Venue}
+  - System.IEquatable{TicketApi.Db.Models.Venue}
   inheritedMembers:
   - System.Object.Equals(System.Object,System.Object)
   - System.Object.GetType
@@ -66,43 +65,43 @@ items:
   modifiers.vb:
   - Public
   - Class
-- uid: TicketApi.Models.Venue.Id
-  commentId: P:TicketApi.Models.Venue.Id
-  id: Id
-  parent: TicketApi.Models.Venue
+- uid: TicketApi.Db.Models.Venue.VenueID
+  commentId: P:TicketApi.Db.Models.Venue.VenueID
+  id: VenueID
+  parent: TicketApi.Db.Models.Venue
   langs:
   - csharp
   - vb
-  name: Id
-  nameWithType: Venue.Id
-  fullName: TicketApi.Models.Venue.Id
+  name: VenueID
+  nameWithType: Venue.VenueID
+  fullName: TicketApi.Db.Models.Venue.VenueID
   type: Property
   source:
     remote:
-      path: src/TicketApi/Models/Venue.cs
-      branch: features/db
+      path: src/DbRepository/Models/Venue.cs
+      branch: restapi
       repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
-    id: Id
-    path: src/TicketApi/Models/Venue.cs
-    startLine: 44
+    id: VenueID
+    path: src/DbRepository/Models/Venue.cs
+    startLine: 15
   assemblies:
-  - TicketApi
-  namespace: TicketApi.Models
-  summary: "\nGets or Sets Id\n"
+  - DbRepository
+  namespace: TicketApi.Db.Models
+  summary: "\nGets or Sets VenueID\n"
   example: []
   syntax:
     content: >-
-      [DataMember(Name = "id")]
+      [DataMember(Name = "venueId")]
 
-      public int ? Id { get; set; }
+      public int ? VenueID { get; set; }
     parameters: []
     return:
       type: System.Nullable{System.Int32}
     content.vb: >-
-      <DataMember(Name:="id")>
+      <DataMember(Name:="venueId")>
 
-      Public Property Id As Integer?
-  overload: TicketApi.Models.Venue.Id*
+      Public Property VenueID As Integer?
+  overload: TicketApi.Db.Models.Venue.VenueID*
   attributes:
   - type: System.Runtime.Serialization.DataMemberAttribute
     ctor: System.Runtime.Serialization.DataMemberAttribute.#ctor
@@ -110,50 +109,50 @@ items:
     namedArguments:
     - name: Name
       type: System.String
-      value: id
+      value: venueId
   modifiers.csharp:
   - public
   - get
   - set
   modifiers.vb:
   - Public
-- uid: TicketApi.Models.Venue.Name
-  commentId: P:TicketApi.Models.Venue.Name
-  id: Name
-  parent: TicketApi.Models.Venue
+- uid: TicketApi.Db.Models.Venue.VenueName
+  commentId: P:TicketApi.Db.Models.Venue.VenueName
+  id: VenueName
+  parent: TicketApi.Db.Models.Venue
   langs:
   - csharp
   - vb
-  name: Name
-  nameWithType: Venue.Name
-  fullName: TicketApi.Models.Venue.Name
+  name: VenueName
+  nameWithType: Venue.VenueName
+  fullName: TicketApi.Db.Models.Venue.VenueName
   type: Property
   source:
     remote:
-      path: src/TicketApi/Models/Venue.cs
-      branch: features/db
+      path: src/DbRepository/Models/Venue.cs
+      branch: restapi
       repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
-    id: Name
-    path: src/TicketApi/Models/Venue.cs
-    startLine: 50
+    id: VenueName
+    path: src/DbRepository/Models/Venue.cs
+    startLine: 21
   assemblies:
-  - TicketApi
-  namespace: TicketApi.Models
-  summary: "\nGets or Sets Name\n"
+  - DbRepository
+  namespace: TicketApi.Db.Models
+  summary: "\nGets or Sets VenueName\n"
   example: []
   syntax:
     content: >-
-      [DataMember(Name = "name")]
+      [DataMember(Name = "venueName")]
 
-      public string Name { get; set; }
+      public string VenueName { get; set; }
     parameters: []
     return:
       type: System.String
     content.vb: >-
-      <DataMember(Name:="name")>
+      <DataMember(Name:="venueName")>
 
-      Public Property Name As String
-  overload: TicketApi.Models.Venue.Name*
+      Public Property VenueName As String
+  overload: TicketApi.Db.Models.Venue.VenueName*
   attributes:
   - type: System.Runtime.Serialization.DataMemberAttribute
     ctor: System.Runtime.Serialization.DataMemberAttribute.#ctor
@@ -161,35 +160,35 @@ items:
     namedArguments:
     - name: Name
       type: System.String
-      value: name
+      value: venueName
   modifiers.csharp:
   - public
   - get
   - set
   modifiers.vb:
   - Public
-- uid: TicketApi.Models.Venue.Address
-  commentId: P:TicketApi.Models.Venue.Address
+- uid: TicketApi.Db.Models.Venue.Address
+  commentId: P:TicketApi.Db.Models.Venue.Address
   id: Address
-  parent: TicketApi.Models.Venue
+  parent: TicketApi.Db.Models.Venue
   langs:
   - csharp
   - vb
   name: Address
   nameWithType: Venue.Address
-  fullName: TicketApi.Models.Venue.Address
+  fullName: TicketApi.Db.Models.Venue.Address
   type: Property
   source:
     remote:
-      path: src/TicketApi/Models/Venue.cs
-      branch: features/db
+      path: src/DbRepository/Models/Venue.cs
+      branch: restapi
       repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
     id: Address
-    path: src/TicketApi/Models/Venue.cs
-    startLine: 56
+    path: src/DbRepository/Models/Venue.cs
+    startLine: 27
   assemblies:
-  - TicketApi
-  namespace: TicketApi.Models
+  - DbRepository
+  namespace: TicketApi.Db.Models
   summary: "\nGets or Sets Address\n"
   example: []
   syntax:
@@ -204,7 +203,7 @@ items:
       <DataMember(Name:="address")>
 
       Public Property Address As String
-  overload: TicketApi.Models.Venue.Address*
+  overload: TicketApi.Db.Models.Venue.Address*
   attributes:
   - type: System.Runtime.Serialization.DataMemberAttribute
     ctor: System.Runtime.Serialization.DataMemberAttribute.#ctor
@@ -219,28 +218,28 @@ items:
   - set
   modifiers.vb:
   - Public
-- uid: TicketApi.Models.Venue.City
-  commentId: P:TicketApi.Models.Venue.City
+- uid: TicketApi.Db.Models.Venue.City
+  commentId: P:TicketApi.Db.Models.Venue.City
   id: City
-  parent: TicketApi.Models.Venue
+  parent: TicketApi.Db.Models.Venue
   langs:
   - csharp
   - vb
   name: City
   nameWithType: Venue.City
-  fullName: TicketApi.Models.Venue.City
+  fullName: TicketApi.Db.Models.Venue.City
   type: Property
   source:
     remote:
-      path: src/TicketApi/Models/Venue.cs
-      branch: features/db
+      path: src/DbRepository/Models/Venue.cs
+      branch: restapi
       repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
     id: City
-    path: src/TicketApi/Models/Venue.cs
-    startLine: 62
+    path: src/DbRepository/Models/Venue.cs
+    startLine: 33
   assemblies:
-  - TicketApi
-  namespace: TicketApi.Models
+  - DbRepository
+  namespace: TicketApi.Db.Models
   summary: "\nGets or Sets City\n"
   example: []
   syntax:
@@ -255,7 +254,7 @@ items:
       <DataMember(Name:="city")>
 
       Public Property City As String
-  overload: TicketApi.Models.Venue.City*
+  overload: TicketApi.Db.Models.Venue.City*
   attributes:
   - type: System.Runtime.Serialization.DataMemberAttribute
     ctor: System.Runtime.Serialization.DataMemberAttribute.#ctor
@@ -270,28 +269,28 @@ items:
   - set
   modifiers.vb:
   - Public
-- uid: TicketApi.Models.Venue.Country
-  commentId: P:TicketApi.Models.Venue.Country
+- uid: TicketApi.Db.Models.Venue.Country
+  commentId: P:TicketApi.Db.Models.Venue.Country
   id: Country
-  parent: TicketApi.Models.Venue
+  parent: TicketApi.Db.Models.Venue
   langs:
   - csharp
   - vb
   name: Country
   nameWithType: Venue.Country
-  fullName: TicketApi.Models.Venue.Country
+  fullName: TicketApi.Db.Models.Venue.Country
   type: Property
   source:
     remote:
-      path: src/TicketApi/Models/Venue.cs
-      branch: features/db
+      path: src/DbRepository/Models/Venue.cs
+      branch: restapi
       repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
     id: Country
-    path: src/TicketApi/Models/Venue.cs
-    startLine: 68
+    path: src/DbRepository/Models/Venue.cs
+    startLine: 39
   assemblies:
-  - TicketApi
-  namespace: TicketApi.Models
+  - DbRepository
+  namespace: TicketApi.Db.Models
   summary: "\nGets or Sets Country\n"
   example: []
   syntax:
@@ -306,7 +305,7 @@ items:
       <DataMember(Name:="country")>
 
       Public Property Country As String
-  overload: TicketApi.Models.Venue.Country*
+  overload: TicketApi.Db.Models.Venue.Country*
   attributes:
   - type: System.Runtime.Serialization.DataMemberAttribute
     ctor: System.Runtime.Serialization.DataMemberAttribute.#ctor
@@ -321,28 +320,28 @@ items:
   - set
   modifiers.vb:
   - Public
-- uid: TicketApi.Models.Venue.ToString
-  commentId: M:TicketApi.Models.Venue.ToString
+- uid: TicketApi.Db.Models.Venue.ToString
+  commentId: M:TicketApi.Db.Models.Venue.ToString
   id: ToString
-  parent: TicketApi.Models.Venue
+  parent: TicketApi.Db.Models.Venue
   langs:
   - csharp
   - vb
   name: ToString()
   nameWithType: Venue.ToString()
-  fullName: TicketApi.Models.Venue.ToString()
+  fullName: TicketApi.Db.Models.Venue.ToString()
   type: Method
   source:
     remote:
-      path: src/TicketApi/Models/Venue.cs
-      branch: features/db
+      path: src/DbRepository/Models/Venue.cs
+      branch: restapi
       repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
     id: ToString
-    path: src/TicketApi/Models/Venue.cs
-    startLine: 75
+    path: src/DbRepository/Models/Venue.cs
+    startLine: 46
   assemblies:
-  - TicketApi
-  namespace: TicketApi.Models
+  - DbRepository
+  namespace: TicketApi.Db.Models
   summary: "\nReturns the string presentation of the object\n"
   example: []
   syntax:
@@ -352,70 +351,35 @@ items:
       description: String presentation of the object
     content.vb: Public Overrides Function ToString As String
   overridden: System.Object.ToString
-  overload: TicketApi.Models.Venue.ToString*
+  overload: TicketApi.Db.Models.Venue.ToString*
   modifiers.csharp:
   - public
   - override
   modifiers.vb:
   - Public
   - Overrides
-- uid: TicketApi.Models.Venue.ToJson
-  commentId: M:TicketApi.Models.Venue.ToJson
-  id: ToJson
-  parent: TicketApi.Models.Venue
-  langs:
-  - csharp
-  - vb
-  name: ToJson()
-  nameWithType: Venue.ToJson()
-  fullName: TicketApi.Models.Venue.ToJson()
-  type: Method
-  source:
-    remote:
-      path: src/TicketApi/Models/Venue.cs
-      branch: features/db
-      repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
-    id: ToJson
-    path: src/TicketApi/Models/Venue.cs
-    startLine: 92
-  assemblies:
-  - TicketApi
-  namespace: TicketApi.Models
-  summary: "\nReturns the JSON string presentation of the object\n"
-  example: []
-  syntax:
-    content: public string ToJson()
-    return:
-      type: System.String
-      description: JSON string presentation of the object
-    content.vb: Public Function ToJson As String
-  overload: TicketApi.Models.Venue.ToJson*
-  modifiers.csharp:
-  - public
-  modifiers.vb:
-  - Public
-- uid: TicketApi.Models.Venue.Equals(System.Object)
-  commentId: M:TicketApi.Models.Venue.Equals(System.Object)
+- uid: TicketApi.Db.Models.Venue.Equals(System.Object)
+  commentId: M:TicketApi.Db.Models.Venue.Equals(System.Object)
   id: Equals(System.Object)
-  parent: TicketApi.Models.Venue
+  parent: TicketApi.Db.Models.Venue
   langs:
   - csharp
   - vb
   name: Equals(Object)
   nameWithType: Venue.Equals(Object)
-  fullName: TicketApi.Models.Venue.Equals(System.Object)
+  fullName: TicketApi.Db.Models.Venue.Equals(System.Object)
   type: Method
   source:
     remote:
-      path: src/TicketApi/Models/Venue.cs
-      branch: features/db
+      path: src/DbRepository/Models/Venue.cs
+      branch: restapi
       repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
     id: Equals
-    path: src/TicketApi/Models/Venue.cs
-    startLine: 102
+    path: src/DbRepository/Models/Venue.cs
+    startLine: 73
   assemblies:
-  - TicketApi
-  namespace: TicketApi.Models
+  - DbRepository
+  namespace: TicketApi.Db.Models
   summary: "\nReturns true if objects are equal\n"
   example: []
   syntax:
@@ -429,76 +393,76 @@ items:
       description: Boolean
     content.vb: Public Overrides Function Equals(obj As Object) As Boolean
   overridden: System.Object.Equals(System.Object)
-  overload: TicketApi.Models.Venue.Equals*
+  overload: TicketApi.Db.Models.Venue.Equals*
   modifiers.csharp:
   - public
   - override
   modifiers.vb:
   - Public
   - Overrides
-- uid: TicketApi.Models.Venue.Equals(TicketApi.Models.Venue)
-  commentId: M:TicketApi.Models.Venue.Equals(TicketApi.Models.Venue)
-  id: Equals(TicketApi.Models.Venue)
-  parent: TicketApi.Models.Venue
+- uid: TicketApi.Db.Models.Venue.Equals(TicketApi.Db.Models.Venue)
+  commentId: M:TicketApi.Db.Models.Venue.Equals(TicketApi.Db.Models.Venue)
+  id: Equals(TicketApi.Db.Models.Venue)
+  parent: TicketApi.Db.Models.Venue
   langs:
   - csharp
   - vb
   name: Equals(Venue)
   nameWithType: Venue.Equals(Venue)
-  fullName: TicketApi.Models.Venue.Equals(TicketApi.Models.Venue)
+  fullName: TicketApi.Db.Models.Venue.Equals(TicketApi.Db.Models.Venue)
   type: Method
   source:
     remote:
-      path: src/TicketApi/Models/Venue.cs
-      branch: features/db
+      path: src/DbRepository/Models/Venue.cs
+      branch: restapi
       repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
     id: Equals
-    path: src/TicketApi/Models/Venue.cs
-    startLine: 114
+    path: src/DbRepository/Models/Venue.cs
+    startLine: 87
   assemblies:
-  - TicketApi
-  namespace: TicketApi.Models
+  - DbRepository
+  namespace: TicketApi.Db.Models
   summary: "\nReturns true if Venue instances are equal\n"
   example: []
   syntax:
     content: public bool Equals(Venue other)
     parameters:
     - id: other
-      type: TicketApi.Models.Venue
+      type: TicketApi.Db.Models.Venue
       description: Instance of Venue to be compared
     return:
       type: System.Boolean
       description: Boolean
     content.vb: Public Function Equals(other As Venue) As Boolean
-  overload: TicketApi.Models.Venue.Equals*
+  overload: TicketApi.Db.Models.Venue.Equals*
   implements:
-  - System.IEquatable{TicketApi.Models.Venue}.Equals(TicketApi.Models.Venue)
+  - System.IEquatable{TicketApi.Db.Models.Venue}.Equals(TicketApi.Db.Models.Venue)
   modifiers.csharp:
   - public
   modifiers.vb:
   - Public
-- uid: TicketApi.Models.Venue.GetHashCode
-  commentId: M:TicketApi.Models.Venue.GetHashCode
+- uid: TicketApi.Db.Models.Venue.GetHashCode
+  commentId: M:TicketApi.Db.Models.Venue.GetHashCode
   id: GetHashCode
-  parent: TicketApi.Models.Venue
+  parent: TicketApi.Db.Models.Venue
   langs:
   - csharp
   - vb
   name: GetHashCode()
   nameWithType: Venue.GetHashCode()
-  fullName: TicketApi.Models.Venue.GetHashCode()
+  fullName: TicketApi.Db.Models.Venue.GetHashCode()
   type: Method
   source:
     remote:
-      path: src/TicketApi/Models/Venue.cs
-      branch: features/db
+      path: src/DbRepository/Models/Venue.cs
+      branch: restapi
       repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
     id: GetHashCode
-    path: src/TicketApi/Models/Venue.cs
-    startLine: 151
+    path: src/DbRepository/Models/Venue.cs
+    startLine: 126
   assemblies:
-  - TicketApi
-  namespace: TicketApi.Models
+  - DbRepository
+  namespace: TicketApi.Db.Models
   summary: "\nGets the hash code\n"
   example: []
   syntax:
@@ -508,85 +472,85 @@ items:
       description: Hash code
     content.vb: Public Overrides Function GetHashCode As Integer
   overridden: System.Object.GetHashCode
-  overload: TicketApi.Models.Venue.GetHashCode*
+  overload: TicketApi.Db.Models.Venue.GetHashCode*
   modifiers.csharp:
   - public
   - override
   modifiers.vb:
   - Public
   - Overrides
-- uid: TicketApi.Models.Venue.op_Equality(TicketApi.Models.Venue,TicketApi.Models.Venue)
-  commentId: M:TicketApi.Models.Venue.op_Equality(TicketApi.Models.Venue,TicketApi.Models.Venue)
-  id: op_Equality(TicketApi.Models.Venue,TicketApi.Models.Venue)
-  parent: TicketApi.Models.Venue
+- uid: TicketApi.Db.Models.Venue.op_Equality(TicketApi.Db.Models.Venue,TicketApi.Db.Models.Venue)
+  commentId: M:TicketApi.Db.Models.Venue.op_Equality(TicketApi.Db.Models.Venue,TicketApi.Db.Models.Venue)
+  id: op_Equality(TicketApi.Db.Models.Venue,TicketApi.Db.Models.Venue)
+  parent: TicketApi.Db.Models.Venue
   langs:
   - csharp
   - vb
   name: Equality(Venue, Venue)
   nameWithType: Venue.Equality(Venue, Venue)
-  fullName: TicketApi.Models.Venue.Equality(TicketApi.Models.Venue, TicketApi.Models.Venue)
+  fullName: TicketApi.Db.Models.Venue.Equality(TicketApi.Db.Models.Venue, TicketApi.Db.Models.Venue)
   type: Operator
   source:
     remote:
-      path: src/TicketApi/Models/Venue.cs
-      branch: features/db
+      path: src/DbRepository/Models/Venue.cs
+      branch: restapi
       repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
     id: op_Equality
-    path: src/TicketApi/Models/Venue.cs
-    startLine: 174
+    path: src/DbRepository/Models/Venue.cs
+    startLine: 149
   assemblies:
-  - TicketApi
-  namespace: TicketApi.Models
+  - DbRepository
+  namespace: TicketApi.Db.Models
   syntax:
     content: public static bool operator ==(Venue left, Venue right)
     parameters:
     - id: left
-      type: TicketApi.Models.Venue
+      type: TicketApi.Db.Models.Venue
     - id: right
-      type: TicketApi.Models.Venue
+      type: TicketApi.Db.Models.Venue
     return:
       type: System.Boolean
     content.vb: Public Shared Operator =(left As Venue, right As Venue) As Boolean
-  overload: TicketApi.Models.Venue.op_Equality*
+  overload: TicketApi.Db.Models.Venue.op_Equality*
   modifiers.csharp:
   - public
   - static
   modifiers.vb:
   - Public
   - Shared
-- uid: TicketApi.Models.Venue.op_Inequality(TicketApi.Models.Venue,TicketApi.Models.Venue)
-  commentId: M:TicketApi.Models.Venue.op_Inequality(TicketApi.Models.Venue,TicketApi.Models.Venue)
-  id: op_Inequality(TicketApi.Models.Venue,TicketApi.Models.Venue)
-  parent: TicketApi.Models.Venue
+- uid: TicketApi.Db.Models.Venue.op_Inequality(TicketApi.Db.Models.Venue,TicketApi.Db.Models.Venue)
+  commentId: M:TicketApi.Db.Models.Venue.op_Inequality(TicketApi.Db.Models.Venue,TicketApi.Db.Models.Venue)
+  id: op_Inequality(TicketApi.Db.Models.Venue,TicketApi.Db.Models.Venue)
+  parent: TicketApi.Db.Models.Venue
   langs:
   - csharp
   - vb
   name: Inequality(Venue, Venue)
   nameWithType: Venue.Inequality(Venue, Venue)
-  fullName: TicketApi.Models.Venue.Inequality(TicketApi.Models.Venue, TicketApi.Models.Venue)
+  fullName: TicketApi.Db.Models.Venue.Inequality(TicketApi.Db.Models.Venue, TicketApi.Db.Models.Venue)
   type: Operator
   source:
     remote:
-      path: src/TicketApi/Models/Venue.cs
-      branch: features/db
+      path: src/DbRepository/Models/Venue.cs
+      branch: restapi
       repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
     id: op_Inequality
-    path: src/TicketApi/Models/Venue.cs
-    startLine: 179
+    path: src/DbRepository/Models/Venue.cs
+    startLine: 154
   assemblies:
-  - TicketApi
-  namespace: TicketApi.Models
+  - DbRepository
+  namespace: TicketApi.Db.Models
   syntax:
     content: public static bool operator !=(Venue left, Venue right)
     parameters:
     - id: left
-      type: TicketApi.Models.Venue
+      type: TicketApi.Db.Models.Venue
     - id: right
-      type: TicketApi.Models.Venue
+      type: TicketApi.Db.Models.Venue
     return:
       type: System.Boolean
     content.vb: Public Shared Operator <>(left As Venue, right As Venue) As Boolean
-  overload: TicketApi.Models.Venue.op_Inequality*
+  overload: TicketApi.Db.Models.Venue.op_Inequality*
   modifiers.csharp:
   - public
   - static
@@ -594,12 +558,12 @@ items:
   - Public
   - Shared
 references:
-- uid: TicketApi.Models
-  commentId: N:TicketApi.Models
+- uid: TicketApi.Db.Models
+  commentId: N:TicketApi.Db.Models
   isExternal: false
-  name: TicketApi.Models
-  nameWithType: TicketApi.Models
-  fullName: TicketApi.Models
+  name: TicketApi.Db.Models
+  nameWithType: TicketApi.Db.Models
+  fullName: TicketApi.Db.Models
 - uid: System.Object
   commentId: T:System.Object
   parent: System
@@ -607,15 +571,15 @@ references:
   name: Object
   nameWithType: Object
   fullName: System.Object
-- uid: System.IEquatable{TicketApi.Models.Venue}
-  commentId: T:System.IEquatable{TicketApi.Models.Venue}
+- uid: System.IEquatable{TicketApi.Db.Models.Venue}
+  commentId: T:System.IEquatable{TicketApi.Db.Models.Venue}
   parent: System
   definition: System.IEquatable`1
   name: IEquatable<Venue>
   nameWithType: IEquatable<Venue>
-  fullName: System.IEquatable<TicketApi.Models.Venue>
+  fullName: System.IEquatable<TicketApi.Db.Models.Venue>
   nameWithType.vb: IEquatable(Of Venue)
-  fullName.vb: System.IEquatable(Of TicketApi.Models.Venue)
+  fullName.vb: System.IEquatable(Of TicketApi.Db.Models.Venue)
   name.vb: IEquatable(Of Venue)
   spec.csharp:
   - uid: System.IEquatable`1
@@ -626,10 +590,10 @@ references:
   - name: <
     nameWithType: <
     fullName: <
-  - uid: TicketApi.Models.Venue
+  - uid: TicketApi.Db.Models.Venue
     name: Venue
     nameWithType: Venue
-    fullName: TicketApi.Models.Venue
+    fullName: TicketApi.Db.Models.Venue
   - name: '>'
     nameWithType: '>'
     fullName: '>'
@@ -642,10 +606,10 @@ references:
   - name: '(Of '
     nameWithType: '(Of '
     fullName: '(Of '
-  - uid: TicketApi.Models.Venue
+  - uid: TicketApi.Db.Models.Venue
     name: Venue
     nameWithType: Venue
-    fullName: TicketApi.Models.Venue
+    fullName: TicketApi.Db.Models.Venue
   - name: )
     nameWithType: )
     fullName: )
@@ -870,12 +834,12 @@ references:
   - name: )
     nameWithType: )
     fullName: )
-- uid: TicketApi.Models.Venue.Id*
-  commentId: Overload:TicketApi.Models.Venue.Id
+- uid: TicketApi.Db.Models.Venue.VenueID*
+  commentId: Overload:TicketApi.Db.Models.Venue.VenueID
   isExternal: false
-  name: Id
-  nameWithType: Venue.Id
-  fullName: TicketApi.Models.Venue.Id
+  name: VenueID
+  nameWithType: Venue.VenueID
+  fullName: TicketApi.Db.Models.Venue.VenueID
 - uid: System.Nullable{System.Int32}
   commentId: T:System.Nullable{System.Int32}
   parent: System
@@ -959,12 +923,12 @@ references:
   - name: )
     nameWithType: )
     fullName: )
-- uid: TicketApi.Models.Venue.Name*
-  commentId: Overload:TicketApi.Models.Venue.Name
+- uid: TicketApi.Db.Models.Venue.VenueName*
+  commentId: Overload:TicketApi.Db.Models.Venue.VenueName
   isExternal: false
-  name: Name
-  nameWithType: Venue.Name
-  fullName: TicketApi.Models.Venue.Name
+  name: VenueName
+  nameWithType: Venue.VenueName
+  fullName: TicketApi.Db.Models.Venue.VenueName
 - uid: System.String
   commentId: T:System.String
   parent: System
@@ -972,24 +936,24 @@ references:
   name: String
   nameWithType: String
   fullName: System.String
-- uid: TicketApi.Models.Venue.Address*
-  commentId: Overload:TicketApi.Models.Venue.Address
+- uid: TicketApi.Db.Models.Venue.Address*
+  commentId: Overload:TicketApi.Db.Models.Venue.Address
   isExternal: false
   name: Address
   nameWithType: Venue.Address
-  fullName: TicketApi.Models.Venue.Address
-- uid: TicketApi.Models.Venue.City*
-  commentId: Overload:TicketApi.Models.Venue.City
+  fullName: TicketApi.Db.Models.Venue.Address
+- uid: TicketApi.Db.Models.Venue.City*
+  commentId: Overload:TicketApi.Db.Models.Venue.City
   isExternal: false
   name: City
   nameWithType: Venue.City
-  fullName: TicketApi.Models.Venue.City
-- uid: TicketApi.Models.Venue.Country*
-  commentId: Overload:TicketApi.Models.Venue.Country
+  fullName: TicketApi.Db.Models.Venue.City
+- uid: TicketApi.Db.Models.Venue.Country*
+  commentId: Overload:TicketApi.Db.Models.Venue.Country
   isExternal: false
   name: Country
   nameWithType: Venue.Country
-  fullName: TicketApi.Models.Venue.Country
+  fullName: TicketApi.Db.Models.Venue.Country
 - uid: System.Object.ToString
   commentId: M:System.Object.ToString
   parent: System.Object
@@ -1021,18 +985,12 @@ references:
   - name: )
     nameWithType: )
     fullName: )
-- uid: TicketApi.Models.Venue.ToString*
-  commentId: Overload:TicketApi.Models.Venue.ToString
+- uid: TicketApi.Db.Models.Venue.ToString*
+  commentId: Overload:TicketApi.Db.Models.Venue.ToString
   isExternal: false
   name: ToString
   nameWithType: Venue.ToString
-  fullName: TicketApi.Models.Venue.ToString
-- uid: TicketApi.Models.Venue.ToJson*
-  commentId: Overload:TicketApi.Models.Venue.ToJson
-  isExternal: false
-  name: ToJson
-  nameWithType: Venue.ToJson
-  fullName: TicketApi.Models.Venue.ToJson
+  fullName: TicketApi.Db.Models.Venue.ToString
 - uid: System.Object.Equals(System.Object)
   commentId: M:System.Object.Equals(System.Object)
   parent: System.Object
@@ -1074,12 +1032,12 @@ references:
   - name: )
     nameWithType: )
     fullName: )
-- uid: TicketApi.Models.Venue.Equals*
-  commentId: Overload:TicketApi.Models.Venue.Equals
+- uid: TicketApi.Db.Models.Venue.Equals*
+  commentId: Overload:TicketApi.Db.Models.Venue.Equals
   isExternal: false
   name: Equals
   nameWithType: Venue.Equals
-  fullName: TicketApi.Models.Venue.Equals
+  fullName: TicketApi.Db.Models.Venue.Equals
 - uid: System.Boolean
   commentId: T:System.Boolean
   parent: System
@@ -1087,28 +1045,28 @@ references:
   name: Boolean
   nameWithType: Boolean
   fullName: System.Boolean
-- uid: System.IEquatable{TicketApi.Models.Venue}.Equals(TicketApi.Models.Venue)
-  commentId: M:System.IEquatable{TicketApi.Models.Venue}.Equals(TicketApi.Models.Venue)
-  parent: System.IEquatable{TicketApi.Models.Venue}
+- uid: System.IEquatable{TicketApi.Db.Models.Venue}.Equals(TicketApi.Db.Models.Venue)
+  commentId: M:System.IEquatable{TicketApi.Db.Models.Venue}.Equals(TicketApi.Db.Models.Venue)
+  parent: System.IEquatable{TicketApi.Db.Models.Venue}
   definition: System.IEquatable`1.Equals(`0)
   name: Equals(Venue)
   nameWithType: IEquatable<Venue>.Equals(Venue)
-  fullName: System.IEquatable<TicketApi.Models.Venue>.Equals(TicketApi.Models.Venue)
+  fullName: System.IEquatable<TicketApi.Db.Models.Venue>.Equals(TicketApi.Db.Models.Venue)
   nameWithType.vb: IEquatable(Of Venue).Equals(Venue)
-  fullName.vb: System.IEquatable(Of TicketApi.Models.Venue).Equals(TicketApi.Models.Venue)
+  fullName.vb: System.IEquatable(Of TicketApi.Db.Models.Venue).Equals(TicketApi.Db.Models.Venue)
   spec.csharp:
   - uid: System.IEquatable`1.Equals(`0)
     name: Equals
     nameWithType: IEquatable<Venue>.Equals
-    fullName: System.IEquatable<TicketApi.Models.Venue>.Equals
+    fullName: System.IEquatable<TicketApi.Db.Models.Venue>.Equals
     isExternal: true
   - name: (
     nameWithType: (
     fullName: (
-  - uid: TicketApi.Models.Venue
+  - uid: TicketApi.Db.Models.Venue
     name: Venue
     nameWithType: Venue
-    fullName: TicketApi.Models.Venue
+    fullName: TicketApi.Db.Models.Venue
   - name: )
     nameWithType: )
     fullName: )
@@ -1116,25 +1074,25 @@ references:
   - uid: System.IEquatable`1.Equals(`0)
     name: Equals
     nameWithType: IEquatable(Of Venue).Equals
-    fullName: System.IEquatable(Of TicketApi.Models.Venue).Equals
+    fullName: System.IEquatable(Of TicketApi.Db.Models.Venue).Equals
     isExternal: true
   - name: (
     nameWithType: (
     fullName: (
-  - uid: TicketApi.Models.Venue
+  - uid: TicketApi.Db.Models.Venue
     name: Venue
     nameWithType: Venue
-    fullName: TicketApi.Models.Venue
+    fullName: TicketApi.Db.Models.Venue
   - name: )
     nameWithType: )
     fullName: )
-- uid: TicketApi.Models.Venue
-  commentId: T:TicketApi.Models.Venue
-  parent: TicketApi.Models
+- uid: TicketApi.Db.Models.Venue
+  commentId: T:TicketApi.Db.Models.Venue
+  parent: TicketApi.Db.Models
   isExternal: false
   name: Venue
   nameWithType: Venue
-  fullName: TicketApi.Models.Venue
+  fullName: TicketApi.Db.Models.Venue
 - uid: System.IEquatable`1.Equals(`0)
   commentId: M:System.IEquatable`1.Equals(`0)
   isExternal: true
@@ -1204,12 +1162,12 @@ references:
   - name: )
     nameWithType: )
     fullName: )
-- uid: TicketApi.Models.Venue.GetHashCode*
-  commentId: Overload:TicketApi.Models.Venue.GetHashCode
+- uid: TicketApi.Db.Models.Venue.GetHashCode*
+  commentId: Overload:TicketApi.Db.Models.Venue.GetHashCode
   isExternal: false
   name: GetHashCode
   nameWithType: Venue.GetHashCode
-  fullName: TicketApi.Models.Venue.GetHashCode
+  fullName: TicketApi.Db.Models.Venue.GetHashCode
 - uid: System.Int32
   commentId: T:System.Int32
   parent: System
@@ -1217,15 +1175,15 @@ references:
   name: Int32
   nameWithType: Int32
   fullName: System.Int32
-- uid: TicketApi.Models.Venue.op_Equality*
-  commentId: Overload:TicketApi.Models.Venue.op_Equality
+- uid: TicketApi.Db.Models.Venue.op_Equality*
+  commentId: Overload:TicketApi.Db.Models.Venue.op_Equality
   isExternal: false
   name: Equality
   nameWithType: Venue.Equality
-  fullName: TicketApi.Models.Venue.Equality
-- uid: TicketApi.Models.Venue.op_Inequality*
-  commentId: Overload:TicketApi.Models.Venue.op_Inequality
+  fullName: TicketApi.Db.Models.Venue.Equality
+- uid: TicketApi.Db.Models.Venue.op_Inequality*
+  commentId: Overload:TicketApi.Db.Models.Venue.op_Inequality
   isExternal: false
   name: Inequality
   nameWithType: Venue.Inequality
-  fullName: TicketApi.Models.Venue.Inequality
+  fullName: TicketApi.Db.Models.Venue.Inequality

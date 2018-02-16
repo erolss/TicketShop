@@ -1,46 +1,44 @@
 ### YamlMime:ManagedReference
 items:
-- uid: TicketApi.Models.Transaction
-  commentId: T:TicketApi.Models.Transaction
+- uid: TicketApi.Db.Models.Transaction
+  commentId: T:TicketApi.Db.Models.Transaction
   id: Transaction
-  parent: TicketApi.Models
+  parent: TicketApi.Db.Models
   children:
-  - TicketApi.Models.Transaction.Address
-  - TicketApi.Models.Transaction.City
-  - TicketApi.Models.Transaction.Email
-  - TicketApi.Models.Transaction.Equals(System.Object)
-  - TicketApi.Models.Transaction.Equals(TicketApi.Models.Transaction)
-  - TicketApi.Models.Transaction.FirstName
-  - TicketApi.Models.Transaction.GetHashCode
-  - TicketApi.Models.Transaction.Id
-  - TicketApi.Models.Transaction.LastName
-  - TicketApi.Models.Transaction.op_Equality(TicketApi.Models.Transaction,TicketApi.Models.Transaction)
-  - TicketApi.Models.Transaction.op_Inequality(TicketApi.Models.Transaction,TicketApi.Models.Transaction)
-  - TicketApi.Models.Transaction.PaymentReferenceId
-  - TicketApi.Models.Transaction.PaymentStatus
-  - TicketApi.Models.Transaction.ToJson
-  - TicketApi.Models.Transaction.ToString
-  - TicketApi.Models.Transaction.UserId
+  - TicketApi.Db.Models.Transaction.BuyerAddress
+  - TicketApi.Db.Models.Transaction.BuyerCity
+  - TicketApi.Db.Models.Transaction.BuyerEmail
+  - TicketApi.Db.Models.Transaction.BuyerFirstName
+  - TicketApi.Db.Models.Transaction.BuyerLastName
+  - TicketApi.Db.Models.Transaction.BuyerUserId
+  - TicketApi.Db.Models.Transaction.Equals(System.Object)
+  - TicketApi.Db.Models.Transaction.Equals(TicketApi.Db.Models.Transaction)
+  - TicketApi.Db.Models.Transaction.GetHashCode
+  - TicketApi.Db.Models.Transaction.op_Equality(TicketApi.Db.Models.Transaction,TicketApi.Db.Models.Transaction)
+  - TicketApi.Db.Models.Transaction.op_Inequality(TicketApi.Db.Models.Transaction,TicketApi.Db.Models.Transaction)
+  - TicketApi.Db.Models.Transaction.PaymentReference
+  - TicketApi.Db.Models.Transaction.PaymentStatus
+  - TicketApi.Db.Models.Transaction.ToString
+  - TicketApi.Db.Models.Transaction.TotalAmount
+  - TicketApi.Db.Models.Transaction.TransactionID
   langs:
   - csharp
   - vb
   name: Transaction
   nameWithType: Transaction
-  fullName: TicketApi.Models.Transaction
+  fullName: TicketApi.Db.Models.Transaction
   type: Class
   source:
     remote:
-      path: src/TicketApi/Models/Transaction.cs
-      branch: features/db
+      path: src/DbRepository/Models/Transaction.cs
+      branch: restapi
       repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
     id: Transaction
-    path: src/TicketApi/Models/Transaction.cs
-    startLine: 38
+    path: src/DbRepository/Models/Transaction.cs
+    startLine: 6
   assemblies:
-  - TicketApi
-  namespace: TicketApi.Models
-  summary: "\n\n"
-  example: []
+  - DbRepository
+  namespace: TicketApi.Db.Models
   syntax:
     content: >-
       [DataContract]
@@ -54,7 +52,7 @@ items:
   inheritance:
   - System.Object
   implements:
-  - System.IEquatable{TicketApi.Models.Transaction}
+  - System.IEquatable{TicketApi.Db.Models.Transaction}
   inheritedMembers:
   - System.Object.Equals(System.Object,System.Object)
   - System.Object.GetType
@@ -70,43 +68,43 @@ items:
   modifiers.vb:
   - Public
   - Class
-- uid: TicketApi.Models.Transaction.Id
-  commentId: P:TicketApi.Models.Transaction.Id
-  id: Id
-  parent: TicketApi.Models.Transaction
+- uid: TicketApi.Db.Models.Transaction.TransactionID
+  commentId: P:TicketApi.Db.Models.Transaction.TransactionID
+  id: TransactionID
+  parent: TicketApi.Db.Models.Transaction
   langs:
   - csharp
   - vb
-  name: Id
-  nameWithType: Transaction.Id
-  fullName: TicketApi.Models.Transaction.Id
+  name: TransactionID
+  nameWithType: Transaction.TransactionID
+  fullName: TicketApi.Db.Models.Transaction.TransactionID
   type: Property
   source:
     remote:
-      path: src/TicketApi/Models/Transaction.cs
-      branch: features/db
+      path: src/DbRepository/Models/Transaction.cs
+      branch: restapi
       repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
-    id: Id
-    path: src/TicketApi/Models/Transaction.cs
-    startLine: 44
+    id: TransactionID
+    path: src/DbRepository/Models/Transaction.cs
+    startLine: 12
   assemblies:
-  - TicketApi
-  namespace: TicketApi.Models
-  summary: "\nGets or Sets Id\n"
+  - DbRepository
+  namespace: TicketApi.Db.Models
+  summary: "\nGets or Sets TransactionID\n"
   example: []
   syntax:
     content: >-
-      [DataMember(Name = "id")]
+      [DataMember(Name = "transactionId")]
 
-      public int ? Id { get; set; }
+      public int ? TransactionID { get; set; }
     parameters: []
     return:
       type: System.Nullable{System.Int32}
     content.vb: >-
-      <DataMember(Name:="id")>
+      <DataMember(Name:="transactionId")>
 
-      Public Property Id As Integer?
-  overload: TicketApi.Models.Transaction.Id*
+      Public Property TransactionID As Integer?
+  overload: TicketApi.Db.Models.Transaction.TransactionID*
   attributes:
   - type: System.Runtime.Serialization.DataMemberAttribute
     ctor: System.Runtime.Serialization.DataMemberAttribute.#ctor
@@ -114,50 +112,50 @@ items:
     namedArguments:
     - name: Name
       type: System.String
-      value: id
+      value: transactionId
   modifiers.csharp:
   - public
   - get
   - set
   modifiers.vb:
   - Public
-- uid: TicketApi.Models.Transaction.FirstName
-  commentId: P:TicketApi.Models.Transaction.FirstName
-  id: FirstName
-  parent: TicketApi.Models.Transaction
+- uid: TicketApi.Db.Models.Transaction.BuyerLastName
+  commentId: P:TicketApi.Db.Models.Transaction.BuyerLastName
+  id: BuyerLastName
+  parent: TicketApi.Db.Models.Transaction
   langs:
   - csharp
   - vb
-  name: FirstName
-  nameWithType: Transaction.FirstName
-  fullName: TicketApi.Models.Transaction.FirstName
+  name: BuyerLastName
+  nameWithType: Transaction.BuyerLastName
+  fullName: TicketApi.Db.Models.Transaction.BuyerLastName
   type: Property
   source:
     remote:
-      path: src/TicketApi/Models/Transaction.cs
-      branch: features/db
+      path: src/DbRepository/Models/Transaction.cs
+      branch: restapi
       repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
-    id: FirstName
-    path: src/TicketApi/Models/Transaction.cs
-    startLine: 50
+    id: BuyerLastName
+    path: src/DbRepository/Models/Transaction.cs
+    startLine: 18
   assemblies:
-  - TicketApi
-  namespace: TicketApi.Models
-  summary: "\nGets or Sets FirstName\n"
+  - DbRepository
+  namespace: TicketApi.Db.Models
+  summary: "\nGets or Sets BuyerLastName\n"
   example: []
   syntax:
     content: >-
-      [DataMember(Name = "firstName")]
+      [DataMember(Name = "buyerLastName")]
 
-      public string FirstName { get; set; }
+      public string BuyerLastName { get; set; }
     parameters: []
     return:
       type: System.String
     content.vb: >-
-      <DataMember(Name:="firstName")>
+      <DataMember(Name:="buyerLastName")>
 
-      Public Property FirstName As String
-  overload: TicketApi.Models.Transaction.FirstName*
+      Public Property BuyerLastName As String
+  overload: TicketApi.Db.Models.Transaction.BuyerLastName*
   attributes:
   - type: System.Runtime.Serialization.DataMemberAttribute
     ctor: System.Runtime.Serialization.DataMemberAttribute.#ctor
@@ -165,50 +163,50 @@ items:
     namedArguments:
     - name: Name
       type: System.String
-      value: firstName
+      value: buyerLastName
   modifiers.csharp:
   - public
   - get
   - set
   modifiers.vb:
   - Public
-- uid: TicketApi.Models.Transaction.LastName
-  commentId: P:TicketApi.Models.Transaction.LastName
-  id: LastName
-  parent: TicketApi.Models.Transaction
+- uid: TicketApi.Db.Models.Transaction.BuyerFirstName
+  commentId: P:TicketApi.Db.Models.Transaction.BuyerFirstName
+  id: BuyerFirstName
+  parent: TicketApi.Db.Models.Transaction
   langs:
   - csharp
   - vb
-  name: LastName
-  nameWithType: Transaction.LastName
-  fullName: TicketApi.Models.Transaction.LastName
+  name: BuyerFirstName
+  nameWithType: Transaction.BuyerFirstName
+  fullName: TicketApi.Db.Models.Transaction.BuyerFirstName
   type: Property
   source:
     remote:
-      path: src/TicketApi/Models/Transaction.cs
-      branch: features/db
+      path: src/DbRepository/Models/Transaction.cs
+      branch: restapi
       repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
-    id: LastName
-    path: src/TicketApi/Models/Transaction.cs
-    startLine: 56
+    id: BuyerFirstName
+    path: src/DbRepository/Models/Transaction.cs
+    startLine: 24
   assemblies:
-  - TicketApi
-  namespace: TicketApi.Models
-  summary: "\nGets or Sets LastName\n"
+  - DbRepository
+  namespace: TicketApi.Db.Models
+  summary: "\nGets or Sets BuyerFirstName\n"
   example: []
   syntax:
     content: >-
-      [DataMember(Name = "lastName")]
+      [DataMember(Name = "buyerFirstName")]
 
-      public string LastName { get; set; }
+      public string BuyerFirstName { get; set; }
     parameters: []
     return:
       type: System.String
     content.vb: >-
-      <DataMember(Name:="lastName")>
+      <DataMember(Name:="buyerFirstName")>
 
-      Public Property LastName As String
-  overload: TicketApi.Models.Transaction.LastName*
+      Public Property BuyerFirstName As String
+  overload: TicketApi.Db.Models.Transaction.BuyerFirstName*
   attributes:
   - type: System.Runtime.Serialization.DataMemberAttribute
     ctor: System.Runtime.Serialization.DataMemberAttribute.#ctor
@@ -216,50 +214,50 @@ items:
     namedArguments:
     - name: Name
       type: System.String
-      value: lastName
+      value: buyerFirstName
   modifiers.csharp:
   - public
   - get
   - set
   modifiers.vb:
   - Public
-- uid: TicketApi.Models.Transaction.Address
-  commentId: P:TicketApi.Models.Transaction.Address
-  id: Address
-  parent: TicketApi.Models.Transaction
+- uid: TicketApi.Db.Models.Transaction.BuyerAddress
+  commentId: P:TicketApi.Db.Models.Transaction.BuyerAddress
+  id: BuyerAddress
+  parent: TicketApi.Db.Models.Transaction
   langs:
   - csharp
   - vb
-  name: Address
-  nameWithType: Transaction.Address
-  fullName: TicketApi.Models.Transaction.Address
+  name: BuyerAddress
+  nameWithType: Transaction.BuyerAddress
+  fullName: TicketApi.Db.Models.Transaction.BuyerAddress
   type: Property
   source:
     remote:
-      path: src/TicketApi/Models/Transaction.cs
-      branch: features/db
+      path: src/DbRepository/Models/Transaction.cs
+      branch: restapi
       repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
-    id: Address
-    path: src/TicketApi/Models/Transaction.cs
-    startLine: 62
+    id: BuyerAddress
+    path: src/DbRepository/Models/Transaction.cs
+    startLine: 30
   assemblies:
-  - TicketApi
-  namespace: TicketApi.Models
-  summary: "\nGets or Sets Address\n"
+  - DbRepository
+  namespace: TicketApi.Db.Models
+  summary: "\nGets or Sets BuyerAddress\n"
   example: []
   syntax:
     content: >-
-      [DataMember(Name = "address")]
+      [DataMember(Name = "buyerAddress")]
 
-      public string Address { get; set; }
+      public string BuyerAddress { get; set; }
     parameters: []
     return:
       type: System.String
     content.vb: >-
-      <DataMember(Name:="address")>
+      <DataMember(Name:="buyerAddress")>
 
-      Public Property Address As String
-  overload: TicketApi.Models.Transaction.Address*
+      Public Property BuyerAddress As String
+  overload: TicketApi.Db.Models.Transaction.BuyerAddress*
   attributes:
   - type: System.Runtime.Serialization.DataMemberAttribute
     ctor: System.Runtime.Serialization.DataMemberAttribute.#ctor
@@ -267,50 +265,50 @@ items:
     namedArguments:
     - name: Name
       type: System.String
-      value: address
+      value: buyerAddress
   modifiers.csharp:
   - public
   - get
   - set
   modifiers.vb:
   - Public
-- uid: TicketApi.Models.Transaction.City
-  commentId: P:TicketApi.Models.Transaction.City
-  id: City
-  parent: TicketApi.Models.Transaction
+- uid: TicketApi.Db.Models.Transaction.BuyerCity
+  commentId: P:TicketApi.Db.Models.Transaction.BuyerCity
+  id: BuyerCity
+  parent: TicketApi.Db.Models.Transaction
   langs:
   - csharp
   - vb
-  name: City
-  nameWithType: Transaction.City
-  fullName: TicketApi.Models.Transaction.City
+  name: BuyerCity
+  nameWithType: Transaction.BuyerCity
+  fullName: TicketApi.Db.Models.Transaction.BuyerCity
   type: Property
   source:
     remote:
-      path: src/TicketApi/Models/Transaction.cs
-      branch: features/db
+      path: src/DbRepository/Models/Transaction.cs
+      branch: restapi
       repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
-    id: City
-    path: src/TicketApi/Models/Transaction.cs
-    startLine: 68
+    id: BuyerCity
+    path: src/DbRepository/Models/Transaction.cs
+    startLine: 36
   assemblies:
-  - TicketApi
-  namespace: TicketApi.Models
-  summary: "\nGets or Sets City\n"
+  - DbRepository
+  namespace: TicketApi.Db.Models
+  summary: "\nGets or Sets BuyerCity\n"
   example: []
   syntax:
     content: >-
-      [DataMember(Name = "city")]
+      [DataMember(Name = "buyerCity")]
 
-      public string City { get; set; }
+      public string BuyerCity { get; set; }
     parameters: []
     return:
       type: System.String
     content.vb: >-
-      <DataMember(Name:="city")>
+      <DataMember(Name:="buyerCity")>
 
-      Public Property City As String
-  overload: TicketApi.Models.Transaction.City*
+      Public Property BuyerCity As String
+  overload: TicketApi.Db.Models.Transaction.BuyerCity*
   attributes:
   - type: System.Runtime.Serialization.DataMemberAttribute
     ctor: System.Runtime.Serialization.DataMemberAttribute.#ctor
@@ -318,137 +316,35 @@ items:
     namedArguments:
     - name: Name
       type: System.String
-      value: city
+      value: buyerCity
   modifiers.csharp:
   - public
   - get
   - set
   modifiers.vb:
   - Public
-- uid: TicketApi.Models.Transaction.Email
-  commentId: P:TicketApi.Models.Transaction.Email
-  id: Email
-  parent: TicketApi.Models.Transaction
-  langs:
-  - csharp
-  - vb
-  name: Email
-  nameWithType: Transaction.Email
-  fullName: TicketApi.Models.Transaction.Email
-  type: Property
-  source:
-    remote:
-      path: src/TicketApi/Models/Transaction.cs
-      branch: features/db
-      repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
-    id: Email
-    path: src/TicketApi/Models/Transaction.cs
-    startLine: 74
-  assemblies:
-  - TicketApi
-  namespace: TicketApi.Models
-  summary: "\nGets or Sets Email\n"
-  example: []
-  syntax:
-    content: >-
-      [DataMember(Name = "email")]
-
-      public string Email { get; set; }
-    parameters: []
-    return:
-      type: System.String
-    content.vb: >-
-      <DataMember(Name:="email")>
-
-      Public Property Email As String
-  overload: TicketApi.Models.Transaction.Email*
-  attributes:
-  - type: System.Runtime.Serialization.DataMemberAttribute
-    ctor: System.Runtime.Serialization.DataMemberAttribute.#ctor
-    arguments: []
-    namedArguments:
-    - name: Name
-      type: System.String
-      value: email
-  modifiers.csharp:
-  - public
-  - get
-  - set
-  modifiers.vb:
-  - Public
-- uid: TicketApi.Models.Transaction.UserId
-  commentId: P:TicketApi.Models.Transaction.UserId
-  id: UserId
-  parent: TicketApi.Models.Transaction
-  langs:
-  - csharp
-  - vb
-  name: UserId
-  nameWithType: Transaction.UserId
-  fullName: TicketApi.Models.Transaction.UserId
-  type: Property
-  source:
-    remote:
-      path: src/TicketApi/Models/Transaction.cs
-      branch: features/db
-      repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
-    id: UserId
-    path: src/TicketApi/Models/Transaction.cs
-    startLine: 80
-  assemblies:
-  - TicketApi
-  namespace: TicketApi.Models
-  summary: "\nGets or Sets UserId\n"
-  example: []
-  syntax:
-    content: >-
-      [DataMember(Name = "userId")]
-
-      public string UserId { get; set; }
-    parameters: []
-    return:
-      type: System.String
-    content.vb: >-
-      <DataMember(Name:="userId")>
-
-      Public Property UserId As String
-  overload: TicketApi.Models.Transaction.UserId*
-  attributes:
-  - type: System.Runtime.Serialization.DataMemberAttribute
-    ctor: System.Runtime.Serialization.DataMemberAttribute.#ctor
-    arguments: []
-    namedArguments:
-    - name: Name
-      type: System.String
-      value: userId
-  modifiers.csharp:
-  - public
-  - get
-  - set
-  modifiers.vb:
-  - Public
-- uid: TicketApi.Models.Transaction.PaymentStatus
-  commentId: P:TicketApi.Models.Transaction.PaymentStatus
+- uid: TicketApi.Db.Models.Transaction.PaymentStatus
+  commentId: P:TicketApi.Db.Models.Transaction.PaymentStatus
   id: PaymentStatus
-  parent: TicketApi.Models.Transaction
+  parent: TicketApi.Db.Models.Transaction
   langs:
   - csharp
   - vb
   name: PaymentStatus
   nameWithType: Transaction.PaymentStatus
-  fullName: TicketApi.Models.Transaction.PaymentStatus
+  fullName: TicketApi.Db.Models.Transaction.PaymentStatus
   type: Property
   source:
     remote:
-      path: src/TicketApi/Models/Transaction.cs
-      branch: features/db
+      path: src/DbRepository/Models/Transaction.cs
+      branch: restapi
       repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
     id: PaymentStatus
-    path: src/TicketApi/Models/Transaction.cs
-    startLine: 86
+    path: src/DbRepository/Models/Transaction.cs
+    startLine: 42
   assemblies:
-  - TicketApi
-  namespace: TicketApi.Models
+  - DbRepository
+  namespace: TicketApi.Db.Models
   summary: "\nGets or Sets PaymentStatus\n"
   example: []
   syntax:
@@ -463,7 +359,7 @@ items:
       <DataMember(Name:="paymentStatus")>
 
       Public Property PaymentStatus As String
-  overload: TicketApi.Models.Transaction.PaymentStatus*
+  overload: TicketApi.Db.Models.Transaction.PaymentStatus*
   attributes:
   - type: System.Runtime.Serialization.DataMemberAttribute
     ctor: System.Runtime.Serialization.DataMemberAttribute.#ctor
@@ -478,43 +374,43 @@ items:
   - set
   modifiers.vb:
   - Public
-- uid: TicketApi.Models.Transaction.PaymentReferenceId
-  commentId: P:TicketApi.Models.Transaction.PaymentReferenceId
-  id: PaymentReferenceId
-  parent: TicketApi.Models.Transaction
+- uid: TicketApi.Db.Models.Transaction.PaymentReference
+  commentId: P:TicketApi.Db.Models.Transaction.PaymentReference
+  id: PaymentReference
+  parent: TicketApi.Db.Models.Transaction
   langs:
   - csharp
   - vb
-  name: PaymentReferenceId
-  nameWithType: Transaction.PaymentReferenceId
-  fullName: TicketApi.Models.Transaction.PaymentReferenceId
+  name: PaymentReference
+  nameWithType: Transaction.PaymentReference
+  fullName: TicketApi.Db.Models.Transaction.PaymentReference
   type: Property
   source:
     remote:
-      path: src/TicketApi/Models/Transaction.cs
-      branch: features/db
+      path: src/DbRepository/Models/Transaction.cs
+      branch: restapi
       repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
-    id: PaymentReferenceId
-    path: src/TicketApi/Models/Transaction.cs
-    startLine: 92
+    id: PaymentReference
+    path: src/DbRepository/Models/Transaction.cs
+    startLine: 48
   assemblies:
-  - TicketApi
-  namespace: TicketApi.Models
-  summary: "\nGets or Sets PaymentReferenceId\n"
+  - DbRepository
+  namespace: TicketApi.Db.Models
+  summary: "\nGets or Sets PaymentReference\n"
   example: []
   syntax:
     content: >-
-      [DataMember(Name = "paymentReferenceId")]
+      [DataMember(Name = "paymentReference")]
 
-      public string PaymentReferenceId { get; set; }
+      public string PaymentReference { get; set; }
     parameters: []
     return:
       type: System.String
     content.vb: >-
-      <DataMember(Name:="paymentReferenceId")>
+      <DataMember(Name:="paymentReference")>
 
-      Public Property PaymentReferenceId As String
-  overload: TicketApi.Models.Transaction.PaymentReferenceId*
+      Public Property PaymentReference As String
+  overload: TicketApi.Db.Models.Transaction.PaymentReference*
   attributes:
   - type: System.Runtime.Serialization.DataMemberAttribute
     ctor: System.Runtime.Serialization.DataMemberAttribute.#ctor
@@ -522,35 +418,188 @@ items:
     namedArguments:
     - name: Name
       type: System.String
-      value: paymentReferenceId
+      value: paymentReference
   modifiers.csharp:
   - public
   - get
   - set
   modifiers.vb:
   - Public
-- uid: TicketApi.Models.Transaction.ToString
-  commentId: M:TicketApi.Models.Transaction.ToString
+- uid: TicketApi.Db.Models.Transaction.BuyerEmail
+  commentId: P:TicketApi.Db.Models.Transaction.BuyerEmail
+  id: BuyerEmail
+  parent: TicketApi.Db.Models.Transaction
+  langs:
+  - csharp
+  - vb
+  name: BuyerEmail
+  nameWithType: Transaction.BuyerEmail
+  fullName: TicketApi.Db.Models.Transaction.BuyerEmail
+  type: Property
+  source:
+    remote:
+      path: src/DbRepository/Models/Transaction.cs
+      branch: restapi
+      repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
+    id: BuyerEmail
+    path: src/DbRepository/Models/Transaction.cs
+    startLine: 54
+  assemblies:
+  - DbRepository
+  namespace: TicketApi.Db.Models
+  summary: "\nGets or Sets BuyerEmail\n"
+  example: []
+  syntax:
+    content: >-
+      [DataMember(Name = "buyerEmail")]
+
+      public string BuyerEmail { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: >-
+      <DataMember(Name:="buyerEmail")>
+
+      Public Property BuyerEmail As String
+  overload: TicketApi.Db.Models.Transaction.BuyerEmail*
+  attributes:
+  - type: System.Runtime.Serialization.DataMemberAttribute
+    ctor: System.Runtime.Serialization.DataMemberAttribute.#ctor
+    arguments: []
+    namedArguments:
+    - name: Name
+      type: System.String
+      value: buyerEmail
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: TicketApi.Db.Models.Transaction.BuyerUserId
+  commentId: P:TicketApi.Db.Models.Transaction.BuyerUserId
+  id: BuyerUserId
+  parent: TicketApi.Db.Models.Transaction
+  langs:
+  - csharp
+  - vb
+  name: BuyerUserId
+  nameWithType: Transaction.BuyerUserId
+  fullName: TicketApi.Db.Models.Transaction.BuyerUserId
+  type: Property
+  source:
+    remote:
+      path: src/DbRepository/Models/Transaction.cs
+      branch: restapi
+      repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
+    id: BuyerUserId
+    path: src/DbRepository/Models/Transaction.cs
+    startLine: 60
+  assemblies:
+  - DbRepository
+  namespace: TicketApi.Db.Models
+  summary: "\nGets or Sets BuyerUserId\n"
+  example: []
+  syntax:
+    content: >-
+      [DataMember(Name = "buyerUserId")]
+
+      public string BuyerUserId { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: >-
+      <DataMember(Name:="buyerUserId")>
+
+      Public Property BuyerUserId As String
+  overload: TicketApi.Db.Models.Transaction.BuyerUserId*
+  attributes:
+  - type: System.Runtime.Serialization.DataMemberAttribute
+    ctor: System.Runtime.Serialization.DataMemberAttribute.#ctor
+    arguments: []
+    namedArguments:
+    - name: Name
+      type: System.String
+      value: buyerUserId
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: TicketApi.Db.Models.Transaction.TotalAmount
+  commentId: P:TicketApi.Db.Models.Transaction.TotalAmount
+  id: TotalAmount
+  parent: TicketApi.Db.Models.Transaction
+  langs:
+  - csharp
+  - vb
+  name: TotalAmount
+  nameWithType: Transaction.TotalAmount
+  fullName: TicketApi.Db.Models.Transaction.TotalAmount
+  type: Property
+  source:
+    remote:
+      path: src/DbRepository/Models/Transaction.cs
+      branch: restapi
+      repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
+    id: TotalAmount
+    path: src/DbRepository/Models/Transaction.cs
+    startLine: 66
+  assemblies:
+  - DbRepository
+  namespace: TicketApi.Db.Models
+  summary: "\nGets or Sets TotalAmout\n"
+  example: []
+  syntax:
+    content: >-
+      [DataMember(Name = "totalAmount")]
+
+      public double ? TotalAmount { get; set; }
+    parameters: []
+    return:
+      type: System.Nullable{System.Double}
+    content.vb: >-
+      <DataMember(Name:="totalAmount")>
+
+      Public Property TotalAmount As Double?
+  overload: TicketApi.Db.Models.Transaction.TotalAmount*
+  attributes:
+  - type: System.Runtime.Serialization.DataMemberAttribute
+    ctor: System.Runtime.Serialization.DataMemberAttribute.#ctor
+    arguments: []
+    namedArguments:
+    - name: Name
+      type: System.String
+      value: totalAmount
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: TicketApi.Db.Models.Transaction.ToString
+  commentId: M:TicketApi.Db.Models.Transaction.ToString
   id: ToString
-  parent: TicketApi.Models.Transaction
+  parent: TicketApi.Db.Models.Transaction
   langs:
   - csharp
   - vb
   name: ToString()
   nameWithType: Transaction.ToString()
-  fullName: TicketApi.Models.Transaction.ToString()
+  fullName: TicketApi.Db.Models.Transaction.ToString()
   type: Method
   source:
     remote:
-      path: src/TicketApi/Models/Transaction.cs
-      branch: features/db
+      path: src/DbRepository/Models/Transaction.cs
+      branch: restapi
       repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
     id: ToString
-    path: src/TicketApi/Models/Transaction.cs
-    startLine: 99
+    path: src/DbRepository/Models/Transaction.cs
+    startLine: 73
   assemblies:
-  - TicketApi
-  namespace: TicketApi.Models
+  - DbRepository
+  namespace: TicketApi.Db.Models
   summary: "\nReturns the string presentation of the object\n"
   example: []
   syntax:
@@ -560,70 +609,35 @@ items:
       description: String presentation of the object
     content.vb: Public Overrides Function ToString As String
   overridden: System.Object.ToString
-  overload: TicketApi.Models.Transaction.ToString*
+  overload: TicketApi.Db.Models.Transaction.ToString*
   modifiers.csharp:
   - public
   - override
   modifiers.vb:
   - Public
   - Overrides
-- uid: TicketApi.Models.Transaction.ToJson
-  commentId: M:TicketApi.Models.Transaction.ToJson
-  id: ToJson
-  parent: TicketApi.Models.Transaction
-  langs:
-  - csharp
-  - vb
-  name: ToJson()
-  nameWithType: Transaction.ToJson()
-  fullName: TicketApi.Models.Transaction.ToJson()
-  type: Method
-  source:
-    remote:
-      path: src/TicketApi/Models/Transaction.cs
-      branch: features/db
-      repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
-    id: ToJson
-    path: src/TicketApi/Models/Transaction.cs
-    startLine: 120
-  assemblies:
-  - TicketApi
-  namespace: TicketApi.Models
-  summary: "\nReturns the JSON string presentation of the object\n"
-  example: []
-  syntax:
-    content: public string ToJson()
-    return:
-      type: System.String
-      description: JSON string presentation of the object
-    content.vb: Public Function ToJson As String
-  overload: TicketApi.Models.Transaction.ToJson*
-  modifiers.csharp:
-  - public
-  modifiers.vb:
-  - Public
-- uid: TicketApi.Models.Transaction.Equals(System.Object)
-  commentId: M:TicketApi.Models.Transaction.Equals(System.Object)
+- uid: TicketApi.Db.Models.Transaction.Equals(System.Object)
+  commentId: M:TicketApi.Db.Models.Transaction.Equals(System.Object)
   id: Equals(System.Object)
-  parent: TicketApi.Models.Transaction
+  parent: TicketApi.Db.Models.Transaction
   langs:
   - csharp
   - vb
   name: Equals(Object)
   nameWithType: Transaction.Equals(Object)
-  fullName: TicketApi.Models.Transaction.Equals(System.Object)
+  fullName: TicketApi.Db.Models.Transaction.Equals(System.Object)
   type: Method
   source:
     remote:
-      path: src/TicketApi/Models/Transaction.cs
-      branch: features/db
+      path: src/DbRepository/Models/Transaction.cs
+      branch: restapi
       repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
     id: Equals
-    path: src/TicketApi/Models/Transaction.cs
-    startLine: 130
+    path: src/DbRepository/Models/Transaction.cs
+    startLine: 105
   assemblies:
-  - TicketApi
-  namespace: TicketApi.Models
+  - DbRepository
+  namespace: TicketApi.Db.Models
   summary: "\nReturns true if objects are equal\n"
   example: []
   syntax:
@@ -637,76 +651,76 @@ items:
       description: Boolean
     content.vb: Public Overrides Function Equals(obj As Object) As Boolean
   overridden: System.Object.Equals(System.Object)
-  overload: TicketApi.Models.Transaction.Equals*
+  overload: TicketApi.Db.Models.Transaction.Equals*
   modifiers.csharp:
   - public
   - override
   modifiers.vb:
   - Public
   - Overrides
-- uid: TicketApi.Models.Transaction.Equals(TicketApi.Models.Transaction)
-  commentId: M:TicketApi.Models.Transaction.Equals(TicketApi.Models.Transaction)
-  id: Equals(TicketApi.Models.Transaction)
-  parent: TicketApi.Models.Transaction
+- uid: TicketApi.Db.Models.Transaction.Equals(TicketApi.Db.Models.Transaction)
+  commentId: M:TicketApi.Db.Models.Transaction.Equals(TicketApi.Db.Models.Transaction)
+  id: Equals(TicketApi.Db.Models.Transaction)
+  parent: TicketApi.Db.Models.Transaction
   langs:
   - csharp
   - vb
   name: Equals(Transaction)
   nameWithType: Transaction.Equals(Transaction)
-  fullName: TicketApi.Models.Transaction.Equals(TicketApi.Models.Transaction)
+  fullName: TicketApi.Db.Models.Transaction.Equals(TicketApi.Db.Models.Transaction)
   type: Method
   source:
     remote:
-      path: src/TicketApi/Models/Transaction.cs
-      branch: features/db
+      path: src/DbRepository/Models/Transaction.cs
+      branch: restapi
       repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
     id: Equals
-    path: src/TicketApi/Models/Transaction.cs
-    startLine: 142
+    path: src/DbRepository/Models/Transaction.cs
+    startLine: 119
   assemblies:
-  - TicketApi
-  namespace: TicketApi.Models
+  - DbRepository
+  namespace: TicketApi.Db.Models
   summary: "\nReturns true if Transaction instances are equal\n"
   example: []
   syntax:
     content: public bool Equals(Transaction other)
     parameters:
     - id: other
-      type: TicketApi.Models.Transaction
+      type: TicketApi.Db.Models.Transaction
       description: Instance of Transaction to be compared
     return:
       type: System.Boolean
       description: Boolean
     content.vb: Public Function Equals(other As Transaction) As Boolean
-  overload: TicketApi.Models.Transaction.Equals*
+  overload: TicketApi.Db.Models.Transaction.Equals*
   implements:
-  - System.IEquatable{TicketApi.Models.Transaction}.Equals(TicketApi.Models.Transaction)
+  - System.IEquatable{TicketApi.Db.Models.Transaction}.Equals(TicketApi.Db.Models.Transaction)
   modifiers.csharp:
   - public
   modifiers.vb:
   - Public
-- uid: TicketApi.Models.Transaction.GetHashCode
-  commentId: M:TicketApi.Models.Transaction.GetHashCode
+- uid: TicketApi.Db.Models.Transaction.GetHashCode
+  commentId: M:TicketApi.Db.Models.Transaction.GetHashCode
   id: GetHashCode
-  parent: TicketApi.Models.Transaction
+  parent: TicketApi.Db.Models.Transaction
   langs:
   - csharp
   - vb
   name: GetHashCode()
   nameWithType: Transaction.GetHashCode()
-  fullName: TicketApi.Models.Transaction.GetHashCode()
+  fullName: TicketApi.Db.Models.Transaction.GetHashCode()
   type: Method
   source:
     remote:
-      path: src/TicketApi/Models/Transaction.cs
-      branch: features/db
+      path: src/DbRepository/Models/Transaction.cs
+      branch: restapi
       repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
     id: GetHashCode
-    path: src/TicketApi/Models/Transaction.cs
-    startLine: 199
+    path: src/DbRepository/Models/Transaction.cs
+    startLine: 183
   assemblies:
-  - TicketApi
-  namespace: TicketApi.Models
+  - DbRepository
+  namespace: TicketApi.Db.Models
   summary: "\nGets the hash code\n"
   example: []
   syntax:
@@ -716,85 +730,85 @@ items:
       description: Hash code
     content.vb: Public Overrides Function GetHashCode As Integer
   overridden: System.Object.GetHashCode
-  overload: TicketApi.Models.Transaction.GetHashCode*
+  overload: TicketApi.Db.Models.Transaction.GetHashCode*
   modifiers.csharp:
   - public
   - override
   modifiers.vb:
   - Public
   - Overrides
-- uid: TicketApi.Models.Transaction.op_Equality(TicketApi.Models.Transaction,TicketApi.Models.Transaction)
-  commentId: M:TicketApi.Models.Transaction.op_Equality(TicketApi.Models.Transaction,TicketApi.Models.Transaction)
-  id: op_Equality(TicketApi.Models.Transaction,TicketApi.Models.Transaction)
-  parent: TicketApi.Models.Transaction
+- uid: TicketApi.Db.Models.Transaction.op_Equality(TicketApi.Db.Models.Transaction,TicketApi.Db.Models.Transaction)
+  commentId: M:TicketApi.Db.Models.Transaction.op_Equality(TicketApi.Db.Models.Transaction,TicketApi.Db.Models.Transaction)
+  id: op_Equality(TicketApi.Db.Models.Transaction,TicketApi.Db.Models.Transaction)
+  parent: TicketApi.Db.Models.Transaction
   langs:
   - csharp
   - vb
   name: Equality(Transaction, Transaction)
   nameWithType: Transaction.Equality(Transaction, Transaction)
-  fullName: TicketApi.Models.Transaction.Equality(TicketApi.Models.Transaction, TicketApi.Models.Transaction)
+  fullName: TicketApi.Db.Models.Transaction.Equality(TicketApi.Db.Models.Transaction, TicketApi.Db.Models.Transaction)
   type: Operator
   source:
     remote:
-      path: src/TicketApi/Models/Transaction.cs
-      branch: features/db
+      path: src/DbRepository/Models/Transaction.cs
+      branch: restapi
       repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
     id: op_Equality
-    path: src/TicketApi/Models/Transaction.cs
-    startLine: 230
+    path: src/DbRepository/Models/Transaction.cs
+    startLine: 216
   assemblies:
-  - TicketApi
-  namespace: TicketApi.Models
+  - DbRepository
+  namespace: TicketApi.Db.Models
   syntax:
     content: public static bool operator ==(Transaction left, Transaction right)
     parameters:
     - id: left
-      type: TicketApi.Models.Transaction
+      type: TicketApi.Db.Models.Transaction
     - id: right
-      type: TicketApi.Models.Transaction
+      type: TicketApi.Db.Models.Transaction
     return:
       type: System.Boolean
     content.vb: Public Shared Operator =(left As Transaction, right As Transaction) As Boolean
-  overload: TicketApi.Models.Transaction.op_Equality*
+  overload: TicketApi.Db.Models.Transaction.op_Equality*
   modifiers.csharp:
   - public
   - static
   modifiers.vb:
   - Public
   - Shared
-- uid: TicketApi.Models.Transaction.op_Inequality(TicketApi.Models.Transaction,TicketApi.Models.Transaction)
-  commentId: M:TicketApi.Models.Transaction.op_Inequality(TicketApi.Models.Transaction,TicketApi.Models.Transaction)
-  id: op_Inequality(TicketApi.Models.Transaction,TicketApi.Models.Transaction)
-  parent: TicketApi.Models.Transaction
+- uid: TicketApi.Db.Models.Transaction.op_Inequality(TicketApi.Db.Models.Transaction,TicketApi.Db.Models.Transaction)
+  commentId: M:TicketApi.Db.Models.Transaction.op_Inequality(TicketApi.Db.Models.Transaction,TicketApi.Db.Models.Transaction)
+  id: op_Inequality(TicketApi.Db.Models.Transaction,TicketApi.Db.Models.Transaction)
+  parent: TicketApi.Db.Models.Transaction
   langs:
   - csharp
   - vb
   name: Inequality(Transaction, Transaction)
   nameWithType: Transaction.Inequality(Transaction, Transaction)
-  fullName: TicketApi.Models.Transaction.Inequality(TicketApi.Models.Transaction, TicketApi.Models.Transaction)
+  fullName: TicketApi.Db.Models.Transaction.Inequality(TicketApi.Db.Models.Transaction, TicketApi.Db.Models.Transaction)
   type: Operator
   source:
     remote:
-      path: src/TicketApi/Models/Transaction.cs
-      branch: features/db
+      path: src/DbRepository/Models/Transaction.cs
+      branch: restapi
       repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
     id: op_Inequality
-    path: src/TicketApi/Models/Transaction.cs
-    startLine: 235
+    path: src/DbRepository/Models/Transaction.cs
+    startLine: 221
   assemblies:
-  - TicketApi
-  namespace: TicketApi.Models
+  - DbRepository
+  namespace: TicketApi.Db.Models
   syntax:
     content: public static bool operator !=(Transaction left, Transaction right)
     parameters:
     - id: left
-      type: TicketApi.Models.Transaction
+      type: TicketApi.Db.Models.Transaction
     - id: right
-      type: TicketApi.Models.Transaction
+      type: TicketApi.Db.Models.Transaction
     return:
       type: System.Boolean
     content.vb: Public Shared Operator <>(left As Transaction, right As Transaction) As Boolean
-  overload: TicketApi.Models.Transaction.op_Inequality*
+  overload: TicketApi.Db.Models.Transaction.op_Inequality*
   modifiers.csharp:
   - public
   - static
@@ -802,12 +816,12 @@ items:
   - Public
   - Shared
 references:
-- uid: TicketApi.Models
-  commentId: N:TicketApi.Models
+- uid: TicketApi.Db.Models
+  commentId: N:TicketApi.Db.Models
   isExternal: false
-  name: TicketApi.Models
-  nameWithType: TicketApi.Models
-  fullName: TicketApi.Models
+  name: TicketApi.Db.Models
+  nameWithType: TicketApi.Db.Models
+  fullName: TicketApi.Db.Models
 - uid: System.Object
   commentId: T:System.Object
   parent: System
@@ -815,15 +829,15 @@ references:
   name: Object
   nameWithType: Object
   fullName: System.Object
-- uid: System.IEquatable{TicketApi.Models.Transaction}
-  commentId: T:System.IEquatable{TicketApi.Models.Transaction}
+- uid: System.IEquatable{TicketApi.Db.Models.Transaction}
+  commentId: T:System.IEquatable{TicketApi.Db.Models.Transaction}
   parent: System
   definition: System.IEquatable`1
   name: IEquatable<Transaction>
   nameWithType: IEquatable<Transaction>
-  fullName: System.IEquatable<TicketApi.Models.Transaction>
+  fullName: System.IEquatable<TicketApi.Db.Models.Transaction>
   nameWithType.vb: IEquatable(Of Transaction)
-  fullName.vb: System.IEquatable(Of TicketApi.Models.Transaction)
+  fullName.vb: System.IEquatable(Of TicketApi.Db.Models.Transaction)
   name.vb: IEquatable(Of Transaction)
   spec.csharp:
   - uid: System.IEquatable`1
@@ -834,10 +848,10 @@ references:
   - name: <
     nameWithType: <
     fullName: <
-  - uid: TicketApi.Models.Transaction
+  - uid: TicketApi.Db.Models.Transaction
     name: Transaction
     nameWithType: Transaction
-    fullName: TicketApi.Models.Transaction
+    fullName: TicketApi.Db.Models.Transaction
   - name: '>'
     nameWithType: '>'
     fullName: '>'
@@ -850,10 +864,10 @@ references:
   - name: '(Of '
     nameWithType: '(Of '
     fullName: '(Of '
-  - uid: TicketApi.Models.Transaction
+  - uid: TicketApi.Db.Models.Transaction
     name: Transaction
     nameWithType: Transaction
-    fullName: TicketApi.Models.Transaction
+    fullName: TicketApi.Db.Models.Transaction
   - name: )
     nameWithType: )
     fullName: )
@@ -1078,12 +1092,12 @@ references:
   - name: )
     nameWithType: )
     fullName: )
-- uid: TicketApi.Models.Transaction.Id*
-  commentId: Overload:TicketApi.Models.Transaction.Id
+- uid: TicketApi.Db.Models.Transaction.TransactionID*
+  commentId: Overload:TicketApi.Db.Models.Transaction.TransactionID
   isExternal: false
-  name: Id
-  nameWithType: Transaction.Id
-  fullName: TicketApi.Models.Transaction.Id
+  name: TransactionID
+  nameWithType: Transaction.TransactionID
+  fullName: TicketApi.Db.Models.Transaction.TransactionID
 - uid: System.Nullable{System.Int32}
   commentId: T:System.Nullable{System.Int32}
   parent: System
@@ -1167,12 +1181,12 @@ references:
   - name: )
     nameWithType: )
     fullName: )
-- uid: TicketApi.Models.Transaction.FirstName*
-  commentId: Overload:TicketApi.Models.Transaction.FirstName
+- uid: TicketApi.Db.Models.Transaction.BuyerLastName*
+  commentId: Overload:TicketApi.Db.Models.Transaction.BuyerLastName
   isExternal: false
-  name: FirstName
-  nameWithType: Transaction.FirstName
-  fullName: TicketApi.Models.Transaction.FirstName
+  name: BuyerLastName
+  nameWithType: Transaction.BuyerLastName
+  fullName: TicketApi.Db.Models.Transaction.BuyerLastName
 - uid: System.String
   commentId: T:System.String
   parent: System
@@ -1180,48 +1194,98 @@ references:
   name: String
   nameWithType: String
   fullName: System.String
-- uid: TicketApi.Models.Transaction.LastName*
-  commentId: Overload:TicketApi.Models.Transaction.LastName
+- uid: TicketApi.Db.Models.Transaction.BuyerFirstName*
+  commentId: Overload:TicketApi.Db.Models.Transaction.BuyerFirstName
   isExternal: false
-  name: LastName
-  nameWithType: Transaction.LastName
-  fullName: TicketApi.Models.Transaction.LastName
-- uid: TicketApi.Models.Transaction.Address*
-  commentId: Overload:TicketApi.Models.Transaction.Address
+  name: BuyerFirstName
+  nameWithType: Transaction.BuyerFirstName
+  fullName: TicketApi.Db.Models.Transaction.BuyerFirstName
+- uid: TicketApi.Db.Models.Transaction.BuyerAddress*
+  commentId: Overload:TicketApi.Db.Models.Transaction.BuyerAddress
   isExternal: false
-  name: Address
-  nameWithType: Transaction.Address
-  fullName: TicketApi.Models.Transaction.Address
-- uid: TicketApi.Models.Transaction.City*
-  commentId: Overload:TicketApi.Models.Transaction.City
+  name: BuyerAddress
+  nameWithType: Transaction.BuyerAddress
+  fullName: TicketApi.Db.Models.Transaction.BuyerAddress
+- uid: TicketApi.Db.Models.Transaction.BuyerCity*
+  commentId: Overload:TicketApi.Db.Models.Transaction.BuyerCity
   isExternal: false
-  name: City
-  nameWithType: Transaction.City
-  fullName: TicketApi.Models.Transaction.City
-- uid: TicketApi.Models.Transaction.Email*
-  commentId: Overload:TicketApi.Models.Transaction.Email
-  isExternal: false
-  name: Email
-  nameWithType: Transaction.Email
-  fullName: TicketApi.Models.Transaction.Email
-- uid: TicketApi.Models.Transaction.UserId*
-  commentId: Overload:TicketApi.Models.Transaction.UserId
-  isExternal: false
-  name: UserId
-  nameWithType: Transaction.UserId
-  fullName: TicketApi.Models.Transaction.UserId
-- uid: TicketApi.Models.Transaction.PaymentStatus*
-  commentId: Overload:TicketApi.Models.Transaction.PaymentStatus
+  name: BuyerCity
+  nameWithType: Transaction.BuyerCity
+  fullName: TicketApi.Db.Models.Transaction.BuyerCity
+- uid: TicketApi.Db.Models.Transaction.PaymentStatus*
+  commentId: Overload:TicketApi.Db.Models.Transaction.PaymentStatus
   isExternal: false
   name: PaymentStatus
   nameWithType: Transaction.PaymentStatus
-  fullName: TicketApi.Models.Transaction.PaymentStatus
-- uid: TicketApi.Models.Transaction.PaymentReferenceId*
-  commentId: Overload:TicketApi.Models.Transaction.PaymentReferenceId
+  fullName: TicketApi.Db.Models.Transaction.PaymentStatus
+- uid: TicketApi.Db.Models.Transaction.PaymentReference*
+  commentId: Overload:TicketApi.Db.Models.Transaction.PaymentReference
   isExternal: false
-  name: PaymentReferenceId
-  nameWithType: Transaction.PaymentReferenceId
-  fullName: TicketApi.Models.Transaction.PaymentReferenceId
+  name: PaymentReference
+  nameWithType: Transaction.PaymentReference
+  fullName: TicketApi.Db.Models.Transaction.PaymentReference
+- uid: TicketApi.Db.Models.Transaction.BuyerEmail*
+  commentId: Overload:TicketApi.Db.Models.Transaction.BuyerEmail
+  isExternal: false
+  name: BuyerEmail
+  nameWithType: Transaction.BuyerEmail
+  fullName: TicketApi.Db.Models.Transaction.BuyerEmail
+- uid: TicketApi.Db.Models.Transaction.BuyerUserId*
+  commentId: Overload:TicketApi.Db.Models.Transaction.BuyerUserId
+  isExternal: false
+  name: BuyerUserId
+  nameWithType: Transaction.BuyerUserId
+  fullName: TicketApi.Db.Models.Transaction.BuyerUserId
+- uid: TicketApi.Db.Models.Transaction.TotalAmount*
+  commentId: Overload:TicketApi.Db.Models.Transaction.TotalAmount
+  isExternal: false
+  name: TotalAmount
+  nameWithType: Transaction.TotalAmount
+  fullName: TicketApi.Db.Models.Transaction.TotalAmount
+- uid: System.Nullable{System.Double}
+  commentId: T:System.Nullable{System.Double}
+  parent: System
+  definition: System.Nullable`1
+  name: Nullable<Double>
+  nameWithType: Nullable<Double>
+  fullName: System.Nullable<System.Double>
+  nameWithType.vb: Nullable(Of Double)
+  fullName.vb: System.Nullable(Of System.Double)
+  name.vb: Nullable(Of Double)
+  spec.csharp:
+  - uid: System.Nullable`1
+    name: Nullable
+    nameWithType: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.Double
+    name: Double
+    nameWithType: Double
+    fullName: System.Double
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Nullable`1
+    name: Nullable
+    nameWithType: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.Double
+    name: Double
+    nameWithType: Double
+    fullName: System.Double
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
 - uid: System.Object.ToString
   commentId: M:System.Object.ToString
   parent: System.Object
@@ -1253,18 +1317,12 @@ references:
   - name: )
     nameWithType: )
     fullName: )
-- uid: TicketApi.Models.Transaction.ToString*
-  commentId: Overload:TicketApi.Models.Transaction.ToString
+- uid: TicketApi.Db.Models.Transaction.ToString*
+  commentId: Overload:TicketApi.Db.Models.Transaction.ToString
   isExternal: false
   name: ToString
   nameWithType: Transaction.ToString
-  fullName: TicketApi.Models.Transaction.ToString
-- uid: TicketApi.Models.Transaction.ToJson*
-  commentId: Overload:TicketApi.Models.Transaction.ToJson
-  isExternal: false
-  name: ToJson
-  nameWithType: Transaction.ToJson
-  fullName: TicketApi.Models.Transaction.ToJson
+  fullName: TicketApi.Db.Models.Transaction.ToString
 - uid: System.Object.Equals(System.Object)
   commentId: M:System.Object.Equals(System.Object)
   parent: System.Object
@@ -1306,12 +1364,12 @@ references:
   - name: )
     nameWithType: )
     fullName: )
-- uid: TicketApi.Models.Transaction.Equals*
-  commentId: Overload:TicketApi.Models.Transaction.Equals
+- uid: TicketApi.Db.Models.Transaction.Equals*
+  commentId: Overload:TicketApi.Db.Models.Transaction.Equals
   isExternal: false
   name: Equals
   nameWithType: Transaction.Equals
-  fullName: TicketApi.Models.Transaction.Equals
+  fullName: TicketApi.Db.Models.Transaction.Equals
 - uid: System.Boolean
   commentId: T:System.Boolean
   parent: System
@@ -1319,28 +1377,28 @@ references:
   name: Boolean
   nameWithType: Boolean
   fullName: System.Boolean
-- uid: System.IEquatable{TicketApi.Models.Transaction}.Equals(TicketApi.Models.Transaction)
-  commentId: M:System.IEquatable{TicketApi.Models.Transaction}.Equals(TicketApi.Models.Transaction)
-  parent: System.IEquatable{TicketApi.Models.Transaction}
+- uid: System.IEquatable{TicketApi.Db.Models.Transaction}.Equals(TicketApi.Db.Models.Transaction)
+  commentId: M:System.IEquatable{TicketApi.Db.Models.Transaction}.Equals(TicketApi.Db.Models.Transaction)
+  parent: System.IEquatable{TicketApi.Db.Models.Transaction}
   definition: System.IEquatable`1.Equals(`0)
   name: Equals(Transaction)
   nameWithType: IEquatable<Transaction>.Equals(Transaction)
-  fullName: System.IEquatable<TicketApi.Models.Transaction>.Equals(TicketApi.Models.Transaction)
+  fullName: System.IEquatable<TicketApi.Db.Models.Transaction>.Equals(TicketApi.Db.Models.Transaction)
   nameWithType.vb: IEquatable(Of Transaction).Equals(Transaction)
-  fullName.vb: System.IEquatable(Of TicketApi.Models.Transaction).Equals(TicketApi.Models.Transaction)
+  fullName.vb: System.IEquatable(Of TicketApi.Db.Models.Transaction).Equals(TicketApi.Db.Models.Transaction)
   spec.csharp:
   - uid: System.IEquatable`1.Equals(`0)
     name: Equals
     nameWithType: IEquatable<Transaction>.Equals
-    fullName: System.IEquatable<TicketApi.Models.Transaction>.Equals
+    fullName: System.IEquatable<TicketApi.Db.Models.Transaction>.Equals
     isExternal: true
   - name: (
     nameWithType: (
     fullName: (
-  - uid: TicketApi.Models.Transaction
+  - uid: TicketApi.Db.Models.Transaction
     name: Transaction
     nameWithType: Transaction
-    fullName: TicketApi.Models.Transaction
+    fullName: TicketApi.Db.Models.Transaction
   - name: )
     nameWithType: )
     fullName: )
@@ -1348,25 +1406,25 @@ references:
   - uid: System.IEquatable`1.Equals(`0)
     name: Equals
     nameWithType: IEquatable(Of Transaction).Equals
-    fullName: System.IEquatable(Of TicketApi.Models.Transaction).Equals
+    fullName: System.IEquatable(Of TicketApi.Db.Models.Transaction).Equals
     isExternal: true
   - name: (
     nameWithType: (
     fullName: (
-  - uid: TicketApi.Models.Transaction
+  - uid: TicketApi.Db.Models.Transaction
     name: Transaction
     nameWithType: Transaction
-    fullName: TicketApi.Models.Transaction
+    fullName: TicketApi.Db.Models.Transaction
   - name: )
     nameWithType: )
     fullName: )
-- uid: TicketApi.Models.Transaction
-  commentId: T:TicketApi.Models.Transaction
-  parent: TicketApi.Models
+- uid: TicketApi.Db.Models.Transaction
+  commentId: T:TicketApi.Db.Models.Transaction
+  parent: TicketApi.Db.Models
   isExternal: false
   name: Transaction
   nameWithType: Transaction
-  fullName: TicketApi.Models.Transaction
+  fullName: TicketApi.Db.Models.Transaction
 - uid: System.IEquatable`1.Equals(`0)
   commentId: M:System.IEquatable`1.Equals(`0)
   isExternal: true
@@ -1436,12 +1494,12 @@ references:
   - name: )
     nameWithType: )
     fullName: )
-- uid: TicketApi.Models.Transaction.GetHashCode*
-  commentId: Overload:TicketApi.Models.Transaction.GetHashCode
+- uid: TicketApi.Db.Models.Transaction.GetHashCode*
+  commentId: Overload:TicketApi.Db.Models.Transaction.GetHashCode
   isExternal: false
   name: GetHashCode
   nameWithType: Transaction.GetHashCode
-  fullName: TicketApi.Models.Transaction.GetHashCode
+  fullName: TicketApi.Db.Models.Transaction.GetHashCode
 - uid: System.Int32
   commentId: T:System.Int32
   parent: System
@@ -1449,15 +1507,15 @@ references:
   name: Int32
   nameWithType: Int32
   fullName: System.Int32
-- uid: TicketApi.Models.Transaction.op_Equality*
-  commentId: Overload:TicketApi.Models.Transaction.op_Equality
+- uid: TicketApi.Db.Models.Transaction.op_Equality*
+  commentId: Overload:TicketApi.Db.Models.Transaction.op_Equality
   isExternal: false
   name: Equality
   nameWithType: Transaction.Equality
-  fullName: TicketApi.Models.Transaction.Equality
-- uid: TicketApi.Models.Transaction.op_Inequality*
-  commentId: Overload:TicketApi.Models.Transaction.op_Inequality
+  fullName: TicketApi.Db.Models.Transaction.Equality
+- uid: TicketApi.Db.Models.Transaction.op_Inequality*
+  commentId: Overload:TicketApi.Db.Models.Transaction.op_Inequality
   isExternal: false
   name: Inequality
   nameWithType: Transaction.Inequality
-  fullName: TicketApi.Models.Transaction.Inequality
+  fullName: TicketApi.Db.Models.Transaction.Inequality

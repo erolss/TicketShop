@@ -1,0 +1,421 @@
+### YamlMime:ManagedReference
+items:
+- uid: TicketApi.Db.Interface.IVenueRepository
+  commentId: T:TicketApi.Db.Interface.IVenueRepository
+  id: IVenueRepository
+  parent: TicketApi.Db.Interface
+  children:
+  - TicketApi.Db.Interface.IVenueRepository.AddVenue(TicketApi.Db.Models.Venue)
+  - TicketApi.Db.Interface.IVenueRepository.DeleteVenue(System.Int32)
+  - TicketApi.Db.Interface.IVenueRepository.FindVenues(System.String)
+  - TicketApi.Db.Interface.IVenueRepository.GetVenueById(System.Int32)
+  - TicketApi.Db.Interface.IVenueRepository.GetVenues(System.Int32,System.Int32)
+  - TicketApi.Db.Interface.IVenueRepository.UpdateVenue(TicketApi.Db.Models.Venue)
+  langs:
+  - csharp
+  - vb
+  name: IVenueRepository
+  nameWithType: IVenueRepository
+  fullName: TicketApi.Db.Interface.IVenueRepository
+  type: Interface
+  source:
+    remote:
+      path: src/DbRepository/Interface/IVenueRepository.cs
+      branch: restapi
+      repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
+    id: IVenueRepository
+    path: src/DbRepository/Interface/IVenueRepository.cs
+    startLine: 7
+  assemblies:
+  - DbRepository
+  namespace: TicketApi.Db.Interface
+  syntax:
+    content: public interface IVenueRepository
+    content.vb: Public Interface IVenueRepository
+  modifiers.csharp:
+  - public
+  - interface
+  modifiers.vb:
+  - Public
+  - Interface
+- uid: TicketApi.Db.Interface.IVenueRepository.AddVenue(TicketApi.Db.Models.Venue)
+  commentId: M:TicketApi.Db.Interface.IVenueRepository.AddVenue(TicketApi.Db.Models.Venue)
+  id: AddVenue(TicketApi.Db.Models.Venue)
+  parent: TicketApi.Db.Interface.IVenueRepository
+  langs:
+  - csharp
+  - vb
+  name: AddVenue(Venue)
+  nameWithType: IVenueRepository.AddVenue(Venue)
+  fullName: TicketApi.Db.Interface.IVenueRepository.AddVenue(TicketApi.Db.Models.Venue)
+  type: Method
+  source:
+    remote:
+      path: src/DbRepository/Interface/IVenueRepository.cs
+      branch: restapi
+      repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
+    id: AddVenue
+    path: src/DbRepository/Interface/IVenueRepository.cs
+    startLine: 14
+  assemblies:
+  - DbRepository
+  namespace: TicketApi.Db.Interface
+  summary: "\nAdd a new venue to the database\n"
+  example: []
+  syntax:
+    content: Venue AddVenue(Venue venue)
+    parameters:
+    - id: venue
+      type: TicketApi.Db.Models.Venue
+      description: Venue object
+    return:
+      type: TicketApi.Db.Models.Venue
+      description: An object representing the newly created Venue
+    content.vb: Function AddVenue(venue As Venue) As Venue
+  overload: TicketApi.Db.Interface.IVenueRepository.AddVenue*
+- uid: TicketApi.Db.Interface.IVenueRepository.DeleteVenue(System.Int32)
+  commentId: M:TicketApi.Db.Interface.IVenueRepository.DeleteVenue(System.Int32)
+  id: DeleteVenue(System.Int32)
+  parent: TicketApi.Db.Interface.IVenueRepository
+  langs:
+  - csharp
+  - vb
+  name: DeleteVenue(Int32)
+  nameWithType: IVenueRepository.DeleteVenue(Int32)
+  fullName: TicketApi.Db.Interface.IVenueRepository.DeleteVenue(System.Int32)
+  type: Method
+  source:
+    remote:
+      path: src/DbRepository/Interface/IVenueRepository.cs
+      branch: restapi
+      repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
+    id: DeleteVenue
+    path: src/DbRepository/Interface/IVenueRepository.cs
+    startLine: 21
+  assemblies:
+  - DbRepository
+  namespace: TicketApi.Db.Interface
+  summary: "\nDelete a venue\n"
+  example: []
+  syntax:
+    content: bool DeleteVenue(int id)
+    parameters:
+    - id: id
+      type: System.Int32
+      description: ID of venue to delete
+    return:
+      type: System.Boolean
+      description: bool true if delete succeeded
+    content.vb: Function DeleteVenue(id As Integer) As Boolean
+  overload: TicketApi.Db.Interface.IVenueRepository.DeleteVenue*
+- uid: TicketApi.Db.Interface.IVenueRepository.GetVenueById(System.Int32)
+  commentId: M:TicketApi.Db.Interface.IVenueRepository.GetVenueById(System.Int32)
+  id: GetVenueById(System.Int32)
+  parent: TicketApi.Db.Interface.IVenueRepository
+  langs:
+  - csharp
+  - vb
+  name: GetVenueById(Int32)
+  nameWithType: IVenueRepository.GetVenueById(Int32)
+  fullName: TicketApi.Db.Interface.IVenueRepository.GetVenueById(System.Int32)
+  type: Method
+  source:
+    remote:
+      path: src/DbRepository/Interface/IVenueRepository.cs
+      branch: restapi
+      repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
+    id: GetVenueById
+    path: src/DbRepository/Interface/IVenueRepository.cs
+    startLine: 28
+  assemblies:
+  - DbRepository
+  namespace: TicketApi.Db.Interface
+  summary: "\nGet venue by ID\n"
+  example: []
+  syntax:
+    content: Venue GetVenueById(int id)
+    parameters:
+    - id: id
+      type: System.Int32
+      description: ID of venue to get
+    return:
+      type: TicketApi.Db.Models.Venue
+      description: An object representation of the Venue with corresponding ID
+    content.vb: Function GetVenueById(id As Integer) As Venue
+  overload: TicketApi.Db.Interface.IVenueRepository.GetVenueById*
+- uid: TicketApi.Db.Interface.IVenueRepository.GetVenues(System.Int32,System.Int32)
+  commentId: M:TicketApi.Db.Interface.IVenueRepository.GetVenues(System.Int32,System.Int32)
+  id: GetVenues(System.Int32,System.Int32)
+  parent: TicketApi.Db.Interface.IVenueRepository
+  langs:
+  - csharp
+  - vb
+  name: GetVenues(Int32, Int32)
+  nameWithType: IVenueRepository.GetVenues(Int32, Int32)
+  fullName: TicketApi.Db.Interface.IVenueRepository.GetVenues(System.Int32, System.Int32)
+  type: Method
+  source:
+    remote:
+      path: src/DbRepository/Interface/IVenueRepository.cs
+      branch: restapi
+      repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
+    id: GetVenues
+    path: src/DbRepository/Interface/IVenueRepository.cs
+    startLine: 36
+  assemblies:
+  - DbRepository
+  namespace: TicketApi.Db.Interface
+  summary: "\nGet list of venues\n"
+  example: []
+  syntax:
+    content: List<Venue> GetVenues(int offset = 0, int maxLimit = 20)
+    parameters:
+    - id: offset
+      type: System.Int32
+      description: Result list offset
+    - id: maxLimit
+      type: System.Int32
+    return:
+      type: System.Collections.Generic.List{TicketApi.Db.Models.Venue}
+      description: A list of objects limited to the number of param limit, starting at result with number of param offset
+    content.vb: Function GetVenues(offset As Integer = 0, maxLimit As Integer = 20) As List(Of Venue)
+  overload: TicketApi.Db.Interface.IVenueRepository.GetVenues*
+- uid: TicketApi.Db.Interface.IVenueRepository.UpdateVenue(TicketApi.Db.Models.Venue)
+  commentId: M:TicketApi.Db.Interface.IVenueRepository.UpdateVenue(TicketApi.Db.Models.Venue)
+  id: UpdateVenue(TicketApi.Db.Models.Venue)
+  parent: TicketApi.Db.Interface.IVenueRepository
+  langs:
+  - csharp
+  - vb
+  name: UpdateVenue(Venue)
+  nameWithType: IVenueRepository.UpdateVenue(Venue)
+  fullName: TicketApi.Db.Interface.IVenueRepository.UpdateVenue(TicketApi.Db.Models.Venue)
+  type: Method
+  source:
+    remote:
+      path: src/DbRepository/Interface/IVenueRepository.cs
+      branch: restapi
+      repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
+    id: UpdateVenue
+    path: src/DbRepository/Interface/IVenueRepository.cs
+    startLine: 43
+  assemblies:
+  - DbRepository
+  namespace: TicketApi.Db.Interface
+  summary: "\nUpdate a venue\n"
+  example: []
+  syntax:
+    content: Venue UpdateVenue(Venue venue)
+    parameters:
+    - id: venue
+      type: TicketApi.Db.Models.Venue
+      description: Venue object
+    return:
+      type: TicketApi.Db.Models.Venue
+      description: An object representation of the updated Venue
+    content.vb: Function UpdateVenue(venue As Venue) As Venue
+  overload: TicketApi.Db.Interface.IVenueRepository.UpdateVenue*
+- uid: TicketApi.Db.Interface.IVenueRepository.FindVenues(System.String)
+  commentId: M:TicketApi.Db.Interface.IVenueRepository.FindVenues(System.String)
+  id: FindVenues(System.String)
+  parent: TicketApi.Db.Interface.IVenueRepository
+  langs:
+  - csharp
+  - vb
+  name: FindVenues(String)
+  nameWithType: IVenueRepository.FindVenues(String)
+  fullName: TicketApi.Db.Interface.IVenueRepository.FindVenues(System.String)
+  type: Method
+  source:
+    remote:
+      path: src/DbRepository/Interface/IVenueRepository.cs
+      branch: restapi
+      repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
+    id: FindVenues
+    path: src/DbRepository/Interface/IVenueRepository.cs
+    startLine: 50
+  assemblies:
+  - DbRepository
+  namespace: TicketApi.Db.Interface
+  summary: "\nFind all venues matching the search string\n"
+  example: []
+  syntax:
+    content: List<Venue> FindVenues(string searchStr)
+    parameters:
+    - id: searchStr
+      type: System.String
+    return:
+      type: System.Collections.Generic.List{TicketApi.Db.Models.Venue}
+      description: A list of object Venue matching the search string
+    content.vb: Function FindVenues(searchStr As String) As List(Of Venue)
+  overload: TicketApi.Db.Interface.IVenueRepository.FindVenues*
+references:
+- uid: TicketApi.Db.Interface
+  commentId: N:TicketApi.Db.Interface
+  isExternal: false
+  name: TicketApi.Db.Interface
+  nameWithType: TicketApi.Db.Interface
+  fullName: TicketApi.Db.Interface
+- uid: TicketApi.Db.Interface.IVenueRepository.AddVenue*
+  commentId: Overload:TicketApi.Db.Interface.IVenueRepository.AddVenue
+  isExternal: false
+  name: AddVenue
+  nameWithType: IVenueRepository.AddVenue
+  fullName: TicketApi.Db.Interface.IVenueRepository.AddVenue
+- uid: TicketApi.Db.Models.Venue
+  commentId: T:TicketApi.Db.Models.Venue
+  parent: TicketApi.Db.Models
+  isExternal: false
+  name: Venue
+  nameWithType: Venue
+  fullName: TicketApi.Db.Models.Venue
+- uid: TicketApi.Db.Models
+  commentId: N:TicketApi.Db.Models
+  isExternal: false
+  name: TicketApi.Db.Models
+  nameWithType: TicketApi.Db.Models
+  fullName: TicketApi.Db.Models
+- uid: TicketApi.Db.Interface.IVenueRepository.DeleteVenue*
+  commentId: Overload:TicketApi.Db.Interface.IVenueRepository.DeleteVenue
+  isExternal: false
+  name: DeleteVenue
+  nameWithType: IVenueRepository.DeleteVenue
+  fullName: TicketApi.Db.Interface.IVenueRepository.DeleteVenue
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  name: Int32
+  nameWithType: Int32
+  fullName: System.Int32
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: System
+  commentId: N:System
+  isExternal: false
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: TicketApi.Db.Interface.IVenueRepository.GetVenueById*
+  commentId: Overload:TicketApi.Db.Interface.IVenueRepository.GetVenueById
+  isExternal: false
+  name: GetVenueById
+  nameWithType: IVenueRepository.GetVenueById
+  fullName: TicketApi.Db.Interface.IVenueRepository.GetVenueById
+- uid: TicketApi.Db.Interface.IVenueRepository.GetVenues*
+  commentId: Overload:TicketApi.Db.Interface.IVenueRepository.GetVenues
+  isExternal: false
+  name: GetVenues
+  nameWithType: IVenueRepository.GetVenues
+  fullName: TicketApi.Db.Interface.IVenueRepository.GetVenues
+- uid: System.Collections.Generic.List{TicketApi.Db.Models.Venue}
+  commentId: T:System.Collections.Generic.List{TicketApi.Db.Models.Venue}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.List`1
+  name: List<Venue>
+  nameWithType: List<Venue>
+  fullName: System.Collections.Generic.List<TicketApi.Db.Models.Venue>
+  nameWithType.vb: List(Of Venue)
+  fullName.vb: System.Collections.Generic.List(Of TicketApi.Db.Models.Venue)
+  name.vb: List(Of Venue)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    nameWithType: List
+    fullName: System.Collections.Generic.List
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: TicketApi.Db.Models.Venue
+    name: Venue
+    nameWithType: Venue
+    fullName: TicketApi.Db.Models.Venue
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    nameWithType: List
+    fullName: System.Collections.Generic.List
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: TicketApi.Db.Models.Venue
+    name: Venue
+    nameWithType: Venue
+    fullName: TicketApi.Db.Models.Venue
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic.List`1
+  commentId: T:System.Collections.Generic.List`1
+  isExternal: true
+  name: List<T>
+  nameWithType: List<T>
+  fullName: System.Collections.Generic.List<T>
+  nameWithType.vb: List(Of T)
+  fullName.vb: System.Collections.Generic.List(Of T)
+  name.vb: List(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    nameWithType: List
+    fullName: System.Collections.Generic.List
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    nameWithType: List
+    fullName: System.Collections.Generic.List
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: false
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+- uid: TicketApi.Db.Interface.IVenueRepository.UpdateVenue*
+  commentId: Overload:TicketApi.Db.Interface.IVenueRepository.UpdateVenue
+  isExternal: false
+  name: UpdateVenue
+  nameWithType: IVenueRepository.UpdateVenue
+  fullName: TicketApi.Db.Interface.IVenueRepository.UpdateVenue
+- uid: TicketApi.Db.Interface.IVenueRepository.FindVenues*
+  commentId: Overload:TicketApi.Db.Interface.IVenueRepository.FindVenues
+  isExternal: false
+  name: FindVenues
+  nameWithType: IVenueRepository.FindVenues
+  fullName: TicketApi.Db.Interface.IVenueRepository.FindVenues
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String

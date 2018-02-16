@@ -1,0 +1,1289 @@
+### YamlMime:ManagedReference
+items:
+- uid: TicketApi.Db.EventDateRepository
+  commentId: T:TicketApi.Db.EventDateRepository
+  id: EventDateRepository
+  parent: TicketApi.Db
+  children:
+  - TicketApi.Db.EventDateRepository.#ctor(System.String)
+  - TicketApi.Db.EventDateRepository.AddEventDate(TicketApi.Db.Models.EventDate)
+  - TicketApi.Db.EventDateRepository.DeleteEventDate(System.Int32)
+  - TicketApi.Db.EventDateRepository.FindEventDates(System.String)
+  - TicketApi.Db.EventDateRepository.GetEventDateByEventId(System.Int32)
+  - TicketApi.Db.EventDateRepository.GetEventDateById(System.Int32)
+  - TicketApi.Db.EventDateRepository.GetEventDates(System.Int32,System.Int32)
+  - TicketApi.Db.EventDateRepository.GetFullEventDateById(System.Int32)
+  - TicketApi.Db.EventDateRepository.GetSoldTicketCount(System.Int32)
+  - TicketApi.Db.EventDateRepository.UpdateEventDate(TicketApi.Db.Models.EventDate)
+  langs:
+  - csharp
+  - vb
+  name: EventDateRepository
+  nameWithType: EventDateRepository
+  fullName: TicketApi.Db.EventDateRepository
+  type: Class
+  source:
+    remote:
+      path: src/DbRepository/EventDateRepository.cs
+      branch: restapi
+      repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
+    id: EventDateRepository
+    path: src/DbRepository/EventDateRepository.cs
+    startLine: 13
+  assemblies:
+  - DbRepository
+  namespace: TicketApi.Db
+  syntax:
+    content: 'public class EventDateRepository : IEventDateRepository'
+    content.vb: >-
+      Public Class EventDateRepository
+          Implements IEventDateRepository
+  inheritance:
+  - System.Object
+  implements:
+  - TicketApi.Db.Interface.IEventDateRepository
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: TicketApi.Db.EventDateRepository.#ctor(System.String)
+  commentId: M:TicketApi.Db.EventDateRepository.#ctor(System.String)
+  id: '#ctor(System.String)'
+  parent: TicketApi.Db.EventDateRepository
+  langs:
+  - csharp
+  - vb
+  name: EventDateRepository(String)
+  nameWithType: EventDateRepository.EventDateRepository(String)
+  fullName: TicketApi.Db.EventDateRepository.EventDateRepository(System.String)
+  type: Constructor
+  source:
+    remote:
+      path: src/DbRepository/EventDateRepository.cs
+      branch: restapi
+      repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
+    id: .ctor
+    path: src/DbRepository/EventDateRepository.cs
+    startLine: 18
+  assemblies:
+  - DbRepository
+  namespace: TicketApi.Db
+  syntax:
+    content: public EventDateRepository(string connectionString)
+    parameters:
+    - id: connectionString
+      type: System.String
+    content.vb: Public Sub New(connectionString As String)
+  overload: TicketApi.Db.EventDateRepository.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: TicketApi.Db.EventDateRepository.AddEventDate(TicketApi.Db.Models.EventDate)
+  commentId: M:TicketApi.Db.EventDateRepository.AddEventDate(TicketApi.Db.Models.EventDate)
+  id: AddEventDate(TicketApi.Db.Models.EventDate)
+  parent: TicketApi.Db.EventDateRepository
+  langs:
+  - csharp
+  - vb
+  name: AddEventDate(EventDate)
+  nameWithType: EventDateRepository.AddEventDate(EventDate)
+  fullName: TicketApi.Db.EventDateRepository.AddEventDate(TicketApi.Db.Models.EventDate)
+  type: Method
+  source:
+    remote:
+      path: src/DbRepository/EventDateRepository.cs
+      branch: restapi
+      repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
+    id: AddEventDate
+    path: src/DbRepository/EventDateRepository.cs
+    startLine: 22
+  assemblies:
+  - DbRepository
+  namespace: TicketApi.Db
+  syntax:
+    content: public EventDate AddEventDate(EventDate eventDate)
+    parameters:
+    - id: eventDate
+      type: TicketApi.Db.Models.EventDate
+    return:
+      type: TicketApi.Db.Models.EventDate
+    content.vb: Public Function AddEventDate(eventDate As EventDate) As EventDate
+  overload: TicketApi.Db.EventDateRepository.AddEventDate*
+  implements:
+  - TicketApi.Db.Interface.IEventDateRepository.AddEventDate(TicketApi.Db.Models.EventDate)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: TicketApi.Db.EventDateRepository.DeleteEventDate(System.Int32)
+  commentId: M:TicketApi.Db.EventDateRepository.DeleteEventDate(System.Int32)
+  id: DeleteEventDate(System.Int32)
+  parent: TicketApi.Db.EventDateRepository
+  langs:
+  - csharp
+  - vb
+  name: DeleteEventDate(Int32)
+  nameWithType: EventDateRepository.DeleteEventDate(Int32)
+  fullName: TicketApi.Db.EventDateRepository.DeleteEventDate(System.Int32)
+  type: Method
+  source:
+    remote:
+      path: src/DbRepository/EventDateRepository.cs
+      branch: restapi
+      repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
+    id: DeleteEventDate
+    path: src/DbRepository/EventDateRepository.cs
+    startLine: 41
+  assemblies:
+  - DbRepository
+  namespace: TicketApi.Db
+  syntax:
+    content: public bool DeleteEventDate(int id)
+    parameters:
+    - id: id
+      type: System.Int32
+    return:
+      type: System.Boolean
+    content.vb: Public Function DeleteEventDate(id As Integer) As Boolean
+  overload: TicketApi.Db.EventDateRepository.DeleteEventDate*
+  implements:
+  - TicketApi.Db.Interface.IEventDateRepository.DeleteEventDate(System.Int32)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: TicketApi.Db.EventDateRepository.FindEventDates(System.String)
+  commentId: M:TicketApi.Db.EventDateRepository.FindEventDates(System.String)
+  id: FindEventDates(System.String)
+  parent: TicketApi.Db.EventDateRepository
+  langs:
+  - csharp
+  - vb
+  name: FindEventDates(String)
+  nameWithType: EventDateRepository.FindEventDates(String)
+  fullName: TicketApi.Db.EventDateRepository.FindEventDates(System.String)
+  type: Method
+  source:
+    remote:
+      path: src/DbRepository/EventDateRepository.cs
+      branch: restapi
+      repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
+    id: FindEventDates
+    path: src/DbRepository/EventDateRepository.cs
+    startLine: 58
+  assemblies:
+  - DbRepository
+  namespace: TicketApi.Db
+  syntax:
+    content: public List<EventDate> FindEventDates(string searchStr)
+    parameters:
+    - id: searchStr
+      type: System.String
+    return:
+      type: System.Collections.Generic.List{TicketApi.Db.Models.EventDate}
+    content.vb: Public Function FindEventDates(searchStr As String) As List(Of EventDate)
+  overload: TicketApi.Db.EventDateRepository.FindEventDates*
+  implements:
+  - TicketApi.Db.Interface.IEventDateRepository.FindEventDates(System.String)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: TicketApi.Db.EventDateRepository.GetSoldTicketCount(System.Int32)
+  commentId: M:TicketApi.Db.EventDateRepository.GetSoldTicketCount(System.Int32)
+  id: GetSoldTicketCount(System.Int32)
+  parent: TicketApi.Db.EventDateRepository
+  langs:
+  - csharp
+  - vb
+  name: GetSoldTicketCount(Int32)
+  nameWithType: EventDateRepository.GetSoldTicketCount(Int32)
+  fullName: TicketApi.Db.EventDateRepository.GetSoldTicketCount(System.Int32)
+  type: Method
+  source:
+    remote:
+      path: src/DbRepository/EventDateRepository.cs
+      branch: restapi
+      repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
+    id: GetSoldTicketCount
+    path: src/DbRepository/EventDateRepository.cs
+    startLine: 79
+  assemblies:
+  - DbRepository
+  namespace: TicketApi.Db
+  syntax:
+    content: public int GetSoldTicketCount(int id)
+    parameters:
+    - id: id
+      type: System.Int32
+    return:
+      type: System.Int32
+    content.vb: Public Function GetSoldTicketCount(id As Integer) As Integer
+  overload: TicketApi.Db.EventDateRepository.GetSoldTicketCount*
+  implements:
+  - TicketApi.Db.Interface.IEventDateRepository.GetSoldTicketCount(System.Int32)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: TicketApi.Db.EventDateRepository.GetEventDateByEventId(System.Int32)
+  commentId: M:TicketApi.Db.EventDateRepository.GetEventDateByEventId(System.Int32)
+  id: GetEventDateByEventId(System.Int32)
+  parent: TicketApi.Db.EventDateRepository
+  langs:
+  - csharp
+  - vb
+  name: GetEventDateByEventId(Int32)
+  nameWithType: EventDateRepository.GetEventDateByEventId(Int32)
+  fullName: TicketApi.Db.EventDateRepository.GetEventDateByEventId(System.Int32)
+  type: Method
+  source:
+    remote:
+      path: src/DbRepository/EventDateRepository.cs
+      branch: restapi
+      repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
+    id: GetEventDateByEventId
+    path: src/DbRepository/EventDateRepository.cs
+    startLine: 96
+  assemblies:
+  - DbRepository
+  namespace: TicketApi.Db
+  syntax:
+    content: public EventDate GetEventDateByEventId(int eventId)
+    parameters:
+    - id: eventId
+      type: System.Int32
+    return:
+      type: TicketApi.Db.Models.EventDate
+    content.vb: Public Function GetEventDateByEventId(eventId As Integer) As EventDate
+  overload: TicketApi.Db.EventDateRepository.GetEventDateByEventId*
+  implements:
+  - TicketApi.Db.Interface.IEventDateRepository.GetEventDateByEventId(System.Int32)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: TicketApi.Db.EventDateRepository.GetEventDateById(System.Int32)
+  commentId: M:TicketApi.Db.EventDateRepository.GetEventDateById(System.Int32)
+  id: GetEventDateById(System.Int32)
+  parent: TicketApi.Db.EventDateRepository
+  langs:
+  - csharp
+  - vb
+  name: GetEventDateById(Int32)
+  nameWithType: EventDateRepository.GetEventDateById(Int32)
+  fullName: TicketApi.Db.EventDateRepository.GetEventDateById(System.Int32)
+  type: Method
+  source:
+    remote:
+      path: src/DbRepository/EventDateRepository.cs
+      branch: restapi
+      repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
+    id: GetEventDateById
+    path: src/DbRepository/EventDateRepository.cs
+    startLine: 112
+  assemblies:
+  - DbRepository
+  namespace: TicketApi.Db
+  syntax:
+    content: public EventDate GetEventDateById(int id)
+    parameters:
+    - id: id
+      type: System.Int32
+    return:
+      type: TicketApi.Db.Models.EventDate
+    content.vb: Public Function GetEventDateById(id As Integer) As EventDate
+  overload: TicketApi.Db.EventDateRepository.GetEventDateById*
+  implements:
+  - TicketApi.Db.Interface.IEventDateRepository.GetEventDateById(System.Int32)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: TicketApi.Db.EventDateRepository.GetEventDates(System.Int32,System.Int32)
+  commentId: M:TicketApi.Db.EventDateRepository.GetEventDates(System.Int32,System.Int32)
+  id: GetEventDates(System.Int32,System.Int32)
+  parent: TicketApi.Db.EventDateRepository
+  langs:
+  - csharp
+  - vb
+  name: GetEventDates(Int32, Int32)
+  nameWithType: EventDateRepository.GetEventDates(Int32, Int32)
+  fullName: TicketApi.Db.EventDateRepository.GetEventDates(System.Int32, System.Int32)
+  type: Method
+  source:
+    remote:
+      path: src/DbRepository/EventDateRepository.cs
+      branch: restapi
+      repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
+    id: GetEventDates
+    path: src/DbRepository/EventDateRepository.cs
+    startLine: 128
+  assemblies:
+  - DbRepository
+  namespace: TicketApi.Db
+  syntax:
+    content: public List<EventDate> GetEventDates(int offset = 0, int maxLimit = 20)
+    parameters:
+    - id: offset
+      type: System.Int32
+    - id: maxLimit
+      type: System.Int32
+    return:
+      type: System.Collections.Generic.List{TicketApi.Db.Models.EventDate}
+    content.vb: Public Function GetEventDates(offset As Integer = 0, maxLimit As Integer = 20) As List(Of EventDate)
+  overload: TicketApi.Db.EventDateRepository.GetEventDates*
+  implements:
+  - TicketApi.Db.Interface.IEventDateRepository.GetEventDates(System.Int32,System.Int32)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: TicketApi.Db.EventDateRepository.GetFullEventDateById(System.Int32)
+  commentId: M:TicketApi.Db.EventDateRepository.GetFullEventDateById(System.Int32)
+  id: GetFullEventDateById(System.Int32)
+  parent: TicketApi.Db.EventDateRepository
+  langs:
+  - csharp
+  - vb
+  name: GetFullEventDateById(Int32)
+  nameWithType: EventDateRepository.GetFullEventDateById(Int32)
+  fullName: TicketApi.Db.EventDateRepository.GetFullEventDateById(System.Int32)
+  type: Method
+  source:
+    remote:
+      path: src/DbRepository/EventDateRepository.cs
+      branch: restapi
+      repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
+    id: GetFullEventDateById
+    path: src/DbRepository/EventDateRepository.cs
+    startLine: 145
+  assemblies:
+  - DbRepository
+  namespace: TicketApi.Db
+  syntax:
+    content: public FullEventDate GetFullEventDateById(int id)
+    parameters:
+    - id: id
+      type: System.Int32
+    return:
+      type: TicketApi.Db.Models.FullEventDate
+    content.vb: Public Function GetFullEventDateById(id As Integer) As FullEventDate
+  overload: TicketApi.Db.EventDateRepository.GetFullEventDateById*
+  implements:
+  - TicketApi.Db.Interface.IEventDateRepository.GetFullEventDateById(System.Int32)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: TicketApi.Db.EventDateRepository.UpdateEventDate(TicketApi.Db.Models.EventDate)
+  commentId: M:TicketApi.Db.EventDateRepository.UpdateEventDate(TicketApi.Db.Models.EventDate)
+  id: UpdateEventDate(TicketApi.Db.Models.EventDate)
+  parent: TicketApi.Db.EventDateRepository
+  langs:
+  - csharp
+  - vb
+  name: UpdateEventDate(EventDate)
+  nameWithType: EventDateRepository.UpdateEventDate(EventDate)
+  fullName: TicketApi.Db.EventDateRepository.UpdateEventDate(TicketApi.Db.Models.EventDate)
+  type: Method
+  source:
+    remote:
+      path: src/DbRepository/EventDateRepository.cs
+      branch: restapi
+      repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
+    id: UpdateEventDate
+    path: src/DbRepository/EventDateRepository.cs
+    startLine: 162
+  assemblies:
+  - DbRepository
+  namespace: TicketApi.Db
+  syntax:
+    content: public EventDate UpdateEventDate(EventDate eventDate)
+    parameters:
+    - id: eventDate
+      type: TicketApi.Db.Models.EventDate
+    return:
+      type: TicketApi.Db.Models.EventDate
+    content.vb: Public Function UpdateEventDate(eventDate As EventDate) As EventDate
+  overload: TicketApi.Db.EventDateRepository.UpdateEventDate*
+  implements:
+  - TicketApi.Db.Interface.IEventDateRepository.UpdateEventDate(TicketApi.Db.Models.EventDate)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+references:
+- uid: TicketApi.Db
+  commentId: N:TicketApi.Db
+  isExternal: false
+  name: TicketApi.Db
+  nameWithType: TicketApi.Db
+  fullName: TicketApi.Db
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: TicketApi.Db.Interface.IEventDateRepository
+  commentId: T:TicketApi.Db.Interface.IEventDateRepository
+  parent: TicketApi.Db.Interface
+  isExternal: false
+  name: IEventDateRepository
+  nameWithType: IEventDateRepository
+  fullName: TicketApi.Db.Interface.IEventDateRepository
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: false
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: TicketApi.Db.Interface
+  commentId: N:TicketApi.Db.Interface
+  isExternal: false
+  name: TicketApi.Db.Interface
+  nameWithType: TicketApi.Db.Interface
+  fullName: TicketApi.Db.Interface
+- uid: TicketApi.Db.EventDateRepository.#ctor*
+  commentId: Overload:TicketApi.Db.EventDateRepository.#ctor
+  isExternal: false
+  name: EventDateRepository
+  nameWithType: EventDateRepository.EventDateRepository
+  fullName: TicketApi.Db.EventDateRepository.EventDateRepository
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: TicketApi.Db.EventDateRepository.AddEventDate*
+  commentId: Overload:TicketApi.Db.EventDateRepository.AddEventDate
+  isExternal: false
+  name: AddEventDate
+  nameWithType: EventDateRepository.AddEventDate
+  fullName: TicketApi.Db.EventDateRepository.AddEventDate
+- uid: TicketApi.Db.Interface.IEventDateRepository.AddEventDate(TicketApi.Db.Models.EventDate)
+  commentId: M:TicketApi.Db.Interface.IEventDateRepository.AddEventDate(TicketApi.Db.Models.EventDate)
+  parent: TicketApi.Db.Interface.IEventDateRepository
+  isExternal: false
+  name: AddEventDate(EventDate)
+  nameWithType: IEventDateRepository.AddEventDate(EventDate)
+  fullName: TicketApi.Db.Interface.IEventDateRepository.AddEventDate(TicketApi.Db.Models.EventDate)
+  spec.csharp:
+  - uid: TicketApi.Db.Interface.IEventDateRepository.AddEventDate(TicketApi.Db.Models.EventDate)
+    name: AddEventDate
+    nameWithType: IEventDateRepository.AddEventDate
+    fullName: TicketApi.Db.Interface.IEventDateRepository.AddEventDate
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: TicketApi.Db.Models.EventDate
+    name: EventDate
+    nameWithType: EventDate
+    fullName: TicketApi.Db.Models.EventDate
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: TicketApi.Db.Interface.IEventDateRepository.AddEventDate(TicketApi.Db.Models.EventDate)
+    name: AddEventDate
+    nameWithType: IEventDateRepository.AddEventDate
+    fullName: TicketApi.Db.Interface.IEventDateRepository.AddEventDate
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: TicketApi.Db.Models.EventDate
+    name: EventDate
+    nameWithType: EventDate
+    fullName: TicketApi.Db.Models.EventDate
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: TicketApi.Db.Models.EventDate
+  commentId: T:TicketApi.Db.Models.EventDate
+  parent: TicketApi.Db.Models
+  isExternal: false
+  name: EventDate
+  nameWithType: EventDate
+  fullName: TicketApi.Db.Models.EventDate
+- uid: TicketApi.Db.Models
+  commentId: N:TicketApi.Db.Models
+  isExternal: false
+  name: TicketApi.Db.Models
+  nameWithType: TicketApi.Db.Models
+  fullName: TicketApi.Db.Models
+- uid: TicketApi.Db.EventDateRepository.DeleteEventDate*
+  commentId: Overload:TicketApi.Db.EventDateRepository.DeleteEventDate
+  isExternal: false
+  name: DeleteEventDate
+  nameWithType: EventDateRepository.DeleteEventDate
+  fullName: TicketApi.Db.EventDateRepository.DeleteEventDate
+- uid: TicketApi.Db.Interface.IEventDateRepository.DeleteEventDate(System.Int32)
+  commentId: M:TicketApi.Db.Interface.IEventDateRepository.DeleteEventDate(System.Int32)
+  parent: TicketApi.Db.Interface.IEventDateRepository
+  isExternal: true
+  name: DeleteEventDate(Int32)
+  nameWithType: IEventDateRepository.DeleteEventDate(Int32)
+  fullName: TicketApi.Db.Interface.IEventDateRepository.DeleteEventDate(System.Int32)
+  spec.csharp:
+  - uid: TicketApi.Db.Interface.IEventDateRepository.DeleteEventDate(System.Int32)
+    name: DeleteEventDate
+    nameWithType: IEventDateRepository.DeleteEventDate
+    fullName: TicketApi.Db.Interface.IEventDateRepository.DeleteEventDate
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Int32
+    name: Int32
+    nameWithType: Int32
+    fullName: System.Int32
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: TicketApi.Db.Interface.IEventDateRepository.DeleteEventDate(System.Int32)
+    name: DeleteEventDate
+    nameWithType: IEventDateRepository.DeleteEventDate
+    fullName: TicketApi.Db.Interface.IEventDateRepository.DeleteEventDate
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Int32
+    name: Int32
+    nameWithType: Int32
+    fullName: System.Int32
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  name: Int32
+  nameWithType: Int32
+  fullName: System.Int32
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: TicketApi.Db.EventDateRepository.FindEventDates*
+  commentId: Overload:TicketApi.Db.EventDateRepository.FindEventDates
+  isExternal: false
+  name: FindEventDates
+  nameWithType: EventDateRepository.FindEventDates
+  fullName: TicketApi.Db.EventDateRepository.FindEventDates
+- uid: TicketApi.Db.Interface.IEventDateRepository.FindEventDates(System.String)
+  commentId: M:TicketApi.Db.Interface.IEventDateRepository.FindEventDates(System.String)
+  parent: TicketApi.Db.Interface.IEventDateRepository
+  isExternal: true
+  name: FindEventDates(String)
+  nameWithType: IEventDateRepository.FindEventDates(String)
+  fullName: TicketApi.Db.Interface.IEventDateRepository.FindEventDates(System.String)
+  spec.csharp:
+  - uid: TicketApi.Db.Interface.IEventDateRepository.FindEventDates(System.String)
+    name: FindEventDates
+    nameWithType: IEventDateRepository.FindEventDates
+    fullName: TicketApi.Db.Interface.IEventDateRepository.FindEventDates
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: TicketApi.Db.Interface.IEventDateRepository.FindEventDates(System.String)
+    name: FindEventDates
+    nameWithType: IEventDateRepository.FindEventDates
+    fullName: TicketApi.Db.Interface.IEventDateRepository.FindEventDates
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic.List{TicketApi.Db.Models.EventDate}
+  commentId: T:System.Collections.Generic.List{TicketApi.Db.Models.EventDate}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.List`1
+  name: List<EventDate>
+  nameWithType: List<EventDate>
+  fullName: System.Collections.Generic.List<TicketApi.Db.Models.EventDate>
+  nameWithType.vb: List(Of EventDate)
+  fullName.vb: System.Collections.Generic.List(Of TicketApi.Db.Models.EventDate)
+  name.vb: List(Of EventDate)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    nameWithType: List
+    fullName: System.Collections.Generic.List
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: TicketApi.Db.Models.EventDate
+    name: EventDate
+    nameWithType: EventDate
+    fullName: TicketApi.Db.Models.EventDate
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    nameWithType: List
+    fullName: System.Collections.Generic.List
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: TicketApi.Db.Models.EventDate
+    name: EventDate
+    nameWithType: EventDate
+    fullName: TicketApi.Db.Models.EventDate
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic.List`1
+  commentId: T:System.Collections.Generic.List`1
+  isExternal: true
+  name: List<T>
+  nameWithType: List<T>
+  fullName: System.Collections.Generic.List<T>
+  nameWithType.vb: List(Of T)
+  fullName.vb: System.Collections.Generic.List(Of T)
+  name.vb: List(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    nameWithType: List
+    fullName: System.Collections.Generic.List
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    nameWithType: List
+    fullName: System.Collections.Generic.List
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: false
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+- uid: TicketApi.Db.EventDateRepository.GetSoldTicketCount*
+  commentId: Overload:TicketApi.Db.EventDateRepository.GetSoldTicketCount
+  isExternal: false
+  name: GetSoldTicketCount
+  nameWithType: EventDateRepository.GetSoldTicketCount
+  fullName: TicketApi.Db.EventDateRepository.GetSoldTicketCount
+- uid: TicketApi.Db.Interface.IEventDateRepository.GetSoldTicketCount(System.Int32)
+  commentId: M:TicketApi.Db.Interface.IEventDateRepository.GetSoldTicketCount(System.Int32)
+  parent: TicketApi.Db.Interface.IEventDateRepository
+  isExternal: true
+  name: GetSoldTicketCount(Int32)
+  nameWithType: IEventDateRepository.GetSoldTicketCount(Int32)
+  fullName: TicketApi.Db.Interface.IEventDateRepository.GetSoldTicketCount(System.Int32)
+  spec.csharp:
+  - uid: TicketApi.Db.Interface.IEventDateRepository.GetSoldTicketCount(System.Int32)
+    name: GetSoldTicketCount
+    nameWithType: IEventDateRepository.GetSoldTicketCount
+    fullName: TicketApi.Db.Interface.IEventDateRepository.GetSoldTicketCount
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Int32
+    name: Int32
+    nameWithType: Int32
+    fullName: System.Int32
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: TicketApi.Db.Interface.IEventDateRepository.GetSoldTicketCount(System.Int32)
+    name: GetSoldTicketCount
+    nameWithType: IEventDateRepository.GetSoldTicketCount
+    fullName: TicketApi.Db.Interface.IEventDateRepository.GetSoldTicketCount
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Int32
+    name: Int32
+    nameWithType: Int32
+    fullName: System.Int32
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: TicketApi.Db.EventDateRepository.GetEventDateByEventId*
+  commentId: Overload:TicketApi.Db.EventDateRepository.GetEventDateByEventId
+  isExternal: false
+  name: GetEventDateByEventId
+  nameWithType: EventDateRepository.GetEventDateByEventId
+  fullName: TicketApi.Db.EventDateRepository.GetEventDateByEventId
+- uid: TicketApi.Db.Interface.IEventDateRepository.GetEventDateByEventId(System.Int32)
+  commentId: M:TicketApi.Db.Interface.IEventDateRepository.GetEventDateByEventId(System.Int32)
+  parent: TicketApi.Db.Interface.IEventDateRepository
+  isExternal: true
+  name: GetEventDateByEventId(Int32)
+  nameWithType: IEventDateRepository.GetEventDateByEventId(Int32)
+  fullName: TicketApi.Db.Interface.IEventDateRepository.GetEventDateByEventId(System.Int32)
+  spec.csharp:
+  - uid: TicketApi.Db.Interface.IEventDateRepository.GetEventDateByEventId(System.Int32)
+    name: GetEventDateByEventId
+    nameWithType: IEventDateRepository.GetEventDateByEventId
+    fullName: TicketApi.Db.Interface.IEventDateRepository.GetEventDateByEventId
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Int32
+    name: Int32
+    nameWithType: Int32
+    fullName: System.Int32
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: TicketApi.Db.Interface.IEventDateRepository.GetEventDateByEventId(System.Int32)
+    name: GetEventDateByEventId
+    nameWithType: IEventDateRepository.GetEventDateByEventId
+    fullName: TicketApi.Db.Interface.IEventDateRepository.GetEventDateByEventId
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Int32
+    name: Int32
+    nameWithType: Int32
+    fullName: System.Int32
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: TicketApi.Db.EventDateRepository.GetEventDateById*
+  commentId: Overload:TicketApi.Db.EventDateRepository.GetEventDateById
+  isExternal: false
+  name: GetEventDateById
+  nameWithType: EventDateRepository.GetEventDateById
+  fullName: TicketApi.Db.EventDateRepository.GetEventDateById
+- uid: TicketApi.Db.Interface.IEventDateRepository.GetEventDateById(System.Int32)
+  commentId: M:TicketApi.Db.Interface.IEventDateRepository.GetEventDateById(System.Int32)
+  parent: TicketApi.Db.Interface.IEventDateRepository
+  isExternal: true
+  name: GetEventDateById(Int32)
+  nameWithType: IEventDateRepository.GetEventDateById(Int32)
+  fullName: TicketApi.Db.Interface.IEventDateRepository.GetEventDateById(System.Int32)
+  spec.csharp:
+  - uid: TicketApi.Db.Interface.IEventDateRepository.GetEventDateById(System.Int32)
+    name: GetEventDateById
+    nameWithType: IEventDateRepository.GetEventDateById
+    fullName: TicketApi.Db.Interface.IEventDateRepository.GetEventDateById
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Int32
+    name: Int32
+    nameWithType: Int32
+    fullName: System.Int32
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: TicketApi.Db.Interface.IEventDateRepository.GetEventDateById(System.Int32)
+    name: GetEventDateById
+    nameWithType: IEventDateRepository.GetEventDateById
+    fullName: TicketApi.Db.Interface.IEventDateRepository.GetEventDateById
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Int32
+    name: Int32
+    nameWithType: Int32
+    fullName: System.Int32
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: TicketApi.Db.EventDateRepository.GetEventDates*
+  commentId: Overload:TicketApi.Db.EventDateRepository.GetEventDates
+  isExternal: false
+  name: GetEventDates
+  nameWithType: EventDateRepository.GetEventDates
+  fullName: TicketApi.Db.EventDateRepository.GetEventDates
+- uid: TicketApi.Db.Interface.IEventDateRepository.GetEventDates(System.Int32,System.Int32)
+  commentId: M:TicketApi.Db.Interface.IEventDateRepository.GetEventDates(System.Int32,System.Int32)
+  parent: TicketApi.Db.Interface.IEventDateRepository
+  isExternal: true
+  name: GetEventDates(Int32, Int32)
+  nameWithType: IEventDateRepository.GetEventDates(Int32, Int32)
+  fullName: TicketApi.Db.Interface.IEventDateRepository.GetEventDates(System.Int32, System.Int32)
+  spec.csharp:
+  - uid: TicketApi.Db.Interface.IEventDateRepository.GetEventDates(System.Int32,System.Int32)
+    name: GetEventDates
+    nameWithType: IEventDateRepository.GetEventDates
+    fullName: TicketApi.Db.Interface.IEventDateRepository.GetEventDates
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Int32
+    name: Int32
+    nameWithType: Int32
+    fullName: System.Int32
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Int32
+    name: Int32
+    nameWithType: Int32
+    fullName: System.Int32
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: TicketApi.Db.Interface.IEventDateRepository.GetEventDates(System.Int32,System.Int32)
+    name: GetEventDates
+    nameWithType: IEventDateRepository.GetEventDates
+    fullName: TicketApi.Db.Interface.IEventDateRepository.GetEventDates
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Int32
+    name: Int32
+    nameWithType: Int32
+    fullName: System.Int32
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Int32
+    name: Int32
+    nameWithType: Int32
+    fullName: System.Int32
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: TicketApi.Db.EventDateRepository.GetFullEventDateById*
+  commentId: Overload:TicketApi.Db.EventDateRepository.GetFullEventDateById
+  isExternal: false
+  name: GetFullEventDateById
+  nameWithType: EventDateRepository.GetFullEventDateById
+  fullName: TicketApi.Db.EventDateRepository.GetFullEventDateById
+- uid: TicketApi.Db.Interface.IEventDateRepository.GetFullEventDateById(System.Int32)
+  commentId: M:TicketApi.Db.Interface.IEventDateRepository.GetFullEventDateById(System.Int32)
+  parent: TicketApi.Db.Interface.IEventDateRepository
+  isExternal: true
+  name: GetFullEventDateById(Int32)
+  nameWithType: IEventDateRepository.GetFullEventDateById(Int32)
+  fullName: TicketApi.Db.Interface.IEventDateRepository.GetFullEventDateById(System.Int32)
+  spec.csharp:
+  - uid: TicketApi.Db.Interface.IEventDateRepository.GetFullEventDateById(System.Int32)
+    name: GetFullEventDateById
+    nameWithType: IEventDateRepository.GetFullEventDateById
+    fullName: TicketApi.Db.Interface.IEventDateRepository.GetFullEventDateById
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Int32
+    name: Int32
+    nameWithType: Int32
+    fullName: System.Int32
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: TicketApi.Db.Interface.IEventDateRepository.GetFullEventDateById(System.Int32)
+    name: GetFullEventDateById
+    nameWithType: IEventDateRepository.GetFullEventDateById
+    fullName: TicketApi.Db.Interface.IEventDateRepository.GetFullEventDateById
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Int32
+    name: Int32
+    nameWithType: Int32
+    fullName: System.Int32
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: TicketApi.Db.Models.FullEventDate
+  commentId: T:TicketApi.Db.Models.FullEventDate
+  parent: TicketApi.Db.Models
+  isExternal: false
+  name: FullEventDate
+  nameWithType: FullEventDate
+  fullName: TicketApi.Db.Models.FullEventDate
+- uid: TicketApi.Db.EventDateRepository.UpdateEventDate*
+  commentId: Overload:TicketApi.Db.EventDateRepository.UpdateEventDate
+  isExternal: false
+  name: UpdateEventDate
+  nameWithType: EventDateRepository.UpdateEventDate
+  fullName: TicketApi.Db.EventDateRepository.UpdateEventDate
+- uid: TicketApi.Db.Interface.IEventDateRepository.UpdateEventDate(TicketApi.Db.Models.EventDate)
+  commentId: M:TicketApi.Db.Interface.IEventDateRepository.UpdateEventDate(TicketApi.Db.Models.EventDate)
+  parent: TicketApi.Db.Interface.IEventDateRepository
+  isExternal: false
+  name: UpdateEventDate(EventDate)
+  nameWithType: IEventDateRepository.UpdateEventDate(EventDate)
+  fullName: TicketApi.Db.Interface.IEventDateRepository.UpdateEventDate(TicketApi.Db.Models.EventDate)
+  spec.csharp:
+  - uid: TicketApi.Db.Interface.IEventDateRepository.UpdateEventDate(TicketApi.Db.Models.EventDate)
+    name: UpdateEventDate
+    nameWithType: IEventDateRepository.UpdateEventDate
+    fullName: TicketApi.Db.Interface.IEventDateRepository.UpdateEventDate
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: TicketApi.Db.Models.EventDate
+    name: EventDate
+    nameWithType: EventDate
+    fullName: TicketApi.Db.Models.EventDate
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: TicketApi.Db.Interface.IEventDateRepository.UpdateEventDate(TicketApi.Db.Models.EventDate)
+    name: UpdateEventDate
+    nameWithType: IEventDateRepository.UpdateEventDate
+    fullName: TicketApi.Db.Interface.IEventDateRepository.UpdateEventDate
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: TicketApi.Db.Models.EventDate
+    name: EventDate
+    nameWithType: EventDate
+    fullName: TicketApi.Db.Models.EventDate
+  - name: )
+    nameWithType: )
+    fullName: )
