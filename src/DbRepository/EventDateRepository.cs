@@ -170,7 +170,7 @@ namespace TicketApi.Db
             var values = new
             {
                 eventId = eventDate.TicketEventID,
-                venueId = eventDate.VenueId,
+                venueId = eventDate.VenueID,
                 dateTime = eventDate.EventStartDateTime,
                 price = eventDate.Price,
                 maxTickets = eventDate.MaxTickets,

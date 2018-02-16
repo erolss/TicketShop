@@ -105,7 +105,7 @@ namespace TicketApi.Db
                 .WHERE("VenueID = @id");
             var values = new
             {
-                id = venue.VenueId,
+                id = venue.VenueID,
                 name = venue.VenueName,
                 address = venue.Address,
                 city = venue.City,
