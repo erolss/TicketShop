@@ -20,7 +20,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Controllers\Admin\" />
     <Folder Include="Models\Admin\" />
     <Folder Include="Views\Admin\" />
   </ItemGroup>

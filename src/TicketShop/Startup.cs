@@ -116,7 +116,6 @@ namespace TicketShop
                 {
                     //here we tie the new user to the "Admin" role 
                     await UserManager.AddToRoleAsync(poweruser, "Admin");
-
                 }
             }
             else if(!await UserManager.IsInRoleAsync(user,"Admin"))
