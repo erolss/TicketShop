@@ -3,17 +3,12 @@ using System.Text;
 
 namespace TicketSystem.RestApiClient.Model
 {
-    public class Ticket
+    public class FullTicket
     {
-        /// <summary>
-        /// Gets or Sets TicketID
-        /// </summary>
+      
         public int TicketID { get; set; }
+        public FullEventDate EventDate { get; set; }
 
-        /// <summary>
-        /// Gets or Sets TicketEventDateID
-        /// </summary>
-        public int TicketEventDateID { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -24,7 +19,7 @@ namespace TicketSystem.RestApiClient.Model
             var sb = new StringBuilder();
             sb.Append("class Ticket {\n");
             sb.Append("  TicketID: ").Append(TicketID).Append("\n");
-            sb.Append("  TicketEventDateID: ").Append(TicketEventDateID).Append("\n");
+            sb.Append("  EventDate: ").Append(EventDate).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }

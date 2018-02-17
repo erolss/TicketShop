@@ -1,19 +1,28 @@
 ﻿using Newtonsoft.Json;
+using System;
+using System.Runtime.Serialization;
 using System.Text;
+
 
 namespace TicketSystem.RestApiClient.Model
 {
-    public class Ticket
+   
+    public class Event
     {
         /// <summary>
-        /// Gets or Sets TicketID
-        /// </summary>
-        public int TicketID { get; set; }
+        /// Gets or Sets TicketEventId
+        /// </summary>       
+        public int TicketEventID { get; set; }
 
         /// <summary>
-        /// Gets or Sets TicketEventDateID
-        /// </summary>
-        public int TicketEventDateID { get; set; }
+        /// Gets or Sets EventName
+        /// </summary>       
+        public string EventName { get; set; }
+
+        /// <summary>
+        /// Gets or Sets EventHtmlDescription
+        /// </summary>       
+        public string EventHtmlDescription { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -22,9 +31,10 @@ namespace TicketSystem.RestApiClient.Model
         public override string ToString()
         {
             var sb = new StringBuilder();
-            sb.Append("class Ticket {\n");
-            sb.Append("  TicketID: ").Append(TicketID).Append("\n");
-            sb.Append("  TicketEventDateID: ").Append(TicketEventDateID).Append("\n");
+            sb.Append("class Event {\n");
+            sb.Append("  TicketEventID: ").Append(TicketEventID).Append("\n");
+            sb.Append("  EventName: ").Append(EventName).Append("\n");
+            sb.Append("  EventHtmlDescription: ").Append(EventHtmlDescription).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
