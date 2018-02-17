@@ -51,7 +51,7 @@ namespace TicketApi.Controllers
         public TransactionApiController(IOptions<DbSettings> db)
         {
             this._dbSettings = db.Value;
-            this._transactionRepository = new TransactionRepository(_dbSettings.ConnectionString);
+            this._transactionRepository = new TransactionRepository(_dbSettings.DefaultConnection);
         }
 
         /// <summary>

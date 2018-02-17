@@ -51,7 +51,7 @@ namespace TicketApi.Controllers
         public EventDateApiController(IOptions<DbSettings> db)
         {
             this._dbSettings = db.Value;
-            this._eventDateRepository = new EventDateRepository(_dbSettings.ConnectionString);
+            this._eventDateRepository = new EventDateRepository(_dbSettings.DefaultConnection);
         }
         /// <summary>
         /// Create new event date

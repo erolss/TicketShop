@@ -52,7 +52,7 @@ namespace TicketApi.Controllers
         public TicketApiController(IOptions<DbSettings> db)
         {
             this._dbSettings = db.Value;
-            this._ticketRepository = new TicketRepository(_dbSettings.ConnectionString);
+            this._ticketRepository = new TicketRepository(_dbSettings.DefaultConnection);
         }
 
         /// <summary>

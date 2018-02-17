@@ -71,7 +71,7 @@ namespace TicketApi
                     //c.IncludeXmlComments($"{AppContext.BaseDirectory}{Path.DirectorySeparatorChar}{_hostingEnv.ApplicationName}.xml");
                 });
             
-            services.Configure<DbSettings>(Configuration.GetSection("DbSettings"));
+            services.Configure<DbSettings>(Configuration.GetSection("ConnectionStrings"));
             services.AddOptions();
 
         }
