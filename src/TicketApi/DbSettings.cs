@@ -7,6 +7,6 @@ namespace TicketApi.Settings
 {
     public class DbSettings
     {
-        public string ConnectionString { get; set; }
+        public string DefaultConnection { get; set; }
     }
 }
