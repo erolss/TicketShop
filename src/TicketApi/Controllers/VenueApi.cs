@@ -46,10 +46,10 @@ namespace TicketApi.Controllers
     public class VenueApiController : Controller
     {
 
-        private DbSettings _dbSettings;
+        private CustomSettings _dbSettings;
         private VenueRepository _venueRepository;
 
-        public VenueApiController(IOptions<DbSettings> db)
+        public VenueApiController(IOptions<CustomSettings> db)
         {
             this._dbSettings = db.Value;
             this._venueRepository = new VenueRepository(_dbSettings.DefaultConnection);

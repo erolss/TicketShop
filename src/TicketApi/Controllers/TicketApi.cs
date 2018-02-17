@@ -39,17 +39,17 @@ using TicketApi.Db;
 using Microsoft.Extensions.Options;
 
 namespace TicketApi.Controllers
-{ 
+{
     /// <summary>
     /// 
     /// </summary>
     public class TicketApiController : Controller
     {
 
-        private DbSettings _dbSettings;
+        private CustomSettings _dbSettings;
         private TicketRepository _ticketRepository;
 
-        public TicketApiController(IOptions<DbSettings> db)
+        public TicketApiController(IOptions<CustomSettings> db)
         {
             this._dbSettings = db.Value;
             this._ticketRepository = new TicketRepository(_dbSettings.DefaultConnection);
@@ -152,17 +152,19 @@ namespace TicketApi.Controllers
         /// </summary>
         /// <remarks>Returns a list of tickets</remarks>
         /// <param name="userId">userId of the ticket</param>
+        /// <param name="offset">result set offset</param>
+        /// <param name="maxLimit">max results to fetch</param>
         /// <response code="200">Ticket loaded</response>
         /// <response code="404">Ticket not found</response>
         [HttpGet]
-        [Route("/api/ticket/userid/{userId}")]
+        [Route("/api/ticket/userid/{userId}/{offset/{maxLimit}}")]
         [ValidateModelState]
         [SwaggerOperation("GetTicketsByUserId")]
         [SwaggerResponse(200, typeof(List<Ticket>), "Ticket loaded")]
         [SwaggerResponse(404, typeof(List<Ticket>), "Ticket not found")]
-        public virtual IActionResult GetTicketsByUserId([FromRoute]string userId)
+        public virtual IActionResult GetTicketsByUserId([FromRoute]string userId, [FromRoute]int offset, [FromRoute]int maxLimit)
         {
-            var result = _ticketRepository.GetTicketsByUserId(userId);
+            var result = _ticketRepository.GetTicketsByUserId(userId, offset, maxLimit);
             if (result == null)
             {
                 return BadRequest();
@@ -215,6 +217,6 @@ namespace TicketApi.Controllers
             }
             return new ObjectResult(result);
         }
-                
+
     }
 }

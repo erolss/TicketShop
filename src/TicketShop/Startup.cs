@@ -11,6 +11,7 @@ using Microsoft.Extensions.DependencyInjection;
 using TicketShop.Data;
 using TicketShop.Models;
 using TicketShop.Services;
+using TicketShop.Settings;
 
 namespace TicketShop
 {
@@ -41,6 +42,9 @@ namespace TicketShop
             {
                 options.AddPolicy("RequireAdminRole", policy => policy.RequireRole("Admin"));
             });
+            services.Configure<CustomSettings>(Configuration.GetSection("ApiSettings"));
+            services.AddOptions();
+
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -56,7 +60,7 @@ namespace TicketShop
             {
                 app.UseExceptionHandler("/Home/Error");
             }
-
+            
             app.UseStaticFiles();
 
             app.UseAuthentication();
@@ -67,10 +71,10 @@ namespace TicketShop
                     name: "default",
                     template: "{controller=Home}/{action=Index}/{id?}");
             });
-            CreateRoles(serviceProvider).Wait();
+            CreateRoles(serviceProvider, env).Wait();
         }
 
-        private async Task CreateRoles(IServiceProvider serviceProvider)
+        private async Task CreateRoles(IServiceProvider serviceProvider, IHostingEnvironment env)
         {
             //adding customs roles
             var RoleManager = serviceProvider.GetRequiredService<RoleManager<IdentityRole>>();
@@ -89,14 +93,21 @@ namespace TicketShop
             }
 
             //creating a super user who could maintain the web app
-            var poweruser = new ApplicationUser
+            var poweruser = new ApplicationUser();
+            string userPassword;
+            if (env.IsProduction())
             {
-                UserName = Configuration.GetSection("AppSettings")["UserEmail"],
-                Email = Configuration.GetSection("AppSettings")["UserEmail"]
-            };
-
-            string userPassword = Configuration.GetSection("AppSettings")["UserPassword"];
-            var user = await UserManager.FindByEmailAsync(Configuration.GetSection("AppSettings")["UserEmail"]);
+                poweruser.UserName = Environment.GetEnvironmentVariable("APPSETTING_powerUserEmail");
+                poweruser.Email = Environment.GetEnvironmentVariable("APPSETTING_powerUserEmail");
+                userPassword = Environment.GetEnvironmentVariable("APPSETTING_powerUserPassword");
+            } else
+            {
+                poweruser.UserName = Configuration.GetSection("AppSettings")["UserEmail"];
+                poweruser.Email = Configuration.GetSection("AppSettings")["UserEmail"];
+                userPassword = Configuration.GetSection("AppSettings")["UserPassword"];
+            }
+            
+            var user = await UserManager.FindByEmailAsync(poweruser.Email);
 
             if (user == null)
             {

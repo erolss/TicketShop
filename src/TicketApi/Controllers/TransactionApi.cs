@@ -45,10 +45,10 @@ namespace TicketApi.Controllers
     /// </summary>
     public class TransactionApiController : Controller
     {
-        private DbSettings _dbSettings;
+        private CustomSettings _dbSettings;
         private TransactionRepository _transactionRepository;
 
-        public TransactionApiController(IOptions<DbSettings> db)
+        public TransactionApiController(IOptions<CustomSettings> db)
         {
             this._dbSettings = db.Value;
             this._transactionRepository = new TransactionRepository(_dbSettings.DefaultConnection);

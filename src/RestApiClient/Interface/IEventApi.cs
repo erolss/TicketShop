@@ -47,9 +47,9 @@ namespace TicketSystem.RestApiClient.Interface
         /// <summary>
         /// Find Events by search query
         /// </summary>
-        /// <param name="searchStr">Search query</param>
+        /// <param name="query">Search object</param>
         /// <returns>A list of object representations of Events matching the search query</returns>
-        List<Event> FindEvents(string searchStr);
+        List<Event> FindEvents(Search query);
 
     }
 }

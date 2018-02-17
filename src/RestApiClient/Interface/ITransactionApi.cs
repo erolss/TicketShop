@@ -40,19 +40,19 @@ namespace TicketSystem.RestApiClient.Interface
         /// <param name="transactionId">Transaction Id</param>
         bool DeleteTransactionById(int transactionId);
 
-        /// <summary>
-        /// Get Transactions by User Id
-        /// </summary>
-        /// <param name="userId">User Id</param>
-        /// <returns>A list of object representations of the Transactions</returns>
-        List<Transaction> GetTransactionByUserId(string userId);
+        ///// <summary>
+        ///// Get Transactions by User Id
+        ///// </summary>
+        ///// <param name="userId">User Id</param>
+        ///// <returns>A list of object representations of the Transactions</returns>
+        //List<Transaction> GetTransactionByUserId(string userId);
 
         /// <summary>
         /// Find transactions matching the query
         /// </summary>
-        /// <param name="searchStr">Search query</param>
+        /// <param name="query">Search object</param>
         /// <returns>A list of object representations of Transactions</returns>
-        List<Transaction> FindTransactions(string searchStr);
+        List<Transaction> FindTransactions(Search query);
 
     }
 }

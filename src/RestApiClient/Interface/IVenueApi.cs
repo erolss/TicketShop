@@ -46,8 +46,8 @@ namespace TicketSystem.RestApiClient.Interface
         /// <summary>
         /// Find all venues matching the search string
         /// </summary>
-        /// <param name="searchString">A text string to search for a venue</param>
+        /// <param name="query">Search object</param>
         /// <returns>A list of object Venue matching the search string</returns>
-        List<Venue> FindVenues(string searchStr);
+        List<Venue> FindVenues(Search query);
     }
 }

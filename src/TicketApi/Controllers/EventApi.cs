@@ -46,10 +46,10 @@ namespace TicketApi.Controllers
     /// </summary>
     public class EventApiController : Controller
     {
-        private DbSettings _dbSettings;
+        private CustomSettings _dbSettings;
         private EventRepository _eventRepository;
 
-        public EventApiController(IOptions<DbSettings> db)
+        public EventApiController(IOptions<CustomSettings> db)
         {
             this._dbSettings = db.Value;
             this._eventRepository = new EventRepository(_dbSettings.DefaultConnection);

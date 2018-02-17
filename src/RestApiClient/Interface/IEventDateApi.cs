@@ -61,9 +61,9 @@ namespace TicketSystem.RestApiClient.Interface
         /// <summary>
         /// Find EventDates matching the search query
         /// </summary>
-        /// <param name="searchStr">Search query</param>
+        /// <param name="query">Search object</param>
         /// <returns>A list of object representations of EventDates matching the query</returns>
-        List<EventDate> FindEventDates(string searchStr);
+        List<EventDate> FindEventDates(Search query);
 
               
         /// <summary>

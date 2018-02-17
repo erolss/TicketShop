@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 
 namespace TicketApi.Settings
 {
-    public class DbSettings
+    public class CustomSettings
     {
         public string DefaultConnection { get; set; }
     }
