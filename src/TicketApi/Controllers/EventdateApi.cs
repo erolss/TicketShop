@@ -192,6 +192,29 @@ namespace TicketApi.Controllers
         }
 
         /// <summary>
+        /// Get full event dates in system
+        /// </summary>
+        /// <remarks>Returns all FullEventDates</remarks>
+        /// <response code="200">Events loaded</response>
+        /// <response code="400">Bad request</response>
+        [HttpGet]
+        [Route("/api/eventdate/full")]
+        [Route("/api/eventdate/full/{offset}/{maxLimit}")]
+        [ValidateModelState]
+        [SwaggerOperation("GetFullEventDates")]
+        [SwaggerResponse(200, typeof(List<EventDate>), "Events loaded")]
+        [SwaggerResponse(404, typeof(List<EventDate>), "Not found")]
+        public virtual IActionResult GetFullEventDates([FromRoute]int offset = 0, [FromRoute]int maxLimit = 20)
+        {
+            var result = _eventDateRepository.GetFullEventDates(offset, maxLimit);
+            if (result == null || result.Count() == 0)
+            {
+                return BadRequest();
+            }
+            return new ObjectResult(result);
+        }
+
+        /// <summary>
         /// Get event date by Id in system
         /// </summary>
         /// <remarks>Returns an event date by ID</remarks>

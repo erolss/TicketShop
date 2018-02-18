@@ -157,12 +157,12 @@ namespace TicketApi.Controllers
         /// <response code="200">Ticket loaded</response>
         /// <response code="404">Ticket not found</response>
         [HttpGet]
-        [Route("/api/ticket/userid/{userId}/{offset/{maxLimit}}")]
+        [Route("/api/ticket/userid/{userId}/{offset}/{maxLimit}")]
         [ValidateModelState]
         [SwaggerOperation("GetTicketsByUserId")]
         [SwaggerResponse(200, typeof(List<Ticket>), "Ticket loaded")]
         [SwaggerResponse(404, typeof(List<Ticket>), "Ticket not found")]
-        public virtual IActionResult GetTicketsByUserId([FromRoute]string userId, [FromRoute]int offset, [FromRoute]int maxLimit)
+        public virtual IActionResult GetTicketsByUserId([FromRoute]string userId, [FromRoute]int offset=0, [FromRoute]int maxLimit=20)
         {
             var result = _ticketRepository.GetTicketsByUserId(userId, offset, maxLimit);
             if (result == null)

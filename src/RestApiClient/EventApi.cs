@@ -3,10 +3,10 @@ using RestSharp;
 using System;
 using System.Collections.Generic;
 using System.Text;
-using TicketSystem.RestApiClient.Interface;
-using TicketSystem.RestApiClient.Model;
+using TicketShop.RestApiClient.Interface;
+using TicketShop.RestApiClient.Model;
 
-namespace TicketSystem.RestApiClient
+namespace TicketShop.RestApiClient
 {
     public class EventApi : IEventApi
     {

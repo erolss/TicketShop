@@ -23,14 +23,20 @@ namespace TicketApi.Db
         public EventDate AddEventDate(EventDate eventDate)
         {
             var query = @"INSERT INTO TicketEventDates(TicketEventID, VenueID, EventStartDateTime, Price, MaxTickets)
-                        VALUES(@eventDate)";
-                        //VALUES(@eventId, @venueId, @eventStartDateTime, @price, @maxTickets)";
-
+                        VALUES(@TicketEventID, @VenueID, @EventStartDateTime, @Price, @MaxTickets)";
+            //VALUES(@eventId, @venueId, @eventStartDateTime, @price, @maxTickets)";
+            var values = new {
+                TicketEventID = eventDate.TicketEventID,
+                VenueID = eventDate.VenueID,
+                EventStartDateTime = eventDate.EventStartDateTime,
+                Price = eventDate.Price,
+                MaxTickets = eventDate.MaxTickets
+            };
 
             using (var connection = new SqlConnection(_connectionString))
             {
                 connection.Open();
-                connection.ExecuteScalar(query, eventDate);
+                connection.Query(query, values );
                 var addedItemQuery = connection.Query<int>("SELECT IDENT_CURRENT ('TicketEventDates') AS Current_Identity").First();
                 var result = connection.Query<EventDate>("SELECT * FROM TicketEventDates WHERE TicketEventDateID=@id", new { id = addedItemQuery }).FirstOrDefault();
 
@@ -60,7 +66,7 @@ namespace TicketApi.Db
         {
             var query = String.Format(@"SELECT * FROM TicketEventDates ted
                         JOIN TicketEvents te ON ted.TicketEventID = te.TicketEventID
-                        JOIN Venue v ON ted.VenueID = v.VenueID
+                        JOIN Venues v ON ted.VenueID = v.VenueID
                         WHERE te.EventName LIKE '%{0}%'
                             OR te.EventHtmlDescription LIKE '%{0}%'
                             OR v.VenueName LIKE '%{0}%'
@@ -128,7 +134,14 @@ namespace TicketApi.Db
 
         public List<EventDate> GetEventDates(int offset = 0, int maxLimit = 20)
         {
+
+            if (maxLimit > 30)
+            {
+                maxLimit = 30;
+            }
+
             var query = @"SELECT * FROM TicketEventDates
+                        WHERE EventStartDateTime > CURRENT_TIMESTAMP
                         ORDER BY EventStartDateTime ASC
                         OFFSET @offset ROWS
                         FETCH NEXT @maxLimit ROWS ONLY";
@@ -142,12 +155,35 @@ namespace TicketApi.Db
                 return result;
             }
         }
+        public List<FullEventDate> GetFullEventDates(int offset = 0, int maxLimit = 20)
+        {
 
+            if (maxLimit > 30)
+            {
+                maxLimit = 30;
+            }
+
+            var query = @"SELECT * FROM TicketEventDates ted
+                        JOIN TicketEvents te ON ted.TicketEventID = te.TicketEventID
+                        JOIN Venues v ON ted.VenueID = v.VenueID
+                        WHERE EventStartDateTime > CURRENT_TIMESTAMP
+                        ORDER BY EventStartDateTime ASC
+                        OFFSET @offset ROWS
+                        FETCH NEXT @maxLimit ROWS ONLY";
+
+            using (var connection = new SqlConnection(_connectionString))
+            {
+                connection.Open();
+                var result = connection.Query<FullEventDate>(query, new { offset, maxLimit }).ToList();
+
+                return result;
+            }
+        }
         public FullEventDate GetFullEventDateById(int id)
         {
             var query = @"SELECT * FROM TicketEventDates ted
                         JOIN TicketEvents te ON ted.TicketEventID = te.TicketEventID
-                        JOIN Venue v ON ted.VenueID = v.VenueID
+                        JOIN Venues v ON ted.VenueID = v.VenueID
                         WHERE ted.TicketEventDateID = @id";
 
             using (var connection = new SqlConnection(_connectionString))

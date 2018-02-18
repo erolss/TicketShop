@@ -1,9 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
-using TicketSystem.RestApiClient.Model;
+using TicketShop.RestApiClient.Model;
 
-namespace TicketSystem.RestApiClient.Interface
+namespace TicketShop.RestApiClient.Interface
 {
     public interface IVenueApi
     {

@@ -31,6 +31,12 @@ namespace TicketApi.Db.Models
         public string EventHtmlDescription { get; set; }
 
         /// <summary>
+        /// Gets or Sets EventImagePath
+        /// </summary>
+        [DataMember(Name = "eventImagePath")]
+        public string EventImagePath { get; set; }
+
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -41,6 +47,7 @@ namespace TicketApi.Db.Models
             sb.Append("  TicketEventID: ").Append(TicketEventID).Append("\n");
             sb.Append("  EventName: ").Append(EventName).Append("\n");
             sb.Append("  EventHtmlDescription: ").Append(EventHtmlDescription).Append("\n");
+            sb.Append("  EventImagePath: ").Append(EventImagePath).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -95,6 +102,11 @@ namespace TicketApi.Db.Models
                     EventHtmlDescription == other.EventHtmlDescription ||
                     EventHtmlDescription != null &&
                     EventHtmlDescription.Equals(other.EventHtmlDescription)
+                ) &&
+                (
+                    EventImagePath == other.EventImagePath ||
+                    EventImagePath != null &&
+                    EventImagePath.Equals(other.EventImagePath)
                 );
         }
 
@@ -114,6 +126,8 @@ namespace TicketApi.Db.Models
                     hashCode = hashCode * 59 + EventName.GetHashCode();
                 if (EventHtmlDescription != null)
                     hashCode = hashCode * 59 + EventHtmlDescription.GetHashCode();
+                if (EventImagePath != null)
+                    hashCode = hashCode * 59 + EventImagePath.GetHashCode();
                 return hashCode;
             }
         }

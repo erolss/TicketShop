@@ -102,7 +102,7 @@ namespace TicketApi.Db
 
         public List<Transaction> FindTransactions(string searchStr)
         {
-            
+
             var query = string.Format(@"SELECT * FROM TicketTransactions
                         WHERE
                             BuyerLastName like '%{0}%' OR
@@ -126,6 +126,11 @@ namespace TicketApi.Db
 
         public List<Transaction> GetTransactions(int offset = 0, int maxLimit = 20)
         {
+            if (maxLimit > 30)
+            {
+                maxLimit = 30;
+            }
+
             var query = @"SELECT * FROM TicketTransactions
                         ORDER BY TransactionID
                         OFFSET @offset ROWS

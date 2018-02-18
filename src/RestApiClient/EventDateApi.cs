@@ -3,14 +3,14 @@ using RestSharp;
 using System;
 using System.Collections.Generic;
 using System.Text;
-using TicketSystem.RestApiClient.Interface;
-using TicketSystem.RestApiClient.Model;
+using TicketShop.RestApiClient.Interface;
+using TicketShop.RestApiClient.Model;
 
-namespace TicketSystem.RestApiClient
+namespace TicketShop.RestApiClient
 {
     public class EventDateApi : IEventDateApi
     {
-        private readonly string _baseUrl;
+        private string _baseUrl;
 
         public EventDateApi(string baseUrl)
         {
@@ -98,6 +98,31 @@ namespace TicketSystem.RestApiClient
             request.AddUrlSegment("maxLimit", maxLimit);
 
             var response = client.Execute<List<EventDate>>(request);
+
+            return response.Data;
+        }
+
+        public List<FullEventDate> GetFullEventDates(int offset = 0, int maxLimit = 20)
+        {
+            var client = new RestClient(_baseUrl);
+            var request = new RestRequest("api/eventdate/full/{offset}/{maxLimit}", Method.GET);
+            request.AddUrlSegment("offset", offset);
+            request.AddUrlSegment("maxLimit", maxLimit);
+
+            var response = client.Execute<List<FullEventDate>>(request);
+
+            return response.Data;
+        }
+
+        public List<FullEventDate> GetFullEventDatesByEventId(int eventId, int offset = 0, int maxLimit = 20)
+        {
+            var client = new RestClient(_baseUrl);
+            var request = new RestRequest("api/eventdate/eventId/{eventId}/{offset}/{maxLimit}", Method.GET);
+            request.AddUrlSegment("eventId", eventId);
+            request.AddUrlSegment("offset", offset);
+            request.AddUrlSegment("maxLimit", maxLimit);
+
+            var response = client.Execute<List<FullEventDate>>(request);
 
             return response.Data;
         }

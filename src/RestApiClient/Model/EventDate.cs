@@ -3,7 +3,7 @@ using System;
 using System.Runtime.Serialization;
 using System.Text;
 
-namespace TicketSystem.RestApiClient.Model
+namespace TicketShop.RestApiClient.Model
 {
     
     public class EventDate

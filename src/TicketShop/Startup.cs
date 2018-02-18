@@ -67,9 +67,13 @@ namespace TicketShop
 
             app.UseMvc(routes =>
             {
+                routes.MapRoute(name: "areaRoute",
+                    template: "{area:exists}/{controller=Home}/{action=Index}");
+
                 routes.MapRoute(
-                    name: "default",
+                    name: "default",                    
                     template: "{controller=Home}/{action=Index}/{id?}");
+                
             });
             CreateRoles(serviceProvider, env).Wait();
         }

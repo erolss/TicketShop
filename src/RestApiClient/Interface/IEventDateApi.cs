@@ -1,8 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
-using TicketSystem.RestApiClient.Model;
+using TicketShop.RestApiClient.Model;
 
-namespace TicketSystem.RestApiClient.Interface
+namespace TicketShop.RestApiClient.Interface
 {
     public interface IEventDateApi
     {
@@ -22,6 +22,14 @@ namespace TicketSystem.RestApiClient.Interface
         /// <param name="maxLimit">Max result rows to fetch</param>
         /// <returns>A list of object representations of EventDates</returns>
         List<EventDate> GetEventDates(int offset = 0, int maxLimit = 20);
+        
+        /// <summary>
+        /// Get Full Event Dates
+        /// </summary>
+        /// <param name="offset">Result set offset</param>
+        /// <param name="maxLimit">Max result rows to fetch</param>
+        /// <returns>A list of object representations of FullEventDates</returns>
+        List<FullEventDate> GetFullEventDates(int offset = 0, int maxLimit = 20);
 
         /// <summary>
         /// Get EventDate by ID

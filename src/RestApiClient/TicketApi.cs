@@ -1,10 +1,10 @@
 ﻿using RestSharp;
 using System;
 using System.Collections.Generic;
-using TicketSystem.RestApiClient.Model;
-using TicketSystem.RestApiClient.Interface;
+using TicketShop.RestApiClient.Model;
+using TicketShop.RestApiClient.Interface;
 
-namespace TicketSystem.RestApiClient
+namespace TicketShop.RestApiClient
 {
     public class TicketApi : ITicketApi
     {

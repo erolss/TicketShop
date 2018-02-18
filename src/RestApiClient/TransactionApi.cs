@@ -1,11 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
-using TicketSystem.RestApiClient.Model;
-using TicketSystem.RestApiClient.Interface;
+using TicketShop.RestApiClient.Model;
+using TicketShop.RestApiClient.Interface;
 using RestSharp;
 
-namespace TicketSystem.RestApiClient
+namespace TicketShop.RestApiClient
 {
     public class TransactionApi : ITransactionApi
     {

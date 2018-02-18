@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
-using TicketSystem.RestApiClient.Model;
+using TicketShop.RestApiClient.Model;
 
-namespace TicketSystem.RestApiClient.Interface
+namespace TicketShop.RestApiClient.Interface
 {
     public interface ITicketApi
     {

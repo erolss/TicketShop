@@ -17,6 +17,8 @@ namespace TicketApi.Db.Models
         [DataMember]
         public string EventHtmlDescription { get; set; }
         [DataMember]
+        public string EventImagePath { get; set; }
+        [DataMember]
         public int VenueID { get; set; }
         [DataMember]
         public string VenueName { get; set; }
@@ -45,6 +47,7 @@ namespace TicketApi.Db.Models
             sb.Append("  TicketEventID: ").Append(TicketEventID).Append("\n");
             sb.Append("  EventName: ").Append(EventName).Append("\n");
             sb.Append("  EventHtmlDescription: ").Append(EventHtmlDescription).Append("\n");
+            sb.Append("  EventImagePath: ").Append(EventImagePath).Append("\n");
             sb.Append("  VenueID: ").Append(VenueID).Append("\n");
             sb.Append("  VenueName: ").Append(VenueName).Append("\n");
             sb.Append("  Address: ").Append(Address).Append("\n");
@@ -114,6 +117,11 @@ namespace TicketApi.Db.Models
                     EventHtmlDescription.Equals(other.EventHtmlDescription)
                 ) &&
                 (
+                    EventImagePath == other.EventImagePath ||
+                    EventImagePath != null &&
+                    EventImagePath.Equals(other.EventImagePath)
+                ) &&
+                (
                     VenueID == other.VenueID ||
                     VenueID != null &&
                     VenueID.Equals(other.VenueID)
@@ -173,6 +181,8 @@ namespace TicketApi.Db.Models
                     hashCode = hashCode * 59 + EventName.GetHashCode();
                 if (EventHtmlDescription != null)
                     hashCode = hashCode * 59 + EventHtmlDescription.GetHashCode();
+                if (EventImagePath != null)
+                    hashCode = hashCode * 59 + EventImagePath.GetHashCode();
                 if (VenueID != null)
                     hashCode = hashCode * 59 + VenueID.GetHashCode();
                 if (VenueName != null)

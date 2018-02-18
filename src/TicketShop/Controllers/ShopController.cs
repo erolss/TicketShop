@@ -5,36 +5,35 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
-using ApiModel = TicketShop.RestApiClient.Model;
-using TicketShop.Models.Admin;
-using TicketShop.Models;
 
-namespace TicketShop.Controllers.Admin
+namespace TicketShop.Controllers
 {
-    [Authorize(Policy = "RequireAdminRole")]
-    [Area("Admin")]
-    public class VenueController : Controller
+    public class ShopController : Controller
     {
-        // GET: Venue
+        // GET: Order
+        [HttpGet]
+        [Authorize]
         public ActionResult Index()
         {
-            
+            //list all orders when logged in as user
             return View();
         }
 
-        // GET: Venue/Details/5
+        // GET: Order/Details/5
+        [HttpGet]
+        [Authorize]
         public ActionResult Details(int id)
         {
             return View();
         }
 
-        // GET: Venue/Create
+        // GET: Order/Create
         public ActionResult Create()
         {
             return View();
         }
 
-        // POST: Venue/Create
+        // POST: Order/Create
         [HttpPost]
         [ValidateAntiForgeryToken]
         public ActionResult Create(IFormCollection collection)
@@ -51,13 +50,13 @@ namespace TicketShop.Controllers.Admin
             }
         }
 
-        // GET: Venue/Edit/5
+        // GET: Order/Edit/5
         public ActionResult Edit(int id)
         {
             return View();
         }
 
-        // POST: Venue/Edit/5
+        // POST: Order/Edit/5
         [HttpPost]
         [ValidateAntiForgeryToken]
         public ActionResult Edit(int id, IFormCollection collection)
@@ -74,13 +73,13 @@ namespace TicketShop.Controllers.Admin
             }
         }
 
-        // GET: Venue/Delete/5
+        // GET: Order/Delete/5
         public ActionResult Delete(int id)
         {
             return View();
         }
 
-        // POST: Venue/Delete/5
+        // POST: Order/Delete/5
         [HttpPost]
         [ValidateAntiForgeryToken]
         public ActionResult Delete(int id, IFormCollection collection)

@@ -11,11 +11,7 @@ namespace TicketApi.Db.Interface
         /// <summary>
         /// Add event date to database
         /// </summary>
-        /// <param name="eventId">ID of Event</param>
-        /// <param name="venueId">ID of Venue where event date will take place</param>
-        /// <param name="eventDate">Datetime of the event date</param>
-        /// <param name="price">Price of a ticket to the EventDate</param>
-        /// <param name="maxTickets">Max number of Tickets</param>
+        /// <param name="eventDate">EventDate object</param>
         /// <returns>An object representation of the created EventDate</returns>
         EventDate AddEventDate(EventDate eventDate);
 
@@ -26,6 +22,13 @@ namespace TicketApi.Db.Interface
         /// <param name="maxLimit">Max result rows to fetch</param>
         /// <returns>A list of object representations of EventDates</returns>
         List<EventDate> GetEventDates(int offset = 0, int maxLimit = 20);
+        /// <summary>
+        /// Get Full Event Dates
+        /// </summary>
+        /// <param name="offset">Result set offset</param>
+        /// <param name="maxLimit">Max result rows to fetch</param>
+        /// <returns>A list of object representations of FullEventDates</returns>
+        List<FullEventDate> GetFullEventDates(int offset = 0, int maxLimit = 20);
 
         /// <summary>
         /// Get EventDate by ID

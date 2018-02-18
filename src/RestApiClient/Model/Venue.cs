@@ -1,7 +1,7 @@
 ﻿using Newtonsoft.Json;
 using System.Text;
 
-namespace TicketSystem.RestApiClient.Model
+namespace TicketShop.RestApiClient.Model
 {
     public class Venue
     {

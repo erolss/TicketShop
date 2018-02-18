@@ -8,6 +8,7 @@
 .body-content {
     padding-left: 15px;
     padding-right: 15px;
+    margin-top:20px;
 }
 
 /* Carousel */
@@ -25,6 +26,9 @@
 #qrCode {
     margin: 15px;
 }
+
+
+
 
 /* Hide/rearrange for smaller screens */
 @media screen and (max-width: 767px) {

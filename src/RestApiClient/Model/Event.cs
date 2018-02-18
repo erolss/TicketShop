@@ -4,7 +4,7 @@ using System.Runtime.Serialization;
 using System.Text;
 
 
-namespace TicketSystem.RestApiClient.Model
+namespace TicketShop.RestApiClient.Model
 {
    
     public class Event
@@ -25,6 +25,11 @@ namespace TicketSystem.RestApiClient.Model
         public string EventHtmlDescription { get; set; }
 
         /// <summary>
+        /// Gets or Sets EventImagePath
+        /// </summary>
+        public string EventImagePath { get; set; }
+
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -35,6 +40,7 @@ namespace TicketSystem.RestApiClient.Model
             sb.Append("  TicketEventID: ").Append(TicketEventID).Append("\n");
             sb.Append("  EventName: ").Append(EventName).Append("\n");
             sb.Append("  EventHtmlDescription: ").Append(EventHtmlDescription).Append("\n");
+            sb.Append("  EventImagePath: ").Append(EventImagePath).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }

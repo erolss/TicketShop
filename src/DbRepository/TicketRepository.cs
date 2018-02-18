@@ -71,6 +71,12 @@ namespace TicketApi.Db
 
         public List<Ticket> GetTickets(int offset = 0, int maxLimit = 20)
         {
+
+            if (maxLimit > 30)
+            {
+                maxLimit = 30;
+            }
+
             var query = @"SELECT * FROM Tickets
                         ORDER BY TicketID
                         OFFSET @offset ROWS
@@ -86,6 +92,11 @@ namespace TicketApi.Db
 
         public List<Ticket> GetTicketsByUserId(string userId, int offset = 0, int maxLimit = 20)
         {
+            if (maxLimit > 30)
+            {
+                maxLimit = 30;
+            }
+
             var query = @"SELECT * FROM TicketTransactions t
                         JOIN TicketToTransactions ttt ON t.TransactionID = ttt.TransactionID
                         JOIN Tickets ON ttt.TicketID = Tickets.TicketID
@@ -109,6 +120,11 @@ namespace TicketApi.Db
 
         public List<Ticket> GetTicketsByTransactionId(int transactionId, int offset = 0, int maxLimit = 20)
         {
+            if (maxLimit > 30)
+            {
+                maxLimit = 30;
+            }
+
             var query = @"SELECT Tickets.TicketID, Tickets.TicketEventDateID FROM TicketTransactions t
                         JOIN TicketToTransactions ttt ON t.TransactionID = ttt.TransactionID
                         JOIN Tickets ON ttt.TicketID = Tickets.TicketID

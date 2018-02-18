@@ -2,11 +2,17 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using ApiModel = TicketShop.RestApiClient.Model;
+using TicketShop.Models.Admin;
+using TicketShop.Models;
 
 namespace TicketShop.Controllers.Admin
 {
+    [Authorize(Policy = "RequireAdminRole")]
+    [Area("Admin")]
     public class TicketController : Controller
     {
         // GET: Ticket
