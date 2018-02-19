@@ -27,7 +27,10 @@
     margin: 15px;
 }
 
-
+.media-object.eventdate {
+    max-width: 150px;
+    max-height: 150px;
+}
 
 
 /* Hide/rearrange for smaller screens */

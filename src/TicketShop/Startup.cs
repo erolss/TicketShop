@@ -40,7 +40,7 @@ namespace TicketShop
             services.AddMvc()
                 .AddSessionStateTempDataProvider();
             services.AddSession();
-
+            
             services.AddAuthorization(options =>
             {
                 options.AddPolicy("RequireAdminRole", policy => policy.RequireRole("Admin"));

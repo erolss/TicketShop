@@ -30,24 +30,29 @@ else
 {
     @foreach (var ed in Model.FullEventDates)
     {
+        if (String.IsNullOrEmpty(ed.EventImagePath))
+        {
+            ed.EventImagePath = "Images/placeholder.png";
+
+        }
+
         <div class="media">
             <div class="media-left">
-                <img class="media-object" src="@(ViewData["ApiBaseUrl"] + ed.EventImagePath)" alt="@ed.EventName" />
+                <img class="media-object eventdate" src="@(ViewData["ApiBaseUrl"] + ed.EventImagePath)" alt="@ed.EventName"/>
             </div>
             <div class="media-body">
                 <h4 class="media-heading">
                     @ed.EventName - @ed.EventStartDateTime.ToString("yy / MM / dd  -  H:mm");
                 </h4>
                 <p>@Html.Raw(ed.EventHtmlDescription)</p>
-                <div class="well well-sm">
+                
                     <p>Venue: @ed.VenueName, @ed.Address, @ed.City, @ed.Country )</p>
                     <p>Price: @ed.Price</p>
-                    <p><a asp-area="" asp-controller="Shop" asp-action="EventDate" asp-route-id="@ed.TicketEventDateID" class="btn btn-primary" role="button">Buy Ticket</a></p>
-
                     <button class="btn btn-default addToCartBtn" value="@ed.TicketEventDateID" type="button">Add to Cart</button>
-                </div>
+                
             </div>
         </div>
+        <hr/>
 
     }
 }

@@ -25,6 +25,11 @@ else
 {
     @foreach (var e in Model.Events)
     {
+        if (String.IsNullOrEmpty(e.EventImagePath))
+        {
+            e.EventImagePath = "Images/placeholder.png";
+
+        }
         <div class="col-sm-6 col-md-4">
             <div class="thumbnail">
                 <img src="@(ViewData["ApiBaseUrl"] + e.EventImagePath)" alt="@e.EventName">
