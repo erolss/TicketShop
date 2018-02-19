@@ -1,0 +1,37 @@
+﻿@model TicketShop.Models.ViewModels.ShopFindViewModel
+
+
+
+<div class="container">
+    @if (Model.FullEventDates == null || Model.FullEventDates.Count() == 0)
+    {
+        <h3>The search generated no results.</h3>
+    }
+    else
+    {
+        @foreach (var ed in Model.FullEventDates)
+        {
+            <div class="media">
+                <div class="media-left">
+                    <img class="media-object" src="@(ViewData["ApiBaseUrl"] + ed.EventImagePath)" alt="@ed.EventName" />
+                </div>
+                <div class="media-body">
+                    <h4 class="media-heading">
+                        @ed.EventName - @ed.EventStartDateTime.ToString("yy / MM / dd  -  H:mm");
+                        mm
+                    </h4>
+                    <p>@Html.Raw(ed.EventHtmlDescription)</p>
+                    <div class="well well-sm">
+                        <p>Venue: @ed.VenueName, @ed.Address, @ed.City, @ed.Country )</p>
+                        <p>Price: @ed.Price</p>
+                        <p><a asp-area="" asp-controller="Shop" asp-action="EventDate" asp-route-id="@ed.TicketEventDateID" class="btn btn-primary" role="button">Buy Ticket</a></p>
+                    </div>
+                </div>
+            </div>
+
+        }
+    }
+</div>
+
+
+

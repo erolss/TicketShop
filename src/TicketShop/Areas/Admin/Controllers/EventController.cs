@@ -6,34 +6,49 @@ using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using ApiModel = TicketShop.RestApiClient.Model;
-using TicketShop.Models.Admin;
+using TicketShop.Areas.Admin.Models;
 using TicketShop.Models;
+using TicketShop.Settings;
+using Microsoft.Extensions.Options;
+using TicketShop.RestApiClient;
+using TicketShop.RestApiClient.Model;
 
-namespace TicketShop.Controllers.Admin
+namespace TicketShop.Areas.Admin.Controllers
 {
     [Authorize(Policy = "RequireAdminRole")]
     [Area("Admin")]
-    public class TransactionController : Controller
+    public class EventController : Controller
     {
-        // GET: Transaction
-        public ActionResult Index()
+        private readonly CustomSettings _apiSettings;
+
+        public EventController(IOptions<CustomSettings> settings)
         {
-            return View();
+            this._apiSettings = settings.Value;
+
+        }
+        // GET: Event
+        public ActionResult Index(int offset=0, int maxLimit=30)
+        {
+            var api = new EventApi(_apiSettings.ApiBaseUrl);
+
+            var model = new EventsViewModel
+            {
+                Events = api.GetEvents(offset, maxLimit)
+            };
+            ViewData["Title"] = "Events";
+            ViewData["ApiBaseUrl"] = _apiSettings.ApiBaseUrl;
+
+            return View(model);
+            
         }
 
-        // GET: Transaction/Details/5
-        public ActionResult Details(int id)
-        {
-            return View();
-        }
-
-        // GET: Transaction/Create
+        // GET: Event/Create
         public ActionResult Create()
         {
             return View();
         }
 
-        // POST: Transaction/Create
+        // POST: Event/Create
         [HttpPost]
         [ValidateAntiForgeryToken]
         public ActionResult Create(IFormCollection collection)
@@ -50,20 +65,34 @@ namespace TicketShop.Controllers.Admin
             }
         }
 
-        // GET: Transaction/Edit/5
+        // GET: Event/Edit/5
         public ActionResult Edit(int id)
         {
-            return View();
+            var api = new EventApi(_apiSettings.ApiBaseUrl);
+
+            var model = api.GetEventById(id);
+
+            ViewData["Title"] = "Events";
+            ViewData["ApiBaseUrl"] = _apiSettings.ApiBaseUrl;
+
+            return View(model);
         }
 
-        // POST: Transaction/Edit/5
+        // POST: Event/Edit/5
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit(int id, IFormCollection collection)
+        public ActionResult Edit(int id, Event e)
         {
             try
             {
-                // TODO: Add update logic here
+                var api = new EventApi(_apiSettings.ApiBaseUrl);
+
+                var model = api.UpdateEvent(e);
+
+                ViewData["Title"] = "Events";
+                ViewData["ApiBaseUrl"] = _apiSettings.ApiBaseUrl;
+
+                
 
                 return RedirectToAction(nameof(Index));
             }
@@ -73,13 +102,13 @@ namespace TicketShop.Controllers.Admin
             }
         }
 
-        // GET: Transaction/Delete/5
+        // GET: Event/Delete/5
         public ActionResult Delete(int id)
         {
             return View();
         }
 
-        // POST: Transaction/Delete/5
+        // POST: Event/Delete/5
         [HttpPost]
         [ValidateAntiForgeryToken]
         public ActionResult Delete(int id, IFormCollection collection)

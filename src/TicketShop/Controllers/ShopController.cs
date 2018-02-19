@@ -36,7 +36,7 @@ namespace TicketShop.Controllers
         }
 
 
-        public IActionResult Events(int offset = 0, int maxLimit = 20)
+        public ActionResult Events(int offset = 0, int maxLimit = 20)
         {
             var api = new EventApi(_apiSettings.ApiBaseUrl);
 
@@ -50,7 +50,7 @@ namespace TicketShop.Controllers
             return View(model);
         }
 
-        public IActionResult Event(int id)
+        public ActionResult Event(int id)
         {
             //var api = new EventApi(_apiSettings.ApiBaseUrl);
 
@@ -73,7 +73,7 @@ namespace TicketShop.Controllers
             return View(model);
         }
 
-        public IActionResult EventDates(int offset = 0, int maxLimit = 20)
+        public ActionResult EventDates(int offset = 0, int maxLimit = 20)
         {
             var api = new EventDateApi(_apiSettings.ApiBaseUrl);
 
@@ -87,7 +87,7 @@ namespace TicketShop.Controllers
             return View(model);
         }
 
-        public IActionResult EventDatesByEventId(int eventId, int offset = 0, int maxLimit = 20)
+        public ActionResult EventDatesByEventId(int eventId, int offset = 0, int maxLimit = 20)
         {
             var api = new EventDateApi(_apiSettings.ApiBaseUrl);
 
@@ -116,7 +116,7 @@ namespace TicketShop.Controllers
         //    return View(model);
         //}
 
-        public IActionResult Venues(int offset = 0, int maxLimit = 20)
+        public ActionResult Venues(int offset = 0, int maxLimit = 20)
         {
             var api = new VenueApi(_apiSettings.ApiBaseUrl);
 
@@ -128,7 +128,7 @@ namespace TicketShop.Controllers
             return View(model);
         }
 
-        public IActionResult Venue(int venueId)
+        public ActionResult Venue(int venueId)
         {
             var api = new VenueApi(_apiSettings.ApiBaseUrl);
 
@@ -144,7 +144,8 @@ namespace TicketShop.Controllers
 
 
         [HttpPost]
-        public IActionResult Find(IFormCollection form)
+        [ValidateAntiForgeryToken]
+        public ActionResult Find(IFormCollection form)
         {
             var model = new ShopFindViewModel();
 
@@ -183,81 +184,5 @@ namespace TicketShop.Controllers
             return View("Find", model);
         }
 
-        // GET: Order/Details/5
-        [HttpGet]
-        [Authorize]
-        public ActionResult Details(int id)
-        {
-            return View();
-        }
-
-        // GET: Order/Create
-        public ActionResult Create()
-        {
-            return View();
-        }
-
-        // POST: Order/Create
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public ActionResult Create(IFormCollection collection)
-        {
-            try
-            {
-                // TODO: Add insert logic here
-
-                return RedirectToAction(nameof(Index));
-            }
-            catch
-            {
-                return View();
-            }
-        }
-
-        // GET: Order/Edit/5
-        public ActionResult Edit(int id)
-        {
-            return View();
-        }
-
-        // POST: Order/Edit/5
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public ActionResult Edit(int id, IFormCollection collection)
-        {
-            try
-            {
-                // TODO: Add update logic here
-
-                return RedirectToAction(nameof(Index));
-            }
-            catch
-            {
-                return View();
-            }
-        }
-
-        // GET: Order/Delete/5
-        public ActionResult Delete(int id)
-        {
-            return View();
-        }
-
-        // POST: Order/Delete/5
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public ActionResult Delete(int id, IFormCollection collection)
-        {
-            try
-            {
-                // TODO: Add delete logic here
-
-                return RedirectToAction(nameof(Index));
-            }
-            catch
-            {
-                return View();
-            }
-        }
     }
 }

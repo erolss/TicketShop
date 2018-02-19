@@ -1,0 +1,48 @@
+﻿@model TicketShop.Areas.Admin.Models.EventsViewModel
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<div class="row">
+    <div class="col-xs-8 col-xs-offset-2">
+        <form asp-area="admin" asp-controller="admin" asp-action="find" method="post" id="search_form">
+            <div class="input-group input-group-lg">
+                <input type="hidden" name="search_param" value="event" id="search_param">
+                <input type="text" class="form-control" name="search_query" placeholder="Search term...">
+                <span class="input-group-btn">
+                    <button class="btn btn-default" type="button" id="search_submit"><span class="glyphicon glyphicon-search"></span></button>
+                </span>
+            </div>
+        </form>
+    </div>
+</div>
+
+<h2>@ViewData["Title"]</h2>
+@if (Model.Events == null || Model.Events.Count() == 0)
+{
+    <h3>No Events Found</h3>
+}
+else
+{
+    @foreach (var e in Model.Events)
+    {
+        if (String.IsNullOrEmpty(e.EventImagePath))
+        {
+            e.EventImagePath = "Images/placeholder.png";
+
+        }
+        <div class="col-sm-6 col-md-4">
+            <div class="thumbnail">
+                <img src="@(ViewData["ApiBaseUrl"] + e.EventImagePath)" alt="@e.EventName">
+                <div class="caption">
+                    <h3>@e.EventName</h3>
+                    <p>@Html.Raw(e.EventHtmlDescription)</p>
+                    <p><a asp-area="admin" asp-controller="event" asp-action="edit" asp-route-id="@e.TicketEventID" class="btn btn-primary" role="button">Update</a></p>
+                </div>
+            </div>
+        </div>
+    }
+}
+
+<div class="row">
+
+</div>

@@ -78,7 +78,7 @@ namespace TicketShop
                     template: "{controller=Home}/{action=Index}/{id?}");
                 
             });
-            CreateRoles(serviceProvider, env).Wait();
+            //CreateRoles(serviceProvider, env).Wait();
         }
 
         private async Task CreateRoles(IServiceProvider serviceProvider, IHostingEnvironment env)
