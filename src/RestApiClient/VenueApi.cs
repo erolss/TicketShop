@@ -61,7 +61,7 @@ namespace TicketShop.RestApiClient
         public Venue GetVenueById(int id)
         {
             var client = new RestClient(_baseUrl);
-            var request = new RestRequest("api/event/{id}", Method.GET);
+            var request = new RestRequest("api/venue/{id}", Method.GET);
 
             request.AddUrlSegment("id", id);
             var response = client.Execute<Venue>(request);
@@ -77,7 +77,7 @@ namespace TicketShop.RestApiClient
         public List<Venue> GetVenues(int offset = 0, int maxLimit = 20)
         {
             var client = new RestClient(_baseUrl);
-            var request = new RestRequest("api/event/{offset}/{maxLimit}", Method.GET);
+            var request = new RestRequest("api/venue/{offset}/{maxLimit}", Method.GET);
             request.AddUrlSegment("offset", offset);
             request.AddUrlSegment("maxLimit", maxLimit);
 
@@ -90,7 +90,7 @@ namespace TicketShop.RestApiClient
         {
             var outVar = venue.ToJson();
             var client = new RestClient(_baseUrl);
-            var request = new RestRequest("api/event", Method.PUT);
+            var request = new RestRequest("api/venue", Method.PUT);
             request.AddParameter("application/json", outVar, ParameterType.RequestBody);
             var response = client.Execute<Venue>(request);
 

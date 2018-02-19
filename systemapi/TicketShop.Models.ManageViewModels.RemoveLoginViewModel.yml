@@ -1,0 +1,434 @@
+### YamlMime:ManagedReference
+items:
+- uid: TicketShop.Models.ManageViewModels.RemoveLoginViewModel
+  commentId: T:TicketShop.Models.ManageViewModels.RemoveLoginViewModel
+  id: RemoveLoginViewModel
+  parent: TicketShop.Models.ManageViewModels
+  children:
+  - TicketShop.Models.ManageViewModels.RemoveLoginViewModel.LoginProvider
+  - TicketShop.Models.ManageViewModels.RemoveLoginViewModel.ProviderKey
+  langs:
+  - csharp
+  - vb
+  name: RemoveLoginViewModel
+  nameWithType: RemoveLoginViewModel
+  fullName: TicketShop.Models.ManageViewModels.RemoveLoginViewModel
+  type: Class
+  source:
+    remote:
+      path: src/TicketShop/Models/ManageViewModels/RemoveLoginViewModel.cs
+      branch: features/ticketshop
+      repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
+    id: RemoveLoginViewModel
+    path: src/TicketShop/Models/ManageViewModels/RemoveLoginViewModel.cs
+    startLine: 8
+  assemblies:
+  - TicketShop
+  namespace: TicketShop.Models.ManageViewModels
+  syntax:
+    content: public class RemoveLoginViewModel
+    content.vb: Public Class RemoveLoginViewModel
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: TicketShop.Models.ManageViewModels.RemoveLoginViewModel.LoginProvider
+  commentId: P:TicketShop.Models.ManageViewModels.RemoveLoginViewModel.LoginProvider
+  id: LoginProvider
+  parent: TicketShop.Models.ManageViewModels.RemoveLoginViewModel
+  langs:
+  - csharp
+  - vb
+  name: LoginProvider
+  nameWithType: RemoveLoginViewModel.LoginProvider
+  fullName: TicketShop.Models.ManageViewModels.RemoveLoginViewModel.LoginProvider
+  type: Property
+  source:
+    remote:
+      path: src/TicketShop/Models/ManageViewModels/RemoveLoginViewModel.cs
+      branch: features/ticketshop
+      repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
+    id: LoginProvider
+    path: src/TicketShop/Models/ManageViewModels/RemoveLoginViewModel.cs
+    startLine: 10
+  assemblies:
+  - TicketShop
+  namespace: TicketShop.Models.ManageViewModels
+  syntax:
+    content: public string LoginProvider { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property LoginProvider As String
+  overload: TicketShop.Models.ManageViewModels.RemoveLoginViewModel.LoginProvider*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: TicketShop.Models.ManageViewModels.RemoveLoginViewModel.ProviderKey
+  commentId: P:TicketShop.Models.ManageViewModels.RemoveLoginViewModel.ProviderKey
+  id: ProviderKey
+  parent: TicketShop.Models.ManageViewModels.RemoveLoginViewModel
+  langs:
+  - csharp
+  - vb
+  name: ProviderKey
+  nameWithType: RemoveLoginViewModel.ProviderKey
+  fullName: TicketShop.Models.ManageViewModels.RemoveLoginViewModel.ProviderKey
+  type: Property
+  source:
+    remote:
+      path: src/TicketShop/Models/ManageViewModels/RemoveLoginViewModel.cs
+      branch: features/ticketshop
+      repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
+    id: ProviderKey
+    path: src/TicketShop/Models/ManageViewModels/RemoveLoginViewModel.cs
+    startLine: 11
+  assemblies:
+  - TicketShop
+  namespace: TicketShop.Models.ManageViewModels
+  syntax:
+    content: public string ProviderKey { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property ProviderKey As String
+  overload: TicketShop.Models.ManageViewModels.RemoveLoginViewModel.ProviderKey*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+references:
+- uid: TicketShop.Models.ManageViewModels
+  commentId: N:TicketShop.Models.ManageViewModels
+  isExternal: false
+  name: TicketShop.Models.ManageViewModels
+  nameWithType: TicketShop.Models.ManageViewModels
+  fullName: TicketShop.Models.ManageViewModels
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: false
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: TicketShop.Models.ManageViewModels.RemoveLoginViewModel.LoginProvider*
+  commentId: Overload:TicketShop.Models.ManageViewModels.RemoveLoginViewModel.LoginProvider
+  isExternal: false
+  name: LoginProvider
+  nameWithType: RemoveLoginViewModel.LoginProvider
+  fullName: TicketShop.Models.ManageViewModels.RemoveLoginViewModel.LoginProvider
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: TicketShop.Models.ManageViewModels.RemoveLoginViewModel.ProviderKey*
+  commentId: Overload:TicketShop.Models.ManageViewModels.RemoveLoginViewModel.ProviderKey
+  isExternal: false
+  name: ProviderKey
+  nameWithType: RemoveLoginViewModel.ProviderKey
+  fullName: TicketShop.Models.ManageViewModels.RemoveLoginViewModel.ProviderKey

@@ -1,0 +1,45 @@
+### YamlMime:ManagedReference
+items:
+- uid: TicketShop.Services
+  commentId: N:TicketShop.Services
+  id: TicketShop.Services
+  children:
+  - TicketShop.Services.EmailSender
+  - TicketShop.Services.EmailSenderExtensions
+  - TicketShop.Services.IEmailSender
+  langs:
+  - csharp
+  - vb
+  name: TicketShop.Services
+  nameWithType: TicketShop.Services
+  fullName: TicketShop.Services
+  type: Namespace
+  assemblies:
+  - TicketShop
+references:
+- uid: TicketShop.Services.EmailSenderExtensions
+  commentId: T:TicketShop.Services.EmailSenderExtensions
+  parent: TicketShop.Services
+  isExternal: false
+  name: EmailSenderExtensions
+  nameWithType: EmailSenderExtensions
+  fullName: TicketShop.Services.EmailSenderExtensions
+- uid: TicketShop.Services.EmailSender
+  commentId: T:TicketShop.Services.EmailSender
+  isExternal: false
+  name: EmailSender
+  nameWithType: EmailSender
+  fullName: TicketShop.Services.EmailSender
+- uid: TicketShop.Services.IEmailSender
+  commentId: T:TicketShop.Services.IEmailSender
+  parent: TicketShop.Services
+  isExternal: false
+  name: IEmailSender
+  nameWithType: IEmailSender
+  fullName: TicketShop.Services.IEmailSender
+- uid: TicketShop.Services
+  commentId: N:TicketShop.Services
+  isExternal: false
+  name: TicketShop.Services
+  nameWithType: TicketShop.Services
+  fullName: TicketShop.Services

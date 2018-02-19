@@ -7,6 +7,7 @@ namespace TicketApi.Db.Models
     /// <summary>
     /// 
     /// </summary>
+    [DataContract]
     public partial class Ticket : IEquatable<Ticket>
     {
         /// <summary>
@@ -20,7 +21,11 @@ namespace TicketApi.Db.Models
         /// </summary>
         [DataMember(Name = "ticketEventDateID")]
         public int? TicketEventDateID { get; set; }
-
+        /// <summary>
+        /// Gets or Sets TransactionID
+        /// </summary>
+        [DataMember(Name = "transactionID")]
+        public int TransactionID { get; set; }
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -31,6 +36,7 @@ namespace TicketApi.Db.Models
             sb.Append("class Ticket {\n");
             sb.Append("  TicketID: ").Append(TicketID).Append("\n");
             sb.Append("  TicketEventDateID: ").Append(TicketEventDateID).Append("\n");
+            sb.Append("  TransactionID: ").Append(TransactionID).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }

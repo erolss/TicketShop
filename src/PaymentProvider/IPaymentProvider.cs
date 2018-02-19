@@ -1,4 +1,6 @@
-﻿namespace TicketSystem.PaymentProvider
+﻿using TicketApi.PaymentProvider.Model;
+
+namespace TicketApi.PaymentProvider
 {
     public interface IPaymentProvider
     {

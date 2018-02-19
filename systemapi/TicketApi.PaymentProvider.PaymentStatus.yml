@@ -1,0 +1,147 @@
+### YamlMime:ManagedReference
+items:
+- uid: TicketApi.PaymentProvider.PaymentStatus
+  commentId: T:TicketApi.PaymentProvider.PaymentStatus
+  id: PaymentStatus
+  parent: TicketApi.PaymentProvider
+  children:
+  - TicketApi.PaymentProvider.PaymentStatus.PaymentApproved
+  - TicketApi.PaymentProvider.PaymentStatus.PaymentRejected
+  - TicketApi.PaymentProvider.PaymentStatus.UnknownError
+  langs:
+  - csharp
+  - vb
+  name: PaymentStatus
+  nameWithType: PaymentStatus
+  fullName: TicketApi.PaymentProvider.PaymentStatus
+  type: Enum
+  source:
+    remote:
+      path: src/PaymentProvider/PaymentStatus.cs
+      branch: features/ticketshop
+      repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
+    id: PaymentStatus
+    path: src/PaymentProvider/PaymentStatus.cs
+    startLine: 2
+  assemblies:
+  - PaymentProvider
+  namespace: TicketApi.PaymentProvider
+  syntax:
+    content: public enum PaymentStatus
+    content.vb: Public Enum PaymentStatus
+  modifiers.csharp:
+  - public
+  - enum
+  modifiers.vb:
+  - Public
+  - Enum
+- uid: TicketApi.PaymentProvider.PaymentStatus.PaymentApproved
+  commentId: F:TicketApi.PaymentProvider.PaymentStatus.PaymentApproved
+  id: PaymentApproved
+  parent: TicketApi.PaymentProvider.PaymentStatus
+  langs:
+  - csharp
+  - vb
+  name: PaymentApproved
+  nameWithType: PaymentStatus.PaymentApproved
+  fullName: TicketApi.PaymentProvider.PaymentStatus.PaymentApproved
+  type: Field
+  source:
+    remote:
+      path: src/PaymentProvider/PaymentStatus.cs
+      branch: features/ticketshop
+      repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
+    id: PaymentApproved
+    path: src/PaymentProvider/PaymentStatus.cs
+    startLine: 4
+  assemblies:
+  - PaymentProvider
+  namespace: TicketApi.PaymentProvider
+  syntax:
+    content: PaymentApproved = 0
+    return:
+      type: TicketApi.PaymentProvider.PaymentStatus
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: TicketApi.PaymentProvider.PaymentStatus.PaymentRejected
+  commentId: F:TicketApi.PaymentProvider.PaymentStatus.PaymentRejected
+  id: PaymentRejected
+  parent: TicketApi.PaymentProvider.PaymentStatus
+  langs:
+  - csharp
+  - vb
+  name: PaymentRejected
+  nameWithType: PaymentStatus.PaymentRejected
+  fullName: TicketApi.PaymentProvider.PaymentStatus.PaymentRejected
+  type: Field
+  source:
+    remote:
+      path: src/PaymentProvider/PaymentStatus.cs
+      branch: features/ticketshop
+      repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
+    id: PaymentRejected
+    path: src/PaymentProvider/PaymentStatus.cs
+    startLine: 5
+  assemblies:
+  - PaymentProvider
+  namespace: TicketApi.PaymentProvider
+  syntax:
+    content: PaymentRejected = 1
+    return:
+      type: TicketApi.PaymentProvider.PaymentStatus
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: TicketApi.PaymentProvider.PaymentStatus.UnknownError
+  commentId: F:TicketApi.PaymentProvider.PaymentStatus.UnknownError
+  id: UnknownError
+  parent: TicketApi.PaymentProvider.PaymentStatus
+  langs:
+  - csharp
+  - vb
+  name: UnknownError
+  nameWithType: PaymentStatus.UnknownError
+  fullName: TicketApi.PaymentProvider.PaymentStatus.UnknownError
+  type: Field
+  source:
+    remote:
+      path: src/PaymentProvider/PaymentStatus.cs
+      branch: features/ticketshop
+      repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
+    id: UnknownError
+    path: src/PaymentProvider/PaymentStatus.cs
+    startLine: 6
+  assemblies:
+  - PaymentProvider
+  namespace: TicketApi.PaymentProvider
+  syntax:
+    content: UnknownError = 2
+    return:
+      type: TicketApi.PaymentProvider.PaymentStatus
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+references:
+- uid: TicketApi.PaymentProvider
+  commentId: N:TicketApi.PaymentProvider
+  isExternal: false
+  name: TicketApi.PaymentProvider
+  nameWithType: TicketApi.PaymentProvider
+  fullName: TicketApi.PaymentProvider
+- uid: TicketApi.PaymentProvider.PaymentStatus
+  commentId: T:TicketApi.PaymentProvider.PaymentStatus
+  parent: TicketApi.PaymentProvider
+  isExternal: false
+  name: PaymentStatus
+  nameWithType: PaymentStatus
+  fullName: TicketApi.PaymentProvider.PaymentStatus

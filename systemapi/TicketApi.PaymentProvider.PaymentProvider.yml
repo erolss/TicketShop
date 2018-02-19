@@ -1,0 +1,506 @@
+### YamlMime:ManagedReference
+items:
+- uid: TicketApi.PaymentProvider.PaymentProvider
+  commentId: T:TicketApi.PaymentProvider.PaymentProvider
+  id: PaymentProvider
+  parent: TicketApi.PaymentProvider
+  children:
+  - TicketApi.PaymentProvider.PaymentProvider.Pay(System.Decimal,System.String,System.String)
+  langs:
+  - csharp
+  - vb
+  name: PaymentProvider
+  nameWithType: PaymentProvider
+  fullName: TicketApi.PaymentProvider.PaymentProvider
+  type: Class
+  source:
+    remote:
+      path: src/PaymentProvider/PaymentProvider.cs
+      branch: features/ticketshop
+      repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
+    id: PaymentProvider
+    path: src/PaymentProvider/PaymentProvider.cs
+    startLine: 5
+  assemblies:
+  - PaymentProvider
+  namespace: TicketApi.PaymentProvider
+  syntax:
+    content: 'public class PaymentProvider : IPaymentProvider'
+    content.vb: >-
+      Public Class PaymentProvider
+          Implements IPaymentProvider
+  inheritance:
+  - System.Object
+  implements:
+  - TicketApi.PaymentProvider.IPaymentProvider
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: TicketApi.PaymentProvider.PaymentProvider.Pay(System.Decimal,System.String,System.String)
+  commentId: M:TicketApi.PaymentProvider.PaymentProvider.Pay(System.Decimal,System.String,System.String)
+  id: Pay(System.Decimal,System.String,System.String)
+  parent: TicketApi.PaymentProvider.PaymentProvider
+  langs:
+  - csharp
+  - vb
+  name: Pay(Decimal, String, String)
+  nameWithType: PaymentProvider.Pay(Decimal, String, String)
+  fullName: TicketApi.PaymentProvider.PaymentProvider.Pay(System.Decimal, System.String, System.String)
+  type: Method
+  source:
+    remote:
+      path: src/PaymentProvider/PaymentProvider.cs
+      branch: features/ticketshop
+      repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
+    id: Pay
+    path: src/PaymentProvider/PaymentProvider.cs
+    startLine: 16
+  assemblies:
+  - PaymentProvider
+  namespace: TicketApi.PaymentProvider
+  summary: "\nSimulate a payment provider\nOne out of 20 payments results in an unknown error\nThree out of 20 payments results in payment rejected\n"
+  example: []
+  syntax:
+    content: public Payment Pay(decimal amountToPay, string currency, string orderReference)
+    parameters:
+    - id: amountToPay
+      type: System.Decimal
+      description: The amount to pay
+    - id: currency
+      type: System.String
+      description: A three letter code (following ISO 4217) represending the valuta of the amount
+    - id: orderReference
+      type: System.String
+      description: A Guid which is the internal reference of the payment system
+    return:
+      type: TicketApi.PaymentProvider.Model.Payment
+      description: A payment object, containging the status of the order
+    content.vb: Public Function Pay(amountToPay As Decimal, currency As String, orderReference As String) As Payment
+  overload: TicketApi.PaymentProvider.PaymentProvider.Pay*
+  implements:
+  - TicketApi.PaymentProvider.IPaymentProvider.Pay(System.Decimal,System.String,System.String)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+references:
+- uid: TicketApi.PaymentProvider
+  commentId: N:TicketApi.PaymentProvider
+  isExternal: false
+  name: TicketApi.PaymentProvider
+  nameWithType: TicketApi.PaymentProvider
+  fullName: TicketApi.PaymentProvider
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: TicketApi.PaymentProvider.IPaymentProvider
+  commentId: T:TicketApi.PaymentProvider.IPaymentProvider
+  parent: TicketApi.PaymentProvider
+  isExternal: false
+  name: IPaymentProvider
+  nameWithType: IPaymentProvider
+  fullName: TicketApi.PaymentProvider.IPaymentProvider
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: false
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: TicketApi.PaymentProvider.PaymentProvider.Pay*
+  commentId: Overload:TicketApi.PaymentProvider.PaymentProvider.Pay
+  isExternal: false
+  name: Pay
+  nameWithType: PaymentProvider.Pay
+  fullName: TicketApi.PaymentProvider.PaymentProvider.Pay
+- uid: TicketApi.PaymentProvider.IPaymentProvider.Pay(System.Decimal,System.String,System.String)
+  commentId: M:TicketApi.PaymentProvider.IPaymentProvider.Pay(System.Decimal,System.String,System.String)
+  parent: TicketApi.PaymentProvider.IPaymentProvider
+  isExternal: true
+  name: Pay(Decimal, String, String)
+  nameWithType: IPaymentProvider.Pay(Decimal, String, String)
+  fullName: TicketApi.PaymentProvider.IPaymentProvider.Pay(System.Decimal, System.String, System.String)
+  spec.csharp:
+  - uid: TicketApi.PaymentProvider.IPaymentProvider.Pay(System.Decimal,System.String,System.String)
+    name: Pay
+    nameWithType: IPaymentProvider.Pay
+    fullName: TicketApi.PaymentProvider.IPaymentProvider.Pay
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Decimal
+    name: Decimal
+    nameWithType: Decimal
+    fullName: System.Decimal
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: TicketApi.PaymentProvider.IPaymentProvider.Pay(System.Decimal,System.String,System.String)
+    name: Pay
+    nameWithType: IPaymentProvider.Pay
+    fullName: TicketApi.PaymentProvider.IPaymentProvider.Pay
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Decimal
+    name: Decimal
+    nameWithType: Decimal
+    fullName: System.Decimal
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Decimal
+  commentId: T:System.Decimal
+  parent: System
+  isExternal: true
+  name: Decimal
+  nameWithType: Decimal
+  fullName: System.Decimal
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: TicketApi.PaymentProvider.Model.Payment
+  commentId: T:TicketApi.PaymentProvider.Model.Payment
+  parent: TicketApi.PaymentProvider.Model
+  isExternal: false
+  name: Payment
+  nameWithType: Payment
+  fullName: TicketApi.PaymentProvider.Model.Payment
+- uid: TicketApi.PaymentProvider.Model
+  commentId: N:TicketApi.PaymentProvider.Model
+  isExternal: false
+  name: TicketApi.PaymentProvider.Model
+  nameWithType: TicketApi.PaymentProvider.Model
+  fullName: TicketApi.PaymentProvider.Model

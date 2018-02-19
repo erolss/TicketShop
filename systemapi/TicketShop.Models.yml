@@ -1,0 +1,37 @@
+### YamlMime:ManagedReference
+items:
+- uid: TicketShop.Models
+  commentId: N:TicketShop.Models
+  id: TicketShop.Models
+  children:
+  - TicketShop.Models.ApplicationUser
+  - TicketShop.Models.ErrorViewModel
+  - TicketShop.Models.Order
+  langs:
+  - csharp
+  - vb
+  name: TicketShop.Models
+  nameWithType: TicketShop.Models
+  fullName: TicketShop.Models
+  type: Namespace
+  assemblies:
+  - TicketShop
+references:
+- uid: TicketShop.Models.ApplicationUser
+  commentId: T:TicketShop.Models.ApplicationUser
+  isExternal: false
+  name: ApplicationUser
+  nameWithType: ApplicationUser
+  fullName: TicketShop.Models.ApplicationUser
+- uid: TicketShop.Models.ErrorViewModel
+  commentId: T:TicketShop.Models.ErrorViewModel
+  isExternal: false
+  name: ErrorViewModel
+  nameWithType: ErrorViewModel
+  fullName: TicketShop.Models.ErrorViewModel
+- uid: TicketShop.Models.Order
+  commentId: T:TicketShop.Models.Order
+  isExternal: false
+  name: Order
+  nameWithType: Order
+  fullName: TicketShop.Models.Order

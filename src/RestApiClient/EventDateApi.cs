@@ -57,6 +57,18 @@ namespace TicketShop.RestApiClient
 
             return response.Data;
         }
+        public List<FullEventDate> FindFullEventDates(Search query)
+        {
+            var outVar = query.ToJson();
+
+            var client = new RestClient(_baseUrl);
+            var request = new RestRequest("api/eventdate/search", Method.POST);
+            request.AddParameter("application/json", outVar, ParameterType.RequestBody);
+
+            var response = client.Execute<List<FullEventDate>>(request);
+
+            return response.Data;
+        }
 
         public EventDate GetEventDateByEventId(int eventId)
         {

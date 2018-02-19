@@ -1,4 +1,14 @@
 ### YamlMime:TableOfContent
+- uid: Microsoft.AspNetCore.Mvc
+  name: Microsoft.AspNetCore.Mvc
+  items:
+  - uid: Microsoft.AspNetCore.Mvc.UrlHelperExtensions
+    name: UrlHelperExtensions
+- uid: Microsoft.AspNetCore.Session
+  name: Microsoft.AspNetCore.Session
+  items:
+  - uid: Microsoft.AspNetCore.Session.SessionExtensions
+    name: SessionExtensions
 - uid: TicketApi
   name: TicketApi
   items:
@@ -69,31 +79,196 @@
     name: Transaction
   - uid: TicketApi.Db.Models.Venue
     name: Venue
+- uid: TicketApi.PaymentProvider
+  name: TicketApi.PaymentProvider
+  items:
+  - uid: TicketApi.PaymentProvider.IPaymentProvider
+    name: IPaymentProvider
+  - uid: TicketApi.PaymentProvider.PaymentProvider
+    name: PaymentProvider
+  - uid: TicketApi.PaymentProvider.PaymentStatus
+    name: PaymentStatus
+- uid: TicketApi.PaymentProvider.Model
+  name: TicketApi.PaymentProvider.Model
+  items:
+  - uid: TicketApi.PaymentProvider.Model.Payment
+    name: Payment
 - uid: TicketApi.Settings
   name: TicketApi.Settings
   items:
-  - uid: TicketApi.Settings.DbSettings
-    name: DbSettings
-- uid: TicketSystem.PaymentProvider
-  name: TicketSystem.PaymentProvider
+  - uid: TicketApi.Settings.CustomSettings
+    name: CustomSettings
+- uid: TicketShop
+  name: TicketShop
   items:
-  - uid: TicketSystem.PaymentProvider.IPaymentProvider
-    name: IPaymentProvider
-  - uid: TicketSystem.PaymentProvider.Payment
-    name: Payment
-  - uid: TicketSystem.PaymentProvider.PaymentProvider
-    name: PaymentProvider
-  - uid: TicketSystem.PaymentProvider.PaymentStatus
-    name: PaymentStatus
-- uid: TicketSystem.RestApiClient
-  name: TicketSystem.RestApiClient
+  - uid: TicketShop.Program
+    name: Program
+  - uid: TicketShop.Startup
+    name: Startup
+- uid: TicketShop.Controllers
+  name: TicketShop.Controllers
   items:
-  - uid: TicketSystem.RestApiClient.ITicketApi
-    name: ITicketApi
-  - uid: TicketSystem.RestApiClient.TicketApi
+  - uid: TicketShop.Controllers.AccountController
+    name: AccountController
+  - uid: TicketShop.Controllers.HomeController
+    name: HomeController
+  - uid: TicketShop.Controllers.ManageController
+    name: ManageController
+  - uid: TicketShop.Controllers.OrderController
+    name: OrderController
+  - uid: TicketShop.Controllers.ShopController
+    name: ShopController
+- uid: TicketShop.Controllers.Admin
+  name: TicketShop.Controllers.Admin
+  items:
+  - uid: TicketShop.Controllers.Admin.EventController
+    name: EventController
+  - uid: TicketShop.Controllers.Admin.EventDateController
+    name: EventDateController
+  - uid: TicketShop.Controllers.Admin.TicketController
+    name: TicketController
+  - uid: TicketShop.Controllers.Admin.TransactionController
+    name: TransactionController
+  - uid: TicketShop.Controllers.Admin.VenueController
+    name: VenueController
+- uid: TicketShop.Data
+  name: TicketShop.Data
+  items:
+  - uid: TicketShop.Data.ApplicationDbContext
+    name: ApplicationDbContext
+- uid: TicketShop.Data.Migrations
+  name: TicketShop.Data.Migrations
+  items:
+  - uid: TicketShop.Data.Migrations.CreateIdentitySchema
+    name: CreateIdentitySchema
+- uid: TicketShop.Models
+  name: TicketShop.Models
+  items:
+  - uid: TicketShop.Models.ApplicationUser
+    name: ApplicationUser
+  - uid: TicketShop.Models.ErrorViewModel
+    name: ErrorViewModel
+  - uid: TicketShop.Models.Order
+    name: Order
+- uid: TicketShop.Models.AccountViewModels
+  name: TicketShop.Models.AccountViewModels
+  items:
+  - uid: TicketShop.Models.AccountViewModels.ExternalLoginViewModel
+    name: ExternalLoginViewModel
+  - uid: TicketShop.Models.AccountViewModels.ForgotPasswordViewModel
+    name: ForgotPasswordViewModel
+  - uid: TicketShop.Models.AccountViewModels.LoginViewModel
+    name: LoginViewModel
+  - uid: TicketShop.Models.AccountViewModels.LoginWith2faViewModel
+    name: LoginWith2faViewModel
+  - uid: TicketShop.Models.AccountViewModels.LoginWithRecoveryCodeViewModel
+    name: LoginWithRecoveryCodeViewModel
+  - uid: TicketShop.Models.AccountViewModels.RegisterViewModel
+    name: RegisterViewModel
+  - uid: TicketShop.Models.AccountViewModels.ResetPasswordViewModel
+    name: ResetPasswordViewModel
+- uid: TicketShop.Models.Admin
+  name: TicketShop.Models.Admin
+  items:
+  - uid: TicketShop.Models.Admin.AllAdminViewModels
+    name: AllAdminViewModels
+- uid: TicketShop.Models.ManageViewModels
+  name: TicketShop.Models.ManageViewModels
+  items:
+  - uid: TicketShop.Models.ManageViewModels.ChangePasswordViewModel
+    name: ChangePasswordViewModel
+  - uid: TicketShop.Models.ManageViewModels.EnableAuthenticatorViewModel
+    name: EnableAuthenticatorViewModel
+  - uid: TicketShop.Models.ManageViewModels.ExternalLoginsViewModel
+    name: ExternalLoginsViewModel
+  - uid: TicketShop.Models.ManageViewModels.GenerateRecoveryCodesViewModel
+    name: GenerateRecoveryCodesViewModel
+  - uid: TicketShop.Models.ManageViewModels.IndexViewModel
+    name: IndexViewModel
+  - uid: TicketShop.Models.ManageViewModels.RemoveLoginViewModel
+    name: RemoveLoginViewModel
+  - uid: TicketShop.Models.ManageViewModels.SetPasswordViewModel
+    name: SetPasswordViewModel
+  - uid: TicketShop.Models.ManageViewModels.TwoFactorAuthenticationViewModel
+    name: TwoFactorAuthenticationViewModel
+- uid: TicketShop.Models.ViewModels
+  name: TicketShop.Models.ViewModels
+  items:
+  - uid: TicketShop.Models.ViewModels.HomeIndexViewModel
+    name: HomeIndexViewModel
+  - uid: TicketShop.Models.ViewModels.OrderCartViewModel
+    name: OrderCartViewModel
+  - uid: TicketShop.Models.ViewModels.ShopEventDatesViewModel
+    name: ShopEventDatesViewModel
+  - uid: TicketShop.Models.ViewModels.ShopEventsViewModel
+    name: ShopEventsViewModel
+  - uid: TicketShop.Models.ViewModels.ShopFindViewModel
+    name: ShopFindViewModel
+  - uid: TicketShop.Models.ViewModels.ShopVenuesViewModel
+    name: ShopVenuesViewModel
+  - uid: TicketShop.Models.ViewModels.ShopVenueViewModel
+    name: ShopVenueViewModel
+- uid: TicketShop.RestApiClient
+  name: TicketShop.RestApiClient
+  items:
+  - uid: TicketShop.RestApiClient.EventApi
+    name: EventApi
+  - uid: TicketShop.RestApiClient.EventDateApi
+    name: EventDateApi
+  - uid: TicketShop.RestApiClient.TicketApi
     name: TicketApi
-- uid: TicketSystem.RestApiClient.Model
-  name: TicketSystem.RestApiClient.Model
+  - uid: TicketShop.RestApiClient.TransactionApi
+    name: TransactionApi
+  - uid: TicketShop.RestApiClient.VenueApi
+    name: VenueApi
+- uid: TicketShop.RestApiClient.Interface
+  name: TicketShop.RestApiClient.Interface
   items:
-  - uid: TicketSystem.RestApiClient.Model.Ticket
+  - uid: TicketShop.RestApiClient.Interface.IEventApi
+    name: IEventApi
+  - uid: TicketShop.RestApiClient.Interface.IEventDateApi
+    name: IEventDateApi
+  - uid: TicketShop.RestApiClient.Interface.ITicketApi
+    name: ITicketApi
+  - uid: TicketShop.RestApiClient.Interface.ITransactionApi
+    name: ITransactionApi
+  - uid: TicketShop.RestApiClient.Interface.IVenueApi
+    name: IVenueApi
+- uid: TicketShop.RestApiClient.Model
+  name: TicketShop.RestApiClient.Model
+  items:
+  - uid: TicketShop.RestApiClient.Model.Event
+    name: Event
+  - uid: TicketShop.RestApiClient.Model.EventDate
+    name: EventDate
+  - uid: TicketShop.RestApiClient.Model.FullEventDate
+    name: FullEventDate
+  - uid: TicketShop.RestApiClient.Model.FullTicket
+    name: FullTicket
+  - uid: TicketShop.RestApiClient.Model.Search
+    name: Search
+  - uid: TicketShop.RestApiClient.Model.Ticket
     name: Ticket
+  - uid: TicketShop.RestApiClient.Model.Transaction
+    name: Transaction
+  - uid: TicketShop.RestApiClient.Model.Venue
+    name: Venue
+- uid: TicketShop.Services
+  name: TicketShop.Services
+  items:
+  - uid: TicketShop.Services.EmailSender
+    name: EmailSender
+  - uid: TicketShop.Services.EmailSenderExtensions
+    name: EmailSenderExtensions
+  - uid: TicketShop.Services.IEmailSender
+    name: IEmailSender
+- uid: TicketShop.Settings
+  name: TicketShop.Settings
+  items:
+  - uid: TicketShop.Settings.CustomSettings
+    name: CustomSettings
+- uid: TicketShop.Views.Manage
+  name: TicketShop.Views.Manage
+  items:
+  - uid: TicketShop.Views.Manage.ManageNavPages
+    name: ManageNavPages

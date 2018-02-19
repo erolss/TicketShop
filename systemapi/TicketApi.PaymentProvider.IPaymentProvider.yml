@@ -1,0 +1,122 @@
+### YamlMime:ManagedReference
+items:
+- uid: TicketApi.PaymentProvider.IPaymentProvider
+  commentId: T:TicketApi.PaymentProvider.IPaymentProvider
+  id: IPaymentProvider
+  parent: TicketApi.PaymentProvider
+  children:
+  - TicketApi.PaymentProvider.IPaymentProvider.Pay(System.Decimal,System.String,System.String)
+  langs:
+  - csharp
+  - vb
+  name: IPaymentProvider
+  nameWithType: IPaymentProvider
+  fullName: TicketApi.PaymentProvider.IPaymentProvider
+  type: Interface
+  source:
+    remote:
+      path: src/PaymentProvider/IPaymentProvider.cs
+      branch: features/ticketshop
+      repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
+    id: IPaymentProvider
+    path: src/PaymentProvider/IPaymentProvider.cs
+    startLine: 4
+  assemblies:
+  - PaymentProvider
+  namespace: TicketApi.PaymentProvider
+  syntax:
+    content: public interface IPaymentProvider
+    content.vb: Public Interface IPaymentProvider
+  modifiers.csharp:
+  - public
+  - interface
+  modifiers.vb:
+  - Public
+  - Interface
+- uid: TicketApi.PaymentProvider.IPaymentProvider.Pay(System.Decimal,System.String,System.String)
+  commentId: M:TicketApi.PaymentProvider.IPaymentProvider.Pay(System.Decimal,System.String,System.String)
+  id: Pay(System.Decimal,System.String,System.String)
+  parent: TicketApi.PaymentProvider.IPaymentProvider
+  langs:
+  - csharp
+  - vb
+  name: Pay(Decimal, String, String)
+  nameWithType: IPaymentProvider.Pay(Decimal, String, String)
+  fullName: TicketApi.PaymentProvider.IPaymentProvider.Pay(System.Decimal, System.String, System.String)
+  type: Method
+  source:
+    remote:
+      path: src/PaymentProvider/IPaymentProvider.cs
+      branch: features/ticketshop
+      repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
+    id: Pay
+    path: src/PaymentProvider/IPaymentProvider.cs
+    startLine: 13
+  assemblies:
+  - PaymentProvider
+  namespace: TicketApi.PaymentProvider
+  summary: "\nPay an amount\n"
+  example: []
+  syntax:
+    content: Payment Pay(decimal amountToPay, string currency, string orderReference)
+    parameters:
+    - id: amountToPay
+      type: System.Decimal
+      description: The amount to pay
+    - id: currency
+      type: System.String
+      description: A three letter code (following ISO 4217) represending the valuta of the amount
+    - id: orderReference
+      type: System.String
+      description: A string representing the order
+    return:
+      type: TicketApi.PaymentProvider.Model.Payment
+      description: A payment object, containging the status of the order
+    content.vb: Function Pay(amountToPay As Decimal, currency As String, orderReference As String) As Payment
+  overload: TicketApi.PaymentProvider.IPaymentProvider.Pay*
+references:
+- uid: TicketApi.PaymentProvider
+  commentId: N:TicketApi.PaymentProvider
+  isExternal: false
+  name: TicketApi.PaymentProvider
+  nameWithType: TicketApi.PaymentProvider
+  fullName: TicketApi.PaymentProvider
+- uid: TicketApi.PaymentProvider.IPaymentProvider.Pay*
+  commentId: Overload:TicketApi.PaymentProvider.IPaymentProvider.Pay
+  isExternal: false
+  name: Pay
+  nameWithType: IPaymentProvider.Pay
+  fullName: TicketApi.PaymentProvider.IPaymentProvider.Pay
+- uid: System.Decimal
+  commentId: T:System.Decimal
+  parent: System
+  isExternal: true
+  name: Decimal
+  nameWithType: Decimal
+  fullName: System.Decimal
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: TicketApi.PaymentProvider.Model.Payment
+  commentId: T:TicketApi.PaymentProvider.Model.Payment
+  parent: TicketApi.PaymentProvider.Model
+  isExternal: false
+  name: Payment
+  nameWithType: Payment
+  fullName: TicketApi.PaymentProvider.Model.Payment
+- uid: System
+  commentId: N:System
+  isExternal: false
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: TicketApi.PaymentProvider.Model
+  commentId: N:TicketApi.PaymentProvider.Model
+  isExternal: false
+  name: TicketApi.PaymentProvider.Model
+  nameWithType: TicketApi.PaymentProvider.Model
+  fullName: TicketApi.PaymentProvider.Model

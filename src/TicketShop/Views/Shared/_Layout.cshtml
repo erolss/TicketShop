@@ -31,9 +31,9 @@
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
                     <li><a asp-area="" asp-controller="Home" asp-action="Index">Home</a></li>
-                    <li><a asp-area="" asp-controller="Shop" asp-action="Event">Events</a></li>
-                    <li><a asp-area="" asp-controller="Shop" asp-action="EventDate">Event Dates</a></li>
-                    <li><a asp-area="" asp-controller="Shop" asp-action="Venue">Venues</a></li>
+                    <li><a asp-area="" asp-controller="Shop" asp-action="Events">Events</a></li>
+                    <li><a asp-area="" asp-controller="Shop" asp-action="EventDates">Event Dates</a></li>
+                    <li><a asp-area="" asp-controller="Shop" asp-action="Venues">Venues</a></li>
                     @if(User.IsInRole("Member") || User.IsInRole("Admin")) {
                     <li><a asp-area="" asp-controller="Order" asp-action="MyOrders">My Orders</a></li>
                     }

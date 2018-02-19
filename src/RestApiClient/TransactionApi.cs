@@ -4,6 +4,7 @@ using System.Text;
 using TicketShop.RestApiClient.Model;
 using TicketShop.RestApiClient.Interface;
 using RestSharp;
+using Newtonsoft.Json;
 
 namespace TicketShop.RestApiClient
 {
@@ -25,8 +26,8 @@ namespace TicketShop.RestApiClient
             request.AddParameter("application/json", outVar, ParameterType.RequestBody);
 
             var response = client.Execute<Transaction>(request);
-
-            return response.Data;
+           
+            return JsonConvert.DeserializeObject<Transaction>(response.Content);
         }
 
         public bool DeleteTransactionById(int transactionId)

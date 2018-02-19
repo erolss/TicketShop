@@ -1,0 +1,64 @@
+﻿@model TicketShop.Models.ViewModels.ShopVenuesViewModel
+
+
+<div class="row">
+    <div class="col-xs-8 col-xs-offset-2">
+        <form asp-controller="shop" asp-action="find" method="post" id="search_form">
+            <div class="input-group input-group-lg">
+                <input type="hidden" name="search_param" value="venue" id="search_param">
+                <input type="text" class="form-control" name="search_query" placeholder="Search term...">
+                <span class="input-group-btn">
+                    <button class="btn btn-default" type="button" id="search_submit"><span class="glyphicon glyphicon-search"></span></button>
+                </span>
+            </div>
+        </form>
+    </div>
+</div>
+
+<h2>@ViewData["Title"]</h2>
+<hr />
+
+<div class="container">
+    @if (Model.Venues == null || Model.Venues.Count() == 0)
+    {
+        <h3>No venues found.</h3>
+    }
+    else
+    {
+        @foreach (var m in Model.Venues)
+        {
+            <div class="media">
+                <div class="media-body">
+                    <h3 class="media-heading">
+                        @m.VenueName, @m.City
+                    </h3>
+                    <div class="well well-sm">
+                        <p>
+                            Address:<br />
+                            @m.VenueName<br />
+                            @m.Address<br />
+                            @m.City<br />
+                            @m.Country
+                        </p>
+                        <p><a asp-area="" asp-controller="Shop" asp-action="Event" class="btn btn-primary" role="button">See events at this venue</a></p>
+
+                    </div>
+                </div>
+            </div>
+
+        }
+    }
+</div>
+
+
+@section Scripts {
+    <script>
+        $(document).ready(function (e) {
+            $('#search_submit').click(function (e) {
+                e.preventDefault();
+                $('#search_form').submit();
+            });
+        });
+    </script>
+}
+

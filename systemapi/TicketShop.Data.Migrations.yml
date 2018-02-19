@@ -1,0 +1,23 @@
+### YamlMime:ManagedReference
+items:
+- uid: TicketShop.Data.Migrations
+  commentId: N:TicketShop.Data.Migrations
+  id: TicketShop.Data.Migrations
+  children:
+  - TicketShop.Data.Migrations.CreateIdentitySchema
+  langs:
+  - csharp
+  - vb
+  name: TicketShop.Data.Migrations
+  nameWithType: TicketShop.Data.Migrations
+  fullName: TicketShop.Data.Migrations
+  type: Namespace
+  assemblies:
+  - TicketShop
+references:
+- uid: TicketShop.Data.Migrations.CreateIdentitySchema
+  commentId: T:TicketShop.Data.Migrations.CreateIdentitySchema
+  isExternal: false
+  name: CreateIdentitySchema
+  nameWithType: CreateIdentitySchema
+  fullName: TicketShop.Data.Migrations.CreateIdentitySchema

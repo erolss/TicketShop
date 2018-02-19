@@ -1,0 +1,36 @@
+﻿@model TicketShop.Models.ViewModels.ShopFindViewModel
+
+
+<div class="container">
+    @if (Model.Venues == null || Model.Venues.Count() == 0)
+    {
+        <h3>The search generated no results.</h3>
+    }
+    else
+    {
+        @foreach (var m in Model.Venues)
+        {
+            <div class="media">
+                <div class="media-body">
+                    <h3 class="media-heading">
+                        @m.VenueName, @m.City
+                    </h3>
+                    <div class="well well-sm">
+                        <p>
+                            Address:<br />
+                            @m.VenueName<br />
+                            @m.Address<br />
+                            @m.City<br />
+                            @m.Country
+                        </p>
+                        <p><a asp-area="" asp-controller="Shop" asp-action="Event" class="btn btn-primary" role="button">See events at this venue</a></p>
+
+                    </div>
+                </div>
+            </div>
+
+        }
+    }
+</div>
+
+

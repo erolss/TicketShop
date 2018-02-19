@@ -10,6 +10,7 @@ items:
   - TicketApi.Db.Interface.ITransactionRepository.FindTransactions(System.String)
   - TicketApi.Db.Interface.ITransactionRepository.GetTransactionById(System.Int32)
   - TicketApi.Db.Interface.ITransactionRepository.GetTransactionByUserId(System.String)
+  - TicketApi.Db.Interface.ITransactionRepository.GetTransactions(System.Int32,System.Int32)
   - TicketApi.Db.Interface.ITransactionRepository.UpdateTransaction(TicketApi.Db.Models.Transaction)
   langs:
   - csharp
@@ -21,7 +22,7 @@ items:
   source:
     remote:
       path: src/DbRepository/Interface/ITransactionRepository.cs
-      branch: restapi
+      branch: features/ticketshop
       repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
     id: ITransactionRepository
     path: src/DbRepository/Interface/ITransactionRepository.cs
@@ -38,6 +39,44 @@ items:
   modifiers.vb:
   - Public
   - Interface
+- uid: TicketApi.Db.Interface.ITransactionRepository.GetTransactions(System.Int32,System.Int32)
+  commentId: M:TicketApi.Db.Interface.ITransactionRepository.GetTransactions(System.Int32,System.Int32)
+  id: GetTransactions(System.Int32,System.Int32)
+  parent: TicketApi.Db.Interface.ITransactionRepository
+  langs:
+  - csharp
+  - vb
+  name: GetTransactions(Int32, Int32)
+  nameWithType: ITransactionRepository.GetTransactions(Int32, Int32)
+  fullName: TicketApi.Db.Interface.ITransactionRepository.GetTransactions(System.Int32, System.Int32)
+  type: Method
+  source:
+    remote:
+      path: src/DbRepository/Interface/ITransactionRepository.cs
+      branch: features/ticketshop
+      repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
+    id: GetTransactions
+    path: src/DbRepository/Interface/ITransactionRepository.cs
+    startLine: 15
+  assemblies:
+  - DbRepository
+  namespace: TicketApi.Db.Interface
+  summary: "\nGet transactions from db\n"
+  example: []
+  syntax:
+    content: List<Transaction> GetTransactions(int offset = 0, int maxLimit = 20)
+    parameters:
+    - id: offset
+      type: System.Int32
+      description: result set offset
+    - id: maxLimit
+      type: System.Int32
+      description: Max rows to fetch
+    return:
+      type: System.Collections.Generic.List{TicketApi.Db.Models.Transaction}
+      description: A list of object representations of Transactions
+    content.vb: Function GetTransactions(offset As Integer = 0, maxLimit As Integer = 20) As List(Of Transaction)
+  overload: TicketApi.Db.Interface.ITransactionRepository.GetTransactions*
 - uid: TicketApi.Db.Interface.ITransactionRepository.GetTransactionById(System.Int32)
   commentId: M:TicketApi.Db.Interface.ITransactionRepository.GetTransactionById(System.Int32)
   id: GetTransactionById(System.Int32)
@@ -52,11 +91,11 @@ items:
   source:
     remote:
       path: src/DbRepository/Interface/ITransactionRepository.cs
-      branch: restapi
+      branch: features/ticketshop
       repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
     id: GetTransactionById
     path: src/DbRepository/Interface/ITransactionRepository.cs
-    startLine: 14
+    startLine: 21
   assemblies:
   - DbRepository
   namespace: TicketApi.Db.Interface
@@ -87,11 +126,11 @@ items:
   source:
     remote:
       path: src/DbRepository/Interface/ITransactionRepository.cs
-      branch: restapi
+      branch: features/ticketshop
       repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
     id: AddTransaction
     path: src/DbRepository/Interface/ITransactionRepository.cs
-    startLine: 21
+    startLine: 28
   assemblies:
   - DbRepository
   namespace: TicketApi.Db.Interface
@@ -122,11 +161,11 @@ items:
   source:
     remote:
       path: src/DbRepository/Interface/ITransactionRepository.cs
-      branch: restapi
+      branch: features/ticketshop
       repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
     id: UpdateTransaction
     path: src/DbRepository/Interface/ITransactionRepository.cs
-    startLine: 28
+    startLine: 35
   assemblies:
   - DbRepository
   namespace: TicketApi.Db.Interface
@@ -157,11 +196,11 @@ items:
   source:
     remote:
       path: src/DbRepository/Interface/ITransactionRepository.cs
-      branch: restapi
+      branch: features/ticketshop
       repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
     id: DeleteTransactionById
     path: src/DbRepository/Interface/ITransactionRepository.cs
-    startLine: 33
+    startLine: 40
   assemblies:
   - DbRepository
   namespace: TicketApi.Db.Interface
@@ -191,11 +230,11 @@ items:
   source:
     remote:
       path: src/DbRepository/Interface/ITransactionRepository.cs
-      branch: restapi
+      branch: features/ticketshop
       repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
     id: GetTransactionByUserId
     path: src/DbRepository/Interface/ITransactionRepository.cs
-    startLine: 40
+    startLine: 47
   assemblies:
   - DbRepository
   namespace: TicketApi.Db.Interface
@@ -226,11 +265,11 @@ items:
   source:
     remote:
       path: src/DbRepository/Interface/ITransactionRepository.cs
-      branch: restapi
+      branch: features/ticketshop
       repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
     id: FindTransactions
     path: src/DbRepository/Interface/ITransactionRepository.cs
-    startLine: 47
+    startLine: 54
   assemblies:
   - DbRepository
   namespace: TicketApi.Db.Interface
@@ -254,12 +293,12 @@ references:
   name: TicketApi.Db.Interface
   nameWithType: TicketApi.Db.Interface
   fullName: TicketApi.Db.Interface
-- uid: TicketApi.Db.Interface.ITransactionRepository.GetTransactionById*
-  commentId: Overload:TicketApi.Db.Interface.ITransactionRepository.GetTransactionById
+- uid: TicketApi.Db.Interface.ITransactionRepository.GetTransactions*
+  commentId: Overload:TicketApi.Db.Interface.ITransactionRepository.GetTransactions
   isExternal: false
-  name: GetTransactionById
-  nameWithType: ITransactionRepository.GetTransactionById
-  fullName: TicketApi.Db.Interface.ITransactionRepository.GetTransactionById
+  name: GetTransactions
+  nameWithType: ITransactionRepository.GetTransactions
+  fullName: TicketApi.Db.Interface.ITransactionRepository.GetTransactions
 - uid: System.Int32
   commentId: T:System.Int32
   parent: System
@@ -267,63 +306,6 @@ references:
   name: Int32
   nameWithType: Int32
   fullName: System.Int32
-- uid: TicketApi.Db.Models.Transaction
-  commentId: T:TicketApi.Db.Models.Transaction
-  parent: TicketApi.Db.Models
-  isExternal: false
-  name: Transaction
-  nameWithType: Transaction
-  fullName: TicketApi.Db.Models.Transaction
-- uid: System
-  commentId: N:System
-  isExternal: false
-  name: System
-  nameWithType: System
-  fullName: System
-- uid: TicketApi.Db.Models
-  commentId: N:TicketApi.Db.Models
-  isExternal: false
-  name: TicketApi.Db.Models
-  nameWithType: TicketApi.Db.Models
-  fullName: TicketApi.Db.Models
-- uid: TicketApi.Db.Interface.ITransactionRepository.AddTransaction*
-  commentId: Overload:TicketApi.Db.Interface.ITransactionRepository.AddTransaction
-  isExternal: false
-  name: AddTransaction
-  nameWithType: ITransactionRepository.AddTransaction
-  fullName: TicketApi.Db.Interface.ITransactionRepository.AddTransaction
-- uid: TicketApi.Db.Interface.ITransactionRepository.UpdateTransaction*
-  commentId: Overload:TicketApi.Db.Interface.ITransactionRepository.UpdateTransaction
-  isExternal: false
-  name: UpdateTransaction
-  nameWithType: ITransactionRepository.UpdateTransaction
-  fullName: TicketApi.Db.Interface.ITransactionRepository.UpdateTransaction
-- uid: TicketApi.Db.Interface.ITransactionRepository.DeleteTransactionById*
-  commentId: Overload:TicketApi.Db.Interface.ITransactionRepository.DeleteTransactionById
-  isExternal: false
-  name: DeleteTransactionById
-  nameWithType: ITransactionRepository.DeleteTransactionById
-  fullName: TicketApi.Db.Interface.ITransactionRepository.DeleteTransactionById
-- uid: System.Boolean
-  commentId: T:System.Boolean
-  parent: System
-  isExternal: true
-  name: Boolean
-  nameWithType: Boolean
-  fullName: System.Boolean
-- uid: TicketApi.Db.Interface.ITransactionRepository.GetTransactionByUserId*
-  commentId: Overload:TicketApi.Db.Interface.ITransactionRepository.GetTransactionByUserId
-  isExternal: false
-  name: GetTransactionByUserId
-  nameWithType: ITransactionRepository.GetTransactionByUserId
-  fullName: TicketApi.Db.Interface.ITransactionRepository.GetTransactionByUserId
-- uid: System.String
-  commentId: T:System.String
-  parent: System
-  isExternal: true
-  name: String
-  nameWithType: String
-  fullName: System.String
 - uid: System.Collections.Generic.List{TicketApi.Db.Models.Transaction}
   commentId: T:System.Collections.Generic.List{TicketApi.Db.Models.Transaction}
   parent: System.Collections.Generic
@@ -366,6 +348,12 @@ references:
   - name: )
     nameWithType: )
     fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: false
+  name: System
+  nameWithType: System
+  fullName: System
 - uid: System.Collections.Generic.List`1
   commentId: T:System.Collections.Generic.List`1
   isExternal: true
@@ -411,6 +399,63 @@ references:
   name: System.Collections.Generic
   nameWithType: System.Collections.Generic
   fullName: System.Collections.Generic
+- uid: TicketApi.Db.Interface.ITransactionRepository.GetTransactionById*
+  commentId: Overload:TicketApi.Db.Interface.ITransactionRepository.GetTransactionById
+  isExternal: false
+  name: GetTransactionById
+  nameWithType: ITransactionRepository.GetTransactionById
+  fullName: TicketApi.Db.Interface.ITransactionRepository.GetTransactionById
+- uid: TicketApi.Db.Models.Transaction
+  commentId: T:TicketApi.Db.Models.Transaction
+  parent: TicketApi.Db.Models
+  isExternal: false
+  name: Transaction
+  nameWithType: Transaction
+  fullName: TicketApi.Db.Models.Transaction
+- uid: TicketApi.Db.Models
+  commentId: N:TicketApi.Db.Models
+  isExternal: false
+  name: TicketApi.Db.Models
+  nameWithType: TicketApi.Db.Models
+  fullName: TicketApi.Db.Models
+- uid: TicketApi.Db.Interface.ITransactionRepository.AddTransaction*
+  commentId: Overload:TicketApi.Db.Interface.ITransactionRepository.AddTransaction
+  isExternal: false
+  name: AddTransaction
+  nameWithType: ITransactionRepository.AddTransaction
+  fullName: TicketApi.Db.Interface.ITransactionRepository.AddTransaction
+- uid: TicketApi.Db.Interface.ITransactionRepository.UpdateTransaction*
+  commentId: Overload:TicketApi.Db.Interface.ITransactionRepository.UpdateTransaction
+  isExternal: false
+  name: UpdateTransaction
+  nameWithType: ITransactionRepository.UpdateTransaction
+  fullName: TicketApi.Db.Interface.ITransactionRepository.UpdateTransaction
+- uid: TicketApi.Db.Interface.ITransactionRepository.DeleteTransactionById*
+  commentId: Overload:TicketApi.Db.Interface.ITransactionRepository.DeleteTransactionById
+  isExternal: false
+  name: DeleteTransactionById
+  nameWithType: ITransactionRepository.DeleteTransactionById
+  fullName: TicketApi.Db.Interface.ITransactionRepository.DeleteTransactionById
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: TicketApi.Db.Interface.ITransactionRepository.GetTransactionByUserId*
+  commentId: Overload:TicketApi.Db.Interface.ITransactionRepository.GetTransactionByUserId
+  isExternal: false
+  name: GetTransactionByUserId
+  nameWithType: ITransactionRepository.GetTransactionByUserId
+  fullName: TicketApi.Db.Interface.ITransactionRepository.GetTransactionByUserId
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
 - uid: TicketApi.Db.Interface.ITransactionRepository.FindTransactions*
   commentId: Overload:TicketApi.Db.Interface.ITransactionRepository.FindTransactions
   isExternal: false

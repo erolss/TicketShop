@@ -13,6 +13,7 @@ items:
   - TicketApi.Db.Models.Venue.GetHashCode
   - TicketApi.Db.Models.Venue.op_Equality(TicketApi.Db.Models.Venue,TicketApi.Db.Models.Venue)
   - TicketApi.Db.Models.Venue.op_Inequality(TicketApi.Db.Models.Venue,TicketApi.Db.Models.Venue)
+  - TicketApi.Db.Models.Venue.ToJson
   - TicketApi.Db.Models.Venue.ToString
   - TicketApi.Db.Models.Venue.VenueID
   - TicketApi.Db.Models.Venue.VenueName
@@ -26,11 +27,11 @@ items:
   source:
     remote:
       path: src/DbRepository/Models/Venue.cs
-      branch: restapi
+      branch: features/ticketshop
       repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
     id: Venue
     path: src/DbRepository/Models/Venue.cs
-    startLine: 9
+    startLine: 10
   assemblies:
   - DbRepository
   namespace: TicketApi.Db.Models
@@ -79,11 +80,11 @@ items:
   source:
     remote:
       path: src/DbRepository/Models/Venue.cs
-      branch: restapi
+      branch: features/ticketshop
       repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
     id: VenueID
     path: src/DbRepository/Models/Venue.cs
-    startLine: 15
+    startLine: 16
   assemblies:
   - DbRepository
   namespace: TicketApi.Db.Models
@@ -130,11 +131,11 @@ items:
   source:
     remote:
       path: src/DbRepository/Models/Venue.cs
-      branch: restapi
+      branch: features/ticketshop
       repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
     id: VenueName
     path: src/DbRepository/Models/Venue.cs
-    startLine: 21
+    startLine: 22
   assemblies:
   - DbRepository
   namespace: TicketApi.Db.Models
@@ -181,11 +182,11 @@ items:
   source:
     remote:
       path: src/DbRepository/Models/Venue.cs
-      branch: restapi
+      branch: features/ticketshop
       repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
     id: Address
     path: src/DbRepository/Models/Venue.cs
-    startLine: 27
+    startLine: 28
   assemblies:
   - DbRepository
   namespace: TicketApi.Db.Models
@@ -232,11 +233,11 @@ items:
   source:
     remote:
       path: src/DbRepository/Models/Venue.cs
-      branch: restapi
+      branch: features/ticketshop
       repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
     id: City
     path: src/DbRepository/Models/Venue.cs
-    startLine: 33
+    startLine: 34
   assemblies:
   - DbRepository
   namespace: TicketApi.Db.Models
@@ -283,11 +284,11 @@ items:
   source:
     remote:
       path: src/DbRepository/Models/Venue.cs
-      branch: restapi
+      branch: features/ticketshop
       repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
     id: Country
     path: src/DbRepository/Models/Venue.cs
-    startLine: 39
+    startLine: 40
   assemblies:
   - DbRepository
   namespace: TicketApi.Db.Models
@@ -334,11 +335,11 @@ items:
   source:
     remote:
       path: src/DbRepository/Models/Venue.cs
-      branch: restapi
+      branch: features/ticketshop
       repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
     id: ToString
     path: src/DbRepository/Models/Venue.cs
-    startLine: 46
+    startLine: 47
   assemblies:
   - DbRepository
   namespace: TicketApi.Db.Models
@@ -358,6 +359,41 @@ items:
   modifiers.vb:
   - Public
   - Overrides
+- uid: TicketApi.Db.Models.Venue.ToJson
+  commentId: M:TicketApi.Db.Models.Venue.ToJson
+  id: ToJson
+  parent: TicketApi.Db.Models.Venue
+  langs:
+  - csharp
+  - vb
+  name: ToJson()
+  nameWithType: Venue.ToJson()
+  fullName: TicketApi.Db.Models.Venue.ToJson()
+  type: Method
+  source:
+    remote:
+      path: src/DbRepository/Models/Venue.cs
+      branch: features/ticketshop
+      repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
+    id: ToJson
+    path: src/DbRepository/Models/Venue.cs
+    startLine: 64
+  assemblies:
+  - DbRepository
+  namespace: TicketApi.Db.Models
+  summary: "\nReturns the JSON string presentation of the object\n"
+  example: []
+  syntax:
+    content: public string ToJson()
+    return:
+      type: System.String
+      description: JSON string presentation of the object
+    content.vb: Public Function ToJson As String
+  overload: TicketApi.Db.Models.Venue.ToJson*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
 - uid: TicketApi.Db.Models.Venue.Equals(System.Object)
   commentId: M:TicketApi.Db.Models.Venue.Equals(System.Object)
   id: Equals(System.Object)
@@ -372,11 +408,11 @@ items:
   source:
     remote:
       path: src/DbRepository/Models/Venue.cs
-      branch: restapi
+      branch: features/ticketshop
       repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
     id: Equals
     path: src/DbRepository/Models/Venue.cs
-    startLine: 73
+    startLine: 74
   assemblies:
   - DbRepository
   namespace: TicketApi.Db.Models
@@ -414,11 +450,11 @@ items:
   source:
     remote:
       path: src/DbRepository/Models/Venue.cs
-      branch: restapi
+      branch: features/ticketshop
       repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
     id: Equals
     path: src/DbRepository/Models/Venue.cs
-    startLine: 87
+    startLine: 88
   assemblies:
   - DbRepository
   namespace: TicketApi.Db.Models
@@ -455,11 +491,11 @@ items:
   source:
     remote:
       path: src/DbRepository/Models/Venue.cs
-      branch: restapi
+      branch: features/ticketshop
       repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
     id: GetHashCode
     path: src/DbRepository/Models/Venue.cs
-    startLine: 126
+    startLine: 127
   assemblies:
   - DbRepository
   namespace: TicketApi.Db.Models
@@ -493,11 +529,11 @@ items:
   source:
     remote:
       path: src/DbRepository/Models/Venue.cs
-      branch: restapi
+      branch: features/ticketshop
       repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
     id: op_Equality
     path: src/DbRepository/Models/Venue.cs
-    startLine: 149
+    startLine: 150
   assemblies:
   - DbRepository
   namespace: TicketApi.Db.Models
@@ -532,11 +568,11 @@ items:
   source:
     remote:
       path: src/DbRepository/Models/Venue.cs
-      branch: restapi
+      branch: features/ticketshop
       repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
     id: op_Inequality
     path: src/DbRepository/Models/Venue.cs
-    startLine: 154
+    startLine: 155
   assemblies:
   - DbRepository
   namespace: TicketApi.Db.Models
@@ -991,6 +1027,12 @@ references:
   name: ToString
   nameWithType: Venue.ToString
   fullName: TicketApi.Db.Models.Venue.ToString
+- uid: TicketApi.Db.Models.Venue.ToJson*
+  commentId: Overload:TicketApi.Db.Models.Venue.ToJson
+  isExternal: false
+  name: ToJson
+  nameWithType: Venue.ToJson
+  fullName: TicketApi.Db.Models.Venue.ToJson
 - uid: System.Object.Equals(System.Object)
   commentId: M:System.Object.Equals(System.Object)
   parent: System.Object

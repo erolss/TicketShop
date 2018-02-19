@@ -1,0 +1,1003 @@
+### YamlMime:ManagedReference
+items:
+- uid: TicketShop.RestApiClient.Model.Transaction
+  commentId: T:TicketShop.RestApiClient.Model.Transaction
+  id: Transaction
+  parent: TicketShop.RestApiClient.Model
+  children:
+  - TicketShop.RestApiClient.Model.Transaction.BuyerAddress
+  - TicketShop.RestApiClient.Model.Transaction.BuyerCity
+  - TicketShop.RestApiClient.Model.Transaction.BuyerEmail
+  - TicketShop.RestApiClient.Model.Transaction.BuyerFirstName
+  - TicketShop.RestApiClient.Model.Transaction.BuyerLastName
+  - TicketShop.RestApiClient.Model.Transaction.BuyerUserId
+  - TicketShop.RestApiClient.Model.Transaction.PaymentReference
+  - TicketShop.RestApiClient.Model.Transaction.PaymentStatus
+  - TicketShop.RestApiClient.Model.Transaction.ToJson
+  - TicketShop.RestApiClient.Model.Transaction.ToString
+  - TicketShop.RestApiClient.Model.Transaction.TotalAmount
+  - TicketShop.RestApiClient.Model.Transaction.TransactionID
+  langs:
+  - csharp
+  - vb
+  name: Transaction
+  nameWithType: Transaction
+  fullName: TicketShop.RestApiClient.Model.Transaction
+  type: Class
+  source:
+    remote:
+      path: src/RestApiClient/Model/Transaction.cs
+      branch: features/ticketshop
+      repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
+    id: Transaction
+    path: src/RestApiClient/Model/Transaction.cs
+    startLine: 5
+  assemblies:
+  - RestApiClient
+  namespace: TicketShop.RestApiClient.Model
+  syntax:
+    content: public class Transaction
+    content.vb: Public Class Transaction
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: TicketShop.RestApiClient.Model.Transaction.TransactionID
+  commentId: P:TicketShop.RestApiClient.Model.Transaction.TransactionID
+  id: TransactionID
+  parent: TicketShop.RestApiClient.Model.Transaction
+  langs:
+  - csharp
+  - vb
+  name: TransactionID
+  nameWithType: Transaction.TransactionID
+  fullName: TicketShop.RestApiClient.Model.Transaction.TransactionID
+  type: Property
+  source:
+    remote:
+      path: src/RestApiClient/Model/Transaction.cs
+      branch: features/ticketshop
+      repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
+    id: TransactionID
+    path: src/RestApiClient/Model/Transaction.cs
+    startLine: 10
+  assemblies:
+  - RestApiClient
+  namespace: TicketShop.RestApiClient.Model
+  summary: "\nGets or Sets TransactionID\n"
+  example: []
+  syntax:
+    content: public int ? TransactionID { get; set; }
+    parameters: []
+    return:
+      type: System.Nullable{System.Int32}
+    content.vb: Public Property TransactionID As Integer?
+  overload: TicketShop.RestApiClient.Model.Transaction.TransactionID*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: TicketShop.RestApiClient.Model.Transaction.BuyerLastName
+  commentId: P:TicketShop.RestApiClient.Model.Transaction.BuyerLastName
+  id: BuyerLastName
+  parent: TicketShop.RestApiClient.Model.Transaction
+  langs:
+  - csharp
+  - vb
+  name: BuyerLastName
+  nameWithType: Transaction.BuyerLastName
+  fullName: TicketShop.RestApiClient.Model.Transaction.BuyerLastName
+  type: Property
+  source:
+    remote:
+      path: src/RestApiClient/Model/Transaction.cs
+      branch: features/ticketshop
+      repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
+    id: BuyerLastName
+    path: src/RestApiClient/Model/Transaction.cs
+    startLine: 15
+  assemblies:
+  - RestApiClient
+  namespace: TicketShop.RestApiClient.Model
+  summary: "\nGets or Sets BuyerLastName\n"
+  example: []
+  syntax:
+    content: public string BuyerLastName { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property BuyerLastName As String
+  overload: TicketShop.RestApiClient.Model.Transaction.BuyerLastName*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: TicketShop.RestApiClient.Model.Transaction.BuyerFirstName
+  commentId: P:TicketShop.RestApiClient.Model.Transaction.BuyerFirstName
+  id: BuyerFirstName
+  parent: TicketShop.RestApiClient.Model.Transaction
+  langs:
+  - csharp
+  - vb
+  name: BuyerFirstName
+  nameWithType: Transaction.BuyerFirstName
+  fullName: TicketShop.RestApiClient.Model.Transaction.BuyerFirstName
+  type: Property
+  source:
+    remote:
+      path: src/RestApiClient/Model/Transaction.cs
+      branch: features/ticketshop
+      repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
+    id: BuyerFirstName
+    path: src/RestApiClient/Model/Transaction.cs
+    startLine: 20
+  assemblies:
+  - RestApiClient
+  namespace: TicketShop.RestApiClient.Model
+  summary: "\nGets or Sets BuyerFirstName\n"
+  example: []
+  syntax:
+    content: public string BuyerFirstName { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property BuyerFirstName As String
+  overload: TicketShop.RestApiClient.Model.Transaction.BuyerFirstName*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: TicketShop.RestApiClient.Model.Transaction.BuyerAddress
+  commentId: P:TicketShop.RestApiClient.Model.Transaction.BuyerAddress
+  id: BuyerAddress
+  parent: TicketShop.RestApiClient.Model.Transaction
+  langs:
+  - csharp
+  - vb
+  name: BuyerAddress
+  nameWithType: Transaction.BuyerAddress
+  fullName: TicketShop.RestApiClient.Model.Transaction.BuyerAddress
+  type: Property
+  source:
+    remote:
+      path: src/RestApiClient/Model/Transaction.cs
+      branch: features/ticketshop
+      repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
+    id: BuyerAddress
+    path: src/RestApiClient/Model/Transaction.cs
+    startLine: 25
+  assemblies:
+  - RestApiClient
+  namespace: TicketShop.RestApiClient.Model
+  summary: "\nGets or Sets BuyerAddress\n"
+  example: []
+  syntax:
+    content: public string BuyerAddress { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property BuyerAddress As String
+  overload: TicketShop.RestApiClient.Model.Transaction.BuyerAddress*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: TicketShop.RestApiClient.Model.Transaction.BuyerCity
+  commentId: P:TicketShop.RestApiClient.Model.Transaction.BuyerCity
+  id: BuyerCity
+  parent: TicketShop.RestApiClient.Model.Transaction
+  langs:
+  - csharp
+  - vb
+  name: BuyerCity
+  nameWithType: Transaction.BuyerCity
+  fullName: TicketShop.RestApiClient.Model.Transaction.BuyerCity
+  type: Property
+  source:
+    remote:
+      path: src/RestApiClient/Model/Transaction.cs
+      branch: features/ticketshop
+      repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
+    id: BuyerCity
+    path: src/RestApiClient/Model/Transaction.cs
+    startLine: 30
+  assemblies:
+  - RestApiClient
+  namespace: TicketShop.RestApiClient.Model
+  summary: "\nGets or Sets BuyerCity\n"
+  example: []
+  syntax:
+    content: public string BuyerCity { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property BuyerCity As String
+  overload: TicketShop.RestApiClient.Model.Transaction.BuyerCity*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: TicketShop.RestApiClient.Model.Transaction.PaymentStatus
+  commentId: P:TicketShop.RestApiClient.Model.Transaction.PaymentStatus
+  id: PaymentStatus
+  parent: TicketShop.RestApiClient.Model.Transaction
+  langs:
+  - csharp
+  - vb
+  name: PaymentStatus
+  nameWithType: Transaction.PaymentStatus
+  fullName: TicketShop.RestApiClient.Model.Transaction.PaymentStatus
+  type: Property
+  source:
+    remote:
+      path: src/RestApiClient/Model/Transaction.cs
+      branch: features/ticketshop
+      repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
+    id: PaymentStatus
+    path: src/RestApiClient/Model/Transaction.cs
+    startLine: 35
+  assemblies:
+  - RestApiClient
+  namespace: TicketShop.RestApiClient.Model
+  summary: "\nGets or Sets PaymentStatus\n"
+  example: []
+  syntax:
+    content: public string PaymentStatus { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property PaymentStatus As String
+  overload: TicketShop.RestApiClient.Model.Transaction.PaymentStatus*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: TicketShop.RestApiClient.Model.Transaction.PaymentReference
+  commentId: P:TicketShop.RestApiClient.Model.Transaction.PaymentReference
+  id: PaymentReference
+  parent: TicketShop.RestApiClient.Model.Transaction
+  langs:
+  - csharp
+  - vb
+  name: PaymentReference
+  nameWithType: Transaction.PaymentReference
+  fullName: TicketShop.RestApiClient.Model.Transaction.PaymentReference
+  type: Property
+  source:
+    remote:
+      path: src/RestApiClient/Model/Transaction.cs
+      branch: features/ticketshop
+      repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
+    id: PaymentReference
+    path: src/RestApiClient/Model/Transaction.cs
+    startLine: 40
+  assemblies:
+  - RestApiClient
+  namespace: TicketShop.RestApiClient.Model
+  summary: "\nGets or Sets PaymentReference\n"
+  example: []
+  syntax:
+    content: public string PaymentReference { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property PaymentReference As String
+  overload: TicketShop.RestApiClient.Model.Transaction.PaymentReference*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: TicketShop.RestApiClient.Model.Transaction.BuyerEmail
+  commentId: P:TicketShop.RestApiClient.Model.Transaction.BuyerEmail
+  id: BuyerEmail
+  parent: TicketShop.RestApiClient.Model.Transaction
+  langs:
+  - csharp
+  - vb
+  name: BuyerEmail
+  nameWithType: Transaction.BuyerEmail
+  fullName: TicketShop.RestApiClient.Model.Transaction.BuyerEmail
+  type: Property
+  source:
+    remote:
+      path: src/RestApiClient/Model/Transaction.cs
+      branch: features/ticketshop
+      repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
+    id: BuyerEmail
+    path: src/RestApiClient/Model/Transaction.cs
+    startLine: 45
+  assemblies:
+  - RestApiClient
+  namespace: TicketShop.RestApiClient.Model
+  summary: "\nGets or Sets BuyerEmail\n"
+  example: []
+  syntax:
+    content: public string BuyerEmail { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property BuyerEmail As String
+  overload: TicketShop.RestApiClient.Model.Transaction.BuyerEmail*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: TicketShop.RestApiClient.Model.Transaction.BuyerUserId
+  commentId: P:TicketShop.RestApiClient.Model.Transaction.BuyerUserId
+  id: BuyerUserId
+  parent: TicketShop.RestApiClient.Model.Transaction
+  langs:
+  - csharp
+  - vb
+  name: BuyerUserId
+  nameWithType: Transaction.BuyerUserId
+  fullName: TicketShop.RestApiClient.Model.Transaction.BuyerUserId
+  type: Property
+  source:
+    remote:
+      path: src/RestApiClient/Model/Transaction.cs
+      branch: features/ticketshop
+      repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
+    id: BuyerUserId
+    path: src/RestApiClient/Model/Transaction.cs
+    startLine: 50
+  assemblies:
+  - RestApiClient
+  namespace: TicketShop.RestApiClient.Model
+  summary: "\nGets or Sets BuyerUserId\n"
+  example: []
+  syntax:
+    content: public string BuyerUserId { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property BuyerUserId As String
+  overload: TicketShop.RestApiClient.Model.Transaction.BuyerUserId*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: TicketShop.RestApiClient.Model.Transaction.TotalAmount
+  commentId: P:TicketShop.RestApiClient.Model.Transaction.TotalAmount
+  id: TotalAmount
+  parent: TicketShop.RestApiClient.Model.Transaction
+  langs:
+  - csharp
+  - vb
+  name: TotalAmount
+  nameWithType: Transaction.TotalAmount
+  fullName: TicketShop.RestApiClient.Model.Transaction.TotalAmount
+  type: Property
+  source:
+    remote:
+      path: src/RestApiClient/Model/Transaction.cs
+      branch: features/ticketshop
+      repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
+    id: TotalAmount
+    path: src/RestApiClient/Model/Transaction.cs
+    startLine: 55
+  assemblies:
+  - RestApiClient
+  namespace: TicketShop.RestApiClient.Model
+  summary: "\nGets or Sets TotalAmout\n"
+  example: []
+  syntax:
+    content: public double ? TotalAmount { get; set; }
+    parameters: []
+    return:
+      type: System.Nullable{System.Double}
+    content.vb: Public Property TotalAmount As Double?
+  overload: TicketShop.RestApiClient.Model.Transaction.TotalAmount*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: TicketShop.RestApiClient.Model.Transaction.ToString
+  commentId: M:TicketShop.RestApiClient.Model.Transaction.ToString
+  id: ToString
+  parent: TicketShop.RestApiClient.Model.Transaction
+  langs:
+  - csharp
+  - vb
+  name: ToString()
+  nameWithType: Transaction.ToString()
+  fullName: TicketShop.RestApiClient.Model.Transaction.ToString()
+  type: Method
+  source:
+    remote:
+      path: src/RestApiClient/Model/Transaction.cs
+      branch: features/ticketshop
+      repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
+    id: ToString
+    path: src/RestApiClient/Model/Transaction.cs
+    startLine: 61
+  assemblies:
+  - RestApiClient
+  namespace: TicketShop.RestApiClient.Model
+  summary: "\nReturns the string presentation of the object\n"
+  example: []
+  syntax:
+    content: public override string ToString()
+    return:
+      type: System.String
+      description: String presentation of the object
+    content.vb: Public Overrides Function ToString As String
+  overridden: System.Object.ToString
+  overload: TicketShop.RestApiClient.Model.Transaction.ToString*
+  modifiers.csharp:
+  - public
+  - override
+  modifiers.vb:
+  - Public
+  - Overrides
+- uid: TicketShop.RestApiClient.Model.Transaction.ToJson
+  commentId: M:TicketShop.RestApiClient.Model.Transaction.ToJson
+  id: ToJson
+  parent: TicketShop.RestApiClient.Model.Transaction
+  langs:
+  - csharp
+  - vb
+  name: ToJson()
+  nameWithType: Transaction.ToJson()
+  fullName: TicketShop.RestApiClient.Model.Transaction.ToJson()
+  type: Method
+  source:
+    remote:
+      path: src/RestApiClient/Model/Transaction.cs
+      branch: features/ticketshop
+      repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
+    id: ToJson
+    path: src/RestApiClient/Model/Transaction.cs
+    startLine: 83
+  assemblies:
+  - RestApiClient
+  namespace: TicketShop.RestApiClient.Model
+  summary: "\nReturns the JSON string presentation of the object\n"
+  example: []
+  syntax:
+    content: public string ToJson()
+    return:
+      type: System.String
+      description: JSON string presentation of the object
+    content.vb: Public Function ToJson As String
+  overload: TicketShop.RestApiClient.Model.Transaction.ToJson*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+references:
+- uid: TicketShop.RestApiClient.Model
+  commentId: N:TicketShop.RestApiClient.Model
+  isExternal: false
+  name: TicketShop.RestApiClient.Model
+  nameWithType: TicketShop.RestApiClient.Model
+  fullName: TicketShop.RestApiClient.Model
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: false
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: TicketShop.RestApiClient.Model.Transaction.TransactionID*
+  commentId: Overload:TicketShop.RestApiClient.Model.Transaction.TransactionID
+  isExternal: false
+  name: TransactionID
+  nameWithType: Transaction.TransactionID
+  fullName: TicketShop.RestApiClient.Model.Transaction.TransactionID
+- uid: System.Nullable{System.Int32}
+  commentId: T:System.Nullable{System.Int32}
+  parent: System
+  definition: System.Nullable`1
+  name: Nullable<Int32>
+  nameWithType: Nullable<Int32>
+  fullName: System.Nullable<System.Int32>
+  nameWithType.vb: Nullable(Of Int32)
+  fullName.vb: System.Nullable(Of System.Int32)
+  name.vb: Nullable(Of Int32)
+  spec.csharp:
+  - uid: System.Nullable`1
+    name: Nullable
+    nameWithType: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.Int32
+    name: Int32
+    nameWithType: Int32
+    fullName: System.Int32
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Nullable`1
+    name: Nullable
+    nameWithType: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.Int32
+    name: Int32
+    nameWithType: Int32
+    fullName: System.Int32
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Nullable`1
+  commentId: T:System.Nullable`1
+  isExternal: true
+  name: Nullable<T>
+  nameWithType: Nullable<T>
+  fullName: System.Nullable<T>
+  nameWithType.vb: Nullable(Of T)
+  fullName.vb: System.Nullable(Of T)
+  name.vb: Nullable(Of T)
+  spec.csharp:
+  - uid: System.Nullable`1
+    name: Nullable
+    nameWithType: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Nullable`1
+    name: Nullable
+    nameWithType: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: TicketShop.RestApiClient.Model.Transaction.BuyerLastName*
+  commentId: Overload:TicketShop.RestApiClient.Model.Transaction.BuyerLastName
+  isExternal: false
+  name: BuyerLastName
+  nameWithType: Transaction.BuyerLastName
+  fullName: TicketShop.RestApiClient.Model.Transaction.BuyerLastName
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: TicketShop.RestApiClient.Model.Transaction.BuyerFirstName*
+  commentId: Overload:TicketShop.RestApiClient.Model.Transaction.BuyerFirstName
+  isExternal: false
+  name: BuyerFirstName
+  nameWithType: Transaction.BuyerFirstName
+  fullName: TicketShop.RestApiClient.Model.Transaction.BuyerFirstName
+- uid: TicketShop.RestApiClient.Model.Transaction.BuyerAddress*
+  commentId: Overload:TicketShop.RestApiClient.Model.Transaction.BuyerAddress
+  isExternal: false
+  name: BuyerAddress
+  nameWithType: Transaction.BuyerAddress
+  fullName: TicketShop.RestApiClient.Model.Transaction.BuyerAddress
+- uid: TicketShop.RestApiClient.Model.Transaction.BuyerCity*
+  commentId: Overload:TicketShop.RestApiClient.Model.Transaction.BuyerCity
+  isExternal: false
+  name: BuyerCity
+  nameWithType: Transaction.BuyerCity
+  fullName: TicketShop.RestApiClient.Model.Transaction.BuyerCity
+- uid: TicketShop.RestApiClient.Model.Transaction.PaymentStatus*
+  commentId: Overload:TicketShop.RestApiClient.Model.Transaction.PaymentStatus
+  isExternal: false
+  name: PaymentStatus
+  nameWithType: Transaction.PaymentStatus
+  fullName: TicketShop.RestApiClient.Model.Transaction.PaymentStatus
+- uid: TicketShop.RestApiClient.Model.Transaction.PaymentReference*
+  commentId: Overload:TicketShop.RestApiClient.Model.Transaction.PaymentReference
+  isExternal: false
+  name: PaymentReference
+  nameWithType: Transaction.PaymentReference
+  fullName: TicketShop.RestApiClient.Model.Transaction.PaymentReference
+- uid: TicketShop.RestApiClient.Model.Transaction.BuyerEmail*
+  commentId: Overload:TicketShop.RestApiClient.Model.Transaction.BuyerEmail
+  isExternal: false
+  name: BuyerEmail
+  nameWithType: Transaction.BuyerEmail
+  fullName: TicketShop.RestApiClient.Model.Transaction.BuyerEmail
+- uid: TicketShop.RestApiClient.Model.Transaction.BuyerUserId*
+  commentId: Overload:TicketShop.RestApiClient.Model.Transaction.BuyerUserId
+  isExternal: false
+  name: BuyerUserId
+  nameWithType: Transaction.BuyerUserId
+  fullName: TicketShop.RestApiClient.Model.Transaction.BuyerUserId
+- uid: TicketShop.RestApiClient.Model.Transaction.TotalAmount*
+  commentId: Overload:TicketShop.RestApiClient.Model.Transaction.TotalAmount
+  isExternal: false
+  name: TotalAmount
+  nameWithType: Transaction.TotalAmount
+  fullName: TicketShop.RestApiClient.Model.Transaction.TotalAmount
+- uid: System.Nullable{System.Double}
+  commentId: T:System.Nullable{System.Double}
+  parent: System
+  definition: System.Nullable`1
+  name: Nullable<Double>
+  nameWithType: Nullable<Double>
+  fullName: System.Nullable<System.Double>
+  nameWithType.vb: Nullable(Of Double)
+  fullName.vb: System.Nullable(Of System.Double)
+  name.vb: Nullable(Of Double)
+  spec.csharp:
+  - uid: System.Nullable`1
+    name: Nullable
+    nameWithType: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.Double
+    name: Double
+    nameWithType: Double
+    fullName: System.Double
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Nullable`1
+    name: Nullable
+    nameWithType: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.Double
+    name: Double
+    nameWithType: Double
+    fullName: System.Double
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: TicketShop.RestApiClient.Model.Transaction.ToString*
+  commentId: Overload:TicketShop.RestApiClient.Model.Transaction.ToString
+  isExternal: false
+  name: ToString
+  nameWithType: Transaction.ToString
+  fullName: TicketShop.RestApiClient.Model.Transaction.ToString
+- uid: TicketShop.RestApiClient.Model.Transaction.ToJson*
+  commentId: Overload:TicketShop.RestApiClient.Model.Transaction.ToJson
+  isExternal: false
+  name: ToJson
+  nameWithType: Transaction.ToJson
+  fullName: TicketShop.RestApiClient.Model.Transaction.ToJson

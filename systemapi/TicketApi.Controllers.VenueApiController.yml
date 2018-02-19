@@ -5,12 +5,12 @@ items:
   id: VenueApiController
   parent: TicketApi.Controllers
   children:
-  - TicketApi.Controllers.VenueApiController.#ctor(Microsoft.Extensions.Options.IOptions{TicketApi.Settings.DbSettings})
+  - TicketApi.Controllers.VenueApiController.#ctor(Microsoft.Extensions.Options.IOptions{TicketApi.Settings.CustomSettings})
   - TicketApi.Controllers.VenueApiController.AddVenue(TicketApi.Db.Models.Venue)
   - TicketApi.Controllers.VenueApiController.DeleteVenue(TicketApi.Db.Models.Venue)
   - TicketApi.Controllers.VenueApiController.FindVenues(TicketApi.Db.Models.Search)
   - TicketApi.Controllers.VenueApiController.GetVenueById(System.Nullable{System.Int32})
-  - TicketApi.Controllers.VenueApiController.GetVenues
+  - TicketApi.Controllers.VenueApiController.GetVenues(System.Int32,System.Int32)
   - TicketApi.Controllers.VenueApiController.UpdateVenue(TicketApi.Db.Models.Venue)
   langs:
   - csharp
@@ -22,7 +22,7 @@ items:
   source:
     remote:
       path: src/TicketApi/Controllers/VenueApi.cs
-      branch: restapi
+      branch: features/ticketshop
       repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
     id: VenueApiController
     path: src/TicketApi/Controllers/VenueApi.cs
@@ -220,21 +220,21 @@ items:
   modifiers.vb:
   - Public
   - Class
-- uid: TicketApi.Controllers.VenueApiController.#ctor(Microsoft.Extensions.Options.IOptions{TicketApi.Settings.DbSettings})
-  commentId: M:TicketApi.Controllers.VenueApiController.#ctor(Microsoft.Extensions.Options.IOptions{TicketApi.Settings.DbSettings})
-  id: '#ctor(Microsoft.Extensions.Options.IOptions{TicketApi.Settings.DbSettings})'
+- uid: TicketApi.Controllers.VenueApiController.#ctor(Microsoft.Extensions.Options.IOptions{TicketApi.Settings.CustomSettings})
+  commentId: M:TicketApi.Controllers.VenueApiController.#ctor(Microsoft.Extensions.Options.IOptions{TicketApi.Settings.CustomSettings})
+  id: '#ctor(Microsoft.Extensions.Options.IOptions{TicketApi.Settings.CustomSettings})'
   parent: TicketApi.Controllers.VenueApiController
   langs:
   - csharp
   - vb
-  name: VenueApiController(IOptions<DbSettings>)
-  nameWithType: VenueApiController.VenueApiController(IOptions<DbSettings>)
-  fullName: TicketApi.Controllers.VenueApiController.VenueApiController(Microsoft.Extensions.Options.IOptions<TicketApi.Settings.DbSettings>)
+  name: VenueApiController(IOptions<CustomSettings>)
+  nameWithType: VenueApiController.VenueApiController(IOptions<CustomSettings>)
+  fullName: TicketApi.Controllers.VenueApiController.VenueApiController(Microsoft.Extensions.Options.IOptions<TicketApi.Settings.CustomSettings>)
   type: Constructor
   source:
     remote:
       path: src/TicketApi/Controllers/VenueApi.cs
-      branch: restapi
+      branch: features/ticketshop
       repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
     id: .ctor
     path: src/TicketApi/Controllers/VenueApi.cs
@@ -243,19 +243,19 @@ items:
   - TicketApi
   namespace: TicketApi.Controllers
   syntax:
-    content: public VenueApiController(IOptions<DbSettings> db)
+    content: public VenueApiController(IOptions<CustomSettings> db)
     parameters:
     - id: db
-      type: Microsoft.Extensions.Options.IOptions{TicketApi.Settings.DbSettings}
-    content.vb: Public Sub New(db As IOptions(Of DbSettings))
+      type: Microsoft.Extensions.Options.IOptions{TicketApi.Settings.CustomSettings}
+    content.vb: Public Sub New(db As IOptions(Of CustomSettings))
   overload: TicketApi.Controllers.VenueApiController.#ctor*
-  nameWithType.vb: VenueApiController.VenueApiController(IOptions(Of DbSettings))
+  nameWithType.vb: VenueApiController.VenueApiController(IOptions(Of CustomSettings))
   modifiers.csharp:
   - public
   modifiers.vb:
   - Public
-  fullName.vb: TicketApi.Controllers.VenueApiController.VenueApiController(Microsoft.Extensions.Options.IOptions(Of TicketApi.Settings.DbSettings))
-  name.vb: VenueApiController(IOptions(Of DbSettings))
+  fullName.vb: TicketApi.Controllers.VenueApiController.VenueApiController(Microsoft.Extensions.Options.IOptions(Of TicketApi.Settings.CustomSettings))
+  name.vb: VenueApiController(IOptions(Of CustomSettings))
 - uid: TicketApi.Controllers.VenueApiController.AddVenue(TicketApi.Db.Models.Venue)
   commentId: M:TicketApi.Controllers.VenueApiController.AddVenue(TicketApi.Db.Models.Venue)
   id: AddVenue(TicketApi.Db.Models.Venue)
@@ -270,7 +270,7 @@ items:
   source:
     remote:
       path: src/TicketApi/Controllers/VenueApi.cs
-      branch: restapi
+      branch: features/ticketshop
       repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
     id: AddVenue
     path: src/TicketApi/Controllers/VenueApi.cs
@@ -369,7 +369,7 @@ items:
   source:
     remote:
       path: src/TicketApi/Controllers/VenueApi.cs
-      branch: restapi
+      branch: features/ticketshop
       repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
     id: DeleteVenue
     path: src/TicketApi/Controllers/VenueApi.cs
@@ -468,7 +468,7 @@ items:
   source:
     remote:
       path: src/TicketApi/Controllers/VenueApi.cs
-      branch: restapi
+      branch: features/ticketshop
       repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
     id: FindVenues
     path: src/TicketApi/Controllers/VenueApi.cs
@@ -481,7 +481,7 @@ items:
   example: []
   syntax:
     content: >-
-      [HttpGet]
+      [HttpPost]
 
       [Route("/api/venue/search")]
 
@@ -503,7 +503,7 @@ items:
     return:
       type: Microsoft.AspNetCore.Mvc.IActionResult
     content.vb: >-
-      <HttpGet>
+      <HttpPost>
 
       <Route("/api/venue/search")>
 
@@ -516,8 +516,8 @@ items:
       Public Overridable Function FindVenues(query As Search) As IActionResult
   overload: TicketApi.Controllers.VenueApiController.FindVenues*
   attributes:
-  - type: Microsoft.AspNetCore.Mvc.HttpGetAttribute
-    ctor: Microsoft.AspNetCore.Mvc.HttpGetAttribute.#ctor
+  - type: Microsoft.AspNetCore.Mvc.HttpPostAttribute
+    ctor: Microsoft.AspNetCore.Mvc.HttpPostAttribute.#ctor
     arguments: []
   - type: Microsoft.AspNetCore.Mvc.RouteAttribute
     ctor: Microsoft.AspNetCore.Mvc.RouteAttribute.#ctor(System.String)
@@ -567,7 +567,7 @@ items:
   source:
     remote:
       path: src/TicketApi/Controllers/VenueApi.cs
-      branch: restapi
+      branch: features/ticketshop
       repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
     id: GetVenueById
     path: src/TicketApi/Controllers/VenueApi.cs
@@ -586,7 +586,7 @@ items:
 
       [SwaggerOperation("GetVenueById")]
 
-      [SwaggerResponse(200, typeof (object), "Venues loaded")]
+      [SwaggerResponse(200, typeof (object), "Venue loaded")]
 
       [SwaggerResponse(404, typeof (object), "Venue not found")]
 
@@ -608,7 +608,7 @@ items:
 
       <SwaggerOperation("GetVenueById")>
 
-      <SwaggerResponse(200, GetType(Object), "Venues loaded")>
+      <SwaggerResponse(200, GetType(Object), "Venue loaded")>
 
       <SwaggerResponse(404, GetType(Object), "Venue not found")>
 
@@ -636,7 +636,7 @@ items:
     - type: System.Type
       value: System.Object
     - type: System.String
-      value: Venues loaded
+      value: Venue loaded
   - type: Swashbuckle.AspNetCore.SwaggerGen.SwaggerResponseAttribute
     ctor: Swashbuckle.AspNetCore.SwaggerGen.SwaggerResponseAttribute.#ctor(System.Int32,System.Type,System.String)
     arguments:
@@ -655,21 +655,21 @@ items:
   - Overridable
   fullName.vb: TicketApi.Controllers.VenueApiController.GetVenueById(System.Nullable(Of System.Int32))
   name.vb: GetVenueById(Nullable(Of Int32))
-- uid: TicketApi.Controllers.VenueApiController.GetVenues
-  commentId: M:TicketApi.Controllers.VenueApiController.GetVenues
-  id: GetVenues
+- uid: TicketApi.Controllers.VenueApiController.GetVenues(System.Int32,System.Int32)
+  commentId: M:TicketApi.Controllers.VenueApiController.GetVenues(System.Int32,System.Int32)
+  id: GetVenues(System.Int32,System.Int32)
   parent: TicketApi.Controllers.VenueApiController
   langs:
   - csharp
   - vb
-  name: GetVenues()
-  nameWithType: VenueApiController.GetVenues()
-  fullName: TicketApi.Controllers.VenueApiController.GetVenues()
+  name: GetVenues(Int32, Int32)
+  nameWithType: VenueApiController.GetVenues(Int32, Int32)
+  fullName: TicketApi.Controllers.VenueApiController.GetVenues(System.Int32, System.Int32)
   type: Method
   source:
     remote:
       path: src/TicketApi/Controllers/VenueApi.cs
-      branch: restapi
+      branch: features/ticketshop
       repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
     id: GetVenues
     path: src/TicketApi/Controllers/VenueApi.cs
@@ -686,13 +686,28 @@ items:
 
       [Route("/api/venue")]
 
+      [Route("/api/venue/{offset}/{maxLimit}")]
+
       [SwaggerOperation("GetVenues")]
 
       [SwaggerResponse(200, typeof (List<Venue>), "Venues loaded")]
 
       [SwaggerResponse(400, typeof (List<Venue>), "Bad request")]
 
-      public virtual IActionResult GetVenues()
+      public virtual IActionResult GetVenues([FromRoute] int offset = 0, [FromRoute] int maxLimit = 20)
+    parameters:
+    - id: offset
+      type: System.Int32
+      attributes:
+      - type: Microsoft.AspNetCore.Mvc.FromRouteAttribute
+        ctor: Microsoft.AspNetCore.Mvc.FromRouteAttribute.#ctor
+        arguments: []
+    - id: maxLimit
+      type: System.Int32
+      attributes:
+      - type: Microsoft.AspNetCore.Mvc.FromRouteAttribute
+        ctor: Microsoft.AspNetCore.Mvc.FromRouteAttribute.#ctor
+        arguments: []
     return:
       type: Microsoft.AspNetCore.Mvc.IActionResult
     content.vb: >-
@@ -700,13 +715,15 @@ items:
 
       <Route("/api/venue")>
 
+      <Route("/api/venue/{offset}/{maxLimit}")>
+
       <SwaggerOperation("GetVenues")>
 
       <SwaggerResponse(200, GetType(List(Of Venue)), "Venues loaded")>
 
       <SwaggerResponse(400, GetType(List(Of Venue)), "Bad request")>
 
-      Public Overridable Function GetVenues As IActionResult
+      Public Overridable Function GetVenues(offset As Integer = 0, maxLimit As Integer = 20) As IActionResult
   overload: TicketApi.Controllers.VenueApiController.GetVenues*
   attributes:
   - type: Microsoft.AspNetCore.Mvc.HttpGetAttribute
@@ -717,6 +734,11 @@ items:
     arguments:
     - type: System.String
       value: /api/venue
+  - type: Microsoft.AspNetCore.Mvc.RouteAttribute
+    ctor: Microsoft.AspNetCore.Mvc.RouteAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: /api/venue/{offset}/{maxLimit}
   - type: Swashbuckle.AspNetCore.SwaggerGen.SwaggerOperationAttribute
     ctor: Swashbuckle.AspNetCore.SwaggerGen.SwaggerOperationAttribute.#ctor(System.String)
     arguments:
@@ -760,11 +782,11 @@ items:
   source:
     remote:
       path: src/TicketApi/Controllers/VenueApi.cs
-      branch: restapi
+      branch: features/ticketshop
       repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
     id: UpdateVenue
     path: src/TicketApi/Controllers/VenueApi.cs
-    startLine: 178
+    startLine: 179
   assemblies:
   - TicketApi
   namespace: TicketApi.Controllers
@@ -10928,16 +10950,16 @@ references:
   name: VenueApiController
   nameWithType: VenueApiController.VenueApiController
   fullName: TicketApi.Controllers.VenueApiController.VenueApiController
-- uid: Microsoft.Extensions.Options.IOptions{TicketApi.Settings.DbSettings}
-  commentId: T:Microsoft.Extensions.Options.IOptions{TicketApi.Settings.DbSettings}
+- uid: Microsoft.Extensions.Options.IOptions{TicketApi.Settings.CustomSettings}
+  commentId: T:Microsoft.Extensions.Options.IOptions{TicketApi.Settings.CustomSettings}
   parent: Microsoft.Extensions.Options
   definition: Microsoft.Extensions.Options.IOptions`1
-  name: IOptions<DbSettings>
-  nameWithType: IOptions<DbSettings>
-  fullName: Microsoft.Extensions.Options.IOptions<TicketApi.Settings.DbSettings>
-  nameWithType.vb: IOptions(Of DbSettings)
-  fullName.vb: Microsoft.Extensions.Options.IOptions(Of TicketApi.Settings.DbSettings)
-  name.vb: IOptions(Of DbSettings)
+  name: IOptions<CustomSettings>
+  nameWithType: IOptions<CustomSettings>
+  fullName: Microsoft.Extensions.Options.IOptions<TicketApi.Settings.CustomSettings>
+  nameWithType.vb: IOptions(Of CustomSettings)
+  fullName.vb: Microsoft.Extensions.Options.IOptions(Of TicketApi.Settings.CustomSettings)
+  name.vb: IOptions(Of CustomSettings)
   spec.csharp:
   - uid: Microsoft.Extensions.Options.IOptions`1
     name: IOptions
@@ -10947,10 +10969,10 @@ references:
   - name: <
     nameWithType: <
     fullName: <
-  - uid: TicketApi.Settings.DbSettings
-    name: DbSettings
-    nameWithType: DbSettings
-    fullName: TicketApi.Settings.DbSettings
+  - uid: TicketApi.Settings.CustomSettings
+    name: CustomSettings
+    nameWithType: CustomSettings
+    fullName: TicketApi.Settings.CustomSettings
   - name: '>'
     nameWithType: '>'
     fullName: '>'
@@ -10963,10 +10985,10 @@ references:
   - name: '(Of '
     nameWithType: '(Of '
     fullName: '(Of '
-  - uid: TicketApi.Settings.DbSettings
-    name: DbSettings
-    nameWithType: DbSettings
-    fullName: TicketApi.Settings.DbSettings
+  - uid: TicketApi.Settings.CustomSettings
+    name: CustomSettings
+    nameWithType: CustomSettings
+    fullName: TicketApi.Settings.CustomSettings
   - name: )
     nameWithType: )
     fullName: )
@@ -11155,6 +11177,13 @@ references:
   name: GetVenues
   nameWithType: VenueApiController.GetVenues
   fullName: TicketApi.Controllers.VenueApiController.GetVenues
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  name: Int32
+  nameWithType: Int32
+  fullName: System.Int32
 - uid: TicketApi.Controllers.VenueApiController.UpdateVenue*
   commentId: Overload:TicketApi.Controllers.VenueApiController.UpdateVenue
   isExternal: false

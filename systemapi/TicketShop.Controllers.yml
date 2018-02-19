@@ -1,0 +1,51 @@
+### YamlMime:ManagedReference
+items:
+- uid: TicketShop.Controllers
+  commentId: N:TicketShop.Controllers
+  id: TicketShop.Controllers
+  children:
+  - TicketShop.Controllers.AccountController
+  - TicketShop.Controllers.HomeController
+  - TicketShop.Controllers.ManageController
+  - TicketShop.Controllers.OrderController
+  - TicketShop.Controllers.ShopController
+  langs:
+  - csharp
+  - vb
+  name: TicketShop.Controllers
+  nameWithType: TicketShop.Controllers
+  fullName: TicketShop.Controllers
+  type: Namespace
+  assemblies:
+  - TicketShop
+references:
+- uid: TicketShop.Controllers.AccountController
+  commentId: T:TicketShop.Controllers.AccountController
+  isExternal: false
+  name: AccountController
+  nameWithType: AccountController
+  fullName: TicketShop.Controllers.AccountController
+- uid: TicketShop.Controllers.HomeController
+  commentId: T:TicketShop.Controllers.HomeController
+  isExternal: false
+  name: HomeController
+  nameWithType: HomeController
+  fullName: TicketShop.Controllers.HomeController
+- uid: TicketShop.Controllers.ManageController
+  commentId: T:TicketShop.Controllers.ManageController
+  isExternal: false
+  name: ManageController
+  nameWithType: ManageController
+  fullName: TicketShop.Controllers.ManageController
+- uid: TicketShop.Controllers.OrderController
+  commentId: T:TicketShop.Controllers.OrderController
+  isExternal: false
+  name: OrderController
+  nameWithType: OrderController
+  fullName: TicketShop.Controllers.OrderController
+- uid: TicketShop.Controllers.ShopController
+  commentId: T:TicketShop.Controllers.ShopController
+  isExternal: false
+  name: ShopController
+  nameWithType: ShopController
+  fullName: TicketShop.Controllers.ShopController

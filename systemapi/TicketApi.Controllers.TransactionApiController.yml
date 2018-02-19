@@ -5,12 +5,12 @@ items:
   id: TransactionApiController
   parent: TicketApi.Controllers
   children:
-  - TicketApi.Controllers.TransactionApiController.#ctor(Microsoft.Extensions.Options.IOptions{TicketApi.Settings.DbSettings})
+  - TicketApi.Controllers.TransactionApiController.#ctor(Microsoft.Extensions.Options.IOptions{TicketApi.Settings.CustomSettings})
   - TicketApi.Controllers.TransactionApiController.AddTransaction(TicketApi.Db.Models.Transaction)
   - TicketApi.Controllers.TransactionApiController.DeleteTransaction(TicketApi.Db.Models.Transaction)
   - TicketApi.Controllers.TransactionApiController.FindTransactions(TicketApi.Db.Models.Search)
   - TicketApi.Controllers.TransactionApiController.GetTransactionById(System.Nullable{System.Int32})
-  - TicketApi.Controllers.TransactionApiController.GetTransactions
+  - TicketApi.Controllers.TransactionApiController.GetTransactions(System.Int32,System.Int32)
   - TicketApi.Controllers.TransactionApiController.UpdateTransaction(TicketApi.Db.Models.Transaction)
   langs:
   - csharp
@@ -22,7 +22,7 @@ items:
   source:
     remote:
       path: src/TicketApi/Controllers/TransactionApi.cs
-      branch: restapi
+      branch: features/ticketshop
       repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
     id: TransactionApiController
     path: src/TicketApi/Controllers/TransactionApi.cs
@@ -220,21 +220,21 @@ items:
   modifiers.vb:
   - Public
   - Class
-- uid: TicketApi.Controllers.TransactionApiController.#ctor(Microsoft.Extensions.Options.IOptions{TicketApi.Settings.DbSettings})
-  commentId: M:TicketApi.Controllers.TransactionApiController.#ctor(Microsoft.Extensions.Options.IOptions{TicketApi.Settings.DbSettings})
-  id: '#ctor(Microsoft.Extensions.Options.IOptions{TicketApi.Settings.DbSettings})'
+- uid: TicketApi.Controllers.TransactionApiController.#ctor(Microsoft.Extensions.Options.IOptions{TicketApi.Settings.CustomSettings})
+  commentId: M:TicketApi.Controllers.TransactionApiController.#ctor(Microsoft.Extensions.Options.IOptions{TicketApi.Settings.CustomSettings})
+  id: '#ctor(Microsoft.Extensions.Options.IOptions{TicketApi.Settings.CustomSettings})'
   parent: TicketApi.Controllers.TransactionApiController
   langs:
   - csharp
   - vb
-  name: TransactionApiController(IOptions<DbSettings>)
-  nameWithType: TransactionApiController.TransactionApiController(IOptions<DbSettings>)
-  fullName: TicketApi.Controllers.TransactionApiController.TransactionApiController(Microsoft.Extensions.Options.IOptions<TicketApi.Settings.DbSettings>)
+  name: TransactionApiController(IOptions<CustomSettings>)
+  nameWithType: TransactionApiController.TransactionApiController(IOptions<CustomSettings>)
+  fullName: TicketApi.Controllers.TransactionApiController.TransactionApiController(Microsoft.Extensions.Options.IOptions<TicketApi.Settings.CustomSettings>)
   type: Constructor
   source:
     remote:
       path: src/TicketApi/Controllers/TransactionApi.cs
-      branch: restapi
+      branch: features/ticketshop
       repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
     id: .ctor
     path: src/TicketApi/Controllers/TransactionApi.cs
@@ -243,19 +243,19 @@ items:
   - TicketApi
   namespace: TicketApi.Controllers
   syntax:
-    content: public TransactionApiController(IOptions<DbSettings> db)
+    content: public TransactionApiController(IOptions<CustomSettings> db)
     parameters:
     - id: db
-      type: Microsoft.Extensions.Options.IOptions{TicketApi.Settings.DbSettings}
-    content.vb: Public Sub New(db As IOptions(Of DbSettings))
+      type: Microsoft.Extensions.Options.IOptions{TicketApi.Settings.CustomSettings}
+    content.vb: Public Sub New(db As IOptions(Of CustomSettings))
   overload: TicketApi.Controllers.TransactionApiController.#ctor*
-  nameWithType.vb: TransactionApiController.TransactionApiController(IOptions(Of DbSettings))
+  nameWithType.vb: TransactionApiController.TransactionApiController(IOptions(Of CustomSettings))
   modifiers.csharp:
   - public
   modifiers.vb:
   - Public
-  fullName.vb: TicketApi.Controllers.TransactionApiController.TransactionApiController(Microsoft.Extensions.Options.IOptions(Of TicketApi.Settings.DbSettings))
-  name.vb: TransactionApiController(IOptions(Of DbSettings))
+  fullName.vb: TicketApi.Controllers.TransactionApiController.TransactionApiController(Microsoft.Extensions.Options.IOptions(Of TicketApi.Settings.CustomSettings))
+  name.vb: TransactionApiController(IOptions(Of CustomSettings))
 - uid: TicketApi.Controllers.TransactionApiController.AddTransaction(TicketApi.Db.Models.Transaction)
   commentId: M:TicketApi.Controllers.TransactionApiController.AddTransaction(TicketApi.Db.Models.Transaction)
   id: AddTransaction(TicketApi.Db.Models.Transaction)
@@ -270,7 +270,7 @@ items:
   source:
     remote:
       path: src/TicketApi/Controllers/TransactionApi.cs
-      branch: restapi
+      branch: features/ticketshop
       repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
     id: AddTransaction
     path: src/TicketApi/Controllers/TransactionApi.cs
@@ -368,7 +368,7 @@ items:
   source:
     remote:
       path: src/TicketApi/Controllers/TransactionApi.cs
-      branch: restapi
+      branch: features/ticketshop
       repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
     id: DeleteTransaction
     path: src/TicketApi/Controllers/TransactionApi.cs
@@ -467,7 +467,7 @@ items:
   source:
     remote:
       path: src/TicketApi/Controllers/TransactionApi.cs
-      branch: restapi
+      branch: features/ticketshop
       repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
     id: FindTransactions
     path: src/TicketApi/Controllers/TransactionApi.cs
@@ -480,7 +480,7 @@ items:
   example: []
   syntax:
     content: >-
-      [HttpGet]
+      [HttpPost]
 
       [Route("/api/transaction/search")]
 
@@ -502,7 +502,7 @@ items:
     return:
       type: Microsoft.AspNetCore.Mvc.IActionResult
     content.vb: >-
-      <HttpGet>
+      <HttpPost>
 
       <Route("/api/transaction/search")>
 
@@ -515,8 +515,8 @@ items:
       Public Overridable Function FindTransactions(query As Search) As IActionResult
   overload: TicketApi.Controllers.TransactionApiController.FindTransactions*
   attributes:
-  - type: Microsoft.AspNetCore.Mvc.HttpGetAttribute
-    ctor: Microsoft.AspNetCore.Mvc.HttpGetAttribute.#ctor
+  - type: Microsoft.AspNetCore.Mvc.HttpPostAttribute
+    ctor: Microsoft.AspNetCore.Mvc.HttpPostAttribute.#ctor
     arguments: []
   - type: Microsoft.AspNetCore.Mvc.RouteAttribute
     ctor: Microsoft.AspNetCore.Mvc.RouteAttribute.#ctor(System.String)
@@ -566,7 +566,7 @@ items:
   source:
     remote:
       path: src/TicketApi/Controllers/TransactionApi.cs
-      branch: restapi
+      branch: features/ticketshop
       repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
     id: GetTransactionById
     path: src/TicketApi/Controllers/TransactionApi.cs
@@ -654,30 +654,29 @@ items:
   - Overridable
   fullName.vb: TicketApi.Controllers.TransactionApiController.GetTransactionById(System.Nullable(Of System.Int32))
   name.vb: GetTransactionById(Nullable(Of Int32))
-- uid: TicketApi.Controllers.TransactionApiController.GetTransactions
-  commentId: M:TicketApi.Controllers.TransactionApiController.GetTransactions
-  id: GetTransactions
+- uid: TicketApi.Controllers.TransactionApiController.GetTransactions(System.Int32,System.Int32)
+  commentId: M:TicketApi.Controllers.TransactionApiController.GetTransactions(System.Int32,System.Int32)
+  id: GetTransactions(System.Int32,System.Int32)
   parent: TicketApi.Controllers.TransactionApiController
   langs:
   - csharp
   - vb
-  name: GetTransactions()
-  nameWithType: TransactionApiController.GetTransactions()
-  fullName: TicketApi.Controllers.TransactionApiController.GetTransactions()
+  name: GetTransactions(Int32, Int32)
+  nameWithType: TransactionApiController.GetTransactions(Int32, Int32)
+  fullName: TicketApi.Controllers.TransactionApiController.GetTransactions(System.Int32, System.Int32)
   type: Method
   source:
     remote:
       path: src/TicketApi/Controllers/TransactionApi.cs
-      branch: restapi
+      branch: features/ticketshop
       repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
     id: GetTransactions
     path: src/TicketApi/Controllers/TransactionApi.cs
-    startLine: 155
+    startLine: 157
   assemblies:
   - TicketApi
   namespace: TicketApi.Controllers
-  summary: "\nGet all transactions in system\n"
-  remarks: Returns all transactions
+  summary: "\nGet transactions\n"
   example: []
   syntax:
     content: >-
@@ -685,13 +684,30 @@ items:
 
       [Route("/api/transaction")]
 
+      [Route("/api/transaction/{offset}/{maxLimit}")]
+
       [SwaggerOperation("GetTransactions")]
 
       [SwaggerResponse(200, typeof (List<Transaction>), "Transactions loaded")]
 
       [SwaggerResponse(400, typeof (List<Transaction>), "Bad request")]
 
-      public virtual IActionResult GetTransactions()
+      public virtual IActionResult GetTransactions([FromRoute] int offset = 0, [FromRoute] int maxLimit = 20)
+    parameters:
+    - id: offset
+      type: System.Int32
+      description: Result set offset
+      attributes:
+      - type: Microsoft.AspNetCore.Mvc.FromRouteAttribute
+        ctor: Microsoft.AspNetCore.Mvc.FromRouteAttribute.#ctor
+        arguments: []
+    - id: maxLimit
+      type: System.Int32
+      description: Result max rows to fetch
+      attributes:
+      - type: Microsoft.AspNetCore.Mvc.FromRouteAttribute
+        ctor: Microsoft.AspNetCore.Mvc.FromRouteAttribute.#ctor
+        arguments: []
     return:
       type: Microsoft.AspNetCore.Mvc.IActionResult
     content.vb: >-
@@ -699,13 +715,15 @@ items:
 
       <Route("/api/transaction")>
 
+      <Route("/api/transaction/{offset}/{maxLimit}")>
+
       <SwaggerOperation("GetTransactions")>
 
       <SwaggerResponse(200, GetType(List(Of Transaction)), "Transactions loaded")>
 
       <SwaggerResponse(400, GetType(List(Of Transaction)), "Bad request")>
 
-      Public Overridable Function GetTransactions As IActionResult
+      Public Overridable Function GetTransactions(offset As Integer = 0, maxLimit As Integer = 20) As IActionResult
   overload: TicketApi.Controllers.TransactionApiController.GetTransactions*
   attributes:
   - type: Microsoft.AspNetCore.Mvc.HttpGetAttribute
@@ -716,6 +734,11 @@ items:
     arguments:
     - type: System.String
       value: /api/transaction
+  - type: Microsoft.AspNetCore.Mvc.RouteAttribute
+    ctor: Microsoft.AspNetCore.Mvc.RouteAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: /api/transaction/{offset}/{maxLimit}
   - type: Swashbuckle.AspNetCore.SwaggerGen.SwaggerOperationAttribute
     ctor: Swashbuckle.AspNetCore.SwaggerGen.SwaggerOperationAttribute.#ctor(System.String)
     arguments:
@@ -759,11 +782,11 @@ items:
   source:
     remote:
       path: src/TicketApi/Controllers/TransactionApi.cs
-      branch: restapi
+      branch: features/ticketshop
       repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
     id: UpdateTransaction
     path: src/TicketApi/Controllers/TransactionApi.cs
-    startLine: 178
+    startLine: 181
   assemblies:
   - TicketApi
   namespace: TicketApi.Controllers
@@ -10927,16 +10950,16 @@ references:
   name: TransactionApiController
   nameWithType: TransactionApiController.TransactionApiController
   fullName: TicketApi.Controllers.TransactionApiController.TransactionApiController
-- uid: Microsoft.Extensions.Options.IOptions{TicketApi.Settings.DbSettings}
-  commentId: T:Microsoft.Extensions.Options.IOptions{TicketApi.Settings.DbSettings}
+- uid: Microsoft.Extensions.Options.IOptions{TicketApi.Settings.CustomSettings}
+  commentId: T:Microsoft.Extensions.Options.IOptions{TicketApi.Settings.CustomSettings}
   parent: Microsoft.Extensions.Options
   definition: Microsoft.Extensions.Options.IOptions`1
-  name: IOptions<DbSettings>
-  nameWithType: IOptions<DbSettings>
-  fullName: Microsoft.Extensions.Options.IOptions<TicketApi.Settings.DbSettings>
-  nameWithType.vb: IOptions(Of DbSettings)
-  fullName.vb: Microsoft.Extensions.Options.IOptions(Of TicketApi.Settings.DbSettings)
-  name.vb: IOptions(Of DbSettings)
+  name: IOptions<CustomSettings>
+  nameWithType: IOptions<CustomSettings>
+  fullName: Microsoft.Extensions.Options.IOptions<TicketApi.Settings.CustomSettings>
+  nameWithType.vb: IOptions(Of CustomSettings)
+  fullName.vb: Microsoft.Extensions.Options.IOptions(Of TicketApi.Settings.CustomSettings)
+  name.vb: IOptions(Of CustomSettings)
   spec.csharp:
   - uid: Microsoft.Extensions.Options.IOptions`1
     name: IOptions
@@ -10946,10 +10969,10 @@ references:
   - name: <
     nameWithType: <
     fullName: <
-  - uid: TicketApi.Settings.DbSettings
-    name: DbSettings
-    nameWithType: DbSettings
-    fullName: TicketApi.Settings.DbSettings
+  - uid: TicketApi.Settings.CustomSettings
+    name: CustomSettings
+    nameWithType: CustomSettings
+    fullName: TicketApi.Settings.CustomSettings
   - name: '>'
     nameWithType: '>'
     fullName: '>'
@@ -10962,10 +10985,10 @@ references:
   - name: '(Of '
     nameWithType: '(Of '
     fullName: '(Of '
-  - uid: TicketApi.Settings.DbSettings
-    name: DbSettings
-    nameWithType: DbSettings
-    fullName: TicketApi.Settings.DbSettings
+  - uid: TicketApi.Settings.CustomSettings
+    name: CustomSettings
+    nameWithType: CustomSettings
+    fullName: TicketApi.Settings.CustomSettings
   - name: )
     nameWithType: )
     fullName: )
@@ -11154,6 +11177,13 @@ references:
   name: GetTransactions
   nameWithType: TransactionApiController.GetTransactions
   fullName: TicketApi.Controllers.TransactionApiController.GetTransactions
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  name: Int32
+  nameWithType: Int32
+  fullName: System.Int32
 - uid: TicketApi.Controllers.TransactionApiController.UpdateTransaction*
   commentId: Overload:TicketApi.Controllers.TransactionApiController.UpdateTransaction
   isExternal: false

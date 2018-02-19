@@ -22,7 +22,7 @@ items:
   source:
     remote:
       path: src/DbRepository/EventRepository.cs
-      branch: restapi
+      branch: features/ticketshop
       repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
     id: EventRepository
     path: src/DbRepository/EventRepository.cs
@@ -67,7 +67,7 @@ items:
   source:
     remote:
       path: src/DbRepository/EventRepository.cs
-      branch: restapi
+      branch: features/ticketshop
       repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
     id: .ctor
     path: src/DbRepository/EventRepository.cs
@@ -100,7 +100,7 @@ items:
   source:
     remote:
       path: src/DbRepository/EventRepository.cs
-      branch: restapi
+      branch: features/ticketshop
       repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
     id: AddEvent
     path: src/DbRepository/EventRepository.cs
@@ -137,7 +137,7 @@ items:
   source:
     remote:
       path: src/DbRepository/EventRepository.cs
-      branch: restapi
+      branch: features/ticketshop
       repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
     id: DeleteEvent
     path: src/DbRepository/EventRepository.cs
@@ -174,7 +174,7 @@ items:
   source:
     remote:
       path: src/DbRepository/EventRepository.cs
-      branch: restapi
+      branch: features/ticketshop
       repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
     id: GetEventById
     path: src/DbRepository/EventRepository.cs
@@ -211,7 +211,7 @@ items:
   source:
     remote:
       path: src/DbRepository/EventRepository.cs
-      branch: restapi
+      branch: features/ticketshop
       repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
     id: GetEvents
     path: src/DbRepository/EventRepository.cs
@@ -250,11 +250,11 @@ items:
   source:
     remote:
       path: src/DbRepository/EventRepository.cs
-      branch: restapi
+      branch: features/ticketshop
       repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
     id: UpdateEvent
     path: src/DbRepository/EventRepository.cs
-    startLine: 93
+    startLine: 98
   assemblies:
   - DbRepository
   namespace: TicketApi.Db
@@ -287,11 +287,11 @@ items:
   source:
     remote:
       path: src/DbRepository/EventRepository.cs
-      branch: restapi
+      branch: features/ticketshop
       repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
     id: FindEvents
     path: src/DbRepository/EventRepository.cs
-    startLine: 111
+    startLine: 116
   assemblies:
   - DbRepository
   namespace: TicketApi.Db

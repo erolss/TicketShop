@@ -5,12 +5,12 @@ items:
   id: EventApiController
   parent: TicketApi.Controllers
   children:
-  - TicketApi.Controllers.EventApiController.#ctor(Microsoft.Extensions.Options.IOptions{TicketApi.Settings.DbSettings})
+  - TicketApi.Controllers.EventApiController.#ctor(Microsoft.Extensions.Options.IOptions{TicketApi.Settings.CustomSettings})
   - TicketApi.Controllers.EventApiController.AddEvent(TicketApi.Db.Models.Event)
   - TicketApi.Controllers.EventApiController.DeleteEvent(System.Nullable{System.Int32})
   - TicketApi.Controllers.EventApiController.FindEvents(TicketApi.Db.Models.Search)
   - TicketApi.Controllers.EventApiController.GetEventById(System.Nullable{System.Int32})
-  - TicketApi.Controllers.EventApiController.GetEvents
+  - TicketApi.Controllers.EventApiController.GetEvents(System.Int32,System.Int32)
   - TicketApi.Controllers.EventApiController.UpdateEvent(TicketApi.Db.Models.Event)
   langs:
   - csharp
@@ -22,7 +22,7 @@ items:
   source:
     remote:
       path: src/TicketApi/Controllers/EventApi.cs
-      branch: restapi
+      branch: features/ticketshop
       repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
     id: EventApiController
     path: src/TicketApi/Controllers/EventApi.cs
@@ -220,21 +220,21 @@ items:
   modifiers.vb:
   - Public
   - Class
-- uid: TicketApi.Controllers.EventApiController.#ctor(Microsoft.Extensions.Options.IOptions{TicketApi.Settings.DbSettings})
-  commentId: M:TicketApi.Controllers.EventApiController.#ctor(Microsoft.Extensions.Options.IOptions{TicketApi.Settings.DbSettings})
-  id: '#ctor(Microsoft.Extensions.Options.IOptions{TicketApi.Settings.DbSettings})'
+- uid: TicketApi.Controllers.EventApiController.#ctor(Microsoft.Extensions.Options.IOptions{TicketApi.Settings.CustomSettings})
+  commentId: M:TicketApi.Controllers.EventApiController.#ctor(Microsoft.Extensions.Options.IOptions{TicketApi.Settings.CustomSettings})
+  id: '#ctor(Microsoft.Extensions.Options.IOptions{TicketApi.Settings.CustomSettings})'
   parent: TicketApi.Controllers.EventApiController
   langs:
   - csharp
   - vb
-  name: EventApiController(IOptions<DbSettings>)
-  nameWithType: EventApiController.EventApiController(IOptions<DbSettings>)
-  fullName: TicketApi.Controllers.EventApiController.EventApiController(Microsoft.Extensions.Options.IOptions<TicketApi.Settings.DbSettings>)
+  name: EventApiController(IOptions<CustomSettings>)
+  nameWithType: EventApiController.EventApiController(IOptions<CustomSettings>)
+  fullName: TicketApi.Controllers.EventApiController.EventApiController(Microsoft.Extensions.Options.IOptions<TicketApi.Settings.CustomSettings>)
   type: Constructor
   source:
     remote:
       path: src/TicketApi/Controllers/EventApi.cs
-      branch: restapi
+      branch: features/ticketshop
       repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
     id: .ctor
     path: src/TicketApi/Controllers/EventApi.cs
@@ -243,19 +243,19 @@ items:
   - TicketApi
   namespace: TicketApi.Controllers
   syntax:
-    content: public EventApiController(IOptions<DbSettings> db)
+    content: public EventApiController(IOptions<CustomSettings> db)
     parameters:
     - id: db
-      type: Microsoft.Extensions.Options.IOptions{TicketApi.Settings.DbSettings}
-    content.vb: Public Sub New(db As IOptions(Of DbSettings))
+      type: Microsoft.Extensions.Options.IOptions{TicketApi.Settings.CustomSettings}
+    content.vb: Public Sub New(db As IOptions(Of CustomSettings))
   overload: TicketApi.Controllers.EventApiController.#ctor*
-  nameWithType.vb: EventApiController.EventApiController(IOptions(Of DbSettings))
+  nameWithType.vb: EventApiController.EventApiController(IOptions(Of CustomSettings))
   modifiers.csharp:
   - public
   modifiers.vb:
   - Public
-  fullName.vb: TicketApi.Controllers.EventApiController.EventApiController(Microsoft.Extensions.Options.IOptions(Of TicketApi.Settings.DbSettings))
-  name.vb: EventApiController(IOptions(Of DbSettings))
+  fullName.vb: TicketApi.Controllers.EventApiController.EventApiController(Microsoft.Extensions.Options.IOptions(Of TicketApi.Settings.CustomSettings))
+  name.vb: EventApiController(IOptions(Of CustomSettings))
 - uid: TicketApi.Controllers.EventApiController.AddEvent(TicketApi.Db.Models.Event)
   commentId: M:TicketApi.Controllers.EventApiController.AddEvent(TicketApi.Db.Models.Event)
   id: AddEvent(TicketApi.Db.Models.Event)
@@ -270,7 +270,7 @@ items:
   source:
     remote:
       path: src/TicketApi/Controllers/EventApi.cs
-      branch: restapi
+      branch: features/ticketshop
       repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
     id: AddEvent
     path: src/TicketApi/Controllers/EventApi.cs
@@ -369,7 +369,7 @@ items:
   source:
     remote:
       path: src/TicketApi/Controllers/EventApi.cs
-      branch: restapi
+      branch: features/ticketshop
       repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
     id: DeleteEvent
     path: src/TicketApi/Controllers/EventApi.cs
@@ -471,7 +471,7 @@ items:
   source:
     remote:
       path: src/TicketApi/Controllers/EventApi.cs
-      branch: restapi
+      branch: features/ticketshop
       repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
     id: FindEvents
     path: src/TicketApi/Controllers/EventApi.cs
@@ -484,7 +484,7 @@ items:
   example: []
   syntax:
     content: >-
-      [HttpGet]
+      [HttpPost]
 
       [Route("/api/event/search")]
 
@@ -506,7 +506,7 @@ items:
     return:
       type: Microsoft.AspNetCore.Mvc.IActionResult
     content.vb: >-
-      <HttpGet>
+      <HttpPost>
 
       <Route("/api/event/search")>
 
@@ -519,8 +519,8 @@ items:
       Public Overridable Function FindEvents(query As Search) As IActionResult
   overload: TicketApi.Controllers.EventApiController.FindEvents*
   attributes:
-  - type: Microsoft.AspNetCore.Mvc.HttpGetAttribute
-    ctor: Microsoft.AspNetCore.Mvc.HttpGetAttribute.#ctor
+  - type: Microsoft.AspNetCore.Mvc.HttpPostAttribute
+    ctor: Microsoft.AspNetCore.Mvc.HttpPostAttribute.#ctor
     arguments: []
   - type: Microsoft.AspNetCore.Mvc.RouteAttribute
     ctor: Microsoft.AspNetCore.Mvc.RouteAttribute.#ctor(System.String)
@@ -570,11 +570,11 @@ items:
   source:
     remote:
       path: src/TicketApi/Controllers/EventApi.cs
-      branch: restapi
+      branch: features/ticketshop
       repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
     id: GetEventById
     path: src/TicketApi/Controllers/EventApi.cs
-    startLine: 129
+    startLine: 133
   assemblies:
   - TicketApi
   namespace: TicketApi.Controllers
@@ -658,25 +658,25 @@ items:
   - Overridable
   fullName.vb: TicketApi.Controllers.EventApiController.GetEventById(System.Nullable(Of System.Int32))
   name.vb: GetEventById(Nullable(Of Int32))
-- uid: TicketApi.Controllers.EventApiController.GetEvents
-  commentId: M:TicketApi.Controllers.EventApiController.GetEvents
-  id: GetEvents
+- uid: TicketApi.Controllers.EventApiController.GetEvents(System.Int32,System.Int32)
+  commentId: M:TicketApi.Controllers.EventApiController.GetEvents(System.Int32,System.Int32)
+  id: GetEvents(System.Int32,System.Int32)
   parent: TicketApi.Controllers.EventApiController
   langs:
   - csharp
   - vb
-  name: GetEvents()
-  nameWithType: EventApiController.GetEvents()
-  fullName: TicketApi.Controllers.EventApiController.GetEvents()
+  name: GetEvents(Int32, Int32)
+  nameWithType: EventApiController.GetEvents(Int32, Int32)
+  fullName: TicketApi.Controllers.EventApiController.GetEvents(System.Int32, System.Int32)
   type: Method
   source:
     remote:
       path: src/TicketApi/Controllers/EventApi.cs
-      branch: restapi
+      branch: features/ticketshop
       repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
     id: GetEvents
     path: src/TicketApi/Controllers/EventApi.cs
-    startLine: 151
+    startLine: 155
   assemblies:
   - TicketApi
   namespace: TicketApi.Controllers
@@ -689,13 +689,28 @@ items:
 
       [Route("/api/event")]
 
+      [Route("/api/event/{offset}/{maxLimit}")]
+
       [SwaggerOperation("GetEvents")]
 
       [SwaggerResponse(200, typeof (List<Event>), "Events loaded")]
 
-      [SwaggerResponse(400, typeof (List<Event>), "Bad request")]
+      [SwaggerResponse(404, typeof (List<Event>), "Not Found")]
 
-      public virtual IActionResult GetEvents()
+      public virtual IActionResult GetEvents([FromRoute] int offset = 0, [FromRoute] int maxLimit = 20)
+    parameters:
+    - id: offset
+      type: System.Int32
+      attributes:
+      - type: Microsoft.AspNetCore.Mvc.FromRouteAttribute
+        ctor: Microsoft.AspNetCore.Mvc.FromRouteAttribute.#ctor
+        arguments: []
+    - id: maxLimit
+      type: System.Int32
+      attributes:
+      - type: Microsoft.AspNetCore.Mvc.FromRouteAttribute
+        ctor: Microsoft.AspNetCore.Mvc.FromRouteAttribute.#ctor
+        arguments: []
     return:
       type: Microsoft.AspNetCore.Mvc.IActionResult
     content.vb: >-
@@ -703,13 +718,15 @@ items:
 
       <Route("/api/event")>
 
+      <Route("/api/event/{offset}/{maxLimit}")>
+
       <SwaggerOperation("GetEvents")>
 
       <SwaggerResponse(200, GetType(List(Of  Event)), "Events loaded")>
 
-      <SwaggerResponse(400, GetType(List(Of  Event)), "Bad request")>
+      <SwaggerResponse(404, GetType(List(Of  Event)), "Not Found")>
 
-      Public Overridable Function GetEvents As IActionResult
+      Public Overridable Function GetEvents(offset As Integer = 0, maxLimit As Integer = 20) As IActionResult
   overload: TicketApi.Controllers.EventApiController.GetEvents*
   attributes:
   - type: Microsoft.AspNetCore.Mvc.HttpGetAttribute
@@ -720,6 +737,11 @@ items:
     arguments:
     - type: System.String
       value: /api/event
+  - type: Microsoft.AspNetCore.Mvc.RouteAttribute
+    ctor: Microsoft.AspNetCore.Mvc.RouteAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: /api/event/{offset}/{maxLimit}
   - type: Swashbuckle.AspNetCore.SwaggerGen.SwaggerOperationAttribute
     ctor: Swashbuckle.AspNetCore.SwaggerGen.SwaggerOperationAttribute.#ctor(System.String)
     arguments:
@@ -738,11 +760,11 @@ items:
     ctor: Swashbuckle.AspNetCore.SwaggerGen.SwaggerResponseAttribute.#ctor(System.Int32,System.Type,System.String)
     arguments:
     - type: System.Int32
-      value: 400
+      value: 404
     - type: System.Type
       value: System.Collections.Generic.List{TicketApi.Db.Models.Event}
     - type: System.String
-      value: Bad request
+      value: Not Found
   modifiers.csharp:
   - public
   - virtual
@@ -763,11 +785,11 @@ items:
   source:
     remote:
       path: src/TicketApi/Controllers/EventApi.cs
-      branch: restapi
+      branch: features/ticketshop
       repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
     id: UpdateEvent
     path: src/TicketApi/Controllers/EventApi.cs
-    startLine: 174
+    startLine: 179
   assemblies:
   - TicketApi
   namespace: TicketApi.Controllers
@@ -10931,16 +10953,16 @@ references:
   name: EventApiController
   nameWithType: EventApiController.EventApiController
   fullName: TicketApi.Controllers.EventApiController.EventApiController
-- uid: Microsoft.Extensions.Options.IOptions{TicketApi.Settings.DbSettings}
-  commentId: T:Microsoft.Extensions.Options.IOptions{TicketApi.Settings.DbSettings}
+- uid: Microsoft.Extensions.Options.IOptions{TicketApi.Settings.CustomSettings}
+  commentId: T:Microsoft.Extensions.Options.IOptions{TicketApi.Settings.CustomSettings}
   parent: Microsoft.Extensions.Options
   definition: Microsoft.Extensions.Options.IOptions`1
-  name: IOptions<DbSettings>
-  nameWithType: IOptions<DbSettings>
-  fullName: Microsoft.Extensions.Options.IOptions<TicketApi.Settings.DbSettings>
-  nameWithType.vb: IOptions(Of DbSettings)
-  fullName.vb: Microsoft.Extensions.Options.IOptions(Of TicketApi.Settings.DbSettings)
-  name.vb: IOptions(Of DbSettings)
+  name: IOptions<CustomSettings>
+  nameWithType: IOptions<CustomSettings>
+  fullName: Microsoft.Extensions.Options.IOptions<TicketApi.Settings.CustomSettings>
+  nameWithType.vb: IOptions(Of CustomSettings)
+  fullName.vb: Microsoft.Extensions.Options.IOptions(Of TicketApi.Settings.CustomSettings)
+  name.vb: IOptions(Of CustomSettings)
   spec.csharp:
   - uid: Microsoft.Extensions.Options.IOptions`1
     name: IOptions
@@ -10950,10 +10972,10 @@ references:
   - name: <
     nameWithType: <
     fullName: <
-  - uid: TicketApi.Settings.DbSettings
-    name: DbSettings
-    nameWithType: DbSettings
-    fullName: TicketApi.Settings.DbSettings
+  - uid: TicketApi.Settings.CustomSettings
+    name: CustomSettings
+    nameWithType: CustomSettings
+    fullName: TicketApi.Settings.CustomSettings
   - name: '>'
     nameWithType: '>'
     fullName: '>'
@@ -10966,10 +10988,10 @@ references:
   - name: '(Of '
     nameWithType: '(Of '
     fullName: '(Of '
-  - uid: TicketApi.Settings.DbSettings
-    name: DbSettings
-    nameWithType: DbSettings
-    fullName: TicketApi.Settings.DbSettings
+  - uid: TicketApi.Settings.CustomSettings
+    name: CustomSettings
+    nameWithType: CustomSettings
+    fullName: TicketApi.Settings.CustomSettings
   - name: )
     nameWithType: )
     fullName: )
@@ -11158,6 +11180,13 @@ references:
   name: GetEvents
   nameWithType: EventApiController.GetEvents
   fullName: TicketApi.Controllers.EventApiController.GetEvents
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  name: Int32
+  nameWithType: Int32
+  fullName: System.Int32
 - uid: TicketApi.Controllers.EventApiController.UpdateEvent*
   commentId: Overload:TicketApi.Controllers.EventApiController.UpdateEvent
   isExternal: false

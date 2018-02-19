@@ -1,0 +1,1038 @@
+### YamlMime:ManagedReference
+items:
+- uid: TicketShop.RestApiClient.VenueApi
+  commentId: T:TicketShop.RestApiClient.VenueApi
+  id: VenueApi
+  parent: TicketShop.RestApiClient
+  children:
+  - TicketShop.RestApiClient.VenueApi.#ctor(System.String)
+  - TicketShop.RestApiClient.VenueApi.AddVenue(TicketShop.RestApiClient.Model.Venue)
+  - TicketShop.RestApiClient.VenueApi.DeleteVenue(System.Int32)
+  - TicketShop.RestApiClient.VenueApi.FindVenues(TicketShop.RestApiClient.Model.Search)
+  - TicketShop.RestApiClient.VenueApi.GetVenueById(System.Int32)
+  - TicketShop.RestApiClient.VenueApi.GetVenues(System.Int32,System.Int32)
+  - TicketShop.RestApiClient.VenueApi.UpdateVenue(TicketShop.RestApiClient.Model.Venue)
+  langs:
+  - csharp
+  - vb
+  name: VenueApi
+  nameWithType: VenueApi
+  fullName: TicketShop.RestApiClient.VenueApi
+  type: Class
+  source:
+    remote:
+      path: src/RestApiClient/VenueApi.cs
+      branch: features/ticketshop
+      repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
+    id: VenueApi
+    path: src/RestApiClient/VenueApi.cs
+    startLine: 9
+  assemblies:
+  - RestApiClient
+  namespace: TicketShop.RestApiClient
+  syntax:
+    content: 'public class VenueApi : IVenueApi'
+    content.vb: >-
+      Public Class VenueApi
+          Implements IVenueApi
+  inheritance:
+  - System.Object
+  implements:
+  - TicketShop.RestApiClient.Interface.IVenueApi
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: TicketShop.RestApiClient.VenueApi.#ctor(System.String)
+  commentId: M:TicketShop.RestApiClient.VenueApi.#ctor(System.String)
+  id: '#ctor(System.String)'
+  parent: TicketShop.RestApiClient.VenueApi
+  langs:
+  - csharp
+  - vb
+  name: VenueApi(String)
+  nameWithType: VenueApi.VenueApi(String)
+  fullName: TicketShop.RestApiClient.VenueApi.VenueApi(System.String)
+  type: Constructor
+  source:
+    remote:
+      path: src/RestApiClient/VenueApi.cs
+      branch: features/ticketshop
+      repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
+    id: .ctor
+    path: src/RestApiClient/VenueApi.cs
+    startLine: 13
+  assemblies:
+  - RestApiClient
+  namespace: TicketShop.RestApiClient
+  syntax:
+    content: public VenueApi(string baseUrl)
+    parameters:
+    - id: baseUrl
+      type: System.String
+    content.vb: Public Sub New(baseUrl As String)
+  overload: TicketShop.RestApiClient.VenueApi.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: TicketShop.RestApiClient.VenueApi.AddVenue(TicketShop.RestApiClient.Model.Venue)
+  commentId: M:TicketShop.RestApiClient.VenueApi.AddVenue(TicketShop.RestApiClient.Model.Venue)
+  id: AddVenue(TicketShop.RestApiClient.Model.Venue)
+  parent: TicketShop.RestApiClient.VenueApi
+  langs:
+  - csharp
+  - vb
+  name: AddVenue(Venue)
+  nameWithType: VenueApi.AddVenue(Venue)
+  fullName: TicketShop.RestApiClient.VenueApi.AddVenue(TicketShop.RestApiClient.Model.Venue)
+  type: Method
+  source:
+    remote:
+      path: src/RestApiClient/VenueApi.cs
+      branch: features/ticketshop
+      repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
+    id: AddVenue
+    path: src/RestApiClient/VenueApi.cs
+    startLine: 18
+  assemblies:
+  - RestApiClient
+  namespace: TicketShop.RestApiClient
+  syntax:
+    content: public Venue AddVenue(Venue venue)
+    parameters:
+    - id: venue
+      type: TicketShop.RestApiClient.Model.Venue
+    return:
+      type: TicketShop.RestApiClient.Model.Venue
+    content.vb: Public Function AddVenue(venue As Venue) As Venue
+  overload: TicketShop.RestApiClient.VenueApi.AddVenue*
+  implements:
+  - TicketShop.RestApiClient.Interface.IVenueApi.AddVenue(TicketShop.RestApiClient.Model.Venue)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: TicketShop.RestApiClient.VenueApi.DeleteVenue(System.Int32)
+  commentId: M:TicketShop.RestApiClient.VenueApi.DeleteVenue(System.Int32)
+  id: DeleteVenue(System.Int32)
+  parent: TicketShop.RestApiClient.VenueApi
+  langs:
+  - csharp
+  - vb
+  name: DeleteVenue(Int32)
+  nameWithType: VenueApi.DeleteVenue(Int32)
+  fullName: TicketShop.RestApiClient.VenueApi.DeleteVenue(System.Int32)
+  type: Method
+  source:
+    remote:
+      path: src/RestApiClient/VenueApi.cs
+      branch: features/ticketshop
+      repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
+    id: DeleteVenue
+    path: src/RestApiClient/VenueApi.cs
+    startLine: 31
+  assemblies:
+  - RestApiClient
+  namespace: TicketShop.RestApiClient
+  syntax:
+    content: public bool DeleteVenue(int id)
+    parameters:
+    - id: id
+      type: System.Int32
+    return:
+      type: System.Boolean
+    content.vb: Public Function DeleteVenue(id As Integer) As Boolean
+  overload: TicketShop.RestApiClient.VenueApi.DeleteVenue*
+  implements:
+  - TicketShop.RestApiClient.Interface.IVenueApi.DeleteVenue(System.Int32)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: TicketShop.RestApiClient.VenueApi.FindVenues(TicketShop.RestApiClient.Model.Search)
+  commentId: M:TicketShop.RestApiClient.VenueApi.FindVenues(TicketShop.RestApiClient.Model.Search)
+  id: FindVenues(TicketShop.RestApiClient.Model.Search)
+  parent: TicketShop.RestApiClient.VenueApi
+  langs:
+  - csharp
+  - vb
+  name: FindVenues(Search)
+  nameWithType: VenueApi.FindVenues(Search)
+  fullName: TicketShop.RestApiClient.VenueApi.FindVenues(TicketShop.RestApiClient.Model.Search)
+  type: Method
+  source:
+    remote:
+      path: src/RestApiClient/VenueApi.cs
+      branch: features/ticketshop
+      repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
+    id: FindVenues
+    path: src/RestApiClient/VenueApi.cs
+    startLine: 47
+  assemblies:
+  - RestApiClient
+  namespace: TicketShop.RestApiClient
+  syntax:
+    content: public List<Venue> FindVenues(Search query)
+    parameters:
+    - id: query
+      type: TicketShop.RestApiClient.Model.Search
+    return:
+      type: System.Collections.Generic.List{TicketShop.RestApiClient.Model.Venue}
+    content.vb: Public Function FindVenues(query As Search) As List(Of Venue)
+  overload: TicketShop.RestApiClient.VenueApi.FindVenues*
+  implements:
+  - TicketShop.RestApiClient.Interface.IVenueApi.FindVenues(TicketShop.RestApiClient.Model.Search)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: TicketShop.RestApiClient.VenueApi.GetVenueById(System.Int32)
+  commentId: M:TicketShop.RestApiClient.VenueApi.GetVenueById(System.Int32)
+  id: GetVenueById(System.Int32)
+  parent: TicketShop.RestApiClient.VenueApi
+  langs:
+  - csharp
+  - vb
+  name: GetVenueById(Int32)
+  nameWithType: VenueApi.GetVenueById(Int32)
+  fullName: TicketShop.RestApiClient.VenueApi.GetVenueById(System.Int32)
+  type: Method
+  source:
+    remote:
+      path: src/RestApiClient/VenueApi.cs
+      branch: features/ticketshop
+      repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
+    id: GetVenueById
+    path: src/RestApiClient/VenueApi.cs
+    startLine: 60
+  assemblies:
+  - RestApiClient
+  namespace: TicketShop.RestApiClient
+  syntax:
+    content: public Venue GetVenueById(int id)
+    parameters:
+    - id: id
+      type: System.Int32
+    return:
+      type: TicketShop.RestApiClient.Model.Venue
+    content.vb: Public Function GetVenueById(id As Integer) As Venue
+  overload: TicketShop.RestApiClient.VenueApi.GetVenueById*
+  implements:
+  - TicketShop.RestApiClient.Interface.IVenueApi.GetVenueById(System.Int32)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: TicketShop.RestApiClient.VenueApi.GetVenues(System.Int32,System.Int32)
+  commentId: M:TicketShop.RestApiClient.VenueApi.GetVenues(System.Int32,System.Int32)
+  id: GetVenues(System.Int32,System.Int32)
+  parent: TicketShop.RestApiClient.VenueApi
+  langs:
+  - csharp
+  - vb
+  name: GetVenues(Int32, Int32)
+  nameWithType: VenueApi.GetVenues(Int32, Int32)
+  fullName: TicketShop.RestApiClient.VenueApi.GetVenues(System.Int32, System.Int32)
+  type: Method
+  source:
+    remote:
+      path: src/RestApiClient/VenueApi.cs
+      branch: features/ticketshop
+      repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
+    id: GetVenues
+    path: src/RestApiClient/VenueApi.cs
+    startLine: 76
+  assemblies:
+  - RestApiClient
+  namespace: TicketShop.RestApiClient
+  syntax:
+    content: public List<Venue> GetVenues(int offset = 0, int maxLimit = 20)
+    parameters:
+    - id: offset
+      type: System.Int32
+    - id: maxLimit
+      type: System.Int32
+    return:
+      type: System.Collections.Generic.List{TicketShop.RestApiClient.Model.Venue}
+    content.vb: Public Function GetVenues(offset As Integer = 0, maxLimit As Integer = 20) As List(Of Venue)
+  overload: TicketShop.RestApiClient.VenueApi.GetVenues*
+  implements:
+  - TicketShop.RestApiClient.Interface.IVenueApi.GetVenues(System.Int32,System.Int32)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: TicketShop.RestApiClient.VenueApi.UpdateVenue(TicketShop.RestApiClient.Model.Venue)
+  commentId: M:TicketShop.RestApiClient.VenueApi.UpdateVenue(TicketShop.RestApiClient.Model.Venue)
+  id: UpdateVenue(TicketShop.RestApiClient.Model.Venue)
+  parent: TicketShop.RestApiClient.VenueApi
+  langs:
+  - csharp
+  - vb
+  name: UpdateVenue(Venue)
+  nameWithType: VenueApi.UpdateVenue(Venue)
+  fullName: TicketShop.RestApiClient.VenueApi.UpdateVenue(TicketShop.RestApiClient.Model.Venue)
+  type: Method
+  source:
+    remote:
+      path: src/RestApiClient/VenueApi.cs
+      branch: features/ticketshop
+      repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
+    id: UpdateVenue
+    path: src/RestApiClient/VenueApi.cs
+    startLine: 88
+  assemblies:
+  - RestApiClient
+  namespace: TicketShop.RestApiClient
+  syntax:
+    content: public Venue UpdateVenue(Venue venue)
+    parameters:
+    - id: venue
+      type: TicketShop.RestApiClient.Model.Venue
+    return:
+      type: TicketShop.RestApiClient.Model.Venue
+    content.vb: Public Function UpdateVenue(venue As Venue) As Venue
+  overload: TicketShop.RestApiClient.VenueApi.UpdateVenue*
+  implements:
+  - TicketShop.RestApiClient.Interface.IVenueApi.UpdateVenue(TicketShop.RestApiClient.Model.Venue)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+references:
+- uid: TicketShop.RestApiClient
+  commentId: N:TicketShop.RestApiClient
+  isExternal: false
+  name: TicketShop.RestApiClient
+  nameWithType: TicketShop.RestApiClient
+  fullName: TicketShop.RestApiClient
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: TicketShop.RestApiClient.Interface.IVenueApi
+  commentId: T:TicketShop.RestApiClient.Interface.IVenueApi
+  parent: TicketShop.RestApiClient.Interface
+  isExternal: false
+  name: IVenueApi
+  nameWithType: IVenueApi
+  fullName: TicketShop.RestApiClient.Interface.IVenueApi
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: false
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: TicketShop.RestApiClient.Interface
+  commentId: N:TicketShop.RestApiClient.Interface
+  isExternal: false
+  name: TicketShop.RestApiClient.Interface
+  nameWithType: TicketShop.RestApiClient.Interface
+  fullName: TicketShop.RestApiClient.Interface
+- uid: TicketShop.RestApiClient.VenueApi.#ctor*
+  commentId: Overload:TicketShop.RestApiClient.VenueApi.#ctor
+  isExternal: false
+  name: VenueApi
+  nameWithType: VenueApi.VenueApi
+  fullName: TicketShop.RestApiClient.VenueApi.VenueApi
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: TicketShop.RestApiClient.VenueApi.AddVenue*
+  commentId: Overload:TicketShop.RestApiClient.VenueApi.AddVenue
+  isExternal: false
+  name: AddVenue
+  nameWithType: VenueApi.AddVenue
+  fullName: TicketShop.RestApiClient.VenueApi.AddVenue
+- uid: TicketShop.RestApiClient.Interface.IVenueApi.AddVenue(TicketShop.RestApiClient.Model.Venue)
+  commentId: M:TicketShop.RestApiClient.Interface.IVenueApi.AddVenue(TicketShop.RestApiClient.Model.Venue)
+  parent: TicketShop.RestApiClient.Interface.IVenueApi
+  isExternal: false
+  name: AddVenue(Venue)
+  nameWithType: IVenueApi.AddVenue(Venue)
+  fullName: TicketShop.RestApiClient.Interface.IVenueApi.AddVenue(TicketShop.RestApiClient.Model.Venue)
+  spec.csharp:
+  - uid: TicketShop.RestApiClient.Interface.IVenueApi.AddVenue(TicketShop.RestApiClient.Model.Venue)
+    name: AddVenue
+    nameWithType: IVenueApi.AddVenue
+    fullName: TicketShop.RestApiClient.Interface.IVenueApi.AddVenue
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: TicketShop.RestApiClient.Model.Venue
+    name: Venue
+    nameWithType: Venue
+    fullName: TicketShop.RestApiClient.Model.Venue
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: TicketShop.RestApiClient.Interface.IVenueApi.AddVenue(TicketShop.RestApiClient.Model.Venue)
+    name: AddVenue
+    nameWithType: IVenueApi.AddVenue
+    fullName: TicketShop.RestApiClient.Interface.IVenueApi.AddVenue
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: TicketShop.RestApiClient.Model.Venue
+    name: Venue
+    nameWithType: Venue
+    fullName: TicketShop.RestApiClient.Model.Venue
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: TicketShop.RestApiClient.Model.Venue
+  commentId: T:TicketShop.RestApiClient.Model.Venue
+  parent: TicketShop.RestApiClient.Model
+  isExternal: false
+  name: Venue
+  nameWithType: Venue
+  fullName: TicketShop.RestApiClient.Model.Venue
+- uid: TicketShop.RestApiClient.Model
+  commentId: N:TicketShop.RestApiClient.Model
+  isExternal: false
+  name: TicketShop.RestApiClient.Model
+  nameWithType: TicketShop.RestApiClient.Model
+  fullName: TicketShop.RestApiClient.Model
+- uid: TicketShop.RestApiClient.VenueApi.DeleteVenue*
+  commentId: Overload:TicketShop.RestApiClient.VenueApi.DeleteVenue
+  isExternal: false
+  name: DeleteVenue
+  nameWithType: VenueApi.DeleteVenue
+  fullName: TicketShop.RestApiClient.VenueApi.DeleteVenue
+- uid: TicketShop.RestApiClient.Interface.IVenueApi.DeleteVenue(System.Int32)
+  commentId: M:TicketShop.RestApiClient.Interface.IVenueApi.DeleteVenue(System.Int32)
+  parent: TicketShop.RestApiClient.Interface.IVenueApi
+  isExternal: true
+  name: DeleteVenue(Int32)
+  nameWithType: IVenueApi.DeleteVenue(Int32)
+  fullName: TicketShop.RestApiClient.Interface.IVenueApi.DeleteVenue(System.Int32)
+  spec.csharp:
+  - uid: TicketShop.RestApiClient.Interface.IVenueApi.DeleteVenue(System.Int32)
+    name: DeleteVenue
+    nameWithType: IVenueApi.DeleteVenue
+    fullName: TicketShop.RestApiClient.Interface.IVenueApi.DeleteVenue
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Int32
+    name: Int32
+    nameWithType: Int32
+    fullName: System.Int32
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: TicketShop.RestApiClient.Interface.IVenueApi.DeleteVenue(System.Int32)
+    name: DeleteVenue
+    nameWithType: IVenueApi.DeleteVenue
+    fullName: TicketShop.RestApiClient.Interface.IVenueApi.DeleteVenue
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Int32
+    name: Int32
+    nameWithType: Int32
+    fullName: System.Int32
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  name: Int32
+  nameWithType: Int32
+  fullName: System.Int32
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: TicketShop.RestApiClient.VenueApi.FindVenues*
+  commentId: Overload:TicketShop.RestApiClient.VenueApi.FindVenues
+  isExternal: false
+  name: FindVenues
+  nameWithType: VenueApi.FindVenues
+  fullName: TicketShop.RestApiClient.VenueApi.FindVenues
+- uid: TicketShop.RestApiClient.Interface.IVenueApi.FindVenues(TicketShop.RestApiClient.Model.Search)
+  commentId: M:TicketShop.RestApiClient.Interface.IVenueApi.FindVenues(TicketShop.RestApiClient.Model.Search)
+  parent: TicketShop.RestApiClient.Interface.IVenueApi
+  isExternal: false
+  name: FindVenues(Search)
+  nameWithType: IVenueApi.FindVenues(Search)
+  fullName: TicketShop.RestApiClient.Interface.IVenueApi.FindVenues(TicketShop.RestApiClient.Model.Search)
+  spec.csharp:
+  - uid: TicketShop.RestApiClient.Interface.IVenueApi.FindVenues(TicketShop.RestApiClient.Model.Search)
+    name: FindVenues
+    nameWithType: IVenueApi.FindVenues
+    fullName: TicketShop.RestApiClient.Interface.IVenueApi.FindVenues
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: TicketShop.RestApiClient.Model.Search
+    name: Search
+    nameWithType: Search
+    fullName: TicketShop.RestApiClient.Model.Search
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: TicketShop.RestApiClient.Interface.IVenueApi.FindVenues(TicketShop.RestApiClient.Model.Search)
+    name: FindVenues
+    nameWithType: IVenueApi.FindVenues
+    fullName: TicketShop.RestApiClient.Interface.IVenueApi.FindVenues
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: TicketShop.RestApiClient.Model.Search
+    name: Search
+    nameWithType: Search
+    fullName: TicketShop.RestApiClient.Model.Search
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: TicketShop.RestApiClient.Model.Search
+  commentId: T:TicketShop.RestApiClient.Model.Search
+  parent: TicketShop.RestApiClient.Model
+  isExternal: false
+  name: Search
+  nameWithType: Search
+  fullName: TicketShop.RestApiClient.Model.Search
+- uid: System.Collections.Generic.List{TicketShop.RestApiClient.Model.Venue}
+  commentId: T:System.Collections.Generic.List{TicketShop.RestApiClient.Model.Venue}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.List`1
+  name: List<Venue>
+  nameWithType: List<Venue>
+  fullName: System.Collections.Generic.List<TicketShop.RestApiClient.Model.Venue>
+  nameWithType.vb: List(Of Venue)
+  fullName.vb: System.Collections.Generic.List(Of TicketShop.RestApiClient.Model.Venue)
+  name.vb: List(Of Venue)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    nameWithType: List
+    fullName: System.Collections.Generic.List
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: TicketShop.RestApiClient.Model.Venue
+    name: Venue
+    nameWithType: Venue
+    fullName: TicketShop.RestApiClient.Model.Venue
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    nameWithType: List
+    fullName: System.Collections.Generic.List
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: TicketShop.RestApiClient.Model.Venue
+    name: Venue
+    nameWithType: Venue
+    fullName: TicketShop.RestApiClient.Model.Venue
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic.List`1
+  commentId: T:System.Collections.Generic.List`1
+  isExternal: true
+  name: List<T>
+  nameWithType: List<T>
+  fullName: System.Collections.Generic.List<T>
+  nameWithType.vb: List(Of T)
+  fullName.vb: System.Collections.Generic.List(Of T)
+  name.vb: List(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    nameWithType: List
+    fullName: System.Collections.Generic.List
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    nameWithType: List
+    fullName: System.Collections.Generic.List
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: false
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+- uid: TicketShop.RestApiClient.VenueApi.GetVenueById*
+  commentId: Overload:TicketShop.RestApiClient.VenueApi.GetVenueById
+  isExternal: false
+  name: GetVenueById
+  nameWithType: VenueApi.GetVenueById
+  fullName: TicketShop.RestApiClient.VenueApi.GetVenueById
+- uid: TicketShop.RestApiClient.Interface.IVenueApi.GetVenueById(System.Int32)
+  commentId: M:TicketShop.RestApiClient.Interface.IVenueApi.GetVenueById(System.Int32)
+  parent: TicketShop.RestApiClient.Interface.IVenueApi
+  isExternal: true
+  name: GetVenueById(Int32)
+  nameWithType: IVenueApi.GetVenueById(Int32)
+  fullName: TicketShop.RestApiClient.Interface.IVenueApi.GetVenueById(System.Int32)
+  spec.csharp:
+  - uid: TicketShop.RestApiClient.Interface.IVenueApi.GetVenueById(System.Int32)
+    name: GetVenueById
+    nameWithType: IVenueApi.GetVenueById
+    fullName: TicketShop.RestApiClient.Interface.IVenueApi.GetVenueById
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Int32
+    name: Int32
+    nameWithType: Int32
+    fullName: System.Int32
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: TicketShop.RestApiClient.Interface.IVenueApi.GetVenueById(System.Int32)
+    name: GetVenueById
+    nameWithType: IVenueApi.GetVenueById
+    fullName: TicketShop.RestApiClient.Interface.IVenueApi.GetVenueById
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Int32
+    name: Int32
+    nameWithType: Int32
+    fullName: System.Int32
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: TicketShop.RestApiClient.VenueApi.GetVenues*
+  commentId: Overload:TicketShop.RestApiClient.VenueApi.GetVenues
+  isExternal: false
+  name: GetVenues
+  nameWithType: VenueApi.GetVenues
+  fullName: TicketShop.RestApiClient.VenueApi.GetVenues
+- uid: TicketShop.RestApiClient.Interface.IVenueApi.GetVenues(System.Int32,System.Int32)
+  commentId: M:TicketShop.RestApiClient.Interface.IVenueApi.GetVenues(System.Int32,System.Int32)
+  parent: TicketShop.RestApiClient.Interface.IVenueApi
+  isExternal: true
+  name: GetVenues(Int32, Int32)
+  nameWithType: IVenueApi.GetVenues(Int32, Int32)
+  fullName: TicketShop.RestApiClient.Interface.IVenueApi.GetVenues(System.Int32, System.Int32)
+  spec.csharp:
+  - uid: TicketShop.RestApiClient.Interface.IVenueApi.GetVenues(System.Int32,System.Int32)
+    name: GetVenues
+    nameWithType: IVenueApi.GetVenues
+    fullName: TicketShop.RestApiClient.Interface.IVenueApi.GetVenues
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Int32
+    name: Int32
+    nameWithType: Int32
+    fullName: System.Int32
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Int32
+    name: Int32
+    nameWithType: Int32
+    fullName: System.Int32
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: TicketShop.RestApiClient.Interface.IVenueApi.GetVenues(System.Int32,System.Int32)
+    name: GetVenues
+    nameWithType: IVenueApi.GetVenues
+    fullName: TicketShop.RestApiClient.Interface.IVenueApi.GetVenues
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Int32
+    name: Int32
+    nameWithType: Int32
+    fullName: System.Int32
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Int32
+    name: Int32
+    nameWithType: Int32
+    fullName: System.Int32
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: TicketShop.RestApiClient.VenueApi.UpdateVenue*
+  commentId: Overload:TicketShop.RestApiClient.VenueApi.UpdateVenue
+  isExternal: false
+  name: UpdateVenue
+  nameWithType: VenueApi.UpdateVenue
+  fullName: TicketShop.RestApiClient.VenueApi.UpdateVenue
+- uid: TicketShop.RestApiClient.Interface.IVenueApi.UpdateVenue(TicketShop.RestApiClient.Model.Venue)
+  commentId: M:TicketShop.RestApiClient.Interface.IVenueApi.UpdateVenue(TicketShop.RestApiClient.Model.Venue)
+  parent: TicketShop.RestApiClient.Interface.IVenueApi
+  isExternal: false
+  name: UpdateVenue(Venue)
+  nameWithType: IVenueApi.UpdateVenue(Venue)
+  fullName: TicketShop.RestApiClient.Interface.IVenueApi.UpdateVenue(TicketShop.RestApiClient.Model.Venue)
+  spec.csharp:
+  - uid: TicketShop.RestApiClient.Interface.IVenueApi.UpdateVenue(TicketShop.RestApiClient.Model.Venue)
+    name: UpdateVenue
+    nameWithType: IVenueApi.UpdateVenue
+    fullName: TicketShop.RestApiClient.Interface.IVenueApi.UpdateVenue
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: TicketShop.RestApiClient.Model.Venue
+    name: Venue
+    nameWithType: Venue
+    fullName: TicketShop.RestApiClient.Model.Venue
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: TicketShop.RestApiClient.Interface.IVenueApi.UpdateVenue(TicketShop.RestApiClient.Model.Venue)
+    name: UpdateVenue
+    nameWithType: IVenueApi.UpdateVenue
+    fullName: TicketShop.RestApiClient.Interface.IVenueApi.UpdateVenue
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: TicketShop.RestApiClient.Model.Venue
+    name: Venue
+    nameWithType: Venue
+    fullName: TicketShop.RestApiClient.Model.Venue
+  - name: )
+    nameWithType: )
+    fullName: )

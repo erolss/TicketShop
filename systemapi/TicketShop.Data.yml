@@ -1,0 +1,30 @@
+### YamlMime:ManagedReference
+items:
+- uid: TicketShop.Data
+  commentId: N:TicketShop.Data
+  id: TicketShop.Data
+  children:
+  - TicketShop.Data.ApplicationDbContext
+  langs:
+  - csharp
+  - vb
+  name: TicketShop.Data
+  nameWithType: TicketShop.Data
+  fullName: TicketShop.Data
+  type: Namespace
+  assemblies:
+  - TicketShop
+references:
+- uid: TicketShop.Data.ApplicationDbContext
+  commentId: T:TicketShop.Data.ApplicationDbContext
+  parent: TicketShop.Data
+  isExternal: false
+  name: ApplicationDbContext
+  nameWithType: ApplicationDbContext
+  fullName: TicketShop.Data.ApplicationDbContext
+- uid: TicketShop.Data
+  commentId: N:TicketShop.Data
+  isExternal: false
+  name: TicketShop.Data
+  nameWithType: TicketShop.Data
+  fullName: TicketShop.Data

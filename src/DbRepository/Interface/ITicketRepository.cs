@@ -13,6 +13,13 @@ namespace TicketApi.Db.Interface
         Ticket AddTicket(Ticket ticket);
 
         /// <summary>
+        /// Add new ticket and connect to transaction
+        /// </summary>
+        /// <param name="ticket">ticket object</param>
+        /// <returns>Ticket object</returns>
+        Ticket AddTicketOrder(Ticket ticket);
+
+        /// <summary>
         /// Update a ticket
         /// </summary>
         /// <param name="ticket">Ticket object</param>

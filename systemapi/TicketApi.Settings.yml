@@ -4,7 +4,7 @@ items:
   commentId: N:TicketApi.Settings
   id: TicketApi.Settings
   children:
-  - TicketApi.Settings.DbSettings
+  - TicketApi.Settings.CustomSettings
   langs:
   - csharp
   - vb
@@ -15,9 +15,9 @@ items:
   assemblies:
   - TicketApi
 references:
-- uid: TicketApi.Settings.DbSettings
-  commentId: T:TicketApi.Settings.DbSettings
+- uid: TicketApi.Settings.CustomSettings
+  commentId: T:TicketApi.Settings.CustomSettings
   isExternal: false
-  name: DbSettings
-  nameWithType: DbSettings
-  fullName: TicketApi.Settings.DbSettings
+  name: CustomSettings
+  nameWithType: CustomSettings
+  fullName: TicketApi.Settings.CustomSettings

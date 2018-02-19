@@ -21,7 +21,7 @@ items:
   source:
     remote:
       path: src/DbRepository/Interface/IEventRepository.cs
-      branch: restapi
+      branch: features/ticketshop
       repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
     id: IEventRepository
     path: src/DbRepository/Interface/IEventRepository.cs
@@ -52,7 +52,7 @@ items:
   source:
     remote:
       path: src/DbRepository/Interface/IEventRepository.cs
-      branch: restapi
+      branch: features/ticketshop
       repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
     id: AddEvent
     path: src/DbRepository/Interface/IEventRepository.cs
@@ -87,7 +87,7 @@ items:
   source:
     remote:
       path: src/DbRepository/Interface/IEventRepository.cs
-      branch: restapi
+      branch: features/ticketshop
       repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
     id: GetEvents
     path: src/DbRepository/Interface/IEventRepository.cs
@@ -120,7 +120,7 @@ items:
   source:
     remote:
       path: src/DbRepository/Interface/IEventRepository.cs
-      branch: restapi
+      branch: features/ticketshop
       repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
     id: GetEventById
     path: src/DbRepository/Interface/IEventRepository.cs
@@ -155,7 +155,7 @@ items:
   source:
     remote:
       path: src/DbRepository/Interface/IEventRepository.cs
-      branch: restapi
+      branch: features/ticketshop
       repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
     id: UpdateEvent
     path: src/DbRepository/Interface/IEventRepository.cs
@@ -190,7 +190,7 @@ items:
   source:
     remote:
       path: src/DbRepository/Interface/IEventRepository.cs
-      branch: restapi
+      branch: features/ticketshop
       repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
     id: DeleteEvent
     path: src/DbRepository/Interface/IEventRepository.cs
@@ -225,7 +225,7 @@ items:
   source:
     remote:
       path: src/DbRepository/Interface/IEventRepository.cs
-      branch: restapi
+      branch: features/ticketshop
       repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
     id: FindEvents
     path: src/DbRepository/Interface/IEventRepository.cs

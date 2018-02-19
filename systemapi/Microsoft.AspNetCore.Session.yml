@@ -1,0 +1,23 @@
+### YamlMime:ManagedReference
+items:
+- uid: Microsoft.AspNetCore.Session
+  commentId: N:Microsoft.AspNetCore.Session
+  id: Microsoft.AspNetCore.Session
+  children:
+  - Microsoft.AspNetCore.Session.SessionExtensions
+  langs:
+  - csharp
+  - vb
+  name: Microsoft.AspNetCore.Session
+  nameWithType: Microsoft.AspNetCore.Session
+  fullName: Microsoft.AspNetCore.Session
+  type: Namespace
+  assemblies:
+  - TicketShop
+references:
+- uid: Microsoft.AspNetCore.Session.SessionExtensions
+  commentId: T:Microsoft.AspNetCore.Session.SessionExtensions
+  isExternal: false
+  name: SessionExtensions
+  nameWithType: SessionExtensions
+  fullName: Microsoft.AspNetCore.Session.SessionExtensions

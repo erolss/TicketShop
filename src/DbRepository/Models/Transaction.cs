@@ -48,7 +48,7 @@ namespace TicketApi.Db.Models
         /// Gets or Sets PaymentReference
         /// </summary>
         [DataMember(Name = "paymentReference")]
-        public string PaymentReference { get; set; }
+        public string PaymentReferenceId { get; set; }
 
         /// <summary>
         /// Gets or Sets BuyerEmail
@@ -84,7 +84,7 @@ namespace TicketApi.Db.Models
             sb.Append("  BuyerEmail: ").Append(BuyerEmail).Append("\n");
             sb.Append("  BuyerUserId: ").Append(BuyerUserId).Append("\n");
             sb.Append("  PaymentStatus: ").Append(PaymentStatus).Append("\n");
-            sb.Append("  PaymentReference: ").Append(PaymentReference).Append("\n");
+            sb.Append("  PaymentReferenceId: ").Append(PaymentReferenceId).Append("\n");
             sb.Append("  TotalAmount: ").Append(TotalAmount).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -167,9 +167,9 @@ namespace TicketApi.Db.Models
                     PaymentStatus.Equals(other.PaymentStatus)
                 ) &&
                 (
-                    PaymentReference == other.PaymentReference ||
-                    PaymentReference != null &&
-                    PaymentReference.Equals(other.PaymentReference)
+                    PaymentReferenceId == other.PaymentReferenceId ||
+                    PaymentReferenceId != null &&
+                    PaymentReferenceId.Equals(other.PaymentReferenceId)
                 ) &&
                 (
                     TotalAmount == other.TotalAmount ||
@@ -204,8 +204,8 @@ namespace TicketApi.Db.Models
                     hashCode = hashCode * 59 + BuyerUserId.GetHashCode();
                 if (PaymentStatus != null)
                     hashCode = hashCode * 59 + PaymentStatus.GetHashCode();
-                if (PaymentReference != null)
-                    hashCode = hashCode * 59 + PaymentReference.GetHashCode();
+                if (PaymentReferenceId != null)
+                    hashCode = hashCode * 59 + PaymentReferenceId.GetHashCode();
                 if (TotalAmount != null)
                     hashCode = hashCode * 59 + TotalAmount.GetHashCode();
                 return hashCode;

@@ -1,0 +1,23 @@
+### YamlMime:ManagedReference
+items:
+- uid: TicketShop.Views.Manage
+  commentId: N:TicketShop.Views.Manage
+  id: TicketShop.Views.Manage
+  children:
+  - TicketShop.Views.Manage.ManageNavPages
+  langs:
+  - csharp
+  - vb
+  name: TicketShop.Views.Manage
+  nameWithType: TicketShop.Views.Manage
+  fullName: TicketShop.Views.Manage
+  type: Namespace
+  assemblies:
+  - TicketShop
+references:
+- uid: TicketShop.Views.Manage.ManageNavPages
+  commentId: T:TicketShop.Views.Manage.ManageNavPages
+  isExternal: false
+  name: ManageNavPages
+  nameWithType: ManageNavPages
+  fullName: TicketShop.Views.Manage.ManageNavPages

@@ -1,0 +1,72 @@
+### YamlMime:ManagedReference
+items:
+- uid: TicketShop.Models.ViewModels
+  commentId: N:TicketShop.Models.ViewModels
+  id: TicketShop.Models.ViewModels
+  children:
+  - TicketShop.Models.ViewModels.HomeIndexViewModel
+  - TicketShop.Models.ViewModels.OrderCartViewModel
+  - TicketShop.Models.ViewModels.ShopEventDatesViewModel
+  - TicketShop.Models.ViewModels.ShopEventsViewModel
+  - TicketShop.Models.ViewModels.ShopFindViewModel
+  - TicketShop.Models.ViewModels.ShopVenuesViewModel
+  - TicketShop.Models.ViewModels.ShopVenueViewModel
+  langs:
+  - csharp
+  - vb
+  name: TicketShop.Models.ViewModels
+  nameWithType: TicketShop.Models.ViewModels
+  fullName: TicketShop.Models.ViewModels
+  type: Namespace
+  assemblies:
+  - TicketShop
+references:
+- uid: TicketShop.Models.ViewModels.HomeIndexViewModel
+  commentId: T:TicketShop.Models.ViewModels.HomeIndexViewModel
+  isExternal: false
+  name: HomeIndexViewModel
+  nameWithType: HomeIndexViewModel
+  fullName: TicketShop.Models.ViewModels.HomeIndexViewModel
+- uid: TicketShop.Models.ViewModels.ShopEventsViewModel
+  commentId: T:TicketShop.Models.ViewModels.ShopEventsViewModel
+  isExternal: false
+  name: ShopEventsViewModel
+  nameWithType: ShopEventsViewModel
+  fullName: TicketShop.Models.ViewModels.ShopEventsViewModel
+- uid: TicketShop.Models.ViewModels.ShopEventDatesViewModel
+  commentId: T:TicketShop.Models.ViewModels.ShopEventDatesViewModel
+  isExternal: false
+  name: ShopEventDatesViewModel
+  nameWithType: ShopEventDatesViewModel
+  fullName: TicketShop.Models.ViewModels.ShopEventDatesViewModel
+- uid: TicketShop.Models.ViewModels.ShopVenueViewModel
+  commentId: T:TicketShop.Models.ViewModels.ShopVenueViewModel
+  isExternal: false
+  name: ShopVenueViewModel
+  nameWithType: ShopVenueViewModel
+  fullName: TicketShop.Models.ViewModels.ShopVenueViewModel
+- uid: TicketShop.Models.ViewModels.ShopVenuesViewModel
+  commentId: T:TicketShop.Models.ViewModels.ShopVenuesViewModel
+  isExternal: false
+  name: ShopVenuesViewModel
+  nameWithType: ShopVenuesViewModel
+  fullName: TicketShop.Models.ViewModels.ShopVenuesViewModel
+- uid: TicketShop.Models.ViewModels.ShopFindViewModel
+  commentId: T:TicketShop.Models.ViewModels.ShopFindViewModel
+  isExternal: false
+  name: ShopFindViewModel
+  nameWithType: ShopFindViewModel
+  fullName: TicketShop.Models.ViewModels.ShopFindViewModel
+- uid: TicketShop.Models.ViewModels.OrderCartViewModel
+  commentId: T:TicketShop.Models.ViewModels.OrderCartViewModel
+  parent: TicketShop.Models.ViewModels
+  isExternal: false
+  name: OrderCartViewModel
+  nameWithType: OrderCartViewModel
+  fullName: TicketShop.Models.ViewModels.OrderCartViewModel
+- uid: TicketShop.Models.ViewModels
+  commentId: N:TicketShop.Models.ViewModels
+  isExternal: false
+  name: TicketShop.Models.ViewModels
+  nameWithType: TicketShop.Models.ViewModels
+  fullName: TicketShop.Models.ViewModels

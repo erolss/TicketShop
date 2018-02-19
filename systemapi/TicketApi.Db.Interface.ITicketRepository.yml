@@ -24,7 +24,7 @@ items:
   source:
     remote:
       path: src/DbRepository/Interface/ITicketRepository.cs
-      branch: restapi
+      branch: features/ticketshop
       repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
     id: ITicketRepository
     path: src/DbRepository/Interface/ITicketRepository.cs
@@ -55,7 +55,7 @@ items:
   source:
     remote:
       path: src/DbRepository/Interface/ITicketRepository.cs
-      branch: restapi
+      branch: features/ticketshop
       repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
     id: AddTicket
     path: src/DbRepository/Interface/ITicketRepository.cs
@@ -86,7 +86,7 @@ items:
   source:
     remote:
       path: src/DbRepository/Interface/ITicketRepository.cs
-      branch: restapi
+      branch: features/ticketshop
       repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
     id: UpdateTicket
     path: src/DbRepository/Interface/ITicketRepository.cs
@@ -121,7 +121,7 @@ items:
   source:
     remote:
       path: src/DbRepository/Interface/ITicketRepository.cs
-      branch: restapi
+      branch: features/ticketshop
       repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
     id: DeleteTicket
     path: src/DbRepository/Interface/ITicketRepository.cs
@@ -155,7 +155,7 @@ items:
   source:
     remote:
       path: src/DbRepository/Interface/ITicketRepository.cs
-      branch: restapi
+      branch: features/ticketshop
       repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
     id: GetTickets
     path: src/DbRepository/Interface/ITicketRepository.cs
@@ -193,7 +193,7 @@ items:
   source:
     remote:
       path: src/DbRepository/Interface/ITicketRepository.cs
-      branch: restapi
+      branch: features/ticketshop
       repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
     id: GetTicketsByUserId
     path: src/DbRepository/Interface/ITicketRepository.cs
@@ -234,7 +234,7 @@ items:
   source:
     remote:
       path: src/DbRepository/Interface/ITicketRepository.cs
-      branch: restapi
+      branch: features/ticketshop
       repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
     id: GetTicketsByTransactionId
     path: src/DbRepository/Interface/ITicketRepository.cs
@@ -275,7 +275,7 @@ items:
   source:
     remote:
       path: src/DbRepository/Interface/ITicketRepository.cs
-      branch: restapi
+      branch: features/ticketshop
       repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
     id: GetTicketById
     path: src/DbRepository/Interface/ITicketRepository.cs
@@ -310,7 +310,7 @@ items:
   source:
     remote:
       path: src/DbRepository/Interface/ITicketRepository.cs
-      branch: restapi
+      branch: features/ticketshop
       repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
     id: GetFullTicketById
     path: src/DbRepository/Interface/ITicketRepository.cs
@@ -341,7 +341,7 @@ items:
   source:
     remote:
       path: src/DbRepository/Interface/ITicketRepository.cs
-      branch: restapi
+      branch: features/ticketshop
       repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
     id: GetFullTicketsByTransactionId
     path: src/DbRepository/Interface/ITicketRepository.cs

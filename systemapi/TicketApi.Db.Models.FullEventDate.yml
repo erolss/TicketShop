@@ -8,13 +8,21 @@ items:
   - TicketApi.Db.Models.FullEventDate.Address
   - TicketApi.Db.Models.FullEventDate.City
   - TicketApi.Db.Models.FullEventDate.Country
+  - TicketApi.Db.Models.FullEventDate.Equals(System.Object)
+  - TicketApi.Db.Models.FullEventDate.Equals(TicketApi.Db.Models.FullEventDate)
   - TicketApi.Db.Models.FullEventDate.EventHtmlDescription
+  - TicketApi.Db.Models.FullEventDate.EventImagePath
   - TicketApi.Db.Models.FullEventDate.EventName
   - TicketApi.Db.Models.FullEventDate.EventStartDateTime
+  - TicketApi.Db.Models.FullEventDate.GetHashCode
   - TicketApi.Db.Models.FullEventDate.MaxTickets
+  - TicketApi.Db.Models.FullEventDate.op_Equality(TicketApi.Db.Models.FullEventDate,TicketApi.Db.Models.FullEventDate)
+  - TicketApi.Db.Models.FullEventDate.op_Inequality(TicketApi.Db.Models.FullEventDate,TicketApi.Db.Models.FullEventDate)
   - TicketApi.Db.Models.FullEventDate.Price
   - TicketApi.Db.Models.FullEventDate.TicketEventDateID
   - TicketApi.Db.Models.FullEventDate.TicketEventID
+  - TicketApi.Db.Models.FullEventDate.ToJson
+  - TicketApi.Db.Models.FullEventDate.ToString
   - TicketApi.Db.Models.FullEventDate.VenueID
   - TicketApi.Db.Models.FullEventDate.VenueName
   langs:
@@ -27,11 +35,11 @@ items:
   source:
     remote:
       path: src/DbRepository/Models/FullEventDate.cs
-      branch: restapi
+      branch: features/ticketshop
       repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
     id: FullEventDate
     path: src/DbRepository/Models/FullEventDate.cs
-    startLine: 5
+    startLine: 7
   assemblies:
   - DbRepository
   namespace: TicketApi.Db.Models
@@ -39,21 +47,21 @@ items:
     content: >-
       [DataContract]
 
-      public class FullEventDate
+      public class FullEventDate : IEquatable<FullEventDate>
     content.vb: >-
       <DataContract>
 
       Public Class FullEventDate
+          Implements IEquatable(Of FullEventDate)
   inheritance:
   - System.Object
+  implements:
+  - System.IEquatable{TicketApi.Db.Models.FullEventDate}
   inheritedMembers:
-  - System.Object.Equals(System.Object)
   - System.Object.Equals(System.Object,System.Object)
-  - System.Object.GetHashCode
   - System.Object.GetType
   - System.Object.MemberwiseClone
   - System.Object.ReferenceEquals(System.Object,System.Object)
-  - System.Object.ToString
   attributes:
   - type: System.Runtime.Serialization.DataContractAttribute
     ctor: System.Runtime.Serialization.DataContractAttribute.#ctor
@@ -78,11 +86,11 @@ items:
   source:
     remote:
       path: src/DbRepository/Models/FullEventDate.cs
-      branch: restapi
+      branch: features/ticketshop
       repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
     id: TicketEventDateID
     path: src/DbRepository/Models/FullEventDate.cs
-    startLine: 8
+    startLine: 10
   assemblies:
   - DbRepository
   namespace: TicketApi.Db.Models
@@ -90,14 +98,14 @@ items:
     content: >-
       [DataMember]
 
-      public int TicketEventDateID { get; set; }
+      public int ? TicketEventDateID { get; set; }
     parameters: []
     return:
-      type: System.Int32
+      type: System.Nullable{System.Int32}
     content.vb: >-
       <DataMember>
 
-      Public Property TicketEventDateID As Integer
+      Public Property TicketEventDateID As Integer?
   overload: TicketApi.Db.Models.FullEventDate.TicketEventDateID*
   attributes:
   - type: System.Runtime.Serialization.DataMemberAttribute
@@ -123,11 +131,11 @@ items:
   source:
     remote:
       path: src/DbRepository/Models/FullEventDate.cs
-      branch: restapi
+      branch: features/ticketshop
       repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
     id: TicketEventID
     path: src/DbRepository/Models/FullEventDate.cs
-    startLine: 10
+    startLine: 12
   assemblies:
   - DbRepository
   namespace: TicketApi.Db.Models
@@ -168,11 +176,11 @@ items:
   source:
     remote:
       path: src/DbRepository/Models/FullEventDate.cs
-      branch: restapi
+      branch: features/ticketshop
       repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
     id: EventName
     path: src/DbRepository/Models/FullEventDate.cs
-    startLine: 12
+    startLine: 14
   assemblies:
   - DbRepository
   namespace: TicketApi.Db.Models
@@ -213,11 +221,11 @@ items:
   source:
     remote:
       path: src/DbRepository/Models/FullEventDate.cs
-      branch: restapi
+      branch: features/ticketshop
       repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
     id: EventHtmlDescription
     path: src/DbRepository/Models/FullEventDate.cs
-    startLine: 14
+    startLine: 16
   assemblies:
   - DbRepository
   namespace: TicketApi.Db.Models
@@ -244,6 +252,51 @@ items:
   - set
   modifiers.vb:
   - Public
+- uid: TicketApi.Db.Models.FullEventDate.EventImagePath
+  commentId: P:TicketApi.Db.Models.FullEventDate.EventImagePath
+  id: EventImagePath
+  parent: TicketApi.Db.Models.FullEventDate
+  langs:
+  - csharp
+  - vb
+  name: EventImagePath
+  nameWithType: FullEventDate.EventImagePath
+  fullName: TicketApi.Db.Models.FullEventDate.EventImagePath
+  type: Property
+  source:
+    remote:
+      path: src/DbRepository/Models/FullEventDate.cs
+      branch: features/ticketshop
+      repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
+    id: EventImagePath
+    path: src/DbRepository/Models/FullEventDate.cs
+    startLine: 18
+  assemblies:
+  - DbRepository
+  namespace: TicketApi.Db.Models
+  syntax:
+    content: >-
+      [DataMember]
+
+      public string EventImagePath { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: >-
+      <DataMember>
+
+      Public Property EventImagePath As String
+  overload: TicketApi.Db.Models.FullEventDate.EventImagePath*
+  attributes:
+  - type: System.Runtime.Serialization.DataMemberAttribute
+    ctor: System.Runtime.Serialization.DataMemberAttribute.#ctor
+    arguments: []
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
 - uid: TicketApi.Db.Models.FullEventDate.VenueID
   commentId: P:TicketApi.Db.Models.FullEventDate.VenueID
   id: VenueID
@@ -258,11 +311,11 @@ items:
   source:
     remote:
       path: src/DbRepository/Models/FullEventDate.cs
-      branch: restapi
+      branch: features/ticketshop
       repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
     id: VenueID
     path: src/DbRepository/Models/FullEventDate.cs
-    startLine: 16
+    startLine: 20
   assemblies:
   - DbRepository
   namespace: TicketApi.Db.Models
@@ -303,11 +356,11 @@ items:
   source:
     remote:
       path: src/DbRepository/Models/FullEventDate.cs
-      branch: restapi
+      branch: features/ticketshop
       repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
     id: VenueName
     path: src/DbRepository/Models/FullEventDate.cs
-    startLine: 18
+    startLine: 22
   assemblies:
   - DbRepository
   namespace: TicketApi.Db.Models
@@ -348,11 +401,11 @@ items:
   source:
     remote:
       path: src/DbRepository/Models/FullEventDate.cs
-      branch: restapi
+      branch: features/ticketshop
       repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
     id: Address
     path: src/DbRepository/Models/FullEventDate.cs
-    startLine: 20
+    startLine: 24
   assemblies:
   - DbRepository
   namespace: TicketApi.Db.Models
@@ -393,11 +446,11 @@ items:
   source:
     remote:
       path: src/DbRepository/Models/FullEventDate.cs
-      branch: restapi
+      branch: features/ticketshop
       repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
     id: City
     path: src/DbRepository/Models/FullEventDate.cs
-    startLine: 22
+    startLine: 26
   assemblies:
   - DbRepository
   namespace: TicketApi.Db.Models
@@ -438,11 +491,11 @@ items:
   source:
     remote:
       path: src/DbRepository/Models/FullEventDate.cs
-      branch: restapi
+      branch: features/ticketshop
       repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
     id: Country
     path: src/DbRepository/Models/FullEventDate.cs
-    startLine: 24
+    startLine: 28
   assemblies:
   - DbRepository
   namespace: TicketApi.Db.Models
@@ -483,11 +536,11 @@ items:
   source:
     remote:
       path: src/DbRepository/Models/FullEventDate.cs
-      branch: restapi
+      branch: features/ticketshop
       repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
     id: EventStartDateTime
     path: src/DbRepository/Models/FullEventDate.cs
-    startLine: 26
+    startLine: 30
   assemblies:
   - DbRepository
   namespace: TicketApi.Db.Models
@@ -528,11 +581,11 @@ items:
   source:
     remote:
       path: src/DbRepository/Models/FullEventDate.cs
-      branch: restapi
+      branch: features/ticketshop
       repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
     id: Price
     path: src/DbRepository/Models/FullEventDate.cs
-    startLine: 28
+    startLine: 32
   assemblies:
   - DbRepository
   namespace: TicketApi.Db.Models
@@ -573,11 +626,11 @@ items:
   source:
     remote:
       path: src/DbRepository/Models/FullEventDate.cs
-      branch: restapi
+      branch: features/ticketshop
       repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
     id: MaxTickets
     path: src/DbRepository/Models/FullEventDate.cs
-    startLine: 30
+    startLine: 34
   assemblies:
   - DbRepository
   namespace: TicketApi.Db.Models
@@ -604,6 +657,278 @@ items:
   - set
   modifiers.vb:
   - Public
+- uid: TicketApi.Db.Models.FullEventDate.ToString
+  commentId: M:TicketApi.Db.Models.FullEventDate.ToString
+  id: ToString
+  parent: TicketApi.Db.Models.FullEventDate
+  langs:
+  - csharp
+  - vb
+  name: ToString()
+  nameWithType: FullEventDate.ToString()
+  fullName: TicketApi.Db.Models.FullEventDate.ToString()
+  type: Method
+  source:
+    remote:
+      path: src/DbRepository/Models/FullEventDate.cs
+      branch: features/ticketshop
+      repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
+    id: ToString
+    path: src/DbRepository/Models/FullEventDate.cs
+    startLine: 41
+  assemblies:
+  - DbRepository
+  namespace: TicketApi.Db.Models
+  summary: "\nReturns the string presentation of the object\n"
+  example: []
+  syntax:
+    content: public override string ToString()
+    return:
+      type: System.String
+      description: String presentation of the object
+    content.vb: Public Overrides Function ToString As String
+  overridden: System.Object.ToString
+  overload: TicketApi.Db.Models.FullEventDate.ToString*
+  modifiers.csharp:
+  - public
+  - override
+  modifiers.vb:
+  - Public
+  - Overrides
+- uid: TicketApi.Db.Models.FullEventDate.ToJson
+  commentId: M:TicketApi.Db.Models.FullEventDate.ToJson
+  id: ToJson
+  parent: TicketApi.Db.Models.FullEventDate
+  langs:
+  - csharp
+  - vb
+  name: ToJson()
+  nameWithType: FullEventDate.ToJson()
+  fullName: TicketApi.Db.Models.FullEventDate.ToJson()
+  type: Method
+  source:
+    remote:
+      path: src/DbRepository/Models/FullEventDate.cs
+      branch: features/ticketshop
+      repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
+    id: ToJson
+    path: src/DbRepository/Models/FullEventDate.cs
+    startLine: 66
+  assemblies:
+  - DbRepository
+  namespace: TicketApi.Db.Models
+  summary: "\nReturns the JSON string presentation of the object\n"
+  example: []
+  syntax:
+    content: public string ToJson()
+    return:
+      type: System.String
+      description: JSON string presentation of the object
+    content.vb: Public Function ToJson As String
+  overload: TicketApi.Db.Models.FullEventDate.ToJson*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: TicketApi.Db.Models.FullEventDate.Equals(System.Object)
+  commentId: M:TicketApi.Db.Models.FullEventDate.Equals(System.Object)
+  id: Equals(System.Object)
+  parent: TicketApi.Db.Models.FullEventDate
+  langs:
+  - csharp
+  - vb
+  name: Equals(Object)
+  nameWithType: FullEventDate.Equals(Object)
+  fullName: TicketApi.Db.Models.FullEventDate.Equals(System.Object)
+  type: Method
+  source:
+    remote:
+      path: src/DbRepository/Models/FullEventDate.cs
+      branch: features/ticketshop
+      repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
+    id: Equals
+    path: src/DbRepository/Models/FullEventDate.cs
+    startLine: 76
+  assemblies:
+  - DbRepository
+  namespace: TicketApi.Db.Models
+  summary: "\nReturns true if objects are equal\n"
+  example: []
+  syntax:
+    content: public override bool Equals(object obj)
+    parameters:
+    - id: obj
+      type: System.Object
+      description: Object to be compared
+    return:
+      type: System.Boolean
+      description: Boolean
+    content.vb: Public Overrides Function Equals(obj As Object) As Boolean
+  overridden: System.Object.Equals(System.Object)
+  overload: TicketApi.Db.Models.FullEventDate.Equals*
+  modifiers.csharp:
+  - public
+  - override
+  modifiers.vb:
+  - Public
+  - Overrides
+- uid: TicketApi.Db.Models.FullEventDate.Equals(TicketApi.Db.Models.FullEventDate)
+  commentId: M:TicketApi.Db.Models.FullEventDate.Equals(TicketApi.Db.Models.FullEventDate)
+  id: Equals(TicketApi.Db.Models.FullEventDate)
+  parent: TicketApi.Db.Models.FullEventDate
+  langs:
+  - csharp
+  - vb
+  name: Equals(FullEventDate)
+  nameWithType: FullEventDate.Equals(FullEventDate)
+  fullName: TicketApi.Db.Models.FullEventDate.Equals(TicketApi.Db.Models.FullEventDate)
+  type: Method
+  source:
+    remote:
+      path: src/DbRepository/Models/FullEventDate.cs
+      branch: features/ticketshop
+      repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
+    id: Equals
+    path: src/DbRepository/Models/FullEventDate.cs
+    startLine: 90
+  assemblies:
+  - DbRepository
+  namespace: TicketApi.Db.Models
+  summary: "\nReturns true if EventDate instances are equal\n"
+  example: []
+  syntax:
+    content: public bool Equals(FullEventDate other)
+    parameters:
+    - id: other
+      type: TicketApi.Db.Models.FullEventDate
+      description: Instance of EventDate to be compared
+    return:
+      type: System.Boolean
+      description: Boolean
+    content.vb: Public Function Equals(other As FullEventDate) As Boolean
+  overload: TicketApi.Db.Models.FullEventDate.Equals*
+  implements:
+  - System.IEquatable{TicketApi.Db.Models.FullEventDate}.Equals(TicketApi.Db.Models.FullEventDate)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: TicketApi.Db.Models.FullEventDate.GetHashCode
+  commentId: M:TicketApi.Db.Models.FullEventDate.GetHashCode
+  id: GetHashCode
+  parent: TicketApi.Db.Models.FullEventDate
+  langs:
+  - csharp
+  - vb
+  name: GetHashCode()
+  nameWithType: FullEventDate.GetHashCode()
+  fullName: TicketApi.Db.Models.FullEventDate.GetHashCode()
+  type: Method
+  source:
+    remote:
+      path: src/DbRepository/Models/FullEventDate.cs
+      branch: features/ticketshop
+      repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
+    id: GetHashCode
+    path: src/DbRepository/Models/FullEventDate.cs
+    startLine: 169
+  assemblies:
+  - DbRepository
+  namespace: TicketApi.Db.Models
+  summary: "\nGets the hash code\n"
+  example: []
+  syntax:
+    content: public override int GetHashCode()
+    return:
+      type: System.Int32
+      description: Hash code
+    content.vb: Public Overrides Function GetHashCode As Integer
+  overridden: System.Object.GetHashCode
+  overload: TicketApi.Db.Models.FullEventDate.GetHashCode*
+  modifiers.csharp:
+  - public
+  - override
+  modifiers.vb:
+  - Public
+  - Overrides
+- uid: TicketApi.Db.Models.FullEventDate.op_Equality(TicketApi.Db.Models.FullEventDate,TicketApi.Db.Models.FullEventDate)
+  commentId: M:TicketApi.Db.Models.FullEventDate.op_Equality(TicketApi.Db.Models.FullEventDate,TicketApi.Db.Models.FullEventDate)
+  id: op_Equality(TicketApi.Db.Models.FullEventDate,TicketApi.Db.Models.FullEventDate)
+  parent: TicketApi.Db.Models.FullEventDate
+  langs:
+  - csharp
+  - vb
+  name: Equality(FullEventDate, FullEventDate)
+  nameWithType: FullEventDate.Equality(FullEventDate, FullEventDate)
+  fullName: TicketApi.Db.Models.FullEventDate.Equality(TicketApi.Db.Models.FullEventDate, TicketApi.Db.Models.FullEventDate)
+  type: Operator
+  source:
+    remote:
+      path: src/DbRepository/Models/FullEventDate.cs
+      branch: features/ticketshop
+      repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
+    id: op_Equality
+    path: src/DbRepository/Models/FullEventDate.cs
+    startLine: 208
+  assemblies:
+  - DbRepository
+  namespace: TicketApi.Db.Models
+  syntax:
+    content: public static bool operator ==(FullEventDate left, FullEventDate right)
+    parameters:
+    - id: left
+      type: TicketApi.Db.Models.FullEventDate
+    - id: right
+      type: TicketApi.Db.Models.FullEventDate
+    return:
+      type: System.Boolean
+    content.vb: Public Shared Operator =(left As FullEventDate, right As FullEventDate) As Boolean
+  overload: TicketApi.Db.Models.FullEventDate.op_Equality*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: TicketApi.Db.Models.FullEventDate.op_Inequality(TicketApi.Db.Models.FullEventDate,TicketApi.Db.Models.FullEventDate)
+  commentId: M:TicketApi.Db.Models.FullEventDate.op_Inequality(TicketApi.Db.Models.FullEventDate,TicketApi.Db.Models.FullEventDate)
+  id: op_Inequality(TicketApi.Db.Models.FullEventDate,TicketApi.Db.Models.FullEventDate)
+  parent: TicketApi.Db.Models.FullEventDate
+  langs:
+  - csharp
+  - vb
+  name: Inequality(FullEventDate, FullEventDate)
+  nameWithType: FullEventDate.Inequality(FullEventDate, FullEventDate)
+  fullName: TicketApi.Db.Models.FullEventDate.Inequality(TicketApi.Db.Models.FullEventDate, TicketApi.Db.Models.FullEventDate)
+  type: Operator
+  source:
+    remote:
+      path: src/DbRepository/Models/FullEventDate.cs
+      branch: features/ticketshop
+      repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
+    id: op_Inequality
+    path: src/DbRepository/Models/FullEventDate.cs
+    startLine: 213
+  assemblies:
+  - DbRepository
+  namespace: TicketApi.Db.Models
+  syntax:
+    content: public static bool operator !=(FullEventDate left, FullEventDate right)
+    parameters:
+    - id: left
+      type: TicketApi.Db.Models.FullEventDate
+    - id: right
+      type: TicketApi.Db.Models.FullEventDate
+    return:
+      type: System.Boolean
+    content.vb: Public Shared Operator <>(left As FullEventDate, right As FullEventDate) As Boolean
+  overload: TicketApi.Db.Models.FullEventDate.op_Inequality*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
 references:
 - uid: TicketApi.Db.Models
   commentId: N:TicketApi.Db.Models
@@ -618,44 +943,45 @@ references:
   name: Object
   nameWithType: Object
   fullName: System.Object
-- uid: System.Object.Equals(System.Object)
-  commentId: M:System.Object.Equals(System.Object)
-  parent: System.Object
-  isExternal: true
-  name: Equals(Object)
-  nameWithType: Object.Equals(Object)
-  fullName: System.Object.Equals(System.Object)
+- uid: System.IEquatable{TicketApi.Db.Models.FullEventDate}
+  commentId: T:System.IEquatable{TicketApi.Db.Models.FullEventDate}
+  parent: System
+  definition: System.IEquatable`1
+  name: IEquatable<FullEventDate>
+  nameWithType: IEquatable<FullEventDate>
+  fullName: System.IEquatable<TicketApi.Db.Models.FullEventDate>
+  nameWithType.vb: IEquatable(Of FullEventDate)
+  fullName.vb: System.IEquatable(Of TicketApi.Db.Models.FullEventDate)
+  name.vb: IEquatable(Of FullEventDate)
   spec.csharp:
-  - uid: System.Object.Equals(System.Object)
-    name: Equals
-    nameWithType: Object.Equals
-    fullName: System.Object.Equals
+  - uid: System.IEquatable`1
+    name: IEquatable
+    nameWithType: IEquatable
+    fullName: System.IEquatable
     isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - uid: System.Object
-    name: Object
-    nameWithType: Object
-    fullName: System.Object
-    isExternal: true
-  - name: )
-    nameWithType: )
-    fullName: )
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: TicketApi.Db.Models.FullEventDate
+    name: FullEventDate
+    nameWithType: FullEventDate
+    fullName: TicketApi.Db.Models.FullEventDate
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
   spec.vb:
-  - uid: System.Object.Equals(System.Object)
-    name: Equals
-    nameWithType: Object.Equals
-    fullName: System.Object.Equals
+  - uid: System.IEquatable`1
+    name: IEquatable
+    nameWithType: IEquatable
+    fullName: System.IEquatable
     isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - uid: System.Object
-    name: Object
-    nameWithType: Object
-    fullName: System.Object
-    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: TicketApi.Db.Models.FullEventDate
+    name: FullEventDate
+    nameWithType: FullEventDate
+    fullName: TicketApi.Db.Models.FullEventDate
   - name: )
     nameWithType: )
     fullName: )
@@ -713,37 +1039,6 @@ references:
     nameWithType: Object
     fullName: System.Object
     isExternal: true
-  - name: )
-    nameWithType: )
-    fullName: )
-- uid: System.Object.GetHashCode
-  commentId: M:System.Object.GetHashCode
-  parent: System.Object
-  isExternal: true
-  name: GetHashCode()
-  nameWithType: Object.GetHashCode()
-  fullName: System.Object.GetHashCode()
-  spec.csharp:
-  - uid: System.Object.GetHashCode
-    name: GetHashCode
-    nameWithType: Object.GetHashCode
-    fullName: System.Object.GetHashCode
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - name: )
-    nameWithType: )
-    fullName: )
-  spec.vb:
-  - uid: System.Object.GetHashCode
-    name: GetHashCode
-    nameWithType: Object.GetHashCode
-    fullName: System.Object.GetHashCode
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
   - name: )
     nameWithType: )
     fullName: )
@@ -866,49 +1161,146 @@ references:
   - name: )
     nameWithType: )
     fullName: )
-- uid: System.Object.ToString
-  commentId: M:System.Object.ToString
-  parent: System.Object
-  isExternal: true
-  name: ToString()
-  nameWithType: Object.ToString()
-  fullName: System.Object.ToString()
-  spec.csharp:
-  - uid: System.Object.ToString
-    name: ToString
-    nameWithType: Object.ToString
-    fullName: System.Object.ToString
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - name: )
-    nameWithType: )
-    fullName: )
-  spec.vb:
-  - uid: System.Object.ToString
-    name: ToString
-    nameWithType: Object.ToString
-    fullName: System.Object.ToString
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - name: )
-    nameWithType: )
-    fullName: )
 - uid: System
   commentId: N:System
   isExternal: false
   name: System
   nameWithType: System
   fullName: System
+- uid: System.IEquatable`1
+  commentId: T:System.IEquatable`1
+  isExternal: true
+  name: IEquatable<T>
+  nameWithType: IEquatable<T>
+  fullName: System.IEquatable<T>
+  nameWithType.vb: IEquatable(Of T)
+  fullName.vb: System.IEquatable(Of T)
+  name.vb: IEquatable(Of T)
+  spec.csharp:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    nameWithType: IEquatable
+    fullName: System.IEquatable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    nameWithType: IEquatable
+    fullName: System.IEquatable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
 - uid: TicketApi.Db.Models.FullEventDate.TicketEventDateID*
   commentId: Overload:TicketApi.Db.Models.FullEventDate.TicketEventDateID
   isExternal: false
   name: TicketEventDateID
   nameWithType: FullEventDate.TicketEventDateID
   fullName: TicketApi.Db.Models.FullEventDate.TicketEventDateID
+- uid: System.Nullable{System.Int32}
+  commentId: T:System.Nullable{System.Int32}
+  parent: System
+  definition: System.Nullable`1
+  name: Nullable<Int32>
+  nameWithType: Nullable<Int32>
+  fullName: System.Nullable<System.Int32>
+  nameWithType.vb: Nullable(Of Int32)
+  fullName.vb: System.Nullable(Of System.Int32)
+  name.vb: Nullable(Of Int32)
+  spec.csharp:
+  - uid: System.Nullable`1
+    name: Nullable
+    nameWithType: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.Int32
+    name: Int32
+    nameWithType: Int32
+    fullName: System.Int32
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Nullable`1
+    name: Nullable
+    nameWithType: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.Int32
+    name: Int32
+    nameWithType: Int32
+    fullName: System.Int32
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Nullable`1
+  commentId: T:System.Nullable`1
+  isExternal: true
+  name: Nullable<T>
+  nameWithType: Nullable<T>
+  fullName: System.Nullable<T>
+  nameWithType.vb: Nullable(Of T)
+  fullName.vb: System.Nullable(Of T)
+  name.vb: Nullable(Of T)
+  spec.csharp:
+  - uid: System.Nullable`1
+    name: Nullable
+    nameWithType: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Nullable`1
+    name: Nullable
+    nameWithType: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: TicketApi.Db.Models.FullEventDate.TicketEventID*
+  commentId: Overload:TicketApi.Db.Models.FullEventDate.TicketEventID
+  isExternal: false
+  name: TicketEventID
+  nameWithType: FullEventDate.TicketEventID
+  fullName: TicketApi.Db.Models.FullEventDate.TicketEventID
 - uid: System.Int32
   commentId: T:System.Int32
   parent: System
@@ -916,12 +1308,6 @@ references:
   name: Int32
   nameWithType: Int32
   fullName: System.Int32
-- uid: TicketApi.Db.Models.FullEventDate.TicketEventID*
-  commentId: Overload:TicketApi.Db.Models.FullEventDate.TicketEventID
-  isExternal: false
-  name: TicketEventID
-  nameWithType: FullEventDate.TicketEventID
-  fullName: TicketApi.Db.Models.FullEventDate.TicketEventID
 - uid: TicketApi.Db.Models.FullEventDate.EventName*
   commentId: Overload:TicketApi.Db.Models.FullEventDate.EventName
   isExternal: false
@@ -941,6 +1327,12 @@ references:
   name: EventHtmlDescription
   nameWithType: FullEventDate.EventHtmlDescription
   fullName: TicketApi.Db.Models.FullEventDate.EventHtmlDescription
+- uid: TicketApi.Db.Models.FullEventDate.EventImagePath*
+  commentId: Overload:TicketApi.Db.Models.FullEventDate.EventImagePath
+  isExternal: false
+  name: EventImagePath
+  nameWithType: FullEventDate.EventImagePath
+  fullName: TicketApi.Db.Models.FullEventDate.EventImagePath
 - uid: TicketApi.Db.Models.FullEventDate.VenueID*
   commentId: Overload:TicketApi.Db.Models.FullEventDate.VenueID
   isExternal: false
@@ -1003,3 +1395,235 @@ references:
   name: MaxTickets
   nameWithType: FullEventDate.MaxTickets
   fullName: TicketApi.Db.Models.FullEventDate.MaxTickets
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: TicketApi.Db.Models.FullEventDate.ToString*
+  commentId: Overload:TicketApi.Db.Models.FullEventDate.ToString
+  isExternal: false
+  name: ToString
+  nameWithType: FullEventDate.ToString
+  fullName: TicketApi.Db.Models.FullEventDate.ToString
+- uid: TicketApi.Db.Models.FullEventDate.ToJson*
+  commentId: Overload:TicketApi.Db.Models.FullEventDate.ToJson
+  isExternal: false
+  name: ToJson
+  nameWithType: FullEventDate.ToJson
+  fullName: TicketApi.Db.Models.FullEventDate.ToJson
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: TicketApi.Db.Models.FullEventDate.Equals*
+  commentId: Overload:TicketApi.Db.Models.FullEventDate.Equals
+  isExternal: false
+  name: Equals
+  nameWithType: FullEventDate.Equals
+  fullName: TicketApi.Db.Models.FullEventDate.Equals
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: System.IEquatable{TicketApi.Db.Models.FullEventDate}.Equals(TicketApi.Db.Models.FullEventDate)
+  commentId: M:System.IEquatable{TicketApi.Db.Models.FullEventDate}.Equals(TicketApi.Db.Models.FullEventDate)
+  parent: System.IEquatable{TicketApi.Db.Models.FullEventDate}
+  definition: System.IEquatable`1.Equals(`0)
+  name: Equals(FullEventDate)
+  nameWithType: IEquatable<FullEventDate>.Equals(FullEventDate)
+  fullName: System.IEquatable<TicketApi.Db.Models.FullEventDate>.Equals(TicketApi.Db.Models.FullEventDate)
+  nameWithType.vb: IEquatable(Of FullEventDate).Equals(FullEventDate)
+  fullName.vb: System.IEquatable(Of TicketApi.Db.Models.FullEventDate).Equals(TicketApi.Db.Models.FullEventDate)
+  spec.csharp:
+  - uid: System.IEquatable`1.Equals(`0)
+    name: Equals
+    nameWithType: IEquatable<FullEventDate>.Equals
+    fullName: System.IEquatable<TicketApi.Db.Models.FullEventDate>.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: TicketApi.Db.Models.FullEventDate
+    name: FullEventDate
+    nameWithType: FullEventDate
+    fullName: TicketApi.Db.Models.FullEventDate
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.IEquatable`1.Equals(`0)
+    name: Equals
+    nameWithType: IEquatable(Of FullEventDate).Equals
+    fullName: System.IEquatable(Of TicketApi.Db.Models.FullEventDate).Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: TicketApi.Db.Models.FullEventDate
+    name: FullEventDate
+    nameWithType: FullEventDate
+    fullName: TicketApi.Db.Models.FullEventDate
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: TicketApi.Db.Models.FullEventDate
+  commentId: T:TicketApi.Db.Models.FullEventDate
+  parent: TicketApi.Db.Models
+  isExternal: false
+  name: FullEventDate
+  nameWithType: FullEventDate
+  fullName: TicketApi.Db.Models.FullEventDate
+- uid: System.IEquatable`1.Equals(`0)
+  commentId: M:System.IEquatable`1.Equals(`0)
+  isExternal: true
+  name: Equals(T)
+  nameWithType: IEquatable<T>.Equals(T)
+  fullName: System.IEquatable<T>.Equals(T)
+  nameWithType.vb: IEquatable(Of T).Equals(T)
+  fullName.vb: System.IEquatable(Of T).Equals(T)
+  spec.csharp:
+  - uid: System.IEquatable`1.Equals(`0)
+    name: Equals
+    nameWithType: IEquatable<T>.Equals
+    fullName: System.IEquatable<T>.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.IEquatable`1.Equals(`0)
+    name: Equals
+    nameWithType: IEquatable(Of T).Equals
+    fullName: System.IEquatable(Of T).Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: TicketApi.Db.Models.FullEventDate.GetHashCode*
+  commentId: Overload:TicketApi.Db.Models.FullEventDate.GetHashCode
+  isExternal: false
+  name: GetHashCode
+  nameWithType: FullEventDate.GetHashCode
+  fullName: TicketApi.Db.Models.FullEventDate.GetHashCode
+- uid: TicketApi.Db.Models.FullEventDate.op_Equality*
+  commentId: Overload:TicketApi.Db.Models.FullEventDate.op_Equality
+  isExternal: false
+  name: Equality
+  nameWithType: FullEventDate.Equality
+  fullName: TicketApi.Db.Models.FullEventDate.Equality
+- uid: TicketApi.Db.Models.FullEventDate.op_Inequality*
+  commentId: Overload:TicketApi.Db.Models.FullEventDate.op_Inequality
+  isExternal: false
+  name: Inequality
+  nameWithType: FullEventDate.Inequality
+  fullName: TicketApi.Db.Models.FullEventDate.Inequality

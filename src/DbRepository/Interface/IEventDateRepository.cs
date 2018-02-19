@@ -52,6 +52,15 @@ namespace TicketApi.Db.Interface
         FullEventDate GetFullEventDateById(int id);
 
         /// <summary>
+        /// Get a list of FullEventDate objects by TicketEventID
+        /// </summary>
+        /// <param name="eventId">Ticket event ID</param>
+        /// <param name="offset">Result set offset</param>
+        /// <param name="maxLimit">Max number of rows to fetch</param>
+        /// <returns>A list of object representations of FullEventDates</returns>
+        List<FullEventDate> GetFullEventDatesByEventId(int eventId, int offset = 0, int maxLimit = 20);
+
+        /// <summary>
         /// Update the EventDate
         /// </summary>
         /// <param name="eventDate">EventDate object</param>
@@ -66,11 +75,11 @@ namespace TicketApi.Db.Interface
         bool DeleteEventDate(int id);
 
         /// <summary>
-        /// Find EventDates matching the search query
+        /// Find FullEventDates matching the search query
         /// </summary>
         /// <param name="searchStr">Search query</param>
-        /// <returns>A list of object representations of EventDates matching the query</returns>
-        List<EventDate> FindEventDates(string searchStr);
+        /// <returns>A list of object representations of FullEventDates matching the query</returns>
+        List<FullEventDate> FindFullEventDates(string searchStr);
 
               
         /// <summary>

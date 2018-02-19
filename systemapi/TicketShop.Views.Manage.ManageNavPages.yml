@@ -1,0 +1,867 @@
+### YamlMime:ManagedReference
+items:
+- uid: TicketShop.Views.Manage.ManageNavPages
+  commentId: T:TicketShop.Views.Manage.ManageNavPages
+  id: ManageNavPages
+  parent: TicketShop.Views.Manage
+  children:
+  - TicketShop.Views.Manage.ManageNavPages.ActivePageKey
+  - TicketShop.Views.Manage.ManageNavPages.AddActivePage(Microsoft.AspNetCore.Mvc.ViewFeatures.ViewDataDictionary,System.String)
+  - TicketShop.Views.Manage.ManageNavPages.ChangePassword
+  - TicketShop.Views.Manage.ManageNavPages.ChangePasswordNavClass(Microsoft.AspNetCore.Mvc.Rendering.ViewContext)
+  - TicketShop.Views.Manage.ManageNavPages.ExternalLogins
+  - TicketShop.Views.Manage.ManageNavPages.ExternalLoginsNavClass(Microsoft.AspNetCore.Mvc.Rendering.ViewContext)
+  - TicketShop.Views.Manage.ManageNavPages.Index
+  - TicketShop.Views.Manage.ManageNavPages.IndexNavClass(Microsoft.AspNetCore.Mvc.Rendering.ViewContext)
+  - TicketShop.Views.Manage.ManageNavPages.PageNavClass(Microsoft.AspNetCore.Mvc.Rendering.ViewContext,System.String)
+  - TicketShop.Views.Manage.ManageNavPages.TwoFactorAuthentication
+  - TicketShop.Views.Manage.ManageNavPages.TwoFactorAuthenticationNavClass(Microsoft.AspNetCore.Mvc.Rendering.ViewContext)
+  langs:
+  - csharp
+  - vb
+  name: ManageNavPages
+  nameWithType: ManageNavPages
+  fullName: TicketShop.Views.Manage.ManageNavPages
+  type: Class
+  source:
+    remote:
+      path: src/TicketShop/Views/Manage/ManageNavPages.cs
+      branch: features/ticketshop
+      repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
+    id: ManageNavPages
+    path: src/TicketShop/Views/Manage/ManageNavPages.cs
+    startLine: 9
+  assemblies:
+  - TicketShop
+  namespace: TicketShop.Views.Manage
+  syntax:
+    content: public static class ManageNavPages
+    content.vb: Public Module ManageNavPages
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  modifiers.csharp:
+  - public
+  - static
+  - class
+  modifiers.vb:
+  - Public
+  - Module
+- uid: TicketShop.Views.Manage.ManageNavPages.ActivePageKey
+  commentId: P:TicketShop.Views.Manage.ManageNavPages.ActivePageKey
+  id: ActivePageKey
+  parent: TicketShop.Views.Manage.ManageNavPages
+  langs:
+  - csharp
+  - vb
+  name: ActivePageKey
+  nameWithType: ManageNavPages.ActivePageKey
+  fullName: TicketShop.Views.Manage.ManageNavPages.ActivePageKey
+  type: Property
+  source:
+    remote:
+      path: src/TicketShop/Views/Manage/ManageNavPages.cs
+      branch: features/ticketshop
+      repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
+    id: ActivePageKey
+    path: src/TicketShop/Views/Manage/ManageNavPages.cs
+    startLine: 11
+  assemblies:
+  - TicketShop
+  namespace: TicketShop.Views.Manage
+  syntax:
+    content: public static string ActivePageKey { get; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Shared ReadOnly Property ActivePageKey As String
+  overload: TicketShop.Views.Manage.ManageNavPages.ActivePageKey*
+  modifiers.csharp:
+  - public
+  - static
+  - get
+  modifiers.vb:
+  - Public
+  - Shared
+  - ReadOnly
+- uid: TicketShop.Views.Manage.ManageNavPages.Index
+  commentId: P:TicketShop.Views.Manage.ManageNavPages.Index
+  id: Index
+  parent: TicketShop.Views.Manage.ManageNavPages
+  langs:
+  - csharp
+  - vb
+  name: Index
+  nameWithType: ManageNavPages.Index
+  fullName: TicketShop.Views.Manage.ManageNavPages.Index
+  type: Property
+  source:
+    remote:
+      path: src/TicketShop/Views/Manage/ManageNavPages.cs
+      branch: features/ticketshop
+      repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
+    id: Index
+    path: src/TicketShop/Views/Manage/ManageNavPages.cs
+    startLine: 13
+  assemblies:
+  - TicketShop
+  namespace: TicketShop.Views.Manage
+  syntax:
+    content: public static string Index { get; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Shared ReadOnly Property Index As String
+  overload: TicketShop.Views.Manage.ManageNavPages.Index*
+  modifiers.csharp:
+  - public
+  - static
+  - get
+  modifiers.vb:
+  - Public
+  - Shared
+  - ReadOnly
+- uid: TicketShop.Views.Manage.ManageNavPages.ChangePassword
+  commentId: P:TicketShop.Views.Manage.ManageNavPages.ChangePassword
+  id: ChangePassword
+  parent: TicketShop.Views.Manage.ManageNavPages
+  langs:
+  - csharp
+  - vb
+  name: ChangePassword
+  nameWithType: ManageNavPages.ChangePassword
+  fullName: TicketShop.Views.Manage.ManageNavPages.ChangePassword
+  type: Property
+  source:
+    remote:
+      path: src/TicketShop/Views/Manage/ManageNavPages.cs
+      branch: features/ticketshop
+      repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
+    id: ChangePassword
+    path: src/TicketShop/Views/Manage/ManageNavPages.cs
+    startLine: 15
+  assemblies:
+  - TicketShop
+  namespace: TicketShop.Views.Manage
+  syntax:
+    content: public static string ChangePassword { get; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Shared ReadOnly Property ChangePassword As String
+  overload: TicketShop.Views.Manage.ManageNavPages.ChangePassword*
+  modifiers.csharp:
+  - public
+  - static
+  - get
+  modifiers.vb:
+  - Public
+  - Shared
+  - ReadOnly
+- uid: TicketShop.Views.Manage.ManageNavPages.ExternalLogins
+  commentId: P:TicketShop.Views.Manage.ManageNavPages.ExternalLogins
+  id: ExternalLogins
+  parent: TicketShop.Views.Manage.ManageNavPages
+  langs:
+  - csharp
+  - vb
+  name: ExternalLogins
+  nameWithType: ManageNavPages.ExternalLogins
+  fullName: TicketShop.Views.Manage.ManageNavPages.ExternalLogins
+  type: Property
+  source:
+    remote:
+      path: src/TicketShop/Views/Manage/ManageNavPages.cs
+      branch: features/ticketshop
+      repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
+    id: ExternalLogins
+    path: src/TicketShop/Views/Manage/ManageNavPages.cs
+    startLine: 17
+  assemblies:
+  - TicketShop
+  namespace: TicketShop.Views.Manage
+  syntax:
+    content: public static string ExternalLogins { get; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Shared ReadOnly Property ExternalLogins As String
+  overload: TicketShop.Views.Manage.ManageNavPages.ExternalLogins*
+  modifiers.csharp:
+  - public
+  - static
+  - get
+  modifiers.vb:
+  - Public
+  - Shared
+  - ReadOnly
+- uid: TicketShop.Views.Manage.ManageNavPages.TwoFactorAuthentication
+  commentId: P:TicketShop.Views.Manage.ManageNavPages.TwoFactorAuthentication
+  id: TwoFactorAuthentication
+  parent: TicketShop.Views.Manage.ManageNavPages
+  langs:
+  - csharp
+  - vb
+  name: TwoFactorAuthentication
+  nameWithType: ManageNavPages.TwoFactorAuthentication
+  fullName: TicketShop.Views.Manage.ManageNavPages.TwoFactorAuthentication
+  type: Property
+  source:
+    remote:
+      path: src/TicketShop/Views/Manage/ManageNavPages.cs
+      branch: features/ticketshop
+      repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
+    id: TwoFactorAuthentication
+    path: src/TicketShop/Views/Manage/ManageNavPages.cs
+    startLine: 19
+  assemblies:
+  - TicketShop
+  namespace: TicketShop.Views.Manage
+  syntax:
+    content: public static string TwoFactorAuthentication { get; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Shared ReadOnly Property TwoFactorAuthentication As String
+  overload: TicketShop.Views.Manage.ManageNavPages.TwoFactorAuthentication*
+  modifiers.csharp:
+  - public
+  - static
+  - get
+  modifiers.vb:
+  - Public
+  - Shared
+  - ReadOnly
+- uid: TicketShop.Views.Manage.ManageNavPages.IndexNavClass(Microsoft.AspNetCore.Mvc.Rendering.ViewContext)
+  commentId: M:TicketShop.Views.Manage.ManageNavPages.IndexNavClass(Microsoft.AspNetCore.Mvc.Rendering.ViewContext)
+  id: IndexNavClass(Microsoft.AspNetCore.Mvc.Rendering.ViewContext)
+  parent: TicketShop.Views.Manage.ManageNavPages
+  langs:
+  - csharp
+  - vb
+  name: IndexNavClass(ViewContext)
+  nameWithType: ManageNavPages.IndexNavClass(ViewContext)
+  fullName: TicketShop.Views.Manage.ManageNavPages.IndexNavClass(Microsoft.AspNetCore.Mvc.Rendering.ViewContext)
+  type: Method
+  source:
+    remote:
+      path: src/TicketShop/Views/Manage/ManageNavPages.cs
+      branch: features/ticketshop
+      repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
+    id: IndexNavClass
+    path: src/TicketShop/Views/Manage/ManageNavPages.cs
+    startLine: 21
+  assemblies:
+  - TicketShop
+  namespace: TicketShop.Views.Manage
+  syntax:
+    content: public static string IndexNavClass(ViewContext viewContext)
+    parameters:
+    - id: viewContext
+      type: Microsoft.AspNetCore.Mvc.Rendering.ViewContext
+    return:
+      type: System.String
+    content.vb: Public Shared Function IndexNavClass(viewContext As ViewContext) As String
+  overload: TicketShop.Views.Manage.ManageNavPages.IndexNavClass*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: TicketShop.Views.Manage.ManageNavPages.ChangePasswordNavClass(Microsoft.AspNetCore.Mvc.Rendering.ViewContext)
+  commentId: M:TicketShop.Views.Manage.ManageNavPages.ChangePasswordNavClass(Microsoft.AspNetCore.Mvc.Rendering.ViewContext)
+  id: ChangePasswordNavClass(Microsoft.AspNetCore.Mvc.Rendering.ViewContext)
+  parent: TicketShop.Views.Manage.ManageNavPages
+  langs:
+  - csharp
+  - vb
+  name: ChangePasswordNavClass(ViewContext)
+  nameWithType: ManageNavPages.ChangePasswordNavClass(ViewContext)
+  fullName: TicketShop.Views.Manage.ManageNavPages.ChangePasswordNavClass(Microsoft.AspNetCore.Mvc.Rendering.ViewContext)
+  type: Method
+  source:
+    remote:
+      path: src/TicketShop/Views/Manage/ManageNavPages.cs
+      branch: features/ticketshop
+      repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
+    id: ChangePasswordNavClass
+    path: src/TicketShop/Views/Manage/ManageNavPages.cs
+    startLine: 23
+  assemblies:
+  - TicketShop
+  namespace: TicketShop.Views.Manage
+  syntax:
+    content: public static string ChangePasswordNavClass(ViewContext viewContext)
+    parameters:
+    - id: viewContext
+      type: Microsoft.AspNetCore.Mvc.Rendering.ViewContext
+    return:
+      type: System.String
+    content.vb: Public Shared Function ChangePasswordNavClass(viewContext As ViewContext) As String
+  overload: TicketShop.Views.Manage.ManageNavPages.ChangePasswordNavClass*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: TicketShop.Views.Manage.ManageNavPages.ExternalLoginsNavClass(Microsoft.AspNetCore.Mvc.Rendering.ViewContext)
+  commentId: M:TicketShop.Views.Manage.ManageNavPages.ExternalLoginsNavClass(Microsoft.AspNetCore.Mvc.Rendering.ViewContext)
+  id: ExternalLoginsNavClass(Microsoft.AspNetCore.Mvc.Rendering.ViewContext)
+  parent: TicketShop.Views.Manage.ManageNavPages
+  langs:
+  - csharp
+  - vb
+  name: ExternalLoginsNavClass(ViewContext)
+  nameWithType: ManageNavPages.ExternalLoginsNavClass(ViewContext)
+  fullName: TicketShop.Views.Manage.ManageNavPages.ExternalLoginsNavClass(Microsoft.AspNetCore.Mvc.Rendering.ViewContext)
+  type: Method
+  source:
+    remote:
+      path: src/TicketShop/Views/Manage/ManageNavPages.cs
+      branch: features/ticketshop
+      repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
+    id: ExternalLoginsNavClass
+    path: src/TicketShop/Views/Manage/ManageNavPages.cs
+    startLine: 25
+  assemblies:
+  - TicketShop
+  namespace: TicketShop.Views.Manage
+  syntax:
+    content: public static string ExternalLoginsNavClass(ViewContext viewContext)
+    parameters:
+    - id: viewContext
+      type: Microsoft.AspNetCore.Mvc.Rendering.ViewContext
+    return:
+      type: System.String
+    content.vb: Public Shared Function ExternalLoginsNavClass(viewContext As ViewContext) As String
+  overload: TicketShop.Views.Manage.ManageNavPages.ExternalLoginsNavClass*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: TicketShop.Views.Manage.ManageNavPages.TwoFactorAuthenticationNavClass(Microsoft.AspNetCore.Mvc.Rendering.ViewContext)
+  commentId: M:TicketShop.Views.Manage.ManageNavPages.TwoFactorAuthenticationNavClass(Microsoft.AspNetCore.Mvc.Rendering.ViewContext)
+  id: TwoFactorAuthenticationNavClass(Microsoft.AspNetCore.Mvc.Rendering.ViewContext)
+  parent: TicketShop.Views.Manage.ManageNavPages
+  langs:
+  - csharp
+  - vb
+  name: TwoFactorAuthenticationNavClass(ViewContext)
+  nameWithType: ManageNavPages.TwoFactorAuthenticationNavClass(ViewContext)
+  fullName: TicketShop.Views.Manage.ManageNavPages.TwoFactorAuthenticationNavClass(Microsoft.AspNetCore.Mvc.Rendering.ViewContext)
+  type: Method
+  source:
+    remote:
+      path: src/TicketShop/Views/Manage/ManageNavPages.cs
+      branch: features/ticketshop
+      repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
+    id: TwoFactorAuthenticationNavClass
+    path: src/TicketShop/Views/Manage/ManageNavPages.cs
+    startLine: 27
+  assemblies:
+  - TicketShop
+  namespace: TicketShop.Views.Manage
+  syntax:
+    content: public static string TwoFactorAuthenticationNavClass(ViewContext viewContext)
+    parameters:
+    - id: viewContext
+      type: Microsoft.AspNetCore.Mvc.Rendering.ViewContext
+    return:
+      type: System.String
+    content.vb: Public Shared Function TwoFactorAuthenticationNavClass(viewContext As ViewContext) As String
+  overload: TicketShop.Views.Manage.ManageNavPages.TwoFactorAuthenticationNavClass*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: TicketShop.Views.Manage.ManageNavPages.PageNavClass(Microsoft.AspNetCore.Mvc.Rendering.ViewContext,System.String)
+  commentId: M:TicketShop.Views.Manage.ManageNavPages.PageNavClass(Microsoft.AspNetCore.Mvc.Rendering.ViewContext,System.String)
+  id: PageNavClass(Microsoft.AspNetCore.Mvc.Rendering.ViewContext,System.String)
+  parent: TicketShop.Views.Manage.ManageNavPages
+  langs:
+  - csharp
+  - vb
+  name: PageNavClass(ViewContext, String)
+  nameWithType: ManageNavPages.PageNavClass(ViewContext, String)
+  fullName: TicketShop.Views.Manage.ManageNavPages.PageNavClass(Microsoft.AspNetCore.Mvc.Rendering.ViewContext, System.String)
+  type: Method
+  source:
+    remote:
+      path: src/TicketShop/Views/Manage/ManageNavPages.cs
+      branch: features/ticketshop
+      repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
+    id: PageNavClass
+    path: src/TicketShop/Views/Manage/ManageNavPages.cs
+    startLine: 29
+  assemblies:
+  - TicketShop
+  namespace: TicketShop.Views.Manage
+  syntax:
+    content: public static string PageNavClass(ViewContext viewContext, string page)
+    parameters:
+    - id: viewContext
+      type: Microsoft.AspNetCore.Mvc.Rendering.ViewContext
+    - id: page
+      type: System.String
+    return:
+      type: System.String
+    content.vb: Public Shared Function PageNavClass(viewContext As ViewContext, page As String) As String
+  overload: TicketShop.Views.Manage.ManageNavPages.PageNavClass*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: TicketShop.Views.Manage.ManageNavPages.AddActivePage(Microsoft.AspNetCore.Mvc.ViewFeatures.ViewDataDictionary,System.String)
+  commentId: M:TicketShop.Views.Manage.ManageNavPages.AddActivePage(Microsoft.AspNetCore.Mvc.ViewFeatures.ViewDataDictionary,System.String)
+  id: AddActivePage(Microsoft.AspNetCore.Mvc.ViewFeatures.ViewDataDictionary,System.String)
+  isExtensionMethod: true
+  parent: TicketShop.Views.Manage.ManageNavPages
+  langs:
+  - csharp
+  - vb
+  name: AddActivePage(ViewDataDictionary, String)
+  nameWithType: ManageNavPages.AddActivePage(ViewDataDictionary, String)
+  fullName: TicketShop.Views.Manage.ManageNavPages.AddActivePage(Microsoft.AspNetCore.Mvc.ViewFeatures.ViewDataDictionary, System.String)
+  type: Method
+  source:
+    remote:
+      path: src/TicketShop/Views/Manage/ManageNavPages.cs
+      branch: features/ticketshop
+      repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
+    id: AddActivePage
+    path: src/TicketShop/Views/Manage/ManageNavPages.cs
+    startLine: 35
+  assemblies:
+  - TicketShop
+  namespace: TicketShop.Views.Manage
+  syntax:
+    content: public static void AddActivePage(this ViewDataDictionary viewData, string activePage)
+    parameters:
+    - id: viewData
+      type: Microsoft.AspNetCore.Mvc.ViewFeatures.ViewDataDictionary
+    - id: activePage
+      type: System.String
+    content.vb: >-
+      <ExtensionAttribute>
+
+      Public Shared Sub AddActivePage(viewData As ViewDataDictionary, activePage As String)
+  overload: TicketShop.Views.Manage.ManageNavPages.AddActivePage*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+references:
+- uid: TicketShop.Views.Manage
+  commentId: N:TicketShop.Views.Manage
+  isExternal: false
+  name: TicketShop.Views.Manage
+  nameWithType: TicketShop.Views.Manage
+  fullName: TicketShop.Views.Manage
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: false
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: TicketShop.Views.Manage.ManageNavPages.ActivePageKey*
+  commentId: Overload:TicketShop.Views.Manage.ManageNavPages.ActivePageKey
+  isExternal: false
+  name: ActivePageKey
+  nameWithType: ManageNavPages.ActivePageKey
+  fullName: TicketShop.Views.Manage.ManageNavPages.ActivePageKey
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: TicketShop.Views.Manage.ManageNavPages.Index*
+  commentId: Overload:TicketShop.Views.Manage.ManageNavPages.Index
+  isExternal: false
+  name: Index
+  nameWithType: ManageNavPages.Index
+  fullName: TicketShop.Views.Manage.ManageNavPages.Index
+- uid: TicketShop.Views.Manage.ManageNavPages.ChangePassword*
+  commentId: Overload:TicketShop.Views.Manage.ManageNavPages.ChangePassword
+  isExternal: false
+  name: ChangePassword
+  nameWithType: ManageNavPages.ChangePassword
+  fullName: TicketShop.Views.Manage.ManageNavPages.ChangePassword
+- uid: TicketShop.Views.Manage.ManageNavPages.ExternalLogins*
+  commentId: Overload:TicketShop.Views.Manage.ManageNavPages.ExternalLogins
+  isExternal: false
+  name: ExternalLogins
+  nameWithType: ManageNavPages.ExternalLogins
+  fullName: TicketShop.Views.Manage.ManageNavPages.ExternalLogins
+- uid: TicketShop.Views.Manage.ManageNavPages.TwoFactorAuthentication*
+  commentId: Overload:TicketShop.Views.Manage.ManageNavPages.TwoFactorAuthentication
+  isExternal: false
+  name: TwoFactorAuthentication
+  nameWithType: ManageNavPages.TwoFactorAuthentication
+  fullName: TicketShop.Views.Manage.ManageNavPages.TwoFactorAuthentication
+- uid: TicketShop.Views.Manage.ManageNavPages.IndexNavClass*
+  commentId: Overload:TicketShop.Views.Manage.ManageNavPages.IndexNavClass
+  isExternal: false
+  name: IndexNavClass
+  nameWithType: ManageNavPages.IndexNavClass
+  fullName: TicketShop.Views.Manage.ManageNavPages.IndexNavClass
+- uid: Microsoft.AspNetCore.Mvc.Rendering.ViewContext
+  commentId: T:Microsoft.AspNetCore.Mvc.Rendering.ViewContext
+  parent: Microsoft.AspNetCore.Mvc.Rendering
+  isExternal: true
+  name: ViewContext
+  nameWithType: ViewContext
+  fullName: Microsoft.AspNetCore.Mvc.Rendering.ViewContext
+- uid: Microsoft.AspNetCore.Mvc.Rendering
+  commentId: N:Microsoft.AspNetCore.Mvc.Rendering
+  isExternal: false
+  name: Microsoft.AspNetCore.Mvc.Rendering
+  nameWithType: Microsoft.AspNetCore.Mvc.Rendering
+  fullName: Microsoft.AspNetCore.Mvc.Rendering
+- uid: TicketShop.Views.Manage.ManageNavPages.ChangePasswordNavClass*
+  commentId: Overload:TicketShop.Views.Manage.ManageNavPages.ChangePasswordNavClass
+  isExternal: false
+  name: ChangePasswordNavClass
+  nameWithType: ManageNavPages.ChangePasswordNavClass
+  fullName: TicketShop.Views.Manage.ManageNavPages.ChangePasswordNavClass
+- uid: TicketShop.Views.Manage.ManageNavPages.ExternalLoginsNavClass*
+  commentId: Overload:TicketShop.Views.Manage.ManageNavPages.ExternalLoginsNavClass
+  isExternal: false
+  name: ExternalLoginsNavClass
+  nameWithType: ManageNavPages.ExternalLoginsNavClass
+  fullName: TicketShop.Views.Manage.ManageNavPages.ExternalLoginsNavClass
+- uid: TicketShop.Views.Manage.ManageNavPages.TwoFactorAuthenticationNavClass*
+  commentId: Overload:TicketShop.Views.Manage.ManageNavPages.TwoFactorAuthenticationNavClass
+  isExternal: false
+  name: TwoFactorAuthenticationNavClass
+  nameWithType: ManageNavPages.TwoFactorAuthenticationNavClass
+  fullName: TicketShop.Views.Manage.ManageNavPages.TwoFactorAuthenticationNavClass
+- uid: TicketShop.Views.Manage.ManageNavPages.PageNavClass*
+  commentId: Overload:TicketShop.Views.Manage.ManageNavPages.PageNavClass
+  isExternal: false
+  name: PageNavClass
+  nameWithType: ManageNavPages.PageNavClass
+  fullName: TicketShop.Views.Manage.ManageNavPages.PageNavClass
+- uid: TicketShop.Views.Manage.ManageNavPages.AddActivePage*
+  commentId: Overload:TicketShop.Views.Manage.ManageNavPages.AddActivePage
+  isExternal: false
+  name: AddActivePage
+  nameWithType: ManageNavPages.AddActivePage
+  fullName: TicketShop.Views.Manage.ManageNavPages.AddActivePage
+- uid: Microsoft.AspNetCore.Mvc.ViewFeatures.ViewDataDictionary
+  commentId: T:Microsoft.AspNetCore.Mvc.ViewFeatures.ViewDataDictionary
+  parent: Microsoft.AspNetCore.Mvc.ViewFeatures
+  isExternal: true
+  name: ViewDataDictionary
+  nameWithType: ViewDataDictionary
+  fullName: Microsoft.AspNetCore.Mvc.ViewFeatures.ViewDataDictionary
+- uid: Microsoft.AspNetCore.Mvc.ViewFeatures
+  commentId: N:Microsoft.AspNetCore.Mvc.ViewFeatures
+  isExternal: false
+  name: Microsoft.AspNetCore.Mvc.ViewFeatures
+  nameWithType: Microsoft.AspNetCore.Mvc.ViewFeatures
+  fullName: Microsoft.AspNetCore.Mvc.ViewFeatures

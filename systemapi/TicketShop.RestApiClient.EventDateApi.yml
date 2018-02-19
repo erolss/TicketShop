@@ -1,0 +1,1525 @@
+### YamlMime:ManagedReference
+items:
+- uid: TicketShop.RestApiClient.EventDateApi
+  commentId: T:TicketShop.RestApiClient.EventDateApi
+  id: EventDateApi
+  parent: TicketShop.RestApiClient
+  children:
+  - TicketShop.RestApiClient.EventDateApi.#ctor(System.String)
+  - TicketShop.RestApiClient.EventDateApi.AddEventDate(TicketShop.RestApiClient.Model.EventDate)
+  - TicketShop.RestApiClient.EventDateApi.DeleteEventDate(System.Int32)
+  - TicketShop.RestApiClient.EventDateApi.FindEventDates(TicketShop.RestApiClient.Model.Search)
+  - TicketShop.RestApiClient.EventDateApi.FindFullEventDates(TicketShop.RestApiClient.Model.Search)
+  - TicketShop.RestApiClient.EventDateApi.GetEventDateByEventId(System.Int32)
+  - TicketShop.RestApiClient.EventDateApi.GetEventDateById(System.Int32)
+  - TicketShop.RestApiClient.EventDateApi.GetEventDates(System.Int32,System.Int32)
+  - TicketShop.RestApiClient.EventDateApi.GetFullEventDateById(System.Int32)
+  - TicketShop.RestApiClient.EventDateApi.GetFullEventDates(System.Int32,System.Int32)
+  - TicketShop.RestApiClient.EventDateApi.GetFullEventDatesByEventId(System.Int32,System.Int32,System.Int32)
+  - TicketShop.RestApiClient.EventDateApi.GetSoldTicketCount(System.Int32)
+  - TicketShop.RestApiClient.EventDateApi.UpdateEventDate(TicketShop.RestApiClient.Model.EventDate)
+  langs:
+  - csharp
+  - vb
+  name: EventDateApi
+  nameWithType: EventDateApi
+  fullName: TicketShop.RestApiClient.EventDateApi
+  type: Class
+  source:
+    remote:
+      path: src/RestApiClient/EventDateApi.cs
+      branch: features/ticketshop
+      repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
+    id: EventDateApi
+    path: src/RestApiClient/EventDateApi.cs
+    startLine: 10
+  assemblies:
+  - RestApiClient
+  namespace: TicketShop.RestApiClient
+  syntax:
+    content: 'public class EventDateApi : IEventDateApi'
+    content.vb: >-
+      Public Class EventDateApi
+          Implements IEventDateApi
+  inheritance:
+  - System.Object
+  implements:
+  - TicketShop.RestApiClient.Interface.IEventDateApi
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: TicketShop.RestApiClient.EventDateApi.#ctor(System.String)
+  commentId: M:TicketShop.RestApiClient.EventDateApi.#ctor(System.String)
+  id: '#ctor(System.String)'
+  parent: TicketShop.RestApiClient.EventDateApi
+  langs:
+  - csharp
+  - vb
+  name: EventDateApi(String)
+  nameWithType: EventDateApi.EventDateApi(String)
+  fullName: TicketShop.RestApiClient.EventDateApi.EventDateApi(System.String)
+  type: Constructor
+  source:
+    remote:
+      path: src/RestApiClient/EventDateApi.cs
+      branch: features/ticketshop
+      repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
+    id: .ctor
+    path: src/RestApiClient/EventDateApi.cs
+    startLine: 14
+  assemblies:
+  - RestApiClient
+  namespace: TicketShop.RestApiClient
+  syntax:
+    content: public EventDateApi(string baseUrl)
+    parameters:
+    - id: baseUrl
+      type: System.String
+    content.vb: Public Sub New(baseUrl As String)
+  overload: TicketShop.RestApiClient.EventDateApi.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: TicketShop.RestApiClient.EventDateApi.AddEventDate(TicketShop.RestApiClient.Model.EventDate)
+  commentId: M:TicketShop.RestApiClient.EventDateApi.AddEventDate(TicketShop.RestApiClient.Model.EventDate)
+  id: AddEventDate(TicketShop.RestApiClient.Model.EventDate)
+  parent: TicketShop.RestApiClient.EventDateApi
+  langs:
+  - csharp
+  - vb
+  name: AddEventDate(EventDate)
+  nameWithType: EventDateApi.AddEventDate(EventDate)
+  fullName: TicketShop.RestApiClient.EventDateApi.AddEventDate(TicketShop.RestApiClient.Model.EventDate)
+  type: Method
+  source:
+    remote:
+      path: src/RestApiClient/EventDateApi.cs
+      branch: features/ticketshop
+      repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
+    id: AddEventDate
+    path: src/RestApiClient/EventDateApi.cs
+    startLine: 18
+  assemblies:
+  - RestApiClient
+  namespace: TicketShop.RestApiClient
+  syntax:
+    content: public EventDate AddEventDate(EventDate eventDate)
+    parameters:
+    - id: eventDate
+      type: TicketShop.RestApiClient.Model.EventDate
+    return:
+      type: TicketShop.RestApiClient.Model.EventDate
+    content.vb: Public Function AddEventDate(eventDate As EventDate) As EventDate
+  overload: TicketShop.RestApiClient.EventDateApi.AddEventDate*
+  implements:
+  - TicketShop.RestApiClient.Interface.IEventDateApi.AddEventDate(TicketShop.RestApiClient.Model.EventDate)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: TicketShop.RestApiClient.EventDateApi.DeleteEventDate(System.Int32)
+  commentId: M:TicketShop.RestApiClient.EventDateApi.DeleteEventDate(System.Int32)
+  id: DeleteEventDate(System.Int32)
+  parent: TicketShop.RestApiClient.EventDateApi
+  langs:
+  - csharp
+  - vb
+  name: DeleteEventDate(Int32)
+  nameWithType: EventDateApi.DeleteEventDate(Int32)
+  fullName: TicketShop.RestApiClient.EventDateApi.DeleteEventDate(System.Int32)
+  type: Method
+  source:
+    remote:
+      path: src/RestApiClient/EventDateApi.cs
+      branch: features/ticketshop
+      repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
+    id: DeleteEventDate
+    path: src/RestApiClient/EventDateApi.cs
+    startLine: 31
+  assemblies:
+  - RestApiClient
+  namespace: TicketShop.RestApiClient
+  syntax:
+    content: public bool DeleteEventDate(int id)
+    parameters:
+    - id: id
+      type: System.Int32
+    return:
+      type: System.Boolean
+    content.vb: Public Function DeleteEventDate(id As Integer) As Boolean
+  overload: TicketShop.RestApiClient.EventDateApi.DeleteEventDate*
+  implements:
+  - TicketShop.RestApiClient.Interface.IEventDateApi.DeleteEventDate(System.Int32)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: TicketShop.RestApiClient.EventDateApi.FindEventDates(TicketShop.RestApiClient.Model.Search)
+  commentId: M:TicketShop.RestApiClient.EventDateApi.FindEventDates(TicketShop.RestApiClient.Model.Search)
+  id: FindEventDates(TicketShop.RestApiClient.Model.Search)
+  parent: TicketShop.RestApiClient.EventDateApi
+  langs:
+  - csharp
+  - vb
+  name: FindEventDates(Search)
+  nameWithType: EventDateApi.FindEventDates(Search)
+  fullName: TicketShop.RestApiClient.EventDateApi.FindEventDates(TicketShop.RestApiClient.Model.Search)
+  type: Method
+  source:
+    remote:
+      path: src/RestApiClient/EventDateApi.cs
+      branch: features/ticketshop
+      repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
+    id: FindEventDates
+    path: src/RestApiClient/EventDateApi.cs
+    startLine: 47
+  assemblies:
+  - RestApiClient
+  namespace: TicketShop.RestApiClient
+  syntax:
+    content: public List<EventDate> FindEventDates(Search query)
+    parameters:
+    - id: query
+      type: TicketShop.RestApiClient.Model.Search
+    return:
+      type: System.Collections.Generic.List{TicketShop.RestApiClient.Model.EventDate}
+    content.vb: Public Function FindEventDates(query As Search) As List(Of EventDate)
+  overload: TicketShop.RestApiClient.EventDateApi.FindEventDates*
+  implements:
+  - TicketShop.RestApiClient.Interface.IEventDateApi.FindEventDates(TicketShop.RestApiClient.Model.Search)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: TicketShop.RestApiClient.EventDateApi.FindFullEventDates(TicketShop.RestApiClient.Model.Search)
+  commentId: M:TicketShop.RestApiClient.EventDateApi.FindFullEventDates(TicketShop.RestApiClient.Model.Search)
+  id: FindFullEventDates(TicketShop.RestApiClient.Model.Search)
+  parent: TicketShop.RestApiClient.EventDateApi
+  langs:
+  - csharp
+  - vb
+  name: FindFullEventDates(Search)
+  nameWithType: EventDateApi.FindFullEventDates(Search)
+  fullName: TicketShop.RestApiClient.EventDateApi.FindFullEventDates(TicketShop.RestApiClient.Model.Search)
+  type: Method
+  source:
+    remote:
+      path: src/RestApiClient/EventDateApi.cs
+      branch: features/ticketshop
+      repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
+    id: FindFullEventDates
+    path: src/RestApiClient/EventDateApi.cs
+    startLine: 59
+  assemblies:
+  - RestApiClient
+  namespace: TicketShop.RestApiClient
+  syntax:
+    content: public List<FullEventDate> FindFullEventDates(Search query)
+    parameters:
+    - id: query
+      type: TicketShop.RestApiClient.Model.Search
+    return:
+      type: System.Collections.Generic.List{TicketShop.RestApiClient.Model.FullEventDate}
+    content.vb: Public Function FindFullEventDates(query As Search) As List(Of FullEventDate)
+  overload: TicketShop.RestApiClient.EventDateApi.FindFullEventDates*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: TicketShop.RestApiClient.EventDateApi.GetEventDateByEventId(System.Int32)
+  commentId: M:TicketShop.RestApiClient.EventDateApi.GetEventDateByEventId(System.Int32)
+  id: GetEventDateByEventId(System.Int32)
+  parent: TicketShop.RestApiClient.EventDateApi
+  langs:
+  - csharp
+  - vb
+  name: GetEventDateByEventId(Int32)
+  nameWithType: EventDateApi.GetEventDateByEventId(Int32)
+  fullName: TicketShop.RestApiClient.EventDateApi.GetEventDateByEventId(System.Int32)
+  type: Method
+  source:
+    remote:
+      path: src/RestApiClient/EventDateApi.cs
+      branch: features/ticketshop
+      repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
+    id: GetEventDateByEventId
+    path: src/RestApiClient/EventDateApi.cs
+    startLine: 72
+  assemblies:
+  - RestApiClient
+  namespace: TicketShop.RestApiClient
+  syntax:
+    content: public EventDate GetEventDateByEventId(int eventId)
+    parameters:
+    - id: eventId
+      type: System.Int32
+    return:
+      type: TicketShop.RestApiClient.Model.EventDate
+    content.vb: Public Function GetEventDateByEventId(eventId As Integer) As EventDate
+  overload: TicketShop.RestApiClient.EventDateApi.GetEventDateByEventId*
+  implements:
+  - TicketShop.RestApiClient.Interface.IEventDateApi.GetEventDateByEventId(System.Int32)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: TicketShop.RestApiClient.EventDateApi.GetEventDateById(System.Int32)
+  commentId: M:TicketShop.RestApiClient.EventDateApi.GetEventDateById(System.Int32)
+  id: GetEventDateById(System.Int32)
+  parent: TicketShop.RestApiClient.EventDateApi
+  langs:
+  - csharp
+  - vb
+  name: GetEventDateById(Int32)
+  nameWithType: EventDateApi.GetEventDateById(Int32)
+  fullName: TicketShop.RestApiClient.EventDateApi.GetEventDateById(System.Int32)
+  type: Method
+  source:
+    remote:
+      path: src/RestApiClient/EventDateApi.cs
+      branch: features/ticketshop
+      repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
+    id: GetEventDateById
+    path: src/RestApiClient/EventDateApi.cs
+    startLine: 88
+  assemblies:
+  - RestApiClient
+  namespace: TicketShop.RestApiClient
+  syntax:
+    content: public EventDate GetEventDateById(int id)
+    parameters:
+    - id: id
+      type: System.Int32
+    return:
+      type: TicketShop.RestApiClient.Model.EventDate
+    content.vb: Public Function GetEventDateById(id As Integer) As EventDate
+  overload: TicketShop.RestApiClient.EventDateApi.GetEventDateById*
+  implements:
+  - TicketShop.RestApiClient.Interface.IEventDateApi.GetEventDateById(System.Int32)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: TicketShop.RestApiClient.EventDateApi.GetEventDates(System.Int32,System.Int32)
+  commentId: M:TicketShop.RestApiClient.EventDateApi.GetEventDates(System.Int32,System.Int32)
+  id: GetEventDates(System.Int32,System.Int32)
+  parent: TicketShop.RestApiClient.EventDateApi
+  langs:
+  - csharp
+  - vb
+  name: GetEventDates(Int32, Int32)
+  nameWithType: EventDateApi.GetEventDates(Int32, Int32)
+  fullName: TicketShop.RestApiClient.EventDateApi.GetEventDates(System.Int32, System.Int32)
+  type: Method
+  source:
+    remote:
+      path: src/RestApiClient/EventDateApi.cs
+      branch: features/ticketshop
+      repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
+    id: GetEventDates
+    path: src/RestApiClient/EventDateApi.cs
+    startLine: 104
+  assemblies:
+  - RestApiClient
+  namespace: TicketShop.RestApiClient
+  syntax:
+    content: public List<EventDate> GetEventDates(int offset = 0, int maxLimit = 20)
+    parameters:
+    - id: offset
+      type: System.Int32
+    - id: maxLimit
+      type: System.Int32
+    return:
+      type: System.Collections.Generic.List{TicketShop.RestApiClient.Model.EventDate}
+    content.vb: Public Function GetEventDates(offset As Integer = 0, maxLimit As Integer = 20) As List(Of EventDate)
+  overload: TicketShop.RestApiClient.EventDateApi.GetEventDates*
+  implements:
+  - TicketShop.RestApiClient.Interface.IEventDateApi.GetEventDates(System.Int32,System.Int32)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: TicketShop.RestApiClient.EventDateApi.GetFullEventDates(System.Int32,System.Int32)
+  commentId: M:TicketShop.RestApiClient.EventDateApi.GetFullEventDates(System.Int32,System.Int32)
+  id: GetFullEventDates(System.Int32,System.Int32)
+  parent: TicketShop.RestApiClient.EventDateApi
+  langs:
+  - csharp
+  - vb
+  name: GetFullEventDates(Int32, Int32)
+  nameWithType: EventDateApi.GetFullEventDates(Int32, Int32)
+  fullName: TicketShop.RestApiClient.EventDateApi.GetFullEventDates(System.Int32, System.Int32)
+  type: Method
+  source:
+    remote:
+      path: src/RestApiClient/EventDateApi.cs
+      branch: features/ticketshop
+      repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
+    id: GetFullEventDates
+    path: src/RestApiClient/EventDateApi.cs
+    startLine: 116
+  assemblies:
+  - RestApiClient
+  namespace: TicketShop.RestApiClient
+  syntax:
+    content: public List<FullEventDate> GetFullEventDates(int offset = 0, int maxLimit = 20)
+    parameters:
+    - id: offset
+      type: System.Int32
+    - id: maxLimit
+      type: System.Int32
+    return:
+      type: System.Collections.Generic.List{TicketShop.RestApiClient.Model.FullEventDate}
+    content.vb: Public Function GetFullEventDates(offset As Integer = 0, maxLimit As Integer = 20) As List(Of FullEventDate)
+  overload: TicketShop.RestApiClient.EventDateApi.GetFullEventDates*
+  implements:
+  - TicketShop.RestApiClient.Interface.IEventDateApi.GetFullEventDates(System.Int32,System.Int32)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: TicketShop.RestApiClient.EventDateApi.GetFullEventDatesByEventId(System.Int32,System.Int32,System.Int32)
+  commentId: M:TicketShop.RestApiClient.EventDateApi.GetFullEventDatesByEventId(System.Int32,System.Int32,System.Int32)
+  id: GetFullEventDatesByEventId(System.Int32,System.Int32,System.Int32)
+  parent: TicketShop.RestApiClient.EventDateApi
+  langs:
+  - csharp
+  - vb
+  name: GetFullEventDatesByEventId(Int32, Int32, Int32)
+  nameWithType: EventDateApi.GetFullEventDatesByEventId(Int32, Int32, Int32)
+  fullName: TicketShop.RestApiClient.EventDateApi.GetFullEventDatesByEventId(System.Int32, System.Int32, System.Int32)
+  type: Method
+  source:
+    remote:
+      path: src/RestApiClient/EventDateApi.cs
+      branch: features/ticketshop
+      repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
+    id: GetFullEventDatesByEventId
+    path: src/RestApiClient/EventDateApi.cs
+    startLine: 128
+  assemblies:
+  - RestApiClient
+  namespace: TicketShop.RestApiClient
+  syntax:
+    content: public List<FullEventDate> GetFullEventDatesByEventId(int eventId, int offset = 0, int maxLimit = 20)
+    parameters:
+    - id: eventId
+      type: System.Int32
+    - id: offset
+      type: System.Int32
+    - id: maxLimit
+      type: System.Int32
+    return:
+      type: System.Collections.Generic.List{TicketShop.RestApiClient.Model.FullEventDate}
+    content.vb: Public Function GetFullEventDatesByEventId(eventId As Integer, offset As Integer = 0, maxLimit As Integer = 20) As List(Of FullEventDate)
+  overload: TicketShop.RestApiClient.EventDateApi.GetFullEventDatesByEventId*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: TicketShop.RestApiClient.EventDateApi.GetFullEventDateById(System.Int32)
+  commentId: M:TicketShop.RestApiClient.EventDateApi.GetFullEventDateById(System.Int32)
+  id: GetFullEventDateById(System.Int32)
+  parent: TicketShop.RestApiClient.EventDateApi
+  langs:
+  - csharp
+  - vb
+  name: GetFullEventDateById(Int32)
+  nameWithType: EventDateApi.GetFullEventDateById(Int32)
+  fullName: TicketShop.RestApiClient.EventDateApi.GetFullEventDateById(System.Int32)
+  type: Method
+  source:
+    remote:
+      path: src/RestApiClient/EventDateApi.cs
+      branch: features/ticketshop
+      repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
+    id: GetFullEventDateById
+    path: src/RestApiClient/EventDateApi.cs
+    startLine: 141
+  assemblies:
+  - RestApiClient
+  namespace: TicketShop.RestApiClient
+  syntax:
+    content: public FullEventDate GetFullEventDateById(int id)
+    parameters:
+    - id: id
+      type: System.Int32
+    return:
+      type: TicketShop.RestApiClient.Model.FullEventDate
+    content.vb: Public Function GetFullEventDateById(id As Integer) As FullEventDate
+  overload: TicketShop.RestApiClient.EventDateApi.GetFullEventDateById*
+  implements:
+  - TicketShop.RestApiClient.Interface.IEventDateApi.GetFullEventDateById(System.Int32)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: TicketShop.RestApiClient.EventDateApi.GetSoldTicketCount(System.Int32)
+  commentId: M:TicketShop.RestApiClient.EventDateApi.GetSoldTicketCount(System.Int32)
+  id: GetSoldTicketCount(System.Int32)
+  parent: TicketShop.RestApiClient.EventDateApi
+  langs:
+  - csharp
+  - vb
+  name: GetSoldTicketCount(Int32)
+  nameWithType: EventDateApi.GetSoldTicketCount(Int32)
+  fullName: TicketShop.RestApiClient.EventDateApi.GetSoldTicketCount(System.Int32)
+  type: Method
+  source:
+    remote:
+      path: src/RestApiClient/EventDateApi.cs
+      branch: features/ticketshop
+      repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
+    id: GetSoldTicketCount
+    path: src/RestApiClient/EventDateApi.cs
+    startLine: 157
+  assemblies:
+  - RestApiClient
+  namespace: TicketShop.RestApiClient
+  syntax:
+    content: public int GetSoldTicketCount(int id)
+    parameters:
+    - id: id
+      type: System.Int32
+    return:
+      type: System.Int32
+    content.vb: Public Function GetSoldTicketCount(id As Integer) As Integer
+  overload: TicketShop.RestApiClient.EventDateApi.GetSoldTicketCount*
+  implements:
+  - TicketShop.RestApiClient.Interface.IEventDateApi.GetSoldTicketCount(System.Int32)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: TicketShop.RestApiClient.EventDateApi.UpdateEventDate(TicketShop.RestApiClient.Model.EventDate)
+  commentId: M:TicketShop.RestApiClient.EventDateApi.UpdateEventDate(TicketShop.RestApiClient.Model.EventDate)
+  id: UpdateEventDate(TicketShop.RestApiClient.Model.EventDate)
+  parent: TicketShop.RestApiClient.EventDateApi
+  langs:
+  - csharp
+  - vb
+  name: UpdateEventDate(EventDate)
+  nameWithType: EventDateApi.UpdateEventDate(EventDate)
+  fullName: TicketShop.RestApiClient.EventDateApi.UpdateEventDate(TicketShop.RestApiClient.Model.EventDate)
+  type: Method
+  source:
+    remote:
+      path: src/RestApiClient/EventDateApi.cs
+      branch: features/ticketshop
+      repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
+    id: UpdateEventDate
+    path: src/RestApiClient/EventDateApi.cs
+    startLine: 173
+  assemblies:
+  - RestApiClient
+  namespace: TicketShop.RestApiClient
+  syntax:
+    content: public EventDate UpdateEventDate(EventDate eventDate)
+    parameters:
+    - id: eventDate
+      type: TicketShop.RestApiClient.Model.EventDate
+    return:
+      type: TicketShop.RestApiClient.Model.EventDate
+    content.vb: Public Function UpdateEventDate(eventDate As EventDate) As EventDate
+  overload: TicketShop.RestApiClient.EventDateApi.UpdateEventDate*
+  implements:
+  - TicketShop.RestApiClient.Interface.IEventDateApi.UpdateEventDate(TicketShop.RestApiClient.Model.EventDate)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+references:
+- uid: TicketShop.RestApiClient
+  commentId: N:TicketShop.RestApiClient
+  isExternal: false
+  name: TicketShop.RestApiClient
+  nameWithType: TicketShop.RestApiClient
+  fullName: TicketShop.RestApiClient
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: TicketShop.RestApiClient.Interface.IEventDateApi
+  commentId: T:TicketShop.RestApiClient.Interface.IEventDateApi
+  parent: TicketShop.RestApiClient.Interface
+  isExternal: false
+  name: IEventDateApi
+  nameWithType: IEventDateApi
+  fullName: TicketShop.RestApiClient.Interface.IEventDateApi
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: false
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: TicketShop.RestApiClient.Interface
+  commentId: N:TicketShop.RestApiClient.Interface
+  isExternal: false
+  name: TicketShop.RestApiClient.Interface
+  nameWithType: TicketShop.RestApiClient.Interface
+  fullName: TicketShop.RestApiClient.Interface
+- uid: TicketShop.RestApiClient.EventDateApi.#ctor*
+  commentId: Overload:TicketShop.RestApiClient.EventDateApi.#ctor
+  isExternal: false
+  name: EventDateApi
+  nameWithType: EventDateApi.EventDateApi
+  fullName: TicketShop.RestApiClient.EventDateApi.EventDateApi
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: TicketShop.RestApiClient.EventDateApi.AddEventDate*
+  commentId: Overload:TicketShop.RestApiClient.EventDateApi.AddEventDate
+  isExternal: false
+  name: AddEventDate
+  nameWithType: EventDateApi.AddEventDate
+  fullName: TicketShop.RestApiClient.EventDateApi.AddEventDate
+- uid: TicketShop.RestApiClient.Interface.IEventDateApi.AddEventDate(TicketShop.RestApiClient.Model.EventDate)
+  commentId: M:TicketShop.RestApiClient.Interface.IEventDateApi.AddEventDate(TicketShop.RestApiClient.Model.EventDate)
+  parent: TicketShop.RestApiClient.Interface.IEventDateApi
+  isExternal: false
+  name: AddEventDate(EventDate)
+  nameWithType: IEventDateApi.AddEventDate(EventDate)
+  fullName: TicketShop.RestApiClient.Interface.IEventDateApi.AddEventDate(TicketShop.RestApiClient.Model.EventDate)
+  spec.csharp:
+  - uid: TicketShop.RestApiClient.Interface.IEventDateApi.AddEventDate(TicketShop.RestApiClient.Model.EventDate)
+    name: AddEventDate
+    nameWithType: IEventDateApi.AddEventDate
+    fullName: TicketShop.RestApiClient.Interface.IEventDateApi.AddEventDate
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: TicketShop.RestApiClient.Model.EventDate
+    name: EventDate
+    nameWithType: EventDate
+    fullName: TicketShop.RestApiClient.Model.EventDate
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: TicketShop.RestApiClient.Interface.IEventDateApi.AddEventDate(TicketShop.RestApiClient.Model.EventDate)
+    name: AddEventDate
+    nameWithType: IEventDateApi.AddEventDate
+    fullName: TicketShop.RestApiClient.Interface.IEventDateApi.AddEventDate
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: TicketShop.RestApiClient.Model.EventDate
+    name: EventDate
+    nameWithType: EventDate
+    fullName: TicketShop.RestApiClient.Model.EventDate
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: TicketShop.RestApiClient.Model.EventDate
+  commentId: T:TicketShop.RestApiClient.Model.EventDate
+  parent: TicketShop.RestApiClient.Model
+  isExternal: false
+  name: EventDate
+  nameWithType: EventDate
+  fullName: TicketShop.RestApiClient.Model.EventDate
+- uid: TicketShop.RestApiClient.Model
+  commentId: N:TicketShop.RestApiClient.Model
+  isExternal: false
+  name: TicketShop.RestApiClient.Model
+  nameWithType: TicketShop.RestApiClient.Model
+  fullName: TicketShop.RestApiClient.Model
+- uid: TicketShop.RestApiClient.EventDateApi.DeleteEventDate*
+  commentId: Overload:TicketShop.RestApiClient.EventDateApi.DeleteEventDate
+  isExternal: false
+  name: DeleteEventDate
+  nameWithType: EventDateApi.DeleteEventDate
+  fullName: TicketShop.RestApiClient.EventDateApi.DeleteEventDate
+- uid: TicketShop.RestApiClient.Interface.IEventDateApi.DeleteEventDate(System.Int32)
+  commentId: M:TicketShop.RestApiClient.Interface.IEventDateApi.DeleteEventDate(System.Int32)
+  parent: TicketShop.RestApiClient.Interface.IEventDateApi
+  isExternal: true
+  name: DeleteEventDate(Int32)
+  nameWithType: IEventDateApi.DeleteEventDate(Int32)
+  fullName: TicketShop.RestApiClient.Interface.IEventDateApi.DeleteEventDate(System.Int32)
+  spec.csharp:
+  - uid: TicketShop.RestApiClient.Interface.IEventDateApi.DeleteEventDate(System.Int32)
+    name: DeleteEventDate
+    nameWithType: IEventDateApi.DeleteEventDate
+    fullName: TicketShop.RestApiClient.Interface.IEventDateApi.DeleteEventDate
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Int32
+    name: Int32
+    nameWithType: Int32
+    fullName: System.Int32
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: TicketShop.RestApiClient.Interface.IEventDateApi.DeleteEventDate(System.Int32)
+    name: DeleteEventDate
+    nameWithType: IEventDateApi.DeleteEventDate
+    fullName: TicketShop.RestApiClient.Interface.IEventDateApi.DeleteEventDate
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Int32
+    name: Int32
+    nameWithType: Int32
+    fullName: System.Int32
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  name: Int32
+  nameWithType: Int32
+  fullName: System.Int32
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: TicketShop.RestApiClient.EventDateApi.FindEventDates*
+  commentId: Overload:TicketShop.RestApiClient.EventDateApi.FindEventDates
+  isExternal: false
+  name: FindEventDates
+  nameWithType: EventDateApi.FindEventDates
+  fullName: TicketShop.RestApiClient.EventDateApi.FindEventDates
+- uid: TicketShop.RestApiClient.Interface.IEventDateApi.FindEventDates(TicketShop.RestApiClient.Model.Search)
+  commentId: M:TicketShop.RestApiClient.Interface.IEventDateApi.FindEventDates(TicketShop.RestApiClient.Model.Search)
+  parent: TicketShop.RestApiClient.Interface.IEventDateApi
+  isExternal: false
+  name: FindEventDates(Search)
+  nameWithType: IEventDateApi.FindEventDates(Search)
+  fullName: TicketShop.RestApiClient.Interface.IEventDateApi.FindEventDates(TicketShop.RestApiClient.Model.Search)
+  spec.csharp:
+  - uid: TicketShop.RestApiClient.Interface.IEventDateApi.FindEventDates(TicketShop.RestApiClient.Model.Search)
+    name: FindEventDates
+    nameWithType: IEventDateApi.FindEventDates
+    fullName: TicketShop.RestApiClient.Interface.IEventDateApi.FindEventDates
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: TicketShop.RestApiClient.Model.Search
+    name: Search
+    nameWithType: Search
+    fullName: TicketShop.RestApiClient.Model.Search
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: TicketShop.RestApiClient.Interface.IEventDateApi.FindEventDates(TicketShop.RestApiClient.Model.Search)
+    name: FindEventDates
+    nameWithType: IEventDateApi.FindEventDates
+    fullName: TicketShop.RestApiClient.Interface.IEventDateApi.FindEventDates
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: TicketShop.RestApiClient.Model.Search
+    name: Search
+    nameWithType: Search
+    fullName: TicketShop.RestApiClient.Model.Search
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: TicketShop.RestApiClient.Model.Search
+  commentId: T:TicketShop.RestApiClient.Model.Search
+  parent: TicketShop.RestApiClient.Model
+  isExternal: false
+  name: Search
+  nameWithType: Search
+  fullName: TicketShop.RestApiClient.Model.Search
+- uid: System.Collections.Generic.List{TicketShop.RestApiClient.Model.EventDate}
+  commentId: T:System.Collections.Generic.List{TicketShop.RestApiClient.Model.EventDate}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.List`1
+  name: List<EventDate>
+  nameWithType: List<EventDate>
+  fullName: System.Collections.Generic.List<TicketShop.RestApiClient.Model.EventDate>
+  nameWithType.vb: List(Of EventDate)
+  fullName.vb: System.Collections.Generic.List(Of TicketShop.RestApiClient.Model.EventDate)
+  name.vb: List(Of EventDate)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    nameWithType: List
+    fullName: System.Collections.Generic.List
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: TicketShop.RestApiClient.Model.EventDate
+    name: EventDate
+    nameWithType: EventDate
+    fullName: TicketShop.RestApiClient.Model.EventDate
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    nameWithType: List
+    fullName: System.Collections.Generic.List
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: TicketShop.RestApiClient.Model.EventDate
+    name: EventDate
+    nameWithType: EventDate
+    fullName: TicketShop.RestApiClient.Model.EventDate
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic.List`1
+  commentId: T:System.Collections.Generic.List`1
+  isExternal: true
+  name: List<T>
+  nameWithType: List<T>
+  fullName: System.Collections.Generic.List<T>
+  nameWithType.vb: List(Of T)
+  fullName.vb: System.Collections.Generic.List(Of T)
+  name.vb: List(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    nameWithType: List
+    fullName: System.Collections.Generic.List
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    nameWithType: List
+    fullName: System.Collections.Generic.List
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: false
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+- uid: TicketShop.RestApiClient.EventDateApi.FindFullEventDates*
+  commentId: Overload:TicketShop.RestApiClient.EventDateApi.FindFullEventDates
+  isExternal: false
+  name: FindFullEventDates
+  nameWithType: EventDateApi.FindFullEventDates
+  fullName: TicketShop.RestApiClient.EventDateApi.FindFullEventDates
+- uid: System.Collections.Generic.List{TicketShop.RestApiClient.Model.FullEventDate}
+  commentId: T:System.Collections.Generic.List{TicketShop.RestApiClient.Model.FullEventDate}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.List`1
+  name: List<FullEventDate>
+  nameWithType: List<FullEventDate>
+  fullName: System.Collections.Generic.List<TicketShop.RestApiClient.Model.FullEventDate>
+  nameWithType.vb: List(Of FullEventDate)
+  fullName.vb: System.Collections.Generic.List(Of TicketShop.RestApiClient.Model.FullEventDate)
+  name.vb: List(Of FullEventDate)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    nameWithType: List
+    fullName: System.Collections.Generic.List
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: TicketShop.RestApiClient.Model.FullEventDate
+    name: FullEventDate
+    nameWithType: FullEventDate
+    fullName: TicketShop.RestApiClient.Model.FullEventDate
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    nameWithType: List
+    fullName: System.Collections.Generic.List
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: TicketShop.RestApiClient.Model.FullEventDate
+    name: FullEventDate
+    nameWithType: FullEventDate
+    fullName: TicketShop.RestApiClient.Model.FullEventDate
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: TicketShop.RestApiClient.EventDateApi.GetEventDateByEventId*
+  commentId: Overload:TicketShop.RestApiClient.EventDateApi.GetEventDateByEventId
+  isExternal: false
+  name: GetEventDateByEventId
+  nameWithType: EventDateApi.GetEventDateByEventId
+  fullName: TicketShop.RestApiClient.EventDateApi.GetEventDateByEventId
+- uid: TicketShop.RestApiClient.Interface.IEventDateApi.GetEventDateByEventId(System.Int32)
+  commentId: M:TicketShop.RestApiClient.Interface.IEventDateApi.GetEventDateByEventId(System.Int32)
+  parent: TicketShop.RestApiClient.Interface.IEventDateApi
+  isExternal: true
+  name: GetEventDateByEventId(Int32)
+  nameWithType: IEventDateApi.GetEventDateByEventId(Int32)
+  fullName: TicketShop.RestApiClient.Interface.IEventDateApi.GetEventDateByEventId(System.Int32)
+  spec.csharp:
+  - uid: TicketShop.RestApiClient.Interface.IEventDateApi.GetEventDateByEventId(System.Int32)
+    name: GetEventDateByEventId
+    nameWithType: IEventDateApi.GetEventDateByEventId
+    fullName: TicketShop.RestApiClient.Interface.IEventDateApi.GetEventDateByEventId
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Int32
+    name: Int32
+    nameWithType: Int32
+    fullName: System.Int32
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: TicketShop.RestApiClient.Interface.IEventDateApi.GetEventDateByEventId(System.Int32)
+    name: GetEventDateByEventId
+    nameWithType: IEventDateApi.GetEventDateByEventId
+    fullName: TicketShop.RestApiClient.Interface.IEventDateApi.GetEventDateByEventId
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Int32
+    name: Int32
+    nameWithType: Int32
+    fullName: System.Int32
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: TicketShop.RestApiClient.EventDateApi.GetEventDateById*
+  commentId: Overload:TicketShop.RestApiClient.EventDateApi.GetEventDateById
+  isExternal: false
+  name: GetEventDateById
+  nameWithType: EventDateApi.GetEventDateById
+  fullName: TicketShop.RestApiClient.EventDateApi.GetEventDateById
+- uid: TicketShop.RestApiClient.Interface.IEventDateApi.GetEventDateById(System.Int32)
+  commentId: M:TicketShop.RestApiClient.Interface.IEventDateApi.GetEventDateById(System.Int32)
+  parent: TicketShop.RestApiClient.Interface.IEventDateApi
+  isExternal: true
+  name: GetEventDateById(Int32)
+  nameWithType: IEventDateApi.GetEventDateById(Int32)
+  fullName: TicketShop.RestApiClient.Interface.IEventDateApi.GetEventDateById(System.Int32)
+  spec.csharp:
+  - uid: TicketShop.RestApiClient.Interface.IEventDateApi.GetEventDateById(System.Int32)
+    name: GetEventDateById
+    nameWithType: IEventDateApi.GetEventDateById
+    fullName: TicketShop.RestApiClient.Interface.IEventDateApi.GetEventDateById
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Int32
+    name: Int32
+    nameWithType: Int32
+    fullName: System.Int32
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: TicketShop.RestApiClient.Interface.IEventDateApi.GetEventDateById(System.Int32)
+    name: GetEventDateById
+    nameWithType: IEventDateApi.GetEventDateById
+    fullName: TicketShop.RestApiClient.Interface.IEventDateApi.GetEventDateById
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Int32
+    name: Int32
+    nameWithType: Int32
+    fullName: System.Int32
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: TicketShop.RestApiClient.EventDateApi.GetEventDates*
+  commentId: Overload:TicketShop.RestApiClient.EventDateApi.GetEventDates
+  isExternal: false
+  name: GetEventDates
+  nameWithType: EventDateApi.GetEventDates
+  fullName: TicketShop.RestApiClient.EventDateApi.GetEventDates
+- uid: TicketShop.RestApiClient.Interface.IEventDateApi.GetEventDates(System.Int32,System.Int32)
+  commentId: M:TicketShop.RestApiClient.Interface.IEventDateApi.GetEventDates(System.Int32,System.Int32)
+  parent: TicketShop.RestApiClient.Interface.IEventDateApi
+  isExternal: true
+  name: GetEventDates(Int32, Int32)
+  nameWithType: IEventDateApi.GetEventDates(Int32, Int32)
+  fullName: TicketShop.RestApiClient.Interface.IEventDateApi.GetEventDates(System.Int32, System.Int32)
+  spec.csharp:
+  - uid: TicketShop.RestApiClient.Interface.IEventDateApi.GetEventDates(System.Int32,System.Int32)
+    name: GetEventDates
+    nameWithType: IEventDateApi.GetEventDates
+    fullName: TicketShop.RestApiClient.Interface.IEventDateApi.GetEventDates
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Int32
+    name: Int32
+    nameWithType: Int32
+    fullName: System.Int32
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Int32
+    name: Int32
+    nameWithType: Int32
+    fullName: System.Int32
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: TicketShop.RestApiClient.Interface.IEventDateApi.GetEventDates(System.Int32,System.Int32)
+    name: GetEventDates
+    nameWithType: IEventDateApi.GetEventDates
+    fullName: TicketShop.RestApiClient.Interface.IEventDateApi.GetEventDates
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Int32
+    name: Int32
+    nameWithType: Int32
+    fullName: System.Int32
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Int32
+    name: Int32
+    nameWithType: Int32
+    fullName: System.Int32
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: TicketShop.RestApiClient.EventDateApi.GetFullEventDates*
+  commentId: Overload:TicketShop.RestApiClient.EventDateApi.GetFullEventDates
+  isExternal: false
+  name: GetFullEventDates
+  nameWithType: EventDateApi.GetFullEventDates
+  fullName: TicketShop.RestApiClient.EventDateApi.GetFullEventDates
+- uid: TicketShop.RestApiClient.Interface.IEventDateApi.GetFullEventDates(System.Int32,System.Int32)
+  commentId: M:TicketShop.RestApiClient.Interface.IEventDateApi.GetFullEventDates(System.Int32,System.Int32)
+  parent: TicketShop.RestApiClient.Interface.IEventDateApi
+  isExternal: true
+  name: GetFullEventDates(Int32, Int32)
+  nameWithType: IEventDateApi.GetFullEventDates(Int32, Int32)
+  fullName: TicketShop.RestApiClient.Interface.IEventDateApi.GetFullEventDates(System.Int32, System.Int32)
+  spec.csharp:
+  - uid: TicketShop.RestApiClient.Interface.IEventDateApi.GetFullEventDates(System.Int32,System.Int32)
+    name: GetFullEventDates
+    nameWithType: IEventDateApi.GetFullEventDates
+    fullName: TicketShop.RestApiClient.Interface.IEventDateApi.GetFullEventDates
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Int32
+    name: Int32
+    nameWithType: Int32
+    fullName: System.Int32
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Int32
+    name: Int32
+    nameWithType: Int32
+    fullName: System.Int32
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: TicketShop.RestApiClient.Interface.IEventDateApi.GetFullEventDates(System.Int32,System.Int32)
+    name: GetFullEventDates
+    nameWithType: IEventDateApi.GetFullEventDates
+    fullName: TicketShop.RestApiClient.Interface.IEventDateApi.GetFullEventDates
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Int32
+    name: Int32
+    nameWithType: Int32
+    fullName: System.Int32
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Int32
+    name: Int32
+    nameWithType: Int32
+    fullName: System.Int32
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: TicketShop.RestApiClient.EventDateApi.GetFullEventDatesByEventId*
+  commentId: Overload:TicketShop.RestApiClient.EventDateApi.GetFullEventDatesByEventId
+  isExternal: false
+  name: GetFullEventDatesByEventId
+  nameWithType: EventDateApi.GetFullEventDatesByEventId
+  fullName: TicketShop.RestApiClient.EventDateApi.GetFullEventDatesByEventId
+- uid: TicketShop.RestApiClient.EventDateApi.GetFullEventDateById*
+  commentId: Overload:TicketShop.RestApiClient.EventDateApi.GetFullEventDateById
+  isExternal: false
+  name: GetFullEventDateById
+  nameWithType: EventDateApi.GetFullEventDateById
+  fullName: TicketShop.RestApiClient.EventDateApi.GetFullEventDateById
+- uid: TicketShop.RestApiClient.Interface.IEventDateApi.GetFullEventDateById(System.Int32)
+  commentId: M:TicketShop.RestApiClient.Interface.IEventDateApi.GetFullEventDateById(System.Int32)
+  parent: TicketShop.RestApiClient.Interface.IEventDateApi
+  isExternal: true
+  name: GetFullEventDateById(Int32)
+  nameWithType: IEventDateApi.GetFullEventDateById(Int32)
+  fullName: TicketShop.RestApiClient.Interface.IEventDateApi.GetFullEventDateById(System.Int32)
+  spec.csharp:
+  - uid: TicketShop.RestApiClient.Interface.IEventDateApi.GetFullEventDateById(System.Int32)
+    name: GetFullEventDateById
+    nameWithType: IEventDateApi.GetFullEventDateById
+    fullName: TicketShop.RestApiClient.Interface.IEventDateApi.GetFullEventDateById
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Int32
+    name: Int32
+    nameWithType: Int32
+    fullName: System.Int32
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: TicketShop.RestApiClient.Interface.IEventDateApi.GetFullEventDateById(System.Int32)
+    name: GetFullEventDateById
+    nameWithType: IEventDateApi.GetFullEventDateById
+    fullName: TicketShop.RestApiClient.Interface.IEventDateApi.GetFullEventDateById
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Int32
+    name: Int32
+    nameWithType: Int32
+    fullName: System.Int32
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: TicketShop.RestApiClient.Model.FullEventDate
+  commentId: T:TicketShop.RestApiClient.Model.FullEventDate
+  parent: TicketShop.RestApiClient.Model
+  isExternal: false
+  name: FullEventDate
+  nameWithType: FullEventDate
+  fullName: TicketShop.RestApiClient.Model.FullEventDate
+- uid: TicketShop.RestApiClient.EventDateApi.GetSoldTicketCount*
+  commentId: Overload:TicketShop.RestApiClient.EventDateApi.GetSoldTicketCount
+  isExternal: false
+  name: GetSoldTicketCount
+  nameWithType: EventDateApi.GetSoldTicketCount
+  fullName: TicketShop.RestApiClient.EventDateApi.GetSoldTicketCount
+- uid: TicketShop.RestApiClient.Interface.IEventDateApi.GetSoldTicketCount(System.Int32)
+  commentId: M:TicketShop.RestApiClient.Interface.IEventDateApi.GetSoldTicketCount(System.Int32)
+  parent: TicketShop.RestApiClient.Interface.IEventDateApi
+  isExternal: true
+  name: GetSoldTicketCount(Int32)
+  nameWithType: IEventDateApi.GetSoldTicketCount(Int32)
+  fullName: TicketShop.RestApiClient.Interface.IEventDateApi.GetSoldTicketCount(System.Int32)
+  spec.csharp:
+  - uid: TicketShop.RestApiClient.Interface.IEventDateApi.GetSoldTicketCount(System.Int32)
+    name: GetSoldTicketCount
+    nameWithType: IEventDateApi.GetSoldTicketCount
+    fullName: TicketShop.RestApiClient.Interface.IEventDateApi.GetSoldTicketCount
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Int32
+    name: Int32
+    nameWithType: Int32
+    fullName: System.Int32
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: TicketShop.RestApiClient.Interface.IEventDateApi.GetSoldTicketCount(System.Int32)
+    name: GetSoldTicketCount
+    nameWithType: IEventDateApi.GetSoldTicketCount
+    fullName: TicketShop.RestApiClient.Interface.IEventDateApi.GetSoldTicketCount
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Int32
+    name: Int32
+    nameWithType: Int32
+    fullName: System.Int32
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: TicketShop.RestApiClient.EventDateApi.UpdateEventDate*
+  commentId: Overload:TicketShop.RestApiClient.EventDateApi.UpdateEventDate
+  isExternal: false
+  name: UpdateEventDate
+  nameWithType: EventDateApi.UpdateEventDate
+  fullName: TicketShop.RestApiClient.EventDateApi.UpdateEventDate
+- uid: TicketShop.RestApiClient.Interface.IEventDateApi.UpdateEventDate(TicketShop.RestApiClient.Model.EventDate)
+  commentId: M:TicketShop.RestApiClient.Interface.IEventDateApi.UpdateEventDate(TicketShop.RestApiClient.Model.EventDate)
+  parent: TicketShop.RestApiClient.Interface.IEventDateApi
+  isExternal: false
+  name: UpdateEventDate(EventDate)
+  nameWithType: IEventDateApi.UpdateEventDate(EventDate)
+  fullName: TicketShop.RestApiClient.Interface.IEventDateApi.UpdateEventDate(TicketShop.RestApiClient.Model.EventDate)
+  spec.csharp:
+  - uid: TicketShop.RestApiClient.Interface.IEventDateApi.UpdateEventDate(TicketShop.RestApiClient.Model.EventDate)
+    name: UpdateEventDate
+    nameWithType: IEventDateApi.UpdateEventDate
+    fullName: TicketShop.RestApiClient.Interface.IEventDateApi.UpdateEventDate
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: TicketShop.RestApiClient.Model.EventDate
+    name: EventDate
+    nameWithType: EventDate
+    fullName: TicketShop.RestApiClient.Model.EventDate
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: TicketShop.RestApiClient.Interface.IEventDateApi.UpdateEventDate(TicketShop.RestApiClient.Model.EventDate)
+    name: UpdateEventDate
+    nameWithType: IEventDateApi.UpdateEventDate
+    fullName: TicketShop.RestApiClient.Interface.IEventDateApi.UpdateEventDate
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: TicketShop.RestApiClient.Model.EventDate
+    name: EventDate
+    nameWithType: EventDate
+    fullName: TicketShop.RestApiClient.Model.EventDate
+  - name: )
+    nameWithType: )
+    fullName: )

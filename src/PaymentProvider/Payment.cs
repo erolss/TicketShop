@@ -1,4 +1,4 @@
-﻿namespace TicketSystem.PaymentProvider
+﻿namespace TicketApi.PaymentProvider.Model
 {
     public class Payment
     {

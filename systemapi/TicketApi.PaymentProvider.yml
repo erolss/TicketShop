@@ -1,0 +1,45 @@
+### YamlMime:ManagedReference
+items:
+- uid: TicketApi.PaymentProvider
+  commentId: N:TicketApi.PaymentProvider
+  id: TicketApi.PaymentProvider
+  children:
+  - TicketApi.PaymentProvider.IPaymentProvider
+  - TicketApi.PaymentProvider.PaymentProvider
+  - TicketApi.PaymentProvider.PaymentStatus
+  langs:
+  - csharp
+  - vb
+  name: TicketApi.PaymentProvider
+  nameWithType: TicketApi.PaymentProvider
+  fullName: TicketApi.PaymentProvider
+  type: Namespace
+  assemblies:
+  - PaymentProvider
+references:
+- uid: TicketApi.PaymentProvider.IPaymentProvider
+  commentId: T:TicketApi.PaymentProvider.IPaymentProvider
+  parent: TicketApi.PaymentProvider
+  isExternal: false
+  name: IPaymentProvider
+  nameWithType: IPaymentProvider
+  fullName: TicketApi.PaymentProvider.IPaymentProvider
+- uid: TicketApi.PaymentProvider.PaymentProvider
+  commentId: T:TicketApi.PaymentProvider.PaymentProvider
+  isExternal: false
+  name: PaymentProvider
+  nameWithType: PaymentProvider
+  fullName: TicketApi.PaymentProvider.PaymentProvider
+- uid: TicketApi.PaymentProvider.PaymentStatus
+  commentId: T:TicketApi.PaymentProvider.PaymentStatus
+  parent: TicketApi.PaymentProvider
+  isExternal: false
+  name: PaymentStatus
+  nameWithType: PaymentStatus
+  fullName: TicketApi.PaymentProvider.PaymentStatus
+- uid: TicketApi.PaymentProvider
+  commentId: N:TicketApi.PaymentProvider
+  isExternal: false
+  name: TicketApi.PaymentProvider
+  nameWithType: TicketApi.PaymentProvider
+  fullName: TicketApi.PaymentProvider

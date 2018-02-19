@@ -18,7 +18,7 @@ items:
   source:
     remote:
       path: src/TicketApi/Startup.cs
-      branch: restapi
+      branch: features/ticketshop
       repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
     id: Startup
     path: src/TicketApi/Startup.cs
@@ -59,7 +59,7 @@ items:
   source:
     remote:
       path: src/TicketApi/Startup.cs
-      branch: restapi
+      branch: features/ticketshop
       repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
     id: .ctor
     path: src/TicketApi/Startup.cs
@@ -95,7 +95,7 @@ items:
   source:
     remote:
       path: src/TicketApi/Startup.cs
-      branch: restapi
+      branch: features/ticketshop
       repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
     id: ConfigureServices
     path: src/TicketApi/Startup.cs
@@ -128,7 +128,7 @@ items:
   source:
     remote:
       path: src/TicketApi/Startup.cs
-      branch: restapi
+      branch: features/ticketshop
       repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
     id: Configure
     path: src/TicketApi/Startup.cs

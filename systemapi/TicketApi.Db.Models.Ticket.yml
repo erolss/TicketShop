@@ -23,7 +23,7 @@ items:
   source:
     remote:
       path: src/DbRepository/Models/Ticket.cs
-      branch: restapi
+      branch: features/ticketshop
       repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
     id: Ticket
     path: src/DbRepository/Models/Ticket.cs
@@ -67,7 +67,7 @@ items:
   source:
     remote:
       path: src/DbRepository/Models/Ticket.cs
-      branch: restapi
+      branch: features/ticketshop
       repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
     id: TicketID
     path: src/DbRepository/Models/Ticket.cs
@@ -118,7 +118,7 @@ items:
   source:
     remote:
       path: src/DbRepository/Models/Ticket.cs
-      branch: restapi
+      branch: features/ticketshop
       repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
     id: TicketEventDateID
     path: src/DbRepository/Models/Ticket.cs
@@ -169,7 +169,7 @@ items:
   source:
     remote:
       path: src/DbRepository/Models/Ticket.cs
-      branch: restapi
+      branch: features/ticketshop
       repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
     id: ToString
     path: src/DbRepository/Models/Ticket.cs
@@ -207,7 +207,7 @@ items:
   source:
     remote:
       path: src/DbRepository/Models/Ticket.cs
-      branch: restapi
+      branch: features/ticketshop
       repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
     id: Equals
     path: src/DbRepository/Models/Ticket.cs
@@ -249,7 +249,7 @@ items:
   source:
     remote:
       path: src/DbRepository/Models/Ticket.cs
-      branch: restapi
+      branch: features/ticketshop
       repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
     id: Equals
     path: src/DbRepository/Models/Ticket.cs
@@ -290,7 +290,7 @@ items:
   source:
     remote:
       path: src/DbRepository/Models/Ticket.cs
-      branch: restapi
+      branch: features/ticketshop
       repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
     id: GetHashCode
     path: src/DbRepository/Models/Ticket.cs
@@ -328,7 +328,7 @@ items:
   source:
     remote:
       path: src/DbRepository/Models/Ticket.cs
-      branch: restapi
+      branch: features/ticketshop
       repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
     id: op_Equality
     path: src/DbRepository/Models/Ticket.cs
@@ -367,7 +367,7 @@ items:
   source:
     remote:
       path: src/DbRepository/Models/Ticket.cs
-      branch: restapi
+      branch: features/ticketshop
       repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
     id: op_Inequality
     path: src/DbRepository/Models/Ticket.cs

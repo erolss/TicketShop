@@ -1,0 +1,1003 @@
+### YamlMime:ManagedReference
+items:
+- uid: TicketShop.RestApiClient.Model.FullEventDate
+  commentId: T:TicketShop.RestApiClient.Model.FullEventDate
+  id: FullEventDate
+  parent: TicketShop.RestApiClient.Model
+  children:
+  - TicketShop.RestApiClient.Model.FullEventDate.Address
+  - TicketShop.RestApiClient.Model.FullEventDate.City
+  - TicketShop.RestApiClient.Model.FullEventDate.Country
+  - TicketShop.RestApiClient.Model.FullEventDate.EventHtmlDescription
+  - TicketShop.RestApiClient.Model.FullEventDate.EventImagePath
+  - TicketShop.RestApiClient.Model.FullEventDate.EventName
+  - TicketShop.RestApiClient.Model.FullEventDate.EventStartDateTime
+  - TicketShop.RestApiClient.Model.FullEventDate.MaxTickets
+  - TicketShop.RestApiClient.Model.FullEventDate.Price
+  - TicketShop.RestApiClient.Model.FullEventDate.TicketEventDateID
+  - TicketShop.RestApiClient.Model.FullEventDate.TicketEventID
+  - TicketShop.RestApiClient.Model.FullEventDate.ToJson
+  - TicketShop.RestApiClient.Model.FullEventDate.ToString
+  - TicketShop.RestApiClient.Model.FullEventDate.VenueID
+  - TicketShop.RestApiClient.Model.FullEventDate.VenueName
+  langs:
+  - csharp
+  - vb
+  name: FullEventDate
+  nameWithType: FullEventDate
+  fullName: TicketShop.RestApiClient.Model.FullEventDate
+  type: Class
+  source:
+    remote:
+      path: src/RestApiClient/Model/FullEventDate.cs
+      branch: features/ticketshop
+      repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
+    id: FullEventDate
+    path: src/RestApiClient/Model/FullEventDate.cs
+    startLine: 6
+  assemblies:
+  - RestApiClient
+  namespace: TicketShop.RestApiClient.Model
+  syntax:
+    content: public class FullEventDate
+    content.vb: Public Class FullEventDate
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: TicketShop.RestApiClient.Model.FullEventDate.TicketEventDateID
+  commentId: P:TicketShop.RestApiClient.Model.FullEventDate.TicketEventDateID
+  id: TicketEventDateID
+  parent: TicketShop.RestApiClient.Model.FullEventDate
+  langs:
+  - csharp
+  - vb
+  name: TicketEventDateID
+  nameWithType: FullEventDate.TicketEventDateID
+  fullName: TicketShop.RestApiClient.Model.FullEventDate.TicketEventDateID
+  type: Property
+  source:
+    remote:
+      path: src/RestApiClient/Model/FullEventDate.cs
+      branch: features/ticketshop
+      repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
+    id: TicketEventDateID
+    path: src/RestApiClient/Model/FullEventDate.cs
+    startLine: 9
+  assemblies:
+  - RestApiClient
+  namespace: TicketShop.RestApiClient.Model
+  syntax:
+    content: public int TicketEventDateID { get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public Property TicketEventDateID As Integer
+  overload: TicketShop.RestApiClient.Model.FullEventDate.TicketEventDateID*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: TicketShop.RestApiClient.Model.FullEventDate.TicketEventID
+  commentId: P:TicketShop.RestApiClient.Model.FullEventDate.TicketEventID
+  id: TicketEventID
+  parent: TicketShop.RestApiClient.Model.FullEventDate
+  langs:
+  - csharp
+  - vb
+  name: TicketEventID
+  nameWithType: FullEventDate.TicketEventID
+  fullName: TicketShop.RestApiClient.Model.FullEventDate.TicketEventID
+  type: Property
+  source:
+    remote:
+      path: src/RestApiClient/Model/FullEventDate.cs
+      branch: features/ticketshop
+      repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
+    id: TicketEventID
+    path: src/RestApiClient/Model/FullEventDate.cs
+    startLine: 10
+  assemblies:
+  - RestApiClient
+  namespace: TicketShop.RestApiClient.Model
+  syntax:
+    content: public int TicketEventID { get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public Property TicketEventID As Integer
+  overload: TicketShop.RestApiClient.Model.FullEventDate.TicketEventID*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: TicketShop.RestApiClient.Model.FullEventDate.EventName
+  commentId: P:TicketShop.RestApiClient.Model.FullEventDate.EventName
+  id: EventName
+  parent: TicketShop.RestApiClient.Model.FullEventDate
+  langs:
+  - csharp
+  - vb
+  name: EventName
+  nameWithType: FullEventDate.EventName
+  fullName: TicketShop.RestApiClient.Model.FullEventDate.EventName
+  type: Property
+  source:
+    remote:
+      path: src/RestApiClient/Model/FullEventDate.cs
+      branch: features/ticketshop
+      repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
+    id: EventName
+    path: src/RestApiClient/Model/FullEventDate.cs
+    startLine: 11
+  assemblies:
+  - RestApiClient
+  namespace: TicketShop.RestApiClient.Model
+  syntax:
+    content: public string EventName { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property EventName As String
+  overload: TicketShop.RestApiClient.Model.FullEventDate.EventName*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: TicketShop.RestApiClient.Model.FullEventDate.EventHtmlDescription
+  commentId: P:TicketShop.RestApiClient.Model.FullEventDate.EventHtmlDescription
+  id: EventHtmlDescription
+  parent: TicketShop.RestApiClient.Model.FullEventDate
+  langs:
+  - csharp
+  - vb
+  name: EventHtmlDescription
+  nameWithType: FullEventDate.EventHtmlDescription
+  fullName: TicketShop.RestApiClient.Model.FullEventDate.EventHtmlDescription
+  type: Property
+  source:
+    remote:
+      path: src/RestApiClient/Model/FullEventDate.cs
+      branch: features/ticketshop
+      repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
+    id: EventHtmlDescription
+    path: src/RestApiClient/Model/FullEventDate.cs
+    startLine: 12
+  assemblies:
+  - RestApiClient
+  namespace: TicketShop.RestApiClient.Model
+  syntax:
+    content: public string EventHtmlDescription { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property EventHtmlDescription As String
+  overload: TicketShop.RestApiClient.Model.FullEventDate.EventHtmlDescription*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: TicketShop.RestApiClient.Model.FullEventDate.EventImagePath
+  commentId: P:TicketShop.RestApiClient.Model.FullEventDate.EventImagePath
+  id: EventImagePath
+  parent: TicketShop.RestApiClient.Model.FullEventDate
+  langs:
+  - csharp
+  - vb
+  name: EventImagePath
+  nameWithType: FullEventDate.EventImagePath
+  fullName: TicketShop.RestApiClient.Model.FullEventDate.EventImagePath
+  type: Property
+  source:
+    remote:
+      path: src/RestApiClient/Model/FullEventDate.cs
+      branch: features/ticketshop
+      repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
+    id: EventImagePath
+    path: src/RestApiClient/Model/FullEventDate.cs
+    startLine: 13
+  assemblies:
+  - RestApiClient
+  namespace: TicketShop.RestApiClient.Model
+  syntax:
+    content: public string EventImagePath { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property EventImagePath As String
+  overload: TicketShop.RestApiClient.Model.FullEventDate.EventImagePath*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: TicketShop.RestApiClient.Model.FullEventDate.VenueID
+  commentId: P:TicketShop.RestApiClient.Model.FullEventDate.VenueID
+  id: VenueID
+  parent: TicketShop.RestApiClient.Model.FullEventDate
+  langs:
+  - csharp
+  - vb
+  name: VenueID
+  nameWithType: FullEventDate.VenueID
+  fullName: TicketShop.RestApiClient.Model.FullEventDate.VenueID
+  type: Property
+  source:
+    remote:
+      path: src/RestApiClient/Model/FullEventDate.cs
+      branch: features/ticketshop
+      repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
+    id: VenueID
+    path: src/RestApiClient/Model/FullEventDate.cs
+    startLine: 14
+  assemblies:
+  - RestApiClient
+  namespace: TicketShop.RestApiClient.Model
+  syntax:
+    content: public int VenueID { get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public Property VenueID As Integer
+  overload: TicketShop.RestApiClient.Model.FullEventDate.VenueID*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: TicketShop.RestApiClient.Model.FullEventDate.VenueName
+  commentId: P:TicketShop.RestApiClient.Model.FullEventDate.VenueName
+  id: VenueName
+  parent: TicketShop.RestApiClient.Model.FullEventDate
+  langs:
+  - csharp
+  - vb
+  name: VenueName
+  nameWithType: FullEventDate.VenueName
+  fullName: TicketShop.RestApiClient.Model.FullEventDate.VenueName
+  type: Property
+  source:
+    remote:
+      path: src/RestApiClient/Model/FullEventDate.cs
+      branch: features/ticketshop
+      repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
+    id: VenueName
+    path: src/RestApiClient/Model/FullEventDate.cs
+    startLine: 15
+  assemblies:
+  - RestApiClient
+  namespace: TicketShop.RestApiClient.Model
+  syntax:
+    content: public string VenueName { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property VenueName As String
+  overload: TicketShop.RestApiClient.Model.FullEventDate.VenueName*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: TicketShop.RestApiClient.Model.FullEventDate.Address
+  commentId: P:TicketShop.RestApiClient.Model.FullEventDate.Address
+  id: Address
+  parent: TicketShop.RestApiClient.Model.FullEventDate
+  langs:
+  - csharp
+  - vb
+  name: Address
+  nameWithType: FullEventDate.Address
+  fullName: TicketShop.RestApiClient.Model.FullEventDate.Address
+  type: Property
+  source:
+    remote:
+      path: src/RestApiClient/Model/FullEventDate.cs
+      branch: features/ticketshop
+      repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
+    id: Address
+    path: src/RestApiClient/Model/FullEventDate.cs
+    startLine: 16
+  assemblies:
+  - RestApiClient
+  namespace: TicketShop.RestApiClient.Model
+  syntax:
+    content: public string Address { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property Address As String
+  overload: TicketShop.RestApiClient.Model.FullEventDate.Address*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: TicketShop.RestApiClient.Model.FullEventDate.City
+  commentId: P:TicketShop.RestApiClient.Model.FullEventDate.City
+  id: City
+  parent: TicketShop.RestApiClient.Model.FullEventDate
+  langs:
+  - csharp
+  - vb
+  name: City
+  nameWithType: FullEventDate.City
+  fullName: TicketShop.RestApiClient.Model.FullEventDate.City
+  type: Property
+  source:
+    remote:
+      path: src/RestApiClient/Model/FullEventDate.cs
+      branch: features/ticketshop
+      repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
+    id: City
+    path: src/RestApiClient/Model/FullEventDate.cs
+    startLine: 17
+  assemblies:
+  - RestApiClient
+  namespace: TicketShop.RestApiClient.Model
+  syntax:
+    content: public string City { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property City As String
+  overload: TicketShop.RestApiClient.Model.FullEventDate.City*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: TicketShop.RestApiClient.Model.FullEventDate.Country
+  commentId: P:TicketShop.RestApiClient.Model.FullEventDate.Country
+  id: Country
+  parent: TicketShop.RestApiClient.Model.FullEventDate
+  langs:
+  - csharp
+  - vb
+  name: Country
+  nameWithType: FullEventDate.Country
+  fullName: TicketShop.RestApiClient.Model.FullEventDate.Country
+  type: Property
+  source:
+    remote:
+      path: src/RestApiClient/Model/FullEventDate.cs
+      branch: features/ticketshop
+      repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
+    id: Country
+    path: src/RestApiClient/Model/FullEventDate.cs
+    startLine: 18
+  assemblies:
+  - RestApiClient
+  namespace: TicketShop.RestApiClient.Model
+  syntax:
+    content: public string Country { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property Country As String
+  overload: TicketShop.RestApiClient.Model.FullEventDate.Country*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: TicketShop.RestApiClient.Model.FullEventDate.EventStartDateTime
+  commentId: P:TicketShop.RestApiClient.Model.FullEventDate.EventStartDateTime
+  id: EventStartDateTime
+  parent: TicketShop.RestApiClient.Model.FullEventDate
+  langs:
+  - csharp
+  - vb
+  name: EventStartDateTime
+  nameWithType: FullEventDate.EventStartDateTime
+  fullName: TicketShop.RestApiClient.Model.FullEventDate.EventStartDateTime
+  type: Property
+  source:
+    remote:
+      path: src/RestApiClient/Model/FullEventDate.cs
+      branch: features/ticketshop
+      repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
+    id: EventStartDateTime
+    path: src/RestApiClient/Model/FullEventDate.cs
+    startLine: 19
+  assemblies:
+  - RestApiClient
+  namespace: TicketShop.RestApiClient.Model
+  syntax:
+    content: public DateTime EventStartDateTime { get; set; }
+    parameters: []
+    return:
+      type: System.DateTime
+    content.vb: Public Property EventStartDateTime As Date
+  overload: TicketShop.RestApiClient.Model.FullEventDate.EventStartDateTime*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: TicketShop.RestApiClient.Model.FullEventDate.Price
+  commentId: P:TicketShop.RestApiClient.Model.FullEventDate.Price
+  id: Price
+  parent: TicketShop.RestApiClient.Model.FullEventDate
+  langs:
+  - csharp
+  - vb
+  name: Price
+  nameWithType: FullEventDate.Price
+  fullName: TicketShop.RestApiClient.Model.FullEventDate.Price
+  type: Property
+  source:
+    remote:
+      path: src/RestApiClient/Model/FullEventDate.cs
+      branch: features/ticketshop
+      repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
+    id: Price
+    path: src/RestApiClient/Model/FullEventDate.cs
+    startLine: 20
+  assemblies:
+  - RestApiClient
+  namespace: TicketShop.RestApiClient.Model
+  syntax:
+    content: public double Price { get; set; }
+    parameters: []
+    return:
+      type: System.Double
+    content.vb: Public Property Price As Double
+  overload: TicketShop.RestApiClient.Model.FullEventDate.Price*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: TicketShop.RestApiClient.Model.FullEventDate.MaxTickets
+  commentId: P:TicketShop.RestApiClient.Model.FullEventDate.MaxTickets
+  id: MaxTickets
+  parent: TicketShop.RestApiClient.Model.FullEventDate
+  langs:
+  - csharp
+  - vb
+  name: MaxTickets
+  nameWithType: FullEventDate.MaxTickets
+  fullName: TicketShop.RestApiClient.Model.FullEventDate.MaxTickets
+  type: Property
+  source:
+    remote:
+      path: src/RestApiClient/Model/FullEventDate.cs
+      branch: features/ticketshop
+      repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
+    id: MaxTickets
+    path: src/RestApiClient/Model/FullEventDate.cs
+    startLine: 21
+  assemblies:
+  - RestApiClient
+  namespace: TicketShop.RestApiClient.Model
+  syntax:
+    content: public int MaxTickets { get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public Property MaxTickets As Integer
+  overload: TicketShop.RestApiClient.Model.FullEventDate.MaxTickets*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: TicketShop.RestApiClient.Model.FullEventDate.ToString
+  commentId: M:TicketShop.RestApiClient.Model.FullEventDate.ToString
+  id: ToString
+  parent: TicketShop.RestApiClient.Model.FullEventDate
+  langs:
+  - csharp
+  - vb
+  name: ToString()
+  nameWithType: FullEventDate.ToString()
+  fullName: TicketShop.RestApiClient.Model.FullEventDate.ToString()
+  type: Method
+  source:
+    remote:
+      path: src/RestApiClient/Model/FullEventDate.cs
+      branch: features/ticketshop
+      repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
+    id: ToString
+    path: src/RestApiClient/Model/FullEventDate.cs
+    startLine: 27
+  assemblies:
+  - RestApiClient
+  namespace: TicketShop.RestApiClient.Model
+  summary: "\nReturns the string presentation of the object\n"
+  example: []
+  syntax:
+    content: public override string ToString()
+    return:
+      type: System.String
+      description: String presentation of the object
+    content.vb: Public Overrides Function ToString As String
+  overridden: System.Object.ToString
+  overload: TicketShop.RestApiClient.Model.FullEventDate.ToString*
+  modifiers.csharp:
+  - public
+  - override
+  modifiers.vb:
+  - Public
+  - Overrides
+- uid: TicketShop.RestApiClient.Model.FullEventDate.ToJson
+  commentId: M:TicketShop.RestApiClient.Model.FullEventDate.ToJson
+  id: ToJson
+  parent: TicketShop.RestApiClient.Model.FullEventDate
+  langs:
+  - csharp
+  - vb
+  name: ToJson()
+  nameWithType: FullEventDate.ToJson()
+  fullName: TicketShop.RestApiClient.Model.FullEventDate.ToJson()
+  type: Method
+  source:
+    remote:
+      path: src/RestApiClient/Model/FullEventDate.cs
+      branch: features/ticketshop
+      repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
+    id: ToJson
+    path: src/RestApiClient/Model/FullEventDate.cs
+    startLine: 52
+  assemblies:
+  - RestApiClient
+  namespace: TicketShop.RestApiClient.Model
+  summary: "\nReturns the JSON string presentation of the object\n"
+  example: []
+  syntax:
+    content: public string ToJson()
+    return:
+      type: System.String
+      description: JSON string presentation of the object
+    content.vb: Public Function ToJson As String
+  overload: TicketShop.RestApiClient.Model.FullEventDate.ToJson*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+references:
+- uid: TicketShop.RestApiClient.Model
+  commentId: N:TicketShop.RestApiClient.Model
+  isExternal: false
+  name: TicketShop.RestApiClient.Model
+  nameWithType: TicketShop.RestApiClient.Model
+  fullName: TicketShop.RestApiClient.Model
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: false
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: TicketShop.RestApiClient.Model.FullEventDate.TicketEventDateID*
+  commentId: Overload:TicketShop.RestApiClient.Model.FullEventDate.TicketEventDateID
+  isExternal: false
+  name: TicketEventDateID
+  nameWithType: FullEventDate.TicketEventDateID
+  fullName: TicketShop.RestApiClient.Model.FullEventDate.TicketEventDateID
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  name: Int32
+  nameWithType: Int32
+  fullName: System.Int32
+- uid: TicketShop.RestApiClient.Model.FullEventDate.TicketEventID*
+  commentId: Overload:TicketShop.RestApiClient.Model.FullEventDate.TicketEventID
+  isExternal: false
+  name: TicketEventID
+  nameWithType: FullEventDate.TicketEventID
+  fullName: TicketShop.RestApiClient.Model.FullEventDate.TicketEventID
+- uid: TicketShop.RestApiClient.Model.FullEventDate.EventName*
+  commentId: Overload:TicketShop.RestApiClient.Model.FullEventDate.EventName
+  isExternal: false
+  name: EventName
+  nameWithType: FullEventDate.EventName
+  fullName: TicketShop.RestApiClient.Model.FullEventDate.EventName
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: TicketShop.RestApiClient.Model.FullEventDate.EventHtmlDescription*
+  commentId: Overload:TicketShop.RestApiClient.Model.FullEventDate.EventHtmlDescription
+  isExternal: false
+  name: EventHtmlDescription
+  nameWithType: FullEventDate.EventHtmlDescription
+  fullName: TicketShop.RestApiClient.Model.FullEventDate.EventHtmlDescription
+- uid: TicketShop.RestApiClient.Model.FullEventDate.EventImagePath*
+  commentId: Overload:TicketShop.RestApiClient.Model.FullEventDate.EventImagePath
+  isExternal: false
+  name: EventImagePath
+  nameWithType: FullEventDate.EventImagePath
+  fullName: TicketShop.RestApiClient.Model.FullEventDate.EventImagePath
+- uid: TicketShop.RestApiClient.Model.FullEventDate.VenueID*
+  commentId: Overload:TicketShop.RestApiClient.Model.FullEventDate.VenueID
+  isExternal: false
+  name: VenueID
+  nameWithType: FullEventDate.VenueID
+  fullName: TicketShop.RestApiClient.Model.FullEventDate.VenueID
+- uid: TicketShop.RestApiClient.Model.FullEventDate.VenueName*
+  commentId: Overload:TicketShop.RestApiClient.Model.FullEventDate.VenueName
+  isExternal: false
+  name: VenueName
+  nameWithType: FullEventDate.VenueName
+  fullName: TicketShop.RestApiClient.Model.FullEventDate.VenueName
+- uid: TicketShop.RestApiClient.Model.FullEventDate.Address*
+  commentId: Overload:TicketShop.RestApiClient.Model.FullEventDate.Address
+  isExternal: false
+  name: Address
+  nameWithType: FullEventDate.Address
+  fullName: TicketShop.RestApiClient.Model.FullEventDate.Address
+- uid: TicketShop.RestApiClient.Model.FullEventDate.City*
+  commentId: Overload:TicketShop.RestApiClient.Model.FullEventDate.City
+  isExternal: false
+  name: City
+  nameWithType: FullEventDate.City
+  fullName: TicketShop.RestApiClient.Model.FullEventDate.City
+- uid: TicketShop.RestApiClient.Model.FullEventDate.Country*
+  commentId: Overload:TicketShop.RestApiClient.Model.FullEventDate.Country
+  isExternal: false
+  name: Country
+  nameWithType: FullEventDate.Country
+  fullName: TicketShop.RestApiClient.Model.FullEventDate.Country
+- uid: TicketShop.RestApiClient.Model.FullEventDate.EventStartDateTime*
+  commentId: Overload:TicketShop.RestApiClient.Model.FullEventDate.EventStartDateTime
+  isExternal: false
+  name: EventStartDateTime
+  nameWithType: FullEventDate.EventStartDateTime
+  fullName: TicketShop.RestApiClient.Model.FullEventDate.EventStartDateTime
+- uid: System.DateTime
+  commentId: T:System.DateTime
+  parent: System
+  isExternal: true
+  name: DateTime
+  nameWithType: DateTime
+  fullName: System.DateTime
+- uid: TicketShop.RestApiClient.Model.FullEventDate.Price*
+  commentId: Overload:TicketShop.RestApiClient.Model.FullEventDate.Price
+  isExternal: false
+  name: Price
+  nameWithType: FullEventDate.Price
+  fullName: TicketShop.RestApiClient.Model.FullEventDate.Price
+- uid: System.Double
+  commentId: T:System.Double
+  parent: System
+  isExternal: true
+  name: Double
+  nameWithType: Double
+  fullName: System.Double
+- uid: TicketShop.RestApiClient.Model.FullEventDate.MaxTickets*
+  commentId: Overload:TicketShop.RestApiClient.Model.FullEventDate.MaxTickets
+  isExternal: false
+  name: MaxTickets
+  nameWithType: FullEventDate.MaxTickets
+  fullName: TicketShop.RestApiClient.Model.FullEventDate.MaxTickets
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: TicketShop.RestApiClient.Model.FullEventDate.ToString*
+  commentId: Overload:TicketShop.RestApiClient.Model.FullEventDate.ToString
+  isExternal: false
+  name: ToString
+  nameWithType: FullEventDate.ToString
+  fullName: TicketShop.RestApiClient.Model.FullEventDate.ToString
+- uid: TicketShop.RestApiClient.Model.FullEventDate.ToJson*
+  commentId: Overload:TicketShop.RestApiClient.Model.FullEventDate.ToJson
+  isExternal: false
+  name: ToJson
+  nameWithType: FullEventDate.ToJson
+  fullName: TicketShop.RestApiClient.Model.FullEventDate.ToJson

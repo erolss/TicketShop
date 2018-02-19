@@ -1,0 +1,23 @@
+### YamlMime:ManagedReference
+items:
+- uid: TicketShop.Settings
+  commentId: N:TicketShop.Settings
+  id: TicketShop.Settings
+  children:
+  - TicketShop.Settings.CustomSettings
+  langs:
+  - csharp
+  - vb
+  name: TicketShop.Settings
+  nameWithType: TicketShop.Settings
+  fullName: TicketShop.Settings
+  type: Namespace
+  assemblies:
+  - TicketShop
+references:
+- uid: TicketShop.Settings.CustomSettings
+  commentId: T:TicketShop.Settings.CustomSettings
+  isExternal: false
+  name: CustomSettings
+  nameWithType: CustomSettings
+  fullName: TicketShop.Settings.CustomSettings

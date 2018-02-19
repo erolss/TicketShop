@@ -7,11 +7,13 @@ items:
   children:
   - TicketApi.Db.Interface.IEventDateRepository.AddEventDate(TicketApi.Db.Models.EventDate)
   - TicketApi.Db.Interface.IEventDateRepository.DeleteEventDate(System.Int32)
-  - TicketApi.Db.Interface.IEventDateRepository.FindEventDates(System.String)
+  - TicketApi.Db.Interface.IEventDateRepository.FindFullEventDates(System.String)
   - TicketApi.Db.Interface.IEventDateRepository.GetEventDateByEventId(System.Int32)
   - TicketApi.Db.Interface.IEventDateRepository.GetEventDateById(System.Int32)
   - TicketApi.Db.Interface.IEventDateRepository.GetEventDates(System.Int32,System.Int32)
   - TicketApi.Db.Interface.IEventDateRepository.GetFullEventDateById(System.Int32)
+  - TicketApi.Db.Interface.IEventDateRepository.GetFullEventDates(System.Int32,System.Int32)
+  - TicketApi.Db.Interface.IEventDateRepository.GetFullEventDatesByEventId(System.Int32,System.Int32,System.Int32)
   - TicketApi.Db.Interface.IEventDateRepository.GetSoldTicketCount(System.Int32)
   - TicketApi.Db.Interface.IEventDateRepository.UpdateEventDate(TicketApi.Db.Models.EventDate)
   langs:
@@ -24,7 +26,7 @@ items:
   source:
     remote:
       path: src/DbRepository/Interface/IEventDateRepository.cs
-      branch: restapi
+      branch: features/ticketshop
       repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
     id: IEventDateRepository
     path: src/DbRepository/Interface/IEventDateRepository.cs
@@ -55,11 +57,11 @@ items:
   source:
     remote:
       path: src/DbRepository/Interface/IEventDateRepository.cs
-      branch: restapi
+      branch: features/ticketshop
       repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
     id: AddEventDate
     path: src/DbRepository/Interface/IEventDateRepository.cs
-    startLine: 19
+    startLine: 15
   assemblies:
   - DbRepository
   namespace: TicketApi.Db.Interface
@@ -70,7 +72,7 @@ items:
     parameters:
     - id: eventDate
       type: TicketApi.Db.Models.EventDate
-      description: Datetime of the event date
+      description: EventDate object
     return:
       type: TicketApi.Db.Models.EventDate
       description: An object representation of the created EventDate
@@ -90,11 +92,11 @@ items:
   source:
     remote:
       path: src/DbRepository/Interface/IEventDateRepository.cs
-      branch: restapi
+      branch: features/ticketshop
       repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
     id: GetEventDates
     path: src/DbRepository/Interface/IEventDateRepository.cs
-    startLine: 27
+    startLine: 23
   assemblies:
   - DbRepository
   namespace: TicketApi.Db.Interface
@@ -114,6 +116,44 @@ items:
       description: A list of object representations of EventDates
     content.vb: Function GetEventDates(offset As Integer = 0, maxLimit As Integer = 20) As List(Of EventDate)
   overload: TicketApi.Db.Interface.IEventDateRepository.GetEventDates*
+- uid: TicketApi.Db.Interface.IEventDateRepository.GetFullEventDates(System.Int32,System.Int32)
+  commentId: M:TicketApi.Db.Interface.IEventDateRepository.GetFullEventDates(System.Int32,System.Int32)
+  id: GetFullEventDates(System.Int32,System.Int32)
+  parent: TicketApi.Db.Interface.IEventDateRepository
+  langs:
+  - csharp
+  - vb
+  name: GetFullEventDates(Int32, Int32)
+  nameWithType: IEventDateRepository.GetFullEventDates(Int32, Int32)
+  fullName: TicketApi.Db.Interface.IEventDateRepository.GetFullEventDates(System.Int32, System.Int32)
+  type: Method
+  source:
+    remote:
+      path: src/DbRepository/Interface/IEventDateRepository.cs
+      branch: features/ticketshop
+      repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
+    id: GetFullEventDates
+    path: src/DbRepository/Interface/IEventDateRepository.cs
+    startLine: 30
+  assemblies:
+  - DbRepository
+  namespace: TicketApi.Db.Interface
+  summary: "\nGet Full Event Dates\n"
+  example: []
+  syntax:
+    content: List<FullEventDate> GetFullEventDates(int offset = 0, int maxLimit = 20)
+    parameters:
+    - id: offset
+      type: System.Int32
+      description: Result set offset
+    - id: maxLimit
+      type: System.Int32
+      description: Max result rows to fetch
+    return:
+      type: System.Collections.Generic.List{TicketApi.Db.Models.FullEventDate}
+      description: A list of object representations of FullEventDates
+    content.vb: Function GetFullEventDates(offset As Integer = 0, maxLimit As Integer = 20) As List(Of FullEventDate)
+  overload: TicketApi.Db.Interface.IEventDateRepository.GetFullEventDates*
 - uid: TicketApi.Db.Interface.IEventDateRepository.GetEventDateById(System.Int32)
   commentId: M:TicketApi.Db.Interface.IEventDateRepository.GetEventDateById(System.Int32)
   id: GetEventDateById(System.Int32)
@@ -128,11 +168,11 @@ items:
   source:
     remote:
       path: src/DbRepository/Interface/IEventDateRepository.cs
-      branch: restapi
+      branch: features/ticketshop
       repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
     id: GetEventDateById
     path: src/DbRepository/Interface/IEventDateRepository.cs
-    startLine: 34
+    startLine: 37
   assemblies:
   - DbRepository
   namespace: TicketApi.Db.Interface
@@ -163,11 +203,11 @@ items:
   source:
     remote:
       path: src/DbRepository/Interface/IEventDateRepository.cs
-      branch: restapi
+      branch: features/ticketshop
       repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
     id: GetEventDateByEventId
     path: src/DbRepository/Interface/IEventDateRepository.cs
-    startLine: 41
+    startLine: 44
   assemblies:
   - DbRepository
   namespace: TicketApi.Db.Interface
@@ -198,11 +238,11 @@ items:
   source:
     remote:
       path: src/DbRepository/Interface/IEventDateRepository.cs
-      branch: restapi
+      branch: features/ticketshop
       repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
     id: GetFullEventDateById
     path: src/DbRepository/Interface/IEventDateRepository.cs
-    startLine: 48
+    startLine: 51
   assemblies:
   - DbRepository
   namespace: TicketApi.Db.Interface
@@ -219,6 +259,47 @@ items:
       description: An object representation of the EventDate
     content.vb: Function GetFullEventDateById(id As Integer) As FullEventDate
   overload: TicketApi.Db.Interface.IEventDateRepository.GetFullEventDateById*
+- uid: TicketApi.Db.Interface.IEventDateRepository.GetFullEventDatesByEventId(System.Int32,System.Int32,System.Int32)
+  commentId: M:TicketApi.Db.Interface.IEventDateRepository.GetFullEventDatesByEventId(System.Int32,System.Int32,System.Int32)
+  id: GetFullEventDatesByEventId(System.Int32,System.Int32,System.Int32)
+  parent: TicketApi.Db.Interface.IEventDateRepository
+  langs:
+  - csharp
+  - vb
+  name: GetFullEventDatesByEventId(Int32, Int32, Int32)
+  nameWithType: IEventDateRepository.GetFullEventDatesByEventId(Int32, Int32, Int32)
+  fullName: TicketApi.Db.Interface.IEventDateRepository.GetFullEventDatesByEventId(System.Int32, System.Int32, System.Int32)
+  type: Method
+  source:
+    remote:
+      path: src/DbRepository/Interface/IEventDateRepository.cs
+      branch: features/ticketshop
+      repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
+    id: GetFullEventDatesByEventId
+    path: src/DbRepository/Interface/IEventDateRepository.cs
+    startLine: 60
+  assemblies:
+  - DbRepository
+  namespace: TicketApi.Db.Interface
+  summary: "\nGet a list of FullEventDate objects by TicketEventID\n"
+  example: []
+  syntax:
+    content: List<FullEventDate> GetFullEventDatesByEventId(int eventId, int offset = 0, int maxLimit = 20)
+    parameters:
+    - id: eventId
+      type: System.Int32
+      description: Ticket event ID
+    - id: offset
+      type: System.Int32
+      description: Result set offset
+    - id: maxLimit
+      type: System.Int32
+      description: Max number of rows to fetch
+    return:
+      type: System.Collections.Generic.List{TicketApi.Db.Models.FullEventDate}
+      description: A list of object representations of FullEventDates
+    content.vb: Function GetFullEventDatesByEventId(eventId As Integer, offset As Integer = 0, maxLimit As Integer = 20) As List(Of FullEventDate)
+  overload: TicketApi.Db.Interface.IEventDateRepository.GetFullEventDatesByEventId*
 - uid: TicketApi.Db.Interface.IEventDateRepository.UpdateEventDate(TicketApi.Db.Models.EventDate)
   commentId: M:TicketApi.Db.Interface.IEventDateRepository.UpdateEventDate(TicketApi.Db.Models.EventDate)
   id: UpdateEventDate(TicketApi.Db.Models.EventDate)
@@ -233,11 +314,11 @@ items:
   source:
     remote:
       path: src/DbRepository/Interface/IEventDateRepository.cs
-      branch: restapi
+      branch: features/ticketshop
       repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
     id: UpdateEventDate
     path: src/DbRepository/Interface/IEventDateRepository.cs
-    startLine: 55
+    startLine: 67
   assemblies:
   - DbRepository
   namespace: TicketApi.Db.Interface
@@ -268,11 +349,11 @@ items:
   source:
     remote:
       path: src/DbRepository/Interface/IEventDateRepository.cs
-      branch: restapi
+      branch: features/ticketshop
       repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
     id: DeleteEventDate
     path: src/DbRepository/Interface/IEventDateRepository.cs
-    startLine: 62
+    startLine: 74
   assemblies:
   - DbRepository
   namespace: TicketApi.Db.Interface
@@ -289,41 +370,41 @@ items:
       description: bool, true if delete succeeded
     content.vb: Function DeleteEventDate(id As Integer) As Boolean
   overload: TicketApi.Db.Interface.IEventDateRepository.DeleteEventDate*
-- uid: TicketApi.Db.Interface.IEventDateRepository.FindEventDates(System.String)
-  commentId: M:TicketApi.Db.Interface.IEventDateRepository.FindEventDates(System.String)
-  id: FindEventDates(System.String)
+- uid: TicketApi.Db.Interface.IEventDateRepository.FindFullEventDates(System.String)
+  commentId: M:TicketApi.Db.Interface.IEventDateRepository.FindFullEventDates(System.String)
+  id: FindFullEventDates(System.String)
   parent: TicketApi.Db.Interface.IEventDateRepository
   langs:
   - csharp
   - vb
-  name: FindEventDates(String)
-  nameWithType: IEventDateRepository.FindEventDates(String)
-  fullName: TicketApi.Db.Interface.IEventDateRepository.FindEventDates(System.String)
+  name: FindFullEventDates(String)
+  nameWithType: IEventDateRepository.FindFullEventDates(String)
+  fullName: TicketApi.Db.Interface.IEventDateRepository.FindFullEventDates(System.String)
   type: Method
   source:
     remote:
       path: src/DbRepository/Interface/IEventDateRepository.cs
-      branch: restapi
+      branch: features/ticketshop
       repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
-    id: FindEventDates
+    id: FindFullEventDates
     path: src/DbRepository/Interface/IEventDateRepository.cs
-    startLine: 69
+    startLine: 81
   assemblies:
   - DbRepository
   namespace: TicketApi.Db.Interface
-  summary: "\nFind EventDates matching the search query\n"
+  summary: "\nFind FullEventDates matching the search query\n"
   example: []
   syntax:
-    content: List<EventDate> FindEventDates(string searchStr)
+    content: List<FullEventDate> FindFullEventDates(string searchStr)
     parameters:
     - id: searchStr
       type: System.String
       description: Search query
     return:
-      type: System.Collections.Generic.List{TicketApi.Db.Models.EventDate}
-      description: A list of object representations of EventDates matching the query
-    content.vb: Function FindEventDates(searchStr As String) As List(Of EventDate)
-  overload: TicketApi.Db.Interface.IEventDateRepository.FindEventDates*
+      type: System.Collections.Generic.List{TicketApi.Db.Models.FullEventDate}
+      description: A list of object representations of FullEventDates matching the query
+    content.vb: Function FindFullEventDates(searchStr As String) As List(Of FullEventDate)
+  overload: TicketApi.Db.Interface.IEventDateRepository.FindFullEventDates*
 - uid: TicketApi.Db.Interface.IEventDateRepository.GetSoldTicketCount(System.Int32)
   commentId: M:TicketApi.Db.Interface.IEventDateRepository.GetSoldTicketCount(System.Int32)
   id: GetSoldTicketCount(System.Int32)
@@ -338,11 +419,11 @@ items:
   source:
     remote:
       path: src/DbRepository/Interface/IEventDateRepository.cs
-      branch: restapi
+      branch: features/ticketshop
       repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
     id: GetSoldTicketCount
     path: src/DbRepository/Interface/IEventDateRepository.cs
-    startLine: 77
+    startLine: 89
   assemblies:
   - DbRepository
   namespace: TicketApi.Db.Interface
@@ -491,6 +572,54 @@ references:
   name: System.Collections.Generic
   nameWithType: System.Collections.Generic
   fullName: System.Collections.Generic
+- uid: TicketApi.Db.Interface.IEventDateRepository.GetFullEventDates*
+  commentId: Overload:TicketApi.Db.Interface.IEventDateRepository.GetFullEventDates
+  isExternal: false
+  name: GetFullEventDates
+  nameWithType: IEventDateRepository.GetFullEventDates
+  fullName: TicketApi.Db.Interface.IEventDateRepository.GetFullEventDates
+- uid: System.Collections.Generic.List{TicketApi.Db.Models.FullEventDate}
+  commentId: T:System.Collections.Generic.List{TicketApi.Db.Models.FullEventDate}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.List`1
+  name: List<FullEventDate>
+  nameWithType: List<FullEventDate>
+  fullName: System.Collections.Generic.List<TicketApi.Db.Models.FullEventDate>
+  nameWithType.vb: List(Of FullEventDate)
+  fullName.vb: System.Collections.Generic.List(Of TicketApi.Db.Models.FullEventDate)
+  name.vb: List(Of FullEventDate)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    nameWithType: List
+    fullName: System.Collections.Generic.List
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: TicketApi.Db.Models.FullEventDate
+    name: FullEventDate
+    nameWithType: FullEventDate
+    fullName: TicketApi.Db.Models.FullEventDate
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    nameWithType: List
+    fullName: System.Collections.Generic.List
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: TicketApi.Db.Models.FullEventDate
+    name: FullEventDate
+    nameWithType: FullEventDate
+    fullName: TicketApi.Db.Models.FullEventDate
+  - name: )
+    nameWithType: )
+    fullName: )
 - uid: TicketApi.Db.Interface.IEventDateRepository.GetEventDateById*
   commentId: Overload:TicketApi.Db.Interface.IEventDateRepository.GetEventDateById
   isExternal: false
@@ -516,6 +645,12 @@ references:
   name: FullEventDate
   nameWithType: FullEventDate
   fullName: TicketApi.Db.Models.FullEventDate
+- uid: TicketApi.Db.Interface.IEventDateRepository.GetFullEventDatesByEventId*
+  commentId: Overload:TicketApi.Db.Interface.IEventDateRepository.GetFullEventDatesByEventId
+  isExternal: false
+  name: GetFullEventDatesByEventId
+  nameWithType: IEventDateRepository.GetFullEventDatesByEventId
+  fullName: TicketApi.Db.Interface.IEventDateRepository.GetFullEventDatesByEventId
 - uid: TicketApi.Db.Interface.IEventDateRepository.UpdateEventDate*
   commentId: Overload:TicketApi.Db.Interface.IEventDateRepository.UpdateEventDate
   isExternal: false
@@ -535,12 +670,12 @@ references:
   name: Boolean
   nameWithType: Boolean
   fullName: System.Boolean
-- uid: TicketApi.Db.Interface.IEventDateRepository.FindEventDates*
-  commentId: Overload:TicketApi.Db.Interface.IEventDateRepository.FindEventDates
+- uid: TicketApi.Db.Interface.IEventDateRepository.FindFullEventDates*
+  commentId: Overload:TicketApi.Db.Interface.IEventDateRepository.FindFullEventDates
   isExternal: false
-  name: FindEventDates
-  nameWithType: IEventDateRepository.FindEventDates
-  fullName: TicketApi.Db.Interface.IEventDateRepository.FindEventDates
+  name: FindFullEventDates
+  nameWithType: IEventDateRepository.FindFullEventDates
+  fullName: TicketApi.Db.Interface.IEventDateRepository.FindFullEventDates
 - uid: System.String
   commentId: T:System.String
   parent: System

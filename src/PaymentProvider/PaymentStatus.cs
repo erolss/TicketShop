@@ -1,4 +1,4 @@
-﻿namespace TicketSystem.PaymentProvider
+﻿namespace TicketApi.PaymentProvider
 {
     public enum PaymentStatus
     {

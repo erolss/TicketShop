@@ -1,6 +1,7 @@
 ﻿using System;
+using TicketApi.PaymentProvider.Model;
 
-namespace TicketSystem.PaymentProvider
+namespace TicketApi.PaymentProvider
 {
     public class PaymentProvider : IPaymentProvider
     {

@@ -107,14 +107,14 @@ namespace TicketApi.Controllers
         /// <response code="200">Event date search result loaded</response>
         /// <response code="404">No events found</response>
         [HttpPost]
-        [Route("/api/eventdate/search/{query}")]
+        [Route("/api/eventdate/search")]
         [ValidateModelState]
         [SwaggerOperation("FindEventDates")]
-        [SwaggerResponse(200, typeof(List<EventDate>), "Event date search result loaded")]
-        [SwaggerResponse(404, typeof(List<EventDate>), "No events found")]
-        public virtual IActionResult FindEventDates([FromRoute]Search query)
+        [SwaggerResponse(200, typeof(List<FullEventDate>), "Event date search result loaded")]
+        [SwaggerResponse(404, typeof(List<FullEventDate>), "No events found")]
+        public virtual IActionResult FindFullEventDates([FromBody]Search query)
         {
-            var result = _eventDateRepository.FindEventDates(query.Searchstring);
+            var result = _eventDateRepository.FindFullEventDates(query.Searchstring);
             if (result == null || result.Count() == 0)
             {
                 return NotFound();
@@ -186,7 +186,7 @@ namespace TicketApi.Controllers
             var result = _eventDateRepository.GetEventDates(offset, maxLimit);
             if (result == null || result.Count() == 0)
             {
-                return BadRequest();
+                return NotFound();
             }
             return new ObjectResult(result);
         }
@@ -202,14 +202,32 @@ namespace TicketApi.Controllers
         [Route("/api/eventdate/full/{offset}/{maxLimit}")]
         [ValidateModelState]
         [SwaggerOperation("GetFullEventDates")]
-        [SwaggerResponse(200, typeof(List<EventDate>), "Events loaded")]
-        [SwaggerResponse(404, typeof(List<EventDate>), "Not found")]
+        [SwaggerResponse(200, typeof(List<FullEventDate>), "Events loaded")]
+        [SwaggerResponse(404, typeof(List<FullEventDate>), "Not found")]
         public virtual IActionResult GetFullEventDates([FromRoute]int offset = 0, [FromRoute]int maxLimit = 20)
         {
             var result = _eventDateRepository.GetFullEventDates(offset, maxLimit);
             if (result == null || result.Count() == 0)
             {
-                return BadRequest();
+                return NotFound();
+            }
+            return new ObjectResult(result);
+        }
+        
+
+        [HttpGet]
+        [Route("/api/eventdate/full/eventId/{eventId}")]
+        [Route("/api/eventdate/full/eventid/{eventId}/{offset}/{maxLimit}")]
+        [ValidateModelState]
+        [SwaggerOperation("GetFullEventDatesByEventId")]
+        [SwaggerResponse(200, typeof(List<FullEventDate>), "Events loaded")]
+        [SwaggerResponse(404, typeof(List<FullEventDate>), "Not found")]
+        public virtual IActionResult GetFullEventDatesByEventId([FromRoute]int eventId, [FromRoute]int offset = 0, [FromRoute]int maxLimit = 20)
+        {
+            var result = _eventDateRepository.GetFullEventDatesByEventId(eventId, offset, maxLimit);
+            if (result == null || result.Count() == 0)
+            {
+                return NotFound();
             }
             return new ObjectResult(result);
         }
@@ -232,7 +250,7 @@ namespace TicketApi.Controllers
             var result = _eventDateRepository.GetFullEventDateById((int)eventDateId);
             if (result == null)
             {
-                return BadRequest();
+                return NotFound();
             }
             return new ObjectResult(result);
         }
@@ -255,7 +273,7 @@ namespace TicketApi.Controllers
             var result = _eventDateRepository.UpdateEventDate(eventDate);
             if (result == null)
             {
-                return BadRequest();
+                return NotFound();
             }
             return new ObjectResult(result);
         }

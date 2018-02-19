@@ -11,6 +11,7 @@ items:
   - TicketApi.Db.Models.Search.op_Equality(TicketApi.Db.Models.Search,TicketApi.Db.Models.Search)
   - TicketApi.Db.Models.Search.op_Inequality(TicketApi.Db.Models.Search,TicketApi.Db.Models.Search)
   - TicketApi.Db.Models.Search.Searchstring
+  - TicketApi.Db.Models.Search.ToJson
   - TicketApi.Db.Models.Search.ToString
   langs:
   - csharp
@@ -22,11 +23,11 @@ items:
   source:
     remote:
       path: src/DbRepository/Models/Search.cs
-      branch: restapi
+      branch: features/ticketshop
       repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
     id: Search
     path: src/DbRepository/Models/Search.cs
-    startLine: 37
+    startLine: 32
   assemblies:
   - DbRepository
   namespace: TicketApi.Db.Models
@@ -75,11 +76,11 @@ items:
   source:
     remote:
       path: src/DbRepository/Models/Search.cs
-      branch: restapi
+      branch: features/ticketshop
       repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
     id: Searchstring
     path: src/DbRepository/Models/Search.cs
-    startLine: 43
+    startLine: 38
   assemblies:
   - DbRepository
   namespace: TicketApi.Db.Models
@@ -112,6 +113,41 @@ items:
   - set
   modifiers.vb:
   - Public
+- uid: TicketApi.Db.Models.Search.ToJson
+  commentId: M:TicketApi.Db.Models.Search.ToJson
+  id: ToJson
+  parent: TicketApi.Db.Models.Search
+  langs:
+  - csharp
+  - vb
+  name: ToJson()
+  nameWithType: Search.ToJson()
+  fullName: TicketApi.Db.Models.Search.ToJson()
+  type: Method
+  source:
+    remote:
+      path: src/DbRepository/Models/Search.cs
+      branch: features/ticketshop
+      repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
+    id: ToJson
+    path: src/DbRepository/Models/Search.cs
+    startLine: 45
+  assemblies:
+  - DbRepository
+  namespace: TicketApi.Db.Models
+  summary: "\nReturns the JSON string presentation of the object\n"
+  example: []
+  syntax:
+    content: public string ToJson()
+    return:
+      type: System.String
+      description: JSON string presentation of the object
+    content.vb: Public Function ToJson As String
+  overload: TicketApi.Db.Models.Search.ToJson*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
 - uid: TicketApi.Db.Models.Search.ToString
   commentId: M:TicketApi.Db.Models.Search.ToString
   id: ToString
@@ -126,11 +162,11 @@ items:
   source:
     remote:
       path: src/DbRepository/Models/Search.cs
-      branch: restapi
+      branch: features/ticketshop
       repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
     id: ToString
     path: src/DbRepository/Models/Search.cs
-    startLine: 50
+    startLine: 54
   assemblies:
   - DbRepository
   namespace: TicketApi.Db.Models
@@ -164,11 +200,11 @@ items:
   source:
     remote:
       path: src/DbRepository/Models/Search.cs
-      branch: restapi
+      branch: features/ticketshop
       repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
     id: Equals
     path: src/DbRepository/Models/Search.cs
-    startLine: 64
+    startLine: 69
   assemblies:
   - DbRepository
   namespace: TicketApi.Db.Models
@@ -206,11 +242,11 @@ items:
   source:
     remote:
       path: src/DbRepository/Models/Search.cs
-      branch: restapi
+      branch: features/ticketshop
       repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
     id: Equals
     path: src/DbRepository/Models/Search.cs
-    startLine: 78
+    startLine: 83
   assemblies:
   - DbRepository
   namespace: TicketApi.Db.Models
@@ -247,11 +283,11 @@ items:
   source:
     remote:
       path: src/DbRepository/Models/Search.cs
-      branch: restapi
+      branch: features/ticketshop
       repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
     id: GetHashCode
     path: src/DbRepository/Models/Search.cs
-    startLine: 97
+    startLine: 102
   assemblies:
   - DbRepository
   namespace: TicketApi.Db.Models
@@ -285,11 +321,11 @@ items:
   source:
     remote:
       path: src/DbRepository/Models/Search.cs
-      branch: restapi
+      branch: features/ticketshop
       repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
     id: op_Equality
     path: src/DbRepository/Models/Search.cs
-    startLine: 112
+    startLine: 117
   assemblies:
   - DbRepository
   namespace: TicketApi.Db.Models
@@ -324,11 +360,11 @@ items:
   source:
     remote:
       path: src/DbRepository/Models/Search.cs
-      branch: restapi
+      branch: features/ticketshop
       repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
     id: op_Inequality
     path: src/DbRepository/Models/Search.cs
-    startLine: 117
+    startLine: 122
   assemblies:
   - DbRepository
   namespace: TicketApi.Db.Models
@@ -639,6 +675,12 @@ references:
   name: String
   nameWithType: String
   fullName: System.String
+- uid: TicketApi.Db.Models.Search.ToJson*
+  commentId: Overload:TicketApi.Db.Models.Search.ToJson
+  isExternal: false
+  name: ToJson
+  nameWithType: Search.ToJson
+  fullName: TicketApi.Db.Models.Search.ToJson
 - uid: System.Object.ToString
   commentId: M:System.Object.ToString
   parent: System.Object

@@ -1,0 +1,531 @@
+### YamlMime:ManagedReference
+items:
+- uid: TicketShop.RestApiClient.Model.Ticket
+  commentId: T:TicketShop.RestApiClient.Model.Ticket
+  id: Ticket
+  parent: TicketShop.RestApiClient.Model
+  children:
+  - TicketShop.RestApiClient.Model.Ticket.TicketEventDateID
+  - TicketShop.RestApiClient.Model.Ticket.TicketID
+  - TicketShop.RestApiClient.Model.Ticket.ToJson
+  - TicketShop.RestApiClient.Model.Ticket.ToString
+  langs:
+  - csharp
+  - vb
+  name: Ticket
+  nameWithType: Ticket
+  fullName: TicketShop.RestApiClient.Model.Ticket
+  type: Class
+  source:
+    remote:
+      path: src/RestApiClient/Model/Ticket.cs
+      branch: features/ticketshop
+      repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
+    id: Ticket
+    path: src/RestApiClient/Model/Ticket.cs
+    startLine: 5
+  assemblies:
+  - RestApiClient
+  namespace: TicketShop.RestApiClient.Model
+  syntax:
+    content: public class Ticket
+    content.vb: Public Class Ticket
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: TicketShop.RestApiClient.Model.Ticket.TicketID
+  commentId: P:TicketShop.RestApiClient.Model.Ticket.TicketID
+  id: TicketID
+  parent: TicketShop.RestApiClient.Model.Ticket
+  langs:
+  - csharp
+  - vb
+  name: TicketID
+  nameWithType: Ticket.TicketID
+  fullName: TicketShop.RestApiClient.Model.Ticket.TicketID
+  type: Property
+  source:
+    remote:
+      path: src/RestApiClient/Model/Ticket.cs
+      branch: features/ticketshop
+      repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
+    id: TicketID
+    path: src/RestApiClient/Model/Ticket.cs
+    startLine: 10
+  assemblies:
+  - RestApiClient
+  namespace: TicketShop.RestApiClient.Model
+  summary: "\nGets or Sets TicketID\n"
+  example: []
+  syntax:
+    content: public int TicketID { get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public Property TicketID As Integer
+  overload: TicketShop.RestApiClient.Model.Ticket.TicketID*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: TicketShop.RestApiClient.Model.Ticket.TicketEventDateID
+  commentId: P:TicketShop.RestApiClient.Model.Ticket.TicketEventDateID
+  id: TicketEventDateID
+  parent: TicketShop.RestApiClient.Model.Ticket
+  langs:
+  - csharp
+  - vb
+  name: TicketEventDateID
+  nameWithType: Ticket.TicketEventDateID
+  fullName: TicketShop.RestApiClient.Model.Ticket.TicketEventDateID
+  type: Property
+  source:
+    remote:
+      path: src/RestApiClient/Model/Ticket.cs
+      branch: features/ticketshop
+      repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
+    id: TicketEventDateID
+    path: src/RestApiClient/Model/Ticket.cs
+    startLine: 15
+  assemblies:
+  - RestApiClient
+  namespace: TicketShop.RestApiClient.Model
+  summary: "\nGets or Sets TicketEventDateID\n"
+  example: []
+  syntax:
+    content: public int TicketEventDateID { get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public Property TicketEventDateID As Integer
+  overload: TicketShop.RestApiClient.Model.Ticket.TicketEventDateID*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: TicketShop.RestApiClient.Model.Ticket.ToString
+  commentId: M:TicketShop.RestApiClient.Model.Ticket.ToString
+  id: ToString
+  parent: TicketShop.RestApiClient.Model.Ticket
+  langs:
+  - csharp
+  - vb
+  name: ToString()
+  nameWithType: Ticket.ToString()
+  fullName: TicketShop.RestApiClient.Model.Ticket.ToString()
+  type: Method
+  source:
+    remote:
+      path: src/RestApiClient/Model/Ticket.cs
+      branch: features/ticketshop
+      repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
+    id: ToString
+    path: src/RestApiClient/Model/Ticket.cs
+    startLine: 21
+  assemblies:
+  - RestApiClient
+  namespace: TicketShop.RestApiClient.Model
+  summary: "\nReturns the string presentation of the object\n"
+  example: []
+  syntax:
+    content: public override string ToString()
+    return:
+      type: System.String
+      description: String presentation of the object
+    content.vb: Public Overrides Function ToString As String
+  overridden: System.Object.ToString
+  overload: TicketShop.RestApiClient.Model.Ticket.ToString*
+  modifiers.csharp:
+  - public
+  - override
+  modifiers.vb:
+  - Public
+  - Overrides
+- uid: TicketShop.RestApiClient.Model.Ticket.ToJson
+  commentId: M:TicketShop.RestApiClient.Model.Ticket.ToJson
+  id: ToJson
+  parent: TicketShop.RestApiClient.Model.Ticket
+  langs:
+  - csharp
+  - vb
+  name: ToJson()
+  nameWithType: Ticket.ToJson()
+  fullName: TicketShop.RestApiClient.Model.Ticket.ToJson()
+  type: Method
+  source:
+    remote:
+      path: src/RestApiClient/Model/Ticket.cs
+      branch: features/ticketshop
+      repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
+    id: ToJson
+    path: src/RestApiClient/Model/Ticket.cs
+    startLine: 35
+  assemblies:
+  - RestApiClient
+  namespace: TicketShop.RestApiClient.Model
+  summary: "\nReturns the JSON string presentation of the object\n"
+  example: []
+  syntax:
+    content: public string ToJson()
+    return:
+      type: System.String
+      description: JSON string presentation of the object
+    content.vb: Public Function ToJson As String
+  overload: TicketShop.RestApiClient.Model.Ticket.ToJson*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+references:
+- uid: TicketShop.RestApiClient.Model
+  commentId: N:TicketShop.RestApiClient.Model
+  isExternal: false
+  name: TicketShop.RestApiClient.Model
+  nameWithType: TicketShop.RestApiClient.Model
+  fullName: TicketShop.RestApiClient.Model
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: false
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: TicketShop.RestApiClient.Model.Ticket.TicketID*
+  commentId: Overload:TicketShop.RestApiClient.Model.Ticket.TicketID
+  isExternal: false
+  name: TicketID
+  nameWithType: Ticket.TicketID
+  fullName: TicketShop.RestApiClient.Model.Ticket.TicketID
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  name: Int32
+  nameWithType: Int32
+  fullName: System.Int32
+- uid: TicketShop.RestApiClient.Model.Ticket.TicketEventDateID*
+  commentId: Overload:TicketShop.RestApiClient.Model.Ticket.TicketEventDateID
+  isExternal: false
+  name: TicketEventDateID
+  nameWithType: Ticket.TicketEventDateID
+  fullName: TicketShop.RestApiClient.Model.Ticket.TicketEventDateID
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: TicketShop.RestApiClient.Model.Ticket.ToString*
+  commentId: Overload:TicketShop.RestApiClient.Model.Ticket.ToString
+  isExternal: false
+  name: ToString
+  nameWithType: Ticket.ToString
+  fullName: TicketShop.RestApiClient.Model.Ticket.ToString
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: TicketShop.RestApiClient.Model.Ticket.ToJson*
+  commentId: Overload:TicketShop.RestApiClient.Model.Ticket.ToJson
+  isExternal: false
+  name: ToJson
+  nameWithType: Ticket.ToJson
+  fullName: TicketShop.RestApiClient.Model.Ticket.ToJson

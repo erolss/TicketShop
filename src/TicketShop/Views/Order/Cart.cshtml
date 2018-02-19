@@ -1,0 +1,98 @@
+﻿@model TicketShop.Models.ViewModels.OrderCartViewModel
+
+
+<h2>@ViewData["Title"]</h2>
+
+
+
+@if (Model == null || Model.Events == null || Model.Events.Count() == 0)
+{
+    <h3>Cart is Empty</h3>
+}
+else
+{
+    <div class="row">
+        @foreach (var ed in Model.Events)
+        {
+
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h4 class="panel-title">@ed.EventName - @ed.EventStartDateTime.ToString("yy / MM / dd  -  H:mm")</h4>
+                </div>
+                <div class="panel-body">
+                    <div class="col-sm-6 col-md-8">
+                        <p>@Html.Raw(ed.EventHtmlDescription)</p>
+                        <p>Venue: @ed.VenueName, @ed.Address, @ed.City, @ed.Country</p>
+                        <p class="text-right">Price: @ed.Price</p>
+                    </div>
+                    <div class="col-sm-6 col-md-4">
+                        <a asp-area="" asp-controller="order" asp-action="removeitem" asp-route-eventDateId="@ed.TicketEventDateID" class="btn btn-warning pull-right">Remove Item</a>
+                    </div>
+
+                </div>
+            </div>
+        }
+    </div>
+    <div class="row">
+        <div class="panel panel-default">
+            <div class="panel-body">
+                <div class="col-sm-6 col-md-8">
+                    <a asp-area="" asp-controller="shop" asp-action="eventdate" class="btn btn-default pull-left">Continue shopping</a>
+                    <span class="pull-right">Total: @Math.Round(Model.Total, 2)</span>
+                </div>
+                <div class="col-sm-6 col-md-4">
+                    <a asp-area="" asp-controller="order" asp-action="emptycart" class="btn btn-danger pull-right">EmptyCart</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="panel panel-default">
+            <div class="panel-body">
+                <form asp-controller="order" asp-action="confirmation" asp-route-returnurl="@ViewBag.ReturnUrl" method="post" class="form-horizontal" role="form">
+
+                    <div class="col-sm-6 col-md-8">
+                        <div asp-validation-summary="All" class="text-danger"></div>
+                        <div class="form-group">
+                            <label asp-for="BuyerEmail" class="col-md-2 control-label">E-mail:</label>
+                            <div class="col-md-10">
+                                <input asp-for="BuyerEmail" class="form-control" />
+                                <span asp-validation-for="BuyerEmail" class="text-danger"></span>
+
+                            </div>
+                            <label asp-for="BuyerFirstName" class="col-md-2 control-label">First name:</label>
+                            <div class="col-md-10">
+                                <input asp-for="BuyerFirstName" class="form-control" />
+                                <span asp-validation-for="BuyerFirstName" class="text-danger"></span>
+                            </div>
+                            <label asp-for="BuyerLastName" class="col-md-2 control-label">Last name:</label>
+                            <div class="col-md-10">
+                                <input asp-for="BuyerLastName" class="form-control" />
+                                <span asp-validation-for="BuyerLastName" class="text-danger"></span>
+                            </div>
+                            <label asp-for="BuyerAddress" class="col-md-2 control-label">Address:</label>
+                            <div class="col-md-10">
+                                <input asp-for="BuyerAddress" class="form-control" />
+                                <span asp-validation-for="BuyerAddress" class="text-danger"></span>
+                            </div>
+                            <label asp-for="BuyerCity" class="col-md-2 control-label">City:</label>
+                            <div class="col-md-10">
+                                <input asp-for="BuyerCity" class="form-control" />
+                                <span asp-validation-for="BuyerCity" class="text-danger"></span>
+                            </div>
+                            <input asp-for="BuyerUserId" class="form-control" type="hidden" value="0" />
+                            <input asp-for="TotalAmount" class="form-control" type="hidden" value="@Model.Total" />
+                            <input asp-for="NumberTickets" class="form-control" type="hidden" value="@Model.Total" />
+                        </div>
+                    </div>
+
+                    <div class="col-sm-6 col-md-4 pull-right">
+                        <p><h4 class="text-right">Total: @Math.Round(Model.Total, 2)</h4></p>
+                        <input type="submit" value="Pay Order" class="btn btn-success pull-right" />
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+}

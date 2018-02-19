@@ -16,7 +16,7 @@ items:
   source:
     remote:
       path: src/TicketApi/Attributes/ValidateModelStateAttribute.cs
-      branch: restapi
+      branch: features/ticketshop
       repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
     id: ValidateModelStateAttribute
     path: src/TicketApi/Attributes/ValidateModelStateAttribute.cs
@@ -112,7 +112,7 @@ items:
   source:
     remote:
       path: src/TicketApi/Attributes/ValidateModelStateAttribute.cs
-      branch: restapi
+      branch: features/ticketshop
       repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
     id: OnActionExecuting
     path: src/TicketApi/Attributes/ValidateModelStateAttribute.cs

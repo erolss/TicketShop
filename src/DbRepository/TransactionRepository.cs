@@ -7,6 +7,8 @@ using System.Data.SqlClient;
 using System.Linq;
 using TicketApi.Db.Interface;
 using TicketApi.Db.Models;
+using TicketApi.PaymentProvider;
+using TicketApi.PaymentProvider.Model;
 
 namespace TicketApi.Db
 {
@@ -20,15 +22,24 @@ namespace TicketApi.Db
         }
         public Transaction AddTransaction(Transaction transaction)
         {
-            var query = @"INSERT INTO TicketTransactions
-                        VALUES(@transaction)";
+
+            var query = @"INSERT INTO TicketTransactions(BuyerLastName, BuyerFirstName, BuyerAddress, BuyerCity, BuyerEmail, BuyerUserId, TotalAmount)
+                        VALUES(@BuyerLastName, @BuyerFirstName, @BuyerAddress, @BuyerCity, @BuyerEmail, @BuyerUserId, @TotalAmount)";
 
             using (var connection = new SqlConnection(_connectionString))
             {
                 connection.Open();
                 connection.Query(query, transaction);
                 var addedItemQuery = connection.Query<int>("SELECT IDENT_CURRENT ('TicketTransactions') AS Current_Identity").First();
-                var result = connection.Query<Transaction>("SELECT * FROM TicketTransactions WHERE TransactionID=@id", new { id = addedItemQuery }).FirstOrDefault();
+                //var result = connection.Query<Transaction>("SELECT * FROM TicketTransactions WHERE TransactionID=@id", new { id = addedItemQuery }).FirstOrDefault();
+
+                var p = new PaymentProvider.PaymentProvider();
+                var payment = p.Pay((decimal)transaction.TotalAmount, "SEK", addedItemQuery.ToString());
+                transaction.TransactionID = addedItemQuery;
+                transaction.PaymentReferenceId = payment.PaymentReference;
+                transaction.PaymentStatus = payment.PaymentStatus.ToString();
+
+                var result = UpdateTransaction(transaction);
 
                 return result;
             }
@@ -86,7 +97,16 @@ namespace TicketApi.Db
         public Transaction UpdateTransaction(Transaction transaction)
         {
             var query = @"UPDATE TicketTransactions
-                        SET @transaction";
+                        SET BuyerLastName = @BuyerLastName,
+                        BuyerFirstName = @BuyerFirstName,
+                        BuyerAddress = @BuyerAddress,
+                        BuyerCity = @BuyerCity,
+                        BuyerEmail = @BuyerEmail,
+                        BuyerUserId = @BuyerUserId,
+                        TotalAmount = @TotalAmount,
+                        PaymentReferenceId = @PaymentReferenceId,
+                        PaymentStatus = @PaymentStatus
+                        WHERE TransactionID = @TransactionID";
 
             using (var connection = new SqlConnection(_connectionString))
             {

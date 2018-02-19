@@ -1,0 +1,30 @@
+### YamlMime:ManagedReference
+items:
+- uid: TicketApi.PaymentProvider.Model
+  commentId: N:TicketApi.PaymentProvider.Model
+  id: TicketApi.PaymentProvider.Model
+  children:
+  - TicketApi.PaymentProvider.Model.Payment
+  langs:
+  - csharp
+  - vb
+  name: TicketApi.PaymentProvider.Model
+  nameWithType: TicketApi.PaymentProvider.Model
+  fullName: TicketApi.PaymentProvider.Model
+  type: Namespace
+  assemblies:
+  - PaymentProvider
+references:
+- uid: TicketApi.PaymentProvider.Model.Payment
+  commentId: T:TicketApi.PaymentProvider.Model.Payment
+  parent: TicketApi.PaymentProvider.Model
+  isExternal: false
+  name: Payment
+  nameWithType: Payment
+  fullName: TicketApi.PaymentProvider.Model.Payment
+- uid: TicketApi.PaymentProvider.Model
+  commentId: N:TicketApi.PaymentProvider.Model
+  isExternal: false
+  name: TicketApi.PaymentProvider.Model
+  nameWithType: TicketApi.PaymentProvider.Model
+  fullName: TicketApi.PaymentProvider.Model

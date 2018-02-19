@@ -5,14 +5,16 @@ items:
   id: EventDateApiController
   parent: TicketApi.Controllers
   children:
-  - TicketApi.Controllers.EventDateApiController.#ctor(Microsoft.Extensions.Options.IOptions{TicketApi.Settings.DbSettings})
+  - TicketApi.Controllers.EventDateApiController.#ctor(Microsoft.Extensions.Options.IOptions{TicketApi.Settings.CustomSettings})
   - TicketApi.Controllers.EventDateApiController.AddEventDate(TicketApi.Db.Models.EventDate)
   - TicketApi.Controllers.EventDateApiController.DeleteEventDate(System.Nullable{System.Int32})
-  - TicketApi.Controllers.EventDateApiController.FindEventDates(TicketApi.Db.Models.Search)
+  - TicketApi.Controllers.EventDateApiController.FindFullEventDates(TicketApi.Db.Models.Search)
   - TicketApi.Controllers.EventDateApiController.GetEventDateByEventId(System.Nullable{System.Int32})
   - TicketApi.Controllers.EventDateApiController.GetEventDateById(System.Nullable{System.Int32})
-  - TicketApi.Controllers.EventDateApiController.GetEventDates
+  - TicketApi.Controllers.EventDateApiController.GetEventDates(System.Int32,System.Int32)
   - TicketApi.Controllers.EventDateApiController.GetFullEventDateById(System.Nullable{System.Int32})
+  - TicketApi.Controllers.EventDateApiController.GetFullEventDates(System.Int32,System.Int32)
+  - TicketApi.Controllers.EventDateApiController.GetFullEventDatesByEventId(System.Int32,System.Int32,System.Int32)
   - TicketApi.Controllers.EventDateApiController.GetSoldTicketCount(System.Nullable{System.Int32})
   - TicketApi.Controllers.EventDateApiController.UpdateEventDate(TicketApi.Db.Models.EventDate)
   langs:
@@ -25,7 +27,7 @@ items:
   source:
     remote:
       path: src/TicketApi/Controllers/EventdateApi.cs
-      branch: restapi
+      branch: features/ticketshop
       repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
     id: EventDateApiController
     path: src/TicketApi/Controllers/EventdateApi.cs
@@ -223,21 +225,21 @@ items:
   modifiers.vb:
   - Public
   - Class
-- uid: TicketApi.Controllers.EventDateApiController.#ctor(Microsoft.Extensions.Options.IOptions{TicketApi.Settings.DbSettings})
-  commentId: M:TicketApi.Controllers.EventDateApiController.#ctor(Microsoft.Extensions.Options.IOptions{TicketApi.Settings.DbSettings})
-  id: '#ctor(Microsoft.Extensions.Options.IOptions{TicketApi.Settings.DbSettings})'
+- uid: TicketApi.Controllers.EventDateApiController.#ctor(Microsoft.Extensions.Options.IOptions{TicketApi.Settings.CustomSettings})
+  commentId: M:TicketApi.Controllers.EventDateApiController.#ctor(Microsoft.Extensions.Options.IOptions{TicketApi.Settings.CustomSettings})
+  id: '#ctor(Microsoft.Extensions.Options.IOptions{TicketApi.Settings.CustomSettings})'
   parent: TicketApi.Controllers.EventDateApiController
   langs:
   - csharp
   - vb
-  name: EventDateApiController(IOptions<DbSettings>)
-  nameWithType: EventDateApiController.EventDateApiController(IOptions<DbSettings>)
-  fullName: TicketApi.Controllers.EventDateApiController.EventDateApiController(Microsoft.Extensions.Options.IOptions<TicketApi.Settings.DbSettings>)
+  name: EventDateApiController(IOptions<CustomSettings>)
+  nameWithType: EventDateApiController.EventDateApiController(IOptions<CustomSettings>)
+  fullName: TicketApi.Controllers.EventDateApiController.EventDateApiController(Microsoft.Extensions.Options.IOptions<TicketApi.Settings.CustomSettings>)
   type: Constructor
   source:
     remote:
       path: src/TicketApi/Controllers/EventdateApi.cs
-      branch: restapi
+      branch: features/ticketshop
       repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
     id: .ctor
     path: src/TicketApi/Controllers/EventdateApi.cs
@@ -246,19 +248,19 @@ items:
   - TicketApi
   namespace: TicketApi.Controllers
   syntax:
-    content: public EventDateApiController(IOptions<DbSettings> db)
+    content: public EventDateApiController(IOptions<CustomSettings> db)
     parameters:
     - id: db
-      type: Microsoft.Extensions.Options.IOptions{TicketApi.Settings.DbSettings}
-    content.vb: Public Sub New(db As IOptions(Of DbSettings))
+      type: Microsoft.Extensions.Options.IOptions{TicketApi.Settings.CustomSettings}
+    content.vb: Public Sub New(db As IOptions(Of CustomSettings))
   overload: TicketApi.Controllers.EventDateApiController.#ctor*
-  nameWithType.vb: EventDateApiController.EventDateApiController(IOptions(Of DbSettings))
+  nameWithType.vb: EventDateApiController.EventDateApiController(IOptions(Of CustomSettings))
   modifiers.csharp:
   - public
   modifiers.vb:
   - Public
-  fullName.vb: TicketApi.Controllers.EventDateApiController.EventDateApiController(Microsoft.Extensions.Options.IOptions(Of TicketApi.Settings.DbSettings))
-  name.vb: EventDateApiController(IOptions(Of DbSettings))
+  fullName.vb: TicketApi.Controllers.EventDateApiController.EventDateApiController(Microsoft.Extensions.Options.IOptions(Of TicketApi.Settings.CustomSettings))
+  name.vb: EventDateApiController(IOptions(Of CustomSettings))
 - uid: TicketApi.Controllers.EventDateApiController.AddEventDate(TicketApi.Db.Models.EventDate)
   commentId: M:TicketApi.Controllers.EventDateApiController.AddEventDate(TicketApi.Db.Models.EventDate)
   id: AddEventDate(TicketApi.Db.Models.EventDate)
@@ -273,7 +275,7 @@ items:
   source:
     remote:
       path: src/TicketApi/Controllers/EventdateApi.cs
-      branch: restapi
+      branch: features/ticketshop
       repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
     id: AddEventDate
     path: src/TicketApi/Controllers/EventdateApi.cs
@@ -372,7 +374,7 @@ items:
   source:
     remote:
       path: src/TicketApi/Controllers/EventdateApi.cs
-      branch: restapi
+      branch: features/ticketshop
       repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
     id: DeleteEventDate
     path: src/TicketApi/Controllers/EventdateApi.cs
@@ -460,23 +462,23 @@ items:
   - Overridable
   fullName.vb: TicketApi.Controllers.EventDateApiController.DeleteEventDate(System.Nullable(Of System.Int32))
   name.vb: DeleteEventDate(Nullable(Of Int32))
-- uid: TicketApi.Controllers.EventDateApiController.FindEventDates(TicketApi.Db.Models.Search)
-  commentId: M:TicketApi.Controllers.EventDateApiController.FindEventDates(TicketApi.Db.Models.Search)
-  id: FindEventDates(TicketApi.Db.Models.Search)
+- uid: TicketApi.Controllers.EventDateApiController.FindFullEventDates(TicketApi.Db.Models.Search)
+  commentId: M:TicketApi.Controllers.EventDateApiController.FindFullEventDates(TicketApi.Db.Models.Search)
+  id: FindFullEventDates(TicketApi.Db.Models.Search)
   parent: TicketApi.Controllers.EventDateApiController
   langs:
   - csharp
   - vb
-  name: FindEventDates(Search)
-  nameWithType: EventDateApiController.FindEventDates(Search)
-  fullName: TicketApi.Controllers.EventDateApiController.FindEventDates(TicketApi.Db.Models.Search)
+  name: FindFullEventDates(Search)
+  nameWithType: EventDateApiController.FindFullEventDates(Search)
+  fullName: TicketApi.Controllers.EventDateApiController.FindFullEventDates(TicketApi.Db.Models.Search)
   type: Method
   source:
     remote:
       path: src/TicketApi/Controllers/EventdateApi.cs
-      branch: restapi
+      branch: features/ticketshop
       repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
-    id: FindEventDates
+    id: FindFullEventDates
     path: src/TicketApi/Controllers/EventdateApi.cs
     startLine: 108
   assemblies:
@@ -487,49 +489,49 @@ items:
   example: []
   syntax:
     content: >-
-      [HttpGet]
+      [HttpPost]
 
-      [Route("/api/eventdate/search/{query}")]
+      [Route("/api/eventdate/search")]
 
       [SwaggerOperation("FindEventDates")]
 
-      [SwaggerResponse(200, typeof (List<EventDate>), "Event date search result loaded")]
+      [SwaggerResponse(200, typeof (List<FullEventDate>), "Event date search result loaded")]
 
-      [SwaggerResponse(404, typeof (List<EventDate>), "No events found")]
+      [SwaggerResponse(404, typeof (List<FullEventDate>), "No events found")]
 
-      public virtual IActionResult FindEventDates([FromRoute] Search query)
+      public virtual IActionResult FindFullEventDates([FromBody] Search query)
     parameters:
     - id: query
       type: TicketApi.Db.Models.Search
       description: query to find events, type Search
       attributes:
-      - type: Microsoft.AspNetCore.Mvc.FromRouteAttribute
-        ctor: Microsoft.AspNetCore.Mvc.FromRouteAttribute.#ctor
+      - type: Microsoft.AspNetCore.Mvc.FromBodyAttribute
+        ctor: Microsoft.AspNetCore.Mvc.FromBodyAttribute.#ctor
         arguments: []
     return:
       type: Microsoft.AspNetCore.Mvc.IActionResult
     content.vb: >-
-      <HttpGet>
+      <HttpPost>
 
-      <Route("/api/eventdate/search/{query}")>
+      <Route("/api/eventdate/search")>
 
       <SwaggerOperation("FindEventDates")>
 
-      <SwaggerResponse(200, GetType(List(Of EventDate)), "Event date search result loaded")>
+      <SwaggerResponse(200, GetType(List(Of FullEventDate)), "Event date search result loaded")>
 
-      <SwaggerResponse(404, GetType(List(Of EventDate)), "No events found")>
+      <SwaggerResponse(404, GetType(List(Of FullEventDate)), "No events found")>
 
-      Public Overridable Function FindEventDates(query As Search) As IActionResult
-  overload: TicketApi.Controllers.EventDateApiController.FindEventDates*
+      Public Overridable Function FindFullEventDates(query As Search) As IActionResult
+  overload: TicketApi.Controllers.EventDateApiController.FindFullEventDates*
   attributes:
-  - type: Microsoft.AspNetCore.Mvc.HttpGetAttribute
-    ctor: Microsoft.AspNetCore.Mvc.HttpGetAttribute.#ctor
+  - type: Microsoft.AspNetCore.Mvc.HttpPostAttribute
+    ctor: Microsoft.AspNetCore.Mvc.HttpPostAttribute.#ctor
     arguments: []
   - type: Microsoft.AspNetCore.Mvc.RouteAttribute
     ctor: Microsoft.AspNetCore.Mvc.RouteAttribute.#ctor(System.String)
     arguments:
     - type: System.String
-      value: /api/eventdate/search/{query}
+      value: /api/eventdate/search
   - type: Swashbuckle.AspNetCore.SwaggerGen.SwaggerOperationAttribute
     ctor: Swashbuckle.AspNetCore.SwaggerGen.SwaggerOperationAttribute.#ctor(System.String)
     arguments:
@@ -541,7 +543,7 @@ items:
     - type: System.Int32
       value: 200
     - type: System.Type
-      value: System.Collections.Generic.List{TicketApi.Db.Models.EventDate}
+      value: System.Collections.Generic.List{TicketApi.Db.Models.FullEventDate}
     - type: System.String
       value: Event date search result loaded
   - type: Swashbuckle.AspNetCore.SwaggerGen.SwaggerResponseAttribute
@@ -550,7 +552,7 @@ items:
     - type: System.Int32
       value: 404
     - type: System.Type
-      value: System.Collections.Generic.List{TicketApi.Db.Models.EventDate}
+      value: System.Collections.Generic.List{TicketApi.Db.Models.FullEventDate}
     - type: System.String
       value: No events found
   modifiers.csharp:
@@ -573,7 +575,7 @@ items:
   source:
     remote:
       path: src/TicketApi/Controllers/EventdateApi.cs
-      branch: restapi
+      branch: features/ticketshop
       repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
     id: GetEventDateByEventId
     path: src/TicketApi/Controllers/EventdateApi.cs
@@ -675,7 +677,7 @@ items:
   source:
     remote:
       path: src/TicketApi/Controllers/EventdateApi.cs
-      branch: restapi
+      branch: features/ticketshop
       repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
     id: GetEventDateById
     path: src/TicketApi/Controllers/EventdateApi.cs
@@ -763,21 +765,21 @@ items:
   - Overridable
   fullName.vb: TicketApi.Controllers.EventDateApiController.GetEventDateById(System.Nullable(Of System.Int32))
   name.vb: GetEventDateById(Nullable(Of Int32))
-- uid: TicketApi.Controllers.EventDateApiController.GetEventDates
-  commentId: M:TicketApi.Controllers.EventDateApiController.GetEventDates
-  id: GetEventDates
+- uid: TicketApi.Controllers.EventDateApiController.GetEventDates(System.Int32,System.Int32)
+  commentId: M:TicketApi.Controllers.EventDateApiController.GetEventDates(System.Int32,System.Int32)
+  id: GetEventDates(System.Int32,System.Int32)
   parent: TicketApi.Controllers.EventDateApiController
   langs:
   - csharp
   - vb
-  name: GetEventDates()
-  nameWithType: EventDateApiController.GetEventDates()
-  fullName: TicketApi.Controllers.EventDateApiController.GetEventDates()
+  name: GetEventDates(Int32, Int32)
+  nameWithType: EventDateApiController.GetEventDates(Int32, Int32)
+  fullName: TicketApi.Controllers.EventDateApiController.GetEventDates(System.Int32, System.Int32)
   type: Method
   source:
     remote:
       path: src/TicketApi/Controllers/EventdateApi.cs
-      branch: restapi
+      branch: features/ticketshop
       repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
     id: GetEventDates
     path: src/TicketApi/Controllers/EventdateApi.cs
@@ -794,13 +796,28 @@ items:
 
       [Route("/api/eventdate")]
 
+      [Route("/api/eventdate/{offset}/{maxLimit}")]
+
       [SwaggerOperation("GetEventDates")]
 
       [SwaggerResponse(200, typeof (List<EventDate>), "Events loaded")]
 
       [SwaggerResponse(400, typeof (List<EventDate>), "Bad request")]
 
-      public virtual IActionResult GetEventDates()
+      public virtual IActionResult GetEventDates([FromRoute] int offset = 0, [FromRoute] int maxLimit = 20)
+    parameters:
+    - id: offset
+      type: System.Int32
+      attributes:
+      - type: Microsoft.AspNetCore.Mvc.FromRouteAttribute
+        ctor: Microsoft.AspNetCore.Mvc.FromRouteAttribute.#ctor
+        arguments: []
+    - id: maxLimit
+      type: System.Int32
+      attributes:
+      - type: Microsoft.AspNetCore.Mvc.FromRouteAttribute
+        ctor: Microsoft.AspNetCore.Mvc.FromRouteAttribute.#ctor
+        arguments: []
     return:
       type: Microsoft.AspNetCore.Mvc.IActionResult
     content.vb: >-
@@ -808,13 +825,15 @@ items:
 
       <Route("/api/eventdate")>
 
+      <Route("/api/eventdate/{offset}/{maxLimit}")>
+
       <SwaggerOperation("GetEventDates")>
 
       <SwaggerResponse(200, GetType(List(Of EventDate)), "Events loaded")>
 
       <SwaggerResponse(400, GetType(List(Of EventDate)), "Bad request")>
 
-      Public Overridable Function GetEventDates As IActionResult
+      Public Overridable Function GetEventDates(offset As Integer = 0, maxLimit As Integer = 20) As IActionResult
   overload: TicketApi.Controllers.EventDateApiController.GetEventDates*
   attributes:
   - type: Microsoft.AspNetCore.Mvc.HttpGetAttribute
@@ -825,6 +844,11 @@ items:
     arguments:
     - type: System.String
       value: /api/eventdate
+  - type: Microsoft.AspNetCore.Mvc.RouteAttribute
+    ctor: Microsoft.AspNetCore.Mvc.RouteAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: /api/eventdate/{offset}/{maxLimit}
   - type: Swashbuckle.AspNetCore.SwaggerGen.SwaggerOperationAttribute
     ctor: Swashbuckle.AspNetCore.SwaggerGen.SwaggerOperationAttribute.#ctor(System.String)
     arguments:
@@ -854,6 +878,235 @@ items:
   modifiers.vb:
   - Public
   - Overridable
+- uid: TicketApi.Controllers.EventDateApiController.GetFullEventDates(System.Int32,System.Int32)
+  commentId: M:TicketApi.Controllers.EventDateApiController.GetFullEventDates(System.Int32,System.Int32)
+  id: GetFullEventDates(System.Int32,System.Int32)
+  parent: TicketApi.Controllers.EventDateApiController
+  langs:
+  - csharp
+  - vb
+  name: GetFullEventDates(Int32, Int32)
+  nameWithType: EventDateApiController.GetFullEventDates(Int32, Int32)
+  fullName: TicketApi.Controllers.EventDateApiController.GetFullEventDates(System.Int32, System.Int32)
+  type: Method
+  source:
+    remote:
+      path: src/TicketApi/Controllers/EventdateApi.cs
+      branch: features/ticketshop
+      repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
+    id: GetFullEventDates
+    path: src/TicketApi/Controllers/EventdateApi.cs
+    startLine: 199
+  assemblies:
+  - TicketApi
+  namespace: TicketApi.Controllers
+  summary: "\nGet full event dates in system\n"
+  remarks: Returns all FullEventDates
+  example: []
+  syntax:
+    content: >-
+      [HttpGet]
+
+      [Route("/api/eventdate/full")]
+
+      [Route("/api/eventdate/full/{offset}/{maxLimit}")]
+
+      [SwaggerOperation("GetFullEventDates")]
+
+      [SwaggerResponse(200, typeof (List<FullEventDate>), "Events loaded")]
+
+      [SwaggerResponse(404, typeof (List<FullEventDate>), "Not found")]
+
+      public virtual IActionResult GetFullEventDates([FromRoute] int offset = 0, [FromRoute] int maxLimit = 20)
+    parameters:
+    - id: offset
+      type: System.Int32
+      attributes:
+      - type: Microsoft.AspNetCore.Mvc.FromRouteAttribute
+        ctor: Microsoft.AspNetCore.Mvc.FromRouteAttribute.#ctor
+        arguments: []
+    - id: maxLimit
+      type: System.Int32
+      attributes:
+      - type: Microsoft.AspNetCore.Mvc.FromRouteAttribute
+        ctor: Microsoft.AspNetCore.Mvc.FromRouteAttribute.#ctor
+        arguments: []
+    return:
+      type: Microsoft.AspNetCore.Mvc.IActionResult
+    content.vb: >-
+      <HttpGet>
+
+      <Route("/api/eventdate/full")>
+
+      <Route("/api/eventdate/full/{offset}/{maxLimit}")>
+
+      <SwaggerOperation("GetFullEventDates")>
+
+      <SwaggerResponse(200, GetType(List(Of FullEventDate)), "Events loaded")>
+
+      <SwaggerResponse(404, GetType(List(Of FullEventDate)), "Not found")>
+
+      Public Overridable Function GetFullEventDates(offset As Integer = 0, maxLimit As Integer = 20) As IActionResult
+  overload: TicketApi.Controllers.EventDateApiController.GetFullEventDates*
+  attributes:
+  - type: Microsoft.AspNetCore.Mvc.HttpGetAttribute
+    ctor: Microsoft.AspNetCore.Mvc.HttpGetAttribute.#ctor
+    arguments: []
+  - type: Microsoft.AspNetCore.Mvc.RouteAttribute
+    ctor: Microsoft.AspNetCore.Mvc.RouteAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: /api/eventdate/full
+  - type: Microsoft.AspNetCore.Mvc.RouteAttribute
+    ctor: Microsoft.AspNetCore.Mvc.RouteAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: /api/eventdate/full/{offset}/{maxLimit}
+  - type: Swashbuckle.AspNetCore.SwaggerGen.SwaggerOperationAttribute
+    ctor: Swashbuckle.AspNetCore.SwaggerGen.SwaggerOperationAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: GetFullEventDates
+  - type: Swashbuckle.AspNetCore.SwaggerGen.SwaggerResponseAttribute
+    ctor: Swashbuckle.AspNetCore.SwaggerGen.SwaggerResponseAttribute.#ctor(System.Int32,System.Type,System.String)
+    arguments:
+    - type: System.Int32
+      value: 200
+    - type: System.Type
+      value: System.Collections.Generic.List{TicketApi.Db.Models.FullEventDate}
+    - type: System.String
+      value: Events loaded
+  - type: Swashbuckle.AspNetCore.SwaggerGen.SwaggerResponseAttribute
+    ctor: Swashbuckle.AspNetCore.SwaggerGen.SwaggerResponseAttribute.#ctor(System.Int32,System.Type,System.String)
+    arguments:
+    - type: System.Int32
+      value: 404
+    - type: System.Type
+      value: System.Collections.Generic.List{TicketApi.Db.Models.FullEventDate}
+    - type: System.String
+      value: Not found
+  modifiers.csharp:
+  - public
+  - virtual
+  modifiers.vb:
+  - Public
+  - Overridable
+- uid: TicketApi.Controllers.EventDateApiController.GetFullEventDatesByEventId(System.Int32,System.Int32,System.Int32)
+  commentId: M:TicketApi.Controllers.EventDateApiController.GetFullEventDatesByEventId(System.Int32,System.Int32,System.Int32)
+  id: GetFullEventDatesByEventId(System.Int32,System.Int32,System.Int32)
+  parent: TicketApi.Controllers.EventDateApiController
+  langs:
+  - csharp
+  - vb
+  name: GetFullEventDatesByEventId(Int32, Int32, Int32)
+  nameWithType: EventDateApiController.GetFullEventDatesByEventId(Int32, Int32, Int32)
+  fullName: TicketApi.Controllers.EventDateApiController.GetFullEventDatesByEventId(System.Int32, System.Int32, System.Int32)
+  type: Method
+  source:
+    remote:
+      path: src/TicketApi/Controllers/EventdateApi.cs
+      branch: features/ticketshop
+      repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
+    id: GetFullEventDatesByEventId
+    path: src/TicketApi/Controllers/EventdateApi.cs
+    startLine: 217
+  assemblies:
+  - TicketApi
+  namespace: TicketApi.Controllers
+  syntax:
+    content: >-
+      [HttpGet]
+
+      [Route("/api/eventdate/full/eventId/{eventId}")]
+
+      [Route("/api/eventdate/full/eventid/{eventId}/{offset}/{maxLimit}")]
+
+      [SwaggerOperation("GetFullEventDatesByEventId")]
+
+      [SwaggerResponse(200, typeof (List<FullEventDate>), "Events loaded")]
+
+      [SwaggerResponse(404, typeof (List<FullEventDate>), "Not found")]
+
+      public virtual IActionResult GetFullEventDatesByEventId([FromRoute] int eventId, [FromRoute] int offset = 0, [FromRoute] int maxLimit = 20)
+    parameters:
+    - id: eventId
+      type: System.Int32
+      attributes:
+      - type: Microsoft.AspNetCore.Mvc.FromRouteAttribute
+        ctor: Microsoft.AspNetCore.Mvc.FromRouteAttribute.#ctor
+        arguments: []
+    - id: offset
+      type: System.Int32
+      attributes:
+      - type: Microsoft.AspNetCore.Mvc.FromRouteAttribute
+        ctor: Microsoft.AspNetCore.Mvc.FromRouteAttribute.#ctor
+        arguments: []
+    - id: maxLimit
+      type: System.Int32
+      attributes:
+      - type: Microsoft.AspNetCore.Mvc.FromRouteAttribute
+        ctor: Microsoft.AspNetCore.Mvc.FromRouteAttribute.#ctor
+        arguments: []
+    return:
+      type: Microsoft.AspNetCore.Mvc.IActionResult
+    content.vb: >-
+      <HttpGet>
+
+      <Route("/api/eventdate/full/eventId/{eventId}")>
+
+      <Route("/api/eventdate/full/eventid/{eventId}/{offset}/{maxLimit}")>
+
+      <SwaggerOperation("GetFullEventDatesByEventId")>
+
+      <SwaggerResponse(200, GetType(List(Of FullEventDate)), "Events loaded")>
+
+      <SwaggerResponse(404, GetType(List(Of FullEventDate)), "Not found")>
+
+      Public Overridable Function GetFullEventDatesByEventId(eventId As Integer, offset As Integer = 0, maxLimit As Integer = 20) As IActionResult
+  overload: TicketApi.Controllers.EventDateApiController.GetFullEventDatesByEventId*
+  attributes:
+  - type: Microsoft.AspNetCore.Mvc.HttpGetAttribute
+    ctor: Microsoft.AspNetCore.Mvc.HttpGetAttribute.#ctor
+    arguments: []
+  - type: Microsoft.AspNetCore.Mvc.RouteAttribute
+    ctor: Microsoft.AspNetCore.Mvc.RouteAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: /api/eventdate/full/eventId/{eventId}
+  - type: Microsoft.AspNetCore.Mvc.RouteAttribute
+    ctor: Microsoft.AspNetCore.Mvc.RouteAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: /api/eventdate/full/eventid/{eventId}/{offset}/{maxLimit}
+  - type: Swashbuckle.AspNetCore.SwaggerGen.SwaggerOperationAttribute
+    ctor: Swashbuckle.AspNetCore.SwaggerGen.SwaggerOperationAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: GetFullEventDatesByEventId
+  - type: Swashbuckle.AspNetCore.SwaggerGen.SwaggerResponseAttribute
+    ctor: Swashbuckle.AspNetCore.SwaggerGen.SwaggerResponseAttribute.#ctor(System.Int32,System.Type,System.String)
+    arguments:
+    - type: System.Int32
+      value: 200
+    - type: System.Type
+      value: System.Collections.Generic.List{TicketApi.Db.Models.FullEventDate}
+    - type: System.String
+      value: Events loaded
+  - type: Swashbuckle.AspNetCore.SwaggerGen.SwaggerResponseAttribute
+    ctor: Swashbuckle.AspNetCore.SwaggerGen.SwaggerResponseAttribute.#ctor(System.Int32,System.Type,System.String)
+    arguments:
+    - type: System.Int32
+      value: 404
+    - type: System.Type
+      value: System.Collections.Generic.List{TicketApi.Db.Models.FullEventDate}
+    - type: System.String
+      value: Not found
+  modifiers.csharp:
+  - public
+  - virtual
+  modifiers.vb:
+  - Public
+  - Overridable
 - uid: TicketApi.Controllers.EventDateApiController.GetFullEventDateById(System.Nullable{System.Int32})
   commentId: M:TicketApi.Controllers.EventDateApiController.GetFullEventDateById(System.Nullable{System.Int32})
   id: GetFullEventDateById(System.Nullable{System.Int32})
@@ -868,11 +1121,11 @@ items:
   source:
     remote:
       path: src/TicketApi/Controllers/EventdateApi.cs
-      branch: restapi
+      branch: features/ticketshop
       repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
     id: GetFullEventDateById
     path: src/TicketApi/Controllers/EventdateApi.cs
-    startLine: 199
+    startLine: 241
   assemblies:
   - TicketApi
   namespace: TicketApi.Controllers
@@ -970,11 +1223,11 @@ items:
   source:
     remote:
       path: src/TicketApi/Controllers/EventdateApi.cs
-      branch: restapi
+      branch: features/ticketshop
       repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
     id: UpdateEventDate
     path: src/TicketApi/Controllers/EventdateApi.cs
-    startLine: 222
+    startLine: 264
   assemblies:
   - TicketApi
   namespace: TicketApi.Controllers
@@ -1069,11 +1322,11 @@ items:
   source:
     remote:
       path: src/TicketApi/Controllers/EventdateApi.cs
-      branch: restapi
+      branch: features/ticketshop
       repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
     id: GetSoldTicketCount
     path: src/TicketApi/Controllers/EventdateApi.cs
-    startLine: 245
+    startLine: 287
   assemblies:
   - TicketApi
   namespace: TicketApi.Controllers
@@ -11240,16 +11493,16 @@ references:
   name: EventDateApiController
   nameWithType: EventDateApiController.EventDateApiController
   fullName: TicketApi.Controllers.EventDateApiController.EventDateApiController
-- uid: Microsoft.Extensions.Options.IOptions{TicketApi.Settings.DbSettings}
-  commentId: T:Microsoft.Extensions.Options.IOptions{TicketApi.Settings.DbSettings}
+- uid: Microsoft.Extensions.Options.IOptions{TicketApi.Settings.CustomSettings}
+  commentId: T:Microsoft.Extensions.Options.IOptions{TicketApi.Settings.CustomSettings}
   parent: Microsoft.Extensions.Options
   definition: Microsoft.Extensions.Options.IOptions`1
-  name: IOptions<DbSettings>
-  nameWithType: IOptions<DbSettings>
-  fullName: Microsoft.Extensions.Options.IOptions<TicketApi.Settings.DbSettings>
-  nameWithType.vb: IOptions(Of DbSettings)
-  fullName.vb: Microsoft.Extensions.Options.IOptions(Of TicketApi.Settings.DbSettings)
-  name.vb: IOptions(Of DbSettings)
+  name: IOptions<CustomSettings>
+  nameWithType: IOptions<CustomSettings>
+  fullName: Microsoft.Extensions.Options.IOptions<TicketApi.Settings.CustomSettings>
+  nameWithType.vb: IOptions(Of CustomSettings)
+  fullName.vb: Microsoft.Extensions.Options.IOptions(Of TicketApi.Settings.CustomSettings)
+  name.vb: IOptions(Of CustomSettings)
   spec.csharp:
   - uid: Microsoft.Extensions.Options.IOptions`1
     name: IOptions
@@ -11259,10 +11512,10 @@ references:
   - name: <
     nameWithType: <
     fullName: <
-  - uid: TicketApi.Settings.DbSettings
-    name: DbSettings
-    nameWithType: DbSettings
-    fullName: TicketApi.Settings.DbSettings
+  - uid: TicketApi.Settings.CustomSettings
+    name: CustomSettings
+    nameWithType: CustomSettings
+    fullName: TicketApi.Settings.CustomSettings
   - name: '>'
     nameWithType: '>'
     fullName: '>'
@@ -11275,10 +11528,10 @@ references:
   - name: '(Of '
     nameWithType: '(Of '
     fullName: '(Of '
-  - uid: TicketApi.Settings.DbSettings
-    name: DbSettings
-    nameWithType: DbSettings
-    fullName: TicketApi.Settings.DbSettings
+  - uid: TicketApi.Settings.CustomSettings
+    name: CustomSettings
+    nameWithType: CustomSettings
+    fullName: TicketApi.Settings.CustomSettings
   - name: )
     nameWithType: )
     fullName: )
@@ -11442,12 +11695,12 @@ references:
   - name: )
     nameWithType: )
     fullName: )
-- uid: TicketApi.Controllers.EventDateApiController.FindEventDates*
-  commentId: Overload:TicketApi.Controllers.EventDateApiController.FindEventDates
+- uid: TicketApi.Controllers.EventDateApiController.FindFullEventDates*
+  commentId: Overload:TicketApi.Controllers.EventDateApiController.FindFullEventDates
   isExternal: false
-  name: FindEventDates
-  nameWithType: EventDateApiController.FindEventDates
-  fullName: TicketApi.Controllers.EventDateApiController.FindEventDates
+  name: FindFullEventDates
+  nameWithType: EventDateApiController.FindFullEventDates
+  fullName: TicketApi.Controllers.EventDateApiController.FindFullEventDates
 - uid: TicketApi.Db.Models.Search
   commentId: T:TicketApi.Db.Models.Search
   parent: TicketApi.Db.Models
@@ -11473,6 +11726,25 @@ references:
   name: GetEventDates
   nameWithType: EventDateApiController.GetEventDates
   fullName: TicketApi.Controllers.EventDateApiController.GetEventDates
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  name: Int32
+  nameWithType: Int32
+  fullName: System.Int32
+- uid: TicketApi.Controllers.EventDateApiController.GetFullEventDates*
+  commentId: Overload:TicketApi.Controllers.EventDateApiController.GetFullEventDates
+  isExternal: false
+  name: GetFullEventDates
+  nameWithType: EventDateApiController.GetFullEventDates
+  fullName: TicketApi.Controllers.EventDateApiController.GetFullEventDates
+- uid: TicketApi.Controllers.EventDateApiController.GetFullEventDatesByEventId*
+  commentId: Overload:TicketApi.Controllers.EventDateApiController.GetFullEventDatesByEventId
+  isExternal: false
+  name: GetFullEventDatesByEventId
+  nameWithType: EventDateApiController.GetFullEventDatesByEventId
+  fullName: TicketApi.Controllers.EventDateApiController.GetFullEventDatesByEventId
 - uid: TicketApi.Controllers.EventDateApiController.GetFullEventDateById*
   commentId: Overload:TicketApi.Controllers.EventDateApiController.GetFullEventDateById
   isExternal: false

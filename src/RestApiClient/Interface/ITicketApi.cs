@@ -11,6 +11,13 @@ namespace TicketShop.RestApiClient.Interface
         /// <param name="ticket">Ticket object</param>
         /// <return>An object representation of the created ticket</returns>
         Ticket AddTicket(Ticket ticket);
+        /// <summary>
+        /// Add new ticket and connect to transaction
+        /// </summary>
+        /// <param name="ticket">ticket object</param>
+        /// <param name="transactionId">transaction ID</param>
+        /// <returns>Ticket object</returns>
+        Ticket AddTicketOrder(Ticket ticket);
 
         /// <summary>
         /// Update a ticket

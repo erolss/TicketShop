@@ -1,0 +1,1117 @@
+### YamlMime:ManagedReference
+items:
+- uid: TicketShop.Models.ViewModels.OrderCartViewModel
+  commentId: T:TicketShop.Models.ViewModels.OrderCartViewModel
+  id: OrderCartViewModel
+  parent: TicketShop.Models.ViewModels
+  children:
+  - TicketShop.Models.ViewModels.OrderCartViewModel.BuyerAddress
+  - TicketShop.Models.ViewModels.OrderCartViewModel.BuyerCity
+  - TicketShop.Models.ViewModels.OrderCartViewModel.BuyerEmail
+  - TicketShop.Models.ViewModels.OrderCartViewModel.BuyerFirstName
+  - TicketShop.Models.ViewModels.OrderCartViewModel.BuyerLastName
+  - TicketShop.Models.ViewModels.OrderCartViewModel.BuyerUserId
+  - TicketShop.Models.ViewModels.OrderCartViewModel.Currency
+  - TicketShop.Models.ViewModels.OrderCartViewModel.Events
+  - TicketShop.Models.ViewModels.OrderCartViewModel.PaymentReference
+  - TicketShop.Models.ViewModels.OrderCartViewModel.PaymentStatus
+  - TicketShop.Models.ViewModels.OrderCartViewModel.Total
+  - TicketShop.Models.ViewModels.OrderCartViewModel.TotalAmount
+  - TicketShop.Models.ViewModels.OrderCartViewModel.TransactionID
+  langs:
+  - csharp
+  - vb
+  name: OrderCartViewModel
+  nameWithType: OrderCartViewModel
+  fullName: TicketShop.Models.ViewModels.OrderCartViewModel
+  type: Class
+  source:
+    remote:
+      path: src/TicketShop/Models/ViewModels/AllShopViewModels.cs
+      branch: features/ticketshop
+      repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
+    id: OrderCartViewModel
+    path: src/TicketShop/Models/ViewModels/AllShopViewModels.cs
+    startLine: 47
+  assemblies:
+  - TicketShop
+  namespace: TicketShop.Models.ViewModels
+  syntax:
+    content: public class OrderCartViewModel
+    content.vb: Public Class OrderCartViewModel
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: TicketShop.Models.ViewModels.OrderCartViewModel.Events
+  commentId: P:TicketShop.Models.ViewModels.OrderCartViewModel.Events
+  id: Events
+  parent: TicketShop.Models.ViewModels.OrderCartViewModel
+  langs:
+  - csharp
+  - vb
+  name: Events
+  nameWithType: OrderCartViewModel.Events
+  fullName: TicketShop.Models.ViewModels.OrderCartViewModel.Events
+  type: Property
+  source:
+    remote:
+      path: src/TicketShop/Models/ViewModels/AllShopViewModels.cs
+      branch: features/ticketshop
+      repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
+    id: Events
+    path: src/TicketShop/Models/ViewModels/AllShopViewModels.cs
+    startLine: 49
+  assemblies:
+  - TicketShop
+  namespace: TicketShop.Models.ViewModels
+  syntax:
+    content: public List<FullEventDate> Events { get; set; }
+    parameters: []
+    return:
+      type: System.Collections.Generic.List{TicketShop.RestApiClient.Model.FullEventDate}
+    content.vb: Public Property Events As List(Of FullEventDate)
+  overload: TicketShop.Models.ViewModels.OrderCartViewModel.Events*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: TicketShop.Models.ViewModels.OrderCartViewModel.Total
+  commentId: P:TicketShop.Models.ViewModels.OrderCartViewModel.Total
+  id: Total
+  parent: TicketShop.Models.ViewModels.OrderCartViewModel
+  langs:
+  - csharp
+  - vb
+  name: Total
+  nameWithType: OrderCartViewModel.Total
+  fullName: TicketShop.Models.ViewModels.OrderCartViewModel.Total
+  type: Property
+  source:
+    remote:
+      path: src/TicketShop/Models/ViewModels/AllShopViewModels.cs
+      branch: features/ticketshop
+      repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
+    id: Total
+    path: src/TicketShop/Models/ViewModels/AllShopViewModels.cs
+    startLine: 51
+  assemblies:
+  - TicketShop
+  namespace: TicketShop.Models.ViewModels
+  syntax:
+    content: public double Total { get; set; }
+    parameters: []
+    return:
+      type: System.Double
+    content.vb: Public Property Total As Double
+  overload: TicketShop.Models.ViewModels.OrderCartViewModel.Total*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: TicketShop.Models.ViewModels.OrderCartViewModel.Currency
+  commentId: P:TicketShop.Models.ViewModels.OrderCartViewModel.Currency
+  id: Currency
+  parent: TicketShop.Models.ViewModels.OrderCartViewModel
+  langs:
+  - csharp
+  - vb
+  name: Currency
+  nameWithType: OrderCartViewModel.Currency
+  fullName: TicketShop.Models.ViewModels.OrderCartViewModel.Currency
+  type: Property
+  source:
+    remote:
+      path: src/TicketShop/Models/ViewModels/AllShopViewModels.cs
+      branch: features/ticketshop
+      repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
+    id: Currency
+    path: src/TicketShop/Models/ViewModels/AllShopViewModels.cs
+    startLine: 52
+  assemblies:
+  - TicketShop
+  namespace: TicketShop.Models.ViewModels
+  syntax:
+    content: public string Currency { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property Currency As String
+  overload: TicketShop.Models.ViewModels.OrderCartViewModel.Currency*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: TicketShop.Models.ViewModels.OrderCartViewModel.TransactionID
+  commentId: P:TicketShop.Models.ViewModels.OrderCartViewModel.TransactionID
+  id: TransactionID
+  parent: TicketShop.Models.ViewModels.OrderCartViewModel
+  langs:
+  - csharp
+  - vb
+  name: TransactionID
+  nameWithType: OrderCartViewModel.TransactionID
+  fullName: TicketShop.Models.ViewModels.OrderCartViewModel.TransactionID
+  type: Property
+  source:
+    remote:
+      path: src/TicketShop/Models/ViewModels/AllShopViewModels.cs
+      branch: features/ticketshop
+      repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
+    id: TransactionID
+    path: src/TicketShop/Models/ViewModels/AllShopViewModels.cs
+    startLine: 53
+  assemblies:
+  - TicketShop
+  namespace: TicketShop.Models.ViewModels
+  syntax:
+    content: public int ? TransactionID { get; set; }
+    parameters: []
+    return:
+      type: System.Nullable{System.Int32}
+    content.vb: Public Property TransactionID As Integer?
+  overload: TicketShop.Models.ViewModels.OrderCartViewModel.TransactionID*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: TicketShop.Models.ViewModels.OrderCartViewModel.BuyerLastName
+  commentId: P:TicketShop.Models.ViewModels.OrderCartViewModel.BuyerLastName
+  id: BuyerLastName
+  parent: TicketShop.Models.ViewModels.OrderCartViewModel
+  langs:
+  - csharp
+  - vb
+  name: BuyerLastName
+  nameWithType: OrderCartViewModel.BuyerLastName
+  fullName: TicketShop.Models.ViewModels.OrderCartViewModel.BuyerLastName
+  type: Property
+  source:
+    remote:
+      path: src/TicketShop/Models/ViewModels/AllShopViewModels.cs
+      branch: features/ticketshop
+      repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
+    id: BuyerLastName
+    path: src/TicketShop/Models/ViewModels/AllShopViewModels.cs
+    startLine: 55
+  assemblies:
+  - TicketShop
+  namespace: TicketShop.Models.ViewModels
+  syntax:
+    content: public string BuyerLastName { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property BuyerLastName As String
+  overload: TicketShop.Models.ViewModels.OrderCartViewModel.BuyerLastName*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: TicketShop.Models.ViewModels.OrderCartViewModel.BuyerFirstName
+  commentId: P:TicketShop.Models.ViewModels.OrderCartViewModel.BuyerFirstName
+  id: BuyerFirstName
+  parent: TicketShop.Models.ViewModels.OrderCartViewModel
+  langs:
+  - csharp
+  - vb
+  name: BuyerFirstName
+  nameWithType: OrderCartViewModel.BuyerFirstName
+  fullName: TicketShop.Models.ViewModels.OrderCartViewModel.BuyerFirstName
+  type: Property
+  source:
+    remote:
+      path: src/TicketShop/Models/ViewModels/AllShopViewModels.cs
+      branch: features/ticketshop
+      repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
+    id: BuyerFirstName
+    path: src/TicketShop/Models/ViewModels/AllShopViewModels.cs
+    startLine: 57
+  assemblies:
+  - TicketShop
+  namespace: TicketShop.Models.ViewModels
+  syntax:
+    content: public string BuyerFirstName { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property BuyerFirstName As String
+  overload: TicketShop.Models.ViewModels.OrderCartViewModel.BuyerFirstName*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: TicketShop.Models.ViewModels.OrderCartViewModel.BuyerAddress
+  commentId: P:TicketShop.Models.ViewModels.OrderCartViewModel.BuyerAddress
+  id: BuyerAddress
+  parent: TicketShop.Models.ViewModels.OrderCartViewModel
+  langs:
+  - csharp
+  - vb
+  name: BuyerAddress
+  nameWithType: OrderCartViewModel.BuyerAddress
+  fullName: TicketShop.Models.ViewModels.OrderCartViewModel.BuyerAddress
+  type: Property
+  source:
+    remote:
+      path: src/TicketShop/Models/ViewModels/AllShopViewModels.cs
+      branch: features/ticketshop
+      repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
+    id: BuyerAddress
+    path: src/TicketShop/Models/ViewModels/AllShopViewModels.cs
+    startLine: 59
+  assemblies:
+  - TicketShop
+  namespace: TicketShop.Models.ViewModels
+  syntax:
+    content: public string BuyerAddress { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property BuyerAddress As String
+  overload: TicketShop.Models.ViewModels.OrderCartViewModel.BuyerAddress*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: TicketShop.Models.ViewModels.OrderCartViewModel.BuyerCity
+  commentId: P:TicketShop.Models.ViewModels.OrderCartViewModel.BuyerCity
+  id: BuyerCity
+  parent: TicketShop.Models.ViewModels.OrderCartViewModel
+  langs:
+  - csharp
+  - vb
+  name: BuyerCity
+  nameWithType: OrderCartViewModel.BuyerCity
+  fullName: TicketShop.Models.ViewModels.OrderCartViewModel.BuyerCity
+  type: Property
+  source:
+    remote:
+      path: src/TicketShop/Models/ViewModels/AllShopViewModels.cs
+      branch: features/ticketshop
+      repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
+    id: BuyerCity
+    path: src/TicketShop/Models/ViewModels/AllShopViewModels.cs
+    startLine: 61
+  assemblies:
+  - TicketShop
+  namespace: TicketShop.Models.ViewModels
+  syntax:
+    content: public string BuyerCity { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property BuyerCity As String
+  overload: TicketShop.Models.ViewModels.OrderCartViewModel.BuyerCity*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: TicketShop.Models.ViewModels.OrderCartViewModel.PaymentStatus
+  commentId: P:TicketShop.Models.ViewModels.OrderCartViewModel.PaymentStatus
+  id: PaymentStatus
+  parent: TicketShop.Models.ViewModels.OrderCartViewModel
+  langs:
+  - csharp
+  - vb
+  name: PaymentStatus
+  nameWithType: OrderCartViewModel.PaymentStatus
+  fullName: TicketShop.Models.ViewModels.OrderCartViewModel.PaymentStatus
+  type: Property
+  source:
+    remote:
+      path: src/TicketShop/Models/ViewModels/AllShopViewModels.cs
+      branch: features/ticketshop
+      repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
+    id: PaymentStatus
+    path: src/TicketShop/Models/ViewModels/AllShopViewModels.cs
+    startLine: 63
+  assemblies:
+  - TicketShop
+  namespace: TicketShop.Models.ViewModels
+  syntax:
+    content: public string PaymentStatus { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property PaymentStatus As String
+  overload: TicketShop.Models.ViewModels.OrderCartViewModel.PaymentStatus*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: TicketShop.Models.ViewModels.OrderCartViewModel.PaymentReference
+  commentId: P:TicketShop.Models.ViewModels.OrderCartViewModel.PaymentReference
+  id: PaymentReference
+  parent: TicketShop.Models.ViewModels.OrderCartViewModel
+  langs:
+  - csharp
+  - vb
+  name: PaymentReference
+  nameWithType: OrderCartViewModel.PaymentReference
+  fullName: TicketShop.Models.ViewModels.OrderCartViewModel.PaymentReference
+  type: Property
+  source:
+    remote:
+      path: src/TicketShop/Models/ViewModels/AllShopViewModels.cs
+      branch: features/ticketshop
+      repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
+    id: PaymentReference
+    path: src/TicketShop/Models/ViewModels/AllShopViewModels.cs
+    startLine: 65
+  assemblies:
+  - TicketShop
+  namespace: TicketShop.Models.ViewModels
+  syntax:
+    content: public string PaymentReference { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property PaymentReference As String
+  overload: TicketShop.Models.ViewModels.OrderCartViewModel.PaymentReference*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: TicketShop.Models.ViewModels.OrderCartViewModel.BuyerEmail
+  commentId: P:TicketShop.Models.ViewModels.OrderCartViewModel.BuyerEmail
+  id: BuyerEmail
+  parent: TicketShop.Models.ViewModels.OrderCartViewModel
+  langs:
+  - csharp
+  - vb
+  name: BuyerEmail
+  nameWithType: OrderCartViewModel.BuyerEmail
+  fullName: TicketShop.Models.ViewModels.OrderCartViewModel.BuyerEmail
+  type: Property
+  source:
+    remote:
+      path: src/TicketShop/Models/ViewModels/AllShopViewModels.cs
+      branch: features/ticketshop
+      repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
+    id: BuyerEmail
+    path: src/TicketShop/Models/ViewModels/AllShopViewModels.cs
+    startLine: 67
+  assemblies:
+  - TicketShop
+  namespace: TicketShop.Models.ViewModels
+  syntax:
+    content: public string BuyerEmail { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property BuyerEmail As String
+  overload: TicketShop.Models.ViewModels.OrderCartViewModel.BuyerEmail*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: TicketShop.Models.ViewModels.OrderCartViewModel.BuyerUserId
+  commentId: P:TicketShop.Models.ViewModels.OrderCartViewModel.BuyerUserId
+  id: BuyerUserId
+  parent: TicketShop.Models.ViewModels.OrderCartViewModel
+  langs:
+  - csharp
+  - vb
+  name: BuyerUserId
+  nameWithType: OrderCartViewModel.BuyerUserId
+  fullName: TicketShop.Models.ViewModels.OrderCartViewModel.BuyerUserId
+  type: Property
+  source:
+    remote:
+      path: src/TicketShop/Models/ViewModels/AllShopViewModels.cs
+      branch: features/ticketshop
+      repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
+    id: BuyerUserId
+    path: src/TicketShop/Models/ViewModels/AllShopViewModels.cs
+    startLine: 69
+  assemblies:
+  - TicketShop
+  namespace: TicketShop.Models.ViewModels
+  syntax:
+    content: public string BuyerUserId { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property BuyerUserId As String
+  overload: TicketShop.Models.ViewModels.OrderCartViewModel.BuyerUserId*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: TicketShop.Models.ViewModels.OrderCartViewModel.TotalAmount
+  commentId: P:TicketShop.Models.ViewModels.OrderCartViewModel.TotalAmount
+  id: TotalAmount
+  parent: TicketShop.Models.ViewModels.OrderCartViewModel
+  langs:
+  - csharp
+  - vb
+  name: TotalAmount
+  nameWithType: OrderCartViewModel.TotalAmount
+  fullName: TicketShop.Models.ViewModels.OrderCartViewModel.TotalAmount
+  type: Property
+  source:
+    remote:
+      path: src/TicketShop/Models/ViewModels/AllShopViewModels.cs
+      branch: features/ticketshop
+      repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
+    id: TotalAmount
+    path: src/TicketShop/Models/ViewModels/AllShopViewModels.cs
+    startLine: 71
+  assemblies:
+  - TicketShop
+  namespace: TicketShop.Models.ViewModels
+  syntax:
+    content: public double ? TotalAmount { get; set; }
+    parameters: []
+    return:
+      type: System.Nullable{System.Double}
+    content.vb: Public Property TotalAmount As Double?
+  overload: TicketShop.Models.ViewModels.OrderCartViewModel.TotalAmount*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+references:
+- uid: TicketShop.Models.ViewModels
+  commentId: N:TicketShop.Models.ViewModels
+  isExternal: false
+  name: TicketShop.Models.ViewModels
+  nameWithType: TicketShop.Models.ViewModels
+  fullName: TicketShop.Models.ViewModels
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: false
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: TicketShop.Models.ViewModels.OrderCartViewModel.Events*
+  commentId: Overload:TicketShop.Models.ViewModels.OrderCartViewModel.Events
+  isExternal: false
+  name: Events
+  nameWithType: OrderCartViewModel.Events
+  fullName: TicketShop.Models.ViewModels.OrderCartViewModel.Events
+- uid: System.Collections.Generic.List{TicketShop.RestApiClient.Model.FullEventDate}
+  commentId: T:System.Collections.Generic.List{TicketShop.RestApiClient.Model.FullEventDate}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.List`1
+  name: List<FullEventDate>
+  nameWithType: List<FullEventDate>
+  fullName: System.Collections.Generic.List<TicketShop.RestApiClient.Model.FullEventDate>
+  nameWithType.vb: List(Of FullEventDate)
+  fullName.vb: System.Collections.Generic.List(Of TicketShop.RestApiClient.Model.FullEventDate)
+  name.vb: List(Of FullEventDate)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    nameWithType: List
+    fullName: System.Collections.Generic.List
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: TicketShop.RestApiClient.Model.FullEventDate
+    name: FullEventDate
+    nameWithType: FullEventDate
+    fullName: TicketShop.RestApiClient.Model.FullEventDate
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    nameWithType: List
+    fullName: System.Collections.Generic.List
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: TicketShop.RestApiClient.Model.FullEventDate
+    name: FullEventDate
+    nameWithType: FullEventDate
+    fullName: TicketShop.RestApiClient.Model.FullEventDate
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic.List`1
+  commentId: T:System.Collections.Generic.List`1
+  isExternal: true
+  name: List<T>
+  nameWithType: List<T>
+  fullName: System.Collections.Generic.List<T>
+  nameWithType.vb: List(Of T)
+  fullName.vb: System.Collections.Generic.List(Of T)
+  name.vb: List(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    nameWithType: List
+    fullName: System.Collections.Generic.List
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    nameWithType: List
+    fullName: System.Collections.Generic.List
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: false
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+- uid: TicketShop.Models.ViewModels.OrderCartViewModel.Total*
+  commentId: Overload:TicketShop.Models.ViewModels.OrderCartViewModel.Total
+  isExternal: false
+  name: Total
+  nameWithType: OrderCartViewModel.Total
+  fullName: TicketShop.Models.ViewModels.OrderCartViewModel.Total
+- uid: System.Double
+  commentId: T:System.Double
+  parent: System
+  isExternal: true
+  name: Double
+  nameWithType: Double
+  fullName: System.Double
+- uid: TicketShop.Models.ViewModels.OrderCartViewModel.Currency*
+  commentId: Overload:TicketShop.Models.ViewModels.OrderCartViewModel.Currency
+  isExternal: false
+  name: Currency
+  nameWithType: OrderCartViewModel.Currency
+  fullName: TicketShop.Models.ViewModels.OrderCartViewModel.Currency
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: TicketShop.Models.ViewModels.OrderCartViewModel.TransactionID*
+  commentId: Overload:TicketShop.Models.ViewModels.OrderCartViewModel.TransactionID
+  isExternal: false
+  name: TransactionID
+  nameWithType: OrderCartViewModel.TransactionID
+  fullName: TicketShop.Models.ViewModels.OrderCartViewModel.TransactionID
+- uid: System.Nullable{System.Int32}
+  commentId: T:System.Nullable{System.Int32}
+  parent: System
+  definition: System.Nullable`1
+  name: Nullable<Int32>
+  nameWithType: Nullable<Int32>
+  fullName: System.Nullable<System.Int32>
+  nameWithType.vb: Nullable(Of Int32)
+  fullName.vb: System.Nullable(Of System.Int32)
+  name.vb: Nullable(Of Int32)
+  spec.csharp:
+  - uid: System.Nullable`1
+    name: Nullable
+    nameWithType: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.Int32
+    name: Int32
+    nameWithType: Int32
+    fullName: System.Int32
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Nullable`1
+    name: Nullable
+    nameWithType: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.Int32
+    name: Int32
+    nameWithType: Int32
+    fullName: System.Int32
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Nullable`1
+  commentId: T:System.Nullable`1
+  isExternal: true
+  name: Nullable<T>
+  nameWithType: Nullable<T>
+  fullName: System.Nullable<T>
+  nameWithType.vb: Nullable(Of T)
+  fullName.vb: System.Nullable(Of T)
+  name.vb: Nullable(Of T)
+  spec.csharp:
+  - uid: System.Nullable`1
+    name: Nullable
+    nameWithType: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Nullable`1
+    name: Nullable
+    nameWithType: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: TicketShop.Models.ViewModels.OrderCartViewModel.BuyerLastName*
+  commentId: Overload:TicketShop.Models.ViewModels.OrderCartViewModel.BuyerLastName
+  isExternal: false
+  name: BuyerLastName
+  nameWithType: OrderCartViewModel.BuyerLastName
+  fullName: TicketShop.Models.ViewModels.OrderCartViewModel.BuyerLastName
+- uid: TicketShop.Models.ViewModels.OrderCartViewModel.BuyerFirstName*
+  commentId: Overload:TicketShop.Models.ViewModels.OrderCartViewModel.BuyerFirstName
+  isExternal: false
+  name: BuyerFirstName
+  nameWithType: OrderCartViewModel.BuyerFirstName
+  fullName: TicketShop.Models.ViewModels.OrderCartViewModel.BuyerFirstName
+- uid: TicketShop.Models.ViewModels.OrderCartViewModel.BuyerAddress*
+  commentId: Overload:TicketShop.Models.ViewModels.OrderCartViewModel.BuyerAddress
+  isExternal: false
+  name: BuyerAddress
+  nameWithType: OrderCartViewModel.BuyerAddress
+  fullName: TicketShop.Models.ViewModels.OrderCartViewModel.BuyerAddress
+- uid: TicketShop.Models.ViewModels.OrderCartViewModel.BuyerCity*
+  commentId: Overload:TicketShop.Models.ViewModels.OrderCartViewModel.BuyerCity
+  isExternal: false
+  name: BuyerCity
+  nameWithType: OrderCartViewModel.BuyerCity
+  fullName: TicketShop.Models.ViewModels.OrderCartViewModel.BuyerCity
+- uid: TicketShop.Models.ViewModels.OrderCartViewModel.PaymentStatus*
+  commentId: Overload:TicketShop.Models.ViewModels.OrderCartViewModel.PaymentStatus
+  isExternal: false
+  name: PaymentStatus
+  nameWithType: OrderCartViewModel.PaymentStatus
+  fullName: TicketShop.Models.ViewModels.OrderCartViewModel.PaymentStatus
+- uid: TicketShop.Models.ViewModels.OrderCartViewModel.PaymentReference*
+  commentId: Overload:TicketShop.Models.ViewModels.OrderCartViewModel.PaymentReference
+  isExternal: false
+  name: PaymentReference
+  nameWithType: OrderCartViewModel.PaymentReference
+  fullName: TicketShop.Models.ViewModels.OrderCartViewModel.PaymentReference
+- uid: TicketShop.Models.ViewModels.OrderCartViewModel.BuyerEmail*
+  commentId: Overload:TicketShop.Models.ViewModels.OrderCartViewModel.BuyerEmail
+  isExternal: false
+  name: BuyerEmail
+  nameWithType: OrderCartViewModel.BuyerEmail
+  fullName: TicketShop.Models.ViewModels.OrderCartViewModel.BuyerEmail
+- uid: TicketShop.Models.ViewModels.OrderCartViewModel.BuyerUserId*
+  commentId: Overload:TicketShop.Models.ViewModels.OrderCartViewModel.BuyerUserId
+  isExternal: false
+  name: BuyerUserId
+  nameWithType: OrderCartViewModel.BuyerUserId
+  fullName: TicketShop.Models.ViewModels.OrderCartViewModel.BuyerUserId
+- uid: TicketShop.Models.ViewModels.OrderCartViewModel.TotalAmount*
+  commentId: Overload:TicketShop.Models.ViewModels.OrderCartViewModel.TotalAmount
+  isExternal: false
+  name: TotalAmount
+  nameWithType: OrderCartViewModel.TotalAmount
+  fullName: TicketShop.Models.ViewModels.OrderCartViewModel.TotalAmount
+- uid: System.Nullable{System.Double}
+  commentId: T:System.Nullable{System.Double}
+  parent: System
+  definition: System.Nullable`1
+  name: Nullable<Double>
+  nameWithType: Nullable<Double>
+  fullName: System.Nullable<System.Double>
+  nameWithType.vb: Nullable(Of Double)
+  fullName.vb: System.Nullable(Of System.Double)
+  name.vb: Nullable(Of Double)
+  spec.csharp:
+  - uid: System.Nullable`1
+    name: Nullable
+    nameWithType: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.Double
+    name: Double
+    nameWithType: Double
+    fullName: System.Double
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Nullable`1
+    name: Nullable
+    nameWithType: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.Double
+    name: Double
+    nameWithType: Double
+    fullName: System.Double
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )

@@ -35,6 +35,27 @@ namespace TicketApi.Db
             }
         }
 
+        public Ticket AddTicketOrder(Ticket ticket)
+        {
+            var query = @"INSERT INTO Tickets(TicketEventDateID)
+                        VALUES(@ticketEventDateId)";
+                        
+
+            using (var connection = new SqlConnection(_connectionString))
+            {
+                connection.Open();
+                connection.Query(query, new { ticketEventDateId = ticket.TicketEventDateID });
+                var addedItemQuery = connection.Query<int>("SELECT IDENT_CURRENT ('Tickets') AS Current_Identity").First();
+
+                query = @"INSERT INTO TicketsToTransactions(TicketID, TransactionID)
+                        VALUES(@addedItemQuery, @TransactionID)";
+                connection.Query(query, new { addedItemQuery, TransactionID = ticket.TransactionID });
+                var result = connection.Query<Ticket>("SELECT * FROM Tickets WHERE TicketID=@id", new { id = addedItemQuery }).FirstOrDefault();
+
+                return result;
+            }
+        }
+
         public Ticket UpdateTicket(Ticket ticket)
         {
             var query = SQL

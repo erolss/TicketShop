@@ -1,0 +1,51 @@
+### YamlMime:ManagedReference
+items:
+- uid: TicketShop.RestApiClient
+  commentId: N:TicketShop.RestApiClient
+  id: TicketShop.RestApiClient
+  children:
+  - TicketShop.RestApiClient.EventApi
+  - TicketShop.RestApiClient.EventDateApi
+  - TicketShop.RestApiClient.TicketApi
+  - TicketShop.RestApiClient.TransactionApi
+  - TicketShop.RestApiClient.VenueApi
+  langs:
+  - csharp
+  - vb
+  name: TicketShop.RestApiClient
+  nameWithType: TicketShop.RestApiClient
+  fullName: TicketShop.RestApiClient
+  type: Namespace
+  assemblies:
+  - RestApiClient
+references:
+- uid: TicketShop.RestApiClient.EventApi
+  commentId: T:TicketShop.RestApiClient.EventApi
+  isExternal: false
+  name: EventApi
+  nameWithType: EventApi
+  fullName: TicketShop.RestApiClient.EventApi
+- uid: TicketShop.RestApiClient.EventDateApi
+  commentId: T:TicketShop.RestApiClient.EventDateApi
+  isExternal: false
+  name: EventDateApi
+  nameWithType: EventDateApi
+  fullName: TicketShop.RestApiClient.EventDateApi
+- uid: TicketShop.RestApiClient.TicketApi
+  commentId: T:TicketShop.RestApiClient.TicketApi
+  isExternal: false
+  name: TicketApi
+  nameWithType: TicketApi
+  fullName: TicketShop.RestApiClient.TicketApi
+- uid: TicketShop.RestApiClient.TransactionApi
+  commentId: T:TicketShop.RestApiClient.TransactionApi
+  isExternal: false
+  name: TransactionApi
+  nameWithType: TransactionApi
+  fullName: TicketShop.RestApiClient.TransactionApi
+- uid: TicketShop.RestApiClient.VenueApi
+  commentId: T:TicketShop.RestApiClient.VenueApi
+  isExternal: false
+  name: VenueApi
+  nameWithType: VenueApi
+  fullName: TicketShop.RestApiClient.VenueApi

@@ -15,6 +15,7 @@ items:
   - TicketApi.Db.Models.EventDate.Price
   - TicketApi.Db.Models.EventDate.TicketEventDateID
   - TicketApi.Db.Models.EventDate.TicketEventID
+  - TicketApi.Db.Models.EventDate.ToJson
   - TicketApi.Db.Models.EventDate.ToString
   - TicketApi.Db.Models.EventDate.VenueID
   langs:
@@ -27,11 +28,11 @@ items:
   source:
     remote:
       path: src/DbRepository/Models/EventDate.cs
-      branch: restapi
+      branch: features/ticketshop
       repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
     id: EventDate
     path: src/DbRepository/Models/EventDate.cs
-    startLine: 9
+    startLine: 10
   assemblies:
   - DbRepository
   namespace: TicketApi.Db.Models
@@ -80,11 +81,11 @@ items:
   source:
     remote:
       path: src/DbRepository/Models/EventDate.cs
-      branch: restapi
+      branch: features/ticketshop
       repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
     id: TicketEventDateID
     path: src/DbRepository/Models/EventDate.cs
-    startLine: 15
+    startLine: 16
   assemblies:
   - DbRepository
   namespace: TicketApi.Db.Models
@@ -131,11 +132,11 @@ items:
   source:
     remote:
       path: src/DbRepository/Models/EventDate.cs
-      branch: restapi
+      branch: features/ticketshop
       repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
     id: TicketEventID
     path: src/DbRepository/Models/EventDate.cs
-    startLine: 21
+    startLine: 22
   assemblies:
   - DbRepository
   namespace: TicketApi.Db.Models
@@ -182,11 +183,11 @@ items:
   source:
     remote:
       path: src/DbRepository/Models/EventDate.cs
-      branch: restapi
+      branch: features/ticketshop
       repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
     id: VenueID
     path: src/DbRepository/Models/EventDate.cs
-    startLine: 27
+    startLine: 28
   assemblies:
   - DbRepository
   namespace: TicketApi.Db.Models
@@ -233,11 +234,11 @@ items:
   source:
     remote:
       path: src/DbRepository/Models/EventDate.cs
-      branch: restapi
+      branch: features/ticketshop
       repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
     id: EventStartDateTime
     path: src/DbRepository/Models/EventDate.cs
-    startLine: 33
+    startLine: 34
   assemblies:
   - DbRepository
   namespace: TicketApi.Db.Models
@@ -284,11 +285,11 @@ items:
   source:
     remote:
       path: src/DbRepository/Models/EventDate.cs
-      branch: restapi
+      branch: features/ticketshop
       repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
     id: MaxTickets
     path: src/DbRepository/Models/EventDate.cs
-    startLine: 39
+    startLine: 40
   assemblies:
   - DbRepository
   namespace: TicketApi.Db.Models
@@ -335,11 +336,11 @@ items:
   source:
     remote:
       path: src/DbRepository/Models/EventDate.cs
-      branch: restapi
+      branch: features/ticketshop
       repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
     id: Price
     path: src/DbRepository/Models/EventDate.cs
-    startLine: 45
+    startLine: 46
   assemblies:
   - DbRepository
   namespace: TicketApi.Db.Models
@@ -347,14 +348,14 @@ items:
   example: []
   syntax:
     content: >-
-      [DataMember(Name = "maxTickets")]
+      [DataMember(Name = "price")]
 
       public double ? Price { get; set; }
     parameters: []
     return:
       type: System.Nullable{System.Double}
     content.vb: >-
-      <DataMember(Name:="maxTickets")>
+      <DataMember(Name:="price")>
 
       Public Property Price As Double?
   overload: TicketApi.Db.Models.EventDate.Price*
@@ -365,7 +366,7 @@ items:
     namedArguments:
     - name: Name
       type: System.String
-      value: maxTickets
+      value: price
   modifiers.csharp:
   - public
   - get
@@ -386,11 +387,11 @@ items:
   source:
     remote:
       path: src/DbRepository/Models/EventDate.cs
-      branch: restapi
+      branch: features/ticketshop
       repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
     id: ToString
     path: src/DbRepository/Models/EventDate.cs
-    startLine: 52
+    startLine: 53
   assemblies:
   - DbRepository
   namespace: TicketApi.Db.Models
@@ -410,6 +411,41 @@ items:
   modifiers.vb:
   - Public
   - Overrides
+- uid: TicketApi.Db.Models.EventDate.ToJson
+  commentId: M:TicketApi.Db.Models.EventDate.ToJson
+  id: ToJson
+  parent: TicketApi.Db.Models.EventDate
+  langs:
+  - csharp
+  - vb
+  name: ToJson()
+  nameWithType: EventDate.ToJson()
+  fullName: TicketApi.Db.Models.EventDate.ToJson()
+  type: Method
+  source:
+    remote:
+      path: src/DbRepository/Models/EventDate.cs
+      branch: features/ticketshop
+      repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
+    id: ToJson
+    path: src/DbRepository/Models/EventDate.cs
+    startLine: 71
+  assemblies:
+  - DbRepository
+  namespace: TicketApi.Db.Models
+  summary: "\nReturns the JSON string presentation of the object\n"
+  example: []
+  syntax:
+    content: public string ToJson()
+    return:
+      type: System.String
+      description: JSON string presentation of the object
+    content.vb: Public Function ToJson As String
+  overload: TicketApi.Db.Models.EventDate.ToJson*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
 - uid: TicketApi.Db.Models.EventDate.Equals(System.Object)
   commentId: M:TicketApi.Db.Models.EventDate.Equals(System.Object)
   id: Equals(System.Object)
@@ -424,11 +460,11 @@ items:
   source:
     remote:
       path: src/DbRepository/Models/EventDate.cs
-      branch: restapi
+      branch: features/ticketshop
       repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
     id: Equals
     path: src/DbRepository/Models/EventDate.cs
-    startLine: 80
+    startLine: 81
   assemblies:
   - DbRepository
   namespace: TicketApi.Db.Models
@@ -466,11 +502,11 @@ items:
   source:
     remote:
       path: src/DbRepository/Models/EventDate.cs
-      branch: restapi
+      branch: features/ticketshop
       repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
     id: Equals
     path: src/DbRepository/Models/EventDate.cs
-    startLine: 94
+    startLine: 95
   assemblies:
   - DbRepository
   namespace: TicketApi.Db.Models
@@ -507,11 +543,11 @@ items:
   source:
     remote:
       path: src/DbRepository/Models/EventDate.cs
-      branch: restapi
+      branch: features/ticketshop
       repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
     id: GetHashCode
     path: src/DbRepository/Models/EventDate.cs
-    startLine: 138
+    startLine: 139
   assemblies:
   - DbRepository
   namespace: TicketApi.Db.Models
@@ -545,11 +581,11 @@ items:
   source:
     remote:
       path: src/DbRepository/Models/EventDate.cs
-      branch: restapi
+      branch: features/ticketshop
       repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
     id: op_Equality
     path: src/DbRepository/Models/EventDate.cs
-    startLine: 163
+    startLine: 164
   assemblies:
   - DbRepository
   namespace: TicketApi.Db.Models
@@ -584,11 +620,11 @@ items:
   source:
     remote:
       path: src/DbRepository/Models/EventDate.cs
-      branch: restapi
+      branch: features/ticketshop
       repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
     id: op_Inequality
     path: src/DbRepository/Models/EventDate.cs
-    startLine: 168
+    startLine: 169
   assemblies:
   - DbRepository
   namespace: TicketApi.Db.Models
@@ -1100,6 +1136,12 @@ references:
   name: String
   nameWithType: String
   fullName: System.String
+- uid: TicketApi.Db.Models.EventDate.ToJson*
+  commentId: Overload:TicketApi.Db.Models.EventDate.ToJson
+  isExternal: false
+  name: ToJson
+  nameWithType: EventDate.ToJson
+  fullName: TicketApi.Db.Models.EventDate.ToJson
 - uid: System.Object.Equals(System.Object)
   commentId: M:System.Object.Equals(System.Object)
   parent: System.Object

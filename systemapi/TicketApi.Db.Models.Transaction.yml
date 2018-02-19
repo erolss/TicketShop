@@ -16,8 +16,9 @@ items:
   - TicketApi.Db.Models.Transaction.GetHashCode
   - TicketApi.Db.Models.Transaction.op_Equality(TicketApi.Db.Models.Transaction,TicketApi.Db.Models.Transaction)
   - TicketApi.Db.Models.Transaction.op_Inequality(TicketApi.Db.Models.Transaction,TicketApi.Db.Models.Transaction)
-  - TicketApi.Db.Models.Transaction.PaymentReference
+  - TicketApi.Db.Models.Transaction.PaymentReferenceId
   - TicketApi.Db.Models.Transaction.PaymentStatus
+  - TicketApi.Db.Models.Transaction.ToJson
   - TicketApi.Db.Models.Transaction.ToString
   - TicketApi.Db.Models.Transaction.TotalAmount
   - TicketApi.Db.Models.Transaction.TransactionID
@@ -31,11 +32,11 @@ items:
   source:
     remote:
       path: src/DbRepository/Models/Transaction.cs
-      branch: restapi
+      branch: features/ticketshop
       repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
     id: Transaction
     path: src/DbRepository/Models/Transaction.cs
-    startLine: 6
+    startLine: 7
   assemblies:
   - DbRepository
   namespace: TicketApi.Db.Models
@@ -82,11 +83,11 @@ items:
   source:
     remote:
       path: src/DbRepository/Models/Transaction.cs
-      branch: restapi
+      branch: features/ticketshop
       repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
     id: TransactionID
     path: src/DbRepository/Models/Transaction.cs
-    startLine: 12
+    startLine: 13
   assemblies:
   - DbRepository
   namespace: TicketApi.Db.Models
@@ -133,11 +134,11 @@ items:
   source:
     remote:
       path: src/DbRepository/Models/Transaction.cs
-      branch: restapi
+      branch: features/ticketshop
       repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
     id: BuyerLastName
     path: src/DbRepository/Models/Transaction.cs
-    startLine: 18
+    startLine: 19
   assemblies:
   - DbRepository
   namespace: TicketApi.Db.Models
@@ -184,11 +185,11 @@ items:
   source:
     remote:
       path: src/DbRepository/Models/Transaction.cs
-      branch: restapi
+      branch: features/ticketshop
       repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
     id: BuyerFirstName
     path: src/DbRepository/Models/Transaction.cs
-    startLine: 24
+    startLine: 25
   assemblies:
   - DbRepository
   namespace: TicketApi.Db.Models
@@ -235,11 +236,11 @@ items:
   source:
     remote:
       path: src/DbRepository/Models/Transaction.cs
-      branch: restapi
+      branch: features/ticketshop
       repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
     id: BuyerAddress
     path: src/DbRepository/Models/Transaction.cs
-    startLine: 30
+    startLine: 31
   assemblies:
   - DbRepository
   namespace: TicketApi.Db.Models
@@ -286,11 +287,11 @@ items:
   source:
     remote:
       path: src/DbRepository/Models/Transaction.cs
-      branch: restapi
+      branch: features/ticketshop
       repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
     id: BuyerCity
     path: src/DbRepository/Models/Transaction.cs
-    startLine: 36
+    startLine: 37
   assemblies:
   - DbRepository
   namespace: TicketApi.Db.Models
@@ -337,11 +338,11 @@ items:
   source:
     remote:
       path: src/DbRepository/Models/Transaction.cs
-      branch: restapi
+      branch: features/ticketshop
       repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
     id: PaymentStatus
     path: src/DbRepository/Models/Transaction.cs
-    startLine: 42
+    startLine: 43
   assemblies:
   - DbRepository
   namespace: TicketApi.Db.Models
@@ -374,25 +375,25 @@ items:
   - set
   modifiers.vb:
   - Public
-- uid: TicketApi.Db.Models.Transaction.PaymentReference
-  commentId: P:TicketApi.Db.Models.Transaction.PaymentReference
-  id: PaymentReference
+- uid: TicketApi.Db.Models.Transaction.PaymentReferenceId
+  commentId: P:TicketApi.Db.Models.Transaction.PaymentReferenceId
+  id: PaymentReferenceId
   parent: TicketApi.Db.Models.Transaction
   langs:
   - csharp
   - vb
-  name: PaymentReference
-  nameWithType: Transaction.PaymentReference
-  fullName: TicketApi.Db.Models.Transaction.PaymentReference
+  name: PaymentReferenceId
+  nameWithType: Transaction.PaymentReferenceId
+  fullName: TicketApi.Db.Models.Transaction.PaymentReferenceId
   type: Property
   source:
     remote:
       path: src/DbRepository/Models/Transaction.cs
-      branch: restapi
+      branch: features/ticketshop
       repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
-    id: PaymentReference
+    id: PaymentReferenceId
     path: src/DbRepository/Models/Transaction.cs
-    startLine: 48
+    startLine: 49
   assemblies:
   - DbRepository
   namespace: TicketApi.Db.Models
@@ -402,15 +403,15 @@ items:
     content: >-
       [DataMember(Name = "paymentReference")]
 
-      public string PaymentReference { get; set; }
+      public string PaymentReferenceId { get; set; }
     parameters: []
     return:
       type: System.String
     content.vb: >-
       <DataMember(Name:="paymentReference")>
 
-      Public Property PaymentReference As String
-  overload: TicketApi.Db.Models.Transaction.PaymentReference*
+      Public Property PaymentReferenceId As String
+  overload: TicketApi.Db.Models.Transaction.PaymentReferenceId*
   attributes:
   - type: System.Runtime.Serialization.DataMemberAttribute
     ctor: System.Runtime.Serialization.DataMemberAttribute.#ctor
@@ -439,11 +440,11 @@ items:
   source:
     remote:
       path: src/DbRepository/Models/Transaction.cs
-      branch: restapi
+      branch: features/ticketshop
       repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
     id: BuyerEmail
     path: src/DbRepository/Models/Transaction.cs
-    startLine: 54
+    startLine: 55
   assemblies:
   - DbRepository
   namespace: TicketApi.Db.Models
@@ -490,11 +491,11 @@ items:
   source:
     remote:
       path: src/DbRepository/Models/Transaction.cs
-      branch: restapi
+      branch: features/ticketshop
       repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
     id: BuyerUserId
     path: src/DbRepository/Models/Transaction.cs
-    startLine: 60
+    startLine: 61
   assemblies:
   - DbRepository
   namespace: TicketApi.Db.Models
@@ -541,11 +542,11 @@ items:
   source:
     remote:
       path: src/DbRepository/Models/Transaction.cs
-      branch: restapi
+      branch: features/ticketshop
       repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
     id: TotalAmount
     path: src/DbRepository/Models/Transaction.cs
-    startLine: 66
+    startLine: 67
   assemblies:
   - DbRepository
   namespace: TicketApi.Db.Models
@@ -592,11 +593,11 @@ items:
   source:
     remote:
       path: src/DbRepository/Models/Transaction.cs
-      branch: restapi
+      branch: features/ticketshop
       repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
     id: ToString
     path: src/DbRepository/Models/Transaction.cs
-    startLine: 73
+    startLine: 74
   assemblies:
   - DbRepository
   namespace: TicketApi.Db.Models
@@ -616,6 +617,41 @@ items:
   modifiers.vb:
   - Public
   - Overrides
+- uid: TicketApi.Db.Models.Transaction.ToJson
+  commentId: M:TicketApi.Db.Models.Transaction.ToJson
+  id: ToJson
+  parent: TicketApi.Db.Models.Transaction
+  langs:
+  - csharp
+  - vb
+  name: ToJson()
+  nameWithType: Transaction.ToJson()
+  fullName: TicketApi.Db.Models.Transaction.ToJson()
+  type: Method
+  source:
+    remote:
+      path: src/DbRepository/Models/Transaction.cs
+      branch: features/ticketshop
+      repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
+    id: ToJson
+    path: src/DbRepository/Models/Transaction.cs
+    startLine: 96
+  assemblies:
+  - DbRepository
+  namespace: TicketApi.Db.Models
+  summary: "\nReturns the JSON string presentation of the object\n"
+  example: []
+  syntax:
+    content: public string ToJson()
+    return:
+      type: System.String
+      description: JSON string presentation of the object
+    content.vb: Public Function ToJson As String
+  overload: TicketApi.Db.Models.Transaction.ToJson*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
 - uid: TicketApi.Db.Models.Transaction.Equals(System.Object)
   commentId: M:TicketApi.Db.Models.Transaction.Equals(System.Object)
   id: Equals(System.Object)
@@ -630,11 +666,11 @@ items:
   source:
     remote:
       path: src/DbRepository/Models/Transaction.cs
-      branch: restapi
+      branch: features/ticketshop
       repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
     id: Equals
     path: src/DbRepository/Models/Transaction.cs
-    startLine: 105
+    startLine: 106
   assemblies:
   - DbRepository
   namespace: TicketApi.Db.Models
@@ -672,11 +708,11 @@ items:
   source:
     remote:
       path: src/DbRepository/Models/Transaction.cs
-      branch: restapi
+      branch: features/ticketshop
       repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
     id: Equals
     path: src/DbRepository/Models/Transaction.cs
-    startLine: 119
+    startLine: 120
   assemblies:
   - DbRepository
   namespace: TicketApi.Db.Models
@@ -713,11 +749,11 @@ items:
   source:
     remote:
       path: src/DbRepository/Models/Transaction.cs
-      branch: restapi
+      branch: features/ticketshop
       repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
     id: GetHashCode
     path: src/DbRepository/Models/Transaction.cs
-    startLine: 183
+    startLine: 184
   assemblies:
   - DbRepository
   namespace: TicketApi.Db.Models
@@ -751,11 +787,11 @@ items:
   source:
     remote:
       path: src/DbRepository/Models/Transaction.cs
-      branch: restapi
+      branch: features/ticketshop
       repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
     id: op_Equality
     path: src/DbRepository/Models/Transaction.cs
-    startLine: 216
+    startLine: 217
   assemblies:
   - DbRepository
   namespace: TicketApi.Db.Models
@@ -790,11 +826,11 @@ items:
   source:
     remote:
       path: src/DbRepository/Models/Transaction.cs
-      branch: restapi
+      branch: features/ticketshop
       repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
     id: op_Inequality
     path: src/DbRepository/Models/Transaction.cs
-    startLine: 221
+    startLine: 222
   assemblies:
   - DbRepository
   namespace: TicketApi.Db.Models
@@ -1218,12 +1254,12 @@ references:
   name: PaymentStatus
   nameWithType: Transaction.PaymentStatus
   fullName: TicketApi.Db.Models.Transaction.PaymentStatus
-- uid: TicketApi.Db.Models.Transaction.PaymentReference*
-  commentId: Overload:TicketApi.Db.Models.Transaction.PaymentReference
+- uid: TicketApi.Db.Models.Transaction.PaymentReferenceId*
+  commentId: Overload:TicketApi.Db.Models.Transaction.PaymentReferenceId
   isExternal: false
-  name: PaymentReference
-  nameWithType: Transaction.PaymentReference
-  fullName: TicketApi.Db.Models.Transaction.PaymentReference
+  name: PaymentReferenceId
+  nameWithType: Transaction.PaymentReferenceId
+  fullName: TicketApi.Db.Models.Transaction.PaymentReferenceId
 - uid: TicketApi.Db.Models.Transaction.BuyerEmail*
   commentId: Overload:TicketApi.Db.Models.Transaction.BuyerEmail
   isExternal: false
@@ -1323,6 +1359,12 @@ references:
   name: ToString
   nameWithType: Transaction.ToString
   fullName: TicketApi.Db.Models.Transaction.ToString
+- uid: TicketApi.Db.Models.Transaction.ToJson*
+  commentId: Overload:TicketApi.Db.Models.Transaction.ToJson
+  isExternal: false
+  name: ToJson
+  nameWithType: Transaction.ToJson
+  fullName: TicketApi.Db.Models.Transaction.ToJson
 - uid: System.Object.Equals(System.Object)
   commentId: M:System.Object.Equals(System.Object)
   parent: System.Object

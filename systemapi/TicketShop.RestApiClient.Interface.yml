@@ -1,0 +1,62 @@
+### YamlMime:ManagedReference
+items:
+- uid: TicketShop.RestApiClient.Interface
+  commentId: N:TicketShop.RestApiClient.Interface
+  id: TicketShop.RestApiClient.Interface
+  children:
+  - TicketShop.RestApiClient.Interface.IEventApi
+  - TicketShop.RestApiClient.Interface.IEventDateApi
+  - TicketShop.RestApiClient.Interface.ITicketApi
+  - TicketShop.RestApiClient.Interface.ITransactionApi
+  - TicketShop.RestApiClient.Interface.IVenueApi
+  langs:
+  - csharp
+  - vb
+  name: TicketShop.RestApiClient.Interface
+  nameWithType: TicketShop.RestApiClient.Interface
+  fullName: TicketShop.RestApiClient.Interface
+  type: Namespace
+  assemblies:
+  - RestApiClient
+references:
+- uid: TicketShop.RestApiClient.Interface.IEventApi
+  commentId: T:TicketShop.RestApiClient.Interface.IEventApi
+  parent: TicketShop.RestApiClient.Interface
+  isExternal: false
+  name: IEventApi
+  nameWithType: IEventApi
+  fullName: TicketShop.RestApiClient.Interface.IEventApi
+- uid: TicketShop.RestApiClient.Interface.IEventDateApi
+  commentId: T:TicketShop.RestApiClient.Interface.IEventDateApi
+  parent: TicketShop.RestApiClient.Interface
+  isExternal: false
+  name: IEventDateApi
+  nameWithType: IEventDateApi
+  fullName: TicketShop.RestApiClient.Interface.IEventDateApi
+- uid: TicketShop.RestApiClient.Interface.ITicketApi
+  commentId: T:TicketShop.RestApiClient.Interface.ITicketApi
+  parent: TicketShop.RestApiClient.Interface
+  isExternal: false
+  name: ITicketApi
+  nameWithType: ITicketApi
+  fullName: TicketShop.RestApiClient.Interface.ITicketApi
+- uid: TicketShop.RestApiClient.Interface.ITransactionApi
+  commentId: T:TicketShop.RestApiClient.Interface.ITransactionApi
+  parent: TicketShop.RestApiClient.Interface
+  isExternal: false
+  name: ITransactionApi
+  nameWithType: ITransactionApi
+  fullName: TicketShop.RestApiClient.Interface.ITransactionApi
+- uid: TicketShop.RestApiClient.Interface.IVenueApi
+  commentId: T:TicketShop.RestApiClient.Interface.IVenueApi
+  parent: TicketShop.RestApiClient.Interface
+  isExternal: false
+  name: IVenueApi
+  nameWithType: IVenueApi
+  fullName: TicketShop.RestApiClient.Interface.IVenueApi
+- uid: TicketShop.RestApiClient.Interface
+  commentId: N:TicketShop.RestApiClient.Interface
+  isExternal: false
+  name: TicketShop.RestApiClient.Interface
+  nameWithType: TicketShop.RestApiClient.Interface
+  fullName: TicketShop.RestApiClient.Interface

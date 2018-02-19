@@ -19,7 +19,19 @@ namespace TicketShop.RestApiClient
             var outVar = ticket.ToJson();
 
             var client = new RestClient(_baseUrl);
-            var request = new RestRequest("api/event", Method.POST);
+            var request = new RestRequest("api/ticket", Method.POST);
+            request.AddParameter("application/json", outVar, ParameterType.RequestBody);
+
+            var response = client.Execute<Ticket>(request);
+
+            return response.Data;
+        }
+        public Ticket AddTicketOrder(Ticket ticket)
+        {
+            var outVar = ticket.ToJson();
+
+            var client = new RestClient(_baseUrl);
+            var request = new RestRequest("api/ticketorder", Method.POST);
             request.AddParameter("application/json", outVar, ParameterType.RequestBody);
 
             var response = client.Execute<Ticket>(request);

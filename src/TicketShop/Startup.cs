@@ -37,7 +37,10 @@ namespace TicketShop
             // Add application services.
             services.AddTransient<IEmailSender, EmailSender>();
 
-            services.AddMvc();
+            services.AddMvc()
+                .AddSessionStateTempDataProvider();
+            services.AddSession();
+
             services.AddAuthorization(options =>
             {
                 options.AddPolicy("RequireAdminRole", policy => policy.RequireRole("Admin"));
@@ -62,8 +65,8 @@ namespace TicketShop
             }
             
             app.UseStaticFiles();
-
             app.UseAuthentication();
+            app.UseSession();
 
             app.UseMvc(routes =>
             {

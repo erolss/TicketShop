@@ -77,6 +77,26 @@ namespace TicketApi.Controllers
             }
             return new ObjectResult(result);
         }
+        /// <summary>
+        /// Add a ticket and connect transaction in system
+        /// </summary>
+        /// <param name="ticket">ticket object</param>
+        /// <returns>A ticket object</returns>
+        [HttpPost]
+        [Route("/api/ticketorder")]
+        [ValidateModelState]
+        [SwaggerOperation("AddTicketOrder")]
+        [SwaggerResponse(200, typeof(Object), "Ticket created")]
+        [SwaggerResponse(400, typeof(Object), "Bad request")]
+        public virtual IActionResult AddTicketOrder([FromBody]Ticket ticket)
+        {
+            var result = _ticketRepository.AddTicketOrder(ticket);
+            if (result == null)
+            {
+                return BadRequest();
+            }
+            return new ObjectResult(result);
+        }
 
         /// <summary>
         /// Delete ticket

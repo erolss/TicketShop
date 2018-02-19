@@ -1,0 +1,543 @@
+### YamlMime:ManagedReference
+items:
+- uid: TicketShop.Models.AccountViewModels.LoginWith2faViewModel
+  commentId: T:TicketShop.Models.AccountViewModels.LoginWith2faViewModel
+  id: LoginWith2faViewModel
+  parent: TicketShop.Models.AccountViewModels
+  children:
+  - TicketShop.Models.AccountViewModels.LoginWith2faViewModel.RememberMachine
+  - TicketShop.Models.AccountViewModels.LoginWith2faViewModel.RememberMe
+  - TicketShop.Models.AccountViewModels.LoginWith2faViewModel.TwoFactorCode
+  langs:
+  - csharp
+  - vb
+  name: LoginWith2faViewModel
+  nameWithType: LoginWith2faViewModel
+  fullName: TicketShop.Models.AccountViewModels.LoginWith2faViewModel
+  type: Class
+  source:
+    remote:
+      path: src/TicketShop/Models/AccountViewModels/LoginWith2faViewModel.cs
+      branch: features/ticketshop
+      repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
+    id: LoginWith2faViewModel
+    path: src/TicketShop/Models/AccountViewModels/LoginWith2faViewModel.cs
+    startLine: 8
+  assemblies:
+  - TicketShop
+  namespace: TicketShop.Models.AccountViewModels
+  syntax:
+    content: public class LoginWith2faViewModel
+    content.vb: Public Class LoginWith2faViewModel
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: TicketShop.Models.AccountViewModels.LoginWith2faViewModel.TwoFactorCode
+  commentId: P:TicketShop.Models.AccountViewModels.LoginWith2faViewModel.TwoFactorCode
+  id: TwoFactorCode
+  parent: TicketShop.Models.AccountViewModels.LoginWith2faViewModel
+  langs:
+  - csharp
+  - vb
+  name: TwoFactorCode
+  nameWithType: LoginWith2faViewModel.TwoFactorCode
+  fullName: TicketShop.Models.AccountViewModels.LoginWith2faViewModel.TwoFactorCode
+  type: Property
+  source:
+    remote:
+      path: src/TicketShop/Models/AccountViewModels/LoginWith2faViewModel.cs
+      branch: features/ticketshop
+      repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
+    id: TwoFactorCode
+    path: src/TicketShop/Models/AccountViewModels/LoginWith2faViewModel.cs
+    startLine: 10
+  assemblies:
+  - TicketShop
+  namespace: TicketShop.Models.AccountViewModels
+  syntax:
+    content: >-
+      [Required]
+
+      [StringLength(7, ErrorMessage = "The {0} must be at least {2} and at max {1} characters long.", MinimumLength = 6)]
+
+      [DataType(DataType.Text)]
+
+      [Display(Name = "Authenticator code")]
+
+      public string TwoFactorCode { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: >-
+      <Required>
+
+      <StringLength(7, ErrorMessage:="The {0} must be at least {2} and at max {1} characters long.", MinimumLength:=6)>
+
+      <DataType(DataType.Text)>
+
+      <Display(Name:="Authenticator code")>
+
+      Public Property TwoFactorCode As String
+  overload: TicketShop.Models.AccountViewModels.LoginWith2faViewModel.TwoFactorCode*
+  attributes:
+  - type: System.ComponentModel.DataAnnotations.RequiredAttribute
+    ctor: System.ComponentModel.DataAnnotations.RequiredAttribute.#ctor
+    arguments: []
+  - type: System.ComponentModel.DataAnnotations.StringLengthAttribute
+    ctor: System.ComponentModel.DataAnnotations.StringLengthAttribute.#ctor(System.Int32)
+    arguments:
+    - type: System.Int32
+      value: 7
+    namedArguments:
+    - name: ErrorMessage
+      type: System.String
+      value: The {0} must be at least {2} and at max {1} characters long.
+    - name: MinimumLength
+      type: System.Int32
+      value: 6
+  - type: System.ComponentModel.DataAnnotations.DataTypeAttribute
+    ctor: System.ComponentModel.DataAnnotations.DataTypeAttribute.#ctor(System.ComponentModel.DataAnnotations.DataType)
+    arguments:
+    - type: System.ComponentModel.DataAnnotations.DataType
+      value: 7
+  - type: System.ComponentModel.DataAnnotations.DisplayAttribute
+    ctor: System.ComponentModel.DataAnnotations.DisplayAttribute.#ctor
+    arguments: []
+    namedArguments:
+    - name: Name
+      type: System.String
+      value: Authenticator code
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: TicketShop.Models.AccountViewModels.LoginWith2faViewModel.RememberMachine
+  commentId: P:TicketShop.Models.AccountViewModels.LoginWith2faViewModel.RememberMachine
+  id: RememberMachine
+  parent: TicketShop.Models.AccountViewModels.LoginWith2faViewModel
+  langs:
+  - csharp
+  - vb
+  name: RememberMachine
+  nameWithType: LoginWith2faViewModel.RememberMachine
+  fullName: TicketShop.Models.AccountViewModels.LoginWith2faViewModel.RememberMachine
+  type: Property
+  source:
+    remote:
+      path: src/TicketShop/Models/AccountViewModels/LoginWith2faViewModel.cs
+      branch: features/ticketshop
+      repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
+    id: RememberMachine
+    path: src/TicketShop/Models/AccountViewModels/LoginWith2faViewModel.cs
+    startLine: 16
+  assemblies:
+  - TicketShop
+  namespace: TicketShop.Models.AccountViewModels
+  syntax:
+    content: >-
+      [Display(Name = "Remember this machine")]
+
+      public bool RememberMachine { get; set; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: >-
+      <Display(Name:="Remember this machine")>
+
+      Public Property RememberMachine As Boolean
+  overload: TicketShop.Models.AccountViewModels.LoginWith2faViewModel.RememberMachine*
+  attributes:
+  - type: System.ComponentModel.DataAnnotations.DisplayAttribute
+    ctor: System.ComponentModel.DataAnnotations.DisplayAttribute.#ctor
+    arguments: []
+    namedArguments:
+    - name: Name
+      type: System.String
+      value: Remember this machine
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: TicketShop.Models.AccountViewModels.LoginWith2faViewModel.RememberMe
+  commentId: P:TicketShop.Models.AccountViewModels.LoginWith2faViewModel.RememberMe
+  id: RememberMe
+  parent: TicketShop.Models.AccountViewModels.LoginWith2faViewModel
+  langs:
+  - csharp
+  - vb
+  name: RememberMe
+  nameWithType: LoginWith2faViewModel.RememberMe
+  fullName: TicketShop.Models.AccountViewModels.LoginWith2faViewModel.RememberMe
+  type: Property
+  source:
+    remote:
+      path: src/TicketShop/Models/AccountViewModels/LoginWith2faViewModel.cs
+      branch: features/ticketshop
+      repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
+    id: RememberMe
+    path: src/TicketShop/Models/AccountViewModels/LoginWith2faViewModel.cs
+    startLine: 19
+  assemblies:
+  - TicketShop
+  namespace: TicketShop.Models.AccountViewModels
+  syntax:
+    content: public bool RememberMe { get; set; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public Property RememberMe As Boolean
+  overload: TicketShop.Models.AccountViewModels.LoginWith2faViewModel.RememberMe*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+references:
+- uid: TicketShop.Models.AccountViewModels
+  commentId: N:TicketShop.Models.AccountViewModels
+  isExternal: false
+  name: TicketShop.Models.AccountViewModels
+  nameWithType: TicketShop.Models.AccountViewModels
+  fullName: TicketShop.Models.AccountViewModels
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: false
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: TicketShop.Models.AccountViewModels.LoginWith2faViewModel.TwoFactorCode*
+  commentId: Overload:TicketShop.Models.AccountViewModels.LoginWith2faViewModel.TwoFactorCode
+  isExternal: false
+  name: TwoFactorCode
+  nameWithType: LoginWith2faViewModel.TwoFactorCode
+  fullName: TicketShop.Models.AccountViewModels.LoginWith2faViewModel.TwoFactorCode
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: TicketShop.Models.AccountViewModels.LoginWith2faViewModel.RememberMachine*
+  commentId: Overload:TicketShop.Models.AccountViewModels.LoginWith2faViewModel.RememberMachine
+  isExternal: false
+  name: RememberMachine
+  nameWithType: LoginWith2faViewModel.RememberMachine
+  fullName: TicketShop.Models.AccountViewModels.LoginWith2faViewModel.RememberMachine
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: TicketShop.Models.AccountViewModels.LoginWith2faViewModel.RememberMe*
+  commentId: Overload:TicketShop.Models.AccountViewModels.LoginWith2faViewModel.RememberMe
+  isExternal: false
+  name: RememberMe
+  nameWithType: LoginWith2faViewModel.RememberMe
+  fullName: TicketShop.Models.AccountViewModels.LoginWith2faViewModel.RememberMe

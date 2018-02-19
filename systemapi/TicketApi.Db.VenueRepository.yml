@@ -22,11 +22,11 @@ items:
   source:
     remote:
       path: src/DbRepository/VenueRepository.cs
-      branch: restapi
+      branch: features/ticketshop
       repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
     id: VenueRepository
     path: src/DbRepository/VenueRepository.cs
-    startLine: 13
+    startLine: 14
   assemblies:
   - DbRepository
   namespace: TicketApi.Db
@@ -67,11 +67,11 @@ items:
   source:
     remote:
       path: src/DbRepository/VenueRepository.cs
-      branch: restapi
+      branch: features/ticketshop
       repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
     id: .ctor
     path: src/DbRepository/VenueRepository.cs
-    startLine: 17
+    startLine: 18
   assemblies:
   - DbRepository
   namespace: TicketApi.Db
@@ -100,11 +100,11 @@ items:
   source:
     remote:
       path: src/DbRepository/VenueRepository.cs
-      branch: restapi
+      branch: features/ticketshop
       repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
     id: AddVenue
     path: src/DbRepository/VenueRepository.cs
-    startLine: 21
+    startLine: 22
   assemblies:
   - DbRepository
   namespace: TicketApi.Db
@@ -137,11 +137,11 @@ items:
   source:
     remote:
       path: src/DbRepository/VenueRepository.cs
-      branch: restapi
+      branch: features/ticketshop
       repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
     id: DeleteVenue
     path: src/DbRepository/VenueRepository.cs
-    startLine: 43
+    startLine: 44
   assemblies:
   - DbRepository
   namespace: TicketApi.Db
@@ -174,11 +174,11 @@ items:
   source:
     remote:
       path: src/DbRepository/VenueRepository.cs
-      branch: restapi
+      branch: features/ticketshop
       repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
     id: GetVenueById
     path: src/DbRepository/VenueRepository.cs
-    startLine: 60
+    startLine: 61
   assemblies:
   - DbRepository
   namespace: TicketApi.Db
@@ -211,11 +211,11 @@ items:
   source:
     remote:
       path: src/DbRepository/VenueRepository.cs
-      branch: restapi
+      branch: features/ticketshop
       repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
     id: GetVenues
     path: src/DbRepository/VenueRepository.cs
-    startLine: 76
+    startLine: 77
   assemblies:
   - DbRepository
   namespace: TicketApi.Db
@@ -250,11 +250,11 @@ items:
   source:
     remote:
       path: src/DbRepository/VenueRepository.cs
-      branch: restapi
+      branch: features/ticketshop
       repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
     id: UpdateVenue
     path: src/DbRepository/VenueRepository.cs
-    startLine: 99
+    startLine: 100
   assemblies:
   - DbRepository
   namespace: TicketApi.Db
@@ -287,11 +287,11 @@ items:
   source:
     remote:
       path: src/DbRepository/VenueRepository.cs
-      branch: restapi
+      branch: features/ticketshop
       repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
     id: FindVenues
     path: src/DbRepository/VenueRepository.cs
-    startLine: 122
+    startLine: 123
   assemblies:
   - DbRepository
   namespace: TicketApi.Db

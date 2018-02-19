@@ -62,7 +62,7 @@ namespace TicketApi.Db
             return false;
         }
 
-        public List<EventDate> FindEventDates(string searchStr)
+        public List<FullEventDate> FindFullEventDates(string searchStr)
         {
             var query = String.Format(@"SELECT * FROM TicketEventDates ted
                         JOIN TicketEvents te ON ted.TicketEventID = te.TicketEventID
@@ -77,11 +77,12 @@ namespace TicketApi.Db
             using (var connection = new SqlConnection(_connectionString))
             {
                 connection.Open();
-                var result = connection.Query<EventDate>(query).ToList();
+                var result = connection.Query<FullEventDate>(query).ToList();
 
                 return result;
             }
         }
+        
 
         public int GetSoldTicketCount(int id)
         {
@@ -179,6 +180,32 @@ namespace TicketApi.Db
                 return result;
             }
         }
+        public List<FullEventDate> GetFullEventDatesByEventId(int eventId, int offset = 0, int maxLimit = 20)
+        {
+
+            if (maxLimit > 30)
+            {
+                maxLimit = 30;
+            }
+
+            var query = @"SELECT * FROM TicketEventDates ted
+                        JOIN TicketEvents te ON ted.TicketEventID = te.TicketEventID
+                        JOIN Venues v ON ted.VenueID = v.VenueID
+                        WHERE ted.TicketEventID = @eventId AND EventStartDateTime > CURRENT_TIMESTAMP
+                        ORDER BY EventStartDateTime ASC
+                        OFFSET @offset ROWS
+                        FETCH NEXT @maxLimit ROWS ONLY";
+
+            using (var connection = new SqlConnection(_connectionString))
+            {
+                connection.Open();
+                var result = connection.Query<FullEventDate>(query, new { eventId, offset, maxLimit }).ToList();
+
+                return result;
+            }
+        }
+        
+
         public FullEventDate GetFullEventDateById(int id)
         {
             var query = @"SELECT * FROM TicketEventDates ted

@@ -8,12 +8,17 @@ namespace TicketShop.RestApiClient.Model
         /// <summary>
         /// Gets or Sets TicketID
         /// </summary>
-        public int TicketID { get; set; }
+        public int? TicketID { get; set; }
 
         /// <summary>
         /// Gets or Sets TicketEventDateID
         /// </summary>
         public int TicketEventDateID { get; set; }
+
+        /// <summary>
+        /// Gets or Sets TransactionID
+        /// </summary>
+        public int? TransactionID { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -25,6 +30,7 @@ namespace TicketShop.RestApiClient.Model
             sb.Append("class Ticket {\n");
             sb.Append("  TicketID: ").Append(TicketID).Append("\n");
             sb.Append("  TicketEventDateID: ").Append(TicketEventDateID).Append("\n");
+            sb.Append("  TransactionID: ").Append(TransactionID).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
