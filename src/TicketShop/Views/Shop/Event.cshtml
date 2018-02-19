@@ -1,0 +1,71 @@
+﻿@model TicketShop.Models.ViewModels.ShopEventDatesViewModel
+
+
+
+
+
+<div class="row">
+    <div class="col-xs-8 col-xs-offset-2">
+        <form asp-controller="shop" asp-action="find" method="post" id="search_form">
+            <div class="input-group input-group-lg">
+                <input type="hidden" name="search_param" value="eventdate" id="search_param">
+                <input type="text" class="form-control" name="search_query" placeholder="Search term...">
+                <span class="input-group-btn">
+                    <button class="btn btn-default" type="button" id="search_submit"><span class="glyphicon glyphicon-search"></span></button>
+                </span>
+            </div>
+        </form>
+    </div>
+</div>
+
+<h2>@ViewData["Title"]</h2>
+<hr />
+
+
+@if (Model.FullEventDates == null || Model.FullEventDates.Count() == 0)
+{
+    <h3>No Event Dates Found</h3>
+}
+else
+{
+    @foreach (var ed in Model.FullEventDates)
+    {
+        if (String.IsNullOrEmpty(ed.EventImagePath))
+        {
+            ed.EventImagePath = "Images/placeholder.png";
+
+        }
+
+        <div class="media">
+            <div class="media-left">
+                <img class="media-object eventdate" src="@(ViewData["ApiBaseUrl"] + ed.EventImagePath)" alt="@ed.EventName"/>
+            </div>
+            <div class="media-body">
+                <h4 class="media-heading">
+                    @ed.EventName - @ed.EventStartDateTime.ToString("yy / MM / dd  -  H:mm");
+                </h4>
+                <p>@Html.Raw(ed.EventHtmlDescription)</p>
+                
+                    <p>Venue: @ed.VenueName, @ed.Address, @ed.City, @ed.Country )</p>
+                    <p>Price: @ed.Price</p>
+                    <button class="btn btn-default addToCartBtn" value="@ed.TicketEventDateID" type="button">Add to Cart</button>
+                
+            </div>
+        </div>
+        <hr/>
+
+    }
+}
+
+
+
+@section Scripts {
+    <script>
+        $(document).ready(function (e) {
+            $('#search_submit').click(function (e) {
+                e.preventDefault();
+                $('#search_form').submit();
+            });
+        });
+    </script>
+}

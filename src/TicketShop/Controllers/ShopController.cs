@@ -52,15 +52,24 @@ namespace TicketShop.Controllers
 
         public IActionResult Event(int id)
         {
-            var api = new EventApi(_apiSettings.ApiBaseUrl);
+            //var api = new EventApi(_apiSettings.ApiBaseUrl);
 
-            var model = new ShopEventsViewModel();
-            model.Events = new List<Event>();
-            var ev = api.GetEventById(id);
-            model.Events.Add(ev);
-            
+            //var model = new ShopEventsViewModel();
+            //model.Events = new List<Event>();
+            //var ev = api.GetEventById(id);
+            //model.Events.Add(ev);
+            var api = new EventDateApi(_apiSettings.ApiBaseUrl);
+            var offset = 0;
+            var maxLimit = 30;
+
+            var model = new ShopEventDatesViewModel
+            {
+                FullEventDates = api.GetFullEventDatesByEventId(id, offset, maxLimit)
+            };
+
             ViewData["ApiBaseUrl"] = _apiSettings.ApiBaseUrl;
 
+           
             return View(model);
         }
 
@@ -89,7 +98,7 @@ namespace TicketShop.Controllers
 
             ViewData["ApiBaseUrl"] = _apiSettings.ApiBaseUrl;
 
-            return View("EventDates", model);
+            return View("Event", model);
         }
 
         //public IActionResult EventDate(int eventDateId)
