@@ -181,6 +181,9 @@ namespace TicketShop.Controllers
                     ViewData["Title"] = "Events";
                 }
             }
+
+            ViewData["ApiBaseUrl"] = _apiSettings.ApiBaseUrl;
+
             return View("Find", model);
         }
 

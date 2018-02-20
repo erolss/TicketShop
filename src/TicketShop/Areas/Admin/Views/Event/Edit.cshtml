@@ -3,7 +3,13 @@
     ViewData["Title"] = "Update Event";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
-
+<hr />
+<ul class="nav nav-pills">
+    <li role="presentation"><a asp-area="admin" asp-controller="event" asp-action="index">Event Index</a></li>
+    <li role="presentation"><a asp-area="admin" asp-controller="event" asp-action="create">Create event</a></li>
+    <li role="presentation" class="active"><a href="#">Edit event</a></li>
+</ul>
+<hr />
 
 <h2>@ViewData["Title"]</h2>
 <div class="row">

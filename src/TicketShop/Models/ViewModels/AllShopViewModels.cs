@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Threading.Tasks;
 using TicketShop.RestApiClient.Model;
@@ -64,7 +65,8 @@ namespace TicketShop.Models.ViewModels
         public string PaymentStatus { get; set; }
         
         public string PaymentReference { get; set; }
-        
+        [Required]
+        [EmailAddress]
         public string BuyerEmail { get; set; }
         
         public string BuyerUserId { get; set; }
