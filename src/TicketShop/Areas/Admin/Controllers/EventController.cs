@@ -51,11 +51,18 @@ namespace TicketShop.Areas.Admin.Controllers
         // POST: Event/Create
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create(IFormCollection collection)
+        public ActionResult Create(Event item)
         {
             try
             {
-                // TODO: Add insert logic here
+                var api = new EventApi(_apiSettings.ApiBaseUrl);
+
+                var model = api.AddEvent(item);
+
+                ViewData["Title"] = "Events";
+                ViewData["ApiBaseUrl"] = _apiSettings.ApiBaseUrl;
+
+                //return View(model);
 
                 return RedirectToAction(nameof(Index));
             }
@@ -105,7 +112,12 @@ namespace TicketShop.Areas.Admin.Controllers
         // GET: Event/Delete/5
         public ActionResult Delete(int id)
         {
-            return View();
+            var api = new EventApi(_apiSettings.ApiBaseUrl);
+
+            var model = api.DeleteEvent(id);
+
+            return RedirectToAction(nameof(Index));
+            
         }
 
         // POST: Event/Delete/5
