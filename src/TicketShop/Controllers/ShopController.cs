@@ -62,10 +62,10 @@ namespace TicketShop.Controllers
             var offset = 0;
             var maxLimit = 30;
 
-            var model = new ShopEventDatesViewModel
-            {
-                FullEventDates = api.GetFullEventDatesByEventId(id, offset, maxLimit)
-            };
+            var model = new ShopEventDatesViewModel();
+
+            model.FullEventDates = api.GetFullEventDatesByEventId(id, offset, maxLimit);
+            
 
             ViewData["ApiBaseUrl"] = _apiSettings.ApiBaseUrl;
 

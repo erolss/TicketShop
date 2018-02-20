@@ -196,7 +196,7 @@ namespace TicketShop.Controllers
 
         }
 
-        public int EmptyCart(int eventDateId)
+        public IActionResult EmptyCart(int eventDateId)
         {
             var session = HttpContext.Session;
 
@@ -209,7 +209,7 @@ namespace TicketShop.Controllers
                 session.Set("Cart", order);
             }
 
-            return order.Cart.Count();
+            return RedirectToAction("Index", "Home");
 
         }
 
