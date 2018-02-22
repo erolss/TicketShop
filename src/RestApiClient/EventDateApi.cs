@@ -102,6 +102,7 @@ namespace TicketShop.RestApiClient
             return response.Data;
         }
 
+
         public List<EventDate> GetEventDates(int offset = 0, int maxLimit = 20)
         {
             var client = new RestClient(_baseUrl);
