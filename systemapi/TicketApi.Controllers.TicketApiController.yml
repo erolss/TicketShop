@@ -7,6 +7,7 @@ items:
   children:
   - TicketApi.Controllers.TicketApiController.#ctor(Microsoft.Extensions.Options.IOptions{TicketApi.Settings.CustomSettings})
   - TicketApi.Controllers.TicketApiController.AddTicket(TicketApi.Db.Models.Ticket)
+  - TicketApi.Controllers.TicketApiController.AddTicketOrder(TicketApi.Db.Models.Ticket)
   - TicketApi.Controllers.TicketApiController.DeleteTicket(TicketApi.Db.Models.Ticket)
   - TicketApi.Controllers.TicketApiController.GetFullTicketById(System.Nullable{System.Int32})
   - TicketApi.Controllers.TicketApiController.GetTicketById(System.Nullable{System.Int32})
@@ -24,7 +25,7 @@ items:
     remote:
       path: src/TicketApi/Controllers/TicketApi.cs
       branch: features/ticketshop
-      repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
+      repo: https://github.com/erolss/TicketShop.git
     id: TicketApiController
     path: src/TicketApi/Controllers/TicketApi.cs
     startLine: 45
@@ -236,7 +237,7 @@ items:
     remote:
       path: src/TicketApi/Controllers/TicketApi.cs
       branch: features/ticketshop
-      repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
+      repo: https://github.com/erolss/TicketShop.git
     id: .ctor
     path: src/TicketApi/Controllers/TicketApi.cs
     startLine: 51
@@ -272,7 +273,7 @@ items:
     remote:
       path: src/TicketApi/Controllers/TicketApi.cs
       branch: features/ticketshop
-      repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
+      repo: https://github.com/erolss/TicketShop.git
     id: AddTicket
     path: src/TicketApi/Controllers/TicketApi.cs
     startLine: 64
@@ -356,6 +357,105 @@ items:
   modifiers.vb:
   - Public
   - Overridable
+- uid: TicketApi.Controllers.TicketApiController.AddTicketOrder(TicketApi.Db.Models.Ticket)
+  commentId: M:TicketApi.Controllers.TicketApiController.AddTicketOrder(TicketApi.Db.Models.Ticket)
+  id: AddTicketOrder(TicketApi.Db.Models.Ticket)
+  parent: TicketApi.Controllers.TicketApiController
+  langs:
+  - csharp
+  - vb
+  name: AddTicketOrder(Ticket)
+  nameWithType: TicketApiController.AddTicketOrder(Ticket)
+  fullName: TicketApi.Controllers.TicketApiController.AddTicketOrder(TicketApi.Db.Models.Ticket)
+  type: Method
+  source:
+    remote:
+      path: src/TicketApi/Controllers/TicketApi.cs
+      branch: features/ticketshop
+      repo: https://github.com/erolss/TicketShop.git
+    id: AddTicketOrder
+    path: src/TicketApi/Controllers/TicketApi.cs
+    startLine: 84
+  assemblies:
+  - TicketApi
+  namespace: TicketApi.Controllers
+  summary: "\nAdd a ticket and connect transaction in system\n"
+  example: []
+  syntax:
+    content: >-
+      [HttpPost]
+
+      [Route("/api/ticketorder")]
+
+      [SwaggerOperation("AddTicketOrder")]
+
+      [SwaggerResponse(200, typeof (object), "Ticket created")]
+
+      [SwaggerResponse(400, typeof (object), "Bad request")]
+
+      public virtual IActionResult AddTicketOrder([FromBody] Ticket ticket)
+    parameters:
+    - id: ticket
+      type: TicketApi.Db.Models.Ticket
+      description: ticket object
+      attributes:
+      - type: Microsoft.AspNetCore.Mvc.FromBodyAttribute
+        ctor: Microsoft.AspNetCore.Mvc.FromBodyAttribute.#ctor
+        arguments: []
+    return:
+      type: Microsoft.AspNetCore.Mvc.IActionResult
+      description: A ticket object
+    content.vb: >-
+      <HttpPost>
+
+      <Route("/api/ticketorder")>
+
+      <SwaggerOperation("AddTicketOrder")>
+
+      <SwaggerResponse(200, GetType(Object), "Ticket created")>
+
+      <SwaggerResponse(400, GetType(Object), "Bad request")>
+
+      Public Overridable Function AddTicketOrder(ticket As Ticket) As IActionResult
+  overload: TicketApi.Controllers.TicketApiController.AddTicketOrder*
+  attributes:
+  - type: Microsoft.AspNetCore.Mvc.HttpPostAttribute
+    ctor: Microsoft.AspNetCore.Mvc.HttpPostAttribute.#ctor
+    arguments: []
+  - type: Microsoft.AspNetCore.Mvc.RouteAttribute
+    ctor: Microsoft.AspNetCore.Mvc.RouteAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: /api/ticketorder
+  - type: Swashbuckle.AspNetCore.SwaggerGen.SwaggerOperationAttribute
+    ctor: Swashbuckle.AspNetCore.SwaggerGen.SwaggerOperationAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: AddTicketOrder
+  - type: Swashbuckle.AspNetCore.SwaggerGen.SwaggerResponseAttribute
+    ctor: Swashbuckle.AspNetCore.SwaggerGen.SwaggerResponseAttribute.#ctor(System.Int32,System.Type,System.String)
+    arguments:
+    - type: System.Int32
+      value: 200
+    - type: System.Type
+      value: System.Object
+    - type: System.String
+      value: Ticket created
+  - type: Swashbuckle.AspNetCore.SwaggerGen.SwaggerResponseAttribute
+    ctor: Swashbuckle.AspNetCore.SwaggerGen.SwaggerResponseAttribute.#ctor(System.Int32,System.Type,System.String)
+    arguments:
+    - type: System.Int32
+      value: 400
+    - type: System.Type
+      value: System.Object
+    - type: System.String
+      value: Bad request
+  modifiers.csharp:
+  - public
+  - virtual
+  modifiers.vb:
+  - Public
+  - Overridable
 - uid: TicketApi.Controllers.TicketApiController.DeleteTicket(TicketApi.Db.Models.Ticket)
   commentId: M:TicketApi.Controllers.TicketApiController.DeleteTicket(TicketApi.Db.Models.Ticket)
   id: DeleteTicket(TicketApi.Db.Models.Ticket)
@@ -371,10 +471,10 @@ items:
     remote:
       path: src/TicketApi/Controllers/TicketApi.cs
       branch: features/ticketshop
-      repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
+      repo: https://github.com/erolss/TicketShop.git
     id: DeleteTicket
     path: src/TicketApi/Controllers/TicketApi.cs
-    startLine: 87
+    startLine: 107
   assemblies:
   - TicketApi
   namespace: TicketApi.Controllers
@@ -470,10 +570,10 @@ items:
     remote:
       path: src/TicketApi/Controllers/TicketApi.cs
       branch: features/ticketshop
-      repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
+      repo: https://github.com/erolss/TicketShop.git
     id: GetTicketById
     path: src/TicketApi/Controllers/TicketApi.cs
-    startLine: 110
+    startLine: 130
   assemblies:
   - TicketApi
   namespace: TicketApi.Controllers
@@ -572,10 +672,10 @@ items:
     remote:
       path: src/TicketApi/Controllers/TicketApi.cs
       branch: features/ticketshop
-      repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
+      repo: https://github.com/erolss/TicketShop.git
     id: GetTickets
     path: src/TicketApi/Controllers/TicketApi.cs
-    startLine: 132
+    startLine: 152
   assemblies:
   - TicketApi
   namespace: TicketApi.Controllers
@@ -685,10 +785,10 @@ items:
     remote:
       path: src/TicketApi/Controllers/TicketApi.cs
       branch: features/ticketshop
-      repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
+      repo: https://github.com/erolss/TicketShop.git
     id: GetTicketsByUserId
     path: src/TicketApi/Controllers/TicketApi.cs
-    startLine: 158
+    startLine: 178
   assemblies:
   - TicketApi
   namespace: TicketApi.Controllers
@@ -798,10 +898,10 @@ items:
     remote:
       path: src/TicketApi/Controllers/TicketApi.cs
       branch: features/ticketshop
-      repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
+      repo: https://github.com/erolss/TicketShop.git
     id: UpdateTicket
     path: src/TicketApi/Controllers/TicketApi.cs
-    startLine: 181
+    startLine: 201
   assemblies:
   - TicketApi
   namespace: TicketApi.Controllers
@@ -897,10 +997,10 @@ items:
     remote:
       path: src/TicketApi/Controllers/TicketApi.cs
       branch: features/ticketshop
-      repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
+      repo: https://github.com/erolss/TicketShop.git
     id: GetFullTicketById
     path: src/TicketApi/Controllers/TicketApi.cs
-    startLine: 204
+    startLine: 224
   assemblies:
   - TicketApi
   namespace: TicketApi.Controllers
@@ -11180,6 +11280,12 @@ references:
   name: TicketApi.Db.Models
   nameWithType: TicketApi.Db.Models
   fullName: TicketApi.Db.Models
+- uid: TicketApi.Controllers.TicketApiController.AddTicketOrder*
+  commentId: Overload:TicketApi.Controllers.TicketApiController.AddTicketOrder
+  isExternal: false
+  name: AddTicketOrder
+  nameWithType: TicketApiController.AddTicketOrder
+  fullName: TicketApi.Controllers.TicketApiController.AddTicketOrder
 - uid: TicketApi.Controllers.TicketApiController.DeleteTicket*
   commentId: Overload:TicketApi.Controllers.TicketApiController.DeleteTicket
   isExternal: false

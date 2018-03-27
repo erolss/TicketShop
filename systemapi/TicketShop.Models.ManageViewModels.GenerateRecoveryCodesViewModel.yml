@@ -17,12 +17,12 @@ items:
     remote:
       path: src/TicketShop/Models/ManageViewModels/GenerateRecoveryCodesViewModel.cs
       branch: features/ticketshop
-      repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
+      repo: https://github.com/erolss/TicketShop.git
     id: GenerateRecoveryCodesViewModel
     path: src/TicketShop/Models/ManageViewModels/GenerateRecoveryCodesViewModel.cs
     startLine: 8
   assemblies:
-  - TicketShop
+  - Ticketshop
   namespace: TicketShop.Models.ManageViewModels
   syntax:
     content: public class GenerateRecoveryCodesViewModel
@@ -58,12 +58,12 @@ items:
     remote:
       path: src/TicketShop/Models/ManageViewModels/GenerateRecoveryCodesViewModel.cs
       branch: features/ticketshop
-      repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
+      repo: https://github.com/erolss/TicketShop.git
     id: RecoveryCodes
     path: src/TicketShop/Models/ManageViewModels/GenerateRecoveryCodesViewModel.cs
     startLine: 10
   assemblies:
-  - TicketShop
+  - Ticketshop
   namespace: TicketShop.Models.ManageViewModels
   syntax:
     content: public string[] RecoveryCodes { get; set; }

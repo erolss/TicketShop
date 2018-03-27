@@ -23,7 +23,7 @@ items:
     remote:
       path: src/TicketApi/Controllers/TransactionApi.cs
       branch: features/ticketshop
-      repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
+      repo: https://github.com/erolss/TicketShop.git
     id: TransactionApiController
     path: src/TicketApi/Controllers/TransactionApi.cs
     startLine: 45
@@ -235,7 +235,7 @@ items:
     remote:
       path: src/TicketApi/Controllers/TransactionApi.cs
       branch: features/ticketshop
-      repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
+      repo: https://github.com/erolss/TicketShop.git
     id: .ctor
     path: src/TicketApi/Controllers/TransactionApi.cs
     startLine: 50
@@ -271,7 +271,7 @@ items:
     remote:
       path: src/TicketApi/Controllers/TransactionApi.cs
       branch: features/ticketshop
-      repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
+      repo: https://github.com/erolss/TicketShop.git
     id: AddTransaction
     path: src/TicketApi/Controllers/TransactionApi.cs
     startLine: 63
@@ -369,7 +369,7 @@ items:
     remote:
       path: src/TicketApi/Controllers/TransactionApi.cs
       branch: features/ticketshop
-      repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
+      repo: https://github.com/erolss/TicketShop.git
     id: DeleteTransaction
     path: src/TicketApi/Controllers/TransactionApi.cs
     startLine: 87
@@ -468,7 +468,7 @@ items:
     remote:
       path: src/TicketApi/Controllers/TransactionApi.cs
       branch: features/ticketshop
-      repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
+      repo: https://github.com/erolss/TicketShop.git
     id: FindTransactions
     path: src/TicketApi/Controllers/TransactionApi.cs
     startLine: 110
@@ -567,7 +567,7 @@ items:
     remote:
       path: src/TicketApi/Controllers/TransactionApi.cs
       branch: features/ticketshop
-      repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
+      repo: https://github.com/erolss/TicketShop.git
     id: GetTransactionById
     path: src/TicketApi/Controllers/TransactionApi.cs
     startLine: 133
@@ -669,7 +669,7 @@ items:
     remote:
       path: src/TicketApi/Controllers/TransactionApi.cs
       branch: features/ticketshop
-      repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
+      repo: https://github.com/erolss/TicketShop.git
     id: GetTransactions
     path: src/TicketApi/Controllers/TransactionApi.cs
     startLine: 157
@@ -783,7 +783,7 @@ items:
     remote:
       path: src/TicketApi/Controllers/TransactionApi.cs
       branch: features/ticketshop
-      repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
+      repo: https://github.com/erolss/TicketShop.git
     id: UpdateTransaction
     path: src/TicketApi/Controllers/TransactionApi.cs
     startLine: 181

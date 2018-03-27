@@ -19,12 +19,12 @@ items:
     remote:
       path: src/TicketShop/Models/AccountViewModels/RegisterViewModel.cs
       branch: features/ticketshop
-      repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
+      repo: https://github.com/erolss/TicketShop.git
     id: RegisterViewModel
     path: src/TicketShop/Models/AccountViewModels/RegisterViewModel.cs
     startLine: 8
   assemblies:
-  - TicketShop
+  - Ticketshop
   namespace: TicketShop.Models.AccountViewModels
   syntax:
     content: public class RegisterViewModel
@@ -60,12 +60,12 @@ items:
     remote:
       path: src/TicketShop/Models/AccountViewModels/RegisterViewModel.cs
       branch: features/ticketshop
-      repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
+      repo: https://github.com/erolss/TicketShop.git
     id: Email
     path: src/TicketShop/Models/AccountViewModels/RegisterViewModel.cs
     startLine: 10
   assemblies:
-  - TicketShop
+  - Ticketshop
   namespace: TicketShop.Models.AccountViewModels
   syntax:
     content: >-
@@ -123,12 +123,12 @@ items:
     remote:
       path: src/TicketShop/Models/AccountViewModels/RegisterViewModel.cs
       branch: features/ticketshop
-      repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
+      repo: https://github.com/erolss/TicketShop.git
     id: Password
     path: src/TicketShop/Models/AccountViewModels/RegisterViewModel.cs
     startLine: 15
   assemblies:
-  - TicketShop
+  - Ticketshop
   namespace: TicketShop.Models.AccountViewModels
   syntax:
     content: >-
@@ -204,12 +204,12 @@ items:
     remote:
       path: src/TicketShop/Models/AccountViewModels/RegisterViewModel.cs
       branch: features/ticketshop
-      repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
+      repo: https://github.com/erolss/TicketShop.git
     id: ConfirmPassword
     path: src/TicketShop/Models/AccountViewModels/RegisterViewModel.cs
     startLine: 21
   assemblies:
-  - TicketShop
+  - Ticketshop
   namespace: TicketShop.Models.AccountViewModels
   syntax:
     content: >-

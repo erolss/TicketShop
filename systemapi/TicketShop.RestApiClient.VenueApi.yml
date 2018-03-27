@@ -23,7 +23,7 @@ items:
     remote:
       path: src/RestApiClient/VenueApi.cs
       branch: features/ticketshop
-      repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
+      repo: https://github.com/erolss/TicketShop.git
     id: VenueApi
     path: src/RestApiClient/VenueApi.cs
     startLine: 9
@@ -34,6 +34,7 @@ items:
     content: 'public class VenueApi : IVenueApi'
     content.vb: >-
       Public Class VenueApi
+
           Implements IVenueApi
   inheritance:
   - System.Object
@@ -68,7 +69,7 @@ items:
     remote:
       path: src/RestApiClient/VenueApi.cs
       branch: features/ticketshop
-      repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
+      repo: https://github.com/erolss/TicketShop.git
     id: .ctor
     path: src/RestApiClient/VenueApi.cs
     startLine: 13
@@ -101,7 +102,7 @@ items:
     remote:
       path: src/RestApiClient/VenueApi.cs
       branch: features/ticketshop
-      repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
+      repo: https://github.com/erolss/TicketShop.git
     id: AddVenue
     path: src/RestApiClient/VenueApi.cs
     startLine: 18
@@ -138,7 +139,7 @@ items:
     remote:
       path: src/RestApiClient/VenueApi.cs
       branch: features/ticketshop
-      repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
+      repo: https://github.com/erolss/TicketShop.git
     id: DeleteVenue
     path: src/RestApiClient/VenueApi.cs
     startLine: 31
@@ -175,7 +176,7 @@ items:
     remote:
       path: src/RestApiClient/VenueApi.cs
       branch: features/ticketshop
-      repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
+      repo: https://github.com/erolss/TicketShop.git
     id: FindVenues
     path: src/RestApiClient/VenueApi.cs
     startLine: 47
@@ -212,7 +213,7 @@ items:
     remote:
       path: src/RestApiClient/VenueApi.cs
       branch: features/ticketshop
-      repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
+      repo: https://github.com/erolss/TicketShop.git
     id: GetVenueById
     path: src/RestApiClient/VenueApi.cs
     startLine: 60
@@ -249,7 +250,7 @@ items:
     remote:
       path: src/RestApiClient/VenueApi.cs
       branch: features/ticketshop
-      repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
+      repo: https://github.com/erolss/TicketShop.git
     id: GetVenues
     path: src/RestApiClient/VenueApi.cs
     startLine: 76
@@ -288,7 +289,7 @@ items:
     remote:
       path: src/RestApiClient/VenueApi.cs
       branch: features/ticketshop
-      repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
+      repo: https://github.com/erolss/TicketShop.git
     id: UpdateVenue
     path: src/RestApiClient/VenueApi.cs
     startLine: 88

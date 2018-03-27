@@ -18,12 +18,12 @@ items:
     remote:
       path: src/TicketShop/Models/ManageViewModels/RemoveLoginViewModel.cs
       branch: features/ticketshop
-      repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
+      repo: https://github.com/erolss/TicketShop.git
     id: RemoveLoginViewModel
     path: src/TicketShop/Models/ManageViewModels/RemoveLoginViewModel.cs
     startLine: 8
   assemblies:
-  - TicketShop
+  - Ticketshop
   namespace: TicketShop.Models.ManageViewModels
   syntax:
     content: public class RemoveLoginViewModel
@@ -59,12 +59,12 @@ items:
     remote:
       path: src/TicketShop/Models/ManageViewModels/RemoveLoginViewModel.cs
       branch: features/ticketshop
-      repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
+      repo: https://github.com/erolss/TicketShop.git
     id: LoginProvider
     path: src/TicketShop/Models/ManageViewModels/RemoveLoginViewModel.cs
     startLine: 10
   assemblies:
-  - TicketShop
+  - Ticketshop
   namespace: TicketShop.Models.ManageViewModels
   syntax:
     content: public string LoginProvider { get; set; }
@@ -94,12 +94,12 @@ items:
     remote:
       path: src/TicketShop/Models/ManageViewModels/RemoveLoginViewModel.cs
       branch: features/ticketshop
-      repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
+      repo: https://github.com/erolss/TicketShop.git
     id: ProviderKey
     path: src/TicketShop/Models/ManageViewModels/RemoveLoginViewModel.cs
     startLine: 11
   assemblies:
-  - TicketShop
+  - Ticketshop
   namespace: TicketShop.Models.ManageViewModels
   syntax:
     content: public string ProviderKey { get; set; }

@@ -13,6 +13,7 @@ items:
   - TicketApi.Db.Models.Ticket.TicketEventDateID
   - TicketApi.Db.Models.Ticket.TicketID
   - TicketApi.Db.Models.Ticket.ToString
+  - TicketApi.Db.Models.Ticket.TransactionID
   langs:
   - csharp
   - vb
@@ -24,7 +25,7 @@ items:
     remote:
       path: src/DbRepository/Models/Ticket.cs
       branch: features/ticketshop
-      repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
+      repo: https://github.com/erolss/TicketShop.git
     id: Ticket
     path: src/DbRepository/Models/Ticket.cs
     startLine: 9
@@ -34,8 +35,13 @@ items:
   summary: "\n\n"
   example: []
   syntax:
-    content: 'public class Ticket : IEquatable<Ticket>'
+    content: >-
+      [DataContract]
+
+      public class Ticket : IEquatable<Ticket>
     content.vb: >-
+      <DataContract>
+
       Public Class Ticket
           Implements IEquatable(Of Ticket)
   inheritance:
@@ -47,6 +53,10 @@ items:
   - System.Object.GetType
   - System.Object.MemberwiseClone
   - System.Object.ReferenceEquals(System.Object,System.Object)
+  attributes:
+  - type: System.Runtime.Serialization.DataContractAttribute
+    ctor: System.Runtime.Serialization.DataContractAttribute.#ctor
+    arguments: []
   modifiers.csharp:
   - public
   - class
@@ -68,10 +78,10 @@ items:
     remote:
       path: src/DbRepository/Models/Ticket.cs
       branch: features/ticketshop
-      repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
+      repo: https://github.com/erolss/TicketShop.git
     id: TicketID
     path: src/DbRepository/Models/Ticket.cs
-    startLine: 14
+    startLine: 15
   assemblies:
   - DbRepository
   namespace: TicketApi.Db.Models
@@ -119,10 +129,10 @@ items:
     remote:
       path: src/DbRepository/Models/Ticket.cs
       branch: features/ticketshop
-      repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
+      repo: https://github.com/erolss/TicketShop.git
     id: TicketEventDateID
     path: src/DbRepository/Models/Ticket.cs
-    startLine: 20
+    startLine: 21
   assemblies:
   - DbRepository
   namespace: TicketApi.Db.Models
@@ -155,6 +165,57 @@ items:
   - set
   modifiers.vb:
   - Public
+- uid: TicketApi.Db.Models.Ticket.TransactionID
+  commentId: P:TicketApi.Db.Models.Ticket.TransactionID
+  id: TransactionID
+  parent: TicketApi.Db.Models.Ticket
+  langs:
+  - csharp
+  - vb
+  name: TransactionID
+  nameWithType: Ticket.TransactionID
+  fullName: TicketApi.Db.Models.Ticket.TransactionID
+  type: Property
+  source:
+    remote:
+      path: src/DbRepository/Models/Ticket.cs
+      branch: features/ticketshop
+      repo: https://github.com/erolss/TicketShop.git
+    id: TransactionID
+    path: src/DbRepository/Models/Ticket.cs
+    startLine: 26
+  assemblies:
+  - DbRepository
+  namespace: TicketApi.Db.Models
+  summary: "\nGets or Sets TransactionID\n"
+  example: []
+  syntax:
+    content: >-
+      [DataMember(Name = "transactionID")]
+
+      public int TransactionID { get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: >-
+      <DataMember(Name:="transactionID")>
+
+      Public Property TransactionID As Integer
+  overload: TicketApi.Db.Models.Ticket.TransactionID*
+  attributes:
+  - type: System.Runtime.Serialization.DataMemberAttribute
+    ctor: System.Runtime.Serialization.DataMemberAttribute.#ctor
+    arguments: []
+    namedArguments:
+    - name: Name
+      type: System.String
+      value: transactionID
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
 - uid: TicketApi.Db.Models.Ticket.ToString
   commentId: M:TicketApi.Db.Models.Ticket.ToString
   id: ToString
@@ -170,10 +231,10 @@ items:
     remote:
       path: src/DbRepository/Models/Ticket.cs
       branch: features/ticketshop
-      repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
+      repo: https://github.com/erolss/TicketShop.git
     id: ToString
     path: src/DbRepository/Models/Ticket.cs
-    startLine: 27
+    startLine: 32
   assemblies:
   - DbRepository
   namespace: TicketApi.Db.Models
@@ -208,10 +269,10 @@ items:
     remote:
       path: src/DbRepository/Models/Ticket.cs
       branch: features/ticketshop
-      repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
+      repo: https://github.com/erolss/TicketShop.git
     id: Equals
     path: src/DbRepository/Models/Ticket.cs
-    startLine: 51
+    startLine: 57
   assemblies:
   - DbRepository
   namespace: TicketApi.Db.Models
@@ -250,10 +311,10 @@ items:
     remote:
       path: src/DbRepository/Models/Ticket.cs
       branch: features/ticketshop
-      repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
+      repo: https://github.com/erolss/TicketShop.git
     id: Equals
     path: src/DbRepository/Models/Ticket.cs
-    startLine: 65
+    startLine: 71
   assemblies:
   - DbRepository
   namespace: TicketApi.Db.Models
@@ -291,10 +352,10 @@ items:
     remote:
       path: src/DbRepository/Models/Ticket.cs
       branch: features/ticketshop
-      repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
+      repo: https://github.com/erolss/TicketShop.git
     id: GetHashCode
     path: src/DbRepository/Models/Ticket.cs
-    startLine: 89
+    startLine: 95
   assemblies:
   - DbRepository
   namespace: TicketApi.Db.Models
@@ -329,10 +390,10 @@ items:
     remote:
       path: src/DbRepository/Models/Ticket.cs
       branch: features/ticketshop
-      repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
+      repo: https://github.com/erolss/TicketShop.git
     id: op_Equality
     path: src/DbRepository/Models/Ticket.cs
-    startLine: 106
+    startLine: 112
   assemblies:
   - DbRepository
   namespace: TicketApi.Db.Models
@@ -368,10 +429,10 @@ items:
     remote:
       path: src/DbRepository/Models/Ticket.cs
       branch: features/ticketshop
-      repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
+      repo: https://github.com/erolss/TicketShop.git
     id: op_Inequality
     path: src/DbRepository/Models/Ticket.cs
-    startLine: 111
+    startLine: 117
   assemblies:
   - DbRepository
   namespace: TicketApi.Db.Models
@@ -764,6 +825,19 @@ references:
   name: TicketEventDateID
   nameWithType: Ticket.TicketEventDateID
   fullName: TicketApi.Db.Models.Ticket.TicketEventDateID
+- uid: TicketApi.Db.Models.Ticket.TransactionID*
+  commentId: Overload:TicketApi.Db.Models.Ticket.TransactionID
+  isExternal: false
+  name: TransactionID
+  nameWithType: Ticket.TransactionID
+  fullName: TicketApi.Db.Models.Ticket.TransactionID
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  name: Int32
+  nameWithType: Int32
+  fullName: System.Int32
 - uid: System.Object.ToString
   commentId: M:System.Object.ToString
   parent: System.Object
@@ -985,13 +1059,6 @@ references:
   name: GetHashCode
   nameWithType: Ticket.GetHashCode
   fullName: TicketApi.Db.Models.Ticket.GetHashCode
-- uid: System.Int32
-  commentId: T:System.Int32
-  parent: System
-  isExternal: true
-  name: Int32
-  nameWithType: Int32
-  fullName: System.Int32
 - uid: TicketApi.Db.Models.Ticket.op_Equality*
   commentId: Overload:TicketApi.Db.Models.Ticket.op_Equality
   isExternal: false

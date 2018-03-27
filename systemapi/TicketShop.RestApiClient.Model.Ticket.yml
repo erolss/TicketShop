@@ -9,6 +9,7 @@ items:
   - TicketShop.RestApiClient.Model.Ticket.TicketID
   - TicketShop.RestApiClient.Model.Ticket.ToJson
   - TicketShop.RestApiClient.Model.Ticket.ToString
+  - TicketShop.RestApiClient.Model.Ticket.TransactionID
   langs:
   - csharp
   - vb
@@ -20,7 +21,7 @@ items:
     remote:
       path: src/RestApiClient/Model/Ticket.cs
       branch: features/ticketshop
-      repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
+      repo: https://github.com/erolss/TicketShop.git
     id: Ticket
     path: src/RestApiClient/Model/Ticket.cs
     startLine: 5
@@ -60,7 +61,7 @@ items:
     remote:
       path: src/RestApiClient/Model/Ticket.cs
       branch: features/ticketshop
-      repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
+      repo: https://github.com/erolss/TicketShop.git
     id: TicketID
     path: src/RestApiClient/Model/Ticket.cs
     startLine: 10
@@ -70,11 +71,11 @@ items:
   summary: "\nGets or Sets TicketID\n"
   example: []
   syntax:
-    content: public int TicketID { get; set; }
+    content: public int ? TicketID { get; set; }
     parameters: []
     return:
-      type: System.Int32
-    content.vb: Public Property TicketID As Integer
+      type: System.Nullable{System.Int32}
+    content.vb: Public Property TicketID As Integer?
   overload: TicketShop.RestApiClient.Model.Ticket.TicketID*
   modifiers.csharp:
   - public
@@ -97,7 +98,7 @@ items:
     remote:
       path: src/RestApiClient/Model/Ticket.cs
       branch: features/ticketshop
-      repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
+      repo: https://github.com/erolss/TicketShop.git
     id: TicketEventDateID
     path: src/RestApiClient/Model/Ticket.cs
     startLine: 15
@@ -119,6 +120,43 @@ items:
   - set
   modifiers.vb:
   - Public
+- uid: TicketShop.RestApiClient.Model.Ticket.TransactionID
+  commentId: P:TicketShop.RestApiClient.Model.Ticket.TransactionID
+  id: TransactionID
+  parent: TicketShop.RestApiClient.Model.Ticket
+  langs:
+  - csharp
+  - vb
+  name: TransactionID
+  nameWithType: Ticket.TransactionID
+  fullName: TicketShop.RestApiClient.Model.Ticket.TransactionID
+  type: Property
+  source:
+    remote:
+      path: src/RestApiClient/Model/Ticket.cs
+      branch: features/ticketshop
+      repo: https://github.com/erolss/TicketShop.git
+    id: TransactionID
+    path: src/RestApiClient/Model/Ticket.cs
+    startLine: 20
+  assemblies:
+  - RestApiClient
+  namespace: TicketShop.RestApiClient.Model
+  summary: "\nGets or Sets TransactionID\n"
+  example: []
+  syntax:
+    content: public int ? TransactionID { get; set; }
+    parameters: []
+    return:
+      type: System.Nullable{System.Int32}
+    content.vb: Public Property TransactionID As Integer?
+  overload: TicketShop.RestApiClient.Model.Ticket.TransactionID*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
 - uid: TicketShop.RestApiClient.Model.Ticket.ToString
   commentId: M:TicketShop.RestApiClient.Model.Ticket.ToString
   id: ToString
@@ -134,10 +172,10 @@ items:
     remote:
       path: src/RestApiClient/Model/Ticket.cs
       branch: features/ticketshop
-      repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
+      repo: https://github.com/erolss/TicketShop.git
     id: ToString
     path: src/RestApiClient/Model/Ticket.cs
-    startLine: 21
+    startLine: 26
   assemblies:
   - RestApiClient
   namespace: TicketShop.RestApiClient.Model
@@ -172,10 +210,10 @@ items:
     remote:
       path: src/RestApiClient/Model/Ticket.cs
       branch: features/ticketshop
-      repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
+      repo: https://github.com/erolss/TicketShop.git
     id: ToJson
     path: src/RestApiClient/Model/Ticket.cs
-    startLine: 35
+    startLine: 41
   assemblies:
   - RestApiClient
   namespace: TicketShop.RestApiClient.Model
@@ -466,6 +504,95 @@ references:
   name: TicketID
   nameWithType: Ticket.TicketID
   fullName: TicketShop.RestApiClient.Model.Ticket.TicketID
+- uid: System.Nullable{System.Int32}
+  commentId: T:System.Nullable{System.Int32}
+  parent: System
+  definition: System.Nullable`1
+  name: Nullable<Int32>
+  nameWithType: Nullable<Int32>
+  fullName: System.Nullable<System.Int32>
+  nameWithType.vb: Nullable(Of Int32)
+  fullName.vb: System.Nullable(Of System.Int32)
+  name.vb: Nullable(Of Int32)
+  spec.csharp:
+  - uid: System.Nullable`1
+    name: Nullable
+    nameWithType: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.Int32
+    name: Int32
+    nameWithType: Int32
+    fullName: System.Int32
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Nullable`1
+    name: Nullable
+    nameWithType: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.Int32
+    name: Int32
+    nameWithType: Int32
+    fullName: System.Int32
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Nullable`1
+  commentId: T:System.Nullable`1
+  isExternal: true
+  name: Nullable<T>
+  nameWithType: Nullable<T>
+  fullName: System.Nullable<T>
+  nameWithType.vb: Nullable(Of T)
+  fullName.vb: System.Nullable(Of T)
+  name.vb: Nullable(Of T)
+  spec.csharp:
+  - uid: System.Nullable`1
+    name: Nullable
+    nameWithType: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Nullable`1
+    name: Nullable
+    nameWithType: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: TicketShop.RestApiClient.Model.Ticket.TicketEventDateID*
+  commentId: Overload:TicketShop.RestApiClient.Model.Ticket.TicketEventDateID
+  isExternal: false
+  name: TicketEventDateID
+  nameWithType: Ticket.TicketEventDateID
+  fullName: TicketShop.RestApiClient.Model.Ticket.TicketEventDateID
 - uid: System.Int32
   commentId: T:System.Int32
   parent: System
@@ -473,12 +600,12 @@ references:
   name: Int32
   nameWithType: Int32
   fullName: System.Int32
-- uid: TicketShop.RestApiClient.Model.Ticket.TicketEventDateID*
-  commentId: Overload:TicketShop.RestApiClient.Model.Ticket.TicketEventDateID
+- uid: TicketShop.RestApiClient.Model.Ticket.TransactionID*
+  commentId: Overload:TicketShop.RestApiClient.Model.Ticket.TransactionID
   isExternal: false
-  name: TicketEventDateID
-  nameWithType: Ticket.TicketEventDateID
-  fullName: TicketShop.RestApiClient.Model.Ticket.TicketEventDateID
+  name: TransactionID
+  nameWithType: Ticket.TransactionID
+  fullName: TicketShop.RestApiClient.Model.Ticket.TransactionID
 - uid: System.Object.ToString
   commentId: M:System.Object.ToString
   parent: System.Object

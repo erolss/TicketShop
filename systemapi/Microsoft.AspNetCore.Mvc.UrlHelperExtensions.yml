@@ -18,12 +18,12 @@ items:
     remote:
       path: src/TicketShop/Extensions/UrlHelperExtensions.cs
       branch: features/ticketshop
-      repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
+      repo: https://github.com/erolss/TicketShop.git
     id: UrlHelperExtensions
     path: src/TicketShop/Extensions/UrlHelperExtensions.cs
     startLine: 8
   assemblies:
-  - TicketShop
+  - Ticketshop
   namespace: Microsoft.AspNetCore.Mvc
   syntax:
     content: public static class UrlHelperExtensions
@@ -61,12 +61,12 @@ items:
     remote:
       path: src/TicketShop/Extensions/UrlHelperExtensions.cs
       branch: features/ticketshop
-      repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
+      repo: https://github.com/erolss/TicketShop.git
     id: EmailConfirmationLink
     path: src/TicketShop/Extensions/UrlHelperExtensions.cs
     startLine: 10
   assemblies:
-  - TicketShop
+  - Ticketshop
   namespace: Microsoft.AspNetCore.Mvc
   syntax:
     content: public static string EmailConfirmationLink(this IUrlHelper urlHelper, string userId, string code, string scheme)
@@ -108,12 +108,12 @@ items:
     remote:
       path: src/TicketShop/Extensions/UrlHelperExtensions.cs
       branch: features/ticketshop
-      repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
+      repo: https://github.com/erolss/TicketShop.git
     id: ResetPasswordCallbackLink
     path: src/TicketShop/Extensions/UrlHelperExtensions.cs
     startLine: 19
   assemblies:
-  - TicketShop
+  - Ticketshop
   namespace: Microsoft.AspNetCore.Mvc
   syntax:
     content: public static string ResetPasswordCallbackLink(this IUrlHelper urlHelper, string userId, string code, string scheme)

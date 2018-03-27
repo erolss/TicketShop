@@ -21,18 +21,20 @@ items:
     remote:
       path: src/TicketShop/Controllers/HomeController.cs
       branch: features/ticketshop
-      repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
+      repo: https://github.com/erolss/TicketShop.git
     id: HomeController
     path: src/TicketShop/Controllers/HomeController.cs
     startLine: 15
   assemblies:
-  - TicketShop
+  - Ticketshop
   namespace: TicketShop.Controllers
   syntax:
     content: 'public class HomeController : Controller, IActionFilter, IAsyncActionFilter, IFilterMetadata, IDisposable'
     content.vb: >-
       Public Class HomeController
+
           Inherits Controller
+
           Implements IActionFilter, IAsyncActionFilter, IFilterMetadata, IDisposable
   inheritance:
   - System.Object
@@ -231,12 +233,12 @@ items:
     remote:
       path: src/TicketShop/Controllers/HomeController.cs
       branch: features/ticketshop
-      repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
+      repo: https://github.com/erolss/TicketShop.git
     id: .ctor
     path: src/TicketShop/Controllers/HomeController.cs
     startLine: 19
   assemblies:
-  - TicketShop
+  - Ticketshop
   namespace: TicketShop.Controllers
   syntax:
     content: public HomeController(IOptions<CustomSettings> settings)
@@ -267,12 +269,12 @@ items:
     remote:
       path: src/TicketShop/Controllers/HomeController.cs
       branch: features/ticketshop
-      repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
+      repo: https://github.com/erolss/TicketShop.git
     id: Index
     path: src/TicketShop/Controllers/HomeController.cs
     startLine: 25
   assemblies:
-  - TicketShop
+  - Ticketshop
   namespace: TicketShop.Controllers
   syntax:
     content: public IActionResult Index()
@@ -299,12 +301,12 @@ items:
     remote:
       path: src/TicketShop/Controllers/HomeController.cs
       branch: features/ticketshop
-      repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
+      repo: https://github.com/erolss/TicketShop.git
     id: About
     path: src/TicketShop/Controllers/HomeController.cs
     startLine: 40
   assemblies:
-  - TicketShop
+  - Ticketshop
   namespace: TicketShop.Controllers
   syntax:
     content: public IActionResult About()
@@ -331,12 +333,12 @@ items:
     remote:
       path: src/TicketShop/Controllers/HomeController.cs
       branch: features/ticketshop
-      repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
+      repo: https://github.com/erolss/TicketShop.git
     id: Contact
     path: src/TicketShop/Controllers/HomeController.cs
     startLine: 47
   assemblies:
-  - TicketShop
+  - Ticketshop
   namespace: TicketShop.Controllers
   syntax:
     content: public IActionResult Contact()
@@ -363,12 +365,12 @@ items:
     remote:
       path: src/TicketShop/Controllers/HomeController.cs
       branch: features/ticketshop
-      repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
+      repo: https://github.com/erolss/TicketShop.git
     id: Error
     path: src/TicketShop/Controllers/HomeController.cs
     startLine: 54
   assemblies:
-  - TicketShop
+  - Ticketshop
   namespace: TicketShop.Controllers
   syntax:
     content: public IActionResult Error()

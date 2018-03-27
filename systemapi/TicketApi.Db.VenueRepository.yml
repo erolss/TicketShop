@@ -23,7 +23,7 @@ items:
     remote:
       path: src/DbRepository/VenueRepository.cs
       branch: features/ticketshop
-      repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
+      repo: https://github.com/erolss/TicketShop.git
     id: VenueRepository
     path: src/DbRepository/VenueRepository.cs
     startLine: 14
@@ -68,7 +68,7 @@ items:
     remote:
       path: src/DbRepository/VenueRepository.cs
       branch: features/ticketshop
-      repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
+      repo: https://github.com/erolss/TicketShop.git
     id: .ctor
     path: src/DbRepository/VenueRepository.cs
     startLine: 18
@@ -101,7 +101,7 @@ items:
     remote:
       path: src/DbRepository/VenueRepository.cs
       branch: features/ticketshop
-      repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
+      repo: https://github.com/erolss/TicketShop.git
     id: AddVenue
     path: src/DbRepository/VenueRepository.cs
     startLine: 22
@@ -138,7 +138,7 @@ items:
     remote:
       path: src/DbRepository/VenueRepository.cs
       branch: features/ticketshop
-      repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
+      repo: https://github.com/erolss/TicketShop.git
     id: DeleteVenue
     path: src/DbRepository/VenueRepository.cs
     startLine: 44
@@ -175,7 +175,7 @@ items:
     remote:
       path: src/DbRepository/VenueRepository.cs
       branch: features/ticketshop
-      repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
+      repo: https://github.com/erolss/TicketShop.git
     id: GetVenueById
     path: src/DbRepository/VenueRepository.cs
     startLine: 61
@@ -212,7 +212,7 @@ items:
     remote:
       path: src/DbRepository/VenueRepository.cs
       branch: features/ticketshop
-      repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
+      repo: https://github.com/erolss/TicketShop.git
     id: GetVenues
     path: src/DbRepository/VenueRepository.cs
     startLine: 77
@@ -251,7 +251,7 @@ items:
     remote:
       path: src/DbRepository/VenueRepository.cs
       branch: features/ticketshop
-      repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
+      repo: https://github.com/erolss/TicketShop.git
     id: UpdateVenue
     path: src/DbRepository/VenueRepository.cs
     startLine: 100
@@ -288,7 +288,7 @@ items:
     remote:
       path: src/DbRepository/VenueRepository.cs
       branch: features/ticketshop
-      repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
+      repo: https://github.com/erolss/TicketShop.git
     id: FindVenues
     path: src/DbRepository/VenueRepository.cs
     startLine: 123

@@ -9,6 +9,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DatabaseRepositoryTestclien
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DbRepository", "DbRepository\DbRepository.csproj", "{89194CF6-81B3-43E9-B920-7AB4CC681C41}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PaymentProvider", "PaymentProvider\PaymentProvider.csproj", "{A00E3325-B5E6-4D70-B0A7-C4DDADAF8FE0}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{89194CF6-81B3-43E9-B920-7AB4CC681C41}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{89194CF6-81B3-43E9-B920-7AB4CC681C41}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{89194CF6-81B3-43E9-B920-7AB4CC681C41}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A00E3325-B5E6-4D70-B0A7-C4DDADAF8FE0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A00E3325-B5E6-4D70-B0A7-C4DDADAF8FE0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A00E3325-B5E6-4D70-B0A7-C4DDADAF8FE0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A00E3325-B5E6-4D70-B0A7-C4DDADAF8FE0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

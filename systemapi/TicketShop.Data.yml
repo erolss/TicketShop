@@ -13,7 +13,7 @@ items:
   fullName: TicketShop.Data
   type: Namespace
   assemblies:
-  - TicketShop
+  - Ticketshop
 references:
 - uid: TicketShop.Data.ApplicationDbContext
   commentId: T:TicketShop.Data.ApplicationDbContext

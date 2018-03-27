@@ -6,6 +6,7 @@ items:
   parent: TicketShop.RestApiClient.Interface
   children:
   - TicketShop.RestApiClient.Interface.ITicketApi.AddTicket(TicketShop.RestApiClient.Model.Ticket)
+  - TicketShop.RestApiClient.Interface.ITicketApi.AddTicketOrder(TicketShop.RestApiClient.Model.Ticket)
   - TicketShop.RestApiClient.Interface.ITicketApi.DeleteTicket(System.Int32)
   - TicketShop.RestApiClient.Interface.ITicketApi.GetFullTicketById(System.Int32)
   - TicketShop.RestApiClient.Interface.ITicketApi.GetFullTicketsByTransactionId(System.Int32)
@@ -25,7 +26,7 @@ items:
     remote:
       path: src/RestApiClient/Interface/ITicketApi.cs
       branch: features/ticketshop
-      repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
+      repo: https://github.com/erolss/TicketShop.git
     id: ITicketApi
     path: src/RestApiClient/Interface/ITicketApi.cs
     startLine: 5
@@ -56,7 +57,7 @@ items:
     remote:
       path: src/RestApiClient/Interface/ITicketApi.cs
       branch: features/ticketshop
-      repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
+      repo: https://github.com/erolss/TicketShop.git
     id: AddTicket
     path: src/RestApiClient/Interface/ITicketApi.cs
     startLine: 12
@@ -72,6 +73,41 @@ items:
       type: TicketShop.RestApiClient.Model.Ticket
     content.vb: Function AddTicket(ticket As Ticket) As Ticket
   overload: TicketShop.RestApiClient.Interface.ITicketApi.AddTicket*
+- uid: TicketShop.RestApiClient.Interface.ITicketApi.AddTicketOrder(TicketShop.RestApiClient.Model.Ticket)
+  commentId: M:TicketShop.RestApiClient.Interface.ITicketApi.AddTicketOrder(TicketShop.RestApiClient.Model.Ticket)
+  id: AddTicketOrder(TicketShop.RestApiClient.Model.Ticket)
+  parent: TicketShop.RestApiClient.Interface.ITicketApi
+  langs:
+  - csharp
+  - vb
+  name: AddTicketOrder(Ticket)
+  nameWithType: ITicketApi.AddTicketOrder(Ticket)
+  fullName: TicketShop.RestApiClient.Interface.ITicketApi.AddTicketOrder(TicketShop.RestApiClient.Model.Ticket)
+  type: Method
+  source:
+    remote:
+      path: src/RestApiClient/Interface/ITicketApi.cs
+      branch: features/ticketshop
+      repo: https://github.com/erolss/TicketShop.git
+    id: AddTicketOrder
+    path: src/RestApiClient/Interface/ITicketApi.cs
+    startLine: 19
+  assemblies:
+  - RestApiClient
+  namespace: TicketShop.RestApiClient.Interface
+  summary: "\nAdd new ticket and connect to transaction\n"
+  example: []
+  syntax:
+    content: Ticket AddTicketOrder(Ticket ticket)
+    parameters:
+    - id: ticket
+      type: TicketShop.RestApiClient.Model.Ticket
+      description: ticket object
+    return:
+      type: TicketShop.RestApiClient.Model.Ticket
+      description: Ticket object
+    content.vb: Function AddTicketOrder(ticket As Ticket) As Ticket
+  overload: TicketShop.RestApiClient.Interface.ITicketApi.AddTicketOrder*
 - uid: TicketShop.RestApiClient.Interface.ITicketApi.UpdateTicket(TicketShop.RestApiClient.Model.Ticket)
   commentId: M:TicketShop.RestApiClient.Interface.ITicketApi.UpdateTicket(TicketShop.RestApiClient.Model.Ticket)
   id: UpdateTicket(TicketShop.RestApiClient.Model.Ticket)
@@ -87,10 +123,10 @@ items:
     remote:
       path: src/RestApiClient/Interface/ITicketApi.cs
       branch: features/ticketshop
-      repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
+      repo: https://github.com/erolss/TicketShop.git
     id: UpdateTicket
     path: src/RestApiClient/Interface/ITicketApi.cs
-    startLine: 19
+    startLine: 26
   assemblies:
   - RestApiClient
   namespace: TicketShop.RestApiClient.Interface
@@ -122,10 +158,10 @@ items:
     remote:
       path: src/RestApiClient/Interface/ITicketApi.cs
       branch: features/ticketshop
-      repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
+      repo: https://github.com/erolss/TicketShop.git
     id: DeleteTicket
     path: src/RestApiClient/Interface/ITicketApi.cs
-    startLine: 26
+    startLine: 33
   assemblies:
   - RestApiClient
   namespace: TicketShop.RestApiClient.Interface
@@ -156,10 +192,10 @@ items:
     remote:
       path: src/RestApiClient/Interface/ITicketApi.cs
       branch: features/ticketshop
-      repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
+      repo: https://github.com/erolss/TicketShop.git
     id: GetTickets
     path: src/RestApiClient/Interface/ITicketApi.cs
-    startLine: 34
+    startLine: 41
   assemblies:
   - RestApiClient
   namespace: TicketShop.RestApiClient.Interface
@@ -194,10 +230,10 @@ items:
     remote:
       path: src/RestApiClient/Interface/ITicketApi.cs
       branch: features/ticketshop
-      repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
+      repo: https://github.com/erolss/TicketShop.git
     id: GetTicketsByUserId
     path: src/RestApiClient/Interface/ITicketApi.cs
-    startLine: 43
+    startLine: 50
   assemblies:
   - RestApiClient
   namespace: TicketShop.RestApiClient.Interface
@@ -235,10 +271,10 @@ items:
     remote:
       path: src/RestApiClient/Interface/ITicketApi.cs
       branch: features/ticketshop
-      repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
+      repo: https://github.com/erolss/TicketShop.git
     id: GetTicketsByTransactionId
     path: src/RestApiClient/Interface/ITicketApi.cs
-    startLine: 52
+    startLine: 59
   assemblies:
   - RestApiClient
   namespace: TicketShop.RestApiClient.Interface
@@ -276,10 +312,10 @@ items:
     remote:
       path: src/RestApiClient/Interface/ITicketApi.cs
       branch: features/ticketshop
-      repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
+      repo: https://github.com/erolss/TicketShop.git
     id: GetTicketById
     path: src/RestApiClient/Interface/ITicketApi.cs
-    startLine: 58
+    startLine: 65
   assemblies:
   - RestApiClient
   namespace: TicketShop.RestApiClient.Interface
@@ -311,10 +347,10 @@ items:
     remote:
       path: src/RestApiClient/Interface/ITicketApi.cs
       branch: features/ticketshop
-      repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
+      repo: https://github.com/erolss/TicketShop.git
     id: GetFullTicketById
     path: src/RestApiClient/Interface/ITicketApi.cs
-    startLine: 60
+    startLine: 67
   assemblies:
   - RestApiClient
   namespace: TicketShop.RestApiClient.Interface
@@ -342,10 +378,10 @@ items:
     remote:
       path: src/RestApiClient/Interface/ITicketApi.cs
       branch: features/ticketshop
-      repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
+      repo: https://github.com/erolss/TicketShop.git
     id: GetFullTicketsByTransactionId
     path: src/RestApiClient/Interface/ITicketApi.cs
-    startLine: 61
+    startLine: 68
   assemblies:
   - RestApiClient
   namespace: TicketShop.RestApiClient.Interface
@@ -384,6 +420,12 @@ references:
   name: TicketShop.RestApiClient.Model
   nameWithType: TicketShop.RestApiClient.Model
   fullName: TicketShop.RestApiClient.Model
+- uid: TicketShop.RestApiClient.Interface.ITicketApi.AddTicketOrder*
+  commentId: Overload:TicketShop.RestApiClient.Interface.ITicketApi.AddTicketOrder
+  isExternal: false
+  name: AddTicketOrder
+  nameWithType: ITicketApi.AddTicketOrder
+  fullName: TicketShop.RestApiClient.Interface.ITicketApi.AddTicketOrder
 - uid: TicketShop.RestApiClient.Interface.ITicketApi.UpdateTicket*
   commentId: Overload:TicketShop.RestApiClient.Interface.ITicketApi.UpdateTicket
   isExternal: false

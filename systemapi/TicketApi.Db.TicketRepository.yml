@@ -7,6 +7,7 @@ items:
   children:
   - TicketApi.Db.TicketRepository.#ctor(System.String)
   - TicketApi.Db.TicketRepository.AddTicket(TicketApi.Db.Models.Ticket)
+  - TicketApi.Db.TicketRepository.AddTicketOrder(TicketApi.Db.Models.Ticket)
   - TicketApi.Db.TicketRepository.DeleteTicket(System.Int32)
   - TicketApi.Db.TicketRepository.GetFullTicketById(System.Int32)
   - TicketApi.Db.TicketRepository.GetFullTicketsByTransactionId(System.Int32)
@@ -26,7 +27,7 @@ items:
     remote:
       path: src/DbRepository/TicketRepository.cs
       branch: features/ticketshop
-      repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
+      repo: https://github.com/erolss/TicketShop.git
     id: TicketRepository
     path: src/DbRepository/TicketRepository.cs
     startLine: 12
@@ -71,7 +72,7 @@ items:
     remote:
       path: src/DbRepository/TicketRepository.cs
       branch: features/ticketshop
-      repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
+      repo: https://github.com/erolss/TicketShop.git
     id: .ctor
     path: src/DbRepository/TicketRepository.cs
     startLine: 16
@@ -104,7 +105,7 @@ items:
     remote:
       path: src/DbRepository/TicketRepository.cs
       branch: features/ticketshop
-      repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
+      repo: https://github.com/erolss/TicketShop.git
     id: AddTicket
     path: src/DbRepository/TicketRepository.cs
     startLine: 21
@@ -126,6 +127,43 @@ items:
   - public
   modifiers.vb:
   - Public
+- uid: TicketApi.Db.TicketRepository.AddTicketOrder(TicketApi.Db.Models.Ticket)
+  commentId: M:TicketApi.Db.TicketRepository.AddTicketOrder(TicketApi.Db.Models.Ticket)
+  id: AddTicketOrder(TicketApi.Db.Models.Ticket)
+  parent: TicketApi.Db.TicketRepository
+  langs:
+  - csharp
+  - vb
+  name: AddTicketOrder(Ticket)
+  nameWithType: TicketRepository.AddTicketOrder(Ticket)
+  fullName: TicketApi.Db.TicketRepository.AddTicketOrder(TicketApi.Db.Models.Ticket)
+  type: Method
+  source:
+    remote:
+      path: src/DbRepository/TicketRepository.cs
+      branch: features/ticketshop
+      repo: https://github.com/erolss/TicketShop.git
+    id: AddTicketOrder
+    path: src/DbRepository/TicketRepository.cs
+    startLine: 37
+  assemblies:
+  - DbRepository
+  namespace: TicketApi.Db
+  syntax:
+    content: public Ticket AddTicketOrder(Ticket ticket)
+    parameters:
+    - id: ticket
+      type: TicketApi.Db.Models.Ticket
+    return:
+      type: TicketApi.Db.Models.Ticket
+    content.vb: Public Function AddTicketOrder(ticket As Ticket) As Ticket
+  overload: TicketApi.Db.TicketRepository.AddTicketOrder*
+  implements:
+  - TicketApi.Db.Interface.ITicketRepository.AddTicketOrder(TicketApi.Db.Models.Ticket)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
 - uid: TicketApi.Db.TicketRepository.UpdateTicket(TicketApi.Db.Models.Ticket)
   commentId: M:TicketApi.Db.TicketRepository.UpdateTicket(TicketApi.Db.Models.Ticket)
   id: UpdateTicket(TicketApi.Db.Models.Ticket)
@@ -141,10 +179,10 @@ items:
     remote:
       path: src/DbRepository/TicketRepository.cs
       branch: features/ticketshop
-      repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
+      repo: https://github.com/erolss/TicketShop.git
     id: UpdateTicket
     path: src/DbRepository/TicketRepository.cs
-    startLine: 37
+    startLine: 58
   assemblies:
   - DbRepository
   namespace: TicketApi.Db
@@ -178,10 +216,10 @@ items:
     remote:
       path: src/DbRepository/TicketRepository.cs
       branch: features/ticketshop
-      repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
+      repo: https://github.com/erolss/TicketShop.git
     id: DeleteTicket
     path: src/DbRepository/TicketRepository.cs
-    startLine: 54
+    startLine: 75
   assemblies:
   - DbRepository
   namespace: TicketApi.Db
@@ -215,10 +253,10 @@ items:
     remote:
       path: src/DbRepository/TicketRepository.cs
       branch: features/ticketshop
-      repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
+      repo: https://github.com/erolss/TicketShop.git
     id: GetTickets
     path: src/DbRepository/TicketRepository.cs
-    startLine: 71
+    startLine: 92
   assemblies:
   - DbRepository
   namespace: TicketApi.Db
@@ -254,10 +292,10 @@ items:
     remote:
       path: src/DbRepository/TicketRepository.cs
       branch: features/ticketshop
-      repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
+      repo: https://github.com/erolss/TicketShop.git
     id: GetTicketsByUserId
     path: src/DbRepository/TicketRepository.cs
-    startLine: 92
+    startLine: 113
   assemblies:
   - DbRepository
   namespace: TicketApi.Db
@@ -295,10 +333,10 @@ items:
     remote:
       path: src/DbRepository/TicketRepository.cs
       branch: features/ticketshop
-      repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
+      repo: https://github.com/erolss/TicketShop.git
     id: GetTicketsByTransactionId
     path: src/DbRepository/TicketRepository.cs
-    startLine: 120
+    startLine: 141
   assemblies:
   - DbRepository
   namespace: TicketApi.Db
@@ -336,10 +374,10 @@ items:
     remote:
       path: src/DbRepository/TicketRepository.cs
       branch: features/ticketshop
-      repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
+      repo: https://github.com/erolss/TicketShop.git
     id: GetTicketById
     path: src/DbRepository/TicketRepository.cs
-    startLine: 144
+    startLine: 165
   assemblies:
   - DbRepository
   namespace: TicketApi.Db
@@ -373,10 +411,10 @@ items:
     remote:
       path: src/DbRepository/TicketRepository.cs
       branch: features/ticketshop
-      repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
+      repo: https://github.com/erolss/TicketShop.git
     id: GetFullTicketById
     path: src/DbRepository/TicketRepository.cs
-    startLine: 158
+    startLine: 179
   assemblies:
   - DbRepository
   namespace: TicketApi.Db
@@ -410,10 +448,10 @@ items:
     remote:
       path: src/DbRepository/TicketRepository.cs
       branch: features/ticketshop
-      repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
+      repo: https://github.com/erolss/TicketShop.git
     id: GetFullTicketsByTransactionId
     path: src/DbRepository/TicketRepository.cs
-    startLine: 179
+    startLine: 200
   assemblies:
   - DbRepository
   namespace: TicketApi.Db
@@ -813,6 +851,49 @@ references:
   name: TicketApi.Db.Models
   nameWithType: TicketApi.Db.Models
   fullName: TicketApi.Db.Models
+- uid: TicketApi.Db.TicketRepository.AddTicketOrder*
+  commentId: Overload:TicketApi.Db.TicketRepository.AddTicketOrder
+  isExternal: false
+  name: AddTicketOrder
+  nameWithType: TicketRepository.AddTicketOrder
+  fullName: TicketApi.Db.TicketRepository.AddTicketOrder
+- uid: TicketApi.Db.Interface.ITicketRepository.AddTicketOrder(TicketApi.Db.Models.Ticket)
+  commentId: M:TicketApi.Db.Interface.ITicketRepository.AddTicketOrder(TicketApi.Db.Models.Ticket)
+  parent: TicketApi.Db.Interface.ITicketRepository
+  isExternal: false
+  name: AddTicketOrder(Ticket)
+  nameWithType: ITicketRepository.AddTicketOrder(Ticket)
+  fullName: TicketApi.Db.Interface.ITicketRepository.AddTicketOrder(TicketApi.Db.Models.Ticket)
+  spec.csharp:
+  - uid: TicketApi.Db.Interface.ITicketRepository.AddTicketOrder(TicketApi.Db.Models.Ticket)
+    name: AddTicketOrder
+    nameWithType: ITicketRepository.AddTicketOrder
+    fullName: TicketApi.Db.Interface.ITicketRepository.AddTicketOrder
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: TicketApi.Db.Models.Ticket
+    name: Ticket
+    nameWithType: Ticket
+    fullName: TicketApi.Db.Models.Ticket
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: TicketApi.Db.Interface.ITicketRepository.AddTicketOrder(TicketApi.Db.Models.Ticket)
+    name: AddTicketOrder
+    nameWithType: ITicketRepository.AddTicketOrder
+    fullName: TicketApi.Db.Interface.ITicketRepository.AddTicketOrder
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: TicketApi.Db.Models.Ticket
+    name: Ticket
+    nameWithType: Ticket
+    fullName: TicketApi.Db.Models.Ticket
+  - name: )
+    nameWithType: )
+    fullName: )
 - uid: TicketApi.Db.TicketRepository.UpdateTicket*
   commentId: Overload:TicketApi.Db.TicketRepository.UpdateTicket
   isExternal: false

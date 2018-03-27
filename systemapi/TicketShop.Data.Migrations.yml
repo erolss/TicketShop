@@ -13,7 +13,7 @@ items:
   fullName: TicketShop.Data.Migrations
   type: Namespace
   assemblies:
-  - TicketShop
+  - Ticketshop
 references:
 - uid: TicketShop.Data.Migrations.CreateIdentitySchema
   commentId: T:TicketShop.Data.Migrations.CreateIdentitySchema

@@ -20,12 +20,12 @@ items:
     remote:
       path: src/TicketShop/Startup.cs
       branch: features/ticketshop
-      repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
+      repo: https://github.com/erolss/TicketShop.git
     id: Startup
     path: src/TicketShop/Startup.cs
     startLine: 17
   assemblies:
-  - TicketShop
+  - Ticketshop
   namespace: TicketShop
   syntax:
     content: public class Startup
@@ -61,12 +61,12 @@ items:
     remote:
       path: src/TicketShop/Startup.cs
       branch: features/ticketshop
-      repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
+      repo: https://github.com/erolss/TicketShop.git
     id: .ctor
     path: src/TicketShop/Startup.cs
     startLine: 19
   assemblies:
-  - TicketShop
+  - Ticketshop
   namespace: TicketShop
   syntax:
     content: public Startup(IConfiguration configuration)
@@ -94,12 +94,12 @@ items:
     remote:
       path: src/TicketShop/Startup.cs
       branch: features/ticketshop
-      repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
+      repo: https://github.com/erolss/TicketShop.git
     id: Configuration
     path: src/TicketShop/Startup.cs
     startLine: 24
   assemblies:
-  - TicketShop
+  - Ticketshop
   namespace: TicketShop
   syntax:
     content: public IConfiguration Configuration { get; }
@@ -129,12 +129,12 @@ items:
     remote:
       path: src/TicketShop/Startup.cs
       branch: features/ticketshop
-      repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
+      repo: https://github.com/erolss/TicketShop.git
     id: ConfigureServices
     path: src/TicketShop/Startup.cs
     startLine: 27
   assemblies:
-  - TicketShop
+  - Ticketshop
   namespace: TicketShop
   syntax:
     content: public void ConfigureServices(IServiceCollection services)
@@ -162,12 +162,12 @@ items:
     remote:
       path: src/TicketShop/Startup.cs
       branch: features/ticketshop
-      repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
+      repo: https://github.com/erolss/TicketShop.git
     id: Configure
     path: src/TicketShop/Startup.cs
     startLine: 53
   assemblies:
-  - TicketShop
+  - Ticketshop
   namespace: TicketShop
   syntax:
     content: public void Configure(IApplicationBuilder app, IHostingEnvironment env, IServiceProvider serviceProvider)

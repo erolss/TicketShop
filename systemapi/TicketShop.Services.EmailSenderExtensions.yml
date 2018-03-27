@@ -17,12 +17,12 @@ items:
     remote:
       path: src/TicketShop/Extensions/EmailSenderExtensions.cs
       branch: features/ticketshop
-      repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
+      repo: https://github.com/erolss/TicketShop.git
     id: EmailSenderExtensions
     path: src/TicketShop/Extensions/EmailSenderExtensions.cs
     startLine: 9
   assemblies:
-  - TicketShop
+  - Ticketshop
   namespace: TicketShop.Services
   syntax:
     content: public static class EmailSenderExtensions
@@ -60,12 +60,12 @@ items:
     remote:
       path: src/TicketShop/Extensions/EmailSenderExtensions.cs
       branch: features/ticketshop
-      repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
+      repo: https://github.com/erolss/TicketShop.git
     id: SendEmailConfirmationAsync
     path: src/TicketShop/Extensions/EmailSenderExtensions.cs
     startLine: 11
   assemblies:
-  - TicketShop
+  - Ticketshop
   namespace: TicketShop.Services
   syntax:
     content: public static Task SendEmailConfirmationAsync(this IEmailSender emailSender, string email, string link)

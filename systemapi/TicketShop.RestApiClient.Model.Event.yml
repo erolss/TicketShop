@@ -22,7 +22,7 @@ items:
     remote:
       path: src/RestApiClient/Model/Event.cs
       branch: features/ticketshop
-      repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
+      repo: https://github.com/erolss/TicketShop.git
     id: Event
     path: src/RestApiClient/Model/Event.cs
     startLine: 9
@@ -62,7 +62,7 @@ items:
     remote:
       path: src/RestApiClient/Model/Event.cs
       branch: features/ticketshop
-      repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
+      repo: https://github.com/erolss/TicketShop.git
     id: TicketEventID
     path: src/RestApiClient/Model/Event.cs
     startLine: 14
@@ -99,7 +99,7 @@ items:
     remote:
       path: src/RestApiClient/Model/Event.cs
       branch: features/ticketshop
-      repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
+      repo: https://github.com/erolss/TicketShop.git
     id: EventName
     path: src/RestApiClient/Model/Event.cs
     startLine: 19
@@ -136,7 +136,7 @@ items:
     remote:
       path: src/RestApiClient/Model/Event.cs
       branch: features/ticketshop
-      repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
+      repo: https://github.com/erolss/TicketShop.git
     id: EventHtmlDescription
     path: src/RestApiClient/Model/Event.cs
     startLine: 24
@@ -173,7 +173,7 @@ items:
     remote:
       path: src/RestApiClient/Model/Event.cs
       branch: features/ticketshop
-      repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
+      repo: https://github.com/erolss/TicketShop.git
     id: EventImagePath
     path: src/RestApiClient/Model/Event.cs
     startLine: 29
@@ -210,7 +210,7 @@ items:
     remote:
       path: src/RestApiClient/Model/Event.cs
       branch: features/ticketshop
-      repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
+      repo: https://github.com/erolss/TicketShop.git
     id: ToString
     path: src/RestApiClient/Model/Event.cs
     startLine: 35
@@ -248,7 +248,7 @@ items:
     remote:
       path: src/RestApiClient/Model/Event.cs
       branch: features/ticketshop
-      repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
+      repo: https://github.com/erolss/TicketShop.git
     id: ToJson
     path: src/RestApiClient/Model/Event.cs
     startLine: 51

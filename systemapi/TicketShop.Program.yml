@@ -18,12 +18,12 @@ items:
     remote:
       path: src/TicketShop/Program.cs
       branch: features/ticketshop
-      repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
+      repo: https://github.com/erolss/TicketShop.git
     id: Program
     path: src/TicketShop/Program.cs
     startLine: 12
   assemblies:
-  - TicketShop
+  - Ticketshop
   namespace: TicketShop
   syntax:
     content: public class Program
@@ -59,12 +59,12 @@ items:
     remote:
       path: src/TicketShop/Program.cs
       branch: features/ticketshop
-      repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
+      repo: https://github.com/erolss/TicketShop.git
     id: Main
     path: src/TicketShop/Program.cs
     startLine: 14
   assemblies:
-  - TicketShop
+  - Ticketshop
   namespace: TicketShop
   syntax:
     content: public static void Main(string[] args)
@@ -97,12 +97,12 @@ items:
     remote:
       path: src/TicketShop/Program.cs
       branch: features/ticketshop
-      repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
+      repo: https://github.com/erolss/TicketShop.git
     id: BuildWebHost
     path: src/TicketShop/Program.cs
     startLine: 19
   assemblies:
-  - TicketShop
+  - Ticketshop
   namespace: TicketShop
   syntax:
     content: public static IWebHost BuildWebHost(string[] args)

@@ -17,12 +17,12 @@ items:
     remote:
       path: src/TicketShop/Models/Order.cs
       branch: features/ticketshop
-      repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
+      repo: https://github.com/erolss/TicketShop.git
     id: Order
     path: src/TicketShop/Models/Order.cs
     startLine: 7
   assemblies:
-  - TicketShop
+  - Ticketshop
   namespace: TicketShop.Models
   syntax:
     content: public class Order
@@ -58,12 +58,12 @@ items:
     remote:
       path: src/TicketShop/Models/Order.cs
       branch: features/ticketshop
-      repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
+      repo: https://github.com/erolss/TicketShop.git
     id: Cart
     path: src/TicketShop/Models/Order.cs
     startLine: 9
   assemblies:
-  - TicketShop
+  - Ticketshop
   namespace: TicketShop.Models
   syntax:
     content: public List<int> Cart { get; set; }

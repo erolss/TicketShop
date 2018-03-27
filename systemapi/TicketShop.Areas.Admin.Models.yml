@@ -1,0 +1,51 @@
+### YamlMime:ManagedReference
+items:
+- uid: TicketShop.Areas.Admin.Models
+  commentId: N:TicketShop.Areas.Admin.Models
+  id: TicketShop.Areas.Admin.Models
+  children:
+  - TicketShop.Areas.Admin.Models.EventDatesViewModel
+  - TicketShop.Areas.Admin.Models.EventsViewModel
+  - TicketShop.Areas.Admin.Models.EventViewModel
+  - TicketShop.Areas.Admin.Models.FindViewModel
+  - TicketShop.Areas.Admin.Models.VenuesViewModel
+  langs:
+  - csharp
+  - vb
+  name: TicketShop.Areas.Admin.Models
+  nameWithType: TicketShop.Areas.Admin.Models
+  fullName: TicketShop.Areas.Admin.Models
+  type: Namespace
+  assemblies:
+  - Ticketshop
+references:
+- uid: TicketShop.Areas.Admin.Models.EventsViewModel
+  commentId: T:TicketShop.Areas.Admin.Models.EventsViewModel
+  isExternal: false
+  name: EventsViewModel
+  nameWithType: EventsViewModel
+  fullName: TicketShop.Areas.Admin.Models.EventsViewModel
+- uid: TicketShop.Areas.Admin.Models.EventViewModel
+  commentId: T:TicketShop.Areas.Admin.Models.EventViewModel
+  isExternal: false
+  name: EventViewModel
+  nameWithType: EventViewModel
+  fullName: TicketShop.Areas.Admin.Models.EventViewModel
+- uid: TicketShop.Areas.Admin.Models.EventDatesViewModel
+  commentId: T:TicketShop.Areas.Admin.Models.EventDatesViewModel
+  isExternal: false
+  name: EventDatesViewModel
+  nameWithType: EventDatesViewModel
+  fullName: TicketShop.Areas.Admin.Models.EventDatesViewModel
+- uid: TicketShop.Areas.Admin.Models.VenuesViewModel
+  commentId: T:TicketShop.Areas.Admin.Models.VenuesViewModel
+  isExternal: false
+  name: VenuesViewModel
+  nameWithType: VenuesViewModel
+  fullName: TicketShop.Areas.Admin.Models.VenuesViewModel
+- uid: TicketShop.Areas.Admin.Models.FindViewModel
+  commentId: T:TicketShop.Areas.Admin.Models.FindViewModel
+  isExternal: false
+  name: FindViewModel
+  nameWithType: FindViewModel
+  fullName: TicketShop.Areas.Admin.Models.FindViewModel

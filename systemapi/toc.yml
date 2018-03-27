@@ -105,6 +105,34 @@
     name: Program
   - uid: TicketShop.Startup
     name: Startup
+- uid: TicketShop.Areas.Admin.Controllers
+  name: TicketShop.Areas.Admin.Controllers
+  items:
+  - uid: TicketShop.Areas.Admin.Controllers.AdminController
+    name: AdminController
+  - uid: TicketShop.Areas.Admin.Controllers.EventController
+    name: EventController
+  - uid: TicketShop.Areas.Admin.Controllers.EventDateController
+    name: EventDateController
+  - uid: TicketShop.Areas.Admin.Controllers.TicketController
+    name: TicketController
+  - uid: TicketShop.Areas.Admin.Controllers.TransactionController
+    name: TransactionController
+  - uid: TicketShop.Areas.Admin.Controllers.VenueController
+    name: VenueController
+- uid: TicketShop.Areas.Admin.Models
+  name: TicketShop.Areas.Admin.Models
+  items:
+  - uid: TicketShop.Areas.Admin.Models.EventDatesViewModel
+    name: EventDatesViewModel
+  - uid: TicketShop.Areas.Admin.Models.EventsViewModel
+    name: EventsViewModel
+  - uid: TicketShop.Areas.Admin.Models.EventViewModel
+    name: EventViewModel
+  - uid: TicketShop.Areas.Admin.Models.FindViewModel
+    name: FindViewModel
+  - uid: TicketShop.Areas.Admin.Models.VenuesViewModel
+    name: VenuesViewModel
 - uid: TicketShop.Controllers
   name: TicketShop.Controllers
   items:
@@ -118,19 +146,6 @@
     name: OrderController
   - uid: TicketShop.Controllers.ShopController
     name: ShopController
-- uid: TicketShop.Controllers.Admin
-  name: TicketShop.Controllers.Admin
-  items:
-  - uid: TicketShop.Controllers.Admin.EventController
-    name: EventController
-  - uid: TicketShop.Controllers.Admin.EventDateController
-    name: EventDateController
-  - uid: TicketShop.Controllers.Admin.TicketController
-    name: TicketController
-  - uid: TicketShop.Controllers.Admin.TransactionController
-    name: TransactionController
-  - uid: TicketShop.Controllers.Admin.VenueController
-    name: VenueController
 - uid: TicketShop.Data
   name: TicketShop.Data
   items:
@@ -167,11 +182,6 @@
     name: RegisterViewModel
   - uid: TicketShop.Models.AccountViewModels.ResetPasswordViewModel
     name: ResetPasswordViewModel
-- uid: TicketShop.Models.Admin
-  name: TicketShop.Models.Admin
-  items:
-  - uid: TicketShop.Models.Admin.AllAdminViewModels
-    name: AllAdminViewModels
 - uid: TicketShop.Models.ManageViewModels
   name: TicketShop.Models.ManageViewModels
   items:

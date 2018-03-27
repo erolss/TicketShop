@@ -15,7 +15,7 @@ items:
   fullName: TicketShop.Services
   type: Namespace
   assemblies:
-  - TicketShop
+  - Ticketshop
 references:
 - uid: TicketShop.Services.EmailSenderExtensions
   commentId: T:TicketShop.Services.EmailSenderExtensions

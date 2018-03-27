@@ -20,12 +20,12 @@ items:
     remote:
       path: src/TicketShop/Models/ManageViewModels/ExternalLoginsViewModel.cs
       branch: features/ticketshop
-      repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
+      repo: https://github.com/erolss/TicketShop.git
     id: ExternalLoginsViewModel
     path: src/TicketShop/Models/ManageViewModels/ExternalLoginsViewModel.cs
     startLine: 9
   assemblies:
-  - TicketShop
+  - Ticketshop
   namespace: TicketShop.Models.ManageViewModels
   syntax:
     content: public class ExternalLoginsViewModel
@@ -61,12 +61,12 @@ items:
     remote:
       path: src/TicketShop/Models/ManageViewModels/ExternalLoginsViewModel.cs
       branch: features/ticketshop
-      repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
+      repo: https://github.com/erolss/TicketShop.git
     id: CurrentLogins
     path: src/TicketShop/Models/ManageViewModels/ExternalLoginsViewModel.cs
     startLine: 11
   assemblies:
-  - TicketShop
+  - Ticketshop
   namespace: TicketShop.Models.ManageViewModels
   syntax:
     content: public IList<UserLoginInfo> CurrentLogins { get; set; }
@@ -96,12 +96,12 @@ items:
     remote:
       path: src/TicketShop/Models/ManageViewModels/ExternalLoginsViewModel.cs
       branch: features/ticketshop
-      repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
+      repo: https://github.com/erolss/TicketShop.git
     id: OtherLogins
     path: src/TicketShop/Models/ManageViewModels/ExternalLoginsViewModel.cs
     startLine: 13
   assemblies:
-  - TicketShop
+  - Ticketshop
   namespace: TicketShop.Models.ManageViewModels
   syntax:
     content: public IList<AuthenticationScheme> OtherLogins { get; set; }
@@ -131,12 +131,12 @@ items:
     remote:
       path: src/TicketShop/Models/ManageViewModels/ExternalLoginsViewModel.cs
       branch: features/ticketshop
-      repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
+      repo: https://github.com/erolss/TicketShop.git
     id: ShowRemoveButton
     path: src/TicketShop/Models/ManageViewModels/ExternalLoginsViewModel.cs
     startLine: 15
   assemblies:
-  - TicketShop
+  - Ticketshop
   namespace: TicketShop.Models.ManageViewModels
   syntax:
     content: public bool ShowRemoveButton { get; set; }
@@ -166,12 +166,12 @@ items:
     remote:
       path: src/TicketShop/Models/ManageViewModels/ExternalLoginsViewModel.cs
       branch: features/ticketshop
-      repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
+      repo: https://github.com/erolss/TicketShop.git
     id: StatusMessage
     path: src/TicketShop/Models/ManageViewModels/ExternalLoginsViewModel.cs
     startLine: 17
   assemblies:
-  - TicketShop
+  - Ticketshop
   namespace: TicketShop.Models.ManageViewModels
   syntax:
     content: public string StatusMessage { get; set; }

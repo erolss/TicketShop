@@ -13,7 +13,7 @@ items:
   fullName: TicketShop.Views.Manage
   type: Namespace
   assemblies:
-  - TicketShop
+  - Ticketshop
 references:
 - uid: TicketShop.Views.Manage.ManageNavPages
   commentId: T:TicketShop.Views.Manage.ManageNavPages

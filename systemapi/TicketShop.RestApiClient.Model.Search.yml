@@ -19,7 +19,7 @@ items:
     remote:
       path: src/RestApiClient/Model/Search.cs
       branch: features/ticketshop
-      repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
+      repo: https://github.com/erolss/TicketShop.git
     id: Search
     path: src/RestApiClient/Model/Search.cs
     startLine: 5
@@ -59,7 +59,7 @@ items:
     remote:
       path: src/RestApiClient/Model/Search.cs
       branch: features/ticketshop
-      repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
+      repo: https://github.com/erolss/TicketShop.git
     id: Searchstring
     path: src/RestApiClient/Model/Search.cs
     startLine: 10
@@ -96,7 +96,7 @@ items:
     remote:
       path: src/RestApiClient/Model/Search.cs
       branch: features/ticketshop
-      repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
+      repo: https://github.com/erolss/TicketShop.git
     id: ToJson
     path: src/RestApiClient/Model/Search.cs
     startLine: 16
@@ -131,7 +131,7 @@ items:
     remote:
       path: src/RestApiClient/Model/Search.cs
       branch: features/ticketshop
-      repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
+      repo: https://github.com/erolss/TicketShop.git
     id: ToString
     path: src/RestApiClient/Model/Search.cs
     startLine: 25

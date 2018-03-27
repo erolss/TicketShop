@@ -21,12 +21,12 @@ items:
     remote:
       path: src/TicketShop/Models/ManageViewModels/IndexViewModel.cs
       branch: features/ticketshop
-      repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
+      repo: https://github.com/erolss/TicketShop.git
     id: IndexViewModel
     path: src/TicketShop/Models/ManageViewModels/IndexViewModel.cs
     startLine: 8
   assemblies:
-  - TicketShop
+  - Ticketshop
   namespace: TicketShop.Models.ManageViewModels
   syntax:
     content: public class IndexViewModel
@@ -62,12 +62,12 @@ items:
     remote:
       path: src/TicketShop/Models/ManageViewModels/IndexViewModel.cs
       branch: features/ticketshop
-      repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
+      repo: https://github.com/erolss/TicketShop.git
     id: Username
     path: src/TicketShop/Models/ManageViewModels/IndexViewModel.cs
     startLine: 10
   assemblies:
-  - TicketShop
+  - Ticketshop
   namespace: TicketShop.Models.ManageViewModels
   syntax:
     content: public string Username { get; set; }
@@ -97,12 +97,12 @@ items:
     remote:
       path: src/TicketShop/Models/ManageViewModels/IndexViewModel.cs
       branch: features/ticketshop
-      repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
+      repo: https://github.com/erolss/TicketShop.git
     id: IsEmailConfirmed
     path: src/TicketShop/Models/ManageViewModels/IndexViewModel.cs
     startLine: 12
   assemblies:
-  - TicketShop
+  - Ticketshop
   namespace: TicketShop.Models.ManageViewModels
   syntax:
     content: public bool IsEmailConfirmed { get; set; }
@@ -132,12 +132,12 @@ items:
     remote:
       path: src/TicketShop/Models/ManageViewModels/IndexViewModel.cs
       branch: features/ticketshop
-      repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
+      repo: https://github.com/erolss/TicketShop.git
     id: Email
     path: src/TicketShop/Models/ManageViewModels/IndexViewModel.cs
     startLine: 14
   assemblies:
-  - TicketShop
+  - Ticketshop
   namespace: TicketShop.Models.ManageViewModels
   syntax:
     content: >-
@@ -184,12 +184,12 @@ items:
     remote:
       path: src/TicketShop/Models/ManageViewModels/IndexViewModel.cs
       branch: features/ticketshop
-      repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
+      repo: https://github.com/erolss/TicketShop.git
     id: PhoneNumber
     path: src/TicketShop/Models/ManageViewModels/IndexViewModel.cs
     startLine: 18
   assemblies:
-  - TicketShop
+  - Ticketshop
   namespace: TicketShop.Models.ManageViewModels
   syntax:
     content: >-
@@ -240,12 +240,12 @@ items:
     remote:
       path: src/TicketShop/Models/ManageViewModels/IndexViewModel.cs
       branch: features/ticketshop
-      repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
+      repo: https://github.com/erolss/TicketShop.git
     id: StatusMessage
     path: src/TicketShop/Models/ManageViewModels/IndexViewModel.cs
     startLine: 22
   assemblies:
-  - TicketShop
+  - Ticketshop
   namespace: TicketShop.Models.ManageViewModels
   syntax:
     content: public string StatusMessage { get; set; }

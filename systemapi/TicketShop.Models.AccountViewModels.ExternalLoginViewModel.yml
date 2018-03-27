@@ -17,12 +17,12 @@ items:
     remote:
       path: src/TicketShop/Models/AccountViewModels/ExternalLoginViewModel.cs
       branch: features/ticketshop
-      repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
+      repo: https://github.com/erolss/TicketShop.git
     id: ExternalLoginViewModel
     path: src/TicketShop/Models/AccountViewModels/ExternalLoginViewModel.cs
     startLine: 8
   assemblies:
-  - TicketShop
+  - Ticketshop
   namespace: TicketShop.Models.AccountViewModels
   syntax:
     content: public class ExternalLoginViewModel
@@ -58,12 +58,12 @@ items:
     remote:
       path: src/TicketShop/Models/AccountViewModels/ExternalLoginViewModel.cs
       branch: features/ticketshop
-      repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
+      repo: https://github.com/erolss/TicketShop.git
     id: Email
     path: src/TicketShop/Models/AccountViewModels/ExternalLoginViewModel.cs
     startLine: 10
   assemblies:
-  - TicketShop
+  - Ticketshop
   namespace: TicketShop.Models.AccountViewModels
   syntax:
     content: >-

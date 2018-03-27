@@ -28,7 +28,7 @@ items:
     remote:
       path: src/TicketApi/Controllers/EventdateApi.cs
       branch: features/ticketshop
-      repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
+      repo: https://github.com/erolss/TicketShop.git
     id: EventDateApiController
     path: src/TicketApi/Controllers/EventdateApi.cs
     startLine: 45
@@ -240,7 +240,7 @@ items:
     remote:
       path: src/TicketApi/Controllers/EventdateApi.cs
       branch: features/ticketshop
-      repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
+      repo: https://github.com/erolss/TicketShop.git
     id: .ctor
     path: src/TicketApi/Controllers/EventdateApi.cs
     startLine: 50
@@ -276,7 +276,7 @@ items:
     remote:
       path: src/TicketApi/Controllers/EventdateApi.cs
       branch: features/ticketshop
-      repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
+      repo: https://github.com/erolss/TicketShop.git
     id: AddEventDate
     path: src/TicketApi/Controllers/EventdateApi.cs
     startLine: 62
@@ -375,7 +375,7 @@ items:
     remote:
       path: src/TicketApi/Controllers/EventdateApi.cs
       branch: features/ticketshop
-      repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
+      repo: https://github.com/erolss/TicketShop.git
     id: DeleteEventDate
     path: src/TicketApi/Controllers/EventdateApi.cs
     startLine: 85
@@ -477,7 +477,7 @@ items:
     remote:
       path: src/TicketApi/Controllers/EventdateApi.cs
       branch: features/ticketshop
-      repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
+      repo: https://github.com/erolss/TicketShop.git
     id: FindFullEventDates
     path: src/TicketApi/Controllers/EventdateApi.cs
     startLine: 108
@@ -576,7 +576,7 @@ items:
     remote:
       path: src/TicketApi/Controllers/EventdateApi.cs
       branch: features/ticketshop
-      repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
+      repo: https://github.com/erolss/TicketShop.git
     id: GetEventDateByEventId
     path: src/TicketApi/Controllers/EventdateApi.cs
     startLine: 131
@@ -678,7 +678,7 @@ items:
     remote:
       path: src/TicketApi/Controllers/EventdateApi.cs
       branch: features/ticketshop
-      repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
+      repo: https://github.com/erolss/TicketShop.git
     id: GetEventDateById
     path: src/TicketApi/Controllers/EventdateApi.cs
     startLine: 154
@@ -780,7 +780,7 @@ items:
     remote:
       path: src/TicketApi/Controllers/EventdateApi.cs
       branch: features/ticketshop
-      repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
+      repo: https://github.com/erolss/TicketShop.git
     id: GetEventDates
     path: src/TicketApi/Controllers/EventdateApi.cs
     startLine: 176
@@ -893,7 +893,7 @@ items:
     remote:
       path: src/TicketApi/Controllers/EventdateApi.cs
       branch: features/ticketshop
-      repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
+      repo: https://github.com/erolss/TicketShop.git
     id: GetFullEventDates
     path: src/TicketApi/Controllers/EventdateApi.cs
     startLine: 199
@@ -1006,7 +1006,7 @@ items:
     remote:
       path: src/TicketApi/Controllers/EventdateApi.cs
       branch: features/ticketshop
-      repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
+      repo: https://github.com/erolss/TicketShop.git
     id: GetFullEventDatesByEventId
     path: src/TicketApi/Controllers/EventdateApi.cs
     startLine: 217
@@ -1122,7 +1122,7 @@ items:
     remote:
       path: src/TicketApi/Controllers/EventdateApi.cs
       branch: features/ticketshop
-      repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
+      repo: https://github.com/erolss/TicketShop.git
     id: GetFullEventDateById
     path: src/TicketApi/Controllers/EventdateApi.cs
     startLine: 241
@@ -1224,7 +1224,7 @@ items:
     remote:
       path: src/TicketApi/Controllers/EventdateApi.cs
       branch: features/ticketshop
-      repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
+      repo: https://github.com/erolss/TicketShop.git
     id: UpdateEventDate
     path: src/TicketApi/Controllers/EventdateApi.cs
     startLine: 264
@@ -1323,7 +1323,7 @@ items:
     remote:
       path: src/TicketApi/Controllers/EventdateApi.cs
       branch: features/ticketshop
-      repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
+      repo: https://github.com/erolss/TicketShop.git
     id: GetSoldTicketCount
     path: src/TicketApi/Controllers/EventdateApi.cs
     startLine: 287

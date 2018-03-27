@@ -24,7 +24,7 @@ items:
     remote:
       path: src/DbRepository/TransactionRepository.cs
       branch: features/ticketshop
-      repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
+      repo: https://github.com/erolss/TicketShop.git
     id: TransactionRepository
     path: src/DbRepository/TransactionRepository.cs
     startLine: 14
@@ -69,7 +69,7 @@ items:
     remote:
       path: src/DbRepository/TransactionRepository.cs
       branch: features/ticketshop
-      repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
+      repo: https://github.com/erolss/TicketShop.git
     id: .ctor
     path: src/DbRepository/TransactionRepository.cs
     startLine: 18
@@ -102,7 +102,7 @@ items:
     remote:
       path: src/DbRepository/TransactionRepository.cs
       branch: features/ticketshop
-      repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
+      repo: https://github.com/erolss/TicketShop.git
     id: AddTransaction
     path: src/DbRepository/TransactionRepository.cs
     startLine: 22
@@ -139,7 +139,7 @@ items:
     remote:
       path: src/DbRepository/TransactionRepository.cs
       branch: features/ticketshop
-      repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
+      repo: https://github.com/erolss/TicketShop.git
     id: DeleteTransactionById
     path: src/DbRepository/TransactionRepository.cs
     startLine: 47
@@ -176,7 +176,7 @@ items:
     remote:
       path: src/DbRepository/TransactionRepository.cs
       branch: features/ticketshop
-      repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
+      repo: https://github.com/erolss/TicketShop.git
     id: GetTransactionById
     path: src/DbRepository/TransactionRepository.cs
     startLine: 64
@@ -213,7 +213,7 @@ items:
     remote:
       path: src/DbRepository/TransactionRepository.cs
       branch: features/ticketshop
-      repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
+      repo: https://github.com/erolss/TicketShop.git
     id: GetTransactionByUserId
     path: src/DbRepository/TransactionRepository.cs
     startLine: 80
@@ -250,7 +250,7 @@ items:
     remote:
       path: src/DbRepository/TransactionRepository.cs
       branch: features/ticketshop
-      repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
+      repo: https://github.com/erolss/TicketShop.git
     id: UpdateTransaction
     path: src/DbRepository/TransactionRepository.cs
     startLine: 96
@@ -287,7 +287,7 @@ items:
     remote:
       path: src/DbRepository/TransactionRepository.cs
       branch: features/ticketshop
-      repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
+      repo: https://github.com/erolss/TicketShop.git
     id: FindTransactions
     path: src/DbRepository/TransactionRepository.cs
     startLine: 122
@@ -324,7 +324,7 @@ items:
     remote:
       path: src/DbRepository/TransactionRepository.cs
       branch: features/ticketshop
-      repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
+      repo: https://github.com/erolss/TicketShop.git
     id: GetTransactions
     path: src/DbRepository/TransactionRepository.cs
     startLine: 146

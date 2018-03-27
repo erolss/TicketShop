@@ -36,7 +36,7 @@ items:
     remote:
       path: src/DbRepository/Models/FullEventDate.cs
       branch: features/ticketshop
-      repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
+      repo: https://github.com/erolss/TicketShop.git
     id: FullEventDate
     path: src/DbRepository/Models/FullEventDate.cs
     startLine: 7
@@ -87,7 +87,7 @@ items:
     remote:
       path: src/DbRepository/Models/FullEventDate.cs
       branch: features/ticketshop
-      repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
+      repo: https://github.com/erolss/TicketShop.git
     id: TicketEventDateID
     path: src/DbRepository/Models/FullEventDate.cs
     startLine: 10
@@ -132,7 +132,7 @@ items:
     remote:
       path: src/DbRepository/Models/FullEventDate.cs
       branch: features/ticketshop
-      repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
+      repo: https://github.com/erolss/TicketShop.git
     id: TicketEventID
     path: src/DbRepository/Models/FullEventDate.cs
     startLine: 12
@@ -177,7 +177,7 @@ items:
     remote:
       path: src/DbRepository/Models/FullEventDate.cs
       branch: features/ticketshop
-      repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
+      repo: https://github.com/erolss/TicketShop.git
     id: EventName
     path: src/DbRepository/Models/FullEventDate.cs
     startLine: 14
@@ -222,7 +222,7 @@ items:
     remote:
       path: src/DbRepository/Models/FullEventDate.cs
       branch: features/ticketshop
-      repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
+      repo: https://github.com/erolss/TicketShop.git
     id: EventHtmlDescription
     path: src/DbRepository/Models/FullEventDate.cs
     startLine: 16
@@ -267,7 +267,7 @@ items:
     remote:
       path: src/DbRepository/Models/FullEventDate.cs
       branch: features/ticketshop
-      repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
+      repo: https://github.com/erolss/TicketShop.git
     id: EventImagePath
     path: src/DbRepository/Models/FullEventDate.cs
     startLine: 18
@@ -312,7 +312,7 @@ items:
     remote:
       path: src/DbRepository/Models/FullEventDate.cs
       branch: features/ticketshop
-      repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
+      repo: https://github.com/erolss/TicketShop.git
     id: VenueID
     path: src/DbRepository/Models/FullEventDate.cs
     startLine: 20
@@ -357,7 +357,7 @@ items:
     remote:
       path: src/DbRepository/Models/FullEventDate.cs
       branch: features/ticketshop
-      repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
+      repo: https://github.com/erolss/TicketShop.git
     id: VenueName
     path: src/DbRepository/Models/FullEventDate.cs
     startLine: 22
@@ -402,7 +402,7 @@ items:
     remote:
       path: src/DbRepository/Models/FullEventDate.cs
       branch: features/ticketshop
-      repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
+      repo: https://github.com/erolss/TicketShop.git
     id: Address
     path: src/DbRepository/Models/FullEventDate.cs
     startLine: 24
@@ -447,7 +447,7 @@ items:
     remote:
       path: src/DbRepository/Models/FullEventDate.cs
       branch: features/ticketshop
-      repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
+      repo: https://github.com/erolss/TicketShop.git
     id: City
     path: src/DbRepository/Models/FullEventDate.cs
     startLine: 26
@@ -492,7 +492,7 @@ items:
     remote:
       path: src/DbRepository/Models/FullEventDate.cs
       branch: features/ticketshop
-      repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
+      repo: https://github.com/erolss/TicketShop.git
     id: Country
     path: src/DbRepository/Models/FullEventDate.cs
     startLine: 28
@@ -537,7 +537,7 @@ items:
     remote:
       path: src/DbRepository/Models/FullEventDate.cs
       branch: features/ticketshop
-      repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
+      repo: https://github.com/erolss/TicketShop.git
     id: EventStartDateTime
     path: src/DbRepository/Models/FullEventDate.cs
     startLine: 30
@@ -582,7 +582,7 @@ items:
     remote:
       path: src/DbRepository/Models/FullEventDate.cs
       branch: features/ticketshop
-      repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
+      repo: https://github.com/erolss/TicketShop.git
     id: Price
     path: src/DbRepository/Models/FullEventDate.cs
     startLine: 32
@@ -627,7 +627,7 @@ items:
     remote:
       path: src/DbRepository/Models/FullEventDate.cs
       branch: features/ticketshop
-      repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
+      repo: https://github.com/erolss/TicketShop.git
     id: MaxTickets
     path: src/DbRepository/Models/FullEventDate.cs
     startLine: 34
@@ -672,7 +672,7 @@ items:
     remote:
       path: src/DbRepository/Models/FullEventDate.cs
       branch: features/ticketshop
-      repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
+      repo: https://github.com/erolss/TicketShop.git
     id: ToString
     path: src/DbRepository/Models/FullEventDate.cs
     startLine: 41
@@ -710,7 +710,7 @@ items:
     remote:
       path: src/DbRepository/Models/FullEventDate.cs
       branch: features/ticketshop
-      repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
+      repo: https://github.com/erolss/TicketShop.git
     id: ToJson
     path: src/DbRepository/Models/FullEventDate.cs
     startLine: 66
@@ -745,7 +745,7 @@ items:
     remote:
       path: src/DbRepository/Models/FullEventDate.cs
       branch: features/ticketshop
-      repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
+      repo: https://github.com/erolss/TicketShop.git
     id: Equals
     path: src/DbRepository/Models/FullEventDate.cs
     startLine: 76
@@ -787,7 +787,7 @@ items:
     remote:
       path: src/DbRepository/Models/FullEventDate.cs
       branch: features/ticketshop
-      repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
+      repo: https://github.com/erolss/TicketShop.git
     id: Equals
     path: src/DbRepository/Models/FullEventDate.cs
     startLine: 90
@@ -828,7 +828,7 @@ items:
     remote:
       path: src/DbRepository/Models/FullEventDate.cs
       branch: features/ticketshop
-      repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
+      repo: https://github.com/erolss/TicketShop.git
     id: GetHashCode
     path: src/DbRepository/Models/FullEventDate.cs
     startLine: 169
@@ -866,7 +866,7 @@ items:
     remote:
       path: src/DbRepository/Models/FullEventDate.cs
       branch: features/ticketshop
-      repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
+      repo: https://github.com/erolss/TicketShop.git
     id: op_Equality
     path: src/DbRepository/Models/FullEventDate.cs
     startLine: 208
@@ -905,7 +905,7 @@ items:
     remote:
       path: src/DbRepository/Models/FullEventDate.cs
       branch: features/ticketshop
-      repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
+      repo: https://github.com/erolss/TicketShop.git
     id: op_Inequality
     path: src/DbRepository/Models/FullEventDate.cs
     startLine: 213

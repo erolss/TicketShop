@@ -1,50 +1,52 @@
 ### YamlMime:ManagedReference
 items:
-- uid: TicketShop.Controllers.Admin.TransactionController
-  commentId: T:TicketShop.Controllers.Admin.TransactionController
-  id: TransactionController
-  parent: TicketShop.Controllers.Admin
+- uid: TicketShop.Areas.Admin.Controllers.TicketController
+  commentId: T:TicketShop.Areas.Admin.Controllers.TicketController
+  id: TicketController
+  parent: TicketShop.Areas.Admin.Controllers
   children:
-  - TicketShop.Controllers.Admin.TransactionController.Create
-  - TicketShop.Controllers.Admin.TransactionController.Create(Microsoft.AspNetCore.Http.IFormCollection)
-  - TicketShop.Controllers.Admin.TransactionController.Delete(System.Int32)
-  - TicketShop.Controllers.Admin.TransactionController.Delete(System.Int32,Microsoft.AspNetCore.Http.IFormCollection)
-  - TicketShop.Controllers.Admin.TransactionController.Details(System.Int32)
-  - TicketShop.Controllers.Admin.TransactionController.Edit(System.Int32)
-  - TicketShop.Controllers.Admin.TransactionController.Edit(System.Int32,Microsoft.AspNetCore.Http.IFormCollection)
-  - TicketShop.Controllers.Admin.TransactionController.Index
+  - TicketShop.Areas.Admin.Controllers.TicketController.Create
+  - TicketShop.Areas.Admin.Controllers.TicketController.Create(Microsoft.AspNetCore.Http.IFormCollection)
+  - TicketShop.Areas.Admin.Controllers.TicketController.Delete(System.Int32)
+  - TicketShop.Areas.Admin.Controllers.TicketController.Delete(System.Int32,Microsoft.AspNetCore.Http.IFormCollection)
+  - TicketShop.Areas.Admin.Controllers.TicketController.Details(System.Int32)
+  - TicketShop.Areas.Admin.Controllers.TicketController.Edit(System.Int32)
+  - TicketShop.Areas.Admin.Controllers.TicketController.Edit(System.Int32,Microsoft.AspNetCore.Http.IFormCollection)
+  - TicketShop.Areas.Admin.Controllers.TicketController.Index
   langs:
   - csharp
   - vb
-  name: TransactionController
-  nameWithType: TransactionController
-  fullName: TicketShop.Controllers.Admin.TransactionController
+  name: TicketController
+  nameWithType: TicketController
+  fullName: TicketShop.Areas.Admin.Controllers.TicketController
   type: Class
   source:
     remote:
-      path: src/TicketShop/Controllers/Admin/TransactionController.cs
+      path: src/TicketShop/Areas/Admin/Controllers/TicketController.cs
       branch: features/ticketshop
-      repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
-    id: TransactionController
-    path: src/TicketShop/Controllers/Admin/TransactionController.cs
+      repo: https://github.com/erolss/TicketShop.git
+    id: TicketController
+    path: src/TicketShop/Areas/Admin/Controllers/TicketController.cs
     startLine: 13
   assemblies:
-  - TicketShop
-  namespace: TicketShop.Controllers.Admin
+  - Ticketshop
+  namespace: TicketShop.Areas.Admin.Controllers
   syntax:
     content: >-
       [Authorize(Policy = "RequireAdminRole")]
 
       [Area("Admin")]
 
-      public class TransactionController : Controller, IActionFilter, IAsyncActionFilter, IFilterMetadata, IDisposable
+      public class TicketController : Controller, IActionFilter, IAsyncActionFilter, IFilterMetadata, IDisposable
     content.vb: >-
       <Authorize(Policy:="RequireAdminRole")>
 
       <Area("Admin")>
 
-      Public Class TransactionController
+      Public Class TicketController
+
           Inherits Controller
+
           Implements IActionFilter, IAsyncActionFilter, IFilterMetadata, IDisposable
   inheritance:
   - System.Object
@@ -241,60 +243,60 @@ items:
   modifiers.vb:
   - Public
   - Class
-- uid: TicketShop.Controllers.Admin.TransactionController.Index
-  commentId: M:TicketShop.Controllers.Admin.TransactionController.Index
+- uid: TicketShop.Areas.Admin.Controllers.TicketController.Index
+  commentId: M:TicketShop.Areas.Admin.Controllers.TicketController.Index
   id: Index
-  parent: TicketShop.Controllers.Admin.TransactionController
+  parent: TicketShop.Areas.Admin.Controllers.TicketController
   langs:
   - csharp
   - vb
   name: Index()
-  nameWithType: TransactionController.Index()
-  fullName: TicketShop.Controllers.Admin.TransactionController.Index()
+  nameWithType: TicketController.Index()
+  fullName: TicketShop.Areas.Admin.Controllers.TicketController.Index()
   type: Method
   source:
     remote:
-      path: src/TicketShop/Controllers/Admin/TransactionController.cs
+      path: src/TicketShop/Areas/Admin/Controllers/TicketController.cs
       branch: features/ticketshop
-      repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
+      repo: https://github.com/erolss/TicketShop.git
     id: Index
-    path: src/TicketShop/Controllers/Admin/TransactionController.cs
+    path: src/TicketShop/Areas/Admin/Controllers/TicketController.cs
     startLine: 18
   assemblies:
-  - TicketShop
-  namespace: TicketShop.Controllers.Admin
+  - Ticketshop
+  namespace: TicketShop.Areas.Admin.Controllers
   syntax:
     content: public ActionResult Index()
     return:
       type: Microsoft.AspNetCore.Mvc.ActionResult
     content.vb: Public Function Index As ActionResult
-  overload: TicketShop.Controllers.Admin.TransactionController.Index*
+  overload: TicketShop.Areas.Admin.Controllers.TicketController.Index*
   modifiers.csharp:
   - public
   modifiers.vb:
   - Public
-- uid: TicketShop.Controllers.Admin.TransactionController.Details(System.Int32)
-  commentId: M:TicketShop.Controllers.Admin.TransactionController.Details(System.Int32)
+- uid: TicketShop.Areas.Admin.Controllers.TicketController.Details(System.Int32)
+  commentId: M:TicketShop.Areas.Admin.Controllers.TicketController.Details(System.Int32)
   id: Details(System.Int32)
-  parent: TicketShop.Controllers.Admin.TransactionController
+  parent: TicketShop.Areas.Admin.Controllers.TicketController
   langs:
   - csharp
   - vb
   name: Details(Int32)
-  nameWithType: TransactionController.Details(Int32)
-  fullName: TicketShop.Controllers.Admin.TransactionController.Details(System.Int32)
+  nameWithType: TicketController.Details(Int32)
+  fullName: TicketShop.Areas.Admin.Controllers.TicketController.Details(System.Int32)
   type: Method
   source:
     remote:
-      path: src/TicketShop/Controllers/Admin/TransactionController.cs
+      path: src/TicketShop/Areas/Admin/Controllers/TicketController.cs
       branch: features/ticketshop
-      repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
+      repo: https://github.com/erolss/TicketShop.git
     id: Details
-    path: src/TicketShop/Controllers/Admin/TransactionController.cs
+    path: src/TicketShop/Areas/Admin/Controllers/TicketController.cs
     startLine: 24
   assemblies:
-  - TicketShop
-  namespace: TicketShop.Controllers.Admin
+  - Ticketshop
+  namespace: TicketShop.Areas.Admin.Controllers
   syntax:
     content: public ActionResult Details(int id)
     parameters:
@@ -303,65 +305,65 @@ items:
     return:
       type: Microsoft.AspNetCore.Mvc.ActionResult
     content.vb: Public Function Details(id As Integer) As ActionResult
-  overload: TicketShop.Controllers.Admin.TransactionController.Details*
+  overload: TicketShop.Areas.Admin.Controllers.TicketController.Details*
   modifiers.csharp:
   - public
   modifiers.vb:
   - Public
-- uid: TicketShop.Controllers.Admin.TransactionController.Create
-  commentId: M:TicketShop.Controllers.Admin.TransactionController.Create
+- uid: TicketShop.Areas.Admin.Controllers.TicketController.Create
+  commentId: M:TicketShop.Areas.Admin.Controllers.TicketController.Create
   id: Create
-  parent: TicketShop.Controllers.Admin.TransactionController
+  parent: TicketShop.Areas.Admin.Controllers.TicketController
   langs:
   - csharp
   - vb
   name: Create()
-  nameWithType: TransactionController.Create()
-  fullName: TicketShop.Controllers.Admin.TransactionController.Create()
+  nameWithType: TicketController.Create()
+  fullName: TicketShop.Areas.Admin.Controllers.TicketController.Create()
   type: Method
   source:
     remote:
-      path: src/TicketShop/Controllers/Admin/TransactionController.cs
+      path: src/TicketShop/Areas/Admin/Controllers/TicketController.cs
       branch: features/ticketshop
-      repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
+      repo: https://github.com/erolss/TicketShop.git
     id: Create
-    path: src/TicketShop/Controllers/Admin/TransactionController.cs
+    path: src/TicketShop/Areas/Admin/Controllers/TicketController.cs
     startLine: 30
   assemblies:
-  - TicketShop
-  namespace: TicketShop.Controllers.Admin
+  - Ticketshop
+  namespace: TicketShop.Areas.Admin.Controllers
   syntax:
     content: public ActionResult Create()
     return:
       type: Microsoft.AspNetCore.Mvc.ActionResult
     content.vb: Public Function Create As ActionResult
-  overload: TicketShop.Controllers.Admin.TransactionController.Create*
+  overload: TicketShop.Areas.Admin.Controllers.TicketController.Create*
   modifiers.csharp:
   - public
   modifiers.vb:
   - Public
-- uid: TicketShop.Controllers.Admin.TransactionController.Create(Microsoft.AspNetCore.Http.IFormCollection)
-  commentId: M:TicketShop.Controllers.Admin.TransactionController.Create(Microsoft.AspNetCore.Http.IFormCollection)
+- uid: TicketShop.Areas.Admin.Controllers.TicketController.Create(Microsoft.AspNetCore.Http.IFormCollection)
+  commentId: M:TicketShop.Areas.Admin.Controllers.TicketController.Create(Microsoft.AspNetCore.Http.IFormCollection)
   id: Create(Microsoft.AspNetCore.Http.IFormCollection)
-  parent: TicketShop.Controllers.Admin.TransactionController
+  parent: TicketShop.Areas.Admin.Controllers.TicketController
   langs:
   - csharp
   - vb
   name: Create(IFormCollection)
-  nameWithType: TransactionController.Create(IFormCollection)
-  fullName: TicketShop.Controllers.Admin.TransactionController.Create(Microsoft.AspNetCore.Http.IFormCollection)
+  nameWithType: TicketController.Create(IFormCollection)
+  fullName: TicketShop.Areas.Admin.Controllers.TicketController.Create(Microsoft.AspNetCore.Http.IFormCollection)
   type: Method
   source:
     remote:
-      path: src/TicketShop/Controllers/Admin/TransactionController.cs
+      path: src/TicketShop/Areas/Admin/Controllers/TicketController.cs
       branch: features/ticketshop
-      repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
+      repo: https://github.com/erolss/TicketShop.git
     id: Create
-    path: src/TicketShop/Controllers/Admin/TransactionController.cs
+    path: src/TicketShop/Areas/Admin/Controllers/TicketController.cs
     startLine: 36
   assemblies:
-  - TicketShop
-  namespace: TicketShop.Controllers.Admin
+  - Ticketshop
+  namespace: TicketShop.Areas.Admin.Controllers
   syntax:
     content: >-
       [HttpPost]
@@ -380,7 +382,7 @@ items:
       <ValidateAntiForgeryToken>
 
       Public Function Create(collection As IFormCollection) As ActionResult
-  overload: TicketShop.Controllers.Admin.TransactionController.Create*
+  overload: TicketShop.Areas.Admin.Controllers.TicketController.Create*
   attributes:
   - type: Microsoft.AspNetCore.Mvc.HttpPostAttribute
     ctor: Microsoft.AspNetCore.Mvc.HttpPostAttribute.#ctor
@@ -392,28 +394,28 @@ items:
   - public
   modifiers.vb:
   - Public
-- uid: TicketShop.Controllers.Admin.TransactionController.Edit(System.Int32)
-  commentId: M:TicketShop.Controllers.Admin.TransactionController.Edit(System.Int32)
+- uid: TicketShop.Areas.Admin.Controllers.TicketController.Edit(System.Int32)
+  commentId: M:TicketShop.Areas.Admin.Controllers.TicketController.Edit(System.Int32)
   id: Edit(System.Int32)
-  parent: TicketShop.Controllers.Admin.TransactionController
+  parent: TicketShop.Areas.Admin.Controllers.TicketController
   langs:
   - csharp
   - vb
   name: Edit(Int32)
-  nameWithType: TransactionController.Edit(Int32)
-  fullName: TicketShop.Controllers.Admin.TransactionController.Edit(System.Int32)
+  nameWithType: TicketController.Edit(Int32)
+  fullName: TicketShop.Areas.Admin.Controllers.TicketController.Edit(System.Int32)
   type: Method
   source:
     remote:
-      path: src/TicketShop/Controllers/Admin/TransactionController.cs
+      path: src/TicketShop/Areas/Admin/Controllers/TicketController.cs
       branch: features/ticketshop
-      repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
+      repo: https://github.com/erolss/TicketShop.git
     id: Edit
-    path: src/TicketShop/Controllers/Admin/TransactionController.cs
+    path: src/TicketShop/Areas/Admin/Controllers/TicketController.cs
     startLine: 53
   assemblies:
-  - TicketShop
-  namespace: TicketShop.Controllers.Admin
+  - Ticketshop
+  namespace: TicketShop.Areas.Admin.Controllers
   syntax:
     content: public ActionResult Edit(int id)
     parameters:
@@ -422,33 +424,33 @@ items:
     return:
       type: Microsoft.AspNetCore.Mvc.ActionResult
     content.vb: Public Function Edit(id As Integer) As ActionResult
-  overload: TicketShop.Controllers.Admin.TransactionController.Edit*
+  overload: TicketShop.Areas.Admin.Controllers.TicketController.Edit*
   modifiers.csharp:
   - public
   modifiers.vb:
   - Public
-- uid: TicketShop.Controllers.Admin.TransactionController.Edit(System.Int32,Microsoft.AspNetCore.Http.IFormCollection)
-  commentId: M:TicketShop.Controllers.Admin.TransactionController.Edit(System.Int32,Microsoft.AspNetCore.Http.IFormCollection)
+- uid: TicketShop.Areas.Admin.Controllers.TicketController.Edit(System.Int32,Microsoft.AspNetCore.Http.IFormCollection)
+  commentId: M:TicketShop.Areas.Admin.Controllers.TicketController.Edit(System.Int32,Microsoft.AspNetCore.Http.IFormCollection)
   id: Edit(System.Int32,Microsoft.AspNetCore.Http.IFormCollection)
-  parent: TicketShop.Controllers.Admin.TransactionController
+  parent: TicketShop.Areas.Admin.Controllers.TicketController
   langs:
   - csharp
   - vb
   name: Edit(Int32, IFormCollection)
-  nameWithType: TransactionController.Edit(Int32, IFormCollection)
-  fullName: TicketShop.Controllers.Admin.TransactionController.Edit(System.Int32, Microsoft.AspNetCore.Http.IFormCollection)
+  nameWithType: TicketController.Edit(Int32, IFormCollection)
+  fullName: TicketShop.Areas.Admin.Controllers.TicketController.Edit(System.Int32, Microsoft.AspNetCore.Http.IFormCollection)
   type: Method
   source:
     remote:
-      path: src/TicketShop/Controllers/Admin/TransactionController.cs
+      path: src/TicketShop/Areas/Admin/Controllers/TicketController.cs
       branch: features/ticketshop
-      repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
+      repo: https://github.com/erolss/TicketShop.git
     id: Edit
-    path: src/TicketShop/Controllers/Admin/TransactionController.cs
+    path: src/TicketShop/Areas/Admin/Controllers/TicketController.cs
     startLine: 59
   assemblies:
-  - TicketShop
-  namespace: TicketShop.Controllers.Admin
+  - Ticketshop
+  namespace: TicketShop.Areas.Admin.Controllers
   syntax:
     content: >-
       [HttpPost]
@@ -469,7 +471,7 @@ items:
       <ValidateAntiForgeryToken>
 
       Public Function Edit(id As Integer, collection As IFormCollection) As ActionResult
-  overload: TicketShop.Controllers.Admin.TransactionController.Edit*
+  overload: TicketShop.Areas.Admin.Controllers.TicketController.Edit*
   attributes:
   - type: Microsoft.AspNetCore.Mvc.HttpPostAttribute
     ctor: Microsoft.AspNetCore.Mvc.HttpPostAttribute.#ctor
@@ -481,28 +483,28 @@ items:
   - public
   modifiers.vb:
   - Public
-- uid: TicketShop.Controllers.Admin.TransactionController.Delete(System.Int32)
-  commentId: M:TicketShop.Controllers.Admin.TransactionController.Delete(System.Int32)
+- uid: TicketShop.Areas.Admin.Controllers.TicketController.Delete(System.Int32)
+  commentId: M:TicketShop.Areas.Admin.Controllers.TicketController.Delete(System.Int32)
   id: Delete(System.Int32)
-  parent: TicketShop.Controllers.Admin.TransactionController
+  parent: TicketShop.Areas.Admin.Controllers.TicketController
   langs:
   - csharp
   - vb
   name: Delete(Int32)
-  nameWithType: TransactionController.Delete(Int32)
-  fullName: TicketShop.Controllers.Admin.TransactionController.Delete(System.Int32)
+  nameWithType: TicketController.Delete(Int32)
+  fullName: TicketShop.Areas.Admin.Controllers.TicketController.Delete(System.Int32)
   type: Method
   source:
     remote:
-      path: src/TicketShop/Controllers/Admin/TransactionController.cs
+      path: src/TicketShop/Areas/Admin/Controllers/TicketController.cs
       branch: features/ticketshop
-      repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
+      repo: https://github.com/erolss/TicketShop.git
     id: Delete
-    path: src/TicketShop/Controllers/Admin/TransactionController.cs
+    path: src/TicketShop/Areas/Admin/Controllers/TicketController.cs
     startLine: 76
   assemblies:
-  - TicketShop
-  namespace: TicketShop.Controllers.Admin
+  - Ticketshop
+  namespace: TicketShop.Areas.Admin.Controllers
   syntax:
     content: public ActionResult Delete(int id)
     parameters:
@@ -511,33 +513,33 @@ items:
     return:
       type: Microsoft.AspNetCore.Mvc.ActionResult
     content.vb: Public Function Delete(id As Integer) As ActionResult
-  overload: TicketShop.Controllers.Admin.TransactionController.Delete*
+  overload: TicketShop.Areas.Admin.Controllers.TicketController.Delete*
   modifiers.csharp:
   - public
   modifiers.vb:
   - Public
-- uid: TicketShop.Controllers.Admin.TransactionController.Delete(System.Int32,Microsoft.AspNetCore.Http.IFormCollection)
-  commentId: M:TicketShop.Controllers.Admin.TransactionController.Delete(System.Int32,Microsoft.AspNetCore.Http.IFormCollection)
+- uid: TicketShop.Areas.Admin.Controllers.TicketController.Delete(System.Int32,Microsoft.AspNetCore.Http.IFormCollection)
+  commentId: M:TicketShop.Areas.Admin.Controllers.TicketController.Delete(System.Int32,Microsoft.AspNetCore.Http.IFormCollection)
   id: Delete(System.Int32,Microsoft.AspNetCore.Http.IFormCollection)
-  parent: TicketShop.Controllers.Admin.TransactionController
+  parent: TicketShop.Areas.Admin.Controllers.TicketController
   langs:
   - csharp
   - vb
   name: Delete(Int32, IFormCollection)
-  nameWithType: TransactionController.Delete(Int32, IFormCollection)
-  fullName: TicketShop.Controllers.Admin.TransactionController.Delete(System.Int32, Microsoft.AspNetCore.Http.IFormCollection)
+  nameWithType: TicketController.Delete(Int32, IFormCollection)
+  fullName: TicketShop.Areas.Admin.Controllers.TicketController.Delete(System.Int32, Microsoft.AspNetCore.Http.IFormCollection)
   type: Method
   source:
     remote:
-      path: src/TicketShop/Controllers/Admin/TransactionController.cs
+      path: src/TicketShop/Areas/Admin/Controllers/TicketController.cs
       branch: features/ticketshop
-      repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
+      repo: https://github.com/erolss/TicketShop.git
     id: Delete
-    path: src/TicketShop/Controllers/Admin/TransactionController.cs
+    path: src/TicketShop/Areas/Admin/Controllers/TicketController.cs
     startLine: 82
   assemblies:
-  - TicketShop
-  namespace: TicketShop.Controllers.Admin
+  - Ticketshop
+  namespace: TicketShop.Areas.Admin.Controllers
   syntax:
     content: >-
       [HttpPost]
@@ -558,7 +560,7 @@ items:
       <ValidateAntiForgeryToken>
 
       Public Function Delete(id As Integer, collection As IFormCollection) As ActionResult
-  overload: TicketShop.Controllers.Admin.TransactionController.Delete*
+  overload: TicketShop.Areas.Admin.Controllers.TicketController.Delete*
   attributes:
   - type: Microsoft.AspNetCore.Mvc.HttpPostAttribute
     ctor: Microsoft.AspNetCore.Mvc.HttpPostAttribute.#ctor
@@ -571,12 +573,12 @@ items:
   modifiers.vb:
   - Public
 references:
-- uid: TicketShop.Controllers.Admin
-  commentId: N:TicketShop.Controllers.Admin
+- uid: TicketShop.Areas.Admin.Controllers
+  commentId: N:TicketShop.Areas.Admin.Controllers
   isExternal: false
-  name: TicketShop.Controllers.Admin
-  nameWithType: TicketShop.Controllers.Admin
-  fullName: TicketShop.Controllers.Admin
+  name: TicketShop.Areas.Admin.Controllers
+  nameWithType: TicketShop.Areas.Admin.Controllers
+  fullName: TicketShop.Areas.Admin.Controllers
 - uid: System.Object
   commentId: T:System.Object
   parent: System
@@ -10647,12 +10649,12 @@ references:
   - name: )
     nameWithType: )
     fullName: )
-- uid: TicketShop.Controllers.Admin.TransactionController.Index*
-  commentId: Overload:TicketShop.Controllers.Admin.TransactionController.Index
+- uid: TicketShop.Areas.Admin.Controllers.TicketController.Index*
+  commentId: Overload:TicketShop.Areas.Admin.Controllers.TicketController.Index
   isExternal: false
   name: Index
-  nameWithType: TransactionController.Index
-  fullName: TicketShop.Controllers.Admin.TransactionController.Index
+  nameWithType: TicketController.Index
+  fullName: TicketShop.Areas.Admin.Controllers.TicketController.Index
 - uid: Microsoft.AspNetCore.Mvc.ActionResult
   commentId: T:Microsoft.AspNetCore.Mvc.ActionResult
   parent: Microsoft.AspNetCore.Mvc
@@ -10660,12 +10662,12 @@ references:
   name: ActionResult
   nameWithType: ActionResult
   fullName: Microsoft.AspNetCore.Mvc.ActionResult
-- uid: TicketShop.Controllers.Admin.TransactionController.Details*
-  commentId: Overload:TicketShop.Controllers.Admin.TransactionController.Details
+- uid: TicketShop.Areas.Admin.Controllers.TicketController.Details*
+  commentId: Overload:TicketShop.Areas.Admin.Controllers.TicketController.Details
   isExternal: false
   name: Details
-  nameWithType: TransactionController.Details
-  fullName: TicketShop.Controllers.Admin.TransactionController.Details
+  nameWithType: TicketController.Details
+  fullName: TicketShop.Areas.Admin.Controllers.TicketController.Details
 - uid: System.Int32
   commentId: T:System.Int32
   parent: System
@@ -10673,12 +10675,12 @@ references:
   name: Int32
   nameWithType: Int32
   fullName: System.Int32
-- uid: TicketShop.Controllers.Admin.TransactionController.Create*
-  commentId: Overload:TicketShop.Controllers.Admin.TransactionController.Create
+- uid: TicketShop.Areas.Admin.Controllers.TicketController.Create*
+  commentId: Overload:TicketShop.Areas.Admin.Controllers.TicketController.Create
   isExternal: false
   name: Create
-  nameWithType: TransactionController.Create
-  fullName: TicketShop.Controllers.Admin.TransactionController.Create
+  nameWithType: TicketController.Create
+  fullName: TicketShop.Areas.Admin.Controllers.TicketController.Create
 - uid: Microsoft.AspNetCore.Http.IFormCollection
   commentId: T:Microsoft.AspNetCore.Http.IFormCollection
   parent: Microsoft.AspNetCore.Http
@@ -10692,15 +10694,15 @@ references:
   name: Microsoft.AspNetCore.Http
   nameWithType: Microsoft.AspNetCore.Http
   fullName: Microsoft.AspNetCore.Http
-- uid: TicketShop.Controllers.Admin.TransactionController.Edit*
-  commentId: Overload:TicketShop.Controllers.Admin.TransactionController.Edit
+- uid: TicketShop.Areas.Admin.Controllers.TicketController.Edit*
+  commentId: Overload:TicketShop.Areas.Admin.Controllers.TicketController.Edit
   isExternal: false
   name: Edit
-  nameWithType: TransactionController.Edit
-  fullName: TicketShop.Controllers.Admin.TransactionController.Edit
-- uid: TicketShop.Controllers.Admin.TransactionController.Delete*
-  commentId: Overload:TicketShop.Controllers.Admin.TransactionController.Delete
+  nameWithType: TicketController.Edit
+  fullName: TicketShop.Areas.Admin.Controllers.TicketController.Edit
+- uid: TicketShop.Areas.Admin.Controllers.TicketController.Delete*
+  commentId: Overload:TicketShop.Areas.Admin.Controllers.TicketController.Delete
   isExternal: false
   name: Delete
-  nameWithType: TransactionController.Delete
-  fullName: TicketShop.Controllers.Admin.TransactionController.Delete
+  nameWithType: TicketController.Delete
+  fullName: TicketShop.Areas.Admin.Controllers.TicketController.Delete

@@ -16,17 +16,18 @@ items:
     remote:
       path: src/TicketShop/Models/ApplicationUser.cs
       branch: features/ticketshop
-      repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
+      repo: https://github.com/erolss/TicketShop.git
     id: ApplicationUser
     path: src/TicketShop/Models/ApplicationUser.cs
     startLine: 9
   assemblies:
-  - TicketShop
+  - Ticketshop
   namespace: TicketShop.Models
   syntax:
     content: 'public class ApplicationUser : IdentityUser'
     content.vb: >-
       Public Class ApplicationUser
+
           Inherits IdentityUser
   inheritance:
   - System.Object

@@ -1,35 +1,36 @@
 ### YamlMime:ManagedReference
 items:
-- uid: TicketShop.Models.ViewModels.ShopFindViewModel
-  commentId: T:TicketShop.Models.ViewModels.ShopFindViewModel
-  id: ShopFindViewModel
-  parent: TicketShop.Models.ViewModels
+- uid: TicketShop.Areas.Admin.Models.FindViewModel
+  commentId: T:TicketShop.Areas.Admin.Models.FindViewModel
+  id: FindViewModel
+  parent: TicketShop.Areas.Admin.Models
   children:
-  - TicketShop.Models.ViewModels.ShopFindViewModel.Events
-  - TicketShop.Models.ViewModels.ShopFindViewModel.FullEventDates
-  - TicketShop.Models.ViewModels.ShopFindViewModel.PartialView
-  - TicketShop.Models.ViewModels.ShopFindViewModel.Venues
+  - TicketShop.Areas.Admin.Models.FindViewModel.EventDates
+  - TicketShop.Areas.Admin.Models.FindViewModel.Events
+  - TicketShop.Areas.Admin.Models.FindViewModel.PartialView
+  - TicketShop.Areas.Admin.Models.FindViewModel.SearchParam
+  - TicketShop.Areas.Admin.Models.FindViewModel.Venues
   langs:
   - csharp
   - vb
-  name: ShopFindViewModel
-  nameWithType: ShopFindViewModel
-  fullName: TicketShop.Models.ViewModels.ShopFindViewModel
+  name: FindViewModel
+  nameWithType: FindViewModel
+  fullName: TicketShop.Areas.Admin.Models.FindViewModel
   type: Class
   source:
     remote:
-      path: src/TicketShop/Models/ViewModels/AllShopViewModels.cs
+      path: src/TicketShop/Areas/Admin/Models/AllAdminViewModels.cs
       branch: features/ticketshop
       repo: https://github.com/erolss/TicketShop.git
-    id: ShopFindViewModel
-    path: src/TicketShop/Models/ViewModels/AllShopViewModels.cs
-    startLine: 39
+    id: FindViewModel
+    path: src/TicketShop/Areas/Admin/Models/AllAdminViewModels.cs
+    startLine: 33
   assemblies:
   - Ticketshop
-  namespace: TicketShop.Models.ViewModels
+  namespace: TicketShop.Areas.Admin.Models
   syntax:
-    content: public class ShopFindViewModel
-    content.vb: Public Class ShopFindViewModel
+    content: public class FindViewModel
+    content.vb: Public Class FindViewModel
   inheritance:
   - System.Object
   inheritedMembers:
@@ -46,140 +47,175 @@ items:
   modifiers.vb:
   - Public
   - Class
-- uid: TicketShop.Models.ViewModels.ShopFindViewModel.Events
-  commentId: P:TicketShop.Models.ViewModels.ShopFindViewModel.Events
+- uid: TicketShop.Areas.Admin.Models.FindViewModel.Events
+  commentId: P:TicketShop.Areas.Admin.Models.FindViewModel.Events
   id: Events
-  parent: TicketShop.Models.ViewModels.ShopFindViewModel
+  parent: TicketShop.Areas.Admin.Models.FindViewModel
   langs:
   - csharp
   - vb
   name: Events
-  nameWithType: ShopFindViewModel.Events
-  fullName: TicketShop.Models.ViewModels.ShopFindViewModel.Events
+  nameWithType: FindViewModel.Events
+  fullName: TicketShop.Areas.Admin.Models.FindViewModel.Events
   type: Property
   source:
     remote:
-      path: src/TicketShop/Models/ViewModels/AllShopViewModels.cs
+      path: src/TicketShop/Areas/Admin/Models/AllAdminViewModels.cs
       branch: features/ticketshop
       repo: https://github.com/erolss/TicketShop.git
     id: Events
-    path: src/TicketShop/Models/ViewModels/AllShopViewModels.cs
-    startLine: 41
+    path: src/TicketShop/Areas/Admin/Models/AllAdminViewModels.cs
+    startLine: 35
   assemblies:
   - Ticketshop
-  namespace: TicketShop.Models.ViewModels
+  namespace: TicketShop.Areas.Admin.Models
   syntax:
     content: public List<Event> Events { get; set; }
     parameters: []
     return:
       type: System.Collections.Generic.List{TicketShop.RestApiClient.Model.Event}
     content.vb: Public Property Events As List(Of  Event)
-  overload: TicketShop.Models.ViewModels.ShopFindViewModel.Events*
+  overload: TicketShop.Areas.Admin.Models.FindViewModel.Events*
   modifiers.csharp:
   - public
   - get
   - set
   modifiers.vb:
   - Public
-- uid: TicketShop.Models.ViewModels.ShopFindViewModel.FullEventDates
-  commentId: P:TicketShop.Models.ViewModels.ShopFindViewModel.FullEventDates
-  id: FullEventDates
-  parent: TicketShop.Models.ViewModels.ShopFindViewModel
+- uid: TicketShop.Areas.Admin.Models.FindViewModel.EventDates
+  commentId: P:TicketShop.Areas.Admin.Models.FindViewModel.EventDates
+  id: EventDates
+  parent: TicketShop.Areas.Admin.Models.FindViewModel
   langs:
   - csharp
   - vb
-  name: FullEventDates
-  nameWithType: ShopFindViewModel.FullEventDates
-  fullName: TicketShop.Models.ViewModels.ShopFindViewModel.FullEventDates
+  name: EventDates
+  nameWithType: FindViewModel.EventDates
+  fullName: TicketShop.Areas.Admin.Models.FindViewModel.EventDates
   type: Property
   source:
     remote:
-      path: src/TicketShop/Models/ViewModels/AllShopViewModels.cs
+      path: src/TicketShop/Areas/Admin/Models/AllAdminViewModels.cs
       branch: features/ticketshop
       repo: https://github.com/erolss/TicketShop.git
-    id: FullEventDates
-    path: src/TicketShop/Models/ViewModels/AllShopViewModels.cs
-    startLine: 42
+    id: EventDates
+    path: src/TicketShop/Areas/Admin/Models/AllAdminViewModels.cs
+    startLine: 36
   assemblies:
   - Ticketshop
-  namespace: TicketShop.Models.ViewModels
+  namespace: TicketShop.Areas.Admin.Models
   syntax:
-    content: public List<FullEventDate> FullEventDates { get; set; }
+    content: public List<EventDate> EventDates { get; set; }
     parameters: []
     return:
-      type: System.Collections.Generic.List{TicketShop.RestApiClient.Model.FullEventDate}
-    content.vb: Public Property FullEventDates As List(Of FullEventDate)
-  overload: TicketShop.Models.ViewModels.ShopFindViewModel.FullEventDates*
+      type: System.Collections.Generic.List{TicketShop.RestApiClient.Model.EventDate}
+    content.vb: Public Property EventDates As List(Of EventDate)
+  overload: TicketShop.Areas.Admin.Models.FindViewModel.EventDates*
   modifiers.csharp:
   - public
   - get
   - set
   modifiers.vb:
   - Public
-- uid: TicketShop.Models.ViewModels.ShopFindViewModel.Venues
-  commentId: P:TicketShop.Models.ViewModels.ShopFindViewModel.Venues
+- uid: TicketShop.Areas.Admin.Models.FindViewModel.Venues
+  commentId: P:TicketShop.Areas.Admin.Models.FindViewModel.Venues
   id: Venues
-  parent: TicketShop.Models.ViewModels.ShopFindViewModel
+  parent: TicketShop.Areas.Admin.Models.FindViewModel
   langs:
   - csharp
   - vb
   name: Venues
-  nameWithType: ShopFindViewModel.Venues
-  fullName: TicketShop.Models.ViewModels.ShopFindViewModel.Venues
+  nameWithType: FindViewModel.Venues
+  fullName: TicketShop.Areas.Admin.Models.FindViewModel.Venues
   type: Property
   source:
     remote:
-      path: src/TicketShop/Models/ViewModels/AllShopViewModels.cs
+      path: src/TicketShop/Areas/Admin/Models/AllAdminViewModels.cs
       branch: features/ticketshop
       repo: https://github.com/erolss/TicketShop.git
     id: Venues
-    path: src/TicketShop/Models/ViewModels/AllShopViewModels.cs
-    startLine: 43
+    path: src/TicketShop/Areas/Admin/Models/AllAdminViewModels.cs
+    startLine: 37
   assemblies:
   - Ticketshop
-  namespace: TicketShop.Models.ViewModels
+  namespace: TicketShop.Areas.Admin.Models
   syntax:
     content: public List<Venue> Venues { get; set; }
     parameters: []
     return:
       type: System.Collections.Generic.List{TicketShop.RestApiClient.Model.Venue}
     content.vb: Public Property Venues As List(Of Venue)
-  overload: TicketShop.Models.ViewModels.ShopFindViewModel.Venues*
+  overload: TicketShop.Areas.Admin.Models.FindViewModel.Venues*
   modifiers.csharp:
   - public
   - get
   - set
   modifiers.vb:
   - Public
-- uid: TicketShop.Models.ViewModels.ShopFindViewModel.PartialView
-  commentId: P:TicketShop.Models.ViewModels.ShopFindViewModel.PartialView
+- uid: TicketShop.Areas.Admin.Models.FindViewModel.PartialView
+  commentId: P:TicketShop.Areas.Admin.Models.FindViewModel.PartialView
   id: PartialView
-  parent: TicketShop.Models.ViewModels.ShopFindViewModel
+  parent: TicketShop.Areas.Admin.Models.FindViewModel
   langs:
   - csharp
   - vb
   name: PartialView
-  nameWithType: ShopFindViewModel.PartialView
-  fullName: TicketShop.Models.ViewModels.ShopFindViewModel.PartialView
+  nameWithType: FindViewModel.PartialView
+  fullName: TicketShop.Areas.Admin.Models.FindViewModel.PartialView
   type: Property
   source:
     remote:
-      path: src/TicketShop/Models/ViewModels/AllShopViewModels.cs
+      path: src/TicketShop/Areas/Admin/Models/AllAdminViewModels.cs
       branch: features/ticketshop
       repo: https://github.com/erolss/TicketShop.git
     id: PartialView
-    path: src/TicketShop/Models/ViewModels/AllShopViewModels.cs
-    startLine: 44
+    path: src/TicketShop/Areas/Admin/Models/AllAdminViewModels.cs
+    startLine: 38
   assemblies:
   - Ticketshop
-  namespace: TicketShop.Models.ViewModels
+  namespace: TicketShop.Areas.Admin.Models
   syntax:
     content: public string PartialView { get; set; }
     parameters: []
     return:
       type: System.String
     content.vb: Public Property PartialView As String
-  overload: TicketShop.Models.ViewModels.ShopFindViewModel.PartialView*
+  overload: TicketShop.Areas.Admin.Models.FindViewModel.PartialView*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: TicketShop.Areas.Admin.Models.FindViewModel.SearchParam
+  commentId: P:TicketShop.Areas.Admin.Models.FindViewModel.SearchParam
+  id: SearchParam
+  parent: TicketShop.Areas.Admin.Models.FindViewModel
+  langs:
+  - csharp
+  - vb
+  name: SearchParam
+  nameWithType: FindViewModel.SearchParam
+  fullName: TicketShop.Areas.Admin.Models.FindViewModel.SearchParam
+  type: Property
+  source:
+    remote:
+      path: src/TicketShop/Areas/Admin/Models/AllAdminViewModels.cs
+      branch: features/ticketshop
+      repo: https://github.com/erolss/TicketShop.git
+    id: SearchParam
+    path: src/TicketShop/Areas/Admin/Models/AllAdminViewModels.cs
+    startLine: 39
+  assemblies:
+  - Ticketshop
+  namespace: TicketShop.Areas.Admin.Models
+  syntax:
+    content: public string SearchParam { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property SearchParam As String
+  overload: TicketShop.Areas.Admin.Models.FindViewModel.SearchParam*
   modifiers.csharp:
   - public
   - get
@@ -187,12 +223,12 @@ items:
   modifiers.vb:
   - Public
 references:
-- uid: TicketShop.Models.ViewModels
-  commentId: N:TicketShop.Models.ViewModels
+- uid: TicketShop.Areas.Admin.Models
+  commentId: N:TicketShop.Areas.Admin.Models
   isExternal: false
-  name: TicketShop.Models.ViewModels
-  nameWithType: TicketShop.Models.ViewModels
-  fullName: TicketShop.Models.ViewModels
+  name: TicketShop.Areas.Admin.Models
+  nameWithType: TicketShop.Areas.Admin.Models
+  fullName: TicketShop.Areas.Admin.Models
 - uid: System.Object
   commentId: T:System.Object
   parent: System
@@ -485,12 +521,12 @@ references:
   name: System
   nameWithType: System
   fullName: System
-- uid: TicketShop.Models.ViewModels.ShopFindViewModel.Events*
-  commentId: Overload:TicketShop.Models.ViewModels.ShopFindViewModel.Events
+- uid: TicketShop.Areas.Admin.Models.FindViewModel.Events*
+  commentId: Overload:TicketShop.Areas.Admin.Models.FindViewModel.Events
   isExternal: false
   name: Events
-  nameWithType: ShopFindViewModel.Events
-  fullName: TicketShop.Models.ViewModels.ShopFindViewModel.Events
+  nameWithType: FindViewModel.Events
+  fullName: TicketShop.Areas.Admin.Models.FindViewModel.Events
 - uid: System.Collections.Generic.List{TicketShop.RestApiClient.Model.Event}
   commentId: T:System.Collections.Generic.List{TicketShop.RestApiClient.Model.Event}
   parent: System.Collections.Generic
@@ -578,22 +614,22 @@ references:
   name: System.Collections.Generic
   nameWithType: System.Collections.Generic
   fullName: System.Collections.Generic
-- uid: TicketShop.Models.ViewModels.ShopFindViewModel.FullEventDates*
-  commentId: Overload:TicketShop.Models.ViewModels.ShopFindViewModel.FullEventDates
+- uid: TicketShop.Areas.Admin.Models.FindViewModel.EventDates*
+  commentId: Overload:TicketShop.Areas.Admin.Models.FindViewModel.EventDates
   isExternal: false
-  name: FullEventDates
-  nameWithType: ShopFindViewModel.FullEventDates
-  fullName: TicketShop.Models.ViewModels.ShopFindViewModel.FullEventDates
-- uid: System.Collections.Generic.List{TicketShop.RestApiClient.Model.FullEventDate}
-  commentId: T:System.Collections.Generic.List{TicketShop.RestApiClient.Model.FullEventDate}
+  name: EventDates
+  nameWithType: FindViewModel.EventDates
+  fullName: TicketShop.Areas.Admin.Models.FindViewModel.EventDates
+- uid: System.Collections.Generic.List{TicketShop.RestApiClient.Model.EventDate}
+  commentId: T:System.Collections.Generic.List{TicketShop.RestApiClient.Model.EventDate}
   parent: System.Collections.Generic
   definition: System.Collections.Generic.List`1
-  name: List<FullEventDate>
-  nameWithType: List<FullEventDate>
-  fullName: System.Collections.Generic.List<TicketShop.RestApiClient.Model.FullEventDate>
-  nameWithType.vb: List(Of FullEventDate)
-  fullName.vb: System.Collections.Generic.List(Of TicketShop.RestApiClient.Model.FullEventDate)
-  name.vb: List(Of FullEventDate)
+  name: List<EventDate>
+  nameWithType: List<EventDate>
+  fullName: System.Collections.Generic.List<TicketShop.RestApiClient.Model.EventDate>
+  nameWithType.vb: List(Of EventDate)
+  fullName.vb: System.Collections.Generic.List(Of TicketShop.RestApiClient.Model.EventDate)
+  name.vb: List(Of EventDate)
   spec.csharp:
   - uid: System.Collections.Generic.List`1
     name: List
@@ -603,10 +639,10 @@ references:
   - name: <
     nameWithType: <
     fullName: <
-  - uid: TicketShop.RestApiClient.Model.FullEventDate
-    name: FullEventDate
-    nameWithType: FullEventDate
-    fullName: TicketShop.RestApiClient.Model.FullEventDate
+  - uid: TicketShop.RestApiClient.Model.EventDate
+    name: EventDate
+    nameWithType: EventDate
+    fullName: TicketShop.RestApiClient.Model.EventDate
   - name: '>'
     nameWithType: '>'
     fullName: '>'
@@ -619,19 +655,19 @@ references:
   - name: '(Of '
     nameWithType: '(Of '
     fullName: '(Of '
-  - uid: TicketShop.RestApiClient.Model.FullEventDate
-    name: FullEventDate
-    nameWithType: FullEventDate
-    fullName: TicketShop.RestApiClient.Model.FullEventDate
+  - uid: TicketShop.RestApiClient.Model.EventDate
+    name: EventDate
+    nameWithType: EventDate
+    fullName: TicketShop.RestApiClient.Model.EventDate
   - name: )
     nameWithType: )
     fullName: )
-- uid: TicketShop.Models.ViewModels.ShopFindViewModel.Venues*
-  commentId: Overload:TicketShop.Models.ViewModels.ShopFindViewModel.Venues
+- uid: TicketShop.Areas.Admin.Models.FindViewModel.Venues*
+  commentId: Overload:TicketShop.Areas.Admin.Models.FindViewModel.Venues
   isExternal: false
   name: Venues
-  nameWithType: ShopFindViewModel.Venues
-  fullName: TicketShop.Models.ViewModels.ShopFindViewModel.Venues
+  nameWithType: FindViewModel.Venues
+  fullName: TicketShop.Areas.Admin.Models.FindViewModel.Venues
 - uid: System.Collections.Generic.List{TicketShop.RestApiClient.Model.Venue}
   commentId: T:System.Collections.Generic.List{TicketShop.RestApiClient.Model.Venue}
   parent: System.Collections.Generic
@@ -674,12 +710,12 @@ references:
   - name: )
     nameWithType: )
     fullName: )
-- uid: TicketShop.Models.ViewModels.ShopFindViewModel.PartialView*
-  commentId: Overload:TicketShop.Models.ViewModels.ShopFindViewModel.PartialView
+- uid: TicketShop.Areas.Admin.Models.FindViewModel.PartialView*
+  commentId: Overload:TicketShop.Areas.Admin.Models.FindViewModel.PartialView
   isExternal: false
   name: PartialView
-  nameWithType: ShopFindViewModel.PartialView
-  fullName: TicketShop.Models.ViewModels.ShopFindViewModel.PartialView
+  nameWithType: FindViewModel.PartialView
+  fullName: TicketShop.Areas.Admin.Models.FindViewModel.PartialView
 - uid: System.String
   commentId: T:System.String
   parent: System
@@ -687,3 +723,9 @@ references:
   name: String
   nameWithType: String
   fullName: System.String
+- uid: TicketShop.Areas.Admin.Models.FindViewModel.SearchParam*
+  commentId: Overload:TicketShop.Areas.Admin.Models.FindViewModel.SearchParam
+  isExternal: false
+  name: SearchParam
+  nameWithType: FindViewModel.SearchParam
+  fullName: TicketShop.Areas.Admin.Models.FindViewModel.SearchParam

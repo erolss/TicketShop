@@ -23,7 +23,7 @@ items:
     remote:
       path: src/RestApiClient/EventApi.cs
       branch: features/ticketshop
-      repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
+      repo: https://github.com/erolss/TicketShop.git
     id: EventApi
     path: src/RestApiClient/EventApi.cs
     startLine: 10
@@ -34,6 +34,7 @@ items:
     content: 'public class EventApi : IEventApi'
     content.vb: >-
       Public Class EventApi
+
           Implements IEventApi
   inheritance:
   - System.Object
@@ -68,7 +69,7 @@ items:
     remote:
       path: src/RestApiClient/EventApi.cs
       branch: features/ticketshop
-      repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
+      repo: https://github.com/erolss/TicketShop.git
     id: .ctor
     path: src/RestApiClient/EventApi.cs
     startLine: 14
@@ -101,7 +102,7 @@ items:
     remote:
       path: src/RestApiClient/EventApi.cs
       branch: features/ticketshop
-      repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
+      repo: https://github.com/erolss/TicketShop.git
     id: AddEvent
     path: src/RestApiClient/EventApi.cs
     startLine: 19
@@ -138,7 +139,7 @@ items:
     remote:
       path: src/RestApiClient/EventApi.cs
       branch: features/ticketshop
-      repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
+      repo: https://github.com/erolss/TicketShop.git
     id: DeleteEvent
     path: src/RestApiClient/EventApi.cs
     startLine: 32
@@ -175,7 +176,7 @@ items:
     remote:
       path: src/RestApiClient/EventApi.cs
       branch: features/ticketshop
-      repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
+      repo: https://github.com/erolss/TicketShop.git
     id: FindEvents
     path: src/RestApiClient/EventApi.cs
     startLine: 48
@@ -212,7 +213,7 @@ items:
     remote:
       path: src/RestApiClient/EventApi.cs
       branch: features/ticketshop
-      repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
+      repo: https://github.com/erolss/TicketShop.git
     id: GetEventById
     path: src/RestApiClient/EventApi.cs
     startLine: 61
@@ -249,7 +250,7 @@ items:
     remote:
       path: src/RestApiClient/EventApi.cs
       branch: features/ticketshop
-      repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
+      repo: https://github.com/erolss/TicketShop.git
     id: GetEvents
     path: src/RestApiClient/EventApi.cs
     startLine: 77
@@ -288,7 +289,7 @@ items:
     remote:
       path: src/RestApiClient/EventApi.cs
       branch: features/ticketshop
-      repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
+      repo: https://github.com/erolss/TicketShop.git
     id: UpdateEvent
     path: src/RestApiClient/EventApi.cs
     startLine: 89

@@ -1,36 +1,36 @@
 ### YamlMime:ManagedReference
 items:
-- uid: TicketShop.Controllers.Admin.EventDateController
-  commentId: T:TicketShop.Controllers.Admin.EventDateController
+- uid: TicketShop.Areas.Admin.Controllers.EventDateController
+  commentId: T:TicketShop.Areas.Admin.Controllers.EventDateController
   id: EventDateController
-  parent: TicketShop.Controllers.Admin
+  parent: TicketShop.Areas.Admin.Controllers
   children:
-  - TicketShop.Controllers.Admin.EventDateController.Create
-  - TicketShop.Controllers.Admin.EventDateController.Create(Microsoft.AspNetCore.Http.IFormCollection)
-  - TicketShop.Controllers.Admin.EventDateController.Delete(System.Int32)
-  - TicketShop.Controllers.Admin.EventDateController.Delete(System.Int32,Microsoft.AspNetCore.Http.IFormCollection)
-  - TicketShop.Controllers.Admin.EventDateController.Details(System.Int32)
-  - TicketShop.Controllers.Admin.EventDateController.Edit(System.Int32)
-  - TicketShop.Controllers.Admin.EventDateController.Edit(System.Int32,Microsoft.AspNetCore.Http.IFormCollection)
-  - TicketShop.Controllers.Admin.EventDateController.Index
+  - TicketShop.Areas.Admin.Controllers.EventDateController.Create
+  - TicketShop.Areas.Admin.Controllers.EventDateController.Create(Microsoft.AspNetCore.Http.IFormCollection)
+  - TicketShop.Areas.Admin.Controllers.EventDateController.Delete(System.Int32)
+  - TicketShop.Areas.Admin.Controllers.EventDateController.Delete(System.Int32,Microsoft.AspNetCore.Http.IFormCollection)
+  - TicketShop.Areas.Admin.Controllers.EventDateController.Details(System.Int32)
+  - TicketShop.Areas.Admin.Controllers.EventDateController.Edit(System.Int32)
+  - TicketShop.Areas.Admin.Controllers.EventDateController.Edit(System.Int32,Microsoft.AspNetCore.Http.IFormCollection)
+  - TicketShop.Areas.Admin.Controllers.EventDateController.Index
   langs:
   - csharp
   - vb
   name: EventDateController
   nameWithType: EventDateController
-  fullName: TicketShop.Controllers.Admin.EventDateController
+  fullName: TicketShop.Areas.Admin.Controllers.EventDateController
   type: Class
   source:
     remote:
-      path: src/TicketShop/Controllers/Admin/EventDateController.cs
+      path: src/TicketShop/Areas/Admin/Controllers/EventDateController.cs
       branch: features/ticketshop
-      repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
+      repo: https://github.com/erolss/TicketShop.git
     id: EventDateController
-    path: src/TicketShop/Controllers/Admin/EventDateController.cs
+    path: src/TicketShop/Areas/Admin/Controllers/EventDateController.cs
     startLine: 13
   assemblies:
-  - TicketShop
-  namespace: TicketShop.Controllers.Admin
+  - Ticketshop
+  namespace: TicketShop.Areas.Admin.Controllers
   syntax:
     content: >-
       [Authorize(Policy = "RequireAdminRole")]
@@ -44,7 +44,9 @@ items:
       <Area("Admin")>
 
       Public Class EventDateController
+
           Inherits Controller
+
           Implements IActionFilter, IAsyncActionFilter, IFilterMetadata, IDisposable
   inheritance:
   - System.Object
@@ -241,60 +243,60 @@ items:
   modifiers.vb:
   - Public
   - Class
-- uid: TicketShop.Controllers.Admin.EventDateController.Index
-  commentId: M:TicketShop.Controllers.Admin.EventDateController.Index
+- uid: TicketShop.Areas.Admin.Controllers.EventDateController.Index
+  commentId: M:TicketShop.Areas.Admin.Controllers.EventDateController.Index
   id: Index
-  parent: TicketShop.Controllers.Admin.EventDateController
+  parent: TicketShop.Areas.Admin.Controllers.EventDateController
   langs:
   - csharp
   - vb
   name: Index()
   nameWithType: EventDateController.Index()
-  fullName: TicketShop.Controllers.Admin.EventDateController.Index()
+  fullName: TicketShop.Areas.Admin.Controllers.EventDateController.Index()
   type: Method
   source:
     remote:
-      path: src/TicketShop/Controllers/Admin/EventDateController.cs
+      path: src/TicketShop/Areas/Admin/Controllers/EventDateController.cs
       branch: features/ticketshop
-      repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
+      repo: https://github.com/erolss/TicketShop.git
     id: Index
-    path: src/TicketShop/Controllers/Admin/EventDateController.cs
+    path: src/TicketShop/Areas/Admin/Controllers/EventDateController.cs
     startLine: 18
   assemblies:
-  - TicketShop
-  namespace: TicketShop.Controllers.Admin
+  - Ticketshop
+  namespace: TicketShop.Areas.Admin.Controllers
   syntax:
     content: public ActionResult Index()
     return:
       type: Microsoft.AspNetCore.Mvc.ActionResult
     content.vb: Public Function Index As ActionResult
-  overload: TicketShop.Controllers.Admin.EventDateController.Index*
+  overload: TicketShop.Areas.Admin.Controllers.EventDateController.Index*
   modifiers.csharp:
   - public
   modifiers.vb:
   - Public
-- uid: TicketShop.Controllers.Admin.EventDateController.Details(System.Int32)
-  commentId: M:TicketShop.Controllers.Admin.EventDateController.Details(System.Int32)
+- uid: TicketShop.Areas.Admin.Controllers.EventDateController.Details(System.Int32)
+  commentId: M:TicketShop.Areas.Admin.Controllers.EventDateController.Details(System.Int32)
   id: Details(System.Int32)
-  parent: TicketShop.Controllers.Admin.EventDateController
+  parent: TicketShop.Areas.Admin.Controllers.EventDateController
   langs:
   - csharp
   - vb
   name: Details(Int32)
   nameWithType: EventDateController.Details(Int32)
-  fullName: TicketShop.Controllers.Admin.EventDateController.Details(System.Int32)
+  fullName: TicketShop.Areas.Admin.Controllers.EventDateController.Details(System.Int32)
   type: Method
   source:
     remote:
-      path: src/TicketShop/Controllers/Admin/EventDateController.cs
+      path: src/TicketShop/Areas/Admin/Controllers/EventDateController.cs
       branch: features/ticketshop
-      repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
+      repo: https://github.com/erolss/TicketShop.git
     id: Details
-    path: src/TicketShop/Controllers/Admin/EventDateController.cs
+    path: src/TicketShop/Areas/Admin/Controllers/EventDateController.cs
     startLine: 24
   assemblies:
-  - TicketShop
-  namespace: TicketShop.Controllers.Admin
+  - Ticketshop
+  namespace: TicketShop.Areas.Admin.Controllers
   syntax:
     content: public ActionResult Details(int id)
     parameters:
@@ -303,65 +305,65 @@ items:
     return:
       type: Microsoft.AspNetCore.Mvc.ActionResult
     content.vb: Public Function Details(id As Integer) As ActionResult
-  overload: TicketShop.Controllers.Admin.EventDateController.Details*
+  overload: TicketShop.Areas.Admin.Controllers.EventDateController.Details*
   modifiers.csharp:
   - public
   modifiers.vb:
   - Public
-- uid: TicketShop.Controllers.Admin.EventDateController.Create
-  commentId: M:TicketShop.Controllers.Admin.EventDateController.Create
+- uid: TicketShop.Areas.Admin.Controllers.EventDateController.Create
+  commentId: M:TicketShop.Areas.Admin.Controllers.EventDateController.Create
   id: Create
-  parent: TicketShop.Controllers.Admin.EventDateController
+  parent: TicketShop.Areas.Admin.Controllers.EventDateController
   langs:
   - csharp
   - vb
   name: Create()
   nameWithType: EventDateController.Create()
-  fullName: TicketShop.Controllers.Admin.EventDateController.Create()
+  fullName: TicketShop.Areas.Admin.Controllers.EventDateController.Create()
   type: Method
   source:
     remote:
-      path: src/TicketShop/Controllers/Admin/EventDateController.cs
+      path: src/TicketShop/Areas/Admin/Controllers/EventDateController.cs
       branch: features/ticketshop
-      repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
+      repo: https://github.com/erolss/TicketShop.git
     id: Create
-    path: src/TicketShop/Controllers/Admin/EventDateController.cs
+    path: src/TicketShop/Areas/Admin/Controllers/EventDateController.cs
     startLine: 30
   assemblies:
-  - TicketShop
-  namespace: TicketShop.Controllers.Admin
+  - Ticketshop
+  namespace: TicketShop.Areas.Admin.Controllers
   syntax:
     content: public ActionResult Create()
     return:
       type: Microsoft.AspNetCore.Mvc.ActionResult
     content.vb: Public Function Create As ActionResult
-  overload: TicketShop.Controllers.Admin.EventDateController.Create*
+  overload: TicketShop.Areas.Admin.Controllers.EventDateController.Create*
   modifiers.csharp:
   - public
   modifiers.vb:
   - Public
-- uid: TicketShop.Controllers.Admin.EventDateController.Create(Microsoft.AspNetCore.Http.IFormCollection)
-  commentId: M:TicketShop.Controllers.Admin.EventDateController.Create(Microsoft.AspNetCore.Http.IFormCollection)
+- uid: TicketShop.Areas.Admin.Controllers.EventDateController.Create(Microsoft.AspNetCore.Http.IFormCollection)
+  commentId: M:TicketShop.Areas.Admin.Controllers.EventDateController.Create(Microsoft.AspNetCore.Http.IFormCollection)
   id: Create(Microsoft.AspNetCore.Http.IFormCollection)
-  parent: TicketShop.Controllers.Admin.EventDateController
+  parent: TicketShop.Areas.Admin.Controllers.EventDateController
   langs:
   - csharp
   - vb
   name: Create(IFormCollection)
   nameWithType: EventDateController.Create(IFormCollection)
-  fullName: TicketShop.Controllers.Admin.EventDateController.Create(Microsoft.AspNetCore.Http.IFormCollection)
+  fullName: TicketShop.Areas.Admin.Controllers.EventDateController.Create(Microsoft.AspNetCore.Http.IFormCollection)
   type: Method
   source:
     remote:
-      path: src/TicketShop/Controllers/Admin/EventDateController.cs
+      path: src/TicketShop/Areas/Admin/Controllers/EventDateController.cs
       branch: features/ticketshop
-      repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
+      repo: https://github.com/erolss/TicketShop.git
     id: Create
-    path: src/TicketShop/Controllers/Admin/EventDateController.cs
+    path: src/TicketShop/Areas/Admin/Controllers/EventDateController.cs
     startLine: 36
   assemblies:
-  - TicketShop
-  namespace: TicketShop.Controllers.Admin
+  - Ticketshop
+  namespace: TicketShop.Areas.Admin.Controllers
   syntax:
     content: >-
       [HttpPost]
@@ -380,7 +382,7 @@ items:
       <ValidateAntiForgeryToken>
 
       Public Function Create(collection As IFormCollection) As ActionResult
-  overload: TicketShop.Controllers.Admin.EventDateController.Create*
+  overload: TicketShop.Areas.Admin.Controllers.EventDateController.Create*
   attributes:
   - type: Microsoft.AspNetCore.Mvc.HttpPostAttribute
     ctor: Microsoft.AspNetCore.Mvc.HttpPostAttribute.#ctor
@@ -392,28 +394,28 @@ items:
   - public
   modifiers.vb:
   - Public
-- uid: TicketShop.Controllers.Admin.EventDateController.Edit(System.Int32)
-  commentId: M:TicketShop.Controllers.Admin.EventDateController.Edit(System.Int32)
+- uid: TicketShop.Areas.Admin.Controllers.EventDateController.Edit(System.Int32)
+  commentId: M:TicketShop.Areas.Admin.Controllers.EventDateController.Edit(System.Int32)
   id: Edit(System.Int32)
-  parent: TicketShop.Controllers.Admin.EventDateController
+  parent: TicketShop.Areas.Admin.Controllers.EventDateController
   langs:
   - csharp
   - vb
   name: Edit(Int32)
   nameWithType: EventDateController.Edit(Int32)
-  fullName: TicketShop.Controllers.Admin.EventDateController.Edit(System.Int32)
+  fullName: TicketShop.Areas.Admin.Controllers.EventDateController.Edit(System.Int32)
   type: Method
   source:
     remote:
-      path: src/TicketShop/Controllers/Admin/EventDateController.cs
+      path: src/TicketShop/Areas/Admin/Controllers/EventDateController.cs
       branch: features/ticketshop
-      repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
+      repo: https://github.com/erolss/TicketShop.git
     id: Edit
-    path: src/TicketShop/Controllers/Admin/EventDateController.cs
+    path: src/TicketShop/Areas/Admin/Controllers/EventDateController.cs
     startLine: 53
   assemblies:
-  - TicketShop
-  namespace: TicketShop.Controllers.Admin
+  - Ticketshop
+  namespace: TicketShop.Areas.Admin.Controllers
   syntax:
     content: public ActionResult Edit(int id)
     parameters:
@@ -422,33 +424,33 @@ items:
     return:
       type: Microsoft.AspNetCore.Mvc.ActionResult
     content.vb: Public Function Edit(id As Integer) As ActionResult
-  overload: TicketShop.Controllers.Admin.EventDateController.Edit*
+  overload: TicketShop.Areas.Admin.Controllers.EventDateController.Edit*
   modifiers.csharp:
   - public
   modifiers.vb:
   - Public
-- uid: TicketShop.Controllers.Admin.EventDateController.Edit(System.Int32,Microsoft.AspNetCore.Http.IFormCollection)
-  commentId: M:TicketShop.Controllers.Admin.EventDateController.Edit(System.Int32,Microsoft.AspNetCore.Http.IFormCollection)
+- uid: TicketShop.Areas.Admin.Controllers.EventDateController.Edit(System.Int32,Microsoft.AspNetCore.Http.IFormCollection)
+  commentId: M:TicketShop.Areas.Admin.Controllers.EventDateController.Edit(System.Int32,Microsoft.AspNetCore.Http.IFormCollection)
   id: Edit(System.Int32,Microsoft.AspNetCore.Http.IFormCollection)
-  parent: TicketShop.Controllers.Admin.EventDateController
+  parent: TicketShop.Areas.Admin.Controllers.EventDateController
   langs:
   - csharp
   - vb
   name: Edit(Int32, IFormCollection)
   nameWithType: EventDateController.Edit(Int32, IFormCollection)
-  fullName: TicketShop.Controllers.Admin.EventDateController.Edit(System.Int32, Microsoft.AspNetCore.Http.IFormCollection)
+  fullName: TicketShop.Areas.Admin.Controllers.EventDateController.Edit(System.Int32, Microsoft.AspNetCore.Http.IFormCollection)
   type: Method
   source:
     remote:
-      path: src/TicketShop/Controllers/Admin/EventDateController.cs
+      path: src/TicketShop/Areas/Admin/Controllers/EventDateController.cs
       branch: features/ticketshop
-      repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
+      repo: https://github.com/erolss/TicketShop.git
     id: Edit
-    path: src/TicketShop/Controllers/Admin/EventDateController.cs
+    path: src/TicketShop/Areas/Admin/Controllers/EventDateController.cs
     startLine: 59
   assemblies:
-  - TicketShop
-  namespace: TicketShop.Controllers.Admin
+  - Ticketshop
+  namespace: TicketShop.Areas.Admin.Controllers
   syntax:
     content: >-
       [HttpPost]
@@ -469,7 +471,7 @@ items:
       <ValidateAntiForgeryToken>
 
       Public Function Edit(id As Integer, collection As IFormCollection) As ActionResult
-  overload: TicketShop.Controllers.Admin.EventDateController.Edit*
+  overload: TicketShop.Areas.Admin.Controllers.EventDateController.Edit*
   attributes:
   - type: Microsoft.AspNetCore.Mvc.HttpPostAttribute
     ctor: Microsoft.AspNetCore.Mvc.HttpPostAttribute.#ctor
@@ -481,28 +483,28 @@ items:
   - public
   modifiers.vb:
   - Public
-- uid: TicketShop.Controllers.Admin.EventDateController.Delete(System.Int32)
-  commentId: M:TicketShop.Controllers.Admin.EventDateController.Delete(System.Int32)
+- uid: TicketShop.Areas.Admin.Controllers.EventDateController.Delete(System.Int32)
+  commentId: M:TicketShop.Areas.Admin.Controllers.EventDateController.Delete(System.Int32)
   id: Delete(System.Int32)
-  parent: TicketShop.Controllers.Admin.EventDateController
+  parent: TicketShop.Areas.Admin.Controllers.EventDateController
   langs:
   - csharp
   - vb
   name: Delete(Int32)
   nameWithType: EventDateController.Delete(Int32)
-  fullName: TicketShop.Controllers.Admin.EventDateController.Delete(System.Int32)
+  fullName: TicketShop.Areas.Admin.Controllers.EventDateController.Delete(System.Int32)
   type: Method
   source:
     remote:
-      path: src/TicketShop/Controllers/Admin/EventDateController.cs
+      path: src/TicketShop/Areas/Admin/Controllers/EventDateController.cs
       branch: features/ticketshop
-      repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
+      repo: https://github.com/erolss/TicketShop.git
     id: Delete
-    path: src/TicketShop/Controllers/Admin/EventDateController.cs
+    path: src/TicketShop/Areas/Admin/Controllers/EventDateController.cs
     startLine: 76
   assemblies:
-  - TicketShop
-  namespace: TicketShop.Controllers.Admin
+  - Ticketshop
+  namespace: TicketShop.Areas.Admin.Controllers
   syntax:
     content: public ActionResult Delete(int id)
     parameters:
@@ -511,33 +513,33 @@ items:
     return:
       type: Microsoft.AspNetCore.Mvc.ActionResult
     content.vb: Public Function Delete(id As Integer) As ActionResult
-  overload: TicketShop.Controllers.Admin.EventDateController.Delete*
+  overload: TicketShop.Areas.Admin.Controllers.EventDateController.Delete*
   modifiers.csharp:
   - public
   modifiers.vb:
   - Public
-- uid: TicketShop.Controllers.Admin.EventDateController.Delete(System.Int32,Microsoft.AspNetCore.Http.IFormCollection)
-  commentId: M:TicketShop.Controllers.Admin.EventDateController.Delete(System.Int32,Microsoft.AspNetCore.Http.IFormCollection)
+- uid: TicketShop.Areas.Admin.Controllers.EventDateController.Delete(System.Int32,Microsoft.AspNetCore.Http.IFormCollection)
+  commentId: M:TicketShop.Areas.Admin.Controllers.EventDateController.Delete(System.Int32,Microsoft.AspNetCore.Http.IFormCollection)
   id: Delete(System.Int32,Microsoft.AspNetCore.Http.IFormCollection)
-  parent: TicketShop.Controllers.Admin.EventDateController
+  parent: TicketShop.Areas.Admin.Controllers.EventDateController
   langs:
   - csharp
   - vb
   name: Delete(Int32, IFormCollection)
   nameWithType: EventDateController.Delete(Int32, IFormCollection)
-  fullName: TicketShop.Controllers.Admin.EventDateController.Delete(System.Int32, Microsoft.AspNetCore.Http.IFormCollection)
+  fullName: TicketShop.Areas.Admin.Controllers.EventDateController.Delete(System.Int32, Microsoft.AspNetCore.Http.IFormCollection)
   type: Method
   source:
     remote:
-      path: src/TicketShop/Controllers/Admin/EventDateController.cs
+      path: src/TicketShop/Areas/Admin/Controllers/EventDateController.cs
       branch: features/ticketshop
-      repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
+      repo: https://github.com/erolss/TicketShop.git
     id: Delete
-    path: src/TicketShop/Controllers/Admin/EventDateController.cs
+    path: src/TicketShop/Areas/Admin/Controllers/EventDateController.cs
     startLine: 82
   assemblies:
-  - TicketShop
-  namespace: TicketShop.Controllers.Admin
+  - Ticketshop
+  namespace: TicketShop.Areas.Admin.Controllers
   syntax:
     content: >-
       [HttpPost]
@@ -558,7 +560,7 @@ items:
       <ValidateAntiForgeryToken>
 
       Public Function Delete(id As Integer, collection As IFormCollection) As ActionResult
-  overload: TicketShop.Controllers.Admin.EventDateController.Delete*
+  overload: TicketShop.Areas.Admin.Controllers.EventDateController.Delete*
   attributes:
   - type: Microsoft.AspNetCore.Mvc.HttpPostAttribute
     ctor: Microsoft.AspNetCore.Mvc.HttpPostAttribute.#ctor
@@ -571,12 +573,12 @@ items:
   modifiers.vb:
   - Public
 references:
-- uid: TicketShop.Controllers.Admin
-  commentId: N:TicketShop.Controllers.Admin
+- uid: TicketShop.Areas.Admin.Controllers
+  commentId: N:TicketShop.Areas.Admin.Controllers
   isExternal: false
-  name: TicketShop.Controllers.Admin
-  nameWithType: TicketShop.Controllers.Admin
-  fullName: TicketShop.Controllers.Admin
+  name: TicketShop.Areas.Admin.Controllers
+  nameWithType: TicketShop.Areas.Admin.Controllers
+  fullName: TicketShop.Areas.Admin.Controllers
 - uid: System.Object
   commentId: T:System.Object
   parent: System
@@ -10647,12 +10649,12 @@ references:
   - name: )
     nameWithType: )
     fullName: )
-- uid: TicketShop.Controllers.Admin.EventDateController.Index*
-  commentId: Overload:TicketShop.Controllers.Admin.EventDateController.Index
+- uid: TicketShop.Areas.Admin.Controllers.EventDateController.Index*
+  commentId: Overload:TicketShop.Areas.Admin.Controllers.EventDateController.Index
   isExternal: false
   name: Index
   nameWithType: EventDateController.Index
-  fullName: TicketShop.Controllers.Admin.EventDateController.Index
+  fullName: TicketShop.Areas.Admin.Controllers.EventDateController.Index
 - uid: Microsoft.AspNetCore.Mvc.ActionResult
   commentId: T:Microsoft.AspNetCore.Mvc.ActionResult
   parent: Microsoft.AspNetCore.Mvc
@@ -10660,12 +10662,12 @@ references:
   name: ActionResult
   nameWithType: ActionResult
   fullName: Microsoft.AspNetCore.Mvc.ActionResult
-- uid: TicketShop.Controllers.Admin.EventDateController.Details*
-  commentId: Overload:TicketShop.Controllers.Admin.EventDateController.Details
+- uid: TicketShop.Areas.Admin.Controllers.EventDateController.Details*
+  commentId: Overload:TicketShop.Areas.Admin.Controllers.EventDateController.Details
   isExternal: false
   name: Details
   nameWithType: EventDateController.Details
-  fullName: TicketShop.Controllers.Admin.EventDateController.Details
+  fullName: TicketShop.Areas.Admin.Controllers.EventDateController.Details
 - uid: System.Int32
   commentId: T:System.Int32
   parent: System
@@ -10673,12 +10675,12 @@ references:
   name: Int32
   nameWithType: Int32
   fullName: System.Int32
-- uid: TicketShop.Controllers.Admin.EventDateController.Create*
-  commentId: Overload:TicketShop.Controllers.Admin.EventDateController.Create
+- uid: TicketShop.Areas.Admin.Controllers.EventDateController.Create*
+  commentId: Overload:TicketShop.Areas.Admin.Controllers.EventDateController.Create
   isExternal: false
   name: Create
   nameWithType: EventDateController.Create
-  fullName: TicketShop.Controllers.Admin.EventDateController.Create
+  fullName: TicketShop.Areas.Admin.Controllers.EventDateController.Create
 - uid: Microsoft.AspNetCore.Http.IFormCollection
   commentId: T:Microsoft.AspNetCore.Http.IFormCollection
   parent: Microsoft.AspNetCore.Http
@@ -10692,15 +10694,15 @@ references:
   name: Microsoft.AspNetCore.Http
   nameWithType: Microsoft.AspNetCore.Http
   fullName: Microsoft.AspNetCore.Http
-- uid: TicketShop.Controllers.Admin.EventDateController.Edit*
-  commentId: Overload:TicketShop.Controllers.Admin.EventDateController.Edit
+- uid: TicketShop.Areas.Admin.Controllers.EventDateController.Edit*
+  commentId: Overload:TicketShop.Areas.Admin.Controllers.EventDateController.Edit
   isExternal: false
   name: Edit
   nameWithType: EventDateController.Edit
-  fullName: TicketShop.Controllers.Admin.EventDateController.Edit
-- uid: TicketShop.Controllers.Admin.EventDateController.Delete*
-  commentId: Overload:TicketShop.Controllers.Admin.EventDateController.Delete
+  fullName: TicketShop.Areas.Admin.Controllers.EventDateController.Edit
+- uid: TicketShop.Areas.Admin.Controllers.EventDateController.Delete*
+  commentId: Overload:TicketShop.Areas.Admin.Controllers.EventDateController.Delete
   isExternal: false
   name: Delete
   nameWithType: EventDateController.Delete
-  fullName: TicketShop.Controllers.Admin.EventDateController.Delete
+  fullName: TicketShop.Areas.Admin.Controllers.EventDateController.Delete

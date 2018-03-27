@@ -19,12 +19,12 @@ items:
     remote:
       path: src/TicketShop/Models/AccountViewModels/LoginViewModel.cs
       branch: features/ticketshop
-      repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
+      repo: https://github.com/erolss/TicketShop.git
     id: LoginViewModel
     path: src/TicketShop/Models/AccountViewModels/LoginViewModel.cs
     startLine: 8
   assemblies:
-  - TicketShop
+  - Ticketshop
   namespace: TicketShop.Models.AccountViewModels
   syntax:
     content: public class LoginViewModel
@@ -60,12 +60,12 @@ items:
     remote:
       path: src/TicketShop/Models/AccountViewModels/LoginViewModel.cs
       branch: features/ticketshop
-      repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
+      repo: https://github.com/erolss/TicketShop.git
     id: Email
     path: src/TicketShop/Models/AccountViewModels/LoginViewModel.cs
     startLine: 10
   assemblies:
-  - TicketShop
+  - Ticketshop
   namespace: TicketShop.Models.AccountViewModels
   syntax:
     content: >-
@@ -112,12 +112,12 @@ items:
     remote:
       path: src/TicketShop/Models/AccountViewModels/LoginViewModel.cs
       branch: features/ticketshop
-      repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
+      repo: https://github.com/erolss/TicketShop.git
     id: Password
     path: src/TicketShop/Models/AccountViewModels/LoginViewModel.cs
     startLine: 14
   assemblies:
-  - TicketShop
+  - Ticketshop
   namespace: TicketShop.Models.AccountViewModels
   syntax:
     content: >-
@@ -166,12 +166,12 @@ items:
     remote:
       path: src/TicketShop/Models/AccountViewModels/LoginViewModel.cs
       branch: features/ticketshop
-      repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
+      repo: https://github.com/erolss/TicketShop.git
     id: RememberMe
     path: src/TicketShop/Models/AccountViewModels/LoginViewModel.cs
     startLine: 18
   assemblies:
-  - TicketShop
+  - Ticketshop
   namespace: TicketShop.Models.AccountViewModels
   syntax:
     content: >-

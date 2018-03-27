@@ -18,12 +18,12 @@ items:
     remote:
       path: src/TicketShop/Models/ErrorViewModel.cs
       branch: features/ticketshop
-      repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
+      repo: https://github.com/erolss/TicketShop.git
     id: ErrorViewModel
     path: src/TicketShop/Models/ErrorViewModel.cs
     startLine: 4
   assemblies:
-  - TicketShop
+  - Ticketshop
   namespace: TicketShop.Models
   syntax:
     content: public class ErrorViewModel
@@ -59,12 +59,12 @@ items:
     remote:
       path: src/TicketShop/Models/ErrorViewModel.cs
       branch: features/ticketshop
-      repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
+      repo: https://github.com/erolss/TicketShop.git
     id: RequestId
     path: src/TicketShop/Models/ErrorViewModel.cs
     startLine: 6
   assemblies:
-  - TicketShop
+  - Ticketshop
   namespace: TicketShop.Models
   syntax:
     content: public string RequestId { get; set; }
@@ -94,12 +94,12 @@ items:
     remote:
       path: src/TicketShop/Models/ErrorViewModel.cs
       branch: features/ticketshop
-      repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
+      repo: https://github.com/erolss/TicketShop.git
     id: ShowRequestId
     path: src/TicketShop/Models/ErrorViewModel.cs
     startLine: 8
   assemblies:
-  - TicketShop
+  - Ticketshop
   namespace: TicketShop.Models
   syntax:
     content: public bool ShowRequestId { get; }

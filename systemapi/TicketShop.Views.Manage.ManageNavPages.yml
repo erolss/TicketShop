@@ -27,12 +27,12 @@ items:
     remote:
       path: src/TicketShop/Views/Manage/ManageNavPages.cs
       branch: features/ticketshop
-      repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
+      repo: https://github.com/erolss/TicketShop.git
     id: ManageNavPages
     path: src/TicketShop/Views/Manage/ManageNavPages.cs
     startLine: 9
   assemblies:
-  - TicketShop
+  - Ticketshop
   namespace: TicketShop.Views.Manage
   syntax:
     content: public static class ManageNavPages
@@ -69,12 +69,12 @@ items:
     remote:
       path: src/TicketShop/Views/Manage/ManageNavPages.cs
       branch: features/ticketshop
-      repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
+      repo: https://github.com/erolss/TicketShop.git
     id: ActivePageKey
     path: src/TicketShop/Views/Manage/ManageNavPages.cs
     startLine: 11
   assemblies:
-  - TicketShop
+  - Ticketshop
   namespace: TicketShop.Views.Manage
   syntax:
     content: public static string ActivePageKey { get; }
@@ -106,12 +106,12 @@ items:
     remote:
       path: src/TicketShop/Views/Manage/ManageNavPages.cs
       branch: features/ticketshop
-      repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
+      repo: https://github.com/erolss/TicketShop.git
     id: Index
     path: src/TicketShop/Views/Manage/ManageNavPages.cs
     startLine: 13
   assemblies:
-  - TicketShop
+  - Ticketshop
   namespace: TicketShop.Views.Manage
   syntax:
     content: public static string Index { get; }
@@ -143,12 +143,12 @@ items:
     remote:
       path: src/TicketShop/Views/Manage/ManageNavPages.cs
       branch: features/ticketshop
-      repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
+      repo: https://github.com/erolss/TicketShop.git
     id: ChangePassword
     path: src/TicketShop/Views/Manage/ManageNavPages.cs
     startLine: 15
   assemblies:
-  - TicketShop
+  - Ticketshop
   namespace: TicketShop.Views.Manage
   syntax:
     content: public static string ChangePassword { get; }
@@ -180,12 +180,12 @@ items:
     remote:
       path: src/TicketShop/Views/Manage/ManageNavPages.cs
       branch: features/ticketshop
-      repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
+      repo: https://github.com/erolss/TicketShop.git
     id: ExternalLogins
     path: src/TicketShop/Views/Manage/ManageNavPages.cs
     startLine: 17
   assemblies:
-  - TicketShop
+  - Ticketshop
   namespace: TicketShop.Views.Manage
   syntax:
     content: public static string ExternalLogins { get; }
@@ -217,12 +217,12 @@ items:
     remote:
       path: src/TicketShop/Views/Manage/ManageNavPages.cs
       branch: features/ticketshop
-      repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
+      repo: https://github.com/erolss/TicketShop.git
     id: TwoFactorAuthentication
     path: src/TicketShop/Views/Manage/ManageNavPages.cs
     startLine: 19
   assemblies:
-  - TicketShop
+  - Ticketshop
   namespace: TicketShop.Views.Manage
   syntax:
     content: public static string TwoFactorAuthentication { get; }
@@ -254,12 +254,12 @@ items:
     remote:
       path: src/TicketShop/Views/Manage/ManageNavPages.cs
       branch: features/ticketshop
-      repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
+      repo: https://github.com/erolss/TicketShop.git
     id: IndexNavClass
     path: src/TicketShop/Views/Manage/ManageNavPages.cs
     startLine: 21
   assemblies:
-  - TicketShop
+  - Ticketshop
   namespace: TicketShop.Views.Manage
   syntax:
     content: public static string IndexNavClass(ViewContext viewContext)
@@ -291,12 +291,12 @@ items:
     remote:
       path: src/TicketShop/Views/Manage/ManageNavPages.cs
       branch: features/ticketshop
-      repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
+      repo: https://github.com/erolss/TicketShop.git
     id: ChangePasswordNavClass
     path: src/TicketShop/Views/Manage/ManageNavPages.cs
     startLine: 23
   assemblies:
-  - TicketShop
+  - Ticketshop
   namespace: TicketShop.Views.Manage
   syntax:
     content: public static string ChangePasswordNavClass(ViewContext viewContext)
@@ -328,12 +328,12 @@ items:
     remote:
       path: src/TicketShop/Views/Manage/ManageNavPages.cs
       branch: features/ticketshop
-      repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
+      repo: https://github.com/erolss/TicketShop.git
     id: ExternalLoginsNavClass
     path: src/TicketShop/Views/Manage/ManageNavPages.cs
     startLine: 25
   assemblies:
-  - TicketShop
+  - Ticketshop
   namespace: TicketShop.Views.Manage
   syntax:
     content: public static string ExternalLoginsNavClass(ViewContext viewContext)
@@ -365,12 +365,12 @@ items:
     remote:
       path: src/TicketShop/Views/Manage/ManageNavPages.cs
       branch: features/ticketshop
-      repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
+      repo: https://github.com/erolss/TicketShop.git
     id: TwoFactorAuthenticationNavClass
     path: src/TicketShop/Views/Manage/ManageNavPages.cs
     startLine: 27
   assemblies:
-  - TicketShop
+  - Ticketshop
   namespace: TicketShop.Views.Manage
   syntax:
     content: public static string TwoFactorAuthenticationNavClass(ViewContext viewContext)
@@ -402,12 +402,12 @@ items:
     remote:
       path: src/TicketShop/Views/Manage/ManageNavPages.cs
       branch: features/ticketshop
-      repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
+      repo: https://github.com/erolss/TicketShop.git
     id: PageNavClass
     path: src/TicketShop/Views/Manage/ManageNavPages.cs
     startLine: 29
   assemblies:
-  - TicketShop
+  - Ticketshop
   namespace: TicketShop.Views.Manage
   syntax:
     content: public static string PageNavClass(ViewContext viewContext, string page)
@@ -442,12 +442,12 @@ items:
     remote:
       path: src/TicketShop/Views/Manage/ManageNavPages.cs
       branch: features/ticketshop
-      repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
+      repo: https://github.com/erolss/TicketShop.git
     id: AddActivePage
     path: src/TicketShop/Views/Manage/ManageNavPages.cs
     startLine: 35
   assemblies:
-  - TicketShop
+  - Ticketshop
   namespace: TicketShop.Views.Manage
   syntax:
     content: public static void AddActivePage(this ViewDataDictionary viewData, string activePage)

@@ -18,12 +18,12 @@ items:
     remote:
       path: src/TicketShop/Extensions/SessionExtensions.cs
       branch: features/ticketshop
-      repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
+      repo: https://github.com/erolss/TicketShop.git
     id: SessionExtensions
     path: src/TicketShop/Extensions/SessionExtensions.cs
     startLine: 6
   assemblies:
-  - TicketShop
+  - Ticketshop
   namespace: Microsoft.AspNetCore.Session
   syntax:
     content: public static class SessionExtensions
@@ -61,12 +61,12 @@ items:
     remote:
       path: src/TicketShop/Extensions/SessionExtensions.cs
       branch: features/ticketshop
-      repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
+      repo: https://github.com/erolss/TicketShop.git
     id: Set
     path: src/TicketShop/Extensions/SessionExtensions.cs
     startLine: 8
   assemblies:
-  - TicketShop
+  - Ticketshop
   namespace: Microsoft.AspNetCore.Session
   syntax:
     content: public static void Set<T>(this ISession session, string key, T value)
@@ -109,12 +109,12 @@ items:
     remote:
       path: src/TicketShop/Extensions/SessionExtensions.cs
       branch: features/ticketshop
-      repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
+      repo: https://github.com/erolss/TicketShop.git
     id: Get
     path: src/TicketShop/Extensions/SessionExtensions.cs
     startLine: 13
   assemblies:
-  - TicketShop
+  - Ticketshop
   namespace: Microsoft.AspNetCore.Session
   syntax:
     content: public static T Get<T>(this ISession session, string key)

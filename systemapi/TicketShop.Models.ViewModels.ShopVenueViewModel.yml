@@ -17,12 +17,12 @@ items:
     remote:
       path: src/TicketShop/Models/ViewModels/AllShopViewModels.cs
       branch: features/ticketshop
-      repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
+      repo: https://github.com/erolss/TicketShop.git
     id: ShopVenueViewModel
     path: src/TicketShop/Models/ViewModels/AllShopViewModels.cs
-    startLine: 28
+    startLine: 29
   assemblies:
-  - TicketShop
+  - Ticketshop
   namespace: TicketShop.Models.ViewModels
   syntax:
     content: public class ShopVenueViewModel
@@ -58,12 +58,12 @@ items:
     remote:
       path: src/TicketShop/Models/ViewModels/AllShopViewModels.cs
       branch: features/ticketshop
-      repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
+      repo: https://github.com/erolss/TicketShop.git
     id: Venue
     path: src/TicketShop/Models/ViewModels/AllShopViewModels.cs
-    startLine: 30
+    startLine: 31
   assemblies:
-  - TicketShop
+  - Ticketshop
   namespace: TicketShop.Models.ViewModels
   syntax:
     content: public Venue Venue { get; set; }

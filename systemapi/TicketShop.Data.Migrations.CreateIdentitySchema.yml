@@ -19,12 +19,12 @@ items:
     remote:
       path: src/TicketShop/Data/Migrations/00000000000000_CreateIdentitySchema.Designer.cs
       branch: features/ticketshop
-      repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
+      repo: https://github.com/erolss/TicketShop.git
     id: CreateIdentitySchema
     path: src/TicketShop/Data/Migrations/00000000000000_CreateIdentitySchema.Designer.cs
     startLine: 11
   assemblies:
-  - TicketShop
+  - Ticketshop
   namespace: TicketShop.Data.Migrations
   syntax:
     content: >-
@@ -39,6 +39,7 @@ items:
       <Migration("00000000000000_CreateIdentitySchema")>
 
       Public Class CreateIdentitySchema
+
           Inherits Migration
   inheritance:
   - System.Object
@@ -88,12 +89,12 @@ items:
     remote:
       path: src/TicketShop/Data/Migrations/00000000000000_CreateIdentitySchema.cs
       branch: features/ticketshop
-      repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
+      repo: https://github.com/erolss/TicketShop.git
     id: Up
     path: src/TicketShop/Data/Migrations/00000000000000_CreateIdentitySchema.cs
     startLine: 11
   assemblies:
-  - TicketShop
+  - Ticketshop
   namespace: TicketShop.Data.Migrations
   syntax:
     content: protected override void Up(MigrationBuilder migrationBuilder)
@@ -124,12 +125,12 @@ items:
     remote:
       path: src/TicketShop/Data/Migrations/00000000000000_CreateIdentitySchema.cs
       branch: features/ticketshop
-      repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
+      repo: https://github.com/erolss/TicketShop.git
     id: Down
     path: src/TicketShop/Data/Migrations/00000000000000_CreateIdentitySchema.cs
     startLine: 194
   assemblies:
-  - TicketShop
+  - Ticketshop
   namespace: TicketShop.Data.Migrations
   syntax:
     content: protected override void Down(MigrationBuilder migrationBuilder)
@@ -160,12 +161,12 @@ items:
     remote:
       path: src/TicketShop/Data/Migrations/00000000000000_CreateIdentitySchema.Designer.cs
       branch: features/ticketshop
-      repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
+      repo: https://github.com/erolss/TicketShop.git
     id: BuildTargetModel
     path: src/TicketShop/Data/Migrations/00000000000000_CreateIdentitySchema.Designer.cs
     startLine: 15
   assemblies:
-  - TicketShop
+  - Ticketshop
   namespace: TicketShop.Data.Migrations
   syntax:
     content: protected override void BuildTargetModel(ModelBuilder modelBuilder)

@@ -22,7 +22,7 @@ items:
     remote:
       path: src/RestApiClient/Interface/ITransactionApi.cs
       branch: features/ticketshop
-      repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
+      repo: https://github.com/erolss/TicketShop.git
     id: ITransactionApi
     path: src/RestApiClient/Interface/ITransactionApi.cs
     startLine: 7
@@ -53,7 +53,7 @@ items:
     remote:
       path: src/RestApiClient/Interface/ITransactionApi.cs
       branch: features/ticketshop
-      repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
+      repo: https://github.com/erolss/TicketShop.git
     id: GetTransactions
     path: src/RestApiClient/Interface/ITransactionApi.cs
     startLine: 15
@@ -91,7 +91,7 @@ items:
     remote:
       path: src/RestApiClient/Interface/ITransactionApi.cs
       branch: features/ticketshop
-      repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
+      repo: https://github.com/erolss/TicketShop.git
     id: GetTransactionById
     path: src/RestApiClient/Interface/ITransactionApi.cs
     startLine: 21
@@ -126,7 +126,7 @@ items:
     remote:
       path: src/RestApiClient/Interface/ITransactionApi.cs
       branch: features/ticketshop
-      repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
+      repo: https://github.com/erolss/TicketShop.git
     id: AddTransaction
     path: src/RestApiClient/Interface/ITransactionApi.cs
     startLine: 28
@@ -161,7 +161,7 @@ items:
     remote:
       path: src/RestApiClient/Interface/ITransactionApi.cs
       branch: features/ticketshop
-      repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
+      repo: https://github.com/erolss/TicketShop.git
     id: UpdateTransaction
     path: src/RestApiClient/Interface/ITransactionApi.cs
     startLine: 35
@@ -196,7 +196,7 @@ items:
     remote:
       path: src/RestApiClient/Interface/ITransactionApi.cs
       branch: features/ticketshop
-      repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
+      repo: https://github.com/erolss/TicketShop.git
     id: DeleteTransactionById
     path: src/RestApiClient/Interface/ITransactionApi.cs
     startLine: 40
@@ -230,7 +230,7 @@ items:
     remote:
       path: src/RestApiClient/Interface/ITransactionApi.cs
       branch: features/ticketshop
-      repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
+      repo: https://github.com/erolss/TicketShop.git
     id: FindTransactions
     path: src/RestApiClient/Interface/ITransactionApi.cs
     startLine: 54

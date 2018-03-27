@@ -33,7 +33,7 @@ items:
     remote:
       path: src/DbRepository/Models/Transaction.cs
       branch: features/ticketshop
-      repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
+      repo: https://github.com/erolss/TicketShop.git
     id: Transaction
     path: src/DbRepository/Models/Transaction.cs
     startLine: 7
@@ -84,7 +84,7 @@ items:
     remote:
       path: src/DbRepository/Models/Transaction.cs
       branch: features/ticketshop
-      repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
+      repo: https://github.com/erolss/TicketShop.git
     id: TransactionID
     path: src/DbRepository/Models/Transaction.cs
     startLine: 13
@@ -135,7 +135,7 @@ items:
     remote:
       path: src/DbRepository/Models/Transaction.cs
       branch: features/ticketshop
-      repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
+      repo: https://github.com/erolss/TicketShop.git
     id: BuyerLastName
     path: src/DbRepository/Models/Transaction.cs
     startLine: 19
@@ -186,7 +186,7 @@ items:
     remote:
       path: src/DbRepository/Models/Transaction.cs
       branch: features/ticketshop
-      repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
+      repo: https://github.com/erolss/TicketShop.git
     id: BuyerFirstName
     path: src/DbRepository/Models/Transaction.cs
     startLine: 25
@@ -237,7 +237,7 @@ items:
     remote:
       path: src/DbRepository/Models/Transaction.cs
       branch: features/ticketshop
-      repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
+      repo: https://github.com/erolss/TicketShop.git
     id: BuyerAddress
     path: src/DbRepository/Models/Transaction.cs
     startLine: 31
@@ -288,7 +288,7 @@ items:
     remote:
       path: src/DbRepository/Models/Transaction.cs
       branch: features/ticketshop
-      repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
+      repo: https://github.com/erolss/TicketShop.git
     id: BuyerCity
     path: src/DbRepository/Models/Transaction.cs
     startLine: 37
@@ -339,7 +339,7 @@ items:
     remote:
       path: src/DbRepository/Models/Transaction.cs
       branch: features/ticketshop
-      repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
+      repo: https://github.com/erolss/TicketShop.git
     id: PaymentStatus
     path: src/DbRepository/Models/Transaction.cs
     startLine: 43
@@ -390,7 +390,7 @@ items:
     remote:
       path: src/DbRepository/Models/Transaction.cs
       branch: features/ticketshop
-      repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
+      repo: https://github.com/erolss/TicketShop.git
     id: PaymentReferenceId
     path: src/DbRepository/Models/Transaction.cs
     startLine: 49
@@ -441,7 +441,7 @@ items:
     remote:
       path: src/DbRepository/Models/Transaction.cs
       branch: features/ticketshop
-      repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
+      repo: https://github.com/erolss/TicketShop.git
     id: BuyerEmail
     path: src/DbRepository/Models/Transaction.cs
     startLine: 55
@@ -492,7 +492,7 @@ items:
     remote:
       path: src/DbRepository/Models/Transaction.cs
       branch: features/ticketshop
-      repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
+      repo: https://github.com/erolss/TicketShop.git
     id: BuyerUserId
     path: src/DbRepository/Models/Transaction.cs
     startLine: 61
@@ -543,7 +543,7 @@ items:
     remote:
       path: src/DbRepository/Models/Transaction.cs
       branch: features/ticketshop
-      repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
+      repo: https://github.com/erolss/TicketShop.git
     id: TotalAmount
     path: src/DbRepository/Models/Transaction.cs
     startLine: 67
@@ -594,7 +594,7 @@ items:
     remote:
       path: src/DbRepository/Models/Transaction.cs
       branch: features/ticketshop
-      repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
+      repo: https://github.com/erolss/TicketShop.git
     id: ToString
     path: src/DbRepository/Models/Transaction.cs
     startLine: 74
@@ -632,7 +632,7 @@ items:
     remote:
       path: src/DbRepository/Models/Transaction.cs
       branch: features/ticketshop
-      repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
+      repo: https://github.com/erolss/TicketShop.git
     id: ToJson
     path: src/DbRepository/Models/Transaction.cs
     startLine: 96
@@ -667,7 +667,7 @@ items:
     remote:
       path: src/DbRepository/Models/Transaction.cs
       branch: features/ticketshop
-      repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
+      repo: https://github.com/erolss/TicketShop.git
     id: Equals
     path: src/DbRepository/Models/Transaction.cs
     startLine: 106
@@ -709,7 +709,7 @@ items:
     remote:
       path: src/DbRepository/Models/Transaction.cs
       branch: features/ticketshop
-      repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
+      repo: https://github.com/erolss/TicketShop.git
     id: Equals
     path: src/DbRepository/Models/Transaction.cs
     startLine: 120
@@ -750,7 +750,7 @@ items:
     remote:
       path: src/DbRepository/Models/Transaction.cs
       branch: features/ticketshop
-      repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
+      repo: https://github.com/erolss/TicketShop.git
     id: GetHashCode
     path: src/DbRepository/Models/Transaction.cs
     startLine: 184
@@ -788,7 +788,7 @@ items:
     remote:
       path: src/DbRepository/Models/Transaction.cs
       branch: features/ticketshop
-      repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
+      repo: https://github.com/erolss/TicketShop.git
     id: op_Equality
     path: src/DbRepository/Models/Transaction.cs
     startLine: 217
@@ -827,7 +827,7 @@ items:
     remote:
       path: src/DbRepository/Models/Transaction.cs
       branch: features/ticketshop
-      repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
+      repo: https://github.com/erolss/TicketShop.git
     id: op_Inequality
     path: src/DbRepository/Models/Transaction.cs
     startLine: 222

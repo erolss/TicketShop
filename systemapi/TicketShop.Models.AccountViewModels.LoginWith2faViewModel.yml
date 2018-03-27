@@ -19,12 +19,12 @@ items:
     remote:
       path: src/TicketShop/Models/AccountViewModels/LoginWith2faViewModel.cs
       branch: features/ticketshop
-      repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
+      repo: https://github.com/erolss/TicketShop.git
     id: LoginWith2faViewModel
     path: src/TicketShop/Models/AccountViewModels/LoginWith2faViewModel.cs
     startLine: 8
   assemblies:
-  - TicketShop
+  - Ticketshop
   namespace: TicketShop.Models.AccountViewModels
   syntax:
     content: public class LoginWith2faViewModel
@@ -60,12 +60,12 @@ items:
     remote:
       path: src/TicketShop/Models/AccountViewModels/LoginWith2faViewModel.cs
       branch: features/ticketshop
-      repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
+      repo: https://github.com/erolss/TicketShop.git
     id: TwoFactorCode
     path: src/TicketShop/Models/AccountViewModels/LoginWith2faViewModel.cs
     startLine: 10
   assemblies:
-  - TicketShop
+  - Ticketshop
   namespace: TicketShop.Models.AccountViewModels
   syntax:
     content: >-
@@ -141,12 +141,12 @@ items:
     remote:
       path: src/TicketShop/Models/AccountViewModels/LoginWith2faViewModel.cs
       branch: features/ticketshop
-      repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
+      repo: https://github.com/erolss/TicketShop.git
     id: RememberMachine
     path: src/TicketShop/Models/AccountViewModels/LoginWith2faViewModel.cs
     startLine: 16
   assemblies:
-  - TicketShop
+  - Ticketshop
   namespace: TicketShop.Models.AccountViewModels
   syntax:
     content: >-
@@ -190,12 +190,12 @@ items:
     remote:
       path: src/TicketShop/Models/AccountViewModels/LoginWith2faViewModel.cs
       branch: features/ticketshop
-      repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
+      repo: https://github.com/erolss/TicketShop.git
     id: RememberMe
     path: src/TicketShop/Models/AccountViewModels/LoginWith2faViewModel.cs
     startLine: 19
   assemblies:
-  - TicketShop
+  - Ticketshop
   namespace: TicketShop.Models.AccountViewModels
   syntax:
     content: public bool RememberMe { get; set; }

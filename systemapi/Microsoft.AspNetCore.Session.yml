@@ -13,7 +13,7 @@ items:
   fullName: Microsoft.AspNetCore.Session
   type: Namespace
   assemblies:
-  - TicketShop
+  - Ticketshop
 references:
 - uid: Microsoft.AspNetCore.Session.SessionExtensions
   commentId: T:Microsoft.AspNetCore.Session.SessionExtensions

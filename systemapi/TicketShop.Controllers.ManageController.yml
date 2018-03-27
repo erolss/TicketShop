@@ -37,12 +37,12 @@ items:
     remote:
       path: src/TicketShop/Controllers/ManageController.cs
       branch: features/ticketshop
-      repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
+      repo: https://github.com/erolss/TicketShop.git
     id: ManageController
     path: src/TicketShop/Controllers/ManageController.cs
     startLine: 18
   assemblies:
-  - TicketShop
+  - Ticketshop
   namespace: TicketShop.Controllers
   syntax:
     content: >-
@@ -57,7 +57,9 @@ items:
       <Route("[controller]/[action]")>
 
       Public Class ManageController
+
           Inherits Controller
+
           Implements IActionFilter, IAsyncActionFilter, IFilterMetadata, IDisposable
   inheritance:
   - System.Object
@@ -265,12 +267,12 @@ items:
     remote:
       path: src/TicketShop/Controllers/ManageController.cs
       branch: features/ticketshop
-      repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
+      repo: https://github.com/erolss/TicketShop.git
     id: .ctor
     path: src/TicketShop/Controllers/ManageController.cs
     startLine: 30
   assemblies:
-  - TicketShop
+  - Ticketshop
   namespace: TicketShop.Controllers
   syntax:
     content: public ManageController(UserManager<ApplicationUser> userManager, SignInManager<ApplicationUser> signInManager, IEmailSender emailSender, ILogger<ManageController> logger, UrlEncoder urlEncoder)
@@ -309,12 +311,12 @@ items:
     remote:
       path: src/TicketShop/Controllers/ManageController.cs
       branch: features/ticketshop
-      repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
+      repo: https://github.com/erolss/TicketShop.git
     id: StatusMessage
     path: src/TicketShop/Controllers/ManageController.cs
     startLine: 44
   assemblies:
-  - TicketShop
+  - Ticketshop
   namespace: TicketShop.Controllers
   syntax:
     content: >-
@@ -354,12 +356,12 @@ items:
     remote:
       path: src/TicketShop/Controllers/ManageController.cs
       branch: features/ticketshop
-      repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
+      repo: https://github.com/erolss/TicketShop.git
     id: Index
     path: src/TicketShop/Controllers/ManageController.cs
     startLine: 47
   assemblies:
-  - TicketShop
+  - Ticketshop
   namespace: TicketShop.Controllers
   syntax:
     content: >-
@@ -396,12 +398,12 @@ items:
     remote:
       path: src/TicketShop/Controllers/ManageController.cs
       branch: features/ticketshop
-      repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
+      repo: https://github.com/erolss/TicketShop.git
     id: Index
     path: src/TicketShop/Controllers/ManageController.cs
     startLine: 68
   assemblies:
-  - TicketShop
+  - Ticketshop
   namespace: TicketShop.Controllers
   syntax:
     content: >-
@@ -448,12 +450,12 @@ items:
     remote:
       path: src/TicketShop/Controllers/ManageController.cs
       branch: features/ticketshop
-      repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
+      repo: https://github.com/erolss/TicketShop.git
     id: SendVerificationEmail
     path: src/TicketShop/Controllers/ManageController.cs
     startLine: 107
   assemblies:
-  - TicketShop
+  - Ticketshop
   namespace: TicketShop.Controllers
   syntax:
     content: >-
@@ -500,12 +502,12 @@ items:
     remote:
       path: src/TicketShop/Controllers/ManageController.cs
       branch: features/ticketshop
-      repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
+      repo: https://github.com/erolss/TicketShop.git
     id: ChangePassword
     path: src/TicketShop/Controllers/ManageController.cs
     startLine: 131
   assemblies:
-  - TicketShop
+  - Ticketshop
   namespace: TicketShop.Controllers
   syntax:
     content: >-
@@ -542,12 +544,12 @@ items:
     remote:
       path: src/TicketShop/Controllers/ManageController.cs
       branch: features/ticketshop
-      repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
+      repo: https://github.com/erolss/TicketShop.git
     id: ChangePassword
     path: src/TicketShop/Controllers/ManageController.cs
     startLine: 150
   assemblies:
-  - TicketShop
+  - Ticketshop
   namespace: TicketShop.Controllers
   syntax:
     content: >-
@@ -594,12 +596,12 @@ items:
     remote:
       path: src/TicketShop/Controllers/ManageController.cs
       branch: features/ticketshop
-      repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
+      repo: https://github.com/erolss/TicketShop.git
     id: SetPassword
     path: src/TicketShop/Controllers/ManageController.cs
     startLine: 179
   assemblies:
-  - TicketShop
+  - Ticketshop
   namespace: TicketShop.Controllers
   syntax:
     content: >-
@@ -636,12 +638,12 @@ items:
     remote:
       path: src/TicketShop/Controllers/ManageController.cs
       branch: features/ticketshop
-      repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
+      repo: https://github.com/erolss/TicketShop.git
     id: SetPassword
     path: src/TicketShop/Controllers/ManageController.cs
     startLine: 199
   assemblies:
-  - TicketShop
+  - Ticketshop
   namespace: TicketShop.Controllers
   syntax:
     content: >-
@@ -688,12 +690,12 @@ items:
     remote:
       path: src/TicketShop/Controllers/ManageController.cs
       branch: features/ticketshop
-      repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
+      repo: https://github.com/erolss/TicketShop.git
     id: ExternalLogins
     path: src/TicketShop/Controllers/ManageController.cs
     startLine: 227
   assemblies:
-  - TicketShop
+  - Ticketshop
   namespace: TicketShop.Controllers
   syntax:
     content: >-
@@ -730,12 +732,12 @@ items:
     remote:
       path: src/TicketShop/Controllers/ManageController.cs
       branch: features/ticketshop
-      repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
+      repo: https://github.com/erolss/TicketShop.git
     id: LinkLogin
     path: src/TicketShop/Controllers/ManageController.cs
     startLine: 246
   assemblies:
-  - TicketShop
+  - Ticketshop
   namespace: TicketShop.Controllers
   syntax:
     content: >-
@@ -782,12 +784,12 @@ items:
     remote:
       path: src/TicketShop/Controllers/ManageController.cs
       branch: features/ticketshop
-      repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
+      repo: https://github.com/erolss/TicketShop.git
     id: LinkLoginCallback
     path: src/TicketShop/Controllers/ManageController.cs
     startLine: 259
   assemblies:
-  - TicketShop
+  - Ticketshop
   namespace: TicketShop.Controllers
   syntax:
     content: >-
@@ -824,12 +826,12 @@ items:
     remote:
       path: src/TicketShop/Controllers/ManageController.cs
       branch: features/ticketshop
-      repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
+      repo: https://github.com/erolss/TicketShop.git
     id: RemoveLogin
     path: src/TicketShop/Controllers/ManageController.cs
     startLine: 287
   assemblies:
-  - TicketShop
+  - Ticketshop
   namespace: TicketShop.Controllers
   syntax:
     content: >-
@@ -876,12 +878,12 @@ items:
     remote:
       path: src/TicketShop/Controllers/ManageController.cs
       branch: features/ticketshop
-      repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
+      repo: https://github.com/erolss/TicketShop.git
     id: TwoFactorAuthentication
     path: src/TicketShop/Controllers/ManageController.cs
     startLine: 308
   assemblies:
-  - TicketShop
+  - Ticketshop
   namespace: TicketShop.Controllers
   syntax:
     content: >-
@@ -918,12 +920,12 @@ items:
     remote:
       path: src/TicketShop/Controllers/ManageController.cs
       branch: features/ticketshop
-      repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
+      repo: https://github.com/erolss/TicketShop.git
     id: Disable2faWarning
     path: src/TicketShop/Controllers/ManageController.cs
     startLine: 327
   assemblies:
-  - TicketShop
+  - Ticketshop
   namespace: TicketShop.Controllers
   syntax:
     content: >-
@@ -960,12 +962,12 @@ items:
     remote:
       path: src/TicketShop/Controllers/ManageController.cs
       branch: features/ticketshop
-      repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
+      repo: https://github.com/erolss/TicketShop.git
     id: Disable2fa
     path: src/TicketShop/Controllers/ManageController.cs
     startLine: 344
   assemblies:
-  - TicketShop
+  - Ticketshop
   namespace: TicketShop.Controllers
   syntax:
     content: >-
@@ -1009,12 +1011,12 @@ items:
     remote:
       path: src/TicketShop/Controllers/ManageController.cs
       branch: features/ticketshop
-      repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
+      repo: https://github.com/erolss/TicketShop.git
     id: EnableAuthenticator
     path: src/TicketShop/Controllers/ManageController.cs
     startLine: 364
   assemblies:
-  - TicketShop
+  - Ticketshop
   namespace: TicketShop.Controllers
   syntax:
     content: >-
@@ -1051,12 +1053,12 @@ items:
     remote:
       path: src/TicketShop/Controllers/ManageController.cs
       branch: features/ticketshop
-      repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
+      repo: https://github.com/erolss/TicketShop.git
     id: EnableAuthenticator
     path: src/TicketShop/Controllers/ManageController.cs
     startLine: 389
   assemblies:
-  - TicketShop
+  - Ticketshop
   namespace: TicketShop.Controllers
   syntax:
     content: >-
@@ -1103,12 +1105,12 @@ items:
     remote:
       path: src/TicketShop/Controllers/ManageController.cs
       branch: features/ticketshop
-      repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
+      repo: https://github.com/erolss/TicketShop.git
     id: ResetAuthenticatorWarning
     path: src/TicketShop/Controllers/ManageController.cs
     startLine: 421
   assemblies:
-  - TicketShop
+  - Ticketshop
   namespace: TicketShop.Controllers
   syntax:
     content: >-
@@ -1145,12 +1147,12 @@ items:
     remote:
       path: src/TicketShop/Controllers/ManageController.cs
       branch: features/ticketshop
-      repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
+      repo: https://github.com/erolss/TicketShop.git
     id: ResetAuthenticator
     path: src/TicketShop/Controllers/ManageController.cs
     startLine: 427
   assemblies:
-  - TicketShop
+  - Ticketshop
   namespace: TicketShop.Controllers
   syntax:
     content: >-
@@ -1194,12 +1196,12 @@ items:
     remote:
       path: src/TicketShop/Controllers/ManageController.cs
       branch: features/ticketshop
-      repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
+      repo: https://github.com/erolss/TicketShop.git
     id: GenerateRecoveryCodes
     path: src/TicketShop/Controllers/ManageController.cs
     startLine: 444
   assemblies:
-  - TicketShop
+  - Ticketshop
   namespace: TicketShop.Controllers
   syntax:
     content: >-

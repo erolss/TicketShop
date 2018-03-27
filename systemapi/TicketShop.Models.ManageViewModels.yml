@@ -20,7 +20,7 @@ items:
   fullName: TicketShop.Models.ManageViewModels
   type: Namespace
   assemblies:
-  - TicketShop
+  - Ticketshop
 references:
 - uid: TicketShop.Models.ManageViewModels.ChangePasswordViewModel
   commentId: T:TicketShop.Models.ManageViewModels.ChangePasswordViewModel

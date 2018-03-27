@@ -15,7 +15,7 @@ items:
   fullName: TicketShop.Models
   type: Namespace
   assemblies:
-  - TicketShop
+  - Ticketshop
 references:
 - uid: TicketShop.Models.ApplicationUser
   commentId: T:TicketShop.Models.ApplicationUser

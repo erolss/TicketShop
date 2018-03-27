@@ -19,12 +19,12 @@ items:
     remote:
       path: src/TicketShop/Models/ManageViewModels/EnableAuthenticatorViewModel.cs
       branch: features/ticketshop
-      repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
+      repo: https://github.com/erolss/TicketShop.git
     id: EnableAuthenticatorViewModel
     path: src/TicketShop/Models/ManageViewModels/EnableAuthenticatorViewModel.cs
     startLine: 9
   assemblies:
-  - TicketShop
+  - Ticketshop
   namespace: TicketShop.Models.ManageViewModels
   syntax:
     content: public class EnableAuthenticatorViewModel
@@ -60,12 +60,12 @@ items:
     remote:
       path: src/TicketShop/Models/ManageViewModels/EnableAuthenticatorViewModel.cs
       branch: features/ticketshop
-      repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
+      repo: https://github.com/erolss/TicketShop.git
     id: Code
     path: src/TicketShop/Models/ManageViewModels/EnableAuthenticatorViewModel.cs
     startLine: 11
   assemblies:
-  - TicketShop
+  - Ticketshop
   namespace: TicketShop.Models.ManageViewModels
   syntax:
     content: >-
@@ -141,12 +141,12 @@ items:
     remote:
       path: src/TicketShop/Models/ManageViewModels/EnableAuthenticatorViewModel.cs
       branch: features/ticketshop
-      repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
+      repo: https://github.com/erolss/TicketShop.git
     id: SharedKey
     path: src/TicketShop/Models/ManageViewModels/EnableAuthenticatorViewModel.cs
     startLine: 17
   assemblies:
-  - TicketShop
+  - Ticketshop
   namespace: TicketShop.Models.ManageViewModels
   syntax:
     content: public string SharedKey { get; set; }
@@ -176,12 +176,12 @@ items:
     remote:
       path: src/TicketShop/Models/ManageViewModels/EnableAuthenticatorViewModel.cs
       branch: features/ticketshop
-      repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
+      repo: https://github.com/erolss/TicketShop.git
     id: AuthenticatorUri
     path: src/TicketShop/Models/ManageViewModels/EnableAuthenticatorViewModel.cs
     startLine: 20
   assemblies:
-  - TicketShop
+  - Ticketshop
   namespace: TicketShop.Models.ManageViewModels
   syntax:
     content: public string AuthenticatorUri { get; set; }

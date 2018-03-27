@@ -17,12 +17,12 @@ items:
     remote:
       path: src/TicketShop/Services/IEmailSender.cs
       branch: features/ticketshop
-      repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
+      repo: https://github.com/erolss/TicketShop.git
     id: IEmailSender
     path: src/TicketShop/Services/IEmailSender.cs
     startLine: 7
   assemblies:
-  - TicketShop
+  - Ticketshop
   namespace: TicketShop.Services
   syntax:
     content: public interface IEmailSender
@@ -50,12 +50,12 @@ items:
     remote:
       path: src/TicketShop/Services/IEmailSender.cs
       branch: features/ticketshop
-      repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
+      repo: https://github.com/erolss/TicketShop.git
     id: SendEmailAsync
     path: src/TicketShop/Services/IEmailSender.cs
     startLine: 9
   assemblies:
-  - TicketShop
+  - Ticketshop
   namespace: TicketShop.Services
   syntax:
     content: Task SendEmailAsync(string email, string subject, string message)

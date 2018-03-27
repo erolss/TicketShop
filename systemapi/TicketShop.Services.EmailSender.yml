@@ -17,17 +17,18 @@ items:
     remote:
       path: src/TicketShop/Services/EmailSender.cs
       branch: features/ticketshop
-      repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
+      repo: https://github.com/erolss/TicketShop.git
     id: EmailSender
     path: src/TicketShop/Services/EmailSender.cs
     startLine: 9
   assemblies:
-  - TicketShop
+  - Ticketshop
   namespace: TicketShop.Services
   syntax:
     content: 'public class EmailSender : IEmailSender'
     content.vb: >-
       Public Class EmailSender
+
           Implements IEmailSender
   inheritance:
   - System.Object
@@ -64,12 +65,12 @@ items:
     remote:
       path: src/TicketShop/Services/EmailSender.cs
       branch: features/ticketshop
-      repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
+      repo: https://github.com/erolss/TicketShop.git
     id: SendEmailAsync
     path: src/TicketShop/Services/EmailSender.cs
     startLine: 11
   assemblies:
-  - TicketShop
+  - Ticketshop
   namespace: TicketShop.Services
   syntax:
     content: public Task SendEmailAsync(string email, string subject, string message)

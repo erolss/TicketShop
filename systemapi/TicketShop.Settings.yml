@@ -13,7 +13,7 @@ items:
   fullName: TicketShop.Settings
   type: Namespace
   assemblies:
-  - TicketShop
+  - Ticketshop
 references:
 - uid: TicketShop.Settings.CustomSettings
   commentId: T:TicketShop.Settings.CustomSettings

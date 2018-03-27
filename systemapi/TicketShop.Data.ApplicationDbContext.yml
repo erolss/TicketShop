@@ -18,18 +18,20 @@ items:
     remote:
       path: src/TicketShop/Data/ApplicationDbContext.cs
       branch: features/ticketshop
-      repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
+      repo: https://github.com/erolss/TicketShop.git
     id: ApplicationDbContext
     path: src/TicketShop/Data/ApplicationDbContext.cs
     startLine: 10
   assemblies:
-  - TicketShop
+  - Ticketshop
   namespace: TicketShop.Data
   syntax:
     content: 'public class ApplicationDbContext : IdentityDbContext<ApplicationUser>, IDisposable, IInfrastructure<IServiceProvider>, IDbContextDependencies, IDbSetCache, IDbContextPoolable'
     content.vb: >-
       Public Class ApplicationDbContext
+
           Inherits IdentityDbContext(Of ApplicationUser)
+
           Implements IDisposable, IInfrastructure(Of IServiceProvider), IDbContextDependencies, IDbSetCache, IDbContextPoolable
   inheritance:
   - System.Object
@@ -134,12 +136,12 @@ items:
     remote:
       path: src/TicketShop/Data/ApplicationDbContext.cs
       branch: features/ticketshop
-      repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
+      repo: https://github.com/erolss/TicketShop.git
     id: .ctor
     path: src/TicketShop/Data/ApplicationDbContext.cs
     startLine: 12
   assemblies:
-  - TicketShop
+  - Ticketshop
   namespace: TicketShop.Data
   syntax:
     content: public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options)
@@ -170,12 +172,12 @@ items:
     remote:
       path: src/TicketShop/Data/ApplicationDbContext.cs
       branch: features/ticketshop
-      repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
+      repo: https://github.com/erolss/TicketShop.git
     id: OnModelCreating
     path: src/TicketShop/Data/ApplicationDbContext.cs
     startLine: 17
   assemblies:
-  - TicketShop
+  - Ticketshop
   namespace: TicketShop.Data
   syntax:
     content: protected override void OnModelCreating(ModelBuilder builder)

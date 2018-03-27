@@ -17,12 +17,12 @@ items:
     remote:
       path: src/TicketShop/CustomSettings.cs
       branch: features/ticketshop
-      repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
+      repo: https://github.com/erolss/TicketShop.git
     id: CustomSettings
     path: src/TicketShop/CustomSettings.cs
     startLine: 7
   assemblies:
-  - TicketShop
+  - Ticketshop
   namespace: TicketShop.Settings
   syntax:
     content: public class CustomSettings
@@ -58,12 +58,12 @@ items:
     remote:
       path: src/TicketShop/CustomSettings.cs
       branch: features/ticketshop
-      repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
+      repo: https://github.com/erolss/TicketShop.git
     id: ApiBaseUrl
     path: src/TicketShop/CustomSettings.cs
     startLine: 12
   assemblies:
-  - TicketShop
+  - Ticketshop
   namespace: TicketShop.Settings
   summary: "\nGet or Set Api BaseUrl for ApiClient DI\n"
   example: []

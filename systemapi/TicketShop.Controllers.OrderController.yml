@@ -26,18 +26,20 @@ items:
     remote:
       path: src/TicketShop/Controllers/OrderController.cs
       branch: features/ticketshop
-      repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
+      repo: https://github.com/erolss/TicketShop.git
     id: OrderController
     path: src/TicketShop/Controllers/OrderController.cs
-    startLine: 18
+    startLine: 20
   assemblies:
-  - TicketShop
+  - Ticketshop
   namespace: TicketShop.Controllers
   syntax:
     content: 'public class OrderController : Controller, IActionFilter, IAsyncActionFilter, IFilterMetadata, IDisposable'
     content.vb: >-
       Public Class OrderController
+
           Inherits Controller
+
           Implements IActionFilter, IAsyncActionFilter, IFilterMetadata, IDisposable
   inheritance:
   - System.Object
@@ -236,12 +238,12 @@ items:
     remote:
       path: src/TicketShop/Controllers/OrderController.cs
       branch: features/ticketshop
-      repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
+      repo: https://github.com/erolss/TicketShop.git
     id: .ctor
     path: src/TicketShop/Controllers/OrderController.cs
-    startLine: 22
+    startLine: 24
   assemblies:
-  - TicketShop
+  - Ticketshop
   namespace: TicketShop.Controllers
   syntax:
     content: public OrderController(IOptions<CustomSettings> settings)
@@ -272,12 +274,12 @@ items:
     remote:
       path: src/TicketShop/Controllers/OrderController.cs
       branch: features/ticketshop
-      repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
+      repo: https://github.com/erolss/TicketShop.git
     id: Cart
     path: src/TicketShop/Controllers/OrderController.cs
-    startLine: 27
+    startLine: 29
   assemblies:
-  - TicketShop
+  - Ticketshop
   namespace: TicketShop.Controllers
   syntax:
     content: public ActionResult Cart()
@@ -304,12 +306,12 @@ items:
     remote:
       path: src/TicketShop/Controllers/OrderController.cs
       branch: features/ticketshop
-      repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
+      repo: https://github.com/erolss/TicketShop.git
     id: Confirmation
     path: src/TicketShop/Controllers/OrderController.cs
-    startLine: 38
+    startLine: 45
   assemblies:
-  - TicketShop
+  - Ticketshop
   namespace: TicketShop.Controllers
   syntax:
     content: public ActionResult Confirmation()
@@ -336,12 +338,12 @@ items:
     remote:
       path: src/TicketShop/Controllers/OrderController.cs
       branch: features/ticketshop
-      repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
+      repo: https://github.com/erolss/TicketShop.git
     id: Confirmation
     path: src/TicketShop/Controllers/OrderController.cs
-    startLine: 43
+    startLine: 50
   assemblies:
-  - TicketShop
+  - Ticketshop
   namespace: TicketShop.Controllers
   syntax:
     content: >-
@@ -388,12 +390,12 @@ items:
     remote:
       path: src/TicketShop/Controllers/OrderController.cs
       branch: features/ticketshop
-      repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
+      repo: https://github.com/erolss/TicketShop.git
     id: AddToCart
     path: src/TicketShop/Controllers/OrderController.cs
-    startLine: 76
+    startLine: 133
   assemblies:
-  - TicketShop
+  - Ticketshop
   namespace: TicketShop.Controllers
   syntax:
     content: >-
@@ -433,12 +435,12 @@ items:
     remote:
       path: src/TicketShop/Controllers/OrderController.cs
       branch: features/ticketshop
-      repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
+      repo: https://github.com/erolss/TicketShop.git
     id: RemoveItem
     path: src/TicketShop/Controllers/OrderController.cs
-    startLine: 104
+    startLine: 161
   assemblies:
-  - TicketShop
+  - Ticketshop
   namespace: TicketShop.Controllers
   syntax:
     content: public ActionResult RemoveItem(int eventDateId)
@@ -468,12 +470,12 @@ items:
     remote:
       path: src/TicketShop/Controllers/OrderController.cs
       branch: features/ticketshop
-      repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
+      repo: https://github.com/erolss/TicketShop.git
     id: RemoveFromCart
     path: src/TicketShop/Controllers/OrderController.cs
-    startLine: 124
+    startLine: 181
   assemblies:
-  - TicketShop
+  - Ticketshop
   namespace: TicketShop.Controllers
   syntax:
     content: public int RemoveFromCart(int eventDateId)
@@ -503,21 +505,21 @@ items:
     remote:
       path: src/TicketShop/Controllers/OrderController.cs
       branch: features/ticketshop
-      repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
+      repo: https://github.com/erolss/TicketShop.git
     id: EmptyCart
     path: src/TicketShop/Controllers/OrderController.cs
-    startLine: 141
+    startLine: 198
   assemblies:
-  - TicketShop
+  - Ticketshop
   namespace: TicketShop.Controllers
   syntax:
-    content: public int EmptyCart(int eventDateId)
+    content: public IActionResult EmptyCart(int eventDateId)
     parameters:
     - id: eventDateId
       type: System.Int32
     return:
-      type: System.Int32
-    content.vb: Public Function EmptyCart(eventDateId As Integer) As Integer
+      type: Microsoft.AspNetCore.Mvc.IActionResult
+    content.vb: Public Function EmptyCart(eventDateId As Integer) As IActionResult
   overload: TicketShop.Controllers.OrderController.EmptyCart*
   modifiers.csharp:
   - public
@@ -538,12 +540,12 @@ items:
     remote:
       path: src/TicketShop/Controllers/OrderController.cs
       branch: features/ticketshop
-      repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
+      repo: https://github.com/erolss/TicketShop.git
     id: ItemsInCart
     path: src/TicketShop/Controllers/OrderController.cs
-    startLine: 158
+    startLine: 215
   assemblies:
-  - TicketShop
+  - Ticketshop
   namespace: TicketShop.Controllers
   syntax:
     content: public int ItemsInCart()
@@ -570,12 +572,12 @@ items:
     remote:
       path: src/TicketShop/Controllers/OrderController.cs
       branch: features/ticketshop
-      repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
+      repo: https://github.com/erolss/TicketShop.git
     id: Create
     path: src/TicketShop/Controllers/OrderController.cs
-    startLine: 203
+    startLine: 260
   assemblies:
-  - TicketShop
+  - Ticketshop
   namespace: TicketShop.Controllers
   syntax:
     content: public ActionResult Create()
@@ -10820,6 +10822,13 @@ references:
   name: EmptyCart
   nameWithType: OrderController.EmptyCart
   fullName: TicketShop.Controllers.OrderController.EmptyCart
+- uid: Microsoft.AspNetCore.Mvc.IActionResult
+  commentId: T:Microsoft.AspNetCore.Mvc.IActionResult
+  parent: Microsoft.AspNetCore.Mvc
+  isExternal: true
+  name: IActionResult
+  nameWithType: IActionResult
+  fullName: Microsoft.AspNetCore.Mvc.IActionResult
 - uid: TicketShop.Controllers.OrderController.ItemsInCart*
   commentId: Overload:TicketShop.Controllers.OrderController.ItemsInCart
   isExternal: false

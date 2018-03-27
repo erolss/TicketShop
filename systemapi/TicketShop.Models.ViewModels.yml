@@ -19,7 +19,7 @@ items:
   fullName: TicketShop.Models.ViewModels
   type: Namespace
   assemblies:
-  - TicketShop
+  - Ticketshop
 references:
 - uid: TicketShop.Models.ViewModels.HomeIndexViewModel
   commentId: T:TicketShop.Models.ViewModels.HomeIndexViewModel

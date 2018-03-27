@@ -23,10 +23,10 @@ items:
     remote:
       path: src/RestApiClient/TransactionApi.cs
       branch: features/ticketshop
-      repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
+      repo: https://github.com/erolss/TicketShop.git
     id: TransactionApi
     path: src/RestApiClient/TransactionApi.cs
-    startLine: 9
+    startLine: 10
   assemblies:
   - RestApiClient
   namespace: TicketShop.RestApiClient
@@ -34,6 +34,7 @@ items:
     content: 'public class TransactionApi : ITransactionApi'
     content.vb: >-
       Public Class TransactionApi
+
           Implements ITransactionApi
   inheritance:
   - System.Object
@@ -68,10 +69,10 @@ items:
     remote:
       path: src/RestApiClient/TransactionApi.cs
       branch: features/ticketshop
-      repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
+      repo: https://github.com/erolss/TicketShop.git
     id: .ctor
     path: src/RestApiClient/TransactionApi.cs
-    startLine: 13
+    startLine: 14
   assemblies:
   - RestApiClient
   namespace: TicketShop.RestApiClient
@@ -101,10 +102,10 @@ items:
     remote:
       path: src/RestApiClient/TransactionApi.cs
       branch: features/ticketshop
-      repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
+      repo: https://github.com/erolss/TicketShop.git
     id: AddTransaction
     path: src/RestApiClient/TransactionApi.cs
-    startLine: 18
+    startLine: 19
   assemblies:
   - RestApiClient
   namespace: TicketShop.RestApiClient
@@ -138,10 +139,10 @@ items:
     remote:
       path: src/RestApiClient/TransactionApi.cs
       branch: features/ticketshop
-      repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
+      repo: https://github.com/erolss/TicketShop.git
     id: DeleteTransactionById
     path: src/RestApiClient/TransactionApi.cs
-    startLine: 31
+    startLine: 32
   assemblies:
   - RestApiClient
   namespace: TicketShop.RestApiClient
@@ -175,10 +176,10 @@ items:
     remote:
       path: src/RestApiClient/TransactionApi.cs
       branch: features/ticketshop
-      repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
+      repo: https://github.com/erolss/TicketShop.git
     id: FindTransactions
     path: src/RestApiClient/TransactionApi.cs
-    startLine: 47
+    startLine: 48
   assemblies:
   - RestApiClient
   namespace: TicketShop.RestApiClient
@@ -212,10 +213,10 @@ items:
     remote:
       path: src/RestApiClient/TransactionApi.cs
       branch: features/ticketshop
-      repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
+      repo: https://github.com/erolss/TicketShop.git
     id: GetTransactionById
     path: src/RestApiClient/TransactionApi.cs
-    startLine: 60
+    startLine: 61
   assemblies:
   - RestApiClient
   namespace: TicketShop.RestApiClient
@@ -249,10 +250,10 @@ items:
     remote:
       path: src/RestApiClient/TransactionApi.cs
       branch: features/ticketshop
-      repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
+      repo: https://github.com/erolss/TicketShop.git
     id: GetTransactions
     path: src/RestApiClient/TransactionApi.cs
-    startLine: 92
+    startLine: 93
   assemblies:
   - RestApiClient
   namespace: TicketShop.RestApiClient
@@ -288,10 +289,10 @@ items:
     remote:
       path: src/RestApiClient/TransactionApi.cs
       branch: features/ticketshop
-      repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
+      repo: https://github.com/erolss/TicketShop.git
     id: UpdateTransaction
     path: src/RestApiClient/TransactionApi.cs
-    startLine: 104
+    startLine: 105
   assemblies:
   - RestApiClient
   namespace: TicketShop.RestApiClient

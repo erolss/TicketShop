@@ -1,50 +1,47 @@
 ### YamlMime:ManagedReference
 items:
-- uid: TicketShop.Controllers.Admin.VenueController
-  commentId: T:TicketShop.Controllers.Admin.VenueController
-  id: VenueController
-  parent: TicketShop.Controllers.Admin
+- uid: TicketShop.Areas.Admin.Controllers.AdminController
+  commentId: T:TicketShop.Areas.Admin.Controllers.AdminController
+  id: AdminController
+  parent: TicketShop.Areas.Admin.Controllers
   children:
-  - TicketShop.Controllers.Admin.VenueController.Create
-  - TicketShop.Controllers.Admin.VenueController.Create(Microsoft.AspNetCore.Http.IFormCollection)
-  - TicketShop.Controllers.Admin.VenueController.Delete(System.Int32)
-  - TicketShop.Controllers.Admin.VenueController.Delete(System.Int32,Microsoft.AspNetCore.Http.IFormCollection)
-  - TicketShop.Controllers.Admin.VenueController.Details(System.Int32)
-  - TicketShop.Controllers.Admin.VenueController.Edit(System.Int32)
-  - TicketShop.Controllers.Admin.VenueController.Edit(System.Int32,Microsoft.AspNetCore.Http.IFormCollection)
-  - TicketShop.Controllers.Admin.VenueController.Index
+  - TicketShop.Areas.Admin.Controllers.AdminController.#ctor(Microsoft.Extensions.Options.IOptions{TicketShop.Settings.CustomSettings})
+  - TicketShop.Areas.Admin.Controllers.AdminController.Find
+  - TicketShop.Areas.Admin.Controllers.AdminController.Find(Microsoft.AspNetCore.Http.IFormCollection)
   langs:
   - csharp
   - vb
-  name: VenueController
-  nameWithType: VenueController
-  fullName: TicketShop.Controllers.Admin.VenueController
+  name: AdminController
+  nameWithType: AdminController
+  fullName: TicketShop.Areas.Admin.Controllers.AdminController
   type: Class
   source:
     remote:
-      path: src/TicketShop/Controllers/Admin/VenueController.cs
+      path: src/TicketShop/Areas/Admin/Controllers/AdminController.cs
       branch: features/ticketshop
-      repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
-    id: VenueController
-    path: src/TicketShop/Controllers/Admin/VenueController.cs
-    startLine: 13
+      repo: https://github.com/erolss/TicketShop.git
+    id: AdminController
+    path: src/TicketShop/Areas/Admin/Controllers/AdminController.cs
+    startLine: 16
   assemblies:
-  - TicketShop
-  namespace: TicketShop.Controllers.Admin
+  - Ticketshop
+  namespace: TicketShop.Areas.Admin.Controllers
   syntax:
     content: >-
       [Authorize(Policy = "RequireAdminRole")]
 
       [Area("Admin")]
 
-      public class VenueController : Controller, IActionFilter, IAsyncActionFilter, IFilterMetadata, IDisposable
+      public class AdminController : Controller, IActionFilter, IAsyncActionFilter, IFilterMetadata, IDisposable
     content.vb: >-
       <Authorize(Policy:="RequireAdminRole")>
 
       <Area("Admin")>
 
-      Public Class VenueController
+      Public Class AdminController
+
           Inherits Controller
+
           Implements IActionFilter, IAsyncActionFilter, IFilterMetadata, IDisposable
   inheritance:
   - System.Object
@@ -241,324 +238,115 @@ items:
   modifiers.vb:
   - Public
   - Class
-- uid: TicketShop.Controllers.Admin.VenueController.Index
-  commentId: M:TicketShop.Controllers.Admin.VenueController.Index
-  id: Index
-  parent: TicketShop.Controllers.Admin.VenueController
+- uid: TicketShop.Areas.Admin.Controllers.AdminController.#ctor(Microsoft.Extensions.Options.IOptions{TicketShop.Settings.CustomSettings})
+  commentId: M:TicketShop.Areas.Admin.Controllers.AdminController.#ctor(Microsoft.Extensions.Options.IOptions{TicketShop.Settings.CustomSettings})
+  id: '#ctor(Microsoft.Extensions.Options.IOptions{TicketShop.Settings.CustomSettings})'
+  parent: TicketShop.Areas.Admin.Controllers.AdminController
   langs:
   - csharp
   - vb
-  name: Index()
-  nameWithType: VenueController.Index()
-  fullName: TicketShop.Controllers.Admin.VenueController.Index()
-  type: Method
+  name: AdminController(IOptions<CustomSettings>)
+  nameWithType: AdminController.AdminController(IOptions<CustomSettings>)
+  fullName: TicketShop.Areas.Admin.Controllers.AdminController.AdminController(Microsoft.Extensions.Options.IOptions<TicketShop.Settings.CustomSettings>)
+  type: Constructor
   source:
     remote:
-      path: src/TicketShop/Controllers/Admin/VenueController.cs
+      path: src/TicketShop/Areas/Admin/Controllers/AdminController.cs
       branch: features/ticketshop
-      repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
-    id: Index
-    path: src/TicketShop/Controllers/Admin/VenueController.cs
-    startLine: 18
+      repo: https://github.com/erolss/TicketShop.git
+    id: .ctor
+    path: src/TicketShop/Areas/Admin/Controllers/AdminController.cs
+    startLine: 22
   assemblies:
-  - TicketShop
-  namespace: TicketShop.Controllers.Admin
+  - Ticketshop
+  namespace: TicketShop.Areas.Admin.Controllers
   syntax:
-    content: public ActionResult Index()
-    return:
-      type: Microsoft.AspNetCore.Mvc.ActionResult
-    content.vb: Public Function Index As ActionResult
-  overload: TicketShop.Controllers.Admin.VenueController.Index*
-  modifiers.csharp:
-  - public
-  modifiers.vb:
-  - Public
-- uid: TicketShop.Controllers.Admin.VenueController.Details(System.Int32)
-  commentId: M:TicketShop.Controllers.Admin.VenueController.Details(System.Int32)
-  id: Details(System.Int32)
-  parent: TicketShop.Controllers.Admin.VenueController
-  langs:
-  - csharp
-  - vb
-  name: Details(Int32)
-  nameWithType: VenueController.Details(Int32)
-  fullName: TicketShop.Controllers.Admin.VenueController.Details(System.Int32)
-  type: Method
-  source:
-    remote:
-      path: src/TicketShop/Controllers/Admin/VenueController.cs
-      branch: features/ticketshop
-      repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
-    id: Details
-    path: src/TicketShop/Controllers/Admin/VenueController.cs
-    startLine: 25
-  assemblies:
-  - TicketShop
-  namespace: TicketShop.Controllers.Admin
-  syntax:
-    content: public ActionResult Details(int id)
+    content: public AdminController(IOptions<CustomSettings> settings)
     parameters:
-    - id: id
-      type: System.Int32
-    return:
-      type: Microsoft.AspNetCore.Mvc.ActionResult
-    content.vb: Public Function Details(id As Integer) As ActionResult
-  overload: TicketShop.Controllers.Admin.VenueController.Details*
+    - id: settings
+      type: Microsoft.Extensions.Options.IOptions{TicketShop.Settings.CustomSettings}
+    content.vb: Public Sub New(settings As IOptions(Of CustomSettings))
+  overload: TicketShop.Areas.Admin.Controllers.AdminController.#ctor*
+  nameWithType.vb: AdminController.AdminController(IOptions(Of CustomSettings))
   modifiers.csharp:
   - public
   modifiers.vb:
   - Public
-- uid: TicketShop.Controllers.Admin.VenueController.Create
-  commentId: M:TicketShop.Controllers.Admin.VenueController.Create
-  id: Create
-  parent: TicketShop.Controllers.Admin.VenueController
+  fullName.vb: TicketShop.Areas.Admin.Controllers.AdminController.AdminController(Microsoft.Extensions.Options.IOptions(Of TicketShop.Settings.CustomSettings))
+  name.vb: AdminController(IOptions(Of CustomSettings))
+- uid: TicketShop.Areas.Admin.Controllers.AdminController.Find
+  commentId: M:TicketShop.Areas.Admin.Controllers.AdminController.Find
+  id: Find
+  parent: TicketShop.Areas.Admin.Controllers.AdminController
   langs:
   - csharp
   - vb
-  name: Create()
-  nameWithType: VenueController.Create()
-  fullName: TicketShop.Controllers.Admin.VenueController.Create()
+  name: Find()
+  nameWithType: AdminController.Find()
+  fullName: TicketShop.Areas.Admin.Controllers.AdminController.Find()
   type: Method
   source:
     remote:
-      path: src/TicketShop/Controllers/Admin/VenueController.cs
+      path: src/TicketShop/Areas/Admin/Controllers/AdminController.cs
       branch: features/ticketshop
-      repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
-    id: Create
-    path: src/TicketShop/Controllers/Admin/VenueController.cs
-    startLine: 31
+      repo: https://github.com/erolss/TicketShop.git
+    id: Find
+    path: src/TicketShop/Areas/Admin/Controllers/AdminController.cs
+    startLine: 27
   assemblies:
-  - TicketShop
-  namespace: TicketShop.Controllers.Admin
+  - Ticketshop
+  namespace: TicketShop.Areas.Admin.Controllers
   syntax:
-    content: public ActionResult Create()
+    content: public IActionResult Find()
     return:
-      type: Microsoft.AspNetCore.Mvc.ActionResult
-    content.vb: Public Function Create As ActionResult
-  overload: TicketShop.Controllers.Admin.VenueController.Create*
+      type: Microsoft.AspNetCore.Mvc.IActionResult
+    content.vb: Public Function Find As IActionResult
+  overload: TicketShop.Areas.Admin.Controllers.AdminController.Find*
   modifiers.csharp:
   - public
   modifiers.vb:
   - Public
-- uid: TicketShop.Controllers.Admin.VenueController.Create(Microsoft.AspNetCore.Http.IFormCollection)
-  commentId: M:TicketShop.Controllers.Admin.VenueController.Create(Microsoft.AspNetCore.Http.IFormCollection)
-  id: Create(Microsoft.AspNetCore.Http.IFormCollection)
-  parent: TicketShop.Controllers.Admin.VenueController
+- uid: TicketShop.Areas.Admin.Controllers.AdminController.Find(Microsoft.AspNetCore.Http.IFormCollection)
+  commentId: M:TicketShop.Areas.Admin.Controllers.AdminController.Find(Microsoft.AspNetCore.Http.IFormCollection)
+  id: Find(Microsoft.AspNetCore.Http.IFormCollection)
+  parent: TicketShop.Areas.Admin.Controllers.AdminController
   langs:
   - csharp
   - vb
-  name: Create(IFormCollection)
-  nameWithType: VenueController.Create(IFormCollection)
-  fullName: TicketShop.Controllers.Admin.VenueController.Create(Microsoft.AspNetCore.Http.IFormCollection)
+  name: Find(IFormCollection)
+  nameWithType: AdminController.Find(IFormCollection)
+  fullName: TicketShop.Areas.Admin.Controllers.AdminController.Find(Microsoft.AspNetCore.Http.IFormCollection)
   type: Method
   source:
     remote:
-      path: src/TicketShop/Controllers/Admin/VenueController.cs
+      path: src/TicketShop/Areas/Admin/Controllers/AdminController.cs
       branch: features/ticketshop
-      repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
-    id: Create
-    path: src/TicketShop/Controllers/Admin/VenueController.cs
-    startLine: 37
+      repo: https://github.com/erolss/TicketShop.git
+    id: Find
+    path: src/TicketShop/Areas/Admin/Controllers/AdminController.cs
+    startLine: 32
   assemblies:
-  - TicketShop
-  namespace: TicketShop.Controllers.Admin
+  - Ticketshop
+  namespace: TicketShop.Areas.Admin.Controllers
   syntax:
     content: >-
       [HttpPost]
 
       [ValidateAntiForgeryToken]
 
-      public ActionResult Create(IFormCollection collection)
+      public IActionResult Find(IFormCollection form)
     parameters:
-    - id: collection
+    - id: form
       type: Microsoft.AspNetCore.Http.IFormCollection
     return:
-      type: Microsoft.AspNetCore.Mvc.ActionResult
+      type: Microsoft.AspNetCore.Mvc.IActionResult
     content.vb: >-
       <HttpPost>
 
       <ValidateAntiForgeryToken>
 
-      Public Function Create(collection As IFormCollection) As ActionResult
-  overload: TicketShop.Controllers.Admin.VenueController.Create*
-  attributes:
-  - type: Microsoft.AspNetCore.Mvc.HttpPostAttribute
-    ctor: Microsoft.AspNetCore.Mvc.HttpPostAttribute.#ctor
-    arguments: []
-  - type: Microsoft.AspNetCore.Mvc.ValidateAntiForgeryTokenAttribute
-    ctor: Microsoft.AspNetCore.Mvc.ValidateAntiForgeryTokenAttribute.#ctor
-    arguments: []
-  modifiers.csharp:
-  - public
-  modifiers.vb:
-  - Public
-- uid: TicketShop.Controllers.Admin.VenueController.Edit(System.Int32)
-  commentId: M:TicketShop.Controllers.Admin.VenueController.Edit(System.Int32)
-  id: Edit(System.Int32)
-  parent: TicketShop.Controllers.Admin.VenueController
-  langs:
-  - csharp
-  - vb
-  name: Edit(Int32)
-  nameWithType: VenueController.Edit(Int32)
-  fullName: TicketShop.Controllers.Admin.VenueController.Edit(System.Int32)
-  type: Method
-  source:
-    remote:
-      path: src/TicketShop/Controllers/Admin/VenueController.cs
-      branch: features/ticketshop
-      repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
-    id: Edit
-    path: src/TicketShop/Controllers/Admin/VenueController.cs
-    startLine: 54
-  assemblies:
-  - TicketShop
-  namespace: TicketShop.Controllers.Admin
-  syntax:
-    content: public ActionResult Edit(int id)
-    parameters:
-    - id: id
-      type: System.Int32
-    return:
-      type: Microsoft.AspNetCore.Mvc.ActionResult
-    content.vb: Public Function Edit(id As Integer) As ActionResult
-  overload: TicketShop.Controllers.Admin.VenueController.Edit*
-  modifiers.csharp:
-  - public
-  modifiers.vb:
-  - Public
-- uid: TicketShop.Controllers.Admin.VenueController.Edit(System.Int32,Microsoft.AspNetCore.Http.IFormCollection)
-  commentId: M:TicketShop.Controllers.Admin.VenueController.Edit(System.Int32,Microsoft.AspNetCore.Http.IFormCollection)
-  id: Edit(System.Int32,Microsoft.AspNetCore.Http.IFormCollection)
-  parent: TicketShop.Controllers.Admin.VenueController
-  langs:
-  - csharp
-  - vb
-  name: Edit(Int32, IFormCollection)
-  nameWithType: VenueController.Edit(Int32, IFormCollection)
-  fullName: TicketShop.Controllers.Admin.VenueController.Edit(System.Int32, Microsoft.AspNetCore.Http.IFormCollection)
-  type: Method
-  source:
-    remote:
-      path: src/TicketShop/Controllers/Admin/VenueController.cs
-      branch: features/ticketshop
-      repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
-    id: Edit
-    path: src/TicketShop/Controllers/Admin/VenueController.cs
-    startLine: 60
-  assemblies:
-  - TicketShop
-  namespace: TicketShop.Controllers.Admin
-  syntax:
-    content: >-
-      [HttpPost]
-
-      [ValidateAntiForgeryToken]
-
-      public ActionResult Edit(int id, IFormCollection collection)
-    parameters:
-    - id: id
-      type: System.Int32
-    - id: collection
-      type: Microsoft.AspNetCore.Http.IFormCollection
-    return:
-      type: Microsoft.AspNetCore.Mvc.ActionResult
-    content.vb: >-
-      <HttpPost>
-
-      <ValidateAntiForgeryToken>
-
-      Public Function Edit(id As Integer, collection As IFormCollection) As ActionResult
-  overload: TicketShop.Controllers.Admin.VenueController.Edit*
-  attributes:
-  - type: Microsoft.AspNetCore.Mvc.HttpPostAttribute
-    ctor: Microsoft.AspNetCore.Mvc.HttpPostAttribute.#ctor
-    arguments: []
-  - type: Microsoft.AspNetCore.Mvc.ValidateAntiForgeryTokenAttribute
-    ctor: Microsoft.AspNetCore.Mvc.ValidateAntiForgeryTokenAttribute.#ctor
-    arguments: []
-  modifiers.csharp:
-  - public
-  modifiers.vb:
-  - Public
-- uid: TicketShop.Controllers.Admin.VenueController.Delete(System.Int32)
-  commentId: M:TicketShop.Controllers.Admin.VenueController.Delete(System.Int32)
-  id: Delete(System.Int32)
-  parent: TicketShop.Controllers.Admin.VenueController
-  langs:
-  - csharp
-  - vb
-  name: Delete(Int32)
-  nameWithType: VenueController.Delete(Int32)
-  fullName: TicketShop.Controllers.Admin.VenueController.Delete(System.Int32)
-  type: Method
-  source:
-    remote:
-      path: src/TicketShop/Controllers/Admin/VenueController.cs
-      branch: features/ticketshop
-      repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
-    id: Delete
-    path: src/TicketShop/Controllers/Admin/VenueController.cs
-    startLine: 77
-  assemblies:
-  - TicketShop
-  namespace: TicketShop.Controllers.Admin
-  syntax:
-    content: public ActionResult Delete(int id)
-    parameters:
-    - id: id
-      type: System.Int32
-    return:
-      type: Microsoft.AspNetCore.Mvc.ActionResult
-    content.vb: Public Function Delete(id As Integer) As ActionResult
-  overload: TicketShop.Controllers.Admin.VenueController.Delete*
-  modifiers.csharp:
-  - public
-  modifiers.vb:
-  - Public
-- uid: TicketShop.Controllers.Admin.VenueController.Delete(System.Int32,Microsoft.AspNetCore.Http.IFormCollection)
-  commentId: M:TicketShop.Controllers.Admin.VenueController.Delete(System.Int32,Microsoft.AspNetCore.Http.IFormCollection)
-  id: Delete(System.Int32,Microsoft.AspNetCore.Http.IFormCollection)
-  parent: TicketShop.Controllers.Admin.VenueController
-  langs:
-  - csharp
-  - vb
-  name: Delete(Int32, IFormCollection)
-  nameWithType: VenueController.Delete(Int32, IFormCollection)
-  fullName: TicketShop.Controllers.Admin.VenueController.Delete(System.Int32, Microsoft.AspNetCore.Http.IFormCollection)
-  type: Method
-  source:
-    remote:
-      path: src/TicketShop/Controllers/Admin/VenueController.cs
-      branch: features/ticketshop
-      repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
-    id: Delete
-    path: src/TicketShop/Controllers/Admin/VenueController.cs
-    startLine: 83
-  assemblies:
-  - TicketShop
-  namespace: TicketShop.Controllers.Admin
-  syntax:
-    content: >-
-      [HttpPost]
-
-      [ValidateAntiForgeryToken]
-
-      public ActionResult Delete(int id, IFormCollection collection)
-    parameters:
-    - id: id
-      type: System.Int32
-    - id: collection
-      type: Microsoft.AspNetCore.Http.IFormCollection
-    return:
-      type: Microsoft.AspNetCore.Mvc.ActionResult
-    content.vb: >-
-      <HttpPost>
-
-      <ValidateAntiForgeryToken>
-
-      Public Function Delete(id As Integer, collection As IFormCollection) As ActionResult
-  overload: TicketShop.Controllers.Admin.VenueController.Delete*
+      Public Function Find(form As IFormCollection) As IActionResult
+  overload: TicketShop.Areas.Admin.Controllers.AdminController.Find*
   attributes:
   - type: Microsoft.AspNetCore.Mvc.HttpPostAttribute
     ctor: Microsoft.AspNetCore.Mvc.HttpPostAttribute.#ctor
@@ -571,12 +359,12 @@ items:
   modifiers.vb:
   - Public
 references:
-- uid: TicketShop.Controllers.Admin
-  commentId: N:TicketShop.Controllers.Admin
+- uid: TicketShop.Areas.Admin.Controllers
+  commentId: N:TicketShop.Areas.Admin.Controllers
   isExternal: false
-  name: TicketShop.Controllers.Admin
-  nameWithType: TicketShop.Controllers.Admin
-  fullName: TicketShop.Controllers.Admin
+  name: TicketShop.Areas.Admin.Controllers
+  nameWithType: TicketShop.Areas.Admin.Controllers
+  fullName: TicketShop.Areas.Admin.Controllers
 - uid: System.Object
   commentId: T:System.Object
   parent: System
@@ -10647,38 +10435,112 @@ references:
   - name: )
     nameWithType: )
     fullName: )
-- uid: TicketShop.Controllers.Admin.VenueController.Index*
-  commentId: Overload:TicketShop.Controllers.Admin.VenueController.Index
+- uid: TicketShop.Areas.Admin.Controllers.AdminController.#ctor*
+  commentId: Overload:TicketShop.Areas.Admin.Controllers.AdminController.#ctor
   isExternal: false
-  name: Index
-  nameWithType: VenueController.Index
-  fullName: TicketShop.Controllers.Admin.VenueController.Index
-- uid: Microsoft.AspNetCore.Mvc.ActionResult
-  commentId: T:Microsoft.AspNetCore.Mvc.ActionResult
+  name: AdminController
+  nameWithType: AdminController.AdminController
+  fullName: TicketShop.Areas.Admin.Controllers.AdminController.AdminController
+- uid: Microsoft.Extensions.Options.IOptions{TicketShop.Settings.CustomSettings}
+  commentId: T:Microsoft.Extensions.Options.IOptions{TicketShop.Settings.CustomSettings}
+  parent: Microsoft.Extensions.Options
+  definition: Microsoft.Extensions.Options.IOptions`1
+  name: IOptions<CustomSettings>
+  nameWithType: IOptions<CustomSettings>
+  fullName: Microsoft.Extensions.Options.IOptions<TicketShop.Settings.CustomSettings>
+  nameWithType.vb: IOptions(Of CustomSettings)
+  fullName.vb: Microsoft.Extensions.Options.IOptions(Of TicketShop.Settings.CustomSettings)
+  name.vb: IOptions(Of CustomSettings)
+  spec.csharp:
+  - uid: Microsoft.Extensions.Options.IOptions`1
+    name: IOptions
+    nameWithType: IOptions
+    fullName: Microsoft.Extensions.Options.IOptions
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: TicketShop.Settings.CustomSettings
+    name: CustomSettings
+    nameWithType: CustomSettings
+    fullName: TicketShop.Settings.CustomSettings
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: Microsoft.Extensions.Options.IOptions`1
+    name: IOptions
+    nameWithType: IOptions
+    fullName: Microsoft.Extensions.Options.IOptions
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: TicketShop.Settings.CustomSettings
+    name: CustomSettings
+    nameWithType: CustomSettings
+    fullName: TicketShop.Settings.CustomSettings
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Microsoft.Extensions.Options.IOptions`1
+  commentId: T:Microsoft.Extensions.Options.IOptions`1
+  isExternal: true
+  name: IOptions<TOptions>
+  nameWithType: IOptions<TOptions>
+  fullName: Microsoft.Extensions.Options.IOptions<TOptions>
+  nameWithType.vb: IOptions(Of TOptions)
+  fullName.vb: Microsoft.Extensions.Options.IOptions(Of TOptions)
+  name.vb: IOptions(Of TOptions)
+  spec.csharp:
+  - uid: Microsoft.Extensions.Options.IOptions`1
+    name: IOptions
+    nameWithType: IOptions
+    fullName: Microsoft.Extensions.Options.IOptions
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: TOptions
+    nameWithType: TOptions
+    fullName: TOptions
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: Microsoft.Extensions.Options.IOptions`1
+    name: IOptions
+    nameWithType: IOptions
+    fullName: Microsoft.Extensions.Options.IOptions
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: TOptions
+    nameWithType: TOptions
+    fullName: TOptions
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Microsoft.Extensions.Options
+  commentId: N:Microsoft.Extensions.Options
+  isExternal: false
+  name: Microsoft.Extensions.Options
+  nameWithType: Microsoft.Extensions.Options
+  fullName: Microsoft.Extensions.Options
+- uid: TicketShop.Areas.Admin.Controllers.AdminController.Find*
+  commentId: Overload:TicketShop.Areas.Admin.Controllers.AdminController.Find
+  isExternal: false
+  name: Find
+  nameWithType: AdminController.Find
+  fullName: TicketShop.Areas.Admin.Controllers.AdminController.Find
+- uid: Microsoft.AspNetCore.Mvc.IActionResult
+  commentId: T:Microsoft.AspNetCore.Mvc.IActionResult
   parent: Microsoft.AspNetCore.Mvc
   isExternal: true
-  name: ActionResult
-  nameWithType: ActionResult
-  fullName: Microsoft.AspNetCore.Mvc.ActionResult
-- uid: TicketShop.Controllers.Admin.VenueController.Details*
-  commentId: Overload:TicketShop.Controllers.Admin.VenueController.Details
-  isExternal: false
-  name: Details
-  nameWithType: VenueController.Details
-  fullName: TicketShop.Controllers.Admin.VenueController.Details
-- uid: System.Int32
-  commentId: T:System.Int32
-  parent: System
-  isExternal: true
-  name: Int32
-  nameWithType: Int32
-  fullName: System.Int32
-- uid: TicketShop.Controllers.Admin.VenueController.Create*
-  commentId: Overload:TicketShop.Controllers.Admin.VenueController.Create
-  isExternal: false
-  name: Create
-  nameWithType: VenueController.Create
-  fullName: TicketShop.Controllers.Admin.VenueController.Create
+  name: IActionResult
+  nameWithType: IActionResult
+  fullName: Microsoft.AspNetCore.Mvc.IActionResult
 - uid: Microsoft.AspNetCore.Http.IFormCollection
   commentId: T:Microsoft.AspNetCore.Http.IFormCollection
   parent: Microsoft.AspNetCore.Http
@@ -10692,15 +10554,3 @@ references:
   name: Microsoft.AspNetCore.Http
   nameWithType: Microsoft.AspNetCore.Http
   fullName: Microsoft.AspNetCore.Http
-- uid: TicketShop.Controllers.Admin.VenueController.Edit*
-  commentId: Overload:TicketShop.Controllers.Admin.VenueController.Edit
-  isExternal: false
-  name: Edit
-  nameWithType: VenueController.Edit
-  fullName: TicketShop.Controllers.Admin.VenueController.Edit
-- uid: TicketShop.Controllers.Admin.VenueController.Delete*
-  commentId: Overload:TicketShop.Controllers.Admin.VenueController.Delete
-  isExternal: false
-  name: Delete
-  nameWithType: VenueController.Delete
-  fullName: TicketShop.Controllers.Admin.VenueController.Delete

@@ -24,7 +24,7 @@ items:
     remote:
       path: src/RestApiClient/Model/EventDate.cs
       branch: features/ticketshop
-      repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
+      repo: https://github.com/erolss/TicketShop.git
     id: EventDate
     path: src/RestApiClient/Model/EventDate.cs
     startLine: 8
@@ -64,7 +64,7 @@ items:
     remote:
       path: src/RestApiClient/Model/EventDate.cs
       branch: features/ticketshop
-      repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
+      repo: https://github.com/erolss/TicketShop.git
     id: TicketEventDateID
     path: src/RestApiClient/Model/EventDate.cs
     startLine: 13
@@ -101,7 +101,7 @@ items:
     remote:
       path: src/RestApiClient/Model/EventDate.cs
       branch: features/ticketshop
-      repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
+      repo: https://github.com/erolss/TicketShop.git
     id: TicketEventID
     path: src/RestApiClient/Model/EventDate.cs
     startLine: 18
@@ -138,7 +138,7 @@ items:
     remote:
       path: src/RestApiClient/Model/EventDate.cs
       branch: features/ticketshop
-      repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
+      repo: https://github.com/erolss/TicketShop.git
     id: VenueID
     path: src/RestApiClient/Model/EventDate.cs
     startLine: 23
@@ -175,7 +175,7 @@ items:
     remote:
       path: src/RestApiClient/Model/EventDate.cs
       branch: features/ticketshop
-      repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
+      repo: https://github.com/erolss/TicketShop.git
     id: EventStartDateTime
     path: src/RestApiClient/Model/EventDate.cs
     startLine: 28
@@ -212,7 +212,7 @@ items:
     remote:
       path: src/RestApiClient/Model/EventDate.cs
       branch: features/ticketshop
-      repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
+      repo: https://github.com/erolss/TicketShop.git
     id: MaxTickets
     path: src/RestApiClient/Model/EventDate.cs
     startLine: 33
@@ -249,7 +249,7 @@ items:
     remote:
       path: src/RestApiClient/Model/EventDate.cs
       branch: features/ticketshop
-      repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
+      repo: https://github.com/erolss/TicketShop.git
     id: Price
     path: src/RestApiClient/Model/EventDate.cs
     startLine: 38
@@ -286,7 +286,7 @@ items:
     remote:
       path: src/RestApiClient/Model/EventDate.cs
       branch: features/ticketshop
-      repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
+      repo: https://github.com/erolss/TicketShop.git
     id: ToString
     path: src/RestApiClient/Model/EventDate.cs
     startLine: 44
@@ -324,7 +324,7 @@ items:
     remote:
       path: src/RestApiClient/Model/EventDate.cs
       branch: features/ticketshop
-      repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
+      repo: https://github.com/erolss/TicketShop.git
     id: ToJson
     path: src/RestApiClient/Model/EventDate.cs
     startLine: 62

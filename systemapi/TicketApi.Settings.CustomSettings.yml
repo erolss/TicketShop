@@ -17,7 +17,7 @@ items:
     remote:
       path: src/TicketApi/CustomSettings.cs
       branch: features/ticketshop
-      repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
+      repo: https://github.com/erolss/TicketShop.git
     id: CustomSettings
     path: src/TicketApi/CustomSettings.cs
     startLine: 7
@@ -58,7 +58,7 @@ items:
     remote:
       path: src/TicketApi/CustomSettings.cs
       branch: features/ticketshop
-      repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
+      repo: https://github.com/erolss/TicketShop.git
     id: DefaultConnection
     path: src/TicketApi/CustomSettings.cs
     startLine: 9

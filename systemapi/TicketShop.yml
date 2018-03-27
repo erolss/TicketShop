@@ -14,7 +14,7 @@ items:
   fullName: TicketShop
   type: Namespace
   assemblies:
-  - TicketShop
+  - Ticketshop
 references:
 - uid: TicketShop.Program
   commentId: T:TicketShop.Program

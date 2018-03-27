@@ -1,0 +1,58 @@
+### YamlMime:ManagedReference
+items:
+- uid: TicketShop.Areas.Admin.Controllers
+  commentId: N:TicketShop.Areas.Admin.Controllers
+  id: TicketShop.Areas.Admin.Controllers
+  children:
+  - TicketShop.Areas.Admin.Controllers.AdminController
+  - TicketShop.Areas.Admin.Controllers.EventController
+  - TicketShop.Areas.Admin.Controllers.EventDateController
+  - TicketShop.Areas.Admin.Controllers.TicketController
+  - TicketShop.Areas.Admin.Controllers.TransactionController
+  - TicketShop.Areas.Admin.Controllers.VenueController
+  langs:
+  - csharp
+  - vb
+  name: TicketShop.Areas.Admin.Controllers
+  nameWithType: TicketShop.Areas.Admin.Controllers
+  fullName: TicketShop.Areas.Admin.Controllers
+  type: Namespace
+  assemblies:
+  - Ticketshop
+references:
+- uid: TicketShop.Areas.Admin.Controllers.AdminController
+  commentId: T:TicketShop.Areas.Admin.Controllers.AdminController
+  isExternal: false
+  name: AdminController
+  nameWithType: AdminController
+  fullName: TicketShop.Areas.Admin.Controllers.AdminController
+- uid: TicketShop.Areas.Admin.Controllers.EventController
+  commentId: T:TicketShop.Areas.Admin.Controllers.EventController
+  isExternal: false
+  name: EventController
+  nameWithType: EventController
+  fullName: TicketShop.Areas.Admin.Controllers.EventController
+- uid: TicketShop.Areas.Admin.Controllers.EventDateController
+  commentId: T:TicketShop.Areas.Admin.Controllers.EventDateController
+  isExternal: false
+  name: EventDateController
+  nameWithType: EventDateController
+  fullName: TicketShop.Areas.Admin.Controllers.EventDateController
+- uid: TicketShop.Areas.Admin.Controllers.TicketController
+  commentId: T:TicketShop.Areas.Admin.Controllers.TicketController
+  isExternal: false
+  name: TicketController
+  nameWithType: TicketController
+  fullName: TicketShop.Areas.Admin.Controllers.TicketController
+- uid: TicketShop.Areas.Admin.Controllers.TransactionController
+  commentId: T:TicketShop.Areas.Admin.Controllers.TransactionController
+  isExternal: false
+  name: TransactionController
+  nameWithType: TransactionController
+  fullName: TicketShop.Areas.Admin.Controllers.TransactionController
+- uid: TicketShop.Areas.Admin.Controllers.VenueController
+  commentId: T:TicketShop.Areas.Admin.Controllers.VenueController
+  isExternal: false
+  name: VenueController
+  nameWithType: VenueController
+  fullName: TicketShop.Areas.Admin.Controllers.VenueController

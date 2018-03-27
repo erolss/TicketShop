@@ -13,6 +13,7 @@ items:
   - TicketShop.Models.ViewModels.OrderCartViewModel.BuyerUserId
   - TicketShop.Models.ViewModels.OrderCartViewModel.Currency
   - TicketShop.Models.ViewModels.OrderCartViewModel.Events
+  - TicketShop.Models.ViewModels.OrderCartViewModel.NumberTickets
   - TicketShop.Models.ViewModels.OrderCartViewModel.PaymentReference
   - TicketShop.Models.ViewModels.OrderCartViewModel.PaymentStatus
   - TicketShop.Models.ViewModels.OrderCartViewModel.Total
@@ -29,12 +30,12 @@ items:
     remote:
       path: src/TicketShop/Models/ViewModels/AllShopViewModels.cs
       branch: features/ticketshop
-      repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
+      repo: https://github.com/erolss/TicketShop.git
     id: OrderCartViewModel
     path: src/TicketShop/Models/ViewModels/AllShopViewModels.cs
-    startLine: 47
+    startLine: 48
   assemblies:
-  - TicketShop
+  - Ticketshop
   namespace: TicketShop.Models.ViewModels
   syntax:
     content: public class OrderCartViewModel
@@ -70,12 +71,12 @@ items:
     remote:
       path: src/TicketShop/Models/ViewModels/AllShopViewModels.cs
       branch: features/ticketshop
-      repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
+      repo: https://github.com/erolss/TicketShop.git
     id: Events
     path: src/TicketShop/Models/ViewModels/AllShopViewModels.cs
-    startLine: 49
+    startLine: 50
   assemblies:
-  - TicketShop
+  - Ticketshop
   namespace: TicketShop.Models.ViewModels
   syntax:
     content: public List<FullEventDate> Events { get; set; }
@@ -105,12 +106,12 @@ items:
     remote:
       path: src/TicketShop/Models/ViewModels/AllShopViewModels.cs
       branch: features/ticketshop
-      repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
+      repo: https://github.com/erolss/TicketShop.git
     id: Total
     path: src/TicketShop/Models/ViewModels/AllShopViewModels.cs
-    startLine: 51
+    startLine: 52
   assemblies:
-  - TicketShop
+  - Ticketshop
   namespace: TicketShop.Models.ViewModels
   syntax:
     content: public double Total { get; set; }
@@ -140,12 +141,12 @@ items:
     remote:
       path: src/TicketShop/Models/ViewModels/AllShopViewModels.cs
       branch: features/ticketshop
-      repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
+      repo: https://github.com/erolss/TicketShop.git
     id: Currency
     path: src/TicketShop/Models/ViewModels/AllShopViewModels.cs
-    startLine: 52
+    startLine: 53
   assemblies:
-  - TicketShop
+  - Ticketshop
   namespace: TicketShop.Models.ViewModels
   syntax:
     content: public string Currency { get; set; }
@@ -175,12 +176,12 @@ items:
     remote:
       path: src/TicketShop/Models/ViewModels/AllShopViewModels.cs
       branch: features/ticketshop
-      repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
+      repo: https://github.com/erolss/TicketShop.git
     id: TransactionID
     path: src/TicketShop/Models/ViewModels/AllShopViewModels.cs
-    startLine: 53
+    startLine: 54
   assemblies:
-  - TicketShop
+  - Ticketshop
   namespace: TicketShop.Models.ViewModels
   syntax:
     content: public int ? TransactionID { get; set; }
@@ -210,12 +211,12 @@ items:
     remote:
       path: src/TicketShop/Models/ViewModels/AllShopViewModels.cs
       branch: features/ticketshop
-      repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
+      repo: https://github.com/erolss/TicketShop.git
     id: BuyerLastName
     path: src/TicketShop/Models/ViewModels/AllShopViewModels.cs
-    startLine: 55
+    startLine: 56
   assemblies:
-  - TicketShop
+  - Ticketshop
   namespace: TicketShop.Models.ViewModels
   syntax:
     content: public string BuyerLastName { get; set; }
@@ -245,12 +246,12 @@ items:
     remote:
       path: src/TicketShop/Models/ViewModels/AllShopViewModels.cs
       branch: features/ticketshop
-      repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
+      repo: https://github.com/erolss/TicketShop.git
     id: BuyerFirstName
     path: src/TicketShop/Models/ViewModels/AllShopViewModels.cs
-    startLine: 57
+    startLine: 58
   assemblies:
-  - TicketShop
+  - Ticketshop
   namespace: TicketShop.Models.ViewModels
   syntax:
     content: public string BuyerFirstName { get; set; }
@@ -280,12 +281,12 @@ items:
     remote:
       path: src/TicketShop/Models/ViewModels/AllShopViewModels.cs
       branch: features/ticketshop
-      repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
+      repo: https://github.com/erolss/TicketShop.git
     id: BuyerAddress
     path: src/TicketShop/Models/ViewModels/AllShopViewModels.cs
-    startLine: 59
+    startLine: 60
   assemblies:
-  - TicketShop
+  - Ticketshop
   namespace: TicketShop.Models.ViewModels
   syntax:
     content: public string BuyerAddress { get; set; }
@@ -315,12 +316,12 @@ items:
     remote:
       path: src/TicketShop/Models/ViewModels/AllShopViewModels.cs
       branch: features/ticketshop
-      repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
+      repo: https://github.com/erolss/TicketShop.git
     id: BuyerCity
     path: src/TicketShop/Models/ViewModels/AllShopViewModels.cs
-    startLine: 61
+    startLine: 62
   assemblies:
-  - TicketShop
+  - Ticketshop
   namespace: TicketShop.Models.ViewModels
   syntax:
     content: public string BuyerCity { get; set; }
@@ -350,12 +351,12 @@ items:
     remote:
       path: src/TicketShop/Models/ViewModels/AllShopViewModels.cs
       branch: features/ticketshop
-      repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
+      repo: https://github.com/erolss/TicketShop.git
     id: PaymentStatus
     path: src/TicketShop/Models/ViewModels/AllShopViewModels.cs
-    startLine: 63
+    startLine: 64
   assemblies:
-  - TicketShop
+  - Ticketshop
   namespace: TicketShop.Models.ViewModels
   syntax:
     content: public string PaymentStatus { get; set; }
@@ -385,12 +386,12 @@ items:
     remote:
       path: src/TicketShop/Models/ViewModels/AllShopViewModels.cs
       branch: features/ticketshop
-      repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
+      repo: https://github.com/erolss/TicketShop.git
     id: PaymentReference
     path: src/TicketShop/Models/ViewModels/AllShopViewModels.cs
-    startLine: 65
+    startLine: 66
   assemblies:
-  - TicketShop
+  - Ticketshop
   namespace: TicketShop.Models.ViewModels
   syntax:
     content: public string PaymentReference { get; set; }
@@ -420,20 +421,37 @@ items:
     remote:
       path: src/TicketShop/Models/ViewModels/AllShopViewModels.cs
       branch: features/ticketshop
-      repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
+      repo: https://github.com/erolss/TicketShop.git
     id: BuyerEmail
     path: src/TicketShop/Models/ViewModels/AllShopViewModels.cs
     startLine: 67
   assemblies:
-  - TicketShop
+  - Ticketshop
   namespace: TicketShop.Models.ViewModels
   syntax:
-    content: public string BuyerEmail { get; set; }
+    content: >-
+      [Required]
+
+      [EmailAddress]
+
+      public string BuyerEmail { get; set; }
     parameters: []
     return:
       type: System.String
-    content.vb: Public Property BuyerEmail As String
+    content.vb: >-
+      <Required>
+
+      <EmailAddress>
+
+      Public Property BuyerEmail As String
   overload: TicketShop.Models.ViewModels.OrderCartViewModel.BuyerEmail*
+  attributes:
+  - type: System.ComponentModel.DataAnnotations.RequiredAttribute
+    ctor: System.ComponentModel.DataAnnotations.RequiredAttribute.#ctor
+    arguments: []
+  - type: System.ComponentModel.DataAnnotations.EmailAddressAttribute
+    ctor: System.ComponentModel.DataAnnotations.EmailAddressAttribute.#ctor
+    arguments: []
   modifiers.csharp:
   - public
   - get
@@ -455,12 +473,12 @@ items:
     remote:
       path: src/TicketShop/Models/ViewModels/AllShopViewModels.cs
       branch: features/ticketshop
-      repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
+      repo: https://github.com/erolss/TicketShop.git
     id: BuyerUserId
     path: src/TicketShop/Models/ViewModels/AllShopViewModels.cs
-    startLine: 69
+    startLine: 71
   assemblies:
-  - TicketShop
+  - Ticketshop
   namespace: TicketShop.Models.ViewModels
   syntax:
     content: public string BuyerUserId { get; set; }
@@ -490,12 +508,12 @@ items:
     remote:
       path: src/TicketShop/Models/ViewModels/AllShopViewModels.cs
       branch: features/ticketshop
-      repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
+      repo: https://github.com/erolss/TicketShop.git
     id: TotalAmount
     path: src/TicketShop/Models/ViewModels/AllShopViewModels.cs
-    startLine: 71
+    startLine: 73
   assemblies:
-  - TicketShop
+  - Ticketshop
   namespace: TicketShop.Models.ViewModels
   syntax:
     content: public double ? TotalAmount { get; set; }
@@ -504,6 +522,41 @@ items:
       type: System.Nullable{System.Double}
     content.vb: Public Property TotalAmount As Double?
   overload: TicketShop.Models.ViewModels.OrderCartViewModel.TotalAmount*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: TicketShop.Models.ViewModels.OrderCartViewModel.NumberTickets
+  commentId: P:TicketShop.Models.ViewModels.OrderCartViewModel.NumberTickets
+  id: NumberTickets
+  parent: TicketShop.Models.ViewModels.OrderCartViewModel
+  langs:
+  - csharp
+  - vb
+  name: NumberTickets
+  nameWithType: OrderCartViewModel.NumberTickets
+  fullName: TicketShop.Models.ViewModels.OrderCartViewModel.NumberTickets
+  type: Property
+  source:
+    remote:
+      path: src/TicketShop/Models/ViewModels/AllShopViewModels.cs
+      branch: features/ticketshop
+      repo: https://github.com/erolss/TicketShop.git
+    id: NumberTickets
+    path: src/TicketShop/Models/ViewModels/AllShopViewModels.cs
+    startLine: 74
+  assemblies:
+  - Ticketshop
+  namespace: TicketShop.Models.ViewModels
+  syntax:
+    content: public int ? NumberTickets { get; set; }
+    parameters: []
+    return:
+      type: System.Nullable{System.Int32}
+    content.vb: Public Property NumberTickets As Integer?
+  overload: TicketShop.Models.ViewModels.OrderCartViewModel.NumberTickets*
   modifiers.csharp:
   - public
   - get
@@ -1115,3 +1168,9 @@ references:
   - name: )
     nameWithType: )
     fullName: )
+- uid: TicketShop.Models.ViewModels.OrderCartViewModel.NumberTickets*
+  commentId: Overload:TicketShop.Models.ViewModels.OrderCartViewModel.NumberTickets
+  isExternal: false
+  name: NumberTickets
+  nameWithType: OrderCartViewModel.NumberTickets
+  fullName: TicketShop.Models.ViewModels.OrderCartViewModel.NumberTickets

@@ -20,6 +20,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\DbRepository\DbRepository.csproj" />
+    <ProjectReference Include="..\PaymentProvider\PaymentProvider.csproj" />
   </ItemGroup>
 
 </Project>

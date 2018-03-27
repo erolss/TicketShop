@@ -40,12 +40,12 @@ items:
     remote:
       path: src/TicketShop/Controllers/AccountController.cs
       branch: features/ticketshop
-      repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
+      repo: https://github.com/erolss/TicketShop.git
     id: AccountController
     path: src/TicketShop/Controllers/AccountController.cs
     startLine: 18
   assemblies:
-  - TicketShop
+  - Ticketshop
   namespace: TicketShop.Controllers
   syntax:
     content: >-
@@ -60,7 +60,9 @@ items:
       <Route("[controller]/[action]")>
 
       Public Class AccountController
+
           Inherits Controller
+
           Implements IActionFilter, IAsyncActionFilter, IFilterMetadata, IDisposable
   inheritance:
   - System.Object
@@ -268,12 +270,12 @@ items:
     remote:
       path: src/TicketShop/Controllers/AccountController.cs
       branch: features/ticketshop
-      repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
+      repo: https://github.com/erolss/TicketShop.git
     id: .ctor
     path: src/TicketShop/Controllers/AccountController.cs
     startLine: 27
   assemblies:
-  - TicketShop
+  - Ticketshop
   namespace: TicketShop.Controllers
   syntax:
     content: public AccountController(UserManager<ApplicationUser> userManager, SignInManager<ApplicationUser> signInManager, IEmailSender emailSender, ILogger<AccountController> logger)
@@ -310,12 +312,12 @@ items:
     remote:
       path: src/TicketShop/Controllers/AccountController.cs
       branch: features/ticketshop
-      repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
+      repo: https://github.com/erolss/TicketShop.git
     id: ErrorMessage
     path: src/TicketShop/Controllers/AccountController.cs
     startLine: 39
   assemblies:
-  - TicketShop
+  - Ticketshop
   namespace: TicketShop.Controllers
   syntax:
     content: >-
@@ -355,12 +357,12 @@ items:
     remote:
       path: src/TicketShop/Controllers/AccountController.cs
       branch: features/ticketshop
-      repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
+      repo: https://github.com/erolss/TicketShop.git
     id: Login
     path: src/TicketShop/Controllers/AccountController.cs
     startLine: 42
   assemblies:
-  - TicketShop
+  - Ticketshop
   namespace: TicketShop.Controllers
   syntax:
     content: >-
@@ -407,12 +409,12 @@ items:
     remote:
       path: src/TicketShop/Controllers/AccountController.cs
       branch: features/ticketshop
-      repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
+      repo: https://github.com/erolss/TicketShop.git
     id: Login
     path: src/TicketShop/Controllers/AccountController.cs
     startLine: 53
   assemblies:
-  - TicketShop
+  - Ticketshop
   namespace: TicketShop.Controllers
   syntax:
     content: >-
@@ -468,12 +470,12 @@ items:
     remote:
       path: src/TicketShop/Controllers/AccountController.cs
       branch: features/ticketshop
-      repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
+      repo: https://github.com/erolss/TicketShop.git
     id: LoginWith2fa
     path: src/TicketShop/Controllers/AccountController.cs
     startLine: 89
   assemblies:
-  - TicketShop
+  - Ticketshop
   namespace: TicketShop.Controllers
   syntax:
     content: >-
@@ -522,12 +524,12 @@ items:
     remote:
       path: src/TicketShop/Controllers/AccountController.cs
       branch: features/ticketshop
-      repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
+      repo: https://github.com/erolss/TicketShop.git
     id: LoginWith2fa
     path: src/TicketShop/Controllers/AccountController.cs
     startLine: 107
   assemblies:
-  - TicketShop
+  - Ticketshop
   namespace: TicketShop.Controllers
   syntax:
     content: >-
@@ -585,12 +587,12 @@ items:
     remote:
       path: src/TicketShop/Controllers/AccountController.cs
       branch: features/ticketshop
-      repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
+      repo: https://github.com/erolss/TicketShop.git
     id: LoginWithRecoveryCode
     path: src/TicketShop/Controllers/AccountController.cs
     startLine: 145
   assemblies:
-  - TicketShop
+  - Ticketshop
   namespace: TicketShop.Controllers
   syntax:
     content: >-
@@ -637,12 +639,12 @@ items:
     remote:
       path: src/TicketShop/Controllers/AccountController.cs
       branch: features/ticketshop
-      repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
+      repo: https://github.com/erolss/TicketShop.git
     id: LoginWithRecoveryCode
     path: src/TicketShop/Controllers/AccountController.cs
     startLine: 161
   assemblies:
-  - TicketShop
+  - Ticketshop
   namespace: TicketShop.Controllers
   syntax:
     content: >-
@@ -698,12 +700,12 @@ items:
     remote:
       path: src/TicketShop/Controllers/AccountController.cs
       branch: features/ticketshop
-      repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
+      repo: https://github.com/erolss/TicketShop.git
     id: Lockout
     path: src/TicketShop/Controllers/AccountController.cs
     startLine: 199
   assemblies:
-  - TicketShop
+  - Ticketshop
   namespace: TicketShop.Controllers
   syntax:
     content: >-
@@ -747,12 +749,12 @@ items:
     remote:
       path: src/TicketShop/Controllers/AccountController.cs
       branch: features/ticketshop
-      repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
+      repo: https://github.com/erolss/TicketShop.git
     id: Register
     path: src/TicketShop/Controllers/AccountController.cs
     startLine: 206
   assemblies:
-  - TicketShop
+  - Ticketshop
   namespace: TicketShop.Controllers
   syntax:
     content: >-
@@ -799,12 +801,12 @@ items:
     remote:
       path: src/TicketShop/Controllers/AccountController.cs
       branch: features/ticketshop
-      repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
+      repo: https://github.com/erolss/TicketShop.git
     id: Register
     path: src/TicketShop/Controllers/AccountController.cs
     startLine: 214
   assemblies:
-  - TicketShop
+  - Ticketshop
   namespace: TicketShop.Controllers
   syntax:
     content: >-
@@ -860,12 +862,12 @@ items:
     remote:
       path: src/TicketShop/Controllers/AccountController.cs
       branch: features/ticketshop
-      repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
+      repo: https://github.com/erolss/TicketShop.git
     id: Logout
     path: src/TicketShop/Controllers/AccountController.cs
     startLine: 246
   assemblies:
-  - TicketShop
+  - Ticketshop
   namespace: TicketShop.Controllers
   syntax:
     content: >-
@@ -909,12 +911,12 @@ items:
     remote:
       path: src/TicketShop/Controllers/AccountController.cs
       branch: features/ticketshop
-      repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
+      repo: https://github.com/erolss/TicketShop.git
     id: ExternalLogin
     path: src/TicketShop/Controllers/AccountController.cs
     startLine: 255
   assemblies:
-  - TicketShop
+  - Ticketshop
   namespace: TicketShop.Controllers
   syntax:
     content: >-
@@ -970,12 +972,12 @@ items:
     remote:
       path: src/TicketShop/Controllers/AccountController.cs
       branch: features/ticketshop
-      repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
+      repo: https://github.com/erolss/TicketShop.git
     id: ExternalLoginCallback
     path: src/TicketShop/Controllers/AccountController.cs
     startLine: 266
   assemblies:
-  - TicketShop
+  - Ticketshop
   namespace: TicketShop.Controllers
   syntax:
     content: >-
@@ -1024,12 +1026,12 @@ items:
     remote:
       path: src/TicketShop/Controllers/AccountController.cs
       branch: features/ticketshop
-      repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
+      repo: https://github.com/erolss/TicketShop.git
     id: ExternalLoginConfirmation
     path: src/TicketShop/Controllers/AccountController.cs
     startLine: 302
   assemblies:
-  - TicketShop
+  - Ticketshop
   namespace: TicketShop.Controllers
   syntax:
     content: >-
@@ -1085,12 +1087,12 @@ items:
     remote:
       path: src/TicketShop/Controllers/AccountController.cs
       branch: features/ticketshop
-      repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
+      repo: https://github.com/erolss/TicketShop.git
     id: ConfirmEmail
     path: src/TicketShop/Controllers/AccountController.cs
     startLine: 334
   assemblies:
-  - TicketShop
+  - Ticketshop
   namespace: TicketShop.Controllers
   syntax:
     content: >-
@@ -1139,12 +1141,12 @@ items:
     remote:
       path: src/TicketShop/Controllers/AccountController.cs
       branch: features/ticketshop
-      repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
+      repo: https://github.com/erolss/TicketShop.git
     id: ForgotPassword
     path: src/TicketShop/Controllers/AccountController.cs
     startLine: 351
   assemblies:
-  - TicketShop
+  - Ticketshop
   namespace: TicketShop.Controllers
   syntax:
     content: >-
@@ -1188,12 +1190,12 @@ items:
     remote:
       path: src/TicketShop/Controllers/AccountController.cs
       branch: features/ticketshop
-      repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
+      repo: https://github.com/erolss/TicketShop.git
     id: ForgotPassword
     path: src/TicketShop/Controllers/AccountController.cs
     startLine: 358
   assemblies:
-  - TicketShop
+  - Ticketshop
   namespace: TicketShop.Controllers
   syntax:
     content: >-
@@ -1247,12 +1249,12 @@ items:
     remote:
       path: src/TicketShop/Controllers/AccountController.cs
       branch: features/ticketshop
-      repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
+      repo: https://github.com/erolss/TicketShop.git
     id: ForgotPasswordConfirmation
     path: src/TicketShop/Controllers/AccountController.cs
     startLine: 385
   assemblies:
-  - TicketShop
+  - Ticketshop
   namespace: TicketShop.Controllers
   syntax:
     content: >-
@@ -1296,12 +1298,12 @@ items:
     remote:
       path: src/TicketShop/Controllers/AccountController.cs
       branch: features/ticketshop
-      repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
+      repo: https://github.com/erolss/TicketShop.git
     id: ResetPassword
     path: src/TicketShop/Controllers/AccountController.cs
     startLine: 392
   assemblies:
-  - TicketShop
+  - Ticketshop
   namespace: TicketShop.Controllers
   syntax:
     content: >-
@@ -1348,12 +1350,12 @@ items:
     remote:
       path: src/TicketShop/Controllers/AccountController.cs
       branch: features/ticketshop
-      repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
+      repo: https://github.com/erolss/TicketShop.git
     id: ResetPassword
     path: src/TicketShop/Controllers/AccountController.cs
     startLine: 404
   assemblies:
-  - TicketShop
+  - Ticketshop
   namespace: TicketShop.Controllers
   syntax:
     content: >-
@@ -1407,12 +1409,12 @@ items:
     remote:
       path: src/TicketShop/Controllers/AccountController.cs
       branch: features/ticketshop
-      repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
+      repo: https://github.com/erolss/TicketShop.git
     id: ResetPasswordConfirmation
     path: src/TicketShop/Controllers/AccountController.cs
     startLine: 428
   assemblies:
-  - TicketShop
+  - Ticketshop
   namespace: TicketShop.Controllers
   syntax:
     content: >-
@@ -1456,12 +1458,12 @@ items:
     remote:
       path: src/TicketShop/Controllers/AccountController.cs
       branch: features/ticketshop
-      repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
+      repo: https://github.com/erolss/TicketShop.git
     id: AccessDenied
     path: src/TicketShop/Controllers/AccountController.cs
     startLine: 436
   assemblies:
-  - TicketShop
+  - Ticketshop
   namespace: TicketShop.Controllers
   syntax:
     content: >-
@@ -1498,12 +1500,12 @@ items:
     remote:
       path: src/TicketShop/Controllers/AccountController.cs
       branch: features/ticketshop
-      repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
+      repo: https://github.com/erolss/TicketShop.git
     id: GetCurrentUserId
     path: src/TicketShop/Controllers/AccountController.cs
     startLine: 464
   assemblies:
-  - TicketShop
+  - Ticketshop
   namespace: TicketShop.Controllers
   syntax:
     content: >-

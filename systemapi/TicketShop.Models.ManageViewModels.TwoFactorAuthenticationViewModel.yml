@@ -19,12 +19,12 @@ items:
     remote:
       path: src/TicketShop/Models/ManageViewModels/TwoFactorAuthenticationViewModel.cs
       branch: features/ticketshop
-      repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
+      repo: https://github.com/erolss/TicketShop.git
     id: TwoFactorAuthenticationViewModel
     path: src/TicketShop/Models/ManageViewModels/TwoFactorAuthenticationViewModel.cs
     startLine: 8
   assemblies:
-  - TicketShop
+  - Ticketshop
   namespace: TicketShop.Models.ManageViewModels
   syntax:
     content: public class TwoFactorAuthenticationViewModel
@@ -60,12 +60,12 @@ items:
     remote:
       path: src/TicketShop/Models/ManageViewModels/TwoFactorAuthenticationViewModel.cs
       branch: features/ticketshop
-      repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
+      repo: https://github.com/erolss/TicketShop.git
     id: HasAuthenticator
     path: src/TicketShop/Models/ManageViewModels/TwoFactorAuthenticationViewModel.cs
     startLine: 10
   assemblies:
-  - TicketShop
+  - Ticketshop
   namespace: TicketShop.Models.ManageViewModels
   syntax:
     content: public bool HasAuthenticator { get; set; }
@@ -95,12 +95,12 @@ items:
     remote:
       path: src/TicketShop/Models/ManageViewModels/TwoFactorAuthenticationViewModel.cs
       branch: features/ticketshop
-      repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
+      repo: https://github.com/erolss/TicketShop.git
     id: RecoveryCodesLeft
     path: src/TicketShop/Models/ManageViewModels/TwoFactorAuthenticationViewModel.cs
     startLine: 12
   assemblies:
-  - TicketShop
+  - Ticketshop
   namespace: TicketShop.Models.ManageViewModels
   syntax:
     content: public int RecoveryCodesLeft { get; set; }
@@ -130,12 +130,12 @@ items:
     remote:
       path: src/TicketShop/Models/ManageViewModels/TwoFactorAuthenticationViewModel.cs
       branch: features/ticketshop
-      repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
+      repo: https://github.com/erolss/TicketShop.git
     id: Is2faEnabled
     path: src/TicketShop/Models/ManageViewModels/TwoFactorAuthenticationViewModel.cs
     startLine: 14
   assemblies:
-  - TicketShop
+  - Ticketshop
   namespace: TicketShop.Models.ManageViewModels
   syntax:
     content: public bool Is2faEnabled { get; set; }

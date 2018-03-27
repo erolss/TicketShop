@@ -22,7 +22,7 @@ items:
     remote:
       path: src/DbRepository/Interface/IEventRepository.cs
       branch: features/ticketshop
-      repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
+      repo: https://github.com/erolss/TicketShop.git
     id: IEventRepository
     path: src/DbRepository/Interface/IEventRepository.cs
     startLine: 7
@@ -53,7 +53,7 @@ items:
     remote:
       path: src/DbRepository/Interface/IEventRepository.cs
       branch: features/ticketshop
-      repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
+      repo: https://github.com/erolss/TicketShop.git
     id: AddEvent
     path: src/DbRepository/Interface/IEventRepository.cs
     startLine: 15
@@ -88,7 +88,7 @@ items:
     remote:
       path: src/DbRepository/Interface/IEventRepository.cs
       branch: features/ticketshop
-      repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
+      repo: https://github.com/erolss/TicketShop.git
     id: GetEvents
     path: src/DbRepository/Interface/IEventRepository.cs
     startLine: 23
@@ -121,7 +121,7 @@ items:
     remote:
       path: src/DbRepository/Interface/IEventRepository.cs
       branch: features/ticketshop
-      repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
+      repo: https://github.com/erolss/TicketShop.git
     id: GetEventById
     path: src/DbRepository/Interface/IEventRepository.cs
     startLine: 30
@@ -156,7 +156,7 @@ items:
     remote:
       path: src/DbRepository/Interface/IEventRepository.cs
       branch: features/ticketshop
-      repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
+      repo: https://github.com/erolss/TicketShop.git
     id: UpdateEvent
     path: src/DbRepository/Interface/IEventRepository.cs
     startLine: 37
@@ -191,7 +191,7 @@ items:
     remote:
       path: src/DbRepository/Interface/IEventRepository.cs
       branch: features/ticketshop
-      repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
+      repo: https://github.com/erolss/TicketShop.git
     id: DeleteEvent
     path: src/DbRepository/Interface/IEventRepository.cs
     startLine: 44
@@ -226,7 +226,7 @@ items:
     remote:
       path: src/DbRepository/Interface/IEventRepository.cs
       branch: features/ticketshop
-      repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
+      repo: https://github.com/erolss/TicketShop.git
     id: FindEvents
     path: src/DbRepository/Interface/IEventRepository.cs
     startLine: 51

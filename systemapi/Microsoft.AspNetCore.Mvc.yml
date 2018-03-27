@@ -13,7 +13,7 @@ items:
   fullName: Microsoft.AspNetCore.Mvc
   type: Namespace
   assemblies:
-  - TicketShop
+  - Ticketshop
 references:
 - uid: Microsoft.AspNetCore.Mvc.UrlHelperExtensions
   commentId: T:Microsoft.AspNetCore.Mvc.UrlHelperExtensions

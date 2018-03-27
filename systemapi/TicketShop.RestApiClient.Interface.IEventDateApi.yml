@@ -26,7 +26,7 @@ items:
     remote:
       path: src/RestApiClient/Interface/IEventDateApi.cs
       branch: features/ticketshop
-      repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
+      repo: https://github.com/erolss/TicketShop.git
     id: IEventDateApi
     path: src/RestApiClient/Interface/IEventDateApi.cs
     startLine: 6
@@ -57,7 +57,7 @@ items:
     remote:
       path: src/RestApiClient/Interface/IEventDateApi.cs
       branch: features/ticketshop
-      repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
+      repo: https://github.com/erolss/TicketShop.git
     id: AddEventDate
     path: src/RestApiClient/Interface/IEventDateApi.cs
     startLine: 15
@@ -92,7 +92,7 @@ items:
     remote:
       path: src/RestApiClient/Interface/IEventDateApi.cs
       branch: features/ticketshop
-      repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
+      repo: https://github.com/erolss/TicketShop.git
     id: GetEventDates
     path: src/RestApiClient/Interface/IEventDateApi.cs
     startLine: 23
@@ -130,7 +130,7 @@ items:
     remote:
       path: src/RestApiClient/Interface/IEventDateApi.cs
       branch: features/ticketshop
-      repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
+      repo: https://github.com/erolss/TicketShop.git
     id: GetFullEventDates
     path: src/RestApiClient/Interface/IEventDateApi.cs
     startLine: 31
@@ -168,7 +168,7 @@ items:
     remote:
       path: src/RestApiClient/Interface/IEventDateApi.cs
       branch: features/ticketshop
-      repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
+      repo: https://github.com/erolss/TicketShop.git
     id: GetEventDateById
     path: src/RestApiClient/Interface/IEventDateApi.cs
     startLine: 38
@@ -203,7 +203,7 @@ items:
     remote:
       path: src/RestApiClient/Interface/IEventDateApi.cs
       branch: features/ticketshop
-      repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
+      repo: https://github.com/erolss/TicketShop.git
     id: GetEventDateByEventId
     path: src/RestApiClient/Interface/IEventDateApi.cs
     startLine: 45
@@ -238,7 +238,7 @@ items:
     remote:
       path: src/RestApiClient/Interface/IEventDateApi.cs
       branch: features/ticketshop
-      repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
+      repo: https://github.com/erolss/TicketShop.git
     id: GetFullEventDateById
     path: src/RestApiClient/Interface/IEventDateApi.cs
     startLine: 52
@@ -273,7 +273,7 @@ items:
     remote:
       path: src/RestApiClient/Interface/IEventDateApi.cs
       branch: features/ticketshop
-      repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
+      repo: https://github.com/erolss/TicketShop.git
     id: UpdateEventDate
     path: src/RestApiClient/Interface/IEventDateApi.cs
     startLine: 59
@@ -308,7 +308,7 @@ items:
     remote:
       path: src/RestApiClient/Interface/IEventDateApi.cs
       branch: features/ticketshop
-      repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
+      repo: https://github.com/erolss/TicketShop.git
     id: DeleteEventDate
     path: src/RestApiClient/Interface/IEventDateApi.cs
     startLine: 66
@@ -343,7 +343,7 @@ items:
     remote:
       path: src/RestApiClient/Interface/IEventDateApi.cs
       branch: features/ticketshop
-      repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
+      repo: https://github.com/erolss/TicketShop.git
     id: FindEventDates
     path: src/RestApiClient/Interface/IEventDateApi.cs
     startLine: 73
@@ -378,7 +378,7 @@ items:
     remote:
       path: src/RestApiClient/Interface/IEventDateApi.cs
       branch: features/ticketshop
-      repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
+      repo: https://github.com/erolss/TicketShop.git
     id: GetSoldTicketCount
     path: src/RestApiClient/Interface/IEventDateApi.cs
     startLine: 81

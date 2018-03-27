@@ -17,12 +17,12 @@ items:
     remote:
       path: src/TicketShop/Models/AccountViewModels/LoginWithRecoveryCodeViewModel.cs
       branch: features/ticketshop
-      repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
+      repo: https://github.com/erolss/TicketShop.git
     id: LoginWithRecoveryCodeViewModel
     path: src/TicketShop/Models/AccountViewModels/LoginWithRecoveryCodeViewModel.cs
     startLine: 8
   assemblies:
-  - TicketShop
+  - Ticketshop
   namespace: TicketShop.Models.AccountViewModels
   syntax:
     content: public class LoginWithRecoveryCodeViewModel
@@ -58,12 +58,12 @@ items:
     remote:
       path: src/TicketShop/Models/AccountViewModels/LoginWithRecoveryCodeViewModel.cs
       branch: features/ticketshop
-      repo: https://github.com/TeknikhogskolanGothenburg/ticketSystem-erik.git
+      repo: https://github.com/erolss/TicketShop.git
     id: RecoveryCode
     path: src/TicketShop/Models/AccountViewModels/LoginWithRecoveryCodeViewModel.cs
     startLine: 10
   assemblies:
-  - TicketShop
+  - Ticketshop
   namespace: TicketShop.Models.AccountViewModels
   syntax:
     content: >-
