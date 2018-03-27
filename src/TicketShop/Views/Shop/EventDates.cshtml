@@ -28,11 +28,11 @@
 }
 else
 {
-    @foreach (var ed in Model.FullEventDates)
+    foreach (var ed in Model.FullEventDates)
     {
         if (String.IsNullOrEmpty(ed.EventImagePath))
         {
-            ed.EventImagePath = "Images/placeholder.png";
+            ed.EventImagePath = "/Images/placeholder.png";
 
         }
 

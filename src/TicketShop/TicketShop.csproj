@@ -4,6 +4,7 @@
     <TargetFramework>netcoreapp2.0</TargetFramework>
     <UserSecretsId>aspnet-TicketShop-26FFB057-F5C7-48FD-BA3D-DCF32F249737</UserSecretsId>
     <StartupObject>TicketShop.Program</StartupObject>
+    <AssemblyName>Ticketshop</AssemblyName>
   </PropertyGroup>
 
 
@@ -17,10 +18,6 @@
     <DotNetCliToolReference Include="Microsoft.EntityFrameworkCore.Tools.DotNet" Version="2.0.1" />
     <DotNetCliToolReference Include="Microsoft.Extensions.SecretManager.Tools" Version="2.0.0" />
     <DotNetCliToolReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Tools" Version="2.0.1" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="Views\Admin\" />
   </ItemGroup>
 
   <ItemGroup>

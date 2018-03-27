@@ -6,34 +6,35 @@ using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using ApiModel = TicketShop.RestApiClient.Model;
-using TicketShop.Models.Admin;
+using TicketShop.Areas.Admin.Models;
 using TicketShop.Models;
 
-namespace TicketShop.Controllers.Admin
+namespace TicketShop.Areas.Admin.Controllers
 {
     [Authorize(Policy = "RequireAdminRole")]
     [Area("Admin")]
-    public class EventDateController : Controller
+    public class VenueController : Controller
     {
-        // GET: EventDate
+        // GET: Venue
         public ActionResult Index()
         {
+            
             return View();
         }
 
-        // GET: EventDate/Details/5
+        // GET: Venue/Details/5
         public ActionResult Details(int id)
         {
             return View();
         }
 
-        // GET: EventDate/Create
+        // GET: Venue/Create
         public ActionResult Create()
         {
             return View();
         }
 
-        // POST: EventDate/Create
+        // POST: Venue/Create
         [HttpPost]
         [ValidateAntiForgeryToken]
         public ActionResult Create(IFormCollection collection)
@@ -50,13 +51,13 @@ namespace TicketShop.Controllers.Admin
             }
         }
 
-        // GET: EventDate/Edit/5
+        // GET: Venue/Edit/5
         public ActionResult Edit(int id)
         {
             return View();
         }
 
-        // POST: EventDate/Edit/5
+        // POST: Venue/Edit/5
         [HttpPost]
         [ValidateAntiForgeryToken]
         public ActionResult Edit(int id, IFormCollection collection)
@@ -73,13 +74,13 @@ namespace TicketShop.Controllers.Admin
             }
         }
 
-        // GET: EventDate/Delete/5
+        // GET: Venue/Delete/5
         public ActionResult Delete(int id)
         {
             return View();
         }
 
-        // POST: EventDate/Delete/5
+        // POST: Venue/Delete/5
         [HttpPost]
         [ValidateAntiForgeryToken]
         public ActionResult Delete(int id, IFormCollection collection)

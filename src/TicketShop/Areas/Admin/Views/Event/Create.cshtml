@@ -1,0 +1,52 @@
+﻿@model TicketShop.Areas.Admin.Models.EventViewModel
+@{
+    ViewData["Title"] = "Update Event";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<hr />
+<ul class="nav nav-pills">
+    <li role="presentation"><a asp-area="admin" asp-controller="event" asp-action="index">Event Index</a></li>
+    <li role="presentation" class="active"><a asp-area="admin" asp-controller="event" asp-action="create">Create event</a></li>
+</ul>
+<hr />
+<h2>@ViewData["Title"]</h2>
+<div class="row">
+   
+        <form asp-area="admin" asp-controller="event" asp-action="create" method="post" class="form-horizontal" role="form">
+
+            <div class="col-sm-6 col-md-8">
+                <div asp-validation-summary="All" class="text-danger"></div>
+                <div class="form-group">
+                    <label asp-for="EventName" class="col-md-2 control-label">Event Name: </label>
+                    <div class="col-md-10">
+                        <input asp-for="EventName" class="form-control" />
+                        <span asp-validation-for="EventName" class="text-danger"></span>
+
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label asp-for="EventHtmlDescription" class="col-md-2 control-label">Event Html Description: </label>
+                    <div class="col-md-10">
+                        <textarea asp-for="EventHtmlDescription" class="form-control">
+                            
+                        </textarea>
+                        <span asp-validation-for="EventHtmlDescription" class="text-danger"></span>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label asp-for="EventImagePath" class="col-md-2 control-label">Event Image Path: </label>
+                    <div class="col-md-10">
+                        <input asp-for="EventImagePath" class="form-control" />
+                        <span asp-validation-for="EventImagePath" class="text-danger"></span>
+                    </div>
+
+                </div>
+            </div>
+
+            <input type="submit" value="Create Event" class="btn btn-success pull-right" />
+
+        </form>
+
+    
+</div>

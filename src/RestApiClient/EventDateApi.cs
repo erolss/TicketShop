@@ -102,6 +102,7 @@ namespace TicketShop.RestApiClient
             return response.Data;
         }
 
+
         public List<EventDate> GetEventDates(int offset = 0, int maxLimit = 20)
         {
             var client = new RestClient(_baseUrl);
@@ -129,7 +130,7 @@ namespace TicketShop.RestApiClient
         public List<FullEventDate> GetFullEventDatesByEventId(int eventId, int offset = 0, int maxLimit = 20)
         {
             var client = new RestClient(_baseUrl);
-            var request = new RestRequest("api/eventdate/eventId/{eventId}/{offset}/{maxLimit}", Method.GET);
+            var request = new RestRequest("api/eventdate/full/eventId/{eventId}/{offset}/{maxLimit}", Method.GET);
             request.AddUrlSegment("eventId", eventId);
             request.AddUrlSegment("offset", offset);
             request.AddUrlSegment("maxLimit", maxLimit);
